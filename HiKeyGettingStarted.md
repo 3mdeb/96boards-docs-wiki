@@ -113,12 +113,12 @@ Execute the following commands as a script or individually:
     $ sudo python hisi-idt.py -d /dev/ttyUSB0 --img1 fastboot1.img --img2 fastboot2.img
     $ echo "sleep 10 seconds to allow fastboot stub to start in ram"
     $ sleep 10
-    $ fastboot flash ptable ptable.img
-    $ fastboot flash fastboot1 fastboot1.img
-    $ fastboot flash fastboot fastboot2.img
-    $ fastboot flash nvme nvme.img
-    $ fastboot flash mcuimage mcuimage.bin
-    $ fastboot reboot
+    $ sudo fastboot flash ptable ptable.img
+    $ sudo fastboot flash fastboot1 fastboot1.img
+    $ sudo fastboot flash fastboot fastboot2.img
+    $ sudo fastboot flash nvme nvme.img
+    $ sudo fastboot flash mcuimage mcuimage.bin
+    $ sudo fastboot reboot
 
 After the python command has been issued you should see the following output:
 
@@ -152,14 +152,14 @@ Check that the HiKey board is detected by your Linux PC:
 
 You should see the ID of the HiKey board returned
 
-    $ fastboot devices
+    $ sudo fastboot devices
 
 0123456789abcdef fastboot
 
 Now you are ready to install the operating system into the eMMC flash memory. 
 
-    $ fastboot flash boot boot-fat.emmc.img
-    $ fastboot flash system hikey-jessie_developer_20150208-104.emmc.img
+    $ sudo fastboot flash boot boot-fat.emmc.img
+    $ sudo fastboot flash system hikey-jessie_developer_20150208-104.emmc.img
 
 Once you have completed these operations you should be able to boot the HiKey board from eMMC:
 
@@ -373,8 +373,8 @@ For microSD, use root=/dev/mmcblk1p2
 
 After the above, you can flash the boot-fat.img to eMMC with the command:
 
-    $ fastboot flash boot boot-fat.img
-    $ fastboot reboot
+    $ sudo fastboot flash boot boot-fat.img
+    $ sudo fastboot reboot
 
 **Install onto SD Card**
 
