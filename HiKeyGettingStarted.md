@@ -250,6 +250,7 @@ For example using the psk from the previous step:
 
     auto wlan0
     iface wlan0 inet dhcp
+        wpa-driver nl80211
         wpa-ssid myssid
         wpa-psk ccb290fd4fe6b22935cbae31449e050edd02ad44627b16ce0151668f5f53c01b
 
