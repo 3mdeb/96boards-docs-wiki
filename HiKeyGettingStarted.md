@@ -355,10 +355,13 @@ To build the boot image:
 For eMMC, use root=/dev/mmcblk0p7
 For microSD, use root=/dev/mmcblk1p2
 
-* for the ramdisk image, use the image from the pre-release Debian 8.0 ("Jessie") or create a dummy ramdisk: 
+For the ramdisk image, use the image from the pre-release Debian 8.0 ("Jessie") or create a dummy ramdisk: 
+
     $ touch initrd ; echo initrd | cpio -v > ramdisk.img
 
 * Make sure to respect the naming scheme
+
+Creating the boot image:
 
     $ echo "console=tty0 console=ttyAMA0,115200n8 root=/dev/mmcblk0p7 rootwait rw" > cmdline
     $ mkdir boot-fat
