@@ -4,6 +4,7 @@ The following binaries are required:
 * l-loader.bin - used to switch from aarch32 to aarch64 and boot
 * fip.bin - firmware package
 * ptable.img  - partition table
+* kernel and dtb images - included in the boot partition
 
 ## Source code
 
@@ -14,52 +15,88 @@ The source code is available from:
 
 ## Build instructions
 
-### EDK II
+Prerequisites:
+* GCC 4.8 - cross-toolchain for Aarch64 available in your PATH. [Linaro GCC 4.8-2014.04](http://releases.linaro.org/14.04/components/toolchain/binaries/gcc-linaro-aarch64-linux-gnu-4.8-2014.04_linux.tar.xz) is used in the build instructions.
+* GCC cross-toolchain for gnueabihf available in your PATH. [Linaro GCC 4.9-2014.09](http://releases.linaro.org/14.09/components/toolchain/binaries/gcc-linaro-arm-linux-gnueabihf-4.9-2014.09_linux.tar.xz) is used in the build instructions.
+* GPT fdisk (gdisk package from your favorite distribution).
 
-Prerequisite: [GCC 4.9 - bare metal](http://releases.linaro.org/14.09/components/toolchain/binaries/gcc-linaro-aarch64-none-elf-4.9-2014.09_linux.tar.xz) available in your PATH.
+### Install custom toolchain(s)
+
 ```shell
-$ git clone --depth 1 -b hikey-v0.2.2 https://github.com/96boards/edk2.git
-$ cd edk2
-$ #export CROSS_COMPILE=/path/to/gcc-linaro-aarch64-none-elf-4.9-2014.07_linux/bin/aarch64-none-elf-
-$ export EDK2_ARCH=AARCH64
-$ export EDK2_TOOLCHAIN=GCC49
-$ export GCC49_AARCH64_PREFIX=/path/to/gcc-linaro-aarch64-none-elf-4.9-2014.07_linux/bin/aarch64-none-elf-
-$ make -f HisiPkg/LcbPkg/Makefile
-$ aarch64-linux-gnu-objdump -b binary -maarch64 -D Build/Lcb/DEBUG_GCC49/FV/BL33_AP_UEFI.fd > bl33.dump
+mkdir arm-tc arm64-tc
+tar --strip-components=1 -C ${WORKSPACE}/arm-tc -xf gcc-linaro-arm-linux-gnueabihf-4.9-*_linux.tar.xz
+tar --strip-components=1 -C ${WORKSPACE}/arm64-tc -xf gcc-linaro-aarch64-linux-gnu-4.8-*_linux.tar.xz
+export PATH="${WORKSPACE}/arm-tc/bin:${WORKSPACE}/arm64-tc/bin:$PATH"
 ```
-### ARM Trusted Firmware
 
-Prerequisite: bl33.bin built from EDK II
+### Get the source code
+
 ```shell
-$ git clone --depth 1 -b hikey-v0.2.2 https://github.com/96boards/arm-trusted-firmware.git
-$ cd arm-trusted-firmware
-$ make PLAT=lcb
+git clone -b hikey --depth 1 https://github.com/96boards/edk2.git linaro-edk2
+git clone -b hikey-v0.2.2 --depth 1 https://github.com/96boards/arm-trusted-firmware.git
+git clone -b hikey-v0.2.2 --depth 1 https://github.com/96boards/l-loader.git
+git clone git://git.linaro.org/uefi/uefi-tools.git
 ```
-### l-loader
 
-Prerequisite: bl1.bin and fip.bin built from ARM Trusted Firmware
+Edit the platforms configuration of uefi-tools to include hikey definition
+Note: patch has been submitted for inclusion
+
 ```shell
-$ git clone --depth 1 -b hikey-v0.2.2 https://github.com/96boards/l-loader.git
-$ cd l-loader
-$ make
-```
-### EFI boot partition (efi.img)
+cat << EOF >> uefi-tools/platforms.config
 
-efi.img file is a 64MB FAT partition and contains kernel/dtb files.
+[hikey]
+LONGNAME=CircuitCo HiKey
+DSC=HisiPkg/HiKeyPkg/HiKey.dsc
+ARCH=AARCH64
+UEFI_BIN=BL33_AP_UEFI.fd
+UEFI_IMAGE_DIR=HiKey
+BUILD_ATF=yes
+EOF
+```
+
+### Build UEFI for HiKey
+
+```shell
+export AARCH64_TOOLCHAIN=GCC48
+export EDK2_DIR=${WORKSPACE}/linaro-edk2
+export UEFI_TOOLS_DIR=${WORKSPACE}/uefi-tools
+
+cd ${EDK2_DIR}
+${UEFI_TOOLS_DIR}/uefi-build.sh -b RELEASE -a ../arm-trusted-firmware hikey
+
+cd ${WORKSPACE}/l-loader
+cd l-loader
+ln -s ${EDK2_DIR}/Build/HiKey/RELEASE_GCC48/FV/bl1.bin
+ln -s ${EDK2_DIR}/Build/HiKey/RELEASE_GCC48/FV/fip.bin
+arm-linux-gnueabihf-gcc -c -o start.o start.S
+arm-linux-gnueabihf-gcc -c -o debug.o debug.S
+arm-linux-gnueabihf-ld -Bstatic -Tl-loader.lds -Ttext 0xf9800800 start.o debug.o -o loader
+arm-linux-gnueabihf-objcopy -O binary loader temp
+python gen_loader.py -o l-loader.bin --img_loader=temp --img_bl1=bl1.bin
+# XXX sgdisk usage requires sudo
+sudo bash -x generate_ptable.sh
+python gen_loader.py -o ptable.img --img_prm_ptable=prm_ptable.img --img_sec_ptable=sec_ptable.img
+```
+
+The files fip.bin, l-loader.bin and ptable.img are now built.
+
+### EFI boot partition (boot-fat.uefi.img)
+
+The boot partition is a 64MB FAT partition and contains kernel/dtb files. It is assumed the kernel has been built. See Getting Started instructions for more information on building the kernel.
+
 ```shell
 $ mkdir boot-fat
-$ dd if=/dev/zero of=efi.img bs=512 count=131072
-$ sudo mkfs.fat -n "BOOT IMG" efi.img
-$ sudo mount -o loop,rw,sync efi.img boot-fat
-$ sudo cp -a path/to/Image boot-fat/Image
-$ sudo cp -a path/to/hi6220-hikey.dtb boot-fat/lcb.dtb
-$ sudo cp -a path/to/initrd.img-* boot-fat/ramdisk.img
+$ dd if=/dev/zero of=boot-fat.uefi.img bs=512 count=131072
+$ sudo mkfs.fat -n "BOOT IMG" boot-fat.uefi.img
+$ sudo mount -o loop,rw,sync boot-fat.uefi.img boot-fat
+$ sudo cp -a path/to/Image path/to/hi6220-hikey.dtb path/to/initrd.img-* boot-fat/ || true
 $ sudo umount boot-fat
 $ rm -rf boot-fat
 ```
+
 ## Flash binaries to eMMC
 
-The flashing process requires to be in recovery mode.
+The flashing process requires to be in **recovery mode**.
 
 * turn off HiKey board
 * connect debug UART on HiKey to PC (used to monitor debug status)
@@ -67,11 +104,17 @@ The flashing process requires to be in recovery mode.
 * connect USB cable to PC
 * turn on HiKey board
 * on serial console, you should see some debug message (NULL packet)
-* run fastboot commands to download the images (order must be respected)
+* run HiKey recovery tool to flash l-loader.bin (Note: /dev/ttyUSB1 is not necessarily your device, check dmesg output to make sure to use the correct device and adjust the command line below as appropriate)
 ```shell
+sudo python hisi-idt.py -d /dev/ttyUSB1 --img1=l-loader.bin
+```
+* run fastboot commands to flash the images (**order must be respected**)
+```shell
+$ wget https://builds.96boards.org/releases/hikey/nvme.img
 $ sudo fastboot flash ptable ptable.img
 $ sudo fastboot flash fastboot fip.bin
-$ sudo fastboot flash boot efi.img
+$ sudo fastboot flash nvme nvme.img
+$ sudo fastboot flash boot boot-fat.uefi.img
 ```
 * turn off HiKey board
 * remove the jumper of pin3-pin4 on J15
