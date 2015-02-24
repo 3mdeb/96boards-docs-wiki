@@ -109,7 +109,7 @@ This is used to install the bootloader as follows:
 
 Execute the following commands as a script or individually:
 
-    $ wget [https://raw.githubusercontent.com/96boards/burn-boot/master/hisi-idt.py](https://raw.githubusercontent.com/96boards/burn-boot/master/hisi-idt.py)
+    $ wget https://raw.githubusercontent.com/96boards/burn-boot/master/hisi-idt.py
     $ sudo python hisi-idt.py -d /dev/ttyUSB0 --img1 fastboot1.img --img2 fastboot2.img
     $ echo "sleep 10 seconds to allow fastboot stub to start in ram"
     $ sleep 10
@@ -329,9 +329,9 @@ The HiKey kernel sources are located at: [https://github.com/96boards/linux.git]
 
 To build a kernel, make sure you have an Aarch64 cross-toolchain installed on your linux computer, and configured to cross compile to ARMv8 code. For example, Linaro GCC 4.9:
 
-    $ wget [http://releases.linaro.org/14.09/components/toolchain/binaries/gcc-linaro-aarch64-linux-gnu-4.9-2014.09_linux.tar.xz](http://releases.linaro.org/14.09/components/toolchain/binaries/gcc-linaro-aarch64-linux-gnu-4.9-2014.09_linux.tar.xz)
+    $ wget http://releases.linaro.org/14.09/components/toolchain/binaries/gcc-linaro-aarch64-linux-gnu-4.9-2014.09_linux.tar.xz
     $ mkdir ~/arm64-tc/bin
-    $ tar --strip-components=1 -C ~/arm64-tc/bin -xf [gcc-linaro-aarch64-linux-gnu-4.9-2014.09_linux.tar.xz](http://releases.linaro.org/14.09/components/toolchain/binaries/gcc-linaro-aarch64-linux-gnu-4.9-2014.09_linux.tar.xz)
+    $ tar --strip-components=1 -C ~/arm64-tc/bin -xf gcc-linaro-aarch64-linux-gnu-4.9-2014.09_linux.tar.xz
     $ export PATH=~/arm64-tc/bin:$PATH
 
 Note: the toolchain binaries are for 32bit host system. On Debian/Ubuntu, you should install multiarch-support and enabled i386 architecture. On Fedora, you should install glibc.i686 package.
@@ -340,7 +340,7 @@ The following instructions can then be used to build the kernel:
 
 Git clone the source code tree:
 
-    $ git clone [https://github.com/96boards/linux.git](https://github.com/96boards/linux.git)
+    $ git clone https://github.com/96boards/linux.git
 
 To build the kernel:
 
