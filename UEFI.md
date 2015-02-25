@@ -38,22 +38,6 @@ git clone -b hikey-v0.2.2 --depth 1 https://github.com/96boards/l-loader.git
 git clone git://git.linaro.org/uefi/uefi-tools.git
 ```
 
-Edit the platforms configuration of uefi-tools to include hikey definition
-Note: patch has been submitted for inclusion
-
-```shell
-cat << EOF >> uefi-tools/platforms.config
-
-[hikey]
-LONGNAME=CircuitCo HiKey
-DSC=HisiPkg/HiKeyPkg/HiKey.dsc
-ARCH=AARCH64
-UEFI_BIN=BL33_AP_UEFI.fd
-UEFI_IMAGE_DIR=HiKey
-BUILD_ATF=yes
-EOF
-```
-
 ### Build UEFI for HiKey
 
 ```shell
