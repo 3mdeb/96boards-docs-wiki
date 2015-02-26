@@ -24,9 +24,9 @@ Prerequisites:
 
 ```shell
 mkdir arm-tc arm64-tc
-tar --strip-components=1 -C ${WORKSPACE}/arm-tc -xf gcc-linaro-arm-linux-gnueabihf-4.9-*_linux.tar.xz
-tar --strip-components=1 -C ${WORKSPACE}/arm64-tc -xf gcc-linaro-aarch64-linux-gnu-4.8-*_linux.tar.xz
-export PATH="${WORKSPACE}/arm-tc/bin:${WORKSPACE}/arm64-tc/bin:$PATH"
+tar --strip-components=1 -C ${PWD}/arm-tc -xf gcc-linaro-arm-linux-gnueabihf-4.9-*_linux.tar.xz
+tar --strip-components=1 -C ${PWD}/arm64-tc -xf gcc-linaro-aarch64-linux-gnu-4.8-*_linux.tar.xz
+export PATH="${PWD}/arm-tc/bin:${PWD}/arm64-tc/bin:$PATH"
 ```
 
 ### Get the source code
@@ -42,13 +42,13 @@ git clone git://git.linaro.org/uefi/uefi-tools.git
 
 ```shell
 export AARCH64_TOOLCHAIN=GCC48
-export EDK2_DIR=${WORKSPACE}/linaro-edk2
-export UEFI_TOOLS_DIR=${WORKSPACE}/uefi-tools
+export EDK2_DIR=${PWD}/linaro-edk2
+export UEFI_TOOLS_DIR=${PWD}/uefi-tools
 
 cd ${EDK2_DIR}
 ${UEFI_TOOLS_DIR}/uefi-build.sh -b RELEASE -a ../arm-trusted-firmware hikey
 
-cd ${WORKSPACE}/l-loader
+cd ../l-loader
 cd l-loader
 ln -s ${EDK2_DIR}/Build/HiKey/RELEASE_GCC48/FV/bl1.bin
 ln -s ${EDK2_DIR}/Build/HiKey/RELEASE_GCC48/FV/fip.bin
