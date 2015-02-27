@@ -106,7 +106,7 @@ $ sudo fastboot flash boot boot-fat.uefi.img
 ## Known Issues
 
 * mainline kernel fails to boot. 3.18 kernel boots.
-* performance issues in ATF/UEFI: download/boot is slow.
+* [fixed] performance issues in ATF/UEFI: download/boot is slow.
 * initrd isn't supported. We can only use initramfs at the moment.
 * fastboot feature isn't enabled in UEFI. Recovery mode should be used to download images in ATF.
 * only one core is supported. PSCI is being worked on.
