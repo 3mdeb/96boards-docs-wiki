@@ -49,7 +49,6 @@ cd ${EDK2_DIR}
 ${UEFI_TOOLS_DIR}/uefi-build.sh -b RELEASE -a ../arm-trusted-firmware hikey
 
 cd ../l-loader
-cd l-loader
 ln -s ${EDK2_DIR}/Build/HiKey/RELEASE_GCC48/FV/bl1.bin
 ln -s ${EDK2_DIR}/Build/HiKey/RELEASE_GCC48/FV/fip.bin
 arm-linux-gnueabihf-gcc -c -o start.o start.S
