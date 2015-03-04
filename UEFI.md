@@ -105,13 +105,13 @@ $ sudo fastboot flash boot boot-fat.uefi.img
 
 ## Known Issues
 
-* mainline kernel fails to boot. 3.18 kernel boots.
-* [fixed] performance issues in ATF/UEFI: download/boot is slow.
-* initrd isn't supported. We can only use initramfs at the moment.
-* fastboot feature isn't enabled in UEFI. Recovery mode should be used to download images in ATF.
-* only one core is supported. PSCI is being worked on.
-* DDR works only at 533MHz.
-* NVM isn't supported in UEFI.
-* SD card isn't supported in UEFI.
-* MCU image isn't loaded by ATF. As a result, we can't enable cpufreq.
-* thermal feature isn't enabled in ATF.
+* [x] ~~mainline kernel fails to boot. 3.18 kernel boots.~~
+* [x] ~~performance issues in ATF/UEFI: download/boot is slow.~~
+* [x] ~~initrd isn't supported. We can only use initramfs at the moment.~~
+* [ ] fastboot feature isn't enabled in UEFI. Recovery mode should be used to download images in ATF.
+* [ ] only one core is supported. PSCI is being worked on.
+* [ ] DDR works only at 533MHz.
+* [ ] NVM isn't supported in UEFI.
+* [ ] SD card isn't supported in UEFI.
+* [ ] MCU image isn't loaded by ATF. As a result, we can't enable cpufreq.
+* [x] ~~thermal feature isn't enabled in ATF.~~
