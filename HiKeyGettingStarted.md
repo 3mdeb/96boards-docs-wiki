@@ -156,7 +156,7 @@ You should see the ID of the HiKey board returned
 
 0123456789abcdef fastboot
 
-Now you are ready to install the operating system into the eMMC flash memory. 
+Now you are ready to install the operating system into the eMMC flash memory.[1] 
 
     $ sudo fastboot flash boot boot-fat.emmc.img
     $ sudo fastboot flash system hikey-jessie_developer_20150208-104.emmc.img
@@ -174,6 +174,19 @@ Once you have completed these operations you should be able to boot the HiKey bo
 *Alternatively you may attach a keyboard directly to the microUSB port if you have a suitable OTG cable. 
 
 The board should boot into the pre-release Debian 8.0 ("jessie") distribution. After about 1 minute you should see the console login appear on the HDMI display. 
+
+[1] If you don't have access to the serial port you might want to modify the filesystem image to configure the WIFI connectivity before flashing it (see WIFI configuration instructions in section four of this document)
+
+To modify the emmc sparse image do the following:
+
+    $ sudo apt-get install android-tools-fsutils
+    $ simg2img hikey-jessie_developer_20150208-104.emmc.img raw.img
+    $ sudo mount raw.img <mount point>
+
+You can now edit the file system, once done:
+
+    $ sudo umount <mount point>
+    $ img2simg raw.img hikey-jessie_developer_20150208-104.updated.emmc.img 
 
 **3. Using a SD Card**
 
