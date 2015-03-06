@@ -120,6 +120,14 @@ Execute the following commands as a script or individually:
     $ sudo fastboot flash mcuimage mcuimage.bin
     $ sudo fastboot reboot
 
+If you get the following error message, while running the hisi-idt.py script:
+
+    ImportError: No module named serial
+
+Then you need to install the python-serial module, on Ubuntu/Debian, simply run:
+
+    sudo apt-get install python-serial
+
 After the python command has been issued you should see the following output:
 
     +----------------------+
