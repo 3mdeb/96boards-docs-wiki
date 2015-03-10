@@ -109,7 +109,7 @@ $ sudo fastboot flash boot boot-fat.uefi.img
 * [x] ~~performance issues in ATF/UEFI: download/boot is slow.~~
 * [x] ~~initrd isn't supported. We can only use initramfs at the moment.~~
 * [ ] fastboot feature isn't enabled in UEFI. Recovery mode should be used to download images in ATF.
-* [ ] only one core is supported. PSCI is being worked on.
+* [x] ~~only one core is supported. PSCI is being worked on.~~
 * [ ] DDR works only at 533MHz.
 * [ ] NVM isn't supported in UEFI.
 * [ ] SD card isn't supported in UEFI.
