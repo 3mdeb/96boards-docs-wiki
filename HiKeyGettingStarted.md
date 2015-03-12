@@ -82,10 +82,11 @@ Either create the file: /etc/udev/rules.d/51-android.rules with the following co
 
 **Board pin options**
 
-Please refer to the Hardware User Guide for more information. 
-For the procedures in this document the top two links (1-2 and 3-4) should initially be installed and the 3rd link (5-6) should be open. 
-Link 1-2 causes HiKey to auto-power up when power is installed. 
-Link 3-4 causes HiKey bootROM to stop at a special "install bootloader" mode which will install a supplied bootloader from the microUSB OTG port into RAM.
+Please refer to the Hardware User Guide (Chapter 1. Settings Jumper) for more information.
+
+For the flashing the bootloader (fastboot), the top two links ("AUTO PWR" [1-2] and "BOOT SEL" [3-4]) should initially be closed and the 3rd link (GPIO3 1 [5-6]) should be open.
+
+Link 1-2 causes HiKey to auto-power up when power is installed. Link 3-4 causes HiKey bootROM to stop at a special "install bootloader" mode which will install a supplied bootloader from the microUSB OTG port into RAM.
 
 ## Loading the Software - Pre-release Debian 8.0 ("Jessie")
 
