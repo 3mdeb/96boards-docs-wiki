@@ -110,16 +110,17 @@ This is used to install the bootloader as follows:
 
 Execute the following commands as a script or individually:
 
-    $ wget https://raw.githubusercontent.com/96boards/burn-boot/master/hisi-idt.py
-    $ sudo python hisi-idt.py -d /dev/ttyUSB0 --img1 fastboot1.img --img2 fastboot2.img
-    $ echo "sleep 10 seconds to allow fastboot stub to start in ram"
-    $ sleep 10
-    $ sudo fastboot flash ptable ptable.img
-    $ sudo fastboot flash fastboot1 fastboot1.img
-    $ sudo fastboot flash fastboot fastboot2.img
-    $ sudo fastboot flash nvme nvme.img
-    $ sudo fastboot flash mcuimage mcuimage.bin
-    $ sudo fastboot reboot
+First, get the Python script to write fastboot into the bootROM:
+
+    wget https://raw.githubusercontent.com/96boards/burn-boot/master/hisi-idt.py
+
+The script was written for Python 2. Make sure you're not default to Python 3 by typing:
+
+    python --version
+
+Run the script to initially prepare fastboot:
+
+    sudo python hisi-idt.py -d /dev/ttyUSB0 --img1 fastboot1.img --img2 fastboot2.img
 
 If you get the following error message, while running the hisi-idt.py script:
 
@@ -128,6 +129,14 @@ If you get the following error message, while running the hisi-idt.py script:
 Then you need to install the python-serial module, on Ubuntu/Debian, simply run:
 
     sudo apt-get install python-serial
+
+If not, you can use pip install:
+
+    sudo pip install pyserial
+
+If you have Python 3 installed, make sure to install with the right version, for instance:
+
+    sudo pip2.7 install pyserial
 
 After the python command has been issued you should see the following output:
 
@@ -143,7 +152,14 @@ After the python command has been issued you should see the following output:
     Sending fastboot2.img ...
     Done
 
-This means that the bootloader has been successfully installed into RAM. The following fastboot commands then load the partition table, the bootloaders and other necessary files into the HiKey eMMC flash memory. 
+This means that the bootloader has been successfully installed into RAM. Wait at least 10 seconds for fastboot to actually load. The following fastboot commands then load the partition table, the bootloaders and other necessary files into the HiKey eMMC flash memory. 
+
+    sudo fastboot flash ptable ptable.img
+    sudo fastboot flash fastboot1 fastboot1.img
+    sudo fastboot flash fastboot fastboot2.img
+    sudo fastboot flash nvme nvme.img
+    sudo fastboot flash mcuimage mcuimage.bin
+    sudo fastboot reboot
 
 Once this has been completed the bootloader has been installed into eMMC. 
 
@@ -151,9 +167,9 @@ Power off the HiKey board by removing the power supply jack.
 
 Next change the link configuration as follows:
 
-1. remove the 2nd link (3-4) so that the HiKey board will boot from the newly installed bootloader in eMMC. 
-2. Install the 3rd link (5-6) so that the HiKey board will enter fastboot mode when powered up
-(if the link is open HiKey will try to boot an OS that is not yet installed). 
+1. remove the 2nd jumper ("BOOT SEL" [3-4]) so that the HiKey board will boot from the newly installed bootloader in eMMC. 
+2. Install the 3rd jumper ("GPIO3 1" [5-6]) so that the HiKey board will enter fastboot mode when powered up
+(if the link is open HiKey will try to boot an OS that is not yet installed).
 
 Now power up the HiKey board again.
 
@@ -161,26 +177,26 @@ Check that the HiKey board is detected by your Linux PC:
 
 You should see the ID of the HiKey board returned
 
-    $ sudo fastboot devices
+    sudo fastboot devices
 
 0123456789abcdef fastboot
 
 Now you are ready to install the operating system into the eMMC flash memory.[1] 
 
-    $ sudo fastboot flash boot boot-fat.emmc.img
-    $ sudo fastboot flash system hikey-jessie_developer_20150208-104.emmc.img
+    sudo fastboot flash boot boot-fat.emmc.img
+    sudo fastboot flash system hikey-jessie_developer_20150208-104.emmc.img
 
 Once you have completed these operations you should be able to boot the HiKey board from eMMC:
 
 * Power down the board by removing the power supply cable
-* Remove pin 5-6 to allow the HiKey board to boot normally
+* Remove jumper "GPIO3 1" [5-6] to allow the HiKey board to boot normally
 * Remove the microUSB cable to enable the Type A USB host ports*
 * Ensure that an HDMI monitor is attached and powered on
 * Ensure that an USB keyboard is attached to one of the Type A USB host ports
 * Ensure that there is no SD card installed
 * Reinsert the power supply cable
 
-*Alternatively you may attach a keyboard directly to the microUSB port if you have a suitable OTG cable. 
+*Alternatively you may attach a keyboard directly to the micro USB port if you have a suitable OTG cable. 
 
 The board should boot into the pre-release Debian 8.0 ("jessie") distribution. After about 1 minute you should see the console login appear on the HDMI display. 
 
