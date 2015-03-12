@@ -237,7 +237,7 @@ The HiKey board does not support a battery powered RTC and NIST has not yet been
 
 **Ethernet**
 
-A standard USB to Ethernet dongle may be used to get network connectivity. 
+A standard USB to Ethernet dongle may be used to get network connectivity. You will need to manually add the configuration to /etc/network/interfaces.d/eth0 for it to come up, and link /etc/resolv.conf (see Known Issues below).
 
 **WiFi**
 
