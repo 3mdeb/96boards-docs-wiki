@@ -115,4 +115,4 @@ $ sudo fastboot flash boot boot-fat.uefi.img
 * [ ] SD card isn't supported in UEFI.
 * [ ] MCU image isn't loaded by ATF. As a result, we can't enable cpufreq.
 * [x] ~~thermal feature isn't enabled in ATF.~~
-* [ ] If use psci's dtb and Hisilicon's boot images (fastboot1/2.img), it will introduce the hang issue. The reason is hisilicon's boot images cannot handle SMC properly. We will support psci and drop spintable method, so u can use below method to w/a this issue: set "maxcpus=1" in command line, or change dtb to use spintable method.
+* [ ] Hisilicon's boot loader only supports spin-table to enable multiple CPUs, and ATF only supports PSCI to enable multiple CPUs. So if use psci's dtb and Hisilicon's boot loader (fastboot1.img/fastboot2.img), it will introduce the hang issue. Have two ways to workaround this issue: set "maxcpus=1" in command line, or change dtb from 'enable-method = <psci>' to 'enable-method = <spin-table>'.
