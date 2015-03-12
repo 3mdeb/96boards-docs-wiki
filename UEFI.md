@@ -72,7 +72,8 @@ $ mkdir boot-fat
 $ dd if=/dev/zero of=boot-fat.uefi.img bs=512 count=131072
 $ sudo mkfs.fat -n "BOOT IMG" boot-fat.uefi.img
 $ sudo mount -o loop,rw,sync boot-fat.uefi.img boot-fat
-$ sudo cp -a path/to/Image path/to/hi6220-hikey.dtb path/to/initrd.img-* boot-fat/ || true
+$ sudo cp -a path/to/Image path/to/hi6220-hikey.dtb boot-fat/ || true
+$ sudo cp -a path/to/initrd.img-* boot-fat/initrd.img || true
 $ sudo umount boot-fat
 $ rm -rf boot-fat
 ```
