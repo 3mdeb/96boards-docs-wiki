@@ -88,9 +88,9 @@ The flashing process requires to be in **recovery mode**.
 * connect USB cable to PC
 * turn on HiKey board
 * on serial console, you should see some debug message (NULL packet)
-* run [HiKey recovery tool](https://raw.githubusercontent.com/96boards/burn-boot/master/hisi-idt.py) to flash l-loader.bin (Note: /dev/ttyUSB1 is not necessarily your device, check dmesg output to make sure to use the correct device and adjust the command line below as appropriate)
+* run [HiKey recovery tool](https://raw.githubusercontent.com/96boards/burn-boot/master/hisi-idt.py) to flash l-loader.bin (Note: if the serial port recorded in hisi-idt.py isn't available, adjust the command line below by manually setting the serial port with "-d /dev/ttyUSBx" where x is usually the last serial port reported by "dmesg" command)
 ```shell
-sudo python hisi-idt.py -d /dev/ttyUSB1 --img1=l-loader.bin
+sudo python hisi-idt.py --img1=l-loader.bin
 ```
 * run fastboot commands to flash the images (**order must be respected**)
 ```shell
