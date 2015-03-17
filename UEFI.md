@@ -33,7 +33,7 @@ export PATH="${PWD}/arm-tc/bin:${PWD}/arm64-tc/bin:$PATH"
 
 ```shell
 git clone -b hikey --depth 1 https://github.com/96boards/edk2.git linaro-edk2
-git clone -b hikey-v0.2.2 --depth 1 https://github.com/96boards/arm-trusted-firmware.git
+git clone -b hikey --depth 1 https://github.com/96boards/arm-trusted-firmware.git
 git clone -b hikey-v0.2.2 --depth 1 https://github.com/96boards/l-loader.git
 git clone git://git.linaro.org/uefi/uefi-tools.git
 ```
