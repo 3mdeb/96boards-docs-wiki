@@ -346,7 +346,7 @@ See the notes below for additional temporary software restrictions on USB usage.
 1. Framebuffer console is not yet operational at power up.
 2. USB Ports - the USB Host ports currently only support Low and Full Speed devices. 
 Note the hardware restrictions on mixing device speeds, above. In future it will be possible for the user to switch the USB host ports to High speed device support. 
-3. Bluetooth operation is currently limited to a 115Kbit/sec rate. In future it will be possible to operate at higher Bluetooth speeds. 
+3. ~~Bluetooth operation is currently limited to a 115Kbit/sec rate. In future it will be possible to operate at higher Bluetooth speeds.~~
 4. WiFi operation is not yet supported. 
 5. Audio (Bluetooth and HDMI audio) is not yet supported. 
 6. Graphics acceleration (Mali 450) is not yet supported. 
