@@ -208,10 +208,16 @@ To modify the emmc sparse image do the following:
     $ simg2img hikey-jessie_developer_20150208-104.emmc.img raw.img
     $ sudo mount raw.img <mount point>
 
-You can now edit the file system, once done:
+You can now edit the file system from your host machine:
 
+    $ sudo cp wlan0 <mount point>/etc/network/interfaces.d/
+    $ sudo mkdir <mount point>/root/.ssh/
+    $ sudo cp my_id_rsa.pub <mount point>/root/.ssh/authorized_keys
+
+ once done:
+
+    $ sudo make_ext4fs -L rootfs -l 1500M -s hikey-jessie_developer_20150208-104.updated.emmc.img <mount point>
     $ sudo umount <mount point>
-    $ img2simg raw.img hikey-jessie_developer_20150208-104.updated.emmc.img 
 
 **3. Using a SD Card**
 
