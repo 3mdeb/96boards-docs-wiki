@@ -252,7 +252,11 @@ If your SD Card is more than 2GB capacity you may want to change the rootfs to u
 
 will make the file system take up all the space left on the SD Card.
 
-**4. Configuration Information**
+**4. Logging into Debian File System
+
+Default user name is "linaro", default password for user linaro is "linaro".
+
+**5. Configuration Information**
 
 **Clock**
 
