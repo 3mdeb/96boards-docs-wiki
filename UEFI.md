@@ -160,6 +160,7 @@ fastboot flash system system.img
 fastboot flash cache cache.img  
 fastboot flash userdata userdata.img  
 
+PS: l-loader.bin, ptable.img should be flushed in recovery mode, since no real partition  
 
 ## Known Issues
 
