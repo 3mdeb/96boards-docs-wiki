@@ -104,6 +104,67 @@ $ sudo fastboot flash boot boot-fat.uefi.img
 * remove the jumper of pin3-pin4 on J15
 * turn on HiKey board
 
+
+## fastboot from uefi
+
+1. copy application
+cp Build/HiKey/DEBUG_GCC48/AARCH64/AndroidFastbootApp.efi boot-fat/fastboot.efi
+
+2. board usage
+The default boot selection will start in  10 seconds
+[3] Boot Manager
+Start: 3
+[1] Add Boot Device Entry
+Choice: 1
+[1] BOOT IMG (63 MB)
+        - VenHw(B549F005-4BD4-4020-A0CB-06F42BDA68C3)/HD(6,GPT,5C0F213C-17E1-4149-88C8-8B50FB4EC70E,0x7000,0x20000)
+        Select the Boot Device: 1
+        File path of the EFI Application or the kernel: fastboot.efi
+        Is your application an OS loader? [y/n] n
+        Arguments to pass to the EFI Application:
+        Description for this new Entry: f
+[1] Add Boot Device Entry
+[2] Update Boot Device Entry
+[3] Remove Boot Device Entry
+[4] Reorder Boot Device Entries
+[5] Update FDT path
+[6] Set Boot Timeout
+[7] Return to main menu
+Choice: 7
+[1] Linux from eMMC
+- VenHw(B549F005-4BD4-4020-A0CB-06F42BDA68C3)/HD(6,GPT,5C0F213C-17E1-4149-88C8-8B50FB4EC70E,0x7000,0x20000)/I
+mage
+- Initrd: VenHw(B549F005-4BD4-4020-A0CB-06F42BDA68C3)/HD(6,GPT,5C0F213C-17E1-4149-88C8-8B50FB4EC70E,0x7000,0x
+                20000)/initrd.img
+- Arguments: console=ttyAMA0,115200 earlycon=pl011,0xf8015000 root=/dev/mmcblk0p9 rw verbose debug user_debug
+=31 loglevel=8
+- LoaderType: Linux kernel with FDT support
+[2] f
+- VenHw(B549F005-4BD4-4020-A0CB-06F42BDA68C3)/HD(6,GPT,5C0F213C-17E1-4149-88C8-8B50FB4EC70E,0x7000,0x20000)/f
+astboot.efi
+- Arguments:
+[3] Shell
+[4] Boot Manager
+Start: Invalid input (max 4)
+Start: 2
+add-symbol-file /home/zhangfei/work/96board/linaro-edk2/Build/HiKey/DEBUG_GCC48/AARCH64/EmbeddedPkg/Application/Andro
+idFastboot/AndroidFastbootApp/DEBUG/AndroidFastbootApp.dll 0x3AA87260
+Loading driver at 0x0003AA87000 EntryPoint=0x0003AA87260 AndroidFastbootApp.efi
+Android Fastboot mode - version 0.4. Press any key to quit.
+
+3. fastboot config in host
+vi /etc/udev/rules.d/51-android.rules
+SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="d00d", MODE="0600", OWNER=""
+
+4. host use:
+fastboot flash fastboot fip.bin
+fastboot flash nvme nvme.img
+fastboot flash boot boot-fat.uefi.img
+fastboot flash system system.img
+fastboot flash cache cache.img
+fastboot flash userdata userdata.img
+
+
 ## Known Issues
 
 * [x] ~~mainline kernel fails to boot. 3.18 kernel boots.~~
