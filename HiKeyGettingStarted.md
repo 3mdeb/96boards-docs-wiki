@@ -405,7 +405,7 @@ For microSD, use root=/dev/mmcblk1p2
 
 For the ramdisk image, use the image from the pre-release Debian 8.0 ("Jessie") or create a dummy ramdisk: 
 
-    $ touch initrd ; echo initrd | cpio -v > ramdisk.img
+    $ touch initrd ; echo initrd | cpio -ov > initrd.img
 
 * Make sure to respect the naming scheme
 
@@ -419,7 +419,7 @@ Creating the boot image:
     $ sudo cp -a arch/arm64/boot/Image boot-fat/Image
     $ sudo cp arch/arm64/boot/dts/hi6220-hikey.dtb boot-fat/lcb.dtb
     $ sudo cp initrd.img boot-fat/ramdisk.img
-    $ sudo mv cmdline boot-fat/cmdline
+    $ sudo cp cmdline boot-fat/cmdline
     $ sudo umount boot-fat
     $ rm -rf boot-fat
 
