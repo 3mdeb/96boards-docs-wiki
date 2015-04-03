@@ -172,6 +172,6 @@ PS: l-loader.bin, ptable.img should be flushed in recovery mode, since no real p
 * [ ] DDR works only at 533MHz.
 * [ ] NVM isn't supported in UEFI.
 * [ ] SD card isn't supported in UEFI.
-* [ ] MCU image isn't loaded by ATF. As a result, we can't enable cpufreq.
+* [x] MCU image isn't loaded by ATF. As a result, we can't enable cpufreq.
 * [x] ~~thermal feature isn't enabled in ATF.~~
 * [ ] Hisilicon's boot loader (fastboot1.img/fastboot2.img) only supports spin-table to enable multiple CPUs, and ATF only supports PSCI to enable multiple CPUs. So if use psci's dtb and Hisilicon's boot loader, it will introduce the hang issue. Have two ways to workaround this issue: set "maxcpus=1" in command line, or change dtb from **enable-method = "psci"** to **enable-method = "spin-table"**.
