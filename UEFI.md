@@ -170,7 +170,7 @@ PS: l-loader.bin, ptable.img should be flushed in recovery mode, since no real p
 * [x] ~~fastboot feature isn't enabled in UEFI. Recovery mode should be used to download images in ATF.~~
 * [x] ~~only one core is supported. PSCI is being worked on.~~
 * [ ] DDR works only at 533MHz.
-* [ ] NVM is supported in UEFI. Sometimes fail to load variable from storage device. At this time, flush nvme partition is required.
+* [x] ~~NVM is supported in UEFI. Sometimes fail to load variable from storage device. At this time, flush nvme partition is required.~~
 * [ ] SD card isn't supported in UEFI.
 * [x] ~~MCU image isn't loaded by ATF. As a result, we can't enable cpufreq.~~
 * [x] ~~thermal feature isn't enabled in ATF.~~
