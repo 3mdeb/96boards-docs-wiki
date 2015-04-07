@@ -458,73 +458,73 @@ Table 1 describes the partition layout info on HiKey eMMC
   </tr>
   <tr>
     <td>fastboot1</td>
-    <td>1</td>
+    <td>--</td>
     <td>0x0000_0000</td>
     <td>0x0004_0000 (256KB)</td>
   </tr>
   <tr>
     <td>ptable</td>
-    <td>0</td>
+    <td>--</td>
     <td>0x0000_0000</td>
     <td>0x0010_0000 (1MB)</td>
   </tr>
   <tr>
     <td>vrl</td>
-    <td>0</td>
+    <td>1</td>
     <td>0x0010_0000</td>
     <td>0x0010_0000 (1MB)</td>
   </tr>
   <tr>
     <td>vrl_backup</td>
-    <td>0</td>
+    <td>2</td>
     <td>0x0020_0000</td>
     <td>0x0010_0000 (1MB)</td>
   </tr>
   <tr>
     <td>mcuimage</td>
-    <td>0</td>
+    <td>3</td>
     <td>0x0030_0000</td>
     <td>0x0010_0000 (1MB)</td>
   </tr>
   <tr>
     <td>fastboot</td>
-    <td>0</td>
+    <td>4</td>
     <td>0x0040_0000</td>
     <td>0x0080_0000 (8MB)</td>
   </tr>
   <tr>
     <td>nvme</td>
-    <td>0</td>
+    <td>5</td>
     <td>0x00C0_0000</td>
     <td>0x0020_0000 (2MB)</td>
   </tr>
   <tr>
     <td>boot</td>
-    <td>0</td>
+    <td>6</td>
     <td>0x00E0_0000</td>
     <td>0x0400_0000 (64MB)</td>
   </tr>
   <tr>
     <td>Reserved</td>
-    <td>0</td>
+    <td>7</td>
     <td>0x04E0_0000</td>
     <td>0x1000_0000 (256MB)</td>
   </tr>
   <tr>
     <td>cache</td>
-    <td>0</td>
+    <td>8</td>
     <td>0x14E0_0000</td>
     <td>0x1000_0000 (256MB)</td>
   </tr>
   <tr>
     <td>system</td>
-    <td>0</td>
+    <td>9</td>
     <td>0x24E0_0000</td>
     <td>0x6000_0000 (1536MB)</td>
   </tr>
   <tr>
     <td>userdata</td>
-    <td>0</td>
+    <td>10</td>
     <td>0x84E0_0000</td>
     <td>0x6000_0000 (1536MB)</td>
   </tr>
