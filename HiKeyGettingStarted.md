@@ -397,12 +397,8 @@ To build the kernel:
 
 To build the boot image:
 
-**Note:** 
-
-Replace the root device as appropriate:
-
- * Automatic selection (don't do this if you have similarly labelled root filesystems on both eMMC and microSD), use root=/dev/disk/by-partlabel/system
- * For eMMC, use root=/dev/mmcblk0p9 or root=/dev/mmcblk0p7 depending on how old you bootloader binaries are (newer bootloaders require /dev/mmcblk0p9)
+**Note:** Replace the root device as appropriate:
+ * For eMMC, use root=/dev/disk/by-partlabel/system
  * For microSD, use root=/dev/mmcblk1p2
 
 For the ramdisk image, use the image from the pre-release Debian 8.0 ("Jessie") or create a dummy ramdisk: 
