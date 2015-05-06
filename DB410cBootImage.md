@@ -55,23 +55,18 @@ The tool _mkbootimg_ is a standalone application that will process all files and
 
 The boot image also contains the kernel bootargs, which can be changed as needed in the next command. If you want to mount the rootfs from the ramdisk, you can generate the boot image like this:
 
+    export cmdline="root=/dev/ram0 rw rootwait console=ttyMSM0,115200n8"
     mkbootimg --kernel build-${ARCH}/arch/arm64/boot/Image \
               --ramdisk initrd.img-4.0.0-linaro-lt-qcom \
               --output boot-db410c.img \
               --dt dt.img \
               --pagesize 2048 \
               --base 0x8000000 \
-              --cmdline "root=/dev/ram0 rw rootwait console=ttyMSM0,115200n8"
+              --cmdline "$cmdline"
 
-If you have install a rootFS on the on-board eMMC, for example in the _userdata_ partition, you can create the boot image with:
+If you have install a rootFS on the on-board eMMC, for example in the _userdata_ partition, you can use this instead:
 
-    mkbootimg --kernel build-${ARCH}/arch/arm64/boot/Image \
-              --ramdisk initrd.img-4.0.0-linaro-lt-qcom \
-              --output boot-db410c.img \
-              --dt dt.img \
-              --pagesize 2048 \
-              --base 0x8000000 \
-              --cmdline "root=/dev/disk/by-partlabel/userdata rw rootwait console=ttyMSM0,115200n8"
+    export cmdline="root=/dev/disk/by-partlabel/userdata rw rootwait console=ttyMSM0,115200n8"
 
 # How to use the boot image
 
