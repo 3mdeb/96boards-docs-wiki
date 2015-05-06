@@ -77,6 +77,48 @@ power_off_cmd = /bin/pdu.sh OFF 4
 }
 ```
 
+* Android LAVA Job
+
+```
+{
+    "actions": [
+        {
+            "command": "deploy_linaro_android_image",
+            "parameters": {
+                "images": [
+                    {
+                        "partition": "boot",
+                        "url": "http://builds.96boards.org/snapshots/hikey/android/87/boot_fat.img"
+                    },
+                    {
+                        "partition": "system",
+                        "url": "http://builds.96boards.org/snapshots/hikey/android/87/system.img"
+                    },
+                    {
+                        "partition": "cache",
+                        "url": "http://builds.96boards.org/snapshots/hikey/android/87/cache.img"
+                    },
+                    {
+                        "partition": "userdata",
+                        "url": "http://builds.96boards.org/snapshots/hikey/android/87/userdata.img"
+                    }
+                ]
+            }
+        },
+        {
+            "command": "boot_linaro_android_image",
+            "parameters": {
+                "test_image_prompt": "shell@hikey"
+            }
+        }
+    ],
+    "device_type": "hi6220-hikey",
+    "job_name": "hi6220-hikey-android-boot-test",
+    "logging_level": "DEBUG",
+    "timeout": 18000
+}
+```
+
 * Ramdisk LAVA Job
 
 ```
@@ -100,5 +142,4 @@ power_off_cmd = /bin/pdu.sh OFF 4
     "timeout": 18000
 }
 ```
-
 
