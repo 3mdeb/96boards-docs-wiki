@@ -27,10 +27,11 @@ The following items are required:
 
 * Create the device configuration
   1. Create a file /etc/lava-dispatcher/devices/hi6220-hikey01.conf
-  2. **connection_command** is the shell command used to connect to the UART port
-  3. **hard_reset_command** is the shell command to turn the board off and then on again
-  4. **power_off_cmd** is the shell command to turn the board off
-  5. Note that the as of 5/6/2015 the adb serial number is not unique, and will always be 0123456789
+  2. **fastboot_command** is the shell command used to flash the board, use the usb id obtained from above
+  3. **connection_command** is the shell command used to connect to the UART port
+  4. **hard_reset_command** is the shell command to turn the board off and then on again
+  5. **power_off_cmd** is the shell command to turn the board off
+  6. Note that the as of 5/6/2015 the adb serial number is not unique, and will always be 0123456789
 
 ```
 device_type = hi6220-hikey
