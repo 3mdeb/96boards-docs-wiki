@@ -98,38 +98,42 @@ $ wget https://builds.96boards.org/releases/hikey/nvme.img
 $ sudo fastboot flash ptable ptable.img
 $ sudo fastboot flash fastboot fip.bin
 $ sudo fastboot flash nvme nvme.img
-
 $ sudo fastboot flash boot boot-fat.uefi.img
 ```
 * turn off HiKey board
 * remove the jumper of pin3-pin4 on J15
 * turn on HiKey board
 
-
 ## fastboot from uefi
 
-1. Interrupt the boot by pressing any select
+* Interrupt the boot by pressing any select
+```shell
 [2] Shell
-2. At the "Shell>" prompt, type: fastboot
+```
+* At the "Shell>" prompt, type: fastboot
+```shell
 Shell> fastboot
 Android Fastboot mode - version 0.4. Press any key to quit
-
-3. fastboot configuration in host  
+```
+* fastboot configuration in host  
+```shell
 apt-get install android-tools-fastboot
 sudo adduser $USER adb
-- log out and log in again to become part of adb group, Alternatively you can use "sudo fastboot" instead of fastboot command
-
-4. host use:  
+# log out and log in again to become part of adb group,
+# Alternatively you can use "sudo fastboot" instead of fastboot command
+```
+* host use:  
+```shell
 fastboot flash fastboot fip.bin  
 fastboot flash nvme nvme.img  
 fastboot flash boot boot-fat.uefi.img  
 fastboot flash system system.img  
 fastboot flash cache cache.img  
 fastboot flash userdata userdata.img  
-
-PS: l-loader.bin, ptable.img should be flashed in recovery mode, since these are not on real partition
-
-5. Optional: To add fastboot to boot menu:
+# l-loader.bin, ptable.img should be flashed in recovery mode, since these are not on real partition
+```
+* Optional: To add fastboot to boot menu:
+```shell
 The default boot selection will start in  10 seconds  
 [3] Boot Manager  
 Start: 3  
@@ -165,10 +169,7 @@ add-symbol-file /home/zhangfei/work/96board/linaro-edk2/Build/HiKey/DEBUG_GCC48/
 idFastboot/AndroidFastbootApp/DEBUG/AndroidFastbootApp.dll 0x3AA87260
 Loading driver at 0x0003AA87000 EntryPoint=0x0003AA87260 AndroidFastbootApp.efi
 Android Fastboot mode - version 0.4. Press any key to quit.  
-
-
-
-  
+```
 
 ## Known Issues
 
