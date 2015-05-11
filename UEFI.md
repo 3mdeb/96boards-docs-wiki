@@ -117,8 +117,7 @@ Android Fastboot mode - version 0.4. Press any key to quit
 3. fastboot configuration in host  
 apt-get install android-tools-fastboot
 sudo adduser $USER adb
-# log out and log in again to become part of adb group
-# Alternatively you can use "sudo fastboot" instead of fastboot command
+- log out and log in again to become part of adb group, Alternatively you can use "sudo fastboot" instead of fastboot command
 
 4. host use:  
 fastboot flash fastboot fip.bin  
