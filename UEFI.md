@@ -108,10 +108,29 @@ $ sudo fastboot flash boot boot-fat.uefi.img
 
 ## fastboot from uefi
 
-1. copy application  
-cp Build/HiKey/DEBUG_GCC48/AARCH64/AndroidFastbootApp.efi boot-fat/fastboot.efi  
+1. Interrupt the boot by pressing any select
+[2] Shell
+2. At the "Shell>" prompt, type: fastboot
+Shell> fastboot
+Android Fastboot mode - version 0.4. Press any key to quit
 
-2. board usage  
+3. fastboot configuration in host  
+apt-get install android-tools-fastboot
+sudo adduser $USER adb
+# log out and log in again to become part of adb group
+# Alternatively you can use "sudo fastboot" instead of fastboot command
+
+4. host use:  
+fastboot flash fastboot fip.bin  
+fastboot flash nvme nvme.img  
+fastboot flash boot boot-fat.uefi.img  
+fastboot flash system system.img  
+fastboot flash cache cache.img  
+fastboot flash userdata userdata.img  
+
+PS: l-loader.bin, ptable.img should be flashed in recovery mode, since these are not on real partition
+
+5. Optional: To add fastboot to boot menu:
 The default boot selection will start in  10 seconds  
 [3] Boot Manager  
 Start: 3  
@@ -142,26 +161,15 @@ VenHw(B549F005-4BD4-4020-A0CB-06F42BDA68C3)/HD(6,GPT,5C0F213C-17E1-4149-88C8-8B5
 Arguments:  
 [3] Shell  
 [4] Boot Manager  
-Start: Invalid input (max 4)  
 Start: 2  
 add-symbol-file /home/zhangfei/work/96board/linaro-edk2/Build/HiKey/DEBUG_GCC48/AARCH64/EmbeddedPkg/Application/Andro
 idFastboot/AndroidFastbootApp/DEBUG/AndroidFastbootApp.dll 0x3AA87260
 Loading driver at 0x0003AA87000 EntryPoint=0x0003AA87260 AndroidFastbootApp.efi
 Android Fastboot mode - version 0.4. Press any key to quit.  
 
-3. fastboot config in host  
-vi /etc/udev/rules.d/51-android.rules  
-SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="d00d", MODE="0600", OWNER=""  
 
-4. host use:  
-fastboot flash fastboot fip.bin  
-fastboot flash nvme nvme.img  
-fastboot flash boot boot-fat.uefi.img  
-fastboot flash system system.img  
-fastboot flash cache cache.img  
-fastboot flash userdata userdata.img  
 
-PS: l-loader.bin, ptable.img should be flushed in recovery mode, since no real partition  
+  
 
 ## Known Issues
 
@@ -176,3 +184,4 @@ PS: l-loader.bin, ptable.img should be flushed in recovery mode, since no real p
 * [x] ~~MCU image isn't loaded by ATF. As a result, we can't enable cpufreq.~~
 * [x] ~~thermal feature isn't enabled in ATF.~~
 * [ ] Hisilicon's boot loader (fastboot1.img/fastboot2.img) only supports spin-table to enable multiple CPUs, and ATF only supports PSCI to enable multiple CPUs. So if use psci's dtb and Hisilicon's boot loader, it will introduce the hang issue. Have two ways to workaround this issue: set "maxcpus=1" in command line, or change dtb from **enable-method = "psci"** to **enable-method = "spin-table"**; "hisi,boardid" should also be included in devicetree, otherwise the dtb cannot be loaded.
+* [ ] flashing l-loader.bin and ptable.img to the pseudopartitions is not enabled
