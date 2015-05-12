@@ -183,5 +183,5 @@ Android Fastboot mode - version 0.4. Press any key to quit.
 * [ ] SD card isn't supported in UEFI.
 * [x] ~~MCU image isn't loaded by ATF. As a result, we can't enable cpufreq.~~
 * [x] ~~thermal feature isn't enabled in ATF.~~
-* [ ] Hisilicon's boot loader (fastboot1.img/fastboot2.img) only supports spin-table to enable multiple CPUs, and ATF only supports PSCI to enable multiple CPUs. So if use psci's dtb and Hisilicon's boot loader, it will introduce the hang issue. Have two ways to workaround this issue: set "maxcpus=1" in command line, or change dtb from **enable-method = "psci"** to **enable-method = "spin-table"**; "hisi,boardid" should also be included in devicetree, otherwise the dtb cannot be loaded.
+* [ ] Hisilicon's boot loader (fastboot1.img/fastboot2.img) only supports spin-table to enable multiple CPUs, and ATF only supports PSCI to enable multiple CPUs. So if use psci's dtb and Hisilicon's boot loader, it will introduce the hang issue. Have two ways to workaround this issue: set "maxcpus=1" in command line, or change dtb from **enable-method = "psci"** to **enable-method = "spin-table"**; "hisi,boardid = <0 0 4 3>;" should also be included in devicetree, otherwise the dtb cannot be loaded.
 * [ ] flashing l-loader.bin and ptable.img to the pseudopartitions is not enabled
