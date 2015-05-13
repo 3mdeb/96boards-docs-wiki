@@ -178,9 +178,9 @@ Android Fastboot mode - version 0.4. Press any key to quit.
 * [x] ~~initrd isn't supported. We can only use initramfs at the moment.~~
 * [x] ~~fastboot feature isn't enabled in UEFI. Recovery mode should be used to download images in ATF.~~
 * [x] ~~only one core is supported. PSCI is being worked on.~~
-* [ ] DDR works only at 533MHz.
+* [x] ~~DDR works only at 533MHz.~~
 * [x] ~~NVM is supported in UEFI. Sometimes fail to load variable from storage device. At this time, flush nvme partition is required.~~
-* [ ] SD card isn't supported in UEFI.
+* [x] ~~SD card isn't supported in UEFI.~~
 * [x] ~~MCU image isn't loaded by ATF. As a result, we can't enable cpufreq.~~
 * [x] ~~thermal feature isn't enabled in ATF.~~
 * [ ] Hisilicon's boot loader (fastboot1.img/fastboot2.img) only supports spin-table to enable multiple CPUs, and ATF only supports PSCI to enable multiple CPUs. So if use psci's dtb and Hisilicon's boot loader, it will introduce the hang issue. Have two ways to workaround this issue: set "maxcpus=1" in command line, or change dtb from **enable-method = "psci"** to **enable-method = "spin-table"**; "hisi,boardid = \<0 0 4 3\>;" should also be included in devicetree, otherwise the dtb cannot be loaded; at the same time, you also need to add "clock-frequency = \<1200000\>;" to the timer node in dts, it's a bug of old hisilicon bootloader but you must add it now when using the old one.
