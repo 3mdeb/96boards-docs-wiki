@@ -61,7 +61,7 @@ sudo bash -x generate_ptable.sh
 python gen_loader.py -o ptable.img --img_prm_ptable=prm_ptable.img --img_sec_ptable=sec_ptable.img
 ```
 
-The files fip.bin, l-loader.bin and ptable.img are now built.
+The files fip.bin, l-loader.bin and ptable.img are now built. All the image files are in $BUILD/l-loader directory.
 
 ### EFI boot partition (boot-fat.uefi.img)
 
@@ -169,6 +169,8 @@ add-symbol-file /home/zhangfei/work/96board/linaro-edk2/Build/HiKey/DEBUG_GCC48/
 idFastboot/AndroidFastbootApp/DEBUG/AndroidFastbootApp.dll 0x3AA87260
 Loading driver at 0x0003AA87000 EntryPoint=0x0003AA87260 AndroidFastbootApp.efi
 Android Fastboot mode - version 0.4. Press any key to quit.  
+
+By the way, fastboot.efi is renamed from $BUILD/linaro-edk2/Build/HiKey/RELEASE_GCC48/AARCH64/EmbeddedPkg/Application/AndroidFastboot/AndroidFastbootApp/OUTPUT/AndroidFastbootApp.efi
 ```
 
 ## Known Issues
