@@ -6,6 +6,23 @@ The following binaries are required:
 * ptable.img  - partition table
 * kernel and dtb images - included in the boot partition
 
+## Install from prebuilt binaries
+
+UEFI builds go to https://builds.96boards.org/snapshots/hikey/uefi/ and pick the latest number. Download the files: fip.bin, l-loader.bin, ptable.img. Debian builds got to https://builds.96boards.org/snapshots/hikey/debian/304, here you can pick Boot partition with kernel boot-fat.uefi.img.gz and an emmcrootfs. 
+
+For example now the latest UEFI build is 26 and Debian build is 304 so:
+
+```shell
+wget https://builds.96boards.org/snapshots/hikey/uefi/26/fip.bin
+wget https://builds.96boards.org/snapshots/hikey/uefi/26/l-loader.bin
+wget https://builds.96boards.org/snapshots/hikey/uefi/26/ptable.img
+wget https://builds.96boards.org/snapshots/hikey/debian/304/boot-fat.uefi.img.gz
+wget https://builds.96boards.org/snapshots/hikey/debian/304/hikey-jessie_developer_20150522-304.emmc.img.gz
+gunzip boot-fat.uefi.img.gz
+gunzip hikey-jessie_developer_20150522-304.emmc.img.gz
+```
+Now skip to the "Flash binaries to eMMC" section.
+
 ## Source code
 
 The source code is available from:
@@ -61,7 +78,7 @@ sudo bash -x generate_ptable.sh
 python gen_loader.py -o ptable.img --img_prm_ptable=prm_ptable.img --img_sec_ptable=sec_ptable.img
 ```
 
-The files fip.bin, l-loader.bin and ptable.img are now built. All the image files are in $BUILD/l-loader directory.
+The files fip.bin, l-loader.bin and ptable.img are now built. All the image files are in $BUILD/l-loader directory. The Fastboot App is at adk2/Build/HiKey/RELEASE_GCC48/AARCH64/AndroidFastbootApp.efi
 
 ### EFI boot partition (boot-fat.uefi.img)
 
@@ -74,6 +91,7 @@ $ sudo mkfs.fat -n "BOOT IMG" boot-fat.uefi.img
 $ sudo mount -o loop,rw,sync boot-fat.uefi.img boot-fat
 $ sudo cp -a path/to/Image path/to/hi6220-hikey.dtb boot-fat/ || true
 $ sudo cp -a path/to/initrd.img-* boot-fat/initrd.img || true
+$ sudo cp path/to/AndroidFastbootApp.efi boot-fat/fastboot.efi
 $ sudo umount boot-fat
 $ rm -rf boot-fat
 ```
