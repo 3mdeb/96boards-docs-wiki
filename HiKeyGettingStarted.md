@@ -19,7 +19,7 @@ If you have already have a HiKey board delivered before May 2015 under the Early
 - First, follow the instructions in [Section 4. Board Recovery - Installing a Bootloader](#section-41), to update the bootloader software on your board
 - Then follow the instructions in [Section 3. Updating the OS](#section-3), to install either the Debian or the Android Open Source Project (AOSP) build
 
-## 1. Pre-Installed Debian Linux  <a id="section-1"></a>
+## 1. Pre-Installed Debian Linux <a name="section-1"></a>
 The HiKey board is ready to use “out of the box” with a preinstalled version of the Debian Linux distribution.
 
 To get started you will need a power supply, an HDMI monitor and a USB keyboard and mouse. 
@@ -131,7 +131,7 @@ The default user name is "linaro" and the default password for user linaro is "l
 
 The HiKey board does not support a battery powered RTC. System time will be obtained from the network if available. If you are not connecting to a network you will need to manually set the date on each power up
 
-**5. USB** <a id="section-15></a>
+**5. USB** <a name="section-15></a>
 
 A utility is provided in /home/linaro/bin to change the configuration of the host (Type A and Expansion) and OTG USB ports. By default these ports operate in low/full speed modes (1.5/12 Mbits/s) to support mouse/keyboard devices. Other USB devices such as network or storage dongles/sticks will be limited to full speed mode. Using the usb_speed utility it is possible to support high speed devices (480 Mbits/s) as long as they are not mixed with full/low speed devices.
 
@@ -166,7 +166,7 @@ $ su bash
 $
 ```
 
-## 2. Installing Android Open Source Project <a id="section-2"></a>
+## 2. Installing Android Open Source Project <a name="section-2"></a>
 
 Users may install a version of the Android Open Source Project (AOSP) onto the HiKey board. This will remove the factory installed Debian Linux OS. This section provides instructions on installing the AOSP build which consists of:
 - Derived from Linux 3.18 kernel
@@ -211,7 +211,7 @@ When flashing is completed power down the HiKey, remove Link 5-6 and power up th
 
 Please read the Hardware notes and the Known Issues later in this document before using the OS.
 
-## 3. Updating the OS <a id="section-3"></a>
+## 3. Updating the OS <a name="section-3"></a>
 
 Updates to 96Boards supported operating systems will be made available from time to time at: 
 [http://builds.96boards.org/releases/hikey](http://builds.96boards.org/releases/hikey)
@@ -332,9 +332,9 @@ You may now use the updated OS.
 
 Please read the Hardware notes and the Known Issues later in this document before using the OS. 
 
-## 4. Board Recovery <a id="section-4"></a>
+## 4. Board Recovery <a name="section-4"></a>
 
-### Installing a Bootloader <a id="section-41"></a>
+### Installing a Bootloader <a name="section-41"></a>
 
 For most users a board can be “recovered” from a software failure by reloading the operating system using the instructions provided above. However, if the primary bootloader in the eMMC flash memory has been corrupted then the bootloader will need to be re-installed. This section describes how to reinstall the primary bootloader. 
 
@@ -490,7 +490,7 @@ Your bootloader has been successfully installed and you are now ready to install
 - Fastboot support
 - Optional OPTEE (open source Trusted Execution Environment)
 
-## 5. Hardware Notes <a id="section-5"></a>
+## 5. Hardware Notes <a name="section-5"></a>
 
 ### Schematics and HiKey Board Hardware User Guide
 - [Schematics](https://www.96boards.org/hikey-schematics)
@@ -555,7 +555,7 @@ The following are known software issues on the current release.
 
 For new issues please refer to the 96Boards HiKey community forum: [https://github.com/96boards/bugs](https://github.com/96boards/bugs)<br/>To view the open bugs, or to add a bug click on the Issues link on the right hand side of the page. 
 
-## 7. Building Software from Source Code <a id="section-7"></a>
+## 7. Building Software from Source Code <a name="section-7"></a>
 
 To build a kernel using a linux computer use the following instructions. These assume that you have a good level of knowledge in using Linaro tools and building Linux kernels.
 
@@ -693,7 +693,7 @@ $ cd out/target/product/hikey
 
 Install the built files following the instructions on loading the AOSP build in [Section 2](#section-2) above. 
 
-### Appendix 1: Partition Information <a id="appendix-1"></a>
+### Appendix 1: Partition Information <a name="appendix-1"></a>
 
 Table 1 describes the partition layout on the HiKey eMMC.
 
