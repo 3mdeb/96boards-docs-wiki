@@ -6,13 +6,14 @@ This document describes how to get started with the HiKey ARMv8 community develo
 
 **The following information is provided in these release notes:**
 
-1. Information on the Debian 8.0 ("jessie") OS installation software provided with the HiKey board as shipped from the factory.
-2. Information on loading the AOSP version of Android 5.1 as an alternative OS onto the HiKey board
-3. Information on loading an OS update from 96Boards.org
-4. Information on board recovery and/or loading bootloader software onto the HiKey board
-5. Hardware notes
-6. Known Issues
-7. Information on building software for the HiKey board from source code
+1. [Pre-Installed Debian Linux](#section-1)<br/>Information on the Debian 8.0 ("jessie") OS installation software provided with the HiKey board as shipped from the factory.
+2. [Installing Android Open Source Project](#section-2)<br/>Information on loading the AOSP version of Android 5.1 as an alternative OS onto the HiKey board
+3. [Updating the OS](#section-3)<br/>Information on loading an OS update from 96Boards.org
+4. [Board Recovery](#section-4)<br/>Information on board recovery and/or loading bootloader software onto the HiKey board
+5. [Hardware notes](#section-5)
+6. [Known Issues](#section-6)
+7. [Building Software from Source Code](#section-7)<br/>Information on building software for the HiKey board from source code
+8. [Appendices](#appendix-1)<br/>Information on the partition table used on HiKey and the contents of the boot partition.
 
 ### Updating from the Early Access Build
 If you have already have a HiKey board delivered before May 2015 under the Early Access program you will need to do the following:
@@ -534,7 +535,7 @@ In Debian the two 96Boards expansion IO UART serial ports will appear as `/dev/t
 
 Note that the LS expansion port I/O pins on the 96Boards 2mm header, including the UART signals, are at 1.8V levels. 
 
-## 6. Known Issues
+## 6. Known Issues <a name="section-6"></a>
 
 The following are known software issues on the current release.
 
