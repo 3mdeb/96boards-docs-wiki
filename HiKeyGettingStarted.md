@@ -174,13 +174,13 @@ Users may install a version of the Android Open Source Project (AOSP) onto the H
 
 Download the following files from:
 [http://builds.96boards.org/releases/hikey/linaro/aosp/latest](http://builds.96boards.org/releases/hikey/linaro/aosp/latest)
-  - boot_fat.img.tar.gz
-  - cache.img.tar.gz
-  - system.img.tar.gz
-  - userdata.img.tar.gz
+  - boot_fat.img.tar.xz
+  - cache.img.tar.xz
+  - system.img.tar.xz
+  - userdata.img.tar.xz
   - ptable-aosp.img
 
-Uncompress the .tar.gz files using your operating system file manager, or with the following command for each file:
+Uncompress the .tar.xz files using your operating system file manager, or with the following command for each file:
 ```
 $ xz --decompress [filename].tar.xz; tar -xvf [filename].tar
 ```
@@ -233,7 +233,7 @@ Download the following files onto your Linux PC from:
 
 Note that the jessie image is a large file and may take several minutes (or longer on a slow internet connection) to load. You will need to accept the end user license for the Mali GPU software before you are able to download the OS image. 
 
-Unzip the .xz files (using gunzip or equivalent)
+Unzip the .gz files (using gunzip or equivalent)
 
 Install Link 5-6 on the HiKey board. This tells the bootloader to start up in fastboot mode. 
 
@@ -298,13 +298,13 @@ Note: Do not mount and access other partitions on the eMMC unless you are an exp
 
 Download the following files from:
 [http://builds.96boards.org/releases/hikey/linaro/aosp/](http://builds.96boards.org/releases/hikey/linaro/aosp/)
-  - boot-fat.img.tar.gz
-  - cache.img.tar.gz
-  - system.img.tar.gz
-  - userdata.img.tar.gz
+  - boot-fat.img.tar.xz
+  - cache.img.tar.xz
+  - system.img.tar.xz
+  - userdata.img.tar.xz
   - ptable-aosp.img
 
-Uncompress the .tar.gz files using your operating system file manager, or with the following command for each file:
+Uncompress the .tar.xz files using your operating system file manager, or with the following command for each file:
 ```
 $ xz --decompress [filename].tar.xz; tar -xvf [filename].tar
 ```
