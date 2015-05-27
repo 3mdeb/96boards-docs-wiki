@@ -1,5 +1,5 @@
 Welcome to the documentation for [96boards](https://www.96boards.org/)
 
-* [HiKey board - getting started](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted)
-* [HiKey board - UEFI](https://github.com/96boards/documentation/wiki/UEFI)
-* [HiKey board - LAVA](https://github.com/96boards/documentation/wiki/HiKeyLAVA)
+* [HiKey - Getting Started](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted)
+* [HiKey - UEFI](https://github.com/96boards/documentation/wiki/UEFI)
+* [HiKey - LAVA](https://github.com/96boards/documentation/wiki/HiKeyLAVA)
