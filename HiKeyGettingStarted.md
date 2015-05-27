@@ -139,7 +139,7 @@ For information on using the utility do the following:
 ```
 $ sudo ~/bin/usb_speed -h
 ```
-Please refer to the Hardware Notes section below for further information on the USB port configuration of the HiKey board. 
+Please refer to the Hardware Notes section below for further information on the USB port configuration of the HiKey board.
 
 **6. System and User LEDS**
 
