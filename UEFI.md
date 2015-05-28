@@ -21,7 +21,7 @@ wget https://builds.96boards.org/snapshots/hikey/debian/304/hikey-jessie_develop
 gunzip boot-fat.uefi.img.gz
 gunzip hikey-jessie_developer_20150522-304.emmc.img.gz
 ```
-Now skip to the "Flash binaries to eMMC" section.
+Now skip to the [Flash binaries to eMMC](#flash-emmc) section.
 
 ## Source code
 
@@ -96,7 +96,7 @@ $ sudo umount boot-fat
 $ rm -rf boot-fat
 ```
 
-## Flash binaries to eMMC
+## Flash binaries to eMMC <a name="flash-emmc"></a>
 
 The flashing process requires to be in **recovery mode**.
 
@@ -112,7 +112,8 @@ sudo python hisi-idt.py --img1=l-loader.bin
 ```
 * run fastboot commands to flash the images (**order must be respected**)
 ```shell
-$ wget https://builds.96boards.org/releases/hikey/nvme.img
+$ wget https://builds.96boards.org/releases/hikey/linaro/binaries/latest/nvme.img
+$ wget https://builds.96boards.org/releases/hikey/linaro/binaries/latest/mcuimage.bin
 $ sudo fastboot flash ptable ptable.img
 $ sudo fastboot flash fastboot fip.bin
 $ sudo fastboot flash nvme nvme.img
