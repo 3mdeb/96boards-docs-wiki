@@ -497,15 +497,15 @@ Your bootloader has been successfully installed and you are now ready to install
 - [Schematics](https://www.96boards.org/hikey-schematics)
 - [Hardware User Guide](https://www.96boards.org/hikey-userguide)
 
-### CPU Load
+### CPU Load <a name="section-51"></a>
 The supplied Linux 3.18-based kernel supports the thermal protection framework and DVFS. This will cause the HiKey CPU core frequencies to be reduced from the maximum 1.2GHz if the thermal setpoint of the SoC is reached. In an extreme case thermal shutoff will occur if DVFS has not been effective at reducing the SoC temperature to an acceptable level.
 
 Higher performance may be obtained by using forced air (fan) cooling on the HiKey board.
 
-### HDMI Port
+### HDMI Port <a name="section-52"></a>
 At present the HDMI port is fixed to use 1280x720 non-interlaced at 60Hz. We expect a future software update to support EDID and setting of alternate video modes for the display. Note that the fixed settings may not work on all monitors/TVs but have been demonstrated to work on most.
 
-### USB Ports
+### USB Ports <a name="section-53"></a>
 There are multiple USB ports on the HiKey board:
 
 - One microUSB OTG port on the front edge of the board
@@ -530,7 +530,7 @@ In Debian the `usb_speed utility` (use `-h` option for help) is provided in `/ho
  
 In the AOSP build a small application is provided (usb-speed-switch) to change between High Speed and Full Speed operation.
 
-### UART Ports
+### UART Ports <a name="section-54"></a>
 In Debian the two 96Boards expansion IO UART serial ports will appear as `/dev/ttyAMA2` and `/dev/ttyAMA3` and are configured at 9600 baud by default.
 
 Note that the LS expansion port I/O pins on the 96Boards 2mm header, including the UART signals, are at 1.8V levels. 
