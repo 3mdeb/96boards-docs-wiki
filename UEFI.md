@@ -3,23 +3,29 @@
 The following binaries are required:
 * l-loader.bin - used to switch from aarch32 to aarch64 and boot
 * fip.bin - firmware package
-* ptable.img  - partition table
+* ptable-aosp.img or ptable-linux.img - partition tables for respectively AOSP images or Linux images
 * kernel and dtb images - included in the boot partition
 
 ## Install from prebuilt binaries
 
-UEFI builds go to https://builds.96boards.org/snapshots/hikey/linaro/uefi/ and pick the latest number. Download the files: fip.bin, l-loader.bin, ptable.img. Debian builds got to https://builds.96boards.org/snapshots/hikey/linaro/debian/304, here you can pick Boot partition with kernel boot-fat.uefi.img.gz and an emmcrootfs. 
+Latest UEFI build is published [here](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest). Download the following files:
+* [l-loader.bin](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/l-loader.bin)
+* [fip.bin](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/fip.bin)
+* [ptable-linux.img](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux.img)
 
-For example now the latest UEFI build is 26 and Debian build is 304 so:
+Latest Debian based builds are published [here](https://builds.96boards.org/snapshots/hikey/debian/latest). You can pick a boot partition and an eMMC rootfs:
+* [boot-fat.uefi.img.gz](http://builds.96boards.org/snapshots/hikey/linaro/debian/latest/boot-fat.uefi.img.gz)
+* [hikey-jessie_developer_YYYYMMDD-XXX.emmc.img.gz](http://builds.96boards.org/snapshots/hikey/linaro/debian/305/hikey-jessie_developer_20150526-305.emmc.img.gz)
+
+For example, to download the latest UEFI build and Debian build 305 so:
 
 ```shell
-wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/29/fip.bin
-wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/29/l-loader.bin
-wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/29/ptable.img
-wget https://builds.96boards.org/snapshots/hikey/linaro/debian/304/boot-fat.uefi.img.gz
-wget https://builds.96boards.org/snapshots/hikey/linaro/debian/304/hikey-jessie_developer_20150522-304.emmc.img.gz
-gunzip boot-fat.uefi.img.gz
-gunzip hikey-jessie_developer_20150522-304.emmc.img.gz
+wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/l-loader.bin
+wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/fip.bin
+wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux.img
+wget https://builds.96boards.org/snapshots/hikey/linaro/debian/latest/boot-fat.uefi.img.gz
+wget https://builds.96boards.org/snapshots/hikey/linaro/debian/305/hikey-jessie_developer_20150526-305.emmc.img.gz
+gunzip *.img.gz
 ```
 Now skip to the [Flash binaries to eMMC](#flash-emmc) section.
 
@@ -33,8 +39,8 @@ The source code is available from:
 ## Build instructions
 
 Prerequisites:
-* GCC 4.8 - cross-toolchain for Aarch64 available in your PATH. [Linaro GCC 4.8-2014.04](http://releases.linaro.org/14.04/components/toolchain/binaries/gcc-linaro-aarch64-linux-gnu-4.8-2014.04_linux.tar.xz) is used in the build instructions.
-* GCC cross-toolchain for gnueabihf available in your PATH. [Linaro GCC 4.9-2014.09](http://releases.linaro.org/14.09/components/toolchain/binaries/gcc-linaro-arm-linux-gnueabihf-4.9-2014.09_linux.tar.xz) is used in the build instructions.
+* GCC 4.8 or 4.9 - cross-toolchain for Aarch64 available in your PATH. [Linaro GCC 4.9-2015.02](http://releases.linaro.org/15.02/components/toolchain/binaries/aarch64-linux-gnu/gcc-linaro-4.9-2015.02-3-x86_64_aarch64-linux-gnu.tar.xz) is used in the build instructions.
+* GCC cross-toolchain for gnueabihf available in your PATH. [Linaro GCC 4.9-2015.02](http://releases.linaro.org/15.02/components/toolchain/binaries/arm-linux-gnueabihf/gcc-linaro-4.9-2015.02-3-x86_64_arm-linux-gnueabihf.tar.xz) is used in the build instructions.
 * GPT fdisk (gdisk package from your favorite distribution).
 
 ### Install custom toolchain(s)
@@ -42,7 +48,7 @@ Prerequisites:
 ```shell
 mkdir arm-tc arm64-tc
 tar --strip-components=1 -C ${PWD}/arm-tc -xf gcc-linaro-arm-linux-gnueabihf-4.9-*_linux.tar.xz
-tar --strip-components=1 -C ${PWD}/arm64-tc -xf gcc-linaro-aarch64-linux-gnu-4.8-*_linux.tar.xz
+tar --strip-components=1 -C ${PWD}/arm64-tc -xf gcc-linaro-aarch64-linux-gnu-4.9-*_linux.tar.xz
 export PATH="${PWD}/arm-tc/bin:${PWD}/arm64-tc/bin:$PATH"
 ```
 
@@ -51,14 +57,14 @@ export PATH="${PWD}/arm-tc/bin:${PWD}/arm64-tc/bin:$PATH"
 ```shell
 git clone -b hikey --depth 1 https://github.com/96boards/edk2.git linaro-edk2
 git clone -b hikey --depth 1 https://github.com/96boards/arm-trusted-firmware.git
-git clone -b hikey-v0.2.2 --depth 1 https://github.com/96boards/l-loader.git
+git clone --depth 1 https://github.com/96boards/l-loader.git
 git clone git://git.linaro.org/uefi/uefi-tools.git
 ```
 
 ### Build UEFI for HiKey
 
 ```shell
-export AARCH64_TOOLCHAIN=GCC48
+export AARCH64_TOOLCHAIN=GCC49
 export EDK2_DIR=${PWD}/linaro-edk2
 export UEFI_TOOLS_DIR=${PWD}/uefi-tools
 
@@ -66,19 +72,19 @@ cd ${EDK2_DIR}
 ${UEFI_TOOLS_DIR}/uefi-build.sh -b RELEASE -a ../arm-trusted-firmware hikey
 
 cd ../l-loader
-ln -s ${EDK2_DIR}/Build/HiKey/RELEASE_GCC48/FV/bl1.bin
-ln -s ${EDK2_DIR}/Build/HiKey/RELEASE_GCC48/FV/fip.bin
+ln -s ${EDK2_DIR}/Build/HiKey/RELEASE_GCC49/FV/bl1.bin
+ln -s ${EDK2_DIR}/Build/HiKey/RELEASE_GCC49/FV/fip.bin
 arm-linux-gnueabihf-gcc -c -o start.o start.S
 arm-linux-gnueabihf-gcc -c -o debug.o debug.S
 arm-linux-gnueabihf-ld -Bstatic -Tl-loader.lds -Ttext 0xf9800800 start.o debug.o -o loader
 arm-linux-gnueabihf-objcopy -O binary loader temp
 python gen_loader.py -o l-loader.bin --img_loader=temp --img_bl1=bl1.bin
 # XXX sgdisk usage requires sudo
-sudo bash -x generate_ptable.sh
-python gen_loader.py -o ptable.img --img_prm_ptable=prm_ptable.img --img_sec_ptable=sec_ptable.img
+sudo PTABLE=linux bash -x generate_ptable.sh
+python gen_loader.py -o ptable-linux.img --img_prm_ptable=prm_ptable.img --img_sec_ptable=sec_ptable.img
 ```
 
-The files fip.bin, l-loader.bin and ptable.img are now built. All the image files are in $BUILD/l-loader directory. The Fastboot App is at adk2/Build/HiKey/RELEASE_GCC48/AARCH64/AndroidFastbootApp.efi
+The files fip.bin, l-loader.bin and ptable-linux.img are now built. All the image files are in $BUILD/l-loader directory. The Fastboot App is at adk2/Build/HiKey/RELEASE_GCC49/AARCH64/AndroidFastbootApp.efi
 
 ### EFI boot partition (boot-fat.uefi.img)
 
@@ -91,7 +97,7 @@ $ sudo mkfs.fat -n "BOOT IMG" boot-fat.uefi.img
 $ sudo mount -o loop,rw,sync boot-fat.uefi.img boot-fat
 $ sudo cp -a path/to/Image path/to/hi6220-hikey.dtb boot-fat/ || true
 $ sudo cp -a path/to/initrd.img-* boot-fat/initrd.img || true
-$ sudo cp path/to/AndroidFastbootApp.efi boot-fat/fastboot.efi
+$ sudo cp path/to/AndroidFastbootApp.efi boot-fat/fastboot.efi
 $ sudo umount boot-fat
 $ rm -rf boot-fat
 ```
@@ -108,13 +114,13 @@ The flashing process requires to be in **recovery mode**.
 * on serial console, you should see some debug message (NULL packet)
 * run [HiKey recovery tool](https://raw.githubusercontent.com/96boards/burn-boot/master/hisi-idt.py) to flash l-loader.bin (Note: if the serial port recorded in hisi-idt.py isn't available, adjust the command line below by manually setting the serial port with "-d /dev/ttyUSBx" where x is usually the last serial port reported by "dmesg" command)
 ```shell
-sudo python hisi-idt.py --img1=l-loader.bin
+$ sudo python hisi-idt.py --img1=l-loader.bin
 ```
 * run fastboot commands to flash the images (**order must be respected**)
 ```shell
 $ wget https://builds.96boards.org/releases/hikey/linaro/binaries/latest/nvme.img
 $ wget https://builds.96boards.org/releases/hikey/linaro/binaries/latest/mcuimage.bin
-$ sudo fastboot flash ptable ptable.img
+$ sudo fastboot flash ptable ptable-linux.img
 $ sudo fastboot flash fastboot fip.bin
 $ sudo fastboot flash nvme nvme.img
 $ sudo fastboot flash boot boot-fat.uefi.img
@@ -136,20 +142,17 @@ Android Fastboot mode - version 0.4. Press any key to quit
 ```
 * fastboot configuration in host  
 ```shell
-apt-get install android-tools-fastboot
-sudo adduser $USER adb
-# log out and log in again to become part of adb group,
-# Alternatively you can use "sudo fastboot" instead of fastboot command
+sudo apt-get install android-tools-fastboot
 ```
 * host use:  
 ```shell
-fastboot flash fastboot fip.bin  
-fastboot flash nvme nvme.img  
-fastboot flash boot boot-fat.uefi.img  
-fastboot flash system system.img  
-fastboot flash cache cache.img  
-fastboot flash userdata userdata.img  
-# l-loader.bin, ptable.img should be flashed in recovery mode, since these are not on real partition
+$ sudo fastboot flash fastboot fip.bin  
+$ sudo fastboot flash nvme nvme.img  
+$ sudo fastboot flash boot boot-fat.uefi.img  
+$ sudo fastboot flash system system.img  
+$ sudo fastboot flash cache cache.img  
+$ sudo fastboot flash userdata userdata.img  
+# l-loader.bin, ptable-linux.img should be flashed in recovery mode
 ```
 * Optional: To add fastboot to boot menu:
 ```shell
@@ -189,20 +192,10 @@ idFastboot/AndroidFastbootApp/DEBUG/AndroidFastbootApp.dll 0x3AA87260
 Loading driver at 0x0003AA87000 EntryPoint=0x0003AA87260 AndroidFastbootApp.efi
 Android Fastboot mode - version 0.4. Press any key to quit.  
 
-By the way, fastboot.efi is renamed from $BUILD/linaro-edk2/Build/HiKey/RELEASE_GCC48/AARCH64/EmbeddedPkg/Application/AndroidFastboot/AndroidFastbootApp/OUTPUT/AndroidFastbootApp.efi
+Note: fastboot.efi is renamed from $BUILD/linaro-edk2/Build/HiKey/RELEASE_GCC48/AARCH64/EmbeddedPkg/Application/AndroidFastboot/AndroidFastbootApp/OUTPUT/AndroidFastbootApp.efi
 ```
 
 ## Known Issues
 
-* [x] ~~mainline kernel fails to boot. 3.18 kernel boots.~~
-* [x] ~~performance issues in ATF/UEFI: download/boot is slow.~~
-* [x] ~~initrd isn't supported. We can only use initramfs at the moment.~~
-* [x] ~~fastboot feature isn't enabled in UEFI. Recovery mode should be used to download images in ATF.~~
-* [x] ~~only one core is supported. PSCI is being worked on.~~
-* [x] ~~DDR works only at 533MHz.~~
-* [x] ~~NVM is supported in UEFI. Sometimes fail to load variable from storage device. At this time, flush nvme partition is required.~~
-* [x] ~~SD card isn't supported in UEFI.~~
-* [x] ~~MCU image isn't loaded by ATF. As a result, we can't enable cpufreq.~~
-* [x] ~~thermal feature isn't enabled in ATF.~~
 * [ ] Hisilicon's boot loader (fastboot1.img/fastboot2.img) only supports spin-table to enable multiple CPUs, and ATF only supports PSCI to enable multiple CPUs. So if use psci's dtb and Hisilicon's boot loader, it will introduce the hang issue. Have two ways to workaround this issue: set "maxcpus=1" in command line, or change dtb from **enable-method = "psci"** to **enable-method = "spin-table"**; "hisi,boardid = \<0 0 4 3\>;" should also be included in devicetree, otherwise the dtb cannot be loaded; at the same time, you also need to add "clock-frequency = \<1200000\>;" to the timer node in dts, it's a bug of old hisilicon bootloader but you must add it now when using the old one.
-* [ ] flashing l-loader.bin and ptable.img to the pseudopartitions is not enabled
+* [ ] flashing l-loader.bin and ptable-linux.img to the pseudopartitions is not enabled
