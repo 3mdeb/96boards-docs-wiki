@@ -146,13 +146,14 @@ sudo apt-get install android-tools-fastboot
 ```
 * host use:  
 ```shell
+$ sudo fastboot flash ptable ptable-linux.img
 $ sudo fastboot flash fastboot fip.bin  
 $ sudo fastboot flash nvme nvme.img  
 $ sudo fastboot flash boot boot-fat.uefi.img  
 $ sudo fastboot flash system system.img  
 $ sudo fastboot flash cache cache.img  
 $ sudo fastboot flash userdata userdata.img  
-# l-loader.bin, ptable-linux.img should be flashed in recovery mode
+# l-loader.bin should be flashed in recovery mode only
 ```
 * Optional: To add fastboot to boot menu:
 ```shell
@@ -198,4 +199,4 @@ Note: fastboot.efi is renamed from $BUILD/linaro-edk2/Build/HiKey/RELEASE_GCC48/
 ## Known Issues
 
 * [ ] Hisilicon's boot loader (fastboot1.img/fastboot2.img) only supports spin-table to enable multiple CPUs, and ATF only supports PSCI to enable multiple CPUs. So if use psci's dtb and Hisilicon's boot loader, it will introduce the hang issue. Have two ways to workaround this issue: set "maxcpus=1" in command line, or change dtb from **enable-method = "psci"** to **enable-method = "spin-table"**; "hisi,boardid = \<0 0 4 3\>;" should also be included in devicetree, otherwise the dtb cannot be loaded; at the same time, you also need to add "clock-frequency = \<1200000\>;" to the timer node in dts, it's a bug of old hisilicon bootloader but you must add it now when using the old one.
-* [ ] flashing l-loader.bin and ptable-linux.img to the pseudopartitions is not enabled
+* [ ] flashing l-loader.bin to the pseudopartitions is not enabled
