@@ -8,16 +8,16 @@ The following binaries are required:
 
 ## Install from prebuilt binaries
 
-UEFI builds go to https://builds.96boards.org/snapshots/hikey/uefi/ and pick the latest number. Download the files: fip.bin, l-loader.bin, ptable.img. Debian builds got to https://builds.96boards.org/snapshots/hikey/debian/304, here you can pick Boot partition with kernel boot-fat.uefi.img.gz and an emmcrootfs. 
+UEFI builds go to https://builds.96boards.org/snapshots/hikey/linaro/uefi/ and pick the latest number. Download the files: fip.bin, l-loader.bin, ptable.img. Debian builds got to https://builds.96boards.org/snapshots/hikey/linaro/debian/304, here you can pick Boot partition with kernel boot-fat.uefi.img.gz and an emmcrootfs. 
 
 For example now the latest UEFI build is 26 and Debian build is 304 so:
 
 ```shell
-wget https://builds.96boards.org/snapshots/hikey/uefi/26/fip.bin
-wget https://builds.96boards.org/snapshots/hikey/uefi/26/l-loader.bin
-wget https://builds.96boards.org/snapshots/hikey/uefi/26/ptable.img
-wget https://builds.96boards.org/snapshots/hikey/debian/304/boot-fat.uefi.img.gz
-wget https://builds.96boards.org/snapshots/hikey/debian/304/hikey-jessie_developer_20150522-304.emmc.img.gz
+wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/29/fip.bin
+wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/29/l-loader.bin
+wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/29/ptable.img
+wget https://builds.96boards.org/snapshots/hikey/linaro/debian/304/boot-fat.uefi.img.gz
+wget https://builds.96boards.org/snapshots/hikey/linaro/debian/304/hikey-jessie_developer_20150522-304.emmc.img.gz
 gunzip boot-fat.uefi.img.gz
 gunzip hikey-jessie_developer_20150522-304.emmc.img.gz
 ```
