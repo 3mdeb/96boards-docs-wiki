@@ -531,7 +531,7 @@ In Debian the `usb_speed utility` (use `-h` option for help) is provided in `/ho
 In the AOSP build a small application is provided (usb-speed-switch) to change between High Speed and Full Speed operation.
 
 ### UART Ports <a name="section-54"></a>
-In Debian the two 96Boards expansion IO UART serial ports will appear as `/dev/ttyAMA2` and `/dev/ttyAMA3` and are configured at 9600 baud by default.
+In Debian the two 96Boards expansion IO UART serial ports will appear as `/dev/ttyAMA2` and `/dev/ttyAMA3` and are configured at 9600 baud by default. Note that /dev/ttyAMA3 requires an updated build from the daily snapshots. 
 
 Note that the LS expansion port I/O pins on the 96Boards 2mm header, including the UART signals, are at 1.8V levels. 
 
@@ -551,6 +551,8 @@ The following are known software issues on the current release.
 3. **Apple Bluetooth Keyboards/Mice/Trackpads do not work**<br/>This is under current investigation. 
 4. **Debian build does not handle WiFi misconfiguration**<br/>If the WiFi network is misconfigured (for example, you attempt to connect to a non-existent network or a 5GHz network (not supported), or your network password/passphrase is incorrect), then you cannot just fix the problem and proceed with a network down/up operation. The work round is to fix the configuration problem in `/etc/network/interfaces.d` and then to perform a reboot with the changes. 
 5. **Thermal Issues**<br/>Certain stress tests or heavy CPU load will cause the HiKey to hang due to thermal shutdown. Power and thermal management are still being tuned on the HiKey board, and this will be addressed in the 15.06 releases. In the meantime if you wish to run intensive tasks we recommend using a fan to generate good airflow across the board. 
+6. **/dev/ttyAMA3**<br/>The second expansion bus UART is not implemented. This has been fixed in the daily Snapshot builds and will be implemented in the next release. 
+7. **1.8V Expansion bus power rail**<br/>This is not enabled in the 15.05 release. This has been fixed in the daily Snapshot builds and will be implemented in the next release. 
 
 **Reporting New Issues**
 
