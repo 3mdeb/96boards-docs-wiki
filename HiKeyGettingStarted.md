@@ -593,6 +593,69 @@ $ make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j8 Image modules hi6220-hike
 
 You will need to decide whether you want your kernel to built for internal eMMC usage, or usage on an installed microSD card.
 
+
+The rootfs included in each hikey release uses a different wifi driver than the one defined in the kernel.config file present in the release page.
+https://builds.96boards.org/snapshots/hikey/linaro/debian/latest
+
+By default, hikey includes the TI R8.5 wl18 driver (some information below)
+http://processors.wiki.ti.com/index.php/WL18xx_System_Build_Scripts
+
+In order to compile and install this driver you will have to do the following:
+
+```
+$ git clone https://github.com/96boards/linux linux.git
+$ cd linux.git
+$ git clone https://github.com/96boards/wilink8-wlan_build-utilites.git build_utilities.git
+$ git clone -b hikey https://github.com/96boards/wilink8-wlan_wl18xx.git build_utilities.git/src/driver
+$ git clone -b R8.5  https://github.com/96boards/wilink8-wlan_wl18xx_fw.git build_utilities.git/src/fw_download
+$ git clone -b hikey https://github.com/96boards/wilink8-wlan_backports.git build_utilities.git/src/backports
+$ patch -p1 < build_utilities.git/patches/hikey_patches/0001-defconfig-hikey-discard-CFG80211-and-MAC80211.patch
+```
+
+Then compile the kernel as usual. 
+Before building the kernel drivers, create a file build_utilities.git/setup-env using the build_utilities.git/setup-env.sample as reference.
+
+Please ignore any warnings/errors reported during the following steps
+
+```
+$ cd linux.git
+$ make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j8 modules INSTALL_MOD_PATH=./build_utilities.git/fs modules_install
+$ cd build_utilities.git
+$ ./build_wl18xx.sh modules
+$ ./build_wl18xx.sh firmware
+```
+
+Now, all the kernel drivers and kernel firmwares have been installed in build_utilities.git/fs/lib.
+
+Make sure to remove the following file: lib/firmware/ti-connectivity/wl18xx-conf.bin to avoid the possibility of a format mismatch (the new firmware wl18xx-fw-4.bin uses its internal conf data)
+
+You could now chown root:root the directory, compress it and decompress it in your final target (or an intermediate rootfs if you are generating an image)
+
+```
+$ cd build_utilities.git/fs/lib
+$ rm firmware/ti-connectivity/wl18xx-conf.bin
+$ sudo chown -r root:root *
+$ sudo tar jcvf fw-modules.tar.bz2 * 
+```
+
+To include the drivers compiled above in a jessie image you would first install simg2img and make_ext4fs both from package 'android-tools-fsutils' and then do the following 
+
+```
+$ gzip -d -c hikey_jessie_developer.img.gz > /tmp/jessie.img
+$ simg2img /tmp/jessie.img /tmp/raw.img
+$ mkdir /tmp/mnt
+$ sudo mount /tmp/raw.img /tmp/mnt
+$ cd /tmp/mnt/lib/
+$ sudo tar xvf fw-modules.tar.bz2
+$ cd /tmp/
+$ sudo make_ext4fs -L rootfs -l 1500M -s jessie.updated.img mnt/ 
+$ sudo umount mnt/
+```
+
+Notice that by rebuilding the image file you could also transfer your public ssh keys or private files - like wifi credentials - to the target before booting it.
+
+At this point you would have an image with the required drivers.
+
 ### Install onto eMMC
 
 To build the boot image for eMMC:
