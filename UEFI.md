@@ -123,7 +123,9 @@ $ wget https://builds.96boards.org/releases/hikey/linaro/binaries/latest/mcuimag
 $ sudo fastboot flash ptable ptable-linux.img
 $ sudo fastboot flash fastboot fip.bin
 $ sudo fastboot flash nvme nvme.img
+$ sudo fastboot flash mcuimage mcuimage.bin
 $ sudo fastboot flash boot boot-fat.uefi.img
+$ sudo fastboot flash system hikey-jessie_alip_2015MMDD-nnn.emmc.img
 ```
 * turn off HiKey board
 * remove the jumper of pin3-pin4 on J15
