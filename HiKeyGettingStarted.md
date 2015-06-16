@@ -638,16 +638,16 @@ $ sudo chown -r root:root *
 $ sudo tar jcvf fw-modules.tar.bz2 * 
 ```
 
-To include the drivers compiled above in a jessie image you would 
+To include the drivers compiled above in a jessie image you would:
 
-1. install simg2img and make_ext4fs both from Linaro's modified package 'android-tools-fsutils' 
+a) install simg2img and make_ext4fs both from Linaro's modified package 'android-tools-fsutils' 
 
 ```
 $ wget http://repo.linaro.org/ubuntu/linaro-overlay/pool/main/a/android-tools/android-tools-fsutils_4.2.2+git20130218-3ubuntu41+linaro1_amd64.deb
 $ sudo dpkg -i --force-all android-tools-fsutils_*.deb
 ```
 
-2. then do the following 
+b) then do the following 
 
 ```
 $ gzip -d -c hikey_jessie_developer.img.gz > /tmp/jessie.img
