@@ -634,7 +634,7 @@ You could now chown root:root the directory, compress it and decompress it in yo
 ```
 $ cd build_utilities.git/fs/lib
 $ rm firmware/ti-connectivity/wl18xx-conf.bin
-$ sudo chown -r root:root *
+$ sudo chown -R root:root *
 $ sudo tar jcvf fw-modules.tar.bz2 * 
 ```
 
