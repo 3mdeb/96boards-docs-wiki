@@ -7,3 +7,4 @@ Welcome to the documentation for [96boards](https://www.96boards.org/)
 
 # DragonBoard 410c Supporting Documentation
 
+* [Dragonboard 410c User Guide for the Linux and Android] (https://github.com/96boards/documentation/wiki/Dragonboard-410c-User-Guide-for-the-Linux-and-Android)
