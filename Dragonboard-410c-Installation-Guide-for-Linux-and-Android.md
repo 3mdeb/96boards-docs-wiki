@@ -7,7 +7,7 @@ This document also contains additional supporting sections such as [Setting Up t
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-                           **Table of Contents**  
+**Table of Contents**  
 
 - [Install Android or Ubuntu from an SD Card](#install-android-or-ubuntu-from-an-sd-card)
   - [Overview](#overview)
