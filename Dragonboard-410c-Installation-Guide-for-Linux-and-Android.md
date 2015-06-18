@@ -8,8 +8,6 @@ This document also contains additional supporting sections such as [Setting Up t
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 - [Install Android or Ubuntu from an SD Card](#install-android-or-ubuntu-from-an-sd-card)
-
-- [Install Android or Ubuntu from an SD Card](#install-android-or-ubuntu-from-an-sd-card)
   - [Overview](#overview)
   - [Installing Image using an SD Card Image](#installing-image-using-an-sd-card-image)
   - [Flashing the SD Card Image to the DB410c](#flashing-the-sd-card-image-to-the-db410c)
