@@ -1,4 +1,5 @@
 # Dragonboard 410c Installation Guide for Linux and Android
+
 This Users Guide provides a general overview for getting started with Linux and Android installations supporting the [DragonBoard 410c](https://www.96boards.org/products/ce/dragonboard410c/).   There are two primary ways to install software onto the DragonBoard 410c.  
 First and simplest, an installer image can be downloaded and put on an SD Card.  This can then be placed into the board and will automatically boot and install either and Android or Linux Desktop into the board.  See the [Installing Image using an SD Card Image](#installing-image-using-an-sd-card-image) section to use this method.   
 Second, fastboot is supported by the board and can be used for installs.  This is for advanced users who are most likely modifying/customizing source code and will need to download such updates to the board for test/execution. See [Install Android or Ubuntu Using Fastboot](#install-android-or-ubuntu-using-fastboot) to use this method.  When installing Ubuntu using Fastboot, note that the default flow is for installing a Developer(console-only) image.  There is an option in that section, however, to install an LXDE desktop Ubuntu image instead.  When installing Ubuntu using the SD Card method, LXDE desktop install is currently the only option, and there is not a Console-only choice; Fastboot is the only way to attain a Console-only Ubuntu install.
@@ -6,6 +7,8 @@ This document also contains additional supporting sections such as [Setting Up t
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+- [Install Android or Ubuntu from an SD Card](#install-android-or-ubuntu-from-an-sd-card)
+
 - [Install Android or Ubuntu from an SD Card](#install-android-or-ubuntu-from-an-sd-card)
   - [Overview](#overview)
   - [Installing Image using an SD Card Image](#installing-image-using-an-sd-card-image)
@@ -34,7 +37,6 @@ This document also contains additional supporting sections such as [Setting Up t
 - [Using USB](#using-usb)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 
 ## Install Android or Ubuntu from an SD Card
 
@@ -666,7 +668,6 @@ When Android-based images are installed, the following table defines the LED usa
 | BT                   | Bluetooth            | Yellow: TBD              |
 +----------------------+----------------------+--------------------------+
 ```
-
 
 ## Using USB
 
