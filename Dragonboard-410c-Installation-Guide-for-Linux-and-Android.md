@@ -361,6 +361,48 @@ Note: This make take a bit of time during the initial bringup.
 
 Congratulations! You now have an Android experience running on your desktop!
 
+## Understanding Build Folder Layout
+When downloading and installing images, the procedures in this document provides 
+direct links to the latest builds for each component required in the DB410c.  There may be 
+times when a developer wants direct control of a component install, however, and would like to instead 
+install a specific build version.  This section explains the folder layout so that a developer can 
+navigate and download specific versions as opposed to the latest.  These files would then replace
+the latest files used in the install procedures in this document.  Note that some of the folders 
+contain residual files from builds that are not required to create install images.
+
+The notes below provide this clarification:
+
+### http://builds.96boards.org/releases/dragonboard410c/linaro/rescue
+Contains Bootloader and Rescue images.  
+Files of interest:
+- dragonboard410c_sdcard_rescue-BUILD#.zip             - Rescue image for DB410c
+- dragonboard410c_bootloader_emmc_linux-BUILD#.zip     - Ubuntu-specific Bootloader
+- dragonboard410c_bootloader_emmc_android-BUILD#.zip   - Android-specific Bootloader
+- MD5SUMS.txt - Contains checksums for all the zip files to verify that downloads were not corrupted
+
+### http://builds.96boards.org/releases/dragonboard410c/linaro/ubuntu
+Contains the Ubuntu boot images and rootFS for both developer (console-only) and LXDE builds.  
+Also contains the SC Card auto-install file for Ubuntu.
+Files of interest:
+- dragonboard410c_sdcard_install_ubuntu-BUILD#.zip - SD Card Auto-Install file of fastboot recovery, Linux Bootloader, Ubuntu Boot Image, and LXDE RootFS 
+- boot-linaro-vivid-qcom-snapdragon-arm64-BUILD#.img.gz           - Ubuntu Boot Image
+- linaro-vivid-developer-qcom-snapdragon-arm64-BUILD#.img.gz      - Console only Ubuntu RootFS
+- linaro-vivid-alip-qcom-snapdragon-arm64-BUILD#.img.gz           -  LXDE Desktop RootFS
+- MD5SUMS.txt - Contains checksums for all the zip files to verify that downloads were not corrupted
+
+### http://builds.96boards.org/releases/dragonboard410c/qualcomm/android
+Contains Android boot images and RootFS for Android install.
+Also contains the SC Card auto-install file for Ubuntu.
+Files of interest:  
+- The six files required for an Android Install  
+  - boot.img.tar.xz  
+  - system.img.tar.xz  
+  - userdata.img.tar.xz  
+  - recovery.img.tar.xz  
+  - persist.img.tar.xz  
+  - cache.img.tar.xz  
+- MD5SUMS - Contains checksums for all the zip files to verify that downloads were not corrupted
+
 ## Switching between Android and Linaro Linux releases
 It is possible to switch back and forth between the Android and the
 Linaro Linux builds. To do so, simply follow the
