@@ -7,6 +7,8 @@ This document also contains additional supporting sections such as [Setting Up t
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+                           **Table of Contents**  
+
 - [Install Android or Ubuntu from an SD Card](#install-android-or-ubuntu-from-an-sd-card)
   - [Overview](#overview)
   - [Installing Image using an SD Card Image](#installing-image-using-an-sd-card-image)
@@ -18,6 +20,10 @@ This document also contains additional supporting sections such as [Setting Up t
   - [Install Android release](#install-android-release)
     - [Flash the bootloader into on-board eMMC](#flash-the-bootloader-into-on-board-emmc-1)
     - [Flash the Android release](#flash-the-android-release)
+- [Understanding Build Folder Layout](#understanding-build-folder-layout)
+  - [Bootloaders and Rescue Image](#bootloaders-and-rescue-image)
+  - [Ubuntu Images](#ubuntu-images)
+  - [Android Images](#android-images)
 - [Switching between Android and Linaro Linux releases](#switching-between-android-and-linaro-linux-releases)
 - [Creating a Kernel Image from Source](#creating-a-kernel-image-from-source)
 - [Optional Boot Method](#optional-boot-method)
@@ -30,12 +36,11 @@ This document also contains additional supporting sections such as [Setting Up t
 - [Description of LED’s and Connectors](#description-of-led%E2%80%99s-and-connectors)
   - [Connectors / Switch](#connectors--switch)
   - [LEDs](#leds)
-    - [Ubuntu Images](#ubuntu-images)
-    - [Android Images](#android-images)
+    - [Ubuntu Images](#ubuntu-images-1)
+    - [Android Images](#android-images-1)
 - [Using USB](#using-usb)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 ## Install Android or Ubuntu from an SD Card
 
 ### Overview
@@ -372,7 +377,9 @@ contain residual files from builds that are not required to create install image
 
 The notes below provide this clarification:
 
-### http://builds.96boards.org/releases/dragonboard410c/linaro/rescue
+### Bootloaders and Rescue Image
+Location:  http://builds.96boards.org/releases/dragonboard410c/linaro/rescue
+
 Contains Bootloader and Rescue images.  
 Files of interest:
 - dragonboard410c_sdcard_rescue-BUILD#.zip             - Rescue image for DB410c
@@ -380,7 +387,9 @@ Files of interest:
 - dragonboard410c_bootloader_emmc_android-BUILD#.zip   - Android-specific Bootloader
 - MD5SUMS.txt - Contains checksums for all the zip files to verify that downloads were not corrupted
 
-### http://builds.96boards.org/releases/dragonboard410c/linaro/ubuntu
+### Ubuntu Images
+Location:  http://builds.96boards.org/releases/dragonboard410c/linaro/ubuntu
+
 Contains the Ubuntu boot images and rootFS for both developer (console-only) and LXDE builds.  
 Also contains the SC Card auto-install file for Ubuntu.
 Files of interest:
@@ -390,7 +399,9 @@ Files of interest:
 - linaro-vivid-alip-qcom-snapdragon-arm64-BUILD#.img.gz           -  LXDE Desktop RootFS
 - MD5SUMS.txt - Contains checksums for all the zip files to verify that downloads were not corrupted
 
-### http://builds.96boards.org/releases/dragonboard410c/qualcomm/android
+### Android Images
+Location:  http://builds.96boards.org/releases/dragonboard410c/qualcomm/android
+
 Contains Android boot images and RootFS for Android install.
 Also contains the SC Card auto-install file for Ubuntu.
 Files of interest:  
