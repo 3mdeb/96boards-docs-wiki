@@ -5,9 +5,10 @@ First and simplest, an installer image can be downloaded and put on an SD Card. 
 Second, fastboot is supported by the board and can be used for installs.  This is for advanced users who are most likely modifying/customizing source code and will need to download such updates to the board for test/execution. See [Install Android or Ubuntu Using Fastboot](#install-android-or-ubuntu-using-fastboot) to use this method.  When installing Ubuntu using Fastboot, note that the default flow is for installing a Developer(console-only) image.  There is an option in that section, however, to install an LXDE desktop Ubuntu image instead.  When installing Ubuntu using the SD Card method, LXDE desktop install is currently the only option, and there is not a Console-only choice; Fastboot is the only way to attain a Console-only Ubuntu install.
 This document also contains additional supporting sections such as [Setting Up the UART console](#setting-up-the-uart-console) and [creating and installing a rescue image](#create--install-a-rescue-image) in the case that the board experiences an irrecoverable error and no longer functions.    
 
+**Table of Contents**
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  
 
 - [Install Android or Ubuntu from an SD Card](#install-android-or-ubuntu-from-an-sd-card)
   - [Overview](#overview)
@@ -41,6 +42,7 @@ This document also contains additional supporting sections such as [Setting Up t
 - [Using USB](#using-usb)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Install Android or Ubuntu from an SD Card
 
 ### Overview
