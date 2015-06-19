@@ -1,0 +1,6 @@
+- [HiKey](https://github.com/96boards/documentation/wiki/HiKey)
+  - [Getting Started](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted)
+  - [UEFI](https://github.com/96boards/documentation/wiki/HiKeyUEFI)
+  - [LAVA](https://github.com/96boards/documentation/wiki/HiKeyLAVA)
+- [Dragonboard 410c](https://github.com/96boards/documentation/wiki/Dragonboard-410c)
+  - [Installation Guide for Linux and Android](https://github.com/96boards/documentation/wiki/Dragonboard-410c-Installation-Guide-for-Linux-and-Android)
