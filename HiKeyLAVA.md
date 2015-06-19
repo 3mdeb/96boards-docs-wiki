@@ -9,12 +9,12 @@ The following items are required:
 
 ## Board Setup
 
-1. Install [UEFI](https://github.com/96boards/documentation/wiki/UEFI)
+1. Install [UEFI](https://github.com/96boards/documentation/wiki/HiKeyUEFI)
 2. Flash the proper partition table for your use case, ptable-linux.img or ptable-android.img
 3. Flash boot-fat.uefi.img.gz
 4. Setup Fastboot
   1. Delete all existing boot entries
-  2. Add boot entry for fastboot as described on the [UEFI](https://github.com/96boards/documentation/wiki/UEFI) page
+  2. Add boot entry for fastboot as described on the [UEFI](https://github.com/96boards/documentation/wiki/HiKeyUEFI) page
   3. Confirm the newly created fastboot entry is the 1st option in the list
   4. Launch this option and verify a fastboot device is detected on your LAVA host
 
@@ -143,4 +143,3 @@ power_off_cmd = /bin/pdu.sh OFF 4
     "timeout": 18000
 }
 ```
-
