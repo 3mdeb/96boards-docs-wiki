@@ -4,3 +4,4 @@
   - [LAVA](https://github.com/96boards/documentation/wiki/HiKeyLAVA)
 - [Dragonboard 410c](https://github.com/96boards/documentation/wiki/Dragonboard-410c)
   - [Installation Guide for Linux and Android](https://github.com/96boards/documentation/wiki/Dragonboard-410c-Installation-Guide-for-Linux-and-Android)
+  - [Creation of Kernel Boot Image](https://github.com/96boards/documentation/wiki/Dragonboard-410c-Boot-Image)
