@@ -425,7 +425,7 @@ for both Android and Linux are different.
 
 ## Creating a Kernel Image from Source
 To create a kernel image from source, follow the instructions found 
-[**here**](https://github.com/96boards/documentation/wiki/DB410cBootImage).
+[**here**](https://github.com/96boards/documentation/wiki/Dragonboard-410c-Boot-Image).
 
 ## Optional Boot Method
 Note that it is not mandatory to flash the boot image in the boot
@@ -475,7 +475,7 @@ reboot
 Note: If it is desired to rebuild the kernel instead of using prebuilts,
 please check this wiki with instruction to rebuild your own boot image:
 
-[https://github.com/96boards/documentation/wiki/DB410cBootImage](https://github.com/96boards/documentation/wiki/DB410cBootImage)
+[https://github.com/96boards/documentation/wiki/Dragonboard-410c-Boot-Image](https://github.com/96boards/documentation/wiki/Dragonboard-410c-Boot-Image)
 
 ## Create / Install a Rescue Image
 
