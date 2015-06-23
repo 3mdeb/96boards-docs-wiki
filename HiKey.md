@@ -1,9 +1,9 @@
 # HiKey Supporting Documentation
 
-- [HiKey](https://github.com/96boards/documentation/wiki/HiKey)
-  - [Getting Started](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted)
+- [[HiKey|HiKey]]
+  - [[Getting Started|HiKeyGettingStarted]]
     <br/>This is the Getting Started Guide for using the HiKey.
-  - [UEFI](https://github.com/96boards/documentation/wiki/HiKeyUEFI)
+  - [[UEFI|HiKeyUEFI]]
     <br/>This is the getting started guide to use ARM Trusted Firmware and UEFI with the HiKey.
-  - [LAVA](https://github.com/96boards/documentation/wiki/HiKeyLAVA)
+  - [[LAVA|HiKeyLAVA]]
     <br/>This is the guide to use Linaro Automated Validation Architecture (LAVA) with HiKey.
