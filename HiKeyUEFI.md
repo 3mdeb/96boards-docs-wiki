@@ -156,8 +156,42 @@ $ sudo fastboot flash system system.img
 $ sudo fastboot flash cache cache.img  
 $ sudo fastboot flash userdata userdata.img  
 # l-loader.bin should be flashed in recovery mode only
+
 ```
-* Optional: To add fastboot to boot menu:
+* Run Fastboot automatically:
+```shell
+Connect jumper on pin5-6 of J15. Then UEFI will run Fastboot app directly.
+If user input "enter" key directly, bootmenu will be displayed.
+
+```
+* Control Auto Boot
+```shell
+By default, auto boot feature is enabled.
+
+Command to disable auto boot:
+$sudo fastboot oem autoboot 0
+Command to enable auto boot:
+$sudo fastboot oem autoboot 1
+
+```
+* Control Boot Order
+```shell
+If auto boot feature is enabled, a predefined boot entry will be selected
+by default.
+
+Boot entries:
+0 -- Android Fastboot App
+1 -- Debian from eMMC
+2 -- Debian from SD
+
+By default, the predefined boot entry is 1. If jumper on pin5-6 of J15 is
+connect, the predefined boot entry is 0.
+
+Command to change boot order:
+$sudo fastboot oem bootorder [boot order index]
+
+```
+* Optional: To add fastboot to boot menu by manual:
 ```shell
 The default boot selection will start in  10 seconds  
 [3] Boot Manager  
