@@ -131,7 +131,7 @@ $ sudo fastboot flash system hikey-jessie_alip_2015MMDD-nnn.emmc.img
 * remove the jumper of pin3-pin4 on J15
 * turn on HiKey board
 
-## fastboot from uefi
+## Run Fastboot from UEFI
 
 * Interrupt the boot by pressing any select
 ```shell
