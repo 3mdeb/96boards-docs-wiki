@@ -57,11 +57,11 @@ power_off_cmd = /bin/pdu.sh OFF 4
                 "images": [
                     {
                         "partition": "boot",
-                        "url": "http://builds.96boards.org/snapshots/hikey/debian/287/boot-fat.uefi.img.gz"
+                        "url": "http://builds.96boards.org/releases/hikey/linaro/debian/15.05.1/boot-fat.emmc.img.gz"
                     },
                     {
                         "partition": "system",
-                        "url": "http://builds.96boards.org/snapshots/hikey/debian/287/hikey-jessie_developer_20150505-287.emmc.img.gz"
+                        "url": "http://builds.96boards.org/releases/hikey/linaro/debian/15.05.1/hikey-jessie_developer_20150519-303.emmc.img.gz"
                     }
                 ],
                 "target_type": "ubuntu"
@@ -89,19 +89,19 @@ power_off_cmd = /bin/pdu.sh OFF 4
                 "images": [
                     {
                         "partition": "boot",
-                        "url": "http://builds.96boards.org/snapshots/hikey/android/87/boot_fat.img"
+                        "url": "http://builds.96boards.org/releases/hikey/linaro/aosp/15.05/boot_fat.img.tar.xz"
                     },
                     {
                         "partition": "system",
-                        "url": "http://builds.96boards.org/snapshots/hikey/android/87/system.img"
+                        "url": "http://builds.96boards.org/releases/hikey/linaro/aosp/15.05/system.img.tar.xz"
                     },
                     {
                         "partition": "cache",
-                        "url": "http://builds.96boards.org/snapshots/hikey/android/87/cache.img"
+                        "url": "http://builds.96boards.org/releases/hikey/linaro/aosp/15.05/cache.img.tar.xz"
                     },
                     {
                         "partition": "userdata",
-                        "url": "http://builds.96boards.org/snapshots/hikey/android/87/userdata.img"
+                        "url": "http://builds.96boards.org/releases/hikey/linaro/aosp/15.05/userdata.img.tar.xz"
                     }
                 ]
             }
@@ -128,8 +128,8 @@ power_off_cmd = /bin/pdu.sh OFF 4
         {
             "command": "deploy_linaro_kernel",
             "parameters": {
-                "dtb": "http://builds.96boards.org/snapshots/hikey/debian/287/hi6220-hikey.dtb",
-                "kernel": "http://builds.96boards.org/snapshots/hikey/debian/287/Image",
+                "dtb": "http://builds.96boards.org/releases/hikey/linaro/debian/15.05.1/hi6220-hikey.dtb",
+                "kernel": "http://builds.96boards.org/releases/hikey/linaro/debian/15.05.1/Image",
                 "ramdisk": "http://storage.kernelci.org/images/rootfs/buildroot/arm64/rootfs.cpio.gz"
             }
         },
