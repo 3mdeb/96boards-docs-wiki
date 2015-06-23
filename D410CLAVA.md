@@ -14,6 +14,11 @@ The following items are required:
 
 ## LAVA Configuration
 
+* Install the image creation tools to the LAVA dispatcher. (As root)
+  1. cd /opt
+  2. git clone git://codeaurora.org/quic/kernel/skales
+  3. **Note: If you want to boot upstream kernels as of 6/22/2015, you must apply a [patch](https://drive.google.com/a/linaro.org/file/d/0B9NXjOlmLD7QZ2J1U2s0MkVFT0hUVWFGNTd6cHRTaXBrZDdF/view?usp=sharing) to skales to workaround the msm-id and board-id detection [issue](http://lists.infradead.org/pipermail/linux-arm-kernel/2015-March/327857.html).
+
 * Uniquely identify your fastboot serial number for the D410C
   1. fastboot devices
   2. 1f980087 fastboot
