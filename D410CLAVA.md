@@ -44,3 +44,102 @@ dtbtool_binary = /opt/qcom/skales/dtbTool
 ```
 
  * Now you can add this device to the LAVA scheduler as documented [here](https://validation.linaro.org/static/docs/lava-image-creation.html#adding-to-the-scheduler)
+
+## LAVA Examples
+
+  * Ubuntu LAVA Job
+```
+{
+    "actions": [
+        {
+            "command": "deploy_linaro_android_image",
+            "parameters": {
+                "images": [
+                    {
+                        "partition": "boot",
+                        "url": "http://builds.96boards.org/releases/dragonboard410c/linaro/ubuntu/15.06/boot-linaro-vivid-qcom-snapdragon-arm64-20150618-47.img.gz"
+                    },
+                    {
+                        "partition": "rootfs",
+                        "url": "http://builds.96boards.org/releases/dragonboard410c/linaro/ubuntu/15.06/linaro-vivid-developer-qcom-snapdragon-arm64-20150618-47.img.gz"
+                    }
+                ],
+                "target_type": "ubuntu"
+            }
+        },
+        {
+            "command": "boot_linaro_image"
+        }
+    ],
+    "device_type": "apq8016-sbc",
+    "job_name": "apq8016-sbc-ubuntu-boot-test",
+    "logging_level": "DEBUG",
+    "timeout": 18000
+}
+```
+
+* Android LAVA Job
+
+```
+{
+    "actions": [
+        {
+            "command": "deploy_linaro_android_image",
+            "parameters": {
+                "images": [
+                    {
+                        "partition": "boot",
+                        "url": "http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/15.06/boot.img.tar.xz"
+                    },
+                    {
+                        "partition": "system",
+                        "url": "http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/15.06/system.img.tar.xz"
+                    },
+                    {
+                        "partition": "cache",
+                        "url": "http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/15.06/cache.img.tar.xz"
+                    },
+                    {
+                        "partition": "userdata",
+                        "url": "http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/15.06/userdata.img.tar.xz"
+                    }
+                ]
+            }
+        },
+        {
+            "command": "boot_linaro_android_image",
+            "parameters": {
+                "test_image_prompt": "shell@????"
+            }
+        }
+    ],
+    "device_type": "apq8016-sbc",
+    "job_name": "apq8016-sbc-android-boot-test",
+    "logging_level": "DEBUG",
+    "timeout": 18000
+}
+```
+
+* Ramdisk LAVA Job
+
+```
+{
+    "actions": [
+        {
+            "command": "deploy_linaro_kernel",
+            "parameters": {
+                "dtb": "http://builds.96boards.org/releases/dragonboard410c/linaro/ubuntu/15.06/apq8016-sbc.dtb",
+                "kernel": "http://builds.96boards.org/releases/dragonboard410c/linaro/ubuntu/15.06/Image",
+                "ramdisk": "http://storage.kernelci.org/images/rootfs/buildroot/arm64/rootfs.cpio.gz"
+            }
+        },
+        {
+            "command": "boot_linaro_image"
+        }
+    ],
+    "device_type": "apq8016-sbc",
+    "job_name": "apq8016-sbc-kernel-boot-test",
+    "logging_level": "DEBUG",
+    "timeout": 18000
+}
+```
