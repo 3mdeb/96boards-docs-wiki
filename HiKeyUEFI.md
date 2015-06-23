@@ -234,7 +234,11 @@ Note: fastboot.efi is renamed from $BUILD/linaro-edk2/Build/HiKey/RELEASE_GCC48/
 
 ## Program Serial Number used in Fastboot protocol
 
+```
+* Program new serial number
+```shell
 $sudo fastboot oem serialno [hex string as serial number]
+By default, the serial number is '0123456789abcdef'.
 
 
 ## Known Issues
