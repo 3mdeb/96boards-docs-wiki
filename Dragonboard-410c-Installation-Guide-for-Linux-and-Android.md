@@ -132,7 +132,6 @@ of commands:
 cd <extraction directory>
 
 sudo dd if=db410c_sd_install_YYY.img of=/dev/XXX bs=4M oflag=sync status=noxfer
-sync
 ```
 
 Where:
@@ -498,7 +497,6 @@ the procedures in the [Install Android or Ubuntu Using Fastboot](#install-androi
 cd <rescue image directory> 
 
 sudo dd if=db410c_sd_rescue.img of=/dev/XXX bs=4M oflag=sync status=noxfer
-sync
 ```
 
 where XXX is the device name.
