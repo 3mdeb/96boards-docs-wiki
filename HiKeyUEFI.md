@@ -13,7 +13,7 @@ Latest UEFI build is published [here](http://builds.96boards.org/snapshots/hikey
 * [fip.bin](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/fip.bin)
 * [ptable-linux.img](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux.img)
 
-Latest Debian based builds are published [here](https://builds.96boards.org/snapshots/hikey/debian/latest). You can pick a boot partition and an eMMC rootfs:
+Latest Debian based builds are published [here](https://builds.96boards.org/snapshots/hikey/linaro/debian/latest). You can pick a boot partition and an eMMC rootfs:
 * [boot-fat.uefi.img.gz](http://builds.96boards.org/snapshots/hikey/linaro/debian/latest/boot-fat.uefi.img.gz)
 * [hikey-jessie_developer_YYYYMMDD-XXX.emmc.img.gz](http://builds.96boards.org/snapshots/hikey/linaro/debian/305/hikey-jessie_developer_20150526-305.emmc.img.gz)
 
