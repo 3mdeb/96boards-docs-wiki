@@ -76,4 +76,4 @@ The boot image generated using the instructions from the section above can be bo
 
 Alternatively, it can be flashed into the on-board eMMC:
 
-    sudo fastboot flash aboot boot-db410c.img
+    sudo fastboot flash boot boot-db410c.img
