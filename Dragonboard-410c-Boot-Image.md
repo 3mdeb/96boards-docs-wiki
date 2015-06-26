@@ -1,3 +1,4 @@
+
 # How to create a kernel boot image for the DragonBoard 410c
 
 The boot image that can be used with fastboot uses a specific format, and this document provides instructions to create such a boot file. The boot image generally contains the kernel image, an initrd image as well as a specific/custom device tree image.
@@ -11,6 +12,13 @@ The boot image that can be used with fastboot uses a specific format, and this d
     export PATH=<path to your ARM64 cross compiler>:$PATH
     make O=build-${ARCH} defconfig
     make O=build-${ARCH} -j4 Image dtbs
+
+## Building the kernel modules (optional, only if you need them)
+    make O=build-${ARCH} modules
+    mkdir build-${ARCH}-modules
+    make O=build-${ARCH} INSTALL_MOD_PATH=build-${ARCH}-modules modules_install
+    tar -C build-${ARCH}-modules czf modules.tgz lib/modules
+    # copy modules.tgz (using SCP or SD card) to the device, tar xvf in the /
 
 ## Getting the skales tools
 
