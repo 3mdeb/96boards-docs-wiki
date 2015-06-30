@@ -16,7 +16,7 @@ This document describes how to get started with the HiKey ARMv8 community develo
 8. [Appendices](#appendix-1)<br/>Information on the partition table used on HiKey and the contents of the boot partition.
 
 ### Updating from the Early Access Build
-If you have already have a HiKey board delivered before May 2015 under the Early Access program you will need to do the following:
+If you already have a HiKey board delivered before May 2015 under the Early Access program you will need to do the following:
 - First, follow the instructions in [Section 4. Board Recovery - Installing a Bootloader](#section-41), to update the bootloader software on your board
 - Then follow the instructions in [Section 3. Updating the OS](#section-3), to install either the Debian or the Android Open Source Project (AOSP) build
 
