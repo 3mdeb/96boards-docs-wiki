@@ -759,8 +759,8 @@ NOTE: The build tries to mount a loop device as fat partition to create the boot
 
 Here are the instructions on how to download the code:
 ```
-mkdir android/
-cd android/
+$ mkdir android/
+$ cd android/
 ```
 
 Download and extract the Mali vendor binaries in the above directory:
