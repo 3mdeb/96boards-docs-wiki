@@ -185,8 +185,8 @@ Boot entries:
 3 -- Debian from SD
 4 -- Android
 
-By default, the predefined boot entry is 1. If jumper on pin5-6 of J15 is
-connect, the predefined boot entry is 0.
+By default, the predefined boot entry is 2. If jumper on pin5-6 of J15 is
+connect, the predefined boot entry is 1.
 
 Command to change boot order:
 $sudo fastboot oem bootorder [boot order index]
