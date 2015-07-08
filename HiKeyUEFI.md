@@ -180,10 +180,10 @@ If auto boot feature is enabled, a predefined boot entry will be selected
 by default.
 
 Boot entries:
-0 -- Android Fastboot App
-1 -- Debian from eMMC
-2 -- Debian from SD
-3 -- Android
+1 -- Android Fastboot App
+2 -- Debian from eMMC
+3 -- Debian from SD
+4 -- Android
 
 By default, the predefined boot entry is 1. If jumper on pin5-6 of J15 is
 connect, the predefined boot entry is 0.
