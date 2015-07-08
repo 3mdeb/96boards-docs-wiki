@@ -76,6 +76,10 @@ If you have install a rootFS on the on-board eMMC, for example in the _userdata_
 
     export cmdline="root=/dev/disk/by-partlabel/userdata rw rootwait console=ttyMSM0,115200n8"
 
+For the text console add "text" to the end of cmdline:
+
+    export cmdline="root=/dev/disk/by-partlabel/userdata rw rootwait console=ttyMSM0,115200n8 text"
+
 # How to use the boot image
 
 The boot image generated using the instructions from the section above can be booted using fastboot:
