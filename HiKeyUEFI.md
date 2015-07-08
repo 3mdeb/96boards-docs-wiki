@@ -104,7 +104,7 @@ $ rm -rf boot-fat
 
 ## Flash binaries to eMMC <a name="flash-emmc"></a>
 
-The flashing process requires to be in **recovery mode**.
+The flashing process requires to be in **recovery mode** if user wants to update l-loader.bin.
 
 * turn off HiKey board
 * connect debug UART on HiKey to PC (used to monitor debug status)
