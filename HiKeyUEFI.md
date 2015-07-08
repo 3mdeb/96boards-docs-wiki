@@ -127,7 +127,8 @@ $ sudo fastboot flash boot boot-fat.uefi.img
 ```
 * turn off HiKey board
 * remove the jumper of pin3-pin4 on J15
-* turn on HiKey board
+* make sure that jumper of pin5-pin6 on J15 are connected
+* turn on HiKey board to enter fastboot mode in UEFI
 ```shell
 $ sudo fastboot flash system hikey-jessie_alip_2015MMDD-nnn.emmc.img
 ```
