@@ -25,6 +25,7 @@ This document also contains additional supporting sections such as [Setting Up t
   - [Bootloaders and Rescue Image](#bootloaders-and-rescue-image)
   - [Ubuntu Images](#ubuntu-images)
   - [Android Images](#android-images)
+  - [Snapshots Folders](#snapshots-folders)
 - [Switching between Android and Linaro Linux releases](#switching-between-android-and-linaro-linux-releases)
 - [Creating a Kernel Image from Source](#creating-a-kernel-image-from-source)
 - [Optional Boot Method](#optional-boot-method)
@@ -368,7 +369,7 @@ Note: This make take a bit of time during the initial bringup.
 Congratulations! You now have an Android experience running on your desktop!
 
 ## Understanding Build Folder Layout
-When downloading and installing images, the procedures in this document provides 
+When downloading and installing binary images, the procedures in this document provides 
 direct links to the latest builds for each component required in the DB410c.  There may be 
 times when a developer wants direct control of a component install, however, and would like to instead 
 install a specific build version.  This section explains the folder layout so that a developer can 
@@ -414,6 +415,22 @@ Files of interest:
   - persist.img.tar.xz  
   - cache.img.tar.xz  
 - MD5SUMS - Contains checksums for all the zip files to verify that downloads were not corrupted
+
+### Snapshots Folders
+Location:  http://builds.96boards.org/snapshots/
+
+So far, this section has described the ./releases folders that contain archived images.  These are characterized by stable and validated releases.  In addition, there is a snapshots directory structure that has daily builds of the same content in the releases directory structure.  The primary differences are as follows:
+* snapshots are build daily (or more) when developers make code updates to the source base. This is an automated build.
+* snapshots may or may not be functional.  This is not guaranteed.
+* snapshots are not archived.  Older ones will be deleted by the maintainer to prevent an overwhelming amount of data space being used
+* when a snapshot is determined to be a candidate for long-term archival, it will be moved into the releases/ folders.
+* individual file names and versions between the snapshots/  and the releases/ are identical
+
+When a developer may want to use images from snapshots/ instead of releases/:
+* when debugging, it may be desirable to attain a snapshot build
+* when a question is asked on a forum, the developer supporting an issue may ask a user to use a specific build from snapshots/ to help isolate a problem
+
+Note: In general, using images from snapshots/ instead of releases/ should be the exception and not the norm.  If the user is not sure, use images from releases/.
 
 ## Switching between Android and Linaro Linux releases
 It is possible to switch back and forth between the Android and the
