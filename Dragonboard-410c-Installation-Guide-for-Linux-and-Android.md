@@ -419,16 +419,19 @@ Files of interest:
 ### Snapshots Folders
 Location:  http://builds.96boards.org/snapshots/
 
-So far, this section has described the ./releases folders that contain archived images.  These are characterized by stable and validated releases.  In addition, there is a snapshots directory structure that has daily builds of the same content in the releases directory structure.  The primary differences are as follows:
-* snapshots are build daily (or more) when developers make code updates to the source base. This is an automated build.
-* snapshots may or may not be functional.  This is not guaranteed.
+So far, this section has described the ./releases folders that contain archived images.  These are characterized by stable and validated releases.  In addition, there is a snapshots directory structure that has builds of the same content in the releases directory structure.  The primary differences are as follows:
+* snapshots are created daily (or more) when developers make code updates to the source base. This is an automated build.
+* snapshots may or may not be functional.  Functionality nor testing of snapshots is not guaranteed.
 * snapshots are not archived.  Older ones will be deleted by the maintainer to prevent an overwhelming amount of data space being used
 * when a snapshot is determined to be a candidate for long-term archival, it will be moved into the releases/ folders.
 * individual file names and versions between the snapshots/  and the releases/ are identical
 
+Thus, in summary, snapshots are the initial output of the builds.  Once tested and determined to be a candidate for long-term usage/archival, a snapshot is copied to the releases directory.
+
 When a developer may want to use images from snapshots/ instead of releases/:
 * when debugging, it may be desirable to attain a snapshot build
 * when a question is asked on a forum, the developer supporting an issue may ask a user to use a specific build from snapshots/ to help isolate a problem
+* when a developer would like to help validate builds for long-term use, testing of snapshots can be done by such a person.  Participation is welcome and encouraged!
 
 Note: In general, using images from snapshots/ instead of releases/ should be the exception and not the norm.  If the user is not sure, use images from releases/.
 
