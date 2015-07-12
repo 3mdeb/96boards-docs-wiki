@@ -150,19 +150,19 @@ LED | Trigger
 --- | -------
 wifi_active | phy0tx
 bt_active | hci0tx
-User1 | heartbeat
-User2 | mmc0 disk access
-User3 | mmc1 disk access (not used)
-User4 | CPU core 0 active (not used)
+user-led1 | heartbeat
+user_led2 | mmc0 disk access
+user_led3 | mmc1 disk access (not used)
+user_led4 | CPU core 0 active (not used)
 
 To change a user LED you can do the following as a root user:
 ```
 $ su bash
-# echo heartbeat > /sys/class/led/<led_dir>/trigger      make a LED flash
-# cat /sys/class/led/<led_dir>/trigger                   show triggers
-# echo none > /sys/class/led/<led_dir>/trigger           remove triggers    
-# echo 1 > /sys/class/led/<led_dir>/brightness           turn LED on
-# echo 0 > /sys/class/led/<led_dir>/brightness           turn LED off
+# echo heartbeat > /sys/class/leds/<led_dir>/trigger      make a LED flash
+# cat /sys/class/leds/<led_dir>/trigger                   show triggers
+# echo none > /sys/class/leds/<led_dir>/trigger           remove triggers    
+# echo 1 > /sys/class/leds/<led_dir>/brightness           turn LED on
+# echo 0 > /sys/class/leds/<led_dir>/brightness           turn LED off
 # exit
 $
 ```
