@@ -150,7 +150,7 @@ LED | Trigger
 --- | -------
 wifi_active | phy0tx
 bt_active | hci0tx
-user-led1 | heartbeat
+user_led1 | heartbeat
 user_led2 | mmc0 disk access
 user_led3 | mmc1 disk access (not used)
 user_led4 | CPU core 0 active (not used)
