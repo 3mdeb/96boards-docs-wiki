@@ -152,7 +152,7 @@ wifi_active | phy0tx
 bt_active | hci0tx
 user_led1 | heartbeat
 user_led2 | mmc0 disk access
-user_led3 | mmc1 disk access (not used)
+user_led3 | mmc1 disk access (microSD card)
 user_led4 | CPU core 0 active (not used)
 
 To change a user LED you can do the following as a root user:
