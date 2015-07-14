@@ -119,7 +119,6 @@ $ sudo python hisi-idt.py --img1=l-loader.bin
 * run fastboot commands to flash the images (**order must be respected**)
 ```shell
 $ wget https://builds.96boards.org/releases/hikey/linaro/binaries/latest/nvme.img
-$ wget https://builds.96boards.org/releases/hikey/linaro/binaries/latest/mcuimage.bin
 $ sudo fastboot flash ptable ptable-linux.img
 $ sudo fastboot flash fastboot fip.bin
 $ sudo fastboot flash nvme nvme.img
