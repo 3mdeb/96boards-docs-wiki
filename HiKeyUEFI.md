@@ -184,15 +184,14 @@ by default.
 
 Boot entries:
 1 -- Android Fastboot App
-2 -- Debian from eMMC
-3 -- Debian from SD
-4 -- Android
+2 -- grub on eMMC
+3 -- grub on SD
 
 By default, the predefined boot entry is 2. If jumper on pin5-6 of J15 is
 connect, the predefined boot entry is 1.
 
-Command to change boot order:
-$sudo fastboot oem bootorder [boot order index]
+Command to change boot order for the case jumper not on pin5-6:
+$sudo fastboot oem bootdevice [emmc|sd]
 
 ```
 * Optional: To add fastboot to boot menu by manual:
