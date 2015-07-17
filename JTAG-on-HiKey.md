@@ -13,11 +13,10 @@ Once the connector is soldered on it should look something like this
 
 ## JTAG device
 
-OpenOCD supports many different JTAG dongles. The one I choose to use was the TinCanTools flyswatter2, which is $89 from http://www.tincantools.com/JTAG/Flyswatter2.html. This is a FTDI based device which is well supported in OpenOCD. The flyswatter2 comes with a variety of cables and adapters. I'm using the standard ARM 20 pin cable. I have then purchased a JTAG (2x10 2.54mm) to SWD (2x5 1.27mm) Cable Adapter Board from AdaFruit.
+OpenOCD supports many different JTAG dongles. The one I choose to use was the TinCanTools flyswatter2, which is $89 from http://www.tincantools.com/JTAG/Flyswatter2.html. This is a FTDI based device which is well supported in OpenOCD. The flyswatter2 comes with a variety of cables and adapters. I'm using the standard ARM 20 pin cable. I have then purchased a JTAG (2x10 2.54mm) to SWD (2x5 1.27mm) Cable Adapter Board from AdaFruit along with a 10 pin 2x5 1.27mm cable
 
-See http://www.adafruit.com/products/2094?utm_source=contextly&utm_medium=module-related&utm_campaign=129798
-and a 10 pin 2x5 1.27mm cable
-See http://www.adafruit.com/products/1675?utm_source=contextly&utm_medium=module-related&utm_campaign=129798
+1. http://www.adafruit.com/products/2094?utm_source=contextly&utm_medium=module-related&utm_campaign=129798
+2. See http://www.adafruit.com/products/1675?utm_source=contextly&utm_medium=module-related&utm_campaign=129798
 
 Once this is all connected it should look something like this
 
@@ -42,6 +41,9 @@ Install any pre-requisite libraries (e.g. FTDI libs if your JTAG is FTDI based)
     make install
 
 ## Running OpenOCD
+
+Firstly ensure everything is connected like the photo above, and power on the board. Then issue the following command
+
     src/openocd -f ./tcl/interface/ftdi/flyswatter2.cfg -f ./tcl/target/hi6220.cfg
 
 If all goes well you should see trace like the following: -
@@ -84,6 +86,7 @@ Check the following: -
 * Soldering of the JTAG connector
 * The cables are plugged in securely
 * The board is correctly powered.
+* Everything is connected like in the photo above
 
 ## Using OpenOCD Telnet interface
 Once openocd has connected to the target you can connect via the telnet interface.
@@ -104,7 +107,9 @@ Once openocd has connected to the target you can connect via the telnet interfac
 
 ## What works?
 
-### Dumping the processor registers (whilst sat at u-boot prompt)
+### Dumping the processor registers
+
+This command was issued whilst sat at the u-boot prompt.
 
     > reg
     ===== arm v8 registers
@@ -149,7 +154,7 @@ Once openocd has connected to the target you can connect via the telnet interfac
     breakpoint set at 0x        35000000
     > resume
 
-and in u-boot
+and in u-boot force the processor to jump to this address (which is the start of u-boot)
 
     INFO:    BL3-1: Preparing for EL3 exit to normal world
     INFO:    BL3-1: Next image address = 0x35000000
@@ -224,12 +229,39 @@ now remove the breakpoint so we can try single stepping
     timeout waiting for target halt
     in procedure 'step'
 
-We can validate the last few single steps, with a disassembly of the u-boot binary to validate what happened
+We can validate the last few single steps, with a disassembly of the u-boot binary. You can see that that to validate what happened
 
-    35000078:   d518c000        msr     vbar_el1, x0
-    3500007c:   d2a00600        mov     x0, #0x300000                   // #3145728
-    35000080:   d5181040        msr     cpacr_el1, x0
-    35000084:   94000003        bl      35000090 <apply_core_errata>
+    0000000035000028 <reset>:
+        35000028:   10003ec0        adr     x0, 35000800 <vectors>
+        3500002c:   d5384241        mrs     x1, currentel
+        35000030:   f100303f        cmp     x1, #0xc
+        35000034:   540000a0        b.eq    35000048 <reset+0x20>
+        35000038:   f100203f        cmp     x1, #0x8
+        3500003c:   54000160        b.eq    35000068 <reset+0x40>
+        35000040:   f100103f        cmp     x1, #0x4
+        35000044:   540001a0        b.eq    35000078 <reset+0x50>
+        35000048:   d51ec000        msr     vbar_el3, x0
+        3500004c:   d53e1100        mrs     x0, scr_el3
+        35000050:   b2400c00        orr     x0, x0, #0xf
+        35000054:   d51e1100        msr     scr_el3, x0
+        35000058:   d51e115f        msr     cptr_el3, xzr
+        3500005c:   580005a0        ldr     x0, 35000110 <c_runtime_cpu_setup+0x3c>
+        35000060:   d51be000        msr     cntfrq_el0, x0
+        35000064:   14000008        b       35000084 <reset+0x5c>
+        35000068:   d51cc000        msr     vbar_el2, x0
+        3500006c:   d2867fe0        mov     x0, #0x33ff                     // #13311
+        35000070:   d51c1140        msr     cptr_el2, x0
+        35000074:   14000004        b       35000084 <reset+0x5c>
+        35000078:   d518c000        msr     vbar_el1, x0
+        3500007c:   d2a00600        mov     x0, #0x300000                   // #3145728
+        35000080:   d5181040        msr     cpacr_el1, x0
+        35000084:   94000003        bl      35000090 <apply_core_errata>
+        35000088:   9400000b        bl      350000b4 <lowlevel_init>
+        3500008c:   940004d7        bl      350013e8 <_main>
+
+    0000000035000090 <apply_core_errata>:
+        35000090:   aa1e03fd        mov     x29, x30
+        35000094:   d5380000        mrs     x0, midr_el1
 
 ### Writing to memory
 
@@ -245,6 +277,7 @@ We can validate the last few single steps, with a disassembly of the u-boot bina
     > resume
 
 and then validate with u-boot
+
     # md 0x36000000
     36000000: deadbeef 555555d5 5c355555 5575555d    .....UUUUU5\]UuU
 
@@ -257,7 +290,5 @@ Read memory access currently aren't working
     error
     in procedure 'mdw'
 
-DSCR is documented in H9.2.41 (page of 5155) of the ARM ARM. The cumulative error flag is set.
-
-
+DSCR is documented in H9.2.41 (page of 5155) of the ARM ARM. The cumulative error flag is set. We need to debug what is happening here.
 
