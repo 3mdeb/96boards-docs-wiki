@@ -283,7 +283,7 @@ and then validate with u-boot
 
 ## What isn't working
 
-Read memory access currently aren't working
+### Read memory access currently aren't working
 
     > mdw 0x35000000 1
     abort occurred - dscr = 0x0704725b
