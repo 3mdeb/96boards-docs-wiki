@@ -9,7 +9,7 @@ http://uk.farnell.com/samtec/ftsh-105-01-l-dv/header-1-27mm-smd-10way/dp/1667759
 
 Once the connector is soldered on it should look something like this
 
-![](https://drive.google.com/a/linaro.org/file/d/0B6va92gK2STGdzlJNm1EN3JCdjQ/view)
+![](http://people.linaro.org/~peter.griffin/hikey/hikey_jtag_connector.jpg)
 
 ## JTAG device
 
@@ -21,7 +21,7 @@ See http://www.adafruit.com/products/1675?utm_source=contextly&utm_medium=module
 
 Once this is all connected it should look something like this
 
-![](https://drive.google.com/file/d/0B6va92gK2STGVnVxY0NxUUhRT2M/view?usp=sharing)
+![](http://people.linaro.org/~peter.griffin/hikey/hikey_jtag_setup.jpg)
 
 ## OpenOCD source code
 The armv8 code isn't currently merged to mainline, the latest code I've found is on the following gerrit http://openocd.zylin.com/#/c/2523/.
@@ -80,13 +80,13 @@ If you see trace like this
     Warn : Bypassing JTAG setup events due to errors
     Warn : Invalid ACK 0x7 in JTAG-DP transaction
 
-Check: -
+Check the following: -
 * Soldering of the JTAG connector
 * The cables are plugged in securely
 * The board is correctly powered.
 
 ## Using OpenOCD Telnet interface
-Once open-ocd has connected to the target you can connect via the telnet interface.
+Once openocd has connected to the target you can connect via the telnet interface.
 
     telnet localhost 4444
     Trying 127.0.0.1...
@@ -102,7 +102,9 @@ Once open-ocd has connected to the target you can connect via the telnet interfa
     cpsr: 0x800003c9 pc: 0x3ef7e908
     MMU: disabled, D-Cache: disabled, I-Cache: disabled
 
-Dumping the processor registers
+## What works?
+
+### Dumping the processor registers (whilst sat at u-boot prompt)
 
     > reg
     ===== arm v8 registers
@@ -140,4 +142,122 @@ Dumping the processor registers
     (31) sp (/64): 0x000000003E75EBE0
     (32) pc (/64): 0x000000003EF7E908
     (33) xPSR (/64): 0x00000000800003C9
+
+### Setting a breakpoint
+
+    > bp 0x35000000 4 hw
+    breakpoint set at 0x        35000000
+    > resume
+
+and in u-boot
+
+    INFO:    BL3-1: Preparing for EL3 exit to normal world
+    INFO:    BL3-1: Next image address = 0x35000000
+    INFO:    BL3-1: Next image spsr = 0x3c9
+    U-Boot 2015.04-00007-g1b3d379-dirty (May 27 2015 - 10:18:16) hikey_aemv8a
+    DRAM:  1008 MiB
+    MMC:   sd_card_detect: SD card present
+    HiKey DWMMC: 0, HiKey DWMMC: 1
+    In:    serial
+    Out:   serial
+    Err:   serial
+    Net:   Net Initialization Skipped
+    No ethernet found.
+    Hit any key to stop autoboot:  0 
+    # go 0x35000000
+    ## Starting application at 0x35000000 ...
+
+you can see in OpenOCD telnet we hit the breakpoint
+
+    target state: halted
+    target halted in ARM64 state due to breakpoint, current mode: EL2H
+    cpsr: 0x600003c9 pc: 0x35000000
+    MMU: disabled, D-Cache: disabled, I-Cache: disabled
+
+now remove the breakpoint so we can try single stepping
+
+    rbp 0x35000000
+    
+### Single stepping u-boot
+
+    > step
+    target state: halted
+    target halted in ARM64 state due to breakpoint, current mode: EL2H
+    cpsr: 0x600003c9 pc: 0x35000028
+    MMU: disabled, D-Cache: disabled, I-Cache: disabled
+    timeout waiting for target halt
+    in procedure 'step'
+    > step
+    target state: halted
+    target halted in ARM64 state due to breakpoint, current mode: EL2H
+    cpsr: 0x600003c9 pc: 0x3500002c
+    MMU: disabled, D-Cache: disabled, I-Cache: disabled
+    timeout waiting for target halt
+    in procedure 'step'
+    > step
+    target state: halted
+    target halted in ARM64 state due to breakpoint, current mode: EL2H
+    cpsr: 0x600003c9 pc: 0x35000030
+    MMU: disabled, D-Cache: disabled, I-Cache: disabled
+    timeout waiting for target halt
+    in procedure 'step'
+    <snip>
+    > step
+    target state: halted
+    target halted in ARM64 state due to breakpoint, current mode: EL2H
+    cpsr: 0x600003c9 pc: 0x35000074
+    MMU: disabled, D-Cache: disabled, I-Cache: disabled
+    timeout waiting for target halt
+    in procedure 'step'
+    > step
+    target state: halted
+    target halted in ARM64 state due to breakpoint, current mode: EL2H
+    cpsr: 0x600003c9 pc: 0x35000084
+    MMU: disabled, D-Cache: disabled, I-Cache: disabled
+    timeout waiting for target halt
+    in procedure 'step'
+    > step
+    target state: halted
+    target halted in ARM64 state due to breakpoint, current mode: EL2H
+    cpsr: 0x600003c9 pc: 0x35000090
+    MMU: disabled, D-Cache: disabled, I-Cache: disabled
+    timeout waiting for target halt
+    in procedure 'step'
+
+We can validate the last few single steps, with a disassembly of the u-boot binary to validate what happened
+
+    35000078:   d518c000        msr     vbar_el1, x0
+    3500007c:   d2a00600        mov     x0, #0x300000                   // #3145728
+    35000080:   d5181040        msr     cpacr_el1, x0
+    35000084:   94000003        bl      35000090 <apply_core_errata>
+
+### Writing to memory
+
+    > halt
+    number of cache level 2
+    cache l2 present :not supported
+    hi6220.cpu cluster 0 core 0 multi core
+    target state: halted
+    target halted in ARM64 state due to debug-request, current mode: EL2H
+    cpsr: 0x800003c9 pc: 0x3ef7e908
+    MMU: disabled, D-Cache: disabled, I-Cache: disabled
+    > mww 0x36000000 0xdeadbeef
+    > resume
+
+and then validate with u-boot
+    # md 0x36000000
+    36000000: deadbeef 555555d5 5c355555 5575555d    .....UUUUU5\]UuU
+
+## What isn't working
+
+Read memory access currently aren't working
+
+    > mdw 0x35000000 1
+    abort occurred - dscr = 0x0704725b
+    error
+    in procedure 'mdw'
+
+DSCR is documented in H9.2.41 (page of 5155) of the ARM ARM. The cumulative error flag is set.
+
+
 
