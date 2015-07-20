@@ -585,7 +585,8 @@ The HiKey kernel sources are located at: [https://github.com/96boards/linux](htt
 
 To build a kernel, make sure you have an AArch64 cross-toolchain installed on your linux computer, and configured to cross compile to ARMv8 code. For example, Linaro GCC 4.9:
 ```
-$ wget http://releases.linaro.org/14.09/components/toolchain/binaries/gcc-linaro-aarch64-linux-gnu-4.9-2014.09_linux.tar.xz
+$ wget http://releases.linaro.org/14.09/components/toolchain/binaries/\ 
+> gcc-linaro-aarch64-linux-gnu-4.9-2014.09_linux.tar.xz
 $ mkdir ~/arm64-tc/bin
 $ tar --strip-components=1 -C ~/arm64-tc/bin -xf gcc-linaro-aarch64-linux-gnu-4.9-2014.09_linux.tar.xz
 $ export PATH=~/arm64-tc/bin:$PATH
@@ -625,9 +626,12 @@ $ git clone https://github.com/96boards/linux linux.git
 $ cd linux.git
 $ git clone https://github.com/96boards/wilink8-wlan_build-utilites.git build_utilities.git
 $ git clone -b hikey https://github.com/96boards/wilink8-wlan_wl18xx.git build_utilities.git/src/driver
-$ git clone -b R8.5  https://github.com/96boards/wilink8-wlan_wl18xx_fw.git build_utilities.git/src/fw_download
-$ git clone -b hikey https://github.com/96boards/wilink8-wlan_backports.git build_utilities.git/src/backports
-$ patch -p1 < build_utilities.git/patches/hikey_patches/0001-defconfig-hikey-discard-CFG80211-and-MAC80211.patch
+$ git clone -b R8.5  https://github.com/96boards/wilink8-wlan_wl18xx_fw.git\
+> build_utilities.git/src/fw_download
+$ git clone -b hikey https://github.com/96boards/wilink8-wlan_backports.git\
+> build_utilities.git/src/backports
+$ patch -p1 < build_utilities.git/patches/hikey_patches/\
+> 0001-defconfig-hikey-discard-CFG80211-and-MAC80211.patch
 ```
 
 Then compile the kernel as usual. 
@@ -637,7 +641,8 @@ Please ignore any warnings/errors reported during the following steps
 
 ```
 $ cd linux.git
-$ make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j8 modules INSTALL_MOD_PATH=./build_utilities.git/fs modules_install
+$ make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j8 modules INSTALL_MOD_PATH=./build_utilities.git/fs\
+> modules_install
 $ cd build_utilities.git
 $ ./build_wl18xx.sh modules
 $ ./build_wl18xx.sh firmware
@@ -661,7 +666,8 @@ To include the drivers compiled above in a jessie image you would:
 a) install simg2img and make_ext4fs both from Linaro's modified package 'android-tools-fsutils' 
 
 ```
-$ wget http://repo.linaro.org/ubuntu/linaro-overlay/pool/main/a/android-tools/android-tools-fsutils_4.2.2+git20130218-3ubuntu41+linaro1_amd64.deb
+$ wget http://repo.linaro.org/ubuntu/linaro-overlay/pool/main/a/android-tools/\
+> android-tools-fsutils_4.2.2+git20130218-3ubuntu41+linaro1_amd64.deb
 $ sudo dpkg -i --force-all android-tools-fsutils_*.deb
 ```
 
@@ -779,7 +785,8 @@ $ cd android/
 Download and extract the Mali vendor binaries in the above directory:
 http://builds.96boards.org/snapshots/hikey/linaro/binaries/20150607/vendor.tar.bz2
 ```
-$ repo init -u https://android.googlesource.com/platform/manifest -b android-5.1.1_r1 -g "default,-device,hikey"
+$ repo init -u https://android.googlesource.com/platform/manifest -b android-5.1.1_r1\
+> -g "default,-device,hikey"
 $ cd .repo/
 $ git clone https://github.com/96boards/android_manifest -b android-5.0 local_manifests
 $ cd -
