@@ -6,14 +6,19 @@ This document describes how to get started with the HiKey ARMv8 community develo
 
 **The following information is provided in these release notes:**
 
-1. [Pre-Installed Debian Linux](#section-1)<br/>Information on the Debian 8.0 ("jessie") OS installation software provided with the HiKey board as shipped from the factory.
+1. [Pre-Installed Debian Linux](#section-1)<br/>
+Information on the Debian 8.0 ("jessie") OS installation software provided with the HiKey board as shipped from the factory.
 2. [Installing Android Open Source Project](#section-2)<br/>Information on loading the AOSP version of Android 5.1 as an alternative OS onto the HiKey board
-3. [Updating the OS](#section-3)<br/>Information on loading an OS update from 96Boards.org
-4. [Board Recovery](#section-4)<br/>Information on board recovery and/or loading bootloader software onto the HiKey board
+3. [Updating the OS](#section-3)<br/>
+Information on loading an OS update from 96Boards.org
+4. [Board Recovery](#section-4)<br/>
+Information on board recovery and/or loading bootloader software onto the HiKey board
 5. [Hardware notes](#section-5)
 6. [Known Issues](#section-6)
-7. [Building Software from Source Code](#section-7)<br/>Information on building software for the HiKey board from source code
-8. [Appendices](#appendix-1)<br/>Information on the partition table used on HiKey and the contents of the boot partition.
+7. [Building Software from Source Code](#section-7)<br/>
+Information on building software for the HiKey board from source code
+8. [Appendices](#appendix-1)<br/>
+Information on the partition table used on HiKey and the contents of the boot partition.
 
 ### Updating from the Early Access Build
 If you already have a HiKey board delivered before May 2015 under the Early Access program you will need to do the following:
@@ -217,7 +222,8 @@ Please read the Hardware notes and the Known Issues later in this document befor
 Updates to 96Boards supported operating systems will be made available from time to time at: 
 [http://builds.96boards.org/releases/hikey](http://builds.96boards.org/releases/hikey)
 
-IMPORTANT NOTE:<br/>The installation process will overwrite all contents of the eMMC memory. This will remove all installed software and all user files. Before updating the OS make sure that you have saved any user files or data that you want to keep onto an SD Card or USB memory stick etc.
+IMPORTANT NOTE:<br/>
+The installation process will overwrite all contents of the eMMC memory. This will remove all installed software and all user files. Before updating the OS make sure that you have saved any user files or data that you want to keep onto an SD Card or USB memory stick etc.
 
 To install updates you will need a Linux PC with fastboot support. For information on installing and setting up Fastboot see [Section 4: Board Recovery - Installing a Bootloader](#section-4) below.
 
@@ -246,7 +252,8 @@ $ sudo fastboot devices
 
 Then install the update using the downloaded files:
 
-Note: The ptable must be flashed first.<br/>Note: The larger system file will take longer and will be loaded in several chunks due to its size.
+Note: The ptable must be flashed first.<br/>
+Note: The larger system file will take longer and will be loaded in several chunks due to its size.
 ```
 $ sudo fastboot flash ptable ptable-linux.img
 $ sudo fastboot flash boot boot-fat.emmc.img
@@ -468,7 +475,8 @@ $ sudo fastboot flash mcuimage mcuimage.bin
 $ sudo fastboot reboot
 ```
 
-Once this has been completed the bootloader has been installed into eMMC.<br/>Power off the HiKey board by removing the power supply jack.
+Once this has been completed the bootloader has been installed into eMMC.<br/>
+Power off the HiKey board by removing the power supply jack.
 
 Next change the link configuration as follows:
 
@@ -477,7 +485,8 @@ Next change the link configuration as follows:
 
 Now power up the HiKey board again.
 
-Check that the HiKey board is detected by your Linux PC:<br/>You should see the ID of the HiKey board returned
+Check that the HiKey board is detected by your Linux PC:<br/>
+You should see the ID of the HiKey board returned
 ```
 $ sudo fastboot devices
 0123456789abcdef fastboot
@@ -485,7 +494,8 @@ $ sudo fastboot devices
 
 Your bootloader has been successfully installed and you are now ready to install the operating system into the eMMC flash memory (see [Section 3: Updating the OS](#section-3), above). 
 
-**Note:**<br/>The default installed bootloader is not based on open source code. We expect to make available (and pre-install) a new open source bootloader in the near future. This bootloader will be based on UEFI and include:
+**Note:**<br/>
+The default installed bootloader is not based on open source code. We expect to make available (and pre-install) a new open source bootloader in the near future. This bootloader will be based on UEFI and include:
 - ARM Trusted Firmware
 - UEFI with DeviceTree
 - Fastboot support
@@ -547,12 +557,19 @@ The following are known software issues on the current release.
   - Open source bootloader. The current bootloader is not open source and is provided by HiSilicon. An open source implementation of ARM Trusted Firmware, PSCI and UEFI with fastboot support is in development and will be made available in a future software release 
   - Hardware graphics acceleration (Mali GPU) for OpenGL ES on the Debian build. This will be addressed in a future software release. GPU acceleration is functional in the AOSP build
   - The Bluetooth LED is not functional in the Android build
-2. **USB gives occasional non-fatal kernel trace messages**<br/>`usb usb1: clear tt 1 (9032) error -22`<br/>This is under current investigation.
-3. **Apple Bluetooth Keyboards/Mice/Trackpads do not work**<br/>This is under current investigation. 
-4. **Debian build does not handle WiFi misconfiguration**<br/>If the WiFi network is misconfigured (for example, you attempt to connect to a non-existent network or a 5GHz network (not supported), or your network password/passphrase is incorrect), then you cannot just fix the problem and proceed with a network down/up operation. The work round is to fix the configuration problem in `/etc/network/interfaces.d` and then to perform a reboot with the changes. 
-5. **Thermal Issues**<br/>Certain stress tests or heavy CPU load will cause the HiKey to hang due to thermal shutdown. Power and thermal management are still being tuned on the HiKey board, and this will be addressed in the 15.06 releases. In the meantime if you wish to run intensive tasks we recommend using a fan to generate good airflow across the board. 
-6. **/dev/ttyAMA3**<br/>The second expansion bus UART is not implemented. This has been fixed in the daily Snapshot builds and will be implemented in the next release. 
-7. **1.8V Expansion bus power rail**<br/>This is not enabled in the 15.05 release. This has been fixed in the daily Snapshot builds and will be implemented in the next release. 
+2. **USB gives occasional non-fatal kernel trace messages**<br/>
+`usb usb1: clear tt 1 (9032) error -22`<br/>
+This is under current investigation.
+3. **Apple Bluetooth Keyboards/Mice/Trackpads do not work**<br/>
+This is under current investigation. 
+4. **Debian build does not handle WiFi misconfiguration**<br/>
+If the WiFi network is misconfigured (for example, you attempt to connect to a non-existent network or a 5GHz network (not supported), or your network password/passphrase is incorrect), then you cannot just fix the problem and proceed with a network down/up operation. The work round is to fix the configuration problem in `/etc/network/interfaces.d` and then to perform a reboot with the changes. 
+5. **Thermal Issues**<br/>
+Certain stress tests or heavy CPU load will cause the HiKey to hang due to thermal shutdown. Power and thermal management are still being tuned on the HiKey board, and this will be addressed in the 15.06 releases. In the meantime if you wish to run intensive tasks we recommend using a fan to generate good airflow across the board. 
+6. **/dev/ttyAMA3**<br/>
+The second expansion bus UART is not implemented. This has been fixed in the daily Snapshot builds and will be implemented in the next release. 
+7. **1.8V Expansion bus power rail**<br/>
+This is not enabled in the 15.05 release. This has been fixed in the daily Snapshot builds and will be implemented in the next release. 
 
 **Reporting New Issues**
 
@@ -813,4 +830,5 @@ cmdline | Command line text file | 512B
 
 Table 2: boot partition files
 
-Note<sup>1</sup>: Kernel build image: `arch/arm64/boot/image`<br/>Note<sup>2</sup>: DTB: `arch/arm64/boot/dts/hi6220-hikey.dtb`
+Note<sup>1</sup>: Kernel build image: `arch/arm64/boot/image`<br/>
+Note<sup>2</sup>: DTB: `arch/arm64/boot/dts/hi6220-hikey.dtb`
