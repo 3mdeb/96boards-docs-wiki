@@ -180,11 +180,11 @@ Users may install a version of the Android Open Source Project (AOSP) onto the H
 
 Download the following files from:
 [http://builds.96boards.org/releases/hikey/linaro/aosp/latest](http://builds.96boards.org/releases/hikey/linaro/aosp/latest)
-  - boot_fat.img.tar.xz
-  - cache.img.tar.xz
-  - system.img.tar.xz
-  - userdata.img.tar.xz
-  - ptable-aosp.img
+- boot_fat.img.tar.xz
+- cache.img.tar.xz
+- system.img.tar.xz
+- userdata.img.tar.xz
+- ptable-aosp.img
 
 Uncompress the .tar.xz files using your operating system file manager, or with the following command for each file:
 ```
@@ -225,7 +225,7 @@ Updates to 96Boards supported operating systems will be made available from time
 IMPORTANT NOTE:<br/>
 The installation process will overwrite all contents of the eMMC memory. This will remove all installed software and all user files. Before updating the OS make sure that you have saved any user files or data that you want to keep onto an SD Card or USB memory stick etc.
 
-To install updates you will need a Linux PC with fastboot support. For information on installing and setting up Fastboot see [Section 4: Board Recovery - Installing a Bootloader](#section-4) below.
+To install updates you will need a Linux PC with fastboot support. For information on installing and setting up Fastboot see [Section 4: Board Recovery - Installing a Bootloader](#section-41) below.
 
 Once fastboot is installed on the Linux PC proceed as follows:
 
@@ -233,7 +233,6 @@ Once fastboot is installed on the Linux PC proceed as follows:
 
 Download the following files onto your Linux PC from: 
 [http://builds.96boards.org/releases/hikey/linaro/debian/latest](http://builds.96boards.org/releases/hikey/linaro/debian/latest)
-
 - boot-fat.emmc.img.gz
 - hikey-jessie_alip_2015MMDD-nnn.emmc.img.gz
 - ptable-linux.img
@@ -285,12 +284,12 @@ If your SD card is more than 2GB capacity you may want to change the rootfs to u
 ```
 $ sudo fdisk /dev/sdb
 ```
-  - use p to list partitions
-  - note the start cylinder number of rootfs
-  - use d to delete the root partition info
-  - use n to create the new primary partition (the start cylinder must be same as before)
-  - use w to write the partition table (don’t worry about error message)
-  - remove the disk and re-insert
+- use p to list partitions
+- note the start cylinder number of rootfs
+- use d to delete the root partition info
+- use n to create the new primary partition (the start cylinder must be same as before)
+- use w to write the partition table (don’t worry about error message)
+- remove the disk and re-insert
 
 Then the following command will make the file system take up all the space left on the SD card
 ```
@@ -306,11 +305,11 @@ Note: Do not mount and access other partitions on the eMMC unless you are an exp
 
 Download the following files from:
 [http://builds.96boards.org/releases/hikey/linaro/aosp/](http://builds.96boards.org/releases/hikey/linaro/aosp/)
-  - boot-fat.img.tar.xz
-  - cache.img.tar.xz
-  - system.img.tar.xz
-  - userdata.img.tar.xz
-  - ptable-aosp.img
+- boot-fat.img.tar.xz
+- cache.img.tar.xz
+- system.img.tar.xz
+- userdata.img.tar.xz
+- ptable-aosp.img
 
 Uncompress the .tar.xz files using your operating system file manager, or with the following command for each file:
 ```
@@ -350,11 +349,11 @@ For most users a board can be “recovered” from a software failure by reloadi
 
 Download the following files onto a Linux PC:
 [https://builds.96boards.org/releases/hikey/linaro/binaries/latest](https://builds.96boards.org/releases/hikey/linaro/binaries/latest)
-  - ptable-linux.img
-  - fastboot1.img
-  - fastboot2.img
-  - nvme.img
-  - mcuimage.bin
+- ptable-linux.img
+- fastboot1.img
+- fastboot2.img
+- nvme.img
+- mcuimage.bin
 
 You will also need the fastboot application installed on your Linux PC – if this is not installed use the following commands
 ```
@@ -517,7 +516,6 @@ At present the HDMI port is fixed to use 1280x720 non-interlaced at 60Hz. We exp
 
 ### USB Ports <a name="section-53"></a>
 There are multiple USB ports on the HiKey board:
-
 - One microUSB OTG port on the front edge of the board
 - Two Type A USB 2.0 host ports on the front edge of the board
 - One USB 2.0 host port on the high-speed expansion bus
@@ -527,8 +525,8 @@ Please read the HiKey Board Hardware User Guide for more information on the foll
 1. The microUSB OTG port may be used (in host or slave mode) OR the Type A host ports may be used. They may not both be used simultaneously. If a cable is inserted into the OTG port then the Type A ports and the expansion bus port will be automatically disabled. 
 2. For the microUSB OTG port a single Low Speed (1.5Mbit/sec), Full Speed (12Mbit/sec) or High Speed (480Mbit/sec) device is supported.
 3. For the USB host ports all attached USB devices MUST be one of the following two options:
-  - Low Speed (1.5Mbit/sec) and Full Speed (12Mbit/sec) devices, or
-  - High Speed devices (480Mbit/sec)
+    - Low Speed (1.5Mbit/sec) and Full Speed (12Mbit/sec) devices, or
+    - High Speed devices (480Mbit/sec)
 
 If a mixture of High Speed and Low/Full speed devices are attached the devices will not operate correctly. This also applies if any hubs are attached to the ports.
 
@@ -550,13 +548,13 @@ Note that the LS expansion port I/O pins on the 96Boards 2mm header, including t
 The following are known software issues on the current release.
 
 1. **Not Yet Supported**
-  - HDMI EDID support and video mode switching (see above)
-  - HDMI and Expansion bus audio. At present only Bluetooth audio is supported (on both Debian and AOSP builds)
-  - Video playback in Debian. This will be addressed in a future software release
-  - Some video formats are not decoded in Android, and will not be played with the current release
-  - Open source bootloader. The current bootloader is not open source and is provided by HiSilicon. An open source implementation of ARM Trusted Firmware, PSCI and UEFI with fastboot support is in development and will be made available in a future software release 
-  - Hardware graphics acceleration (Mali GPU) for OpenGL ES on the Debian build. This will be addressed in a future software release. GPU acceleration is functional in the AOSP build
-  - The Bluetooth LED is not functional in the Android build
+    - HDMI EDID support and video mode switching (see above)
+    - HDMI and Expansion bus audio. At present only Bluetooth audio is supported (on both Debian and AOSP builds)
+    - Video playback in Debian. This will be addressed in a future software release
+    - Some video formats are not decoded in Android, and will not be played with the current release
+    - Open source bootloader. The current bootloader is not open source and is provided by HiSilicon. An open source implementation of ARM Trusted Firmware, PSCI and UEFI with fastboot support is in development and will be made available in a future software release 
+    - Hardware graphics acceleration (Mali GPU) for OpenGL ES on the Debian build. This will be addressed in a future software release. GPU acceleration is functional in the AOSP build
+    - The Bluetooth LED is not functional in the Android build
 2. **USB gives occasional non-fatal kernel trace messages**<br/>
 `usb usb1: clear tt 1 (9032) error -22`<br/>
 This is under current investigation.
@@ -613,7 +611,6 @@ $ make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j8 Image modules hi6220-hike
 ```
 
 You will need to decide whether you want your kernel to built for internal eMMC usage, or usage on an installed microSD card.
-
 
 The rootfs included in each hikey release uses a different wifi driver than the one defined in the kernel.config file present in the release page.
 https://builds.96boards.org/snapshots/hikey/linaro/debian/latest
@@ -746,7 +743,7 @@ $ sudo cp arch/arm64/boot/Image /dev/sda1/boot/Image
 $ sudo cp arch/arm64/boot/dts/hi6220-hikey.dtb /dev/sda1/boot/lcb.dtb
 ```
 
-Note: File names must not be changed - Refer to [Appendix 1](appendix-1) to see the 4 files that are expected to be in the boot partition. If any of these are missing from the SD card boot partition, HiKey will fall back to the eMMC boot partition and boot from eMMC.
+Note: File names must not be changed - Refer to [Appendix 1](#appendix-1) to see the 4 files that are expected to be in the boot partition. If any of these are missing from the SD card boot partition, HiKey will fall back to the eMMC boot partition and boot from eMMC.
 
 Plug your SD card to HiKey board.
 
@@ -757,7 +754,6 @@ We pull all the packages from Debian official repository. The only change is the
 ### AOSP Build
 
 AOSP sources are hosted in these repositories:
-
 - [https://github.com/96boards/android_hardware_ti_wpan](https://github.com/96boards/android_hardware_ti_wpan)
 - [https://github.com/96boards/android_external_wpa_supplicant_8](https://github.com/96boards/android_external_wpa_supplicant_8)
 - [https://github.com/96boards/android_device_linaro_hikey](https://github.com/96boards/android_device_linaro_hikey)
