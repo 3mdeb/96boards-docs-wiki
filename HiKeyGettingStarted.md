@@ -556,11 +556,11 @@ The following are known software issues on the current release.
 
 **Reporting New Issues**
 
-To report new issues with the HiKey please use the <a href="https://bugs.96boards.org/" target="_blank">96Boards Bug Tracker</a>.
+To report new issues with the HiKey please use the [96Boards Bug Tracker](https://bugs.96boards.org).
 
-To view the open bugs, click <a href="https://bugs.96boards.org/buglist.cgi?bug_status=__open__&list_id=144&order=Importance&product=HiKey&query_format=specific" target="_blank">here</a>.  Alternatively go to the <a href="https://bugs.96boards.org/" target="_blank">site</a>, click on the Search menu item, select HiKey in the product dropdown list and click the search button.
+To view the open bugs, click [here](https://bugs.96boards.org/buglist.cgi?bug_status=__open__&list_id=144&order=Importance&product=HiKey&query_format=specific).  Alternatively go to the [site](https://bugs.96boards.org/), click on the Search menu item, select HiKey in the product dropdown list and click the search button.
 
-To add a new bug, click <a href="https://bugs.96boards.org/enter_bug.cgi?product=HiKey" target="_blank">here</a> and fill in the form.  Alternatively go to the site <a href="https://bugs.96boards.org/" target="_blank">site</a>, click on the New menu item, then click on Consumer Edition Boards, then click on HiKey, and finally fill in the form.
+To add a new bug, click [here](https://bugs.96boards.org/enter_bug.cgi?product=HiKey) and fill in the form.  Alternatively go to the [site](https://bugs.96boards.org/), click on the New menu item, then click on Consumer Edition Boards, then click on HiKey, and finally fill in the form.
 
 ## 7. Building Software from Source Code <a name="section-7"></a>
 
