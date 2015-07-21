@@ -300,8 +300,8 @@ Now reboot the DB410c using the following sequence and it will boot to the comma
 - Unplug the micro USB fastboot cable
 - Plug the power back into the DB410c
 
-**Note:** the login and password are both “linaro” when the login prompt is
-reached.
+**Note:** the username and password are both “**linaro**” when the login information is
+requested.
 
 ### Install Android release
 
