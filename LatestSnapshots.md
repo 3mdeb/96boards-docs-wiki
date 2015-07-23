@@ -215,6 +215,17 @@ Please read the Hardware notes and the Known Issues later in this document befor
 Updates to 96Boards supported operating systems will be made available from time to time at: 
 [http://builds.96boards.org/releases/hikey](http://builds.96boards.org/releases/hikey)
 
+To determine if you are running the latest release do the following from a command prompt:
+```
+$ uname -a
+```
+If the build date is XXX Jun xx xx:xx:xx UTC 2015 your board is running the latest release. 
+
+Developer snapshot updates are also provided at:
+[http://builds.96boards.org/snapshots/hikey](http://builds.96boards.org/snapshots/hikey)
+
+Note that these snapshots represent engineering work in progress towards the next release. They may not be functional or stable and are provided as is without support. 
+
 IMPORTANT NOTE:<br/>
 The installation process will overwrite all contents of the eMMC memory. This will remove all installed software and all user files. Before updating the OS make sure that you have saved any user files or data that you want to keep onto an SD Card or USB memory stick etc.
 
