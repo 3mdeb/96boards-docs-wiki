@@ -444,7 +444,7 @@ $ alias python=python2.7
 
 Run the script to initially prepare fastboot:
 ```
-$ sudo python hisi-idt.py -d /dev/ttyUSB0 --img1 fastboot1.img --img2 fastboot2.img
+$ sudo python hisi-idt.py --img1=l-loader.bin
 ```
 
 If you get the following error message, while running the hisi-idt.py script:
@@ -468,26 +468,20 @@ After the python command has been issued you should see the following output:
 ```
 +----------------------+
  Serial:  /dev/ttyUSB0
- Image1:  fastboot1.img
- Image2:  fastboot2.img
+ Image1:  l-loader.bin
 +----------------------+
 
-Sending fastboot1.img ...
-Done
-
-Sending fastboot2.img ...
+Sending l-loader.bin ...
 Done
 ```
 
 Note: You may see the word “failed” before Done. This is under investigation but is not fatal. As long as the “Done” is printed at the end you may proceed.
 
-The bootloader has now been installed into RAM. Wait a few seconds for fastboot to actually load. The following fastboot commands then load the partition table, the bootloaders and other necessary files into the HiKey eMMC flash memory.
+The bootloader has now been installed into RAM. Wait a few seconds for the fast boot application to actually load. The following fastboot commands then load the partition table, the bootloader and other necessary files into the HiKey eMMC flash memory.
 ```
 $ sudo fastboot flash ptable ptable-linux.img
-$ sudo fastboot flash fastboot1 fastboot1.img
-$ sudo fastboot flash fastboot fastboot2.img
+$ sudo fastboot flash fastboot fip.bin
 $ sudo fastboot flash nvme nvme.img
-$ sudo fastboot flash mcuimage mcuimage.bin
 $ sudo fastboot reboot
 ```
 
@@ -511,11 +505,14 @@ $ sudo fastboot devices
 Your bootloader has been successfully installed and you are now ready to install the operating system into the eMMC flash memory (see [Section 3: Updating the OS](#section-3), above). 
 
 **Note:**<br/>
-The default installed bootloader is not based on open source code. We expect to make available (and pre-install) a new open source bootloader in the near future. This bootloader will be based on UEFI and include:
+This bootloader is based on UEFI and includes:
 - ARM Trusted Firmware
 - UEFI with DeviceTree
+- Grub
 - Fastboot support
-- Optional OPTEE (open source Trusted Execution Environment)
+
+For further information on the bootloader, including how to build it from source, see the 96Boards documentation here:<br/>
+- [HiKey Bootloader Wiki](https://github.com/96boards/documentation/wiki/HiKeyUEFI)
 
 ## 5. Hardware Notes <a name="section-5"></a>
 
