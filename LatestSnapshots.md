@@ -8,9 +8,9 @@ This document describes how to get started with the HiKey ARMv8 community develo
 
 THIS IS WORK IN PROGRESS
 
-The current builds this document refers to are:
-UEFI Snapshot 51
-DEBIAN Snapshot Community 4 
+The current builds this document refers to are:<br/>
+UEFI Snapshot 51<br/>
+DEBIAN Snapshot Community 4<br/>
 
 Note that the June 2015 release bootloader based on HiSilicon code is being deprecated and will not be supported in the next release. This Getting Started Guide therefore refers to the open source UEFI bootloader which will become the standard bootloader for the HiKey board.
 
