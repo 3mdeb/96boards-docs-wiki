@@ -1,4 +1,4 @@
-# 96Boards HiKey
+# 96Boards HiKey - Work in Progress
 
 ## Getting Started
 
