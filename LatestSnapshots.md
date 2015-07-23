@@ -227,7 +227,8 @@ Developer snapshot updates are also provided at:
 Note that these snapshots represent engineering work in progress towards the next release. They may not be functional or stable and are provided as is without support. 
 
 IMPORTANT NOTE:<br/>
-The installation process will overwrite all contents of the eMMC memory. This will remove all installed software and all user files. Before updating the OS make sure that you have saved any user files or data that you want to keep onto an SD Card or USB memory stick etc.
+The installation process will overwrite all contents of the eMMC memory. This will remove all installed software and all user files. Before updating the OS make sure that you have saved any user files or data that you want to keep onto an SD Card or USB memory stick etc.<br/>
+Note that for this release you MUST first update the bootloader using the procedure described in Section 4 below. If you have not already done this then you will need to do so before proceeding. 
 
 To install updates you will need a Linux PC with fastboot support. For information on installing and setting up Fastboot see [Section 4: Board Recovery - Installing a Bootloader](#section-41) below.
 
@@ -349,6 +350,9 @@ Please read the Hardware notes and the Known Issues later in this document befor
 
 For most users a board can be “recovered” from a software failure by reloading the operating system using the instructions provided above. However, if the primary bootloader in the eMMC flash memory has been corrupted then the bootloader will need to be re-installed. This section describes how to reinstall the primary bootloader. 
 
+IMPORTANT NOTE:<br/>
+Note that for this release you MUST first update the primary bootloader using the information in this section. This is because the original closed source bootloader has been superseded by an open source UEFI bootloader for the HiKey board. 
+ 
 **Preparation**
 
 Download the following files onto a Linux PC:
