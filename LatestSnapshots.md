@@ -358,24 +358,27 @@ Note that for this release you MUST first update the primary bootloader using th
 Download the following files onto a Linux PC:
 * [l-loader.bin](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/l-loader.bin)
 * [fip.bin](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/fip.bin)
-* [ptable-linux.img](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux.img)
+* [ptable-linux.img](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux.img) 
+* [nvme.img](https://builds.96boards.org/releases/hikey/linaro/binaries/latest/nvme.img)
 
 You can do this from your browser or from the command prompt:
-For example, to download the latest UEFI build and Debian build 305 so:
+For example, to download the latest UEFI build do:
 
 ```shell
-wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/l-loader.bin
-wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/fip.bin
-wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux.img
+$ wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/l-loader.bin
+$ wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/fip.bin
+$ wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux.img
+$ wget https://builds.96boards.org/releases/hikey/linaro/binaries/latest/nvme.img
 ```
 
-You will also need the fastboot application installed on your Linux PC – if this is not installed use the following commands
+You will also need the fastboot application installed on your Linux PC – if this is not installed then do the following:<br\><br\>
+Step 1: Use the following commands
 ```
 $ sudo apt-get install android-tools-fastboot      On Debian/Ubuntu
 $ sudo yum install android-tools                   On Fedora
 ```
 
-Either create the file: /etc/udev/rules.d/51-android.rules with the following content, or append the content to the file if it already exists. You will need to have superuser privileges so use
+Step 2: Either create the file: /etc/udev/rules.d/51-android.rules with the following content, or append the content to the file if it already exists. You will need to have superuser privileges so use
 ```
 $ sudo vi /etc/udev/rules.d/51-android.rules       or 
 $ sudo gedit /etc/udev/rules.d/51-android.rules
