@@ -3,7 +3,7 @@
   - [UEFI](https://github.com/96boards/documentation/wiki/HiKeyUEFI)
   - [LAVA](https://github.com/96boards/documentation/wiki/HiKeyLAVA)
   - [JTAG](https://github.com/96boards/documentation/wiki/JTAG-on-HiKey)
-  - [Snapshot](https://github.com/96boards/documentation/wiki/"Latest Snapshot")
+  - [Snapshots](https://github.com/96boards/documentation/wiki/LatestSnapshot)
 - [Dragonboard 410c](https://github.com/96boards/documentation/wiki/Dragonboard-410c)
   - [Installation Guide for Linux and Android](https://github.com/96boards/documentation/wiki/Dragonboard-410c-Installation-Guide-for-Linux-and-Android)
   - [Creation of Kernel Boot Image](https://github.com/96boards/documentation/wiki/Dragonboard-410c-Boot-Image)
