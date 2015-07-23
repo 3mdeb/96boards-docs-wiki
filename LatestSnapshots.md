@@ -32,8 +32,8 @@ Information on the partition table used on HiKey and the contents of the boot pa
 9. [New Features](#appendix-2)<br/>
 Information on key new features introduced in this release. 
 
-### Updating from the Early Access Build
-If you already have a HiKey board delivered before May 2015 under the Early Access program you will need to do the following:
+### Updating to the new Release
+If you already have a HiKey board you will need to do the following:
 - First, follow the instructions in [Section 4. Board Recovery - Installing a Bootloader](#section-41), to update the bootloader software on your board
 - Then follow the instructions in [Section 3. Updating the OS](#section-3), to install either the Debian or the Android Open Source Project (AOSP) build
 
@@ -44,7 +44,7 @@ To get started you will need a power supply, an HDMI monitor and a USB keyboard 
 
 **IMPORTANT NOTES**
 
-- At present the HDMI EDID display data is not used. A fixed HDMI timing is used at 1280x720p 60Hz. This will work with most but not all monitors/TVs. A future software update is expected to address this issue.
+- HDMI EDID display data is used to determine the best display resolution. On monitors and TVs that support 1080p this resolution will be selected. If 1080p is not supported the next available resolution reported by EDID will be used. This selected mode will work with most but not all monitors/TVs. See below for further information on what to do if your monitor/TV does not display the startup console and UI. 
 - There are limitations on the usage of the USB ports on the HiKey board. Please refer to the Hardware section in the document for further information.
 
 ### Power Supply
@@ -53,7 +53,7 @@ The HiKey board requires an external power supply providing 12V at 2A. (The boar
 The HiKey board uses a standard DC Jack with a 1.7mm barrel, center pin positive. An adapter cable is provided with the board to also enable the use of power supplies with 2.1mm barrel jacks. 
 
 ### Monitor, Keyboard and Mouse
-A standard monitor or TV supporting 720p resolution is required. The keyboard and mouse can be combined or separate. 
+A standard monitor or TV supporting at least 640x480 resolution is required. Interlaced operation is not currently supported. The maximum resolutions currently supported are 1920x1080p or 1600x1200p. Information on selecting the resolution is provided below. The keyboard and mouse can be combined or separate. 
 
 ### Powering up the Board
 Link 1-2 causes HiKey to auto-power up when power is applied. The other two links should be not fitted (open). If Link 1-2 is not installed then the back edge push button switch is used to power on the HiKey board. 
@@ -67,29 +67,10 @@ After about 10 seconds the LXDE User Interface will appear and you can start usi
 Next we describe how to set up wireless or wired networking and Bluetooth interfaces.
 
 ### Wireless Network
-The HiKey board includes built in 2.4GHz IEEE802.11g/n WiFi networking. The board does not support the 5GHz band. To use the wireless LAN interface you will need to edit the following file. To do this first open a terminal window by selecting LXTerminal from the System Tools menu option. Then type the following into the terminal window.
-```
-$ sudo leafpad /etc/network/interfaces.d/wlan0      Using UI editor, or
-$ sudo vi /etc/network/interfaces.d/wlan0           Using vi editor
-```
-Remove the # characters from the start of each line. Add your wireless network name into the ssid line, and network password into the psk line and save the file. 
-
-Next reboot the HiKey board:
-```
-$ sudo reboot
-```
-After the HiKey board has rebooted the wireless network should be active. The yellow LED between the microUSB and the Type A USB on the front board edge indicates wireless network activity. 
+The HiKey board includes built in 2.4GHz IEEE802.11g/n WiFi networking. The board does not support the 5GHz band. To use the wireless LAN interface for the first time (or to switch wireless networks) you should click on the wireless LAN icon on the bottom right of the desktop display. The yellow LED between the microUSB and the Type A USB on the front board edge indicates wireless network activity. 
 
 ### Wired Network
-You can connect to a wired network by using a USB Ethernet adapter. To use a USB ethernet adapter you will need to edit the following file. To do this first open a terminal window by selecting LXTerminal from the System Tools menu option. Then type the following into the terminal window.
-```
-$ sudo vi /etc/network/interfaces.d/eth0
-```
-Remove the # characters from the start of each line. Next reboot the HiKey board:
-```
-$ sudo reboot
-```
-After the HiKey board has rebooted the wired network should be active. 
+You can connect to a wired network by using a USB Ethernet adapter. Supported adapters should automatically work when the adapter is installed. Please read the information below on USB port speeds on the HiKey hardware. 
 
 ### Bluetooth
 The HiKey board includes built-in Bluetooth 4.0 LE support.
