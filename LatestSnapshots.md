@@ -1,8 +1,17 @@
 # 96Boards HiKey - Work in Progress
 
+**This document is a live document that will be kept updated to reflect changes in the latest snapshot builds for HiKey. Snapshot builds are NOT guaranteed to be stable but reflect the latest work on the HiKey platform. In due course these Getting Started notes will become the Getting Started notes for the next release**
+
 ## Getting Started
 
-This document describes how to get started with the HiKey ARMv8 community development boards shipped from May 2015.
+This document describes how to get started with the HiKey ARMv8 community development boards using latest Snapshot software rather than the release build shipped with the boards. 
+
+THIS IS WORK IN PROGRESS
+The current builds this document refers to are:
+UEFI Snapshot 51
+DEBIAN Snapshot Community 4 
+
+Note that the June 2015 release bootloader based on HiSilicon code is being deprecated and will not be supported in the next release. This Getting Started Guide therefore refers to the open source UEFI bootloader which will become the standard bootloader for the HiKey board.
 
 **The following information is provided in these release notes:**
 
