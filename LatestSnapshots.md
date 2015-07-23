@@ -67,7 +67,12 @@ After about 10 seconds the LXDE User Interface will appear and you can start usi
 Next we describe how to set up wireless or wired networking and Bluetooth interfaces.
 
 ### Wireless Network
-The HiKey board includes built in 2.4GHz IEEE802.11g/n WiFi networking. The board does not support the 5GHz band. To use the wireless LAN interface for the first time (or to switch wireless networks) you should click on the wireless LAN icon on the bottom right of the desktop display. The yellow LED between the microUSB and the Type A USB on the front board edge indicates wireless network activity. 
+The HiKey board includes built in 2.4GHz IEEE802.11g/n WiFi networking. The board does not support the 5GHz band. To use the wireless LAN interface for the first time (or to switch wireless networks) you should click on the wireless LAN icon on the bottom right of the desktop display. The yellow LED between the microUSB and the Type A USB on the front board edge indicates wireless network activity.<br\><br\>
+Note that current snapshot builds require you to use an LXTerminal to set the initial network settings (rather than the UI). This will be fixed before the next release.
+```
+$ sudo nmcli dev wifi con "SSID" password "your-WPA-password" name "your-network-name"
+```
+Insert your the SSID, password and a name to refer to the network by into the line above.
 
 ### Wired Network
 You can connect to a wired network by using a USB Ethernet adapter. Supported adapters should automatically work when the adapter is installed. Please read the information below on USB port speeds on the HiKey hardware. 
