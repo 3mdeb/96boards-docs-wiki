@@ -227,7 +227,7 @@ Developer snapshot updates are also provided at:
 Note that these snapshots represent engineering work in progress towards the next release. They may not be functional or stable and are provided as is without support. 
 
 IMPORTANT NOTE:<br/>
-The installation process will overwrite all contents of the eMMC memory. This will remove all installed software and all user files. Before updating the OS make sure that you have saved any user files or data that you want to keep onto an SD Card or USB memory stick etc.<br/>
+The installation process will overwrite all contents of the eMMC memory. This will remove all installed software and all user files. Before updating the OS make sure that you have saved any user files or data that you want to keep onto an SD Card or USB memory stick etc.<br/><br/>
 Note that for this release you MUST first update the bootloader using the procedure described in Section 4 below. If you have not already done this then you will need to do so before proceeding. 
 
 To install updates you will need a Linux PC with fastboot support. For information on installing and setting up Fastboot see [Section 4: Board Recovery - Installing a Bootloader](#section-41) below.
@@ -356,12 +356,18 @@ Note that for this release you MUST first update the primary bootloader using th
 **Preparation**
 
 Download the following files onto a Linux PC:
-[https://builds.96boards.org/releases/hikey/linaro/binaries/latest](https://builds.96boards.org/releases/hikey/linaro/binaries/latest)
-- ptable-linux.img
-- fastboot1.img
-- fastboot2.img
-- nvme.img
-- mcuimage.bin
+* [l-loader.bin](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/l-loader.bin)
+* [fip.bin](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/fip.bin)
+* [ptable-linux.img](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux.img)
+
+You can do this from your browser or from the command prompt:
+For example, to download the latest UEFI build and Debian build 305 so:
+
+```shell
+wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/l-loader.bin
+wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/fip.bin
+wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux.img
+```
 
 You will also need the fastboot application installed on your Linux PC – if this is not installed use the following commands
 ```
