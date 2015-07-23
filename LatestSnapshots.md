@@ -7,6 +7,7 @@
 This document describes how to get started with the HiKey ARMv8 community development boards using latest Snapshot software rather than the release build shipped with the boards. 
 
 THIS IS WORK IN PROGRESS
+
 The current builds this document refers to are:
 UEFI Snapshot 51
 DEBIAN Snapshot Community 4 
@@ -16,7 +17,7 @@ Note that the June 2015 release bootloader based on HiSilicon code is being depr
 **The following information is provided in these release notes:**
 
 1. [Pre-Installed Debian Linux](#section-1)<br/>
-Information on the Debian 8.0 ("jessie") OS installation software provided with the HiKey board as shipped from the factory.
+Information on the Debian 8.0 ("jessie") OS installation software
 2. [Installing Android Open Source Project](#section-2)<br/>Information on loading the AOSP version of Android 5.1 as an alternative OS onto the HiKey board
 3. [Updating the OS](#section-3)<br/>
 Information on loading an OS update from 96Boards.org
@@ -28,6 +29,8 @@ Information on board recovery and/or loading bootloader software onto the HiKey 
 Information on building software for the HiKey board from source code
 8. [Appendices](#appendix-1)<br/>
 Information on the partition table used on HiKey and the contents of the boot partition.
+9. [New Features](#appendix-2)<br/>
+Information on key new features introduced in this release. 
 
 ### Updating from the Early Access Build
 If you already have a HiKey board delivered before May 2015 under the Early Access program you will need to do the following:
