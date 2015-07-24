@@ -39,7 +39,6 @@ Install any pre-requisite libraries (e.g. FTDI libs if your JTAG is FTDI based)
 
     cd openocd-code
     export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig/
-    autoreconf -iv
     ./configure --enable-ftdi
     make
     make install
