@@ -542,12 +542,10 @@ Once you have found a working resolution you may edit the file to make the new m
 ```
 $ sudo vi /boot/grub/grub.cfg
 ```
-Add the chosen display format into the file at the end of the linux line in the format:
+Add the chosen display format into the file at the end of the linux line in the following format, replacing 1280x1024 with your selected resolution and 75 with your selected frequency. 
 ```
 video=HDMI-A-1:1280x1024@75
 ```
-Replacing 1280x1024 with your selected resolution and 75 with your selected frequency. 
-
 [Note - at present the screen does not resize correctly for each resolution - this is planned to be fixed before release].
 
 Finally, if you are still having difficulties you can revert to a built in 720p mode by starting up the HiKey with no HDMI device attached. The UI will then come up at a fixed 1280x720 resolution which will be used when you then plug the HDMI monitor in. 
@@ -590,11 +588,9 @@ Note that the LS expansion port I/O pins on the 96Boards 2mm header, including t
 The following are known software issues on the current release.
 
 1. **Not Yet Supported**
-    - HDMI EDID support and video mode switching (see above)
     - HDMI and Expansion bus audio. At present only Bluetooth audio is supported (on both Debian and AOSP builds)
     - Video playback in Debian. This will be addressed in a future software release
     - Some video formats are not decoded in Android, and will not be played with the current release
-    - Open source bootloader. The current bootloader is not open source and is provided by HiSilicon. An open source implementation of ARM Trusted Firmware, PSCI and UEFI with fastboot support is in development and will be made available in a future software release 
     - Hardware graphics acceleration (Mali GPU) for OpenGL ES on the Debian build. This will be addressed in a future software release. GPU acceleration is functional in the AOSP build
     - The Bluetooth LED is not functional in the Android build
 2. **USB gives occasional non-fatal kernel trace messages**<br/>
@@ -602,14 +598,6 @@ The following are known software issues on the current release.
 This is under current investigation.
 3. **Apple Bluetooth Keyboards/Mice/Trackpads do not work**<br/>
 This is under current investigation. 
-4. **Debian build does not handle WiFi misconfiguration**<br/>
-If the WiFi network is misconfigured (for example, you attempt to connect to a non-existent network or a 5GHz network (not supported), or your network password/passphrase is incorrect), then you cannot just fix the problem and proceed with a network down/up operation. The work round is to fix the configuration problem in `/etc/network/interfaces.d` and then to perform a reboot with the changes. 
-5. **Thermal Issues**<br/>
-Certain stress tests or heavy CPU load will cause the HiKey to hang due to thermal shutdown. Power and thermal management are still being tuned on the HiKey board, and this will be addressed in the 15.06 releases. In the meantime if you wish to run intensive tasks we recommend using a fan to generate good airflow across the board. 
-6. **/dev/ttyAMA3**<br/>
-The second expansion bus UART is not implemented. This has been fixed in the daily Snapshot builds and will be implemented in the next release. 
-7. **1.8V Expansion bus power rail**<br/>
-This is not enabled in the 15.05 release. This has been fixed in the daily Snapshot builds and will be implemented in the next release. 
 
 **Reporting New Issues**
 
