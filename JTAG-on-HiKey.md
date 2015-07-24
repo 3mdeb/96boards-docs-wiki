@@ -28,8 +28,8 @@ The armv8 code isn't currently merged to mainline, the latest code I've found is
 A GIT repo which is based off this gerrit which also includes a includes a hi6220 configuration file can be cloned here
 
     git clone ssh://git@git.linaro.org:/people/peter.griffin/openocd-code
-    git checkout armv8
     cd openocd-code
+    git checkout armv8
     git submodule update --init --recursive
     autoreconf -iv
 
@@ -38,7 +38,7 @@ A GIT repo which is based off this gerrit which also includes a includes a hi622
 Install any pre-requisite libraries (e.g. FTDI libs if your JTAG is FTDI based)
 
     cd openocd-code
-    export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig/
+    export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig/  # Needed for Debian derived distros
     ./configure --enable-ftdi
     make
     make install
