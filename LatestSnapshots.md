@@ -265,7 +265,7 @@ Note: The ptable must be flashed first.<br/>
 Note: The larger system file will take longer and will be loaded in several chunks due to its size.
 ```
 $ sudo fastboot flash ptable ptable-linux.img
-$ sudo fastboot flash boot boot-fat.emmc.img
+$ sudo fastboot flash boot boot-fat.uefi.img
 $ sudo fastboot flash system hikey-jessie_alip_2015MMDD-nnn.emmc.img
 ```
 When completed, power down the HiKey, remove Link 5-6 and power up the HiKey.  If you wish to use a keyboard and mouse in the Type A USB ports remember to remove the microUSB cable. 
