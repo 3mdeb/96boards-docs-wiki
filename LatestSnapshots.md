@@ -178,7 +178,7 @@ Users may install a version of the Android Open Source Project (AOSP) onto the H
 
 Download the following files from:
 [http://builds.96boards.org/releases/hikey/linaro/aosp/latest](http://builds.96boards.org/releases/hikey/linaro/aosp/latest)
-- boot_fat.img.tar.xz
+- boot_fat.uefi.img.tar.xz
 - cache.img.tar.xz
 - system.img.tar.xz
 - userdata.img.tar.xz
