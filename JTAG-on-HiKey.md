@@ -29,6 +29,9 @@ A GIT repo which is based off this gerrit which also includes a includes a hi622
 
     git clone ssh://git@git.linaro.org:/people/peter.griffin/openocd-code
     git checkout armv8
+    cd openocd-code
+    git submodule update --init --recursive
+    autoreconf -iv
 
 ## Compiling OpenOCD
 
@@ -36,6 +39,7 @@ Install any pre-requisite libraries (e.g. FTDI libs if your JTAG is FTDI based)
 
     cd openocd-code
     export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig/
+    autoreconf -iv
     ./configure --enable-ftdi
     make
     make install
