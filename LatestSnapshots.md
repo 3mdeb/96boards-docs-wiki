@@ -243,7 +243,7 @@ Once fastboot is installed on the Linux PC proceed as follows:
 
 Download the following files onto your Linux PC from: 
 [http://builds.96boards.org/releases/hikey/linaro/debian/latest](http://builds.96boards.org/releases/hikey/linaro/debian/latest)
-- boot-fat.emmc.img.gz
+- boot-fat.uefi.img.gz
 - hikey-jessie_alip_2015MMDD-nnn.emmc.img.gz
 - ptable-linux.img
 
