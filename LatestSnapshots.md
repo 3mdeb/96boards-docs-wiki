@@ -201,11 +201,12 @@ $ sudo fastboot devices
 ```
 
 Then install the update using the downloaded files.
-Note that the ptable must be flashed first
-Note also that the larger system file will take longer due to its size. 
+Note that the ptable must be flashed first. Wait for a few seconds after the bootloader has been rebooted to allow it to restart using the new partition table. 
+Note also that the larger system file will take a few minutes due to its size. 
 ```
 $ sudo fastboot flash ptable ptable-aosp.img
-$ sudo fastboot flash boot boot_fat.img
+$ sudo fastboot reboot
+$ sudo fastboot flash boot boot_fat.uefi.img
 $ sudo fastboot flash cache cache.img
 $ sudo fastboot flash system system.img
 $ sudo fastboot flash userdata userdata.img
