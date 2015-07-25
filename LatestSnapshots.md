@@ -181,8 +181,9 @@ Download the following files from:
 - boot_fat.uefi.img.tar.xz
 - cache.img.tar.xz
 - system.img.tar.xz
-- userdata.img.tar.xz<br\><br\>
-and the following file from:
+- userdata.img.tar.xz
+
+Download the following file from:
 [http://builds.96boards.org/releases/hikey/linaro/uefi/latest](http://builds.96boards.org/releases/hikey/linaro/uefi/latest)
 - ptable-aosp.img
 
@@ -203,7 +204,7 @@ $ sudo fastboot devices
 ```
 
 Then install the update using the downloaded files.
-Note that the ptable must be flashed first. Wait for a few seconds after the bootloader has been rebooted to allow it to restart using the new partition table. 
+Note that the ptable must be flashed first. Wait for a few seconds after the reboot command to allow the bootloader to restart using the new partition table. 
 Note also that the larger system file will take a few minutes due to its size. 
 ```
 $ sudo fastboot flash ptable ptable-aosp.img
