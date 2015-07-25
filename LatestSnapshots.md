@@ -181,7 +181,9 @@ Download the following files from:
 - boot_fat.uefi.img.tar.xz
 - cache.img.tar.xz
 - system.img.tar.xz
-- userdata.img.tar.xz
+- userdata.img.tar.xz<br\><br\>
+and the following file from:
+[http://builds.96boards.org/releases/hikey/linaro/uefi/latest](http://builds.96boards.org/releases/hikey/linaro/uefi/latest)
 - ptable-aosp.img
 
 Uncompress the .tar.xz files using your operating system file manager, or with the following command for each file:
