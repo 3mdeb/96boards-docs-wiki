@@ -35,6 +35,7 @@ The source code is available from:
 * [l-loader](https://github.com/96boards/l-loader)
 * [ARM Trusted Firmware](https://github.com/96boards/arm-trusted-firmware)
 * [EDK II (UEFI)](https://github.com/96boards/edk2)
+* (Optional) [OP-TEE] (https://github.com/OP-TEE/optee_os)
 
 ## Build instructions
 
@@ -59,6 +60,9 @@ git clone -b hikey --depth 1 https://github.com/96boards/edk2.git linaro-edk2
 git clone -b hikey --depth 1 https://github.com/96boards/arm-trusted-firmware.git
 git clone --depth 1 https://github.com/96boards/l-loader.git
 git clone git://git.linaro.org/uefi/uefi-tools.git
+
+# Optionally, if also building OP-TEE
+git clone --depth 1 https://github.com/OP-TEE/optee_os.git
 ```
 
 ### Build UEFI for HiKey
@@ -70,6 +74,9 @@ export UEFI_TOOLS_DIR=${PWD}/uefi-tools
 
 cd ${EDK2_DIR}
 ${UEFI_TOOLS_DIR}/uefi-build.sh -b RELEASE -a ../arm-trusted-firmware hikey
+
+# NOTE: If also building optional OP-TEE, uncomment and run below command instead of the one above
+#${UEFI_TOOLS_DIR}/uefi-build.sh -b RELEASE -a ../arm-trusted-firmware -s ../optee_os hikey
 
 cd ../l-loader
 ln -s ${EDK2_DIR}/Build/HiKey/RELEASE_GCC49/FV/bl1.bin
