@@ -290,14 +290,32 @@ and then validate with u-boot
     # md 0x36000000
     36000000: deadbeef 555555d5 5c355555 5575555d    .....UUUUU5\]UuU
 
+### Reading from memory
+
+target state: halted
+target halted in ARM64 state due to debug-request, current mode: EL2H
+cpsr: 0x800003c9 pc: 0x3ef7e908
+MMU: disabled, D-Cache: disabled, I-Cache: disabled
+
+> mdw 0x35000000 10
+0x35000000: 1400000a d503201f 35000000 00000000 00042938 00000000 00042938 00000000 
+0x35000020: 0009e030 00000000 
+> resume
+
+and then validate with u-boot
+
+# md.l 0x35000000 10 
+35000000: 1400000a d503201f 35000000 00000000    ..... .....5....
+35000010: 00042938 00000000 00042938 00000000    8)......8)......
+35000020: 0009e030 00000000 10003ec0 d5384241    0........>..AB8.
+35000030: f100303f 540000a0 f100203f 54000160    ?0.....T? ..`..T
+
+
+### Debugging U-Boot with GDB
+
+
 ## What isn't working
 
-### Read memory access currently aren't working
-
-    > mdw 0x35000000 1
-    abort occurred - dscr = 0x0704725b
-    error
-    in procedure 'mdw'
-
-DSCR is documented in H9.2.41 (page of 5155) of the ARM ARM. The cumulative error flag is set. We need to debug what is happening here.
+Probably lots of things - add issues here when you find them :)
+Better still debug and fix it!
 
