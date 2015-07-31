@@ -11,14 +11,19 @@ Once the connector is soldered on it should look something like this
 
 ![](http://people.linaro.org/~peter.griffin/hikey/hikey_jtag_connector.jpg)
 
-## JTAG device
+## JTAG interfaces
 
-OpenOCD supports many different JTAG dongles. The one I choose to use was the TinCanTools flyswatter2, which is $89 from http://www.tincantools.com/JTAG/Flyswatter2.html. This is a FTDI based device which is well supported in OpenOCD. The flyswatter2 comes with a variety of cables and adapters. I'm using the standard ARM 20 pin cable. I have then purchased a JTAG (2x10 2.54mm) to SWD (2x5 1.27mm) Cable Adapter Board from AdaFruit along with a 10 pin 2x5 1.27mm cable
+OpenOCD supports many different JTAG interface. The list of devices known to work with the HiKey board includes:
 
-1. http://www.adafruit.com/products/2094?utm_source=contextly&utm_medium=module-related&utm_campaign=129798
-2. See http://www.adafruit.com/products/1675?utm_source=contextly&utm_medium=module-related&utm_campaign=129798
+ * [Bus Blaster v3 from Dangerous Prototypes](http://dangerousprototypes.com/docs/Bus_Blaster). Set `INTERFACE=interface/ftdi/dp_busblaster_kt-link.cfg` for this adapter. Before connecting the BBv3 to the HiKey ensure the interface is in self-powered mode (JP4, the target power select jumper, must be disconnected) otherwise the HiKey could be damaged. The BBv3 buffer logic must be programmed with SVF from https://github.com/bharrisau/busblaster .
+ * [Flyswatter2 from Tin Can Tools](http://www.tincantools.com/JTAG/Flyswatter2.html). Set `INTERFACE=interface/ftdi/flyswatter2.cfg` for this adapter.
 
-Once this is all connected it should look something like this
+Most JTAG interfaces provide a standard ARM 20 pin socket (2x10 2.54mm) meaning an adapter board is required to convert from this to the SWD (2x5 1.27mm). This are available from a variety of sources including:
+
+ * [ARM-JTAG-20-10 from Olimax](https://www.olimex.com/Products/ARM/JTAG/ARM-JTAG-20-10/). This board includes the 10-pin SWD cable and has a female 20 pin IDC connector allowing it to connect directly to most JTAG interfaces without any additional cabling.
+ * [JTAG to SWD Cable Adapter Board](http://www.adafruit.com/products/2094) and [150mm 2x5 SWD cable](https://www.adafruit.com/product/1675) from Adafruit Industries. This board has a male IDC connector meaning an additional 20 pin IDC cable is required to connect to most JTAG interfaces.
+
+Once this is all connected it should look something like thisFT2232H
 
 ![](http://people.linaro.org/~peter.griffin/hikey/hikey_jtag_setup.jpg)
 
