@@ -52,7 +52,7 @@ Install any pre-requisite libraries (e.g. FTDI libs if your JTAG is FTDI based)
 
 Firstly ensure everything is connected like the photo above, and power on the board. Then issue the following command
 
-    src/openocd -f ./tcl/interface/ftdi/flyswatter2.cfg -f ./tcl/target/hi6220.cfg
+    src/openocd -f ./tcl/$INTERFACE -f ./tcl/target/hi6220.cfg
 
 If all goes well you should see trace like the following: -
 
