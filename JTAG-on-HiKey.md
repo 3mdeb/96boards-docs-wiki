@@ -313,9 +313,38 @@ and then validate with u-boot
 
 ### Debugging U-Boot with GDB
 
+If U-Boot is sat at the prompt, then it has been relocated from its
+statically linked address 0x35000000. On my system it gets relocated to
+0x3ef47000.
+
+    (gdb) aarch64-linux-gnu-gdb
+    (gdb) add-symbol-file build-hikey/u-boot 0x3ef47000
+    (gdb) hbreak do_version
+    Hardware assisted breakpoint 1 at 0x3ef4cc80: file ../common/cmd_version.c, line 19.
+    (gdb) c
+    Continuing.
+
+    <uboot> => version
+
+    Breakpoint 1, do_version (cmdtp=0x3ef8c0c0, flag=0, argc=1, argv=0x3e746850) at ../common/cmd_version.c:19
+    19	{
+    (gdb) bt
+    #0  do_version (cmdtp=0x3ef8c0c0, flag=0, argc=1, argv=0x3e746850) at ../common/cmd_version.c:19
+    #1  0x000000003ef604a8 in cmd_call (argv=0x3e746850, argc=1, 
+
+
+
+    
+
+
+
+    
 
 ## What isn't working
 
 Probably lots of things - add issues here when you find them :)
 Better still debug and fix it!
+
+Sometimes I hit the following GDB assertion when doing a backtrace in U-Boot
+* /cbuild/slaves/oorts/crosstool-ng/builds/aarch64-linux-gnu-linux/.build/src/gdb-linaro-7.6.1-2013.10/gdb/regcache.c:178: internal-error: register_size: Assertion `regnum >= 0 && regnum < (gdbarch_num_regs (gdbarch) + gdbarch_num_pseudo_regs (gdbarch))' failed.
 
