@@ -3,6 +3,8 @@
 
 The boot image that can be used with fastboot uses a specific format, and this document provides instructions to create such a boot file. The boot image generally contains the kernel image, an initrd image as well as a specific/custom device tree image.
 
+NOTE: This section is for Ubuntu only! Android uses a different tree.
+
 ## Building the kernel
 
     git clone https://git.linaro.org/landing-teams/working/qualcomm/kernel.git -b integration-linux-qcomlt
