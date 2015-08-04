@@ -71,7 +71,7 @@ The boot image also contains the kernel bootargs, which can be changed as needed
               --output boot-db410c.img \
               --dt dt.img \
               --pagesize 2048 \
-              --base 0x8000000 \
+              --base 0x80000000 \
               --cmdline "$cmdline"
 
 If you have install a rootFS on the on-board eMMC, for example in the _userdata_ partition, you can use this instead:
