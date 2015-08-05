@@ -20,6 +20,8 @@ NOTE: This section is for Ubuntu only! Android uses a different tree.
     mkdir build-${ARCH}-modules
     make O=build-${ARCH} INSTALL_MOD_PATH=build-${ARCH}-modules modules_install
     tar -C build-${ARCH}-modules czf modules.tgz lib/modules
+    # try below command if the above doesn't work
+    tar czf modules.tgz build-${ARCH}/build-${ARCH}-modules/lib/modules
     # copy modules.tgz (using SCP or SD card) to the device, tar xvf in the /
 
 ## Getting the skales tools
