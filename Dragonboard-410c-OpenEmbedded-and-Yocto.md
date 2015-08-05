@@ -45,7 +45,9 @@ Now, you need to edit the file `<build>/conf/local.conf` and set
 
     MACHINE ?= "dragonboard-410c"
 
-If you want your images to have a SSH server installed by default, you can to add `ssh-server-dropbear` to `CORE_IMAGE_EXTRA_IMAGE_FEATURES` in this configuration file.
+If you want your images to have a SSH server installed by default, you can also add:
+
+    CORE_IMAGE_EXTRA_IMAGE_FEATURES += "ssh-server-dropbear" 
 
 These instructions can be used to generate a kernel image and a root file system that can be used on the DragonBoard 410c. You can refer to [[Dragonboard-410c-Boot-Image]] to learn how to use the generated files.
 
