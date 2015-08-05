@@ -24,9 +24,9 @@ The Qualcomm BSP layer can be used with any OE based distribution, such as Poky.
 You need to download the following git trees:
 
     mkdir oe && cd oe
-    git clone git://github.com/openembedded/oe-core openembedded-core
-    git clone git://github.com/openembedded/bitbake openembedded-core/bitbake
-    git clone http://github.com/ndechesne/meta-qualcomm.git
+    git clone https://github.com/openembedded/oe-core openembedded-core
+    git clone https://github.com/openembedded/bitbake openembedded-core/bitbake
+    git clone https://github.com/ndechesne/meta-qualcomm.git
 
 To initialize your build environment, you need to run:
 
@@ -36,7 +36,7 @@ Now, you need to edit the file `<build>/conf/local.conf` and set
 
     MACHINE ?= "dragonboard-410c"
 
-If you want your images to have a SSH server installed by default, you can to add `ssh-server-dropbear` to `EXTRA_IMAGE_FEATURES` in this configuration file.
+If you want your images to have a SSH server installed by default, you can to add `ssh-server-dropbear` to `CORE_IMAGE_EXTRA_IMAGE_FEATURES` in this configuration file.
 
 These instructions can be used to generate a kernel image and a root file system that can be used on the DragonBoard 410c. You can refer to [[Dragonboard-410c-Boot-Image]] to learn how to use the generated files.
 
