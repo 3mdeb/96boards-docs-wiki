@@ -319,7 +319,7 @@ Note: Do not mount and access other partitions on the eMMC unless you are an exp
 
 Download the following files from:
 [http://builds.96boards.org/releases/hikey/linaro/aosp/](http://builds.96boards.org/releases/hikey/linaro/aosp/)
-- boot-fat.img.tar.xz
+- boot-fat.uefi.img.tar.xz
 - cache.img.tar.xz
 - system.img.tar.xz
 - userdata.img.tar.xz
@@ -341,7 +341,7 @@ $ sudo fastboot devices
 Then install the update using the downloaded files:
 ```
 $ sudo fastboot flash ptable ptable-aosp.img
-$ sudo fastboot flash boot boot_fat.img
+$ sudo fastboot flash boot boot_fat.uefi.img
 $ sudo fastboot flash cache cache.img
 $ sudo fastboot flash system system.img
 $ sudo fastboot flash userdata userdata.img
