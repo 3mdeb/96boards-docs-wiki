@@ -373,8 +373,8 @@ Download the following files onto a Linux PC:
 * [nvme.img](https://builds.96boards.org/releases/hikey/linaro/binaries/latest/nvme.img)
 
 You will also need the boot partition for the OS Image you want to run
-* [boot-fat.uefi.img for AOSP](https://builds.96boards.org/snapshots/hikey/linaro/aosp/latest/boot_fat.uefi.img.tar.xz)
 * [boot-fat.uefi.img for Debian] (https://builds.96boards.org/snapshots/hikey/linaro/debian/latest/boot_fat.uefi.img.gz)
+* [boot-fat.uefi.img for AOSP](https://builds.96boards.org/snapshots/hikey/linaro/aosp/latest/boot_fat.uefi.img.tar.xz)
 
 You can do this from your browser or from the command prompt:
 For example, to download the latest UEFI build for Debian do:
@@ -398,28 +398,8 @@ For Debian:
 $ gunzip boot_fat.uefi.img.gz
 ```
 
-You will also need the fastboot application installed on your Linux PC – if this is not installed then do the following:<br\><br\>
-Step 1: Use the following commands
-```
-$ sudo apt-get install android-tools-fastboot      On Debian/Ubuntu
-$ sudo yum install android-tools                   On Fedora
-```
+You will also need the fastboot application installed on your Linux PC – if this is not installed then follow the instructions at the end of this section. 
 
-Step 2: Either create the file: /etc/udev/rules.d/51-android.rules with the following content, or append the content to the file if it already exists. You will need to have superuser privileges so use
-```
-$ sudo vi /etc/udev/rules.d/51-android.rules       or 
-$ sudo gedit /etc/udev/rules.d/51-android.rules
-```
- to create and edit the file.  Add the following to the file.
-
-```
-# fastboot protocol on HiKey
-SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="d00d", MODE="0660", GROUP="dialout"
-# adb protocol on HiKey
-SUBSYSTEM=="usb", ATTR{idVendor}=="12d1", ATTR{idProduct}=="1057", MODE="0660", GROUP="dialout"
-# rndis for HiKey
-SUBSYSTEM=="usb", ATTR{idVendor}=="12d1", ATTR{idProduct}=="1050", MODE="0660", GROUP="dialout" 
-```
 You will also need a standard microUSB cable connected between the HiKey microUSB and your Linux PC. Do not power up the HiKey board yet.
 
 **Set Board Link options**
@@ -457,41 +437,12 @@ First, get the Python script that is needed to load the initial boot software on
 ```
 $ wget https://raw.githubusercontent.com/96boards/burn-boot/master/hisi-idt.py
 ```
-
-The script was written for Python 2. Make sure you're not defaulted to Python 3 by typing:
-```
-$ python --version
-```
-
-**Note:** Python 3 currently has a serial library bug, and will fail during data transfer - so if you are using Python 3 then you will need to install and/or change to Python 2.7:
-```
-$ sudo apt-get install python2.7 python2.7-dev
-$ alias python=python2.7
-```
-
 Run the script to initially prepare fastboot:
 ```
 $ sudo python hisi-idt.py --img1=l-loader.bin
 ```
 
-If you get the following error message, while running the hisi-idt.py script:
-```
-ImportError: No module named serial
-```
-Then you need to install the python-serial module, on Ubuntu/Debian run:
-```
-$ sudo apt-get install python-serial
-```
-or you can use pip install:
-```
-$ sudo pip install pyserial
-```
-If you have Python 3 installed, make sure to install with the right version, for instance:
-```
-$ sudo pip2.7 install pyserial
-```
-
-After the python command has been issued you should see the following output:
+After the python command has been issued you should see the following output. If you do not then see the "Problems with Python Downloader" section below
 ```
 +----------------------+
  Serial:  /dev/ttyUSB0
@@ -541,6 +492,60 @@ This bootloader is based on UEFI and includes:
 
 For further information on the bootloader, including how to build it from source, see the 96Boards documentation here:<br/>
 - [HiKey Bootloader Wiki](https://github.com/96boards/documentation/wiki/HiKeyUEFI)
+
+
+**Installing Fastboot onto your PC**<br/>
+Step 1: Use the following commands
+```
+$ sudo apt-get install android-tools-fastboot      On Debian/Ubuntu
+$ sudo yum install android-tools                   On Fedora
+```
+
+Step 2: Either create the file: /etc/udev/rules.d/51-android.rules with the following content, or append the content to the file if it already exists. You will need to have superuser privileges so use
+```
+$ sudo vi /etc/udev/rules.d/51-android.rules       or 
+$ sudo gedit /etc/udev/rules.d/51-android.rules
+```
+ to create and edit the file.  Add the following to the file.
+
+```
+# fastboot protocol on HiKey
+SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="d00d", MODE="0660", GROUP="dialout"
+# adb protocol on HiKey
+SUBSYSTEM=="usb", ATTR{idVendor}=="12d1", ATTR{idProduct}=="1057", MODE="0660", GROUP="dialout"
+# rndis for HiKey
+SUBSYSTEM=="usb", ATTR{idVendor}=="12d1", ATTR{idProduct}=="1050", MODE="0660", GROUP="dialout" 
+```
+
+**Problems with Python Downloader**<br\>
+
+The Python download script requires Python 2. Make sure you're not defaulted to Python 3 by typing:
+```
+$ python --version
+```
+
+**Note:** Python 3 currently has a serial library bug, and will fail during data transfer - so if you are using Python 3 then you will need to install and/or change to Python 2.7:
+```
+$ sudo apt-get install python2.7 python2.7-dev
+$ alias python=python2.7
+```
+
+If you get the following error message while running the hisi-idt.py script:
+```
+ImportError: No module named serial
+```
+Then you need to install the python-serial module, on Ubuntu/Debian run:
+```
+$ sudo apt-get install python-serial
+```
+or you can use pip install:
+```
+$ sudo pip install pyserial
+```
+If you have Python 3 installed, make sure to install with the right version, for instance:
+```
+$ sudo pip2.7 install pyserial
+```
 
 ## 5. Hardware Notes <a name="section-5"></a>
 
