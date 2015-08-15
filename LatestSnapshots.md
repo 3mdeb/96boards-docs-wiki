@@ -364,7 +364,8 @@ Note that for this release you MUST first update the primary bootloader using th
  
 **Preparation**
 
-NOTE: Change these URLs to RELEASE URLs for final release notes
+**NOTE: Change these URLs to RELEASE URLs for final release notes**
+
 Download the following files onto a Linux PC:
 * [l-loader.bin](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/l-loader.bin)
 * [fip.bin](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/fip.bin)
@@ -392,7 +393,6 @@ For AOSP:
 ```shell
 $ xz --decompress boot_fat.uefi.img.tar.xz; tar -xvf boot_fat.uefi.img.tar
 ```
-
 For Debian:
 ```shell
 $ gunzip boot_fat.uefi.img.gz
@@ -400,7 +400,7 @@ $ gunzip boot_fat.uefi.img.gz
 
 You will also need the fastboot application installed on your Linux PC – if this is not installed then follow the instructions at the end of this section. 
 
-You will also need a standard microUSB cable connected between the HiKey microUSB and your Linux PC. Do not power up the HiKey board yet.
+Connect a standard microUSB cable between the HiKey microUSB and your Linux PC. Do not power up the HiKey board yet.
 
 **Set Board Link options**
 
@@ -416,17 +416,16 @@ Link 1-2 causes HiKey to auto-power up when power is installed. Link 3-4 causes 
 
 Please refer to the Hardware User Guide (Chapter 1. Settings Jumper) for more information on the HiKey link options.
 
-Connect a standard microUSB to USB connector between the HiKey microUSB port and your Linux PC. Connect the HiKey power supply to the board.
+Now connect the HiKey power supply to the board.
 
 **Note:** USB does NOT power the HiKey board because the power supply requirements in certain use cases can exceed the power supply available on a USB port. You must use an external power supply.
 
 **Note:** The HiKey board will remain in USB load mode for 90 seconds from power up. If you take longer than 90 seconds to start the install then power cycle the board before trying again.
 
-Check that the HiKey board has been recognized by your Linux PC:
+Wait about 5 seconds and then check that the HiKey board has been recognized by your Linux PC:
 ```
 $ ls /dev/ttyUSB*
 ```
-
 The following instructions assume that `/dev/ttyUSB0` is the tty port for communication with the HiKey board. Adjust the port for your own tty port. 
 
 [hisi-idt.py](https://raw.githubusercontent.com/96boards/burn-boot/master/hisi-idt.py) is the Python download tool for the HiKey. This is used to install the bootloader as follows:
@@ -441,7 +440,6 @@ Run the script to initially prepare fastboot:
 ```
 $ sudo python hisi-idt.py --img1=l-loader.bin
 ```
-
 After the python command has been issued you should see the following output. If you do not then see the "Problems with Python Downloader" section below
 ```
 +----------------------+
@@ -452,7 +450,6 @@ After the python command has been issued you should see the following output. If
 Sending l-loader.bin ...
 Done
 ```
-
 Note: You may see the word “failed” before Done. This is under investigation but is not fatal. As long as the “Done” is printed at the end you may proceed.
 
 The bootloader has now been installed into RAM. Wait a few seconds for the fast boot application to actually load. The following fastboot commands then load the partition table, the bootloader and other necessary files into the HiKey eMMC flash memory.
@@ -468,12 +465,10 @@ Once this has been completed the bootloader has been installed into eMMC.<br/>
 Power off the HiKey board by removing the power supply jack.
 
 Next change the link configuration as follows:
-
 1. Remove the 2nd jumper (Boot Select 3-4) so that the HiKey board will boot from the newly installed bootloader in eMMC.
 2. Install the 3rd jumper (GPIO3-1 5-6) so that the HiKey board will enter fastboot mode when powered up (if the link is open HiKey will try to boot an OS that is not yet installed).
 
 Now power up the HiKey board again.
-
 Check that the HiKey board is detected by your Linux PC:<br/>
 You should see the ID of the HiKey board returned
 ```
