@@ -14,6 +14,13 @@ DEBIAN Snapshot Community 4<br/>
 
 Note that the June 2015 release bootloader based on HiSilicon code is being deprecated and will not be supported in the next release. This Getting Started Guide therefore refers to the open source UEFI bootloader which will become the standard bootloader for the HiKey board.
 
+As we transition to UEFI, these set of kernel changes have been merged into the HiKey kernel.
+https://github.com/96boards/linux/pull/108 - hikey <br/>
+https://github.com/96boards/linux/pull/106 - hikey-mainline-rebase <br/>
+
+**The kernel branches containing the above changes (hikey and hikey-mainline-rebase) will only boot with UEFI.**
+
+The 
 **The following information is provided in these release notes:**
 
 1. [Pre-Installed Debian Linux](#section-1)<br/>
