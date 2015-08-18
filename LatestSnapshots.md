@@ -216,7 +216,7 @@ Note also that the larger system file will take a few minutes due to its size.
 ```
 $ sudo fastboot flash ptable ptable-aosp.img
 $ sudo fastboot reboot
-$ sudo fastboot flash boot boot_fat.uefi.img
+$ sudo fastboot flash boot boot-fat.uefi.img
 $ sudo fastboot flash cache cache.img
 $ sudo fastboot flash system system.img
 $ sudo fastboot flash userdata userdata.img
@@ -348,7 +348,7 @@ $ sudo fastboot devices
 Then install the update using the downloaded files:
 ```
 $ sudo fastboot flash ptable ptable-aosp.img
-$ sudo fastboot flash boot boot_fat.uefi.img
+$ sudo fastboot flash boot boot-fat.uefi.img
 $ sudo fastboot flash cache cache.img
 $ sudo fastboot flash system system.img
 $ sudo fastboot flash userdata userdata.img
@@ -381,8 +381,8 @@ Download the following files onto a Linux PC:
 * [nvme.img](https://builds.96boards.org/releases/hikey/linaro/binaries/latest/nvme.img)
 
 You will also need the boot partition for the OS Image you want to run
-* [boot-fat.uefi.img for Debian] (https://builds.96boards.org/snapshots/hikey/linaro/debian/latest/boot_fat.uefi.img.gz)
-* [boot-fat.uefi.img for AOSP](https://builds.96boards.org/snapshots/hikey/linaro/aosp/latest/boot_fat.uefi.img.tar.xz)
+* [boot-fat.uefi.img for Debian] (https://builds.96boards.org/snapshots/hikey/linaro/debian/latest/boot-fat.uefi.img.gz)
+* [boot-fat.uefi.img for AOSP](https://builds.96boards.org/snapshots/hikey/linaro/aosp/latest/boot-fat.uefi.img.tar.xz)
 
 You can do this from your browser or from the command prompt:
 For example, to download the latest UEFI build for Debian do:
@@ -392,13 +392,13 @@ $ wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/l-loader.b
 $ wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/fip.bin
 $ wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux.img
 $ wget https://builds.96boards.org/releases/hikey/linaro/binaries/latest/nvme.img
-$ wget https://builds.96boards.org/snapshots/hikey/linaro/debian/latest/boot_fat.uefi.img.gz
+$ wget https://builds.96boards.org/snapshots/hikey/linaro/debian/latest/boot-fat.uefi.img.gz
 ```
 
 Uncompress the boot image as follows:
 For AOSP:
 ```shell
-$ xz --decompress boot_fat.uefi.img.tar.xz; tar -xvf boot_fat.uefi.img.tar
+$ xz --decompress boot_fat.uefi.img.tar.xz; tar -xvf boot-fat.uefi.img.tar
 ```
 For Debian:
 ```shell
@@ -464,7 +464,7 @@ The bootloader has now been installed into RAM. Wait a few seconds for the fast 
 $ sudo fastboot flash ptable ptable-linux.img
 $ sudo fastboot flash fastboot fip.bin
 $ sudo fastboot flash nvme nvme.img
-$ sudo fastboot flash boot boot_fat.uefi.img
+$ sudo fastboot flash boot boot-fat.uefi.img
 $ sudo fastboot reboot
 ```
 
