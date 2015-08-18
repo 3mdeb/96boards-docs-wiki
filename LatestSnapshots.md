@@ -185,7 +185,7 @@ Users may install a version of the Android Open Source Project (AOSP) onto the H
 
 Download the following files from:
 [http://builds.96boards.org/releases/hikey/linaro/aosp/latest](http://builds.96boards.org/releases/hikey/linaro/aosp/latest)
-- boot_fat.uefi.img.tar.xz
+- boot-fat.uefi.img.tar.xz
 - cache.img.tar.xz
 - system.img.tar.xz
 - userdata.img.tar.xz
@@ -402,7 +402,7 @@ $ xz --decompress boot_fat.uefi.img.tar.xz; tar -xvf boot-fat.uefi.img.tar
 ```
 For Debian:
 ```shell
-$ gunzip boot_fat.uefi.img.gz
+$ gunzip boot-fat.uefi.img.gz
 ```
 
 You will also need the fastboot application installed on your Linux PC – if this is not installed then follow the instructions at the end of this section. 
