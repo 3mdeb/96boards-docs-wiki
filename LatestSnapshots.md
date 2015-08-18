@@ -398,7 +398,7 @@ $ wget https://builds.96boards.org/snapshots/hikey/linaro/debian/latest/boot-fat
 Uncompress the boot image as follows:
 For AOSP:
 ```shell
-$ xz --decompress boot_fat.uefi.img.tar.xz; tar -xvf boot-fat.uefi.img.tar
+$ xz --decompress boot-fat.uefi.img.tar.xz; tar -xvf boot-fat.uefi.img.tar
 ```
 For Debian:
 ```shell
@@ -638,6 +638,10 @@ To view the open bugs, click [here](https://bugs.96boards.org/buglist.cgi?bug_st
 To add a new bug, click [here](https://bugs.96boards.org/enter_bug.cgi?product=HiKey) and fill in the form.  Alternatively go to the [site](https://bugs.96boards.org/), click on the New menu item, then click on Consumer Edition Boards, then click on HiKey, and finally fill in the form.
 
 ## 7. Building Software from Source Code <a name="section-7"></a>
+
+THIS SECTION NEEDS REVIEW AND UPDATE FOR NEW RELEASE
+DO NOT USE THESE INSTRUCTIONS 
+UPDATE FOR NEW KERNEL, WIFI MODULE AND BOOTLOADER
 
 To build a kernel using a linux computer use the following instructions. These assume that you have a good level of knowledge in using Linaro tools and building Linux kernels.
 
