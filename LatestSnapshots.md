@@ -6,7 +6,7 @@
 
 This document describes how to get started with the HiKey ARMv8 community development boards using latest Snapshot software rather than the release build shipped with the boards. 
 
-Comments: (information useful for future editing) <br/>
+### Comments: (information useful for future editing) <br/>
 1. Debian #344 corresponds to UEFI #58. <br/>
 a) They MUST be updated together. No backward compatibilities! <br/>
 b) new features in: <br/>
