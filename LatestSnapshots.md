@@ -6,12 +6,13 @@
 
 This document describes how to get started with the HiKey ARMv8 community development boards using latest Snapshot software rather than the release build shipped with the boards. 
 
-Comments: (information for future editing)
+Comments: (information useful for future editing) <br/>
 1. Debian #344 corresponds to UEFI #58. <br/>
 a) They MUST be updated together. No backward compatibilities! <br/>
 b) new features in: <br/>
 new mcufirmware and PSCI features: cpuidle, cpufreq, cpu hotplug and suspend/resume. <br/>
 c) fastboot bootloader is no longer supported. <br/>
+2. Debian #345 has HDMI more modes support, switchable through hotkey 'Alt'+'PrtSc'+'g'
 
 THIS IS WORK IN PROGRESS
 
