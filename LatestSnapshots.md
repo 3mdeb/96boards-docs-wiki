@@ -9,8 +9,8 @@ This document describes how to get started with the HiKey ARMv8 community develo
 THIS IS WORK IN PROGRESS
 
 The current builds this document refers to are:<br/>
-UEFI Snapshot 51<br/>
-DEBIAN Snapshot Community 4<br/>
+UEFI snapshot build #59<br/>
+DEBIAN community snapshot build #4<br/>
 
 Note that the June 2015 release bootloader based on HiSilicon code is being deprecated and will not be supported in the next release. This Getting Started Guide therefore refers to the open source UEFI bootloader which will become the standard bootloader for the HiKey board.
 
@@ -378,7 +378,7 @@ Download the following files onto a Linux PC:
 * [fip.bin](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/fip.bin)
 * [ptable-linux.img for Debian](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux.img) or
 * [ptable-aosp.img for AOSP](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-aosp.img)
-* [nvme.img](https://builds.96boards.org/releases/hikey/linaro/binaries/latest/nvme.img)
+* [nvme.img](https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/nvme.img)
 
 You will also need the boot partition for the OS Image you want to run
 * [boot-fat.uefi.img for Debian] (https://builds.96boards.org/snapshots/hikey/linaro/debian/latest/boot-fat.uefi.img.gz)
@@ -391,7 +391,7 @@ For example, to download the latest UEFI build for Debian do:
 $ wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/l-loader.bin
 $ wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/fip.bin
 $ wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux.img
-$ wget https://builds.96boards.org/releases/hikey/linaro/binaries/latest/nvme.img
+$ wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/nvme.img
 $ wget https://builds.96boards.org/snapshots/hikey/linaro/debian/latest/boot-fat.uefi.img.gz
 ```
 
