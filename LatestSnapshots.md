@@ -775,17 +775,19 @@ $ touch initrd ; echo initrd | cpio -ov > initrd.img
 
 Create the boot image:
 ```
-$ echo "console=tty0 console=ttyAMA0,115200n8 root=/dev/disk/by-partlabel/system rootwait rw" > cmdline
-$ mkdir boot-fat
-$ dd if=/dev/zero of=boot-fat.emmc.img bs=512 count=131072
-$ sudo mkfs.fat -n "BOOT IMG" boot-fat.emmc.img
-$ sudo mount -o loop,rw,sync boot-fat.emmc.img boot-fat
-$ sudo cp -a arch/arm64/boot/Image boot-fat/Image
-$ sudo cp arch/arm64/boot/dts/hi6220-hikey.dtb boot-fat/lcb.dtb
-$ sudo cp initrd.img boot-fat/ramdisk.img
-$ sudo cp cmdline boot-fat/cmdline
-$ sudo umount boot-fat
-$ rm -rf boot-fat
+$  mkdir boot-fat
+$  dd if=/dev/zero of=boot-fat.uefi.img bs=512 count=131072
+$  sudo mkfs.fat -n "BOOT IMG" boot-fat.uefi.img
+$  sudo mount -o loop,rw,sync boot-fat.uefi.img boot-fat
+$  sudo cp -f $KERN $DTB boot-fat/ || true
+$  sudo cp -f ./initrd.img boot-fat/initrd.img || true
+$  sudo cp -f AndroidFastbootApp.efi boot-fat/fastboot.efi || true
+$  sudo cp -f grubaa64.efi boot-fat/ || true
+$  sudo mkdir boot-fat/grub
+$  sudo cp -f grub.cfg boot-fat/grub/ || true
+$  sync
+$  sudo umount boot-fat
+$  sudo rm -rf boot-fat
 ```
 
 After the above, you can flash the boot-fat.emmc.img to eMMC with the command:
