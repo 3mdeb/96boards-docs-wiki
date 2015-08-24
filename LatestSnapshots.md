@@ -790,25 +790,25 @@ $  sudo umount boot-fat
 $  sudo rm -rf boot-fat
 ```
 
-After the above, you can flash the boot-fat.emmc.img to eMMC with the command:
+After the above, you can flash the boot-fat.uefi.img to eMMC with the command:
 ```
-$ sudo fastboot flash boot boot-fat.emmc.img
+$ sudo fastboot flash boot boot-fat.uefi.img
 $ sudo fastboot reboot
 ```
 
-**Method 2 - Use an existing boot-fat.emmc.img**
+**Method 2 - Use an existing boot-fat.uefi.img**
 ```
 $ mkdir tmp
-$ sudo mount boot-fat.emmc.img tmp
+$ sudo mount boot-fat.uefi.img tmp
 $ sudo cp YOUR-KERNEL-BUILD/arch/arm64/boot/Image tmp/Image
-$ sudo cp YOUR-KERNEL-BUILD/arch/arm64/boot/dts/hi6220-hikey.dtb tmp/lcb.dtb
+$ sudo cp YOUR-KERNEL-BUILD/arch/arm64/boot/dts/hi6220-hikey.dtb tmp/
 $ sudo umount tmp
 $ rm -rf tmp
 ```
 
-After the above, you can flash the boot-fat.emmc.img to eMMC with the command:
+After the above, you can flash the boot-fat.uefi.img to eMMC with the command:
 ```
-$ sudo fastboot flash boot boot-fat.emmc.img
+$ sudo fastboot flash boot boot-fat.uefi.img
 $ sudo fastboot reboot
 ```
 
