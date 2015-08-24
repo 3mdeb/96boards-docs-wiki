@@ -773,7 +773,7 @@ Create a dummy ramdisk for the ramdisk image:
 $ touch initrd ; echo initrd | cpio -ov > initrd.img
 ```
 
-Create the boot image:
+Create the boot image (KERN=Image, DTB=hi6220-hikey.dtb)
 ```
 $  mkdir boot-fat
 $  dd if=/dev/zero of=boot-fat.uefi.img bs=512 count=131072
