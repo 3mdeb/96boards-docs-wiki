@@ -12,8 +12,12 @@ a) They MUST be updated together. No backward compatibilities! <br/>
 b) new features in: <br/>
 new mcufirmware and PSCI features: cpuidle, cpufreq, cpu hotplug and suspend/resume. <br/>
 c) fastboot bootloader is no longer supported. <br/>
-2. Debian #345 has HDMI more modes support, switchable through hotkey 'Alt'+'PrtSc'+'g'
+2. Debian #345 has: <br/>
+a) HDMI more modes support <br/>
+b) switchable through hotkey 'Alt'+'PrtSc'+'g' <br/>
+c) SYSPLL reading from pctrl registers, so is compatible with both 1.2GHz and 1.19GHz UEFI. <br/>
 3. UEFI #64 has 1.19GHz syspll. When working with Debian #345, it's expected to have maximum compatibility on HDMI TVs or monitors. <br/>
+a) UEFI #62 has 1.2GHz syspll. <br/>
 
 THIS IS WORK IN PROGRESS
 
