@@ -19,6 +19,20 @@ c) SYSPLL reading from pctrl registers, so is compatible with both 1.2GHz and 1.
 3. UEFI #64 has 1.19GHz syspll. When working with Debian #345, it's expected to have maximum compatibility on HDMI TVs or monitors. <br/>
 a) UEFI #62 has 1.2GHz syspll. <br/>
 
+
+2. We need to add this new section: HDMI modes selecting.
+   a) With HDMI cable plugged in and boot:
+The code will choose the highest compatible mode it can support to display. Which is usually 1920x1080p for TV, and 1920x1200 for a modern monitor.
+The user can change the setting by pressing hotkey: Alt+PrtScr+g. Upon pressing of this hotkey, the driver will switch among all supported resolutions.
+   b) Without HDMI cable plugged in and boot: If you plug in the HDMI cable after boot, it will choose 1280x720p by default. Pressing hotkey Alt+PrtScr+g, it will switch to another 1280x720p implementation and then to 800x600p.
+
+ Note: 1) hotkey should be pressed on a USB keyboard connected to the USB host port of Hikey, not to the host PC which is connected via hikey's UART shell.
+2) On Android, it is locked to 1280x720p. Don't use hotkey Alt+PrtScr+g on Android.
+
+3. We need to add this new section: how to upgrade from a (obsoleted) fastboot bootloader to a UEFI bootloader.
+This is the same as section: 
+Board Recovery
+Information on board recovery and/or loading bootloader software onto the HiKey board
 THIS IS WORK IN PROGRESS
 
 The current builds this document refers to are:<br/>
