@@ -32,7 +32,9 @@ The user can change the setting by pressing hotkey: Alt+PrtScr+g. Upon pressing 
 3. We need to add this new section: how to upgrade from a (obsoleted) fastboot bootloader to a UEFI bootloader.
 This is the same as section: 
 Board Recovery
-Information on board recovery and/or loading bootloader software onto the HiKey board
+Information on board recovery and/or loading bootloader software onto the HiKey board <br/>
+
+
 THIS IS WORK IN PROGRESS
 
 The current builds this document refers to are:<br/>
