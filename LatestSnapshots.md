@@ -7,17 +7,7 @@
 This document describes how to get started with the HiKey ARMv8 community development boards using latest Snapshot software rather than the release build shipped with the boards. 
 
 ##### Comments: (information useful for future editing) <br/>
-
-1. We need to add this new section: HDMI modes selecting.
-   a) With HDMI cable plugged in and boot:
-The code will choose the highest compatible mode it can support to display. Which is usually 1920x1080p for TV, and 1920x1200 for a modern monitor.
-The user can change the setting by pressing hotkey: Alt+PrtScr+g. Upon pressing of this hotkey, the driver will switch among all supported resolutions.
-   b) Without HDMI cable plugged in and boot: If you plug in the HDMI cable after boot, it will choose 1280x720p by default. Pressing hotkey Alt+PrtScr+g, it will switch to another 1280x720p implementation and then to 800x600p.
-
- Note: 1) hotkey should be pressed on a USB keyboard connected to the USB host port of Hikey, not to the host PC which is connected via hikey's UART shell.
-2) On Android, it is locked to 1280x720p. Don't use hotkey Alt+PrtScr+g on Android.
-
-2. We need to add this new section: how to upgrade from a (obsoleted) fastboot bootloader to a UEFI bootloader.
+. We need to add this new section: how to upgrade from a (obsoleted) fastboot bootloader to a UEFI bootloader.
 This is the same as section: 
 Board Recovery
 Information on board recovery and/or loading bootloader software onto the HiKey board <br/>
