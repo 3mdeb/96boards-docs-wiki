@@ -598,7 +598,7 @@ Higher performance may be obtained by using forced air (fan) cooling on the HiKe
 The HDMI port on HiKey supports TVs and Monitors with an HDMI interface at display resolutions of 1920x1080 pixels down to 640x480 pixels. Note that interlaced display modes are not currently supported. The mobile SoC used on the HiKey board does not have sufficiently flexible clocking arrangements to support all possible HDMI timings specified by monitors. 
 
 **Debian Build**
-The Debian build uses Linux DRM drivers for the graphics system. When first powered up the board will attempt to read the EDID display data from the attached TV/monitor. It will then select the highest resolution format available up to **1920x1080 **pixels. If all is well the selected default will work on your TV/Monitor and no more needs to be done. However, in some cases your monitor may not display correctly on the selected setting because the timing is not exactly correct. In this case we have provided a facility to enable you to cycle through the available EDID modes to find one that works correctly for your TV/Monitor.<br\><br\>
+The Debian build uses Linux DRM drivers for the graphics system. When first powered up the board will attempt to read the EDID display data from the attached TV/monitor. It will then select the highest resolution format available up to 1920x1080 pixels. If all is well the selected default will work on your TV/Monitor and no more needs to be done. However, in some cases your monitor may not display correctly on the selected setting because the timing is not exactly correct. In this case we have provided a facility to enable you to cycle through the available EDID modes to find one that works correctly for your TV/Monitor.<br\><br\>
 After the board has booted the User0 LED should be heartbeating about once per second. Using a connected keyboard cycle through the available EDID modes using the following key sequence:<br\>
 R_Alt PrintScr G<br\><br\>
 Press the right hand Alt Key then the PrintScr key and then the G key so that finally all the keys are pressed. Each time you enter this sequence the HiKey will switch to the next screen mode. When you find one that works well write down the resolution and frequency from the TV display - for example 1280x1024@75Hz.<br\><br\>
@@ -616,7 +616,7 @@ Finally, **if you are still having difficulties you can revert to a built in 720
 
 **Android Build**
 [Information on Android To Be Written]
-At the moment resolution is locked at **1280x720p.**(do not use hotkey Alt+PrtScr+g). 
+At the moment resolution is locked at **1280x720p.**(do not use hotkey Alt+PrtScr+g).<br\>
 Note that the fixed settings may not work on all monitors/TVs but have been demonstrated to work on most. 
 
 ### USB Ports <a name="section-53"></a>
