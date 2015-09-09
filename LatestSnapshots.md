@@ -464,6 +464,8 @@ Now connect the HiKey power supply to the board.
 Wait about 5 seconds and then check that the HiKey board has been recognized by your Linux PC:
 ```
 $ ls /dev/ttyUSB*
+or
+$ dmesg
 ```
 The following instructions assume that `/dev/ttyUSB0` is the tty port for communication with the HiKey board. Adjust the port for your own tty port. 
 
@@ -475,9 +477,9 @@ First, get the Python script that is needed to load the initial boot software on
 ```
 $ wget https://raw.githubusercontent.com/96boards/burn-boot/master/hisi-idt.py
 ```
-Run the script to initially prepare fastboot:
+Run the script to initially prepare fastboot (make sure the modem interface is in the right ttyUSB as previously suggested):
 ```
-$ sudo python hisi-idt.py --img1=l-loader.bin
+$ sudo python hisi-idt.py --img1=l-loader.bin -d /dev/ttyUSB0
 ```
 After the python command has been issued you should see the following output. If you do not then see the "Problems with Python Downloader" section below
 ```
