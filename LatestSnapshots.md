@@ -7,20 +7,8 @@
 This document describes how to get started with the HiKey ARMv8 community development boards using latest Snapshot software rather than the release build shipped with the boards. 
 
 ##### Comments: (information useful for future editing) <br/>
-1. Debian #344 corresponds to UEFI #58. <br/>
-a) They MUST be updated together. No backward compatibilities! <br/>
-b) new features in: <br/>
-new mcufirmware and PSCI features: cpuidle, cpufreq, cpu hotplug and suspend/resume. <br/>
-c) fastboot bootloader is no longer supported. <br/>
-2. Debian #345 has: <br/>
-a) HDMI more modes support <br/>
-b) switchable through hotkey 'Alt'+'PrtSc'+'g' <br/>
-c) SYSPLL reading from pctrl registers, so is compatible with both 1.2GHz and 1.19GHz UEFI. <br/>
-3. UEFI #64 has 1.19GHz syspll. When working with Debian #345, it's expected to have maximum compatibility on HDMI TVs or monitors. <br/>
-a) UEFI #62 has 1.2GHz syspll. <br/>
 
-
-2. We need to add this new section: HDMI modes selecting.
+1. We need to add this new section: HDMI modes selecting.
    a) With HDMI cable plugged in and boot:
 The code will choose the highest compatible mode it can support to display. Which is usually 1920x1080p for TV, and 1920x1200 for a modern monitor.
 The user can change the setting by pressing hotkey: Alt+PrtScr+g. Upon pressing of this hotkey, the driver will switch among all supported resolutions.
@@ -29,7 +17,7 @@ The user can change the setting by pressing hotkey: Alt+PrtScr+g. Upon pressing 
  Note: 1) hotkey should be pressed on a USB keyboard connected to the USB host port of Hikey, not to the host PC which is connected via hikey's UART shell.
 2) On Android, it is locked to 1280x720p. Don't use hotkey Alt+PrtScr+g on Android.
 
-3. We need to add this new section: how to upgrade from a (obsoleted) fastboot bootloader to a UEFI bootloader.
+2. We need to add this new section: how to upgrade from a (obsoleted) fastboot bootloader to a UEFI bootloader.
 This is the same as section: 
 Board Recovery
 Information on board recovery and/or loading bootloader software onto the HiKey board <br/>
@@ -52,20 +40,21 @@ As we transition to UEFI, these set of kernel changes have been merged into the 
 The 
 **The following information is provided in these release notes:**
 
-1. [Pre-Installed Debian Linux](#section-1)<br/>
+1. [Snapshot information](#section-0)<br/>
+2. [Pre-Installed Debian Linux](#section-1)<br/>
 Information on the Debian 8.0 ("jessie") OS installation software
-2. [Installing Android Open Source Project](#section-2)<br/>Information on loading the AOSP version of Android 5.1 as an alternative OS onto the HiKey board
-3. [Updating the OS](#section-3)<br/>
+3. [Installing Android Open Source Project](#section-2)<br/>Information on loading the AOSP version of Android 5.1 as an alternative OS onto the HiKey board
+4. [Updating the OS](#section-3)<br/>
 Information on loading an OS update from 96Boards.org
-4. [Board Recovery](#section-4)<br/>
+5. [Board Recovery](#section-4)<br/>
 Information on board recovery and/or loading bootloader software onto the HiKey board
-5. [Hardware notes](#section-5)
-6. [Known Issues](#section-6)
-7. [Building Software from Source Code](#section-7)<br/>
+6. [Hardware notes](#section-5)
+7. [Known Issues](#section-6)
+8. [Building Software from Source Code](#section-7)<br/>
 Information on building software for the HiKey board from source code
-8. [Appendices](#appendix-1)<br/>
+9. [Appendices](#appendix-1)<br/>
 Information on the partition table used on HiKey and the contents of the boot partition.
-9. [New Features](#appendix-2)<br/>
+10. [New Features](#appendix-2)<br/>
 Information on key new features introduced in this release. 
 
 ### Updating to the new Release
@@ -73,7 +62,21 @@ If you already have a HiKey board you will need to do the following:
 - First, follow the instructions in [Section 4. Board Recovery - Installing a Bootloader](#section-41), to update the bootloader software on your board
 - Then follow the instructions in [Section 3. Updating the OS](#section-3), to install either the Debian or the Android Open Source Project (AOSP) build
 
-## 1. Pre-Installed Debian Linux <a name="section-1"></a>
+## 1. Snapshot release information <a name="section-0"></a>
+
+1. Debian [#344](https://builds.96boards.org/snapshots/hikey/linaro/debian/344/) requires UEFI [#58](https://builds.96boards.org/snapshots/hikey/linaro/uefi/58/). <br/>
+a) No backwards compatibility <br/>
+b) The OS and bootloader MUST be updated together <br/>
+c) MCU firmware updated <br\>
+d) PSCI features supported: cpuidle, cpufreq, cpu hotplug and suspend/resume <br/>
+e) fastboot bootloader officially deprecated (device tree requires PSCI). <br/>
+
+2. Debian [#345](https://builds.96boards.org/snapshots/hikey/linaro/debian/345/): <br/>
+a) extended support for more HDMI modes <br/>
+b) switchable through hotkey 'Alt'+'PrtSc'+'g' <br/>
+c) SYSPLL reads from pctrl registers (therefore compatible with both 1.2GHz and 1.19GHz UEFI) <br/>
+
+## 2. Pre-Installed Debian Linux <a name="section-1"></a>
 The HiKey board is ready to use “out of the box” with a preinstalled version of the Debian Linux distribution.
 
 To get started you will need a power supply, an HDMI monitor and a USB keyboard and mouse. 
@@ -206,7 +209,7 @@ $ su bash
 $
 ```
 
-## 2. Installing Android Open Source Project <a name="section-2"></a>
+## 3. Installing Android Open Source Project <a name="section-2"></a>
 
 Users may install a version of the Android Open Source Project (AOSP) onto the HiKey board. This will remove the factory installed Debian Linux OS. This section provides instructions on installing the AOSP build which consists of:
 - Derived from Linux 3.18 kernel
@@ -255,7 +258,7 @@ When flashing is completed power down the HiKey, remove Link 5-6 and power up th
 
 Please read the Hardware notes and the Known Issues later in this document before using the OS.
 
-## 3. Updating the OS <a name="section-3"></a>
+## 4. Updating the OS <a name="section-3"></a>
 
 Updates to 96Boards supported operating systems will be made available from time to time at: 
 [http://builds.96boards.org/releases/hikey](http://builds.96boards.org/releases/hikey)
@@ -389,7 +392,7 @@ You may now use the updated OS.
 
 Please read the Hardware notes and the Known Issues later in this document before using the OS. 
 
-## 4. Board Recovery <a name="section-4"></a>
+## 5. Board Recovery <a name="section-4"></a>
 
 ### Installing a Bootloader <a name="section-41"></a>
 
@@ -578,7 +581,7 @@ If you have Python 3 installed, make sure to install with the right version, for
 $ sudo pip2.7 install pyserial
 ```
 
-## 5. Hardware Notes <a name="section-5"></a>
+## 6. Hardware Notes <a name="section-5"></a>
 
 ### Schematics and HiKey Board Hardware User Guide
 - [Schematics](https://www.96boards.org/hikey-schematics)
@@ -653,7 +656,7 @@ ttyAMA3::respawn:/sbin/getty -L  ttyAMA3 115200 vt100 # GENERIC_SERIAL
 
 Note that the LS expansion port I/O pins on the 96Boards 2mm header, including the UART signals, are at 1.8V levels. 
 
-## 6. Known Issues <a name="section-6"></a>
+## 7. Known Issues <a name="section-6"></a>
 
 The following are known software issues on the current release.
 
@@ -677,7 +680,7 @@ To view the open bugs, click [here](https://bugs.96boards.org/buglist.cgi?bug_st
 
 To add a new bug, click [here](https://bugs.96boards.org/enter_bug.cgi?product=HiKey) and fill in the form.  Alternatively go to the [site](https://bugs.96boards.org/), click on the New menu item, then click on Consumer Edition Boards, then click on HiKey, and finally fill in the form.
 
-## 7. Building Software from Source Code <a name="section-7"></a>
+## 8. Building Software from Source Code <a name="section-7"></a>
 
 THIS SECTION NEEDS REVIEW AND UPDATE FOR NEW RELEASE
 DO NOT USE THESE INSTRUCTIONS 
