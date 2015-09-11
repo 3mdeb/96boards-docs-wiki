@@ -130,20 +130,16 @@ $ sudo fastboot flash ptable ptable-linux.img
 $ sudo fastboot flash fastboot fip.bin
 $ sudo fastboot flash nvme nvme.img
 $ sudo fastboot flash boot boot-fat.uefi.img
-```
-* turn off HiKey board
-* remove the jumper of pin3-pin4 on J15
-* make sure that jumper of pin5-pin6 on J15 are connected
-* turn on HiKey board to enter fastboot mode in UEFI
-```shell
 $ sudo fastboot flash system hikey-jessie_alip_2015MMDD-nnn.emmc.img
 ```
 * turn off HiKey board
+* remove the jumper of pin3-pin4 on J15
 * turn on HiKey board
 
 ## Run Fastboot from UEFI
+* make sure that jumper of pin5-pin6 on J15 are connected
 
-* Interrupt the boot by pressing any select
+* Or Interrupt the boot by pressing any select
 ```shell
 [2] Shell
 ```
