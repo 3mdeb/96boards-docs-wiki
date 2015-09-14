@@ -634,7 +634,7 @@ In Debian the `usb_speed utility` (use `-h` option for help) is provided in `/ho
 In the AOSP build a small application is provided (usb-speed-switch) to change between High Speed and Full Speed operation.
 
 ### UART Ports <a name="section-54"></a>
-In Debian the two 96Boards expansion IO UART serial ports will appear as `/dev/ttyAMA2` and `/dev/ttyAMA3` and are configured at 9600 baud by default. Note that /dev/ttyAMA3 requires an updated build from the daily snapshots. 
+In Debian the two 96Boards expansion IO UART serial ports will appear as `/dev/ttyAMA2` and `/dev/ttyAMA3` and are configured at 115200 baud by default. Note that /dev/ttyAMA3 requires an updated build from the daily snapshots. 
 
 Alternatively, you can modify the grub.cfg and the inittab file in the system image.
 
