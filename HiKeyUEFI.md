@@ -238,13 +238,13 @@ Android Fastboot mode - version 0.4. Press any key to quit.
 Note: fastboot.efi is renamed from $BUILD/linaro-edk2/Build/HiKey/RELEASE_GCC48/AARCH64/EmbeddedPkg/Application/AndroidFastboot/AndroidFastbootApp/OUTPUT/AndroidFastbootApp.efi
 ```
 
-## Program Serial Number used in Fastboot protocol
+## Generate Random Serial Number in recovery mode
 
-* Program new serial number
+* Generate new serial number
 ```shell
-$sudo fastboot oem serialno [hex string as serial number]
+$sudo fastboot oem serialno
 ```
-By default, the serial number is '0123456789abcdef'.
+By default, random serial number is generated in recovery mode. If user wants to generate new serial number, run the above command when hikey is in recovery mode. Then power off. In the next time, fastboot will use the new generated serial number for transmission.
 
 
 ## Known Issues
