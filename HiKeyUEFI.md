@@ -75,7 +75,7 @@ export UEFI_TOOLS_DIR=${PWD}/uefi-tools
 cd ${EDK2_DIR}
 ${UEFI_TOOLS_DIR}/uefi-build.sh -b RELEASE -a ../arm-trusted-firmware hikey
 
-# NOTE: If also building optional OP-TEE, uncomment and run below command instead of the one above
+# NOTE: If also building optional OP-TEE, run below command instead of the one above
 #${UEFI_TOOLS_DIR}/uefi-build.sh -b RELEASE -a ../arm-trusted-firmware -s ../optee_os hikey
 
 cd ../l-loader
