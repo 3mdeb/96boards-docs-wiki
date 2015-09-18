@@ -76,7 +76,7 @@ cd ${EDK2_DIR}
 ${UEFI_TOOLS_DIR}/uefi-build.sh -b RELEASE -a ../arm-trusted-firmware hikey
 
 # NOTE: If also building optional OP-TEE, run below command instead of the one above
-#${UEFI_TOOLS_DIR}/uefi-build.sh -b RELEASE -a ../arm-trusted-firmware -s ../optee_os hikey
+# ${UEFI_TOOLS_DIR}/uefi-build.sh -b RELEASE -a ../arm-trusted-firmware -s ../optee_os hikey
 
 cd ../l-loader
 ln -s ${EDK2_DIR}/Build/HiKey/RELEASE_GCC49/FV/bl1.bin
