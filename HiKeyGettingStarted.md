@@ -296,8 +296,7 @@ Then the following command will make the file system take up all the space left 
 $ sudo umount /dev/sdb2
 $ sudo e2fsck -f /dev/sdb2
 $ sudo resize2fs /dev/sdb2
-$ sudo fdisk -l
-
+$ sudo fdisk -l 
 ```
 If you power up and boot the HiKey board with the SD card the kernel and software on the SD card will be used and not the eMMC. Your user files will also be created on the SD card. You may still access the eMMC files as follows:
 ```
