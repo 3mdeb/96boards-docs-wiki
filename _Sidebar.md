@@ -1,4 +1,5 @@
 - [HiKey](https://github.com/96boards/documentation/wiki/HiKey)
+  - [Hardware Manuel](https://github.com/96boards/documentation/blob/master/hikey/HiKey_User_Guide_Rev0.2.pdf)
   - [Getting Started](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted)
   - [UEFI](https://github.com/96boards/documentation/wiki/HiKeyUEFI)
   - [LAVA](https://github.com/96boards/documentation/wiki/HiKeyLAVA)
