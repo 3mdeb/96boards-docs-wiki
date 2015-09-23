@@ -4,6 +4,7 @@
   - [LAVA](https://github.com/96boards/documentation/wiki/HiKeyLAVA)
   - [JTAG](https://github.com/96boards/documentation/wiki/JTAG-on-HiKey)
   - [Snapshots](https://github.com/96boards/documentation/wiki/LatestSnapshots)
+  - [Hi6220 SoC Spec](https://github.com/96boards/documentation/blob/master/hikey/Hi6220V100_Multi-Mode_Application_Processor_Function_Description.pdf)
 - [Dragonboard 410c](https://github.com/96boards/documentation/wiki/Dragonboard-410c)
   - [Installation Guide for Linux and Android](https://github.com/96boards/documentation/wiki/Dragonboard-410c-Installation-Guide-for-Linux-and-Android)
   - [Creation of Kernel Boot Image](https://github.com/96boards/documentation/wiki/Dragonboard-410c-Boot-Image)
