@@ -116,13 +116,15 @@ The flashing process requires to be in **recovery mode** if user wants to update
 * turn off HiKey board
 * connect debug UART on HiKey to PC (used to monitor debug status)
 * make sure pin1-pin2 and pin3-pin4 on J15 are linked (recovery mode)
-* connect USB cable to PC
+* connect HiKey Micro-USB to PC with USB cable
 * turn on HiKey board
 * on serial console, you should see some debug message (NULL packet)
 * run [HiKey recovery tool](https://raw.githubusercontent.com/96boards/burn-boot/master/hisi-idt.py) to flash l-loader.bin (Note: if the serial port recorded in hisi-idt.py isn't available, adjust the command line below by manually setting the serial port with "-d /dev/ttyUSBx" where x is usually the last serial port reported by "dmesg" command)
 ```shell
 $ sudo python hisi-idt.py --img1=l-loader.bin
 ```
+
+**do not reboot yet**
 * run fastboot commands to flash the images (**order must be respected**)
 ```shell
 $ wget https://builds.96boards.org/releases/hikey/linaro/binaries/latest/nvme.img
