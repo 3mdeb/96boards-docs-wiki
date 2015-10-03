@@ -103,6 +103,12 @@ $ sudo nmcli dev wifi con "SSID" password "your-WPA-password" name "your-network
 ```
 Insert your the SSID, password and a name to refer to the network by into the line above.
 
+You can check network status by issuing this command.
+```
+$ sudo nmcli dev status
+$ sudo nmcli dev wifi
+```
+
 ### Wired Network
 You can connect to a wired network by using a USB Ethernet adapter. Supported adapters should automatically work when the adapter is installed. Please read the information below on USB port speeds on the HiKey hardware. 
 
