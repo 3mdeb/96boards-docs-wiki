@@ -410,7 +410,7 @@ Download the following files onto a Linux PC:
 
 You will also need the boot partition for the OS Image you want to run
 * [boot-fat.uefi.img for Debian] (https://builds.96boards.org/snapshots/hikey/linaro/debian/latest/boot-fat.uefi.img.gz)
-* [boot-fat.uefi.img for AOSP](https://builds.96boards.org/snapshots/hikey/linaro/aosp/latest/boot-fat.uefi.img.tar.xz)
+* [boot_fat.uefi.img for AOSP](https://builds.96boards.org/snapshots/hikey/linaro/aosp/latest/boot_fat.uefi.img.tar.xz)
 
 You can do this from your browser or from the command prompt:
 For example, to download the latest UEFI build for Debian do:
