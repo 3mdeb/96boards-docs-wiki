@@ -379,6 +379,12 @@ SUBSYSTEM=="usb", ATTR{idVendor}=="12d1", ATTR{idProduct}=="1057", MODE="0660", 
 # rndis for HiKey
 SUBSYSTEM=="usb", ATTR{idVendor}=="12d1", ATTR{idProduct}=="1050", MODE="0660", GROUP="dialout" 
 ```
+
+Load the new udev rule with the following command
+```
+$ sudo udevadm control -R
+```
+
 You will also need a standard microUSB cable connected between the HiKey microUSB and your Linux PC. Do not power up the HiKey board yet.
 
 **Set Board Link options**
