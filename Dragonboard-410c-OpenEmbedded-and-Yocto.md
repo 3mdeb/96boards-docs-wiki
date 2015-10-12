@@ -40,6 +40,14 @@ To initialize your build environment, you need to run:
 
 The script `setup-environment` will create sane default configuration files in <build folder>/conf, you can inspect them and modify them if needed.
 
+# Bootloaders and eMMC partitions
+
+The BSP layer assumes that the Linux Bootloaders and eMMC partition layout are used on the DragonBoard 410c (not the Android ones). You can download the latest Linux bootloader package from [here](http://builds.96boards.org/releases/dragonboard410c/linaro/rescue/latest/). If you use this partition layout, the eMMC has the following partition:
+
+* `/dev/mmcblk0p7` , aka `aboot` is used for the bootloader (LK/fastboot)
+* `/dev/mmcblk0p8` , aka `boot` is used for the boot image (kernel, device tree, initrd)
+* `/dev/mmcblk0p10` , aka `rootfs` is used for the root file system
+ 
 # Build a minimal, console only image
 
 To build a console image, you can run:
