@@ -28,6 +28,7 @@ The Qualcomm BSP layer can be used with any OE based distribution, such as Poky.
 To manage the various git trees and the OpenEmbedded environment, a repo manifest is provided. 
 
 To initialize your build environment, you need to run:
+
     mkdir oe-qcom && cd oe-qcom
     repo init -u https://github.com/ndechesne/qcom-oe-manifest.git -b jethro
     repo sync
