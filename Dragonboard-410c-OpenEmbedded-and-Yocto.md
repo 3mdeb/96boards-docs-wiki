@@ -58,9 +58,13 @@ At the end of the build, the root file system image will be available as `tmp-eg
 
 Similarly, the boot image will be available at `tmp-eglibc/deploy/images/dragonboard-410c/boot-dragonboard-410c.img`, and it can be booted (or flashed) with fastboot.
 
-# Firmware
+# Proprietary firmware blob
 
-By default, the required firmware are not installed in the image. The firmware need to be separately downloaded from [Qualcomm Developer Network](https://developer.qualcomm.com/download/linux-ubuntu-board-support-package-v1.1.zip). The firmware files need to be extracted in the root FS, in `/lib/firmware`.
+When running the `setup-environment` script, you were asked to read/accept the Qualcomm EULA. The EULA is required to access the proprietary firmware, such as the GPU firmware , WLAN, ... 
+
+If you accepted the EULA, when building an image for DragonBoard 410c all proprietary firmware are installed automatically in `/lib/firmware`, and a copy of the EULA is added as '/etc/license.txt`. 
+
+If you did not accept the EULA, the firmware are not downloaded, and not installed into the image. You can manually manage the firmware and download them separately from [Qualcomm Developer Network](https://developer.qualcomm.com/download/linux-ubuntu-board-support-package-v1.1.zip). 
 
 # Build a sample Wayland/Weston image
 
