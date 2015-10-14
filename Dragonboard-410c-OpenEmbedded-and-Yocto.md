@@ -9,11 +9,11 @@ This wiki is not an introduction on OpenEmbedded or Yocto Project. If you are no
 
 In this wiki, we assume that the reader is familiar with basic concepts of OpenEmbedded.
 
-The initial support for DragonBoard 410c has been committed in the [meta-qualcomm BSP layer](https://github.com/ndechesne/meta-qualcomm).
+The support for DragonBoard 410c is available in the [meta-qcom BSP layer](https://github.com/ndechesne/meta-qcom).
 
 This layer has been tested with OpenEmbedded Core layer, and is expected to work with any other standard layers and of course any OpenEmbedded based distributions.
 
-The Linux kernel used for the DragonBoard 410c is the Linaro Landing team kernel, e.g. the same kernel used for the Linaro Linux builds. The graphic stack is based on mesa, using the freedreno driver.
+The Linux kernel used for the DragonBoard 410c is the Linaro Landing team kernel, e.g. the same kernel used for the Linaro Linux release builds. The graphic stack is based on mesa, using the freedreno driver.
 
 # Status of DragonBoard 410c in the meta-qualcomm layer
 
