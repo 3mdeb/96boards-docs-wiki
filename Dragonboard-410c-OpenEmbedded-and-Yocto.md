@@ -25,7 +25,12 @@ The Linux kernel used for the DragonBoard 410c is the Linaro Landing team kernel
 
 The Qualcomm BSP layer can be used with any OE based distribution, such as Poky. However for simplicity the following instructions do not use any distribution, and instead use the 'distro-less' OE Core. As such, the Qualcomm layer only depends on OE core (and of course bitbake). 
 
-To manage the various git trees and the OpenEmbedded environment, a repo manifest is provided. 
+To manage the various git trees and the OpenEmbedded environment, a repo manifest is provided. If you do not have `repo` installed on your host machine, you first need to install it, using the following instructions (or similar):
+
+    mkdir -p ${HOME}/bin
+    curl https://storage.googleapis.com/git-repo-downloads/repo > ${HOME}/bin/repo
+    chmod a+x ${HOME}/bin/repo
+    export PATH=${HOME}/bin:${PATH}
 
 To initialize your build environment, you need to run:
 
