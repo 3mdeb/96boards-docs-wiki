@@ -7,8 +7,9 @@ NOTE: This section is for Ubuntu only! Android uses a different tree.
 
 ## Building the kernel
 
-    git clone https://git.linaro.org/landing-teams/working/qualcomm/kernel.git -b integration-linux-qcomlt
+    git clone https://git.linaro.org/landing-teams/working/qualcomm/kernel.git
     cd kernel
+    git checkout integration-linux-qcomlt
     export CROSS_COMPILE=aarch64-linux-gnu-
     export ARCH=arm64
     export PATH=<path to your ARM64 cross compiler>:$PATH
