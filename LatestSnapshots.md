@@ -213,7 +213,7 @@ Users may install a version of the Android Open Source Project (AOSP) onto the H
 
 Download the following files from:
 [http://builds.96boards.org/releases/hikey/linaro/aosp/latest](http://builds.96boards.org/releases/hikey/linaro/aosp/latest)
-- boot-fat.uefi.img.tar.xz
+- boot_fat.uefi.img.tar.xz
 - cache.img.tar.xz
 - system.img.tar.xz
 - userdata.img.tar.xz
@@ -244,7 +244,7 @@ Note also that the larger system file will take a few minutes due to its size.
 ```
 $ sudo fastboot flash ptable ptable-aosp.img
 $ sudo fastboot reboot
-$ sudo fastboot flash boot boot-fat.uefi.img
+$ sudo fastboot flash boot boot_fat.uefi.img
 $ sudo fastboot flash cache cache.img
 $ sudo fastboot flash system system.img
 $ sudo fastboot flash userdata userdata.img
