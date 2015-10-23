@@ -219,8 +219,8 @@ Download the following files from:
 - userdata.img.tar.xz
 
 Download the following file from:
-[http://builds.96boards.org/releases/hikey/linaro/uefi/latest](http://builds.96boards.org/releases/hikey/linaro/uefi/latest)
-- ptable-aosp.img
+[http://builds.96boards.org/releases/hikey/linaro/binaries/latest](http://builds.96boards.org/releases/hikey/linaro/binaries/latest)
+- [ptable-aosp.img](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-aosp.img)
 
 Uncompress the .tar.xz files using your operating system file manager, or with the following command for each file:
 ```
