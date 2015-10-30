@@ -1,0 +1,5 @@
+h2. Reference Platform Build - 15.10 Alpha Release - QA Report
+
+h4. CE AOSP RPB (HiKey)
+
+h4. CE Debian RPB (HiKey)
