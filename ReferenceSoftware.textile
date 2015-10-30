@@ -6,4 +6,5 @@ Hikey:
 * "Reference Bootloader":https://github.com/96boards/documentation/wiki/Reference-Bootloader-Hikey
 
 Reference Platform Builds - 15.10 Alpha Release
-* "Known Issues":https://github.com/96boards/documentation/wiki/Reference-Platform-Build---15.10-Alpha-Release---Known-Issues
+* "QA Report":https://github.com/96boards/documentation/wiki/RPB-15.10-QA-Report
+* "Known Issues":https://github.com/96boards/documentation/wiki/RPB-15.10-Known-Issues
