@@ -1,0 +1,6 @@
+h2. Reference Software Platform
+
+h4. Resources:
+
+Hikey:
+* "Reference Bootloader":https://github.com/96boards/documentation/wiki/Reference-Bootloader-Hikey
