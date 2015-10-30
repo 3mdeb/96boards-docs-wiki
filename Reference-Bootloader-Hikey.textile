@@ -1,4 +1,4 @@
-h1. 96Boards - Reference Software - Bootloader - HiKey
+h1. Reference Software - Bootloader - HiKey
 
 h2. Boot components for HiKey:
 
