@@ -51,9 +51,7 @@ In order to flash from scratch (recovery mode), download the following files:
 * "ptable-aosp.img":http://builds.96boards.org/snapshots/reference-platform/uefi/latest/release/hikey/ptable-aosp.img for Android AOSP
 * "hisi-idt.py":https://raw.githubusercontent.com/96boards/burn-boot/master/hisi-idt.py for the HiKey recovery tool
 
-Since the UEFI applications are flashed as part of the boot partition, you need to flash the right boot image, depending on your target (e.g. Debian or AOSP).
-
-The main different between Debian and AOSP is the partition table that gets used, which is why you also need to pick the right one depending on what image you want to flash.
+The main difference between Debian and AOSP is the partition table that gets used, so you need to pick the right partition table (ptable*.img) and the right boot image for the distribution you want to use.
 
 For the boot files (from the reference builds):
 * "boot-fat.uefi.img.gz":http://builds.96boards.org/snapshots/reference-platform/debian/latest/hikey/boot-fat.uefi.img.gz for Debian
