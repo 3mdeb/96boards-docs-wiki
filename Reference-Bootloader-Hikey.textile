@@ -70,13 +70,13 @@ h4. Enabling recovery mode
 
 In order to be able to flash all the files listed above, it's required to boot HiKey in a special mode, called **recovery mode**.
 
-Booting into recovery mode:
-* Turn off HiKey board
+Steps to booting into recovery mode:
+* Turn off the HiKey board
 * Make sure pin1-pin2 and pin3-pin4 on J15 are linked (recovery mode)
-* Connect HiKey Micro-USB to PC with USB cable
+* Connect HiKey micro-USB to PC with USB cable
 * Power the HiKey board
 
-Once powered in recovery mode, a new USB serial interface should show up at your host machine. If you are running Linux as your host, you should see the following at your kernel log:
+Once powered on in recovery mode, for 90 seconds, a new USB serial interface should show up at your host machine. If you are running Linux as your host, you should see the following at your kernel log:
 
 bc. usb 1-2.1: new full-speed USB device number 46 using xhci_hcd
 usb 1-2.1: New USB device found, idVendor=12d1, idProduct=3609
@@ -86,7 +86,7 @@ usb 1-2.1: Manufacturer: 䕇䕎䥎
 option 1-2.1:1.0: GSM modem (1-port) converter detected
 usb 1-2.1: GSM modem (1-port) converter now attached to ttyUSB0
 
-Now the board is ready to be flashed with the HiKey recovery tool (hisi-idt.py).
+Now the board is ready to be flashed with the HiKey recovery tool (hisi-idt.py). You have 90 seconds to flash l-loader in the next step.
 
 h4. Flashing l-loader
 
