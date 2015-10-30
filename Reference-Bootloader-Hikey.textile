@@ -76,7 +76,7 @@ Steps to booting into recovery mode:
 * Connect HiKey micro-USB to PC with USB cable
 * Power the HiKey board
 
-Once powered on in recovery mode, for 90 seconds, a new USB serial interface should show up at your host machine. If you are running Linux as your host, you should see the following at your kernel log:
+Once powered on in recovery mode, for 90 seconds, a new USB serial interface should show up at your host machine. If you are running Linux as your host, you should see the following at your kernel log (dmesg):
 
 bc. usb 1-2.1: new full-speed USB device number 46 using xhci_hcd
 usb 1-2.1: New USB device found, idVendor=12d1, idProduct=3609
@@ -92,9 +92,9 @@ h4. Flashing l-loader
 
 The only binary that is required to be flashed with the HiKey recovery tool is @l-loader.bin@. Since @l-loader.bin@ also implements the fastboot protocol, the remaining components can be easily flashed with @fastboot@ instead.
 
-In order to flash l-loader, run the following:
+In order to flash l-loader, run the following (replace ttyUSB0 with the correct device name showing in the kernel log above):
 
-bc. sudo python hisi-idt.py --img1=l-loader.bin -d /dev/ttyUSB1
+bc. sudo python hisi-idt.py --img1=l-loader.bin -d /dev/ttyUSB0
 
 You should get the following output:
 
