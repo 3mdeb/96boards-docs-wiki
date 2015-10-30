@@ -4,3 +4,6 @@ h4. Resources:
 
 Hikey:
 * "Reference Bootloader":https://github.com/96boards/documentation/wiki/Reference-Bootloader-Hikey
+
+Reference Platform Builds - 15.10 Alpha Release
+* "Known Issues":https://github.com/96boards/documentation/wiki/Reference-Platform-Build---15.10-Alpha-Release---Known-Issues
