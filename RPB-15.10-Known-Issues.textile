@@ -20,6 +20,7 @@ h4. DragonBoard 410c - Image 26
 
 * "Bug 43":https://bugs.96boards.org/show_bug.cgi?id=43 - Iceweasel browser exits after file download complete
 * Freedreno graphics driver not yet available by default
+* USB-Host ignoring the usb-switch by default. For usb-host to work, plug/unplug the otg cable.
 
 h3. AOSP
 
