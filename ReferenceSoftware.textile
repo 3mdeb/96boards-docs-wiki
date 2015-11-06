@@ -9,6 +9,15 @@ h4. General:
 h4. Hikey:
 
 * "Reference Bootloader":https://github.com/96boards/documentation/wiki/Reference-Bootloader-Hikey
+* CE Debian RPB - Hikey:
+** "Install instructions":https://github.com/96boards/documentation/wiki/CE-Debian-RPB-HiKey
+* CE AOSP RPB - Hikey:
+** "Install instructions":https://github.com/96boards/documentation/wiki/CE-Debian-RPB-HiKey
+
+h4. Dragonboard 410c:
+
+* CE Debian RPB - Hikey:
+** "Install instructions":https://github.com/96boards/documentation/wiki/CE-Debian-RPB-Dragonboard410c
 
 h4. Reference Platform Builds - 15.10 Alpha Release
 
