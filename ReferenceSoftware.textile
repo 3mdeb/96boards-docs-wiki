@@ -2,6 +2,10 @@ h2. Reference Software Platform
 
 h3. Resources:
 
+* "Reference Software Platorm - CI Jobs and Builds":https://github.com/96boards/documentation/wiki/Reference-Software-CI
+
+h4. General:
+
 h4. Hikey:
 
 * "Reference Bootloader":https://github.com/96boards/documentation/wiki/Reference-Bootloader-Hikey
