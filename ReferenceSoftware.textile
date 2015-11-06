@@ -12,7 +12,7 @@ h4. Hikey:
 * CE Debian RPB - Hikey:
 ** "Install instructions":https://github.com/96boards/documentation/wiki/CE-Debian-RPB-HiKey
 * CE AOSP RPB - Hikey:
-** "Install instructions":https://github.com/96boards/documentation/wiki/CE-Debian-RPB-HiKey
+** "Install instructions":https://github.com/96boards/documentation/wiki/CE-AOSP-RPB-HiKey
 
 h4. Dragonboard 410c:
 
