@@ -21,6 +21,18 @@ h4. Dragonboard 410c:
 
 h4. Reference Platform Builds - 15.10 Alpha Release
 
+* Release Candidates:
+** "CE AOSP RPB - HiKey - Image 21":https://builds.96boards.org/snapshots/reference-platform/aosp/hikey/21
+*** Android M
+*** Kernel 3.18
+** "CE Debian RPB - HiKey - Image 30":https://builds.96boards.org/snapshots/reference-platform/debian/30/hikey/
+*** Kernel 4.3+
+*** Debian Jessie
+*** Not yet providing GLES support
+** "CE Debian RPB - Dragonboard 410c - Image 30":https://builds.96boards.org/snapshots/reference-platform/debian/30/dragonboard410c/
+*** Kernel 4.3+
+*** Debian Jessie
+*** Not yet providing GL/GLES support
 * QA Report:
 ** "CE Debian RPB - Hikey":https://docs.google.com/document/d/14F9ck5vFaIjqYG9b9yuyrNTYjhg4TjlDdvuTMiDvOg0
 ** "CE Debian RPB - Dragonboard 410c":https://docs.google.com/document/d/1ZFbsFTtYvs5bAvbVbG6d4oQFvsrTzRntBNB-PXqegbY
