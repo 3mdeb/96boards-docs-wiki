@@ -32,4 +32,4 @@ List of current CI jobs ("ci.linaro.org":https://ci.linaro.org/) which are maint
 
 h3. Snapshots
 
-Every artifact produced by the builds described in this page can be found at https://builds.96boards.org/snapshots/reference-platform/.
+Every artifact produced by the builds described in this page can be found at "https://builds.96boards.org/snapshots/reference-platform/":https://builds.96boards.org/snapshots/reference-platform/.
