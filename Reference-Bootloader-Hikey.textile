@@ -239,7 +239,7 @@ ln -s ${EDK2_DIR}/Build/HiKey/RELEASE_GCC49/FV/bl1.bin
 ln -s ${EDK2_DIR}/Build/HiKey/RELEASE_GCC49/FV/fip.bin
 make # requires sudo for creating the partition tables
 
-The files fip.bin, l-loader.bin and ptable-linux.img are now built. All the image files are in $BUILD/l-loader directory. The Fastboot App is at edk2/Build/HiKey/RELEASE_GCC49/AARCH64/AndroidFastbootApp.efi.
+The files @fip.bin@, @l-loader.bin@ and @ptable-linux.img@ are now built. All the image files are in _$BUILD/l-loader_ directory. The Fastboot App is at _edk2/Build/HiKey/RELEASE_GCC49/AARCH64/AndroidFastbootApp.efi_.
 
 h4. EFI boot partition
 
@@ -257,4 +257,4 @@ sudo umount boot-fat
 sudo mv boot-fat.uefi.img hikey-boot-linux-VERSION.uefi.img
 rm -rf boot-fat
 
-Now just flash the recently created hikey-boot-linux-VERSION.uefi.img with the same instructions as used with the pre-built binaries.
+Now just flash the recently created @hikey-boot-linux-VERSION.uefi.img@ with the same instructions as used with the pre-built binaries.
