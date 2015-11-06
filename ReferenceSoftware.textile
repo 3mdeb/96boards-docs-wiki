@@ -6,5 +6,7 @@ Hikey:
 * "Reference Bootloader":https://github.com/96boards/documentation/wiki/Reference-Bootloader-Hikey
 
 Reference Platform Builds - 15.10 Alpha Release
-* "QA Report":https://github.com/96boards/documentation/wiki/RPB-15.10-QA-Report
+* QA Report:
+** "CE Debian RPB - Hikey":https://docs.google.com/document/d/14F9ck5vFaIjqYG9b9yuyrNTYjhg4TjlDdvuTMiDvOg0
+** "CE Debian RPB - Dragonboard 410c":https://docs.google.com/document/d/1ZFbsFTtYvs5bAvbVbG6d4oQFvsrTzRntBNB-PXqegbY
 * "Known Issues":https://github.com/96boards/documentation/wiki/RPB-15.10-Known-Issues
