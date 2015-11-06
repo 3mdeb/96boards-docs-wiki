@@ -27,10 +27,11 @@ h4. DragonBoard 410c - Image 26
 
 * Freedreno graphics driver not yet available by default (packages not yet included in linaro-overlay)
 * "Bug 43":https://bugs.96boards.org/show_bug.cgi?id=43 - Iceweasel browser exits after file download complete
-* "Bug 157":https://bugs.96boards.org/show_bug.cgi?id=157 - HDMI Audio not working
-* "Bug 156":https://bugs.96boards.org/show_bug.cgi?id=156 - HDMI resolution change not working
 * "Bug 121":https://bugs.96boards.org/show_bug.cgi?id=121 - Cannot soft power off or shutdown db410c
-* "Bug 154":https://bugs.96boards.org/show_bug.cgi?id=154 - glxgears and tuxracer benchmarks failed to run
+* "Bug 154":https://bugs.96boards.org/show_bug.cgi?id=154 - glxgears and tuxracer benchmarks failed to 
+* "Bug 156":https://bugs.96boards.org/show_bug.cgi?id=156 - HDMI resolution change not working
+* "Bug 157":https://bugs.96boards.org/show_bug.cgi?id=157 - HDMI Audio not working
+run
 
 h3. AOSP
 
