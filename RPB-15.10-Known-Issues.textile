@@ -31,7 +31,6 @@ h4. DragonBoard 410c - Image 26
 * "Bug 154":https://bugs.96boards.org/show_bug.cgi?id=154 - glxgears and tuxracer benchmarks failed to 
 * "Bug 156":https://bugs.96boards.org/show_bug.cgi?id=156 - HDMI resolution change not working
 * "Bug 157":https://bugs.96boards.org/show_bug.cgi?id=157 - HDMI Audio not working
-run
 
 h3. AOSP
 
