@@ -18,6 +18,7 @@ h4. HiKey - Image 26
 * "Bug 151":https://bugs.96boards.org/show_bug.cgi?id=151 - glxgears: couldn't get an RGB, Double-buffered visual
 * "Bug 152":https://bugs.96boards.org/show_bug.cgi?id=152 - SD-Card doesn't work
 * "Bug 159":https://bugs.96boards.org/show_bug.cgi?id=159 - No sound cards found
+* "Bug 160":https://bugs.96boards.org/show_bug.cgi?id=160 - Behaviors of power on button no following hardware user guide
 
 h4. DragonBoard 410c - Image 26
 
