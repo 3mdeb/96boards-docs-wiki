@@ -187,3 +187,74 @@ h2. TODO
 
 * Explaining how to manually create the boot partition, and showing that the device tree file is critical for the boot process
 * Describing how to build everything from sources
+
+h2. Building from source
+
+The source code is available from:
+* *l-loader*: "https://github.com/96boards/l-loader":https://github.com/96boards/l-loader
+* *ARM Trusted Firmware*: "https://github.com/96boards/arm-trusted-firmware":https://github.com/96boards/arm-trusted-firmware
+* *Tianocore EDK2 – UEFI*: "https://github.com/96boards/edk2":https://github.com/96boards/edk2
+
+Since GRUB2 is currently consumed directly from the Debian package, debian package rebuild instructions applies.
+
+h3. Build instructions
+
+Prerequisites:
+* GCC 4.9 cross-toolchain for Aarch64 available in your PATH
+** You can download and use the Linaro GCC binary (Linaro GCC 4.9-2015.02), available at "http://releases.linaro.org/15.02/components/toolchain/binaries/aarch64-linux-gnu/gcc-linaro-4.9-2015.02-3-x86_64_aarch64-linux-gnu.tar.xz":http://releases.linaro.org/15.02/components/toolchain/binaries/aarch64-linux-gnu/gcc-linaro-4.9-2015.02-3-x86_64_aarch64-linux-gnu.tar.xz
+* GCC 4.9 cross-toolchain for gnueabihf available in your PATH
+** You can download and use the Linaro GCC binary (Linaro GCC 4.9-2015.02), available at "http://releases.linaro.org/15.02/components/toolchain/binaries/arm-linux-gnueabihf/gcc-linaro-4.9-2015.02-3-x86_64_arm-linux-gnueabihf.tar.xz":http://releases.linaro.org/15.02/components/toolchain/binaries/arm-linux-gnueabihf/gcc-linaro-4.9-2015.02-3-x86_64_arm-linux-gnueabihf.tar.xz
+* GPT fdisk (gdisk package from your favorite distribution).
+
+h4. Installing pre-built toolchain(s)
+
+bc. mkdir arm-tc arm64-tc
+tar --strip-components=1 -C ${PWD}/arm-tc -xf gcc-linaro-arm-linux-gnueabihf-4.9-*_linux.tar.xz
+tar --strip-components=1 -C ${PWD}/arm64-tc -xf gcc-linaro-aarch64-linux-gnu-4.9-*_linux.tar.xz
+export PATH="${PWD}/arm-tc/bin:${PWD}/arm64-tc/bin:$PATH"
+
+h4. Getting the source code
+
+bc. git clone -b reference --depth 1 https://github.com/96boards/edk2.git linaro-edk2
+git clone -b reference --depth 1 https://github.com/96boards/arm-trusted-firmware.git
+git clone --depth 1 https://github.com/96boards/l-loader.git
+git clone git://git.linaro.org/uefi/uefi-tools.git
+
+h4. Building EDK2/UEFI for HiKey
+
+Building EDK2/UEFI is simple if built with the _uefi-tools.sh_ script, since it already incorporates the platform specific configs and binaries.
+
+To build EDK2/UEFI:
+
+bc. export AARCH64_TOOLCHAIN=GCC49
+export EDK2_DIR=${PWD}/linaro-edk2
+export UEFI_TOOLS_DIR=${PWD}/uefi-tools
+cd ${EDK2_DIR}
+${UEFI_TOOLS_DIR}/uefi-build.sh -b RELEASE -a ../arm-trusted-firmware hikey
+
+And bl1.bin with l-loader (ptable files are also created as part of the l-loader Makefile):
+
+bc. cd ../l-loader
+ln -s ${EDK2_DIR}/Build/HiKey/RELEASE_GCC49/FV/bl1.bin
+ln -s ${EDK2_DIR}/Build/HiKey/RELEASE_GCC49/FV/fip.bin
+make # requires sudo for creating the partition tables
+
+The files fip.bin, l-loader.bin and ptable-linux.img are now built. All the image files are in $BUILD/l-loader directory. The Fastboot App is at edk2/Build/HiKey/RELEASE_GCC49/AARCH64/AndroidFastbootApp.efi.
+
+h4. EFI boot partition
+
+The boot partition is a 64MB FAT partition only contains fastboot.efi, GRUB2 and the dtb file used (same one provided by the kernel).
+
+bc. wget https://builds.96boards.org/snapshots/reference-platform/components/grub/latest/grubaa64.efi -O grubaa64.efi
+mkdir boot-fat
+dd if=/dev/zero of=boot-fat.uefi.img bs=512 count=131072
+sudo mkfs.fat -n "BOOT IMG" boot-fat.uefi.img
+sudo mount -o loop,rw,sync boot-fat.uefi.img boot-fat
+sudo cp hi6220-hikey.dtb boot-fat/hi6220-hikey.dtb
+sudo cp AndroidFastbootApp.efi boot-fat/fastboot.efi
+sudo cp grubaa64.efi boot-fat/grubaa64.efi
+sudo umount boot-fat
+sudo mv boot-fat.uefi.img hikey-boot-linux-VERSION.uefi.img
+rm -rf boot-fat
+
+Now just flash the recently created hikey-boot-linux-VERSION.uefi.img with the same instructions as used with the pre-built binaries.
