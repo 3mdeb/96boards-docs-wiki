@@ -6,7 +6,7 @@ h3. UEFI - HiKey
 
 h3. Debian
 
-h4. HiKey - Image 26
+h4. HiKey - Image 30
 
 * Mali not supported, missing kernel and userspace support
 * "Bug 20":https://bugs.96boards.org/show_bug.cgi?id=20 - USB kernel trace errors -22
@@ -23,7 +23,7 @@ h4. HiKey - Image 26
 * "Bug 159":https://bugs.96boards.org/show_bug.cgi?id=159 - No sound cards found
 * "Bug 160":https://bugs.96boards.org/show_bug.cgi?id=160 - Behaviors of power on button no following hardware user guide
 
-h4. DragonBoard 410c - Image 26
+h4. DragonBoard 410c - Image 30
 
 * Freedreno graphics driver not yet available by default (packages not yet included in linaro-overlay)
 * "Bug 43":https://bugs.96boards.org/show_bug.cgi?id=43 - Iceweasel browser exits after file download complete
