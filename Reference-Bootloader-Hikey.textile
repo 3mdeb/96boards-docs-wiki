@@ -42,29 +42,29 @@ Binary file @AndroidFastbootApp.efi@.
 
 h2. Installing from the pre-built binaries:
 
-Latest UEFI snapshot build is published at "http://builds.96boards.org/snapshots/reference-platform/uefi/latest/release/hikey/":http://builds.96boards.org/snapshots/reference-platform/uefi/latest/release/hikey/
+Latest UEFI snapshot build is published at "http://builds.96boards.org/snapshots/reference-platform/components/uefi/latest/release/hikey/":http://builds.96boards.org/snapshots/reference-platform/components/uefi/latest/release/hikey/
 
 In order to flash from scratch (recovery mode), download the following files:
-* "l-loader.bin":http://builds.96boards.org/snapshots/reference-platform/uefi/latest/release/hikey/l-loader.bin
-* "fip.bin":http://builds.96boards.org/snapshots/reference-platform/uefi/latest/release/hikey/fip.bin
-* "ptable-linux.img":http://builds.96boards.org/snapshots/reference-platform/uefi/latest/release/hikey/ptable-linux.img for Debian/CentOS/Fedora
-* "ptable-aosp.img":http://builds.96boards.org/snapshots/reference-platform/uefi/latest/release/hikey/ptable-aosp.img for Android AOSP
+* "l-loader.bin":http://builds.96boards.org/snapshots/reference-platform/components/uefi/latest/release/hikey/l-loader.bin
+* "fip.bin":http://builds.96boards.org/snapshots/reference-platform/components/uefi/latest/release/hikey/fip.bin
+* "ptable-linux.img":http://builds.96boards.org/snapshots/reference-platform/components/uefi/latest/release/hikey/ptable-linux.img for Debian/CentOS/Fedora
+* "ptable-aosp.img":http://builds.96boards.org/snapshots/reference-platform/components/uefi/latest/release/hikey/ptable-aosp.img for Android AOSP
 * "hisi-idt.py":https://raw.githubusercontent.com/96boards/burn-boot/master/hisi-idt.py for the HiKey recovery tool
 
 The main difference between Debian and AOSP is the partition table that gets used, so you need to pick the right partition table (ptable*.img) and the right boot image for the distribution you want to use.
 
 For the boot files (from the reference builds):
-* "boot-fat.uefi.img.gz":http://builds.96boards.org/snapshots/reference-platform/debian/latest/hikey/boot-fat.uefi.img.gz for Debian
+* "hikey-boot-linux-VERSION.uefi.img.gz":http://builds.96boards.org/snapshots/reference-platform/debian/latest/hikey/hikey-boot-linux-*.uefi.img.gz for Debian
 * "boot_fat.uefi.img.tar.xz":http://builds.96boards.org/snapshots/reference-platform/aosp/hikey/latest/boot_fat.uefi.img.tar.xz for AOSP
 
 For example, to download the latest UEFI build and Debian boot file:
 
-bc. wget http://builds.96boards.org/snapshots/reference-platform/uefi/latest/release/hikey/l-loader.bin
-wget http://builds.96boards.org/snapshots/reference-platform/uefi/latest/release/hikey/fip.bin
-wget http://builds.96boards.org/snapshots/reference-platform/uefi/latest/release/hikey/ptable-linux.img
+bc. wget http://builds.96boards.org/snapshots/reference-platform/components/uefi/latest/release/hikey/l-loader.bin
+wget http://builds.96boards.org/snapshots/reference-platform/components/uefi/latest/release/hikey/fip.bin
+wget http://builds.96boards.org/snapshots/reference-platform/components/uefi/latest/release/hikey/ptable-linux.img
 wget https://raw.githubusercontent.com/96boards/burn-boot/master/hisi-idt.py
-wget http://builds.96boards.org/snapshots/reference-platform/debian/latest/hikey/boot-fat.uefi.img.gz
-gunzip boot-fat.uefi.img.gz
+wget http://builds.96boards.org/snapshots/reference-platform/debian/latest/hikey/hikey-boot-linux-*.uefi.img.gz
+gunzip hikey-boot-linux-*.uefi.img.gz
 
 h4. Enabling recovery mode
 
@@ -121,9 +121,9 @@ Since fastboot is supported by l-loader, to flash the remaining files just use f
 
 bc. sudo fastboot flash ptable ptable-linux.img
 sudo fastboot flash fastboot fip.bin
-sudo fastboot flash boot boot-fat.uefi.img
+sudo fastboot flash boot hikey-boot-linux-*.uefi.img
 
-Remember to always flash the partition first, unless you already know the partition table that was flashed last.
+Remember to always flash ptable first, unless you already know the partition table that was flashed last.
 
 h4. Rebooting into UEFI
 
