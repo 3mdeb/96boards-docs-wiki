@@ -12,7 +12,7 @@ h4. HiKey - Image 26
 * "Bug 20":https://bugs.96boards.org/show_bug.cgi?id=20 - USB kernel trace errors -22
 * "Bug 43":https://bugs.96boards.org/show_bug.cgi?id=43 - Iceweasel browser exits after file download complete
 * "Bug 86":https://bugs.96boards.org/show_bug.cgi?id=86 - Debian ALIP: resize UI screen when underlying DRM resolution changed.
-* "Bug 143":https://bugs.96boards.org/show_bug.cgi?id=143 - Mouse cursor is invisible
+* "Bug 143":https://bugs.96boards.org/show_bug.cgi?id=143 - Mouse cursor invisible after boot (until you open an application)
 * "Bug 144":https://bugs.96boards.org/show_bug.cgi?id=144 - Shutdown is not clean
 * "Bug 145":https://bugs.96boards.org/show_bug.cgi?id=145 - Thermal sensor is not readable
 * "Bug 147":https://bugs.96boards.org/show_bug.cgi?id=147 - Highest resolution of 1080p monitor cannot be detected
