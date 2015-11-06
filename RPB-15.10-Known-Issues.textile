@@ -9,17 +9,15 @@ h3. Debian
 h4. HiKey - Image 26
 
 * Mali not supported, missing kernel and userspace support
+* "Bug 20":https://bugs.96boards.org/show_bug.cgi?id=20 - USB kernel trace errors -22
 * "Bug 43":https://bugs.96boards.org/show_bug.cgi?id=43 - Iceweasel browser exits after file download complete
 * "Bug 86":https://bugs.96boards.org/show_bug.cgi?id=86 - Debian ALIP: resize UI screen when underlying DRM resolution changed.
-* "Bug 151":https://bugs.96boards.org/show_bug.cgi?id=151 - glxgears: couldn't get an RGB, Double-buffered visual
-
 * "Bug 144":https://bugs.96boards.org/show_bug.cgi?id=144 - Shutdown is not clean
 * "Bug 147":https://bugs.96boards.org/show_bug.cgi?id=147 - Highest resolution of 1080p monitor cannot be detected
 * "Bug 148":https://bugs.96boards.org/show_bug.cgi?id=148 - Bluetooth doesn't work
+* "Bug 151":https://bugs.96boards.org/show_bug.cgi?id=151 - glxgears: couldn't get an RGB, Double-buffered visual
 * "Bug 152":https://bugs.96boards.org/show_bug.cgi?id=152 - SD-Card doesn't work
-* "Bug 20":https://bugs.96boards.org/show_bug.cgi?id=20 - USB kernel trace errors -22
-
-* 
+* "Bug 159":https://bugs.96boards.org/show_bug.cgi?id=159 - No sound cards found
 
 h4. DragonBoard 410c - Image 26
 
