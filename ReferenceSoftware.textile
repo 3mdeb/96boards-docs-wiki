@@ -61,7 +61,7 @@ h5. Dragonboard 410c
 
 h5. Feedback and Support
 
-For general questions or support requests, please go to the "96boards.org Community forum":https://www.96boards.org/forums/.
+For general questions or support requests, please go to the "96boards.org Community forum":https://www.96boards.org/forums/. For development questions and topics, please use the "96Boards.org development mailing-list":https://lists.96boards.org/mailman/listinfo/dev (dev@lists.96boards.org).
 
 For any bug related to this release, please submit issues to the "96Boards.org Bug tracking system":https://bugs.96boards.org/. To submit a bug, follow "this link":https://bugs.96boards.org/enter_bug.cgi?classification=__all
 
