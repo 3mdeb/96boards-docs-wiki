@@ -44,7 +44,7 @@ bc. wget http://builds.96boards.org/releases/reference-platform/aosp/hikey/15.10
 wget http://builds.96boards.org/releases/reference-platform/aosp/hikey/15.10/cache.img.tar.xz
 wget http://builds.96boards.org/releases/reference-platform/aosp/hikey/15.10/userdata.img.tar.xz
 
-Since @system.img@ requires the user to accepted an End User License Agreement covering the rights to download and use the proprietary Mali userspace driver, it needs to be manually downloaded via browser. Please go to "http://builds.96boards.org/releases/reference-platform/aosp/hikey/15.10/system.img.tar.xz":http://builds.96boards.org/releases/reference-platform/aosp/hikey/15.10/system.img.tar.xz and follow the instructions.
+Since @system.img@ requires the user to accept an End User License Agreement covering the rights to download and use the proprietary Mali userspace driver, it needs to be manually downloaded via browser. Please go to "http://builds.96boards.org/releases/reference-platform/aosp/hikey/15.10/system.img.tar.xz":http://builds.96boards.org/releases/reference-platform/aosp/hikey/15.10/system.img.tar.xz and follow the instructions to download the file.
 
 Uncompress the .tar.xz files using your operating system file manager, or with the following command, for each file:
 
