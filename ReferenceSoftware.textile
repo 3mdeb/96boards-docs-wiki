@@ -16,7 +16,7 @@ h4. Hikey:
 
 h4. Dragonboard 410c:
 
-* Recovery Image
+* "Rescue Image Guide":https://github.com/96boards/documentation/wiki/Dragonboard-410c-Installation-Guide-for-Linux-and-Android#create--install-a-rescue-image
 
 h4. Reference Platform Builds - 15.10 Alpha Release
 
