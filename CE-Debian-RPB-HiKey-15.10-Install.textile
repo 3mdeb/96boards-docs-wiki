@@ -21,6 +21,7 @@ The CE Debian RPB 15.10 - HiKey build is composed of the following artifacts:
 ** ALIP (LXDE based)
 ** Custom 96Boards artworks and default settings
 ** Additional packages provided by "linaro-overlay":http://repo.linaro.org/ubuntu/linaro-overlay
+** Kernel and initrd loaded from the rootfs (under /boot)
 
 h4. Closed source binaries
 
@@ -65,13 +66,13 @@ sudo fastboot flash fastboot fip.bin
 
 Change @ttyUSB0@ to the right interface name that gets exported to your host system.
 
-Make sure to reboot the board after updating the partition table (ptable-linux.img), otherwise flashing the rootfs might fail.
+Make sure to reboot the board after updating the partition table (@ptable-linux.img@), otherwise flashing the rootfs might fail.
 
 h4. Boot and Rootfs
 
 Fastboot is required to flash both the boot and rootfs images.
 
-Due bug "117 (UEFI fastboot uploads hangs for large images)":https://bugs.96boards.org/show_bug.cgi?id=117, it's recommended to flash both the boot and rootfs images via recovery mode.
+Due bug "117 (UEFI fastboot uploads hangs for large images)":https://bugs.96boards.org/show_bug.cgi?id=117, it's recommended to flash both the boot and rootfs images via recovery mode (after running @hisi-idt.py@).
 
 *Flashing boot and rootfs:*
 
