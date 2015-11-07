@@ -14,7 +14,6 @@ The CE Debian RPB 15.10 - HiKey build is composed of the following artifacts:
 ** Pre-built files: "http://builds.96boards.org/releases/reference-platform/debian/hikey/15.10/bootloader":http://builds.96boards.org/releases/reference-platform/debian/hikey/15.10/bootloader
 * Linux Kernel:
 ** Upstream plus extra changes for a better hardware support
-** Goal is to only include changes with enough quality for upstream submission
 ** Git: "https://github.com/rsalveti/linux.git":https://github.com/rsalveti/linux.git
 ** Branch: *reference-hikey-rebase*
 * Debian "Jessie"
@@ -79,7 +78,7 @@ Due bug "117 (UEFI fastboot uploads hangs for large images)":https://bugs.96boar
 bc. sudo fastboot flash boot hikey-boot-linux-20151106-31.uefi.img
 sudo fastboot flash system hikey-rootfs-debian-jessie-alip-20151106-31.emmc.img
 
-Once flashed, make sure recovery mode is not enabled (pin3-pin4 on J15), and reboot the board.
+Once flashed, make sure recovery mode is not enabled (pin3-pin4 on J15), then just reboot the board and enjoy :-)
 
 h3. Additional resources
 
