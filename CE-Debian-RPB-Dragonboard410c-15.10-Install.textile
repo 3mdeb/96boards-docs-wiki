@@ -6,7 +6,7 @@ For more information about the Dragonboard410c development board, please check "
 
 h3. Image Components
 
-The CE Debian RPB 15.10 - HiKey build is composed of the following artifacts:
+The CE Debian RPB 15.10 - Dragonboard410c build is composed of the following artifacts:
 
 * Bootloader:
 ** "Qualcomm proprietary first stage bootloader":https://developer.qualcomm.com/download/linux-ubuntu-board-support-package-v1.zip
