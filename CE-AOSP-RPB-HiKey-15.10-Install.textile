@@ -23,7 +23,8 @@ h4. Closed source binaries
 The following components requires a closed source binary for better hardware support:
 
 * TI wlan firmware (@wl18xx@)
-** Git: git://git.ti.com/wilink8-wlan/wl18xx_fw.git
+** Git: "http://git.ti.com/wilink8-wlan/wl18xx_fw":http://git.ti.com/wilink8-wlan/wl18xx_fw
+** Branch: *R8.5*
 * Extra firmware files available from firmware-linux
 * Mali (requires EULA)
 
