@@ -98,3 +98,7 @@ Then you can rebuild the package locally with:
 
 bc. cd <pkg-version>
 dpkg-buildpackage -b -us -uc
+
+h4. TODO
+
+* Explain how to build the rootfs from source
