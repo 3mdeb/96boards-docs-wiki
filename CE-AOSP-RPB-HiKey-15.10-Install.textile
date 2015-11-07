@@ -75,7 +75,7 @@ Due bug "117 (UEFI fastboot uploads hangs for large images)":https://bugs.96boar
 
 *Flashing boot, cache, system and userdata:*
 
-bc. sudo fastboot flash boot boot_fat.uefi.img.tar.xz
+bc. sudo fastboot flash boot boot_fat.uefi.img.tar
 sudo fastboot flash cache cache.img
 sudo fastboot flash system system.img
 sudo fastboot flash userdata userdata.img
