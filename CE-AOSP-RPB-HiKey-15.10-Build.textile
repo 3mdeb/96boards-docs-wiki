@@ -1,5 +1,7 @@
 h4. Building AOSP from source
 
+*NOTE*: This build instructions are not yet reflecting the 15.10 image
+
 AOSP sources are hosted in these repositories:
 * https://github.com/96boards/android_hardware_ti_wpan
 * https://github.com/96boards/android_external_wpa_supplicant_8
