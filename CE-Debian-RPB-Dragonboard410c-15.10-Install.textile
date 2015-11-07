@@ -48,7 +48,7 @@ Flash the eMMC with the bootloader:
 
 * Unzip the bootloader that was downloaded in the previous step. Note the directory that is it located in.
 * Assure that a micro USB cable is connected from the micro-USB port on the DB410c to the host PC
-assure micro SD Card slot is empty on the DB410c
+* Assure micro SD Card slot is empty on the DB410c
 * Set the S6 switch on the DB410c to: 0-0-0-0 {SD Boot set to off}
 * Power on the DB410c into fastboot mode
 ** Press and hold the Vol (-) button on the DB410c (S4)
@@ -77,3 +77,5 @@ Once flashed just reboot the board and enjoy :-)
 h3. Additional resources
 
 For known issues and more information about this release, please check "https://github.com/96boards/documentation/wiki/ReferenceSoftware":https://github.com/96boards/documentation/wiki/ReferenceSoftware
+
+In the case that the board experiences an irrecoverable error and no longer function, please check the "rescue image guide":https://github.com/96boards/documentation/wiki/Dragonboard-410c-Installation-Guide-for-Linux-and-Android#create--install-a-rescue-image
