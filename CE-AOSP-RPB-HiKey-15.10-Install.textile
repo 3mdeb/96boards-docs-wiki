@@ -55,7 +55,7 @@ h3. Flashing
 
 h4. Bootloader
 
-To flash the bootloader the recovery mode is required. For more information about the recovery mode, how to enable and use, please got  "https://github.com/96boards/documentation/wiki/Reference-Bootloader-Hikey#enabling-recovery-mode":https://github.com/96boards/documentation/wiki/Reference-Bootloader-Hikey#enabling-recovery-mode
+To flash the bootloader the recovery mode is required. For more information about the recovery mode, how to enable and use, please go to "https://github.com/96boards/documentation/wiki/Reference-Bootloader-Hikey#enabling-recovery-mode":https://github.com/96boards/documentation/wiki/Reference-Bootloader-Hikey#enabling-recovery-mode
 
 On recovery mode, flash the bootloader with the following command:
 
