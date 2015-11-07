@@ -58,3 +58,13 @@ h5. Dragonboard 410c
 ** "Build from source":https://github.com/96boards/documentation/wiki/CE-Debian-RPB-Dragonboard410c-15.10-Build
 ** "Known issues":https://github.com/96boards/documentation/wiki/RPB-15.10-Known-Issues#debian
 ** "Test Report":https://builds.96boards.org/releases/reference-platform/debian/dragonboard410c/15.10/CE-Debian-RPB-15.10-Dragonboard410c-TestReport.pdf
+
+h5. Feedback and Support
+
+For general questions or support requests, please go to the "96boards.org Community forum":https://www.96boards.org/forums/.
+
+For any bug related to this release, please submit issues to the "96Boards.org Bug tracking system":https://bugs.96boards.org/. To submit a bug, follow "this link":https://bugs.96boards.org/enter_bug.cgi?classification=__all
+
+Bugs will be reviewed and prioritized by the 96Boards team. For any bug report it is recommended to provide as much information as possible, and at the very list please include the name of the release you are using, the output of @uname -a@ the output of @dpkg -l@ to list all packages installed, as well, as the boot log (output of @dmesg@).
+
+For IRC support, please go to the @#96boards@ channel at FreeNode.
