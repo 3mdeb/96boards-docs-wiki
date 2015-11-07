@@ -7,7 +7,7 @@ h3. UEFI - HiKey
 
 h3. Debian
 
-h4. HiKey - Image 31
+h4. HiKey
 
 * Mali not supported, missing kernel and userspace support
 * "Bug 20":https://bugs.96boards.org/show_bug.cgi?id=20 - USB kernel trace errors -22
@@ -24,7 +24,7 @@ h4. HiKey - Image 31
 * "Bug 159":https://bugs.96boards.org/show_bug.cgi?id=159 - No sound cards found
 * "Bug 160":https://bugs.96boards.org/show_bug.cgi?id=160 - Behaviors of power on button not following hardware user guide
 
-h4. DragonBoard 410c - Image 31
+h4. DragonBoard 410c
 
 * Freedreno graphics driver not provided by the image
 ** Newer mesa, libdrm and freedreno xorg driver is needed (to be available as part of the next release)
@@ -39,7 +39,7 @@ h4. DragonBoard 410c - Image 31
 
 h3. AOSP
 
-h4. HiKey - Image 21
+h4. HiKey
 
 * "Bug 136":https://bugs.96boards.org/show_bug.cgi?id=136 - HDMI goes off while running CTS
 * "Bug 161":https://bugs.96boards.org/show_bug.cgi?id=161 - Fails to enter sleep mode
