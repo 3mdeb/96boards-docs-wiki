@@ -22,6 +22,7 @@ h5. HiKey
 
 * "CE Debian RPB - 15.10":https://builds.96boards.org/releases/reference-platform/debian/hikey/15.10/
 ** Debian Jessie 8.2
+** OpenJDK 8
 ** Linux Kernel 4.3 (plus additional patches)
 ** "Install instructions":https://github.com/96boards/documentation/wiki/CE-Debian-RPB-HiKey-15.10-Install
 ** "Build from source":https://github.com/96boards/documentation/wiki/CE-Debian-RPB-HiKey-15.10-Build
@@ -40,6 +41,7 @@ h5. Dragonboard 410c
 
 * "CE Debian RPB - 15.10":https://builds.96boards.org/releases/reference-platform/debian/dragonboard410c/15.10/
 ** Debian Jessie 8.2
+** OpenJDK 8
 ** Linux Kernel 4.3 (plus additional patches)
 ** "Install instructions":https://github.com/96boards/documentation/wiki/CE-Debian-RPB-Dragonboard410c-15.10-Install
 ** "Build from source":https://github.com/96boards/documentation/wiki/CE-Debian-RPB-Dragonboard410c-15.10-Build
