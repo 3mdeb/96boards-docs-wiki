@@ -20,28 +20,28 @@ h4. Reference Platform Builds - 15.10 Alpha Release
 
 h5. HiKey
 
-* "CE Debian RPB - 15.10":https://builds.96boards.org/snapshots/reference-platform/debian/31/hikey/
+* "CE Debian RPB - 15.10":https://builds.96boards.org/releases/reference-platform/debian/hikey/15.10/
 ** Debian Jessie 8.2
 ** Linux Kernel 4.3 (plus additional patches)
 ** "Install instructions":https://github.com/96boards/documentation/wiki/CE-Debian-RPB-HiKey-15.10-Install
 ** "Build from source":https://github.com/96boards/documentation/wiki/CE-Debian-RPB-HiKey-15.10-Build
 ** "Known issues":https://github.com/96boards/documentation/wiki/RPB-15.10-Known-Issues#debian
-** "Test Report":https://github.com/96boards/documentation/wiki
+** "Test Report":https://builds.96boards.org/releases/reference-platform/debian/hikey/15.10/CE-Debian-RPB-15.10-HiKey-TestReport.pdf
 
-* "CE AOSP RPB - 15.10":https://builds.96boards.org/snapshots/reference-platform/aosp/hikey/23
+* "CE AOSP RPB - 15.10":https://builds.96boards.org/releases/reference-platform/aosp/hikey/15.10/
 ** Android M
 ** Kernel 3.18 (plus additional patches)
 ** "Install instructions":https://github.com/96boards/documentation/wiki/CE-AOSP-RPB-HiKey-15.10-Install
 ** "Build from source":https://github.com/96boards/documentation/wiki/CE-AOSP-RPB-HiKey-15.10-Build
 ** "Known issues":https://github.com/96boards/documentation/wiki/RPB-15.10-Known-Issues#aosp
-** "Test Report":https://github.com/96boards/documentation/wiki
+** "Test Report":https://builds.96boards.org/releases/reference-platform/aosp/hikey/15.10/CE-AOSP-RPB-15.10-HiKey-TestReport.pdf
 
 h5. Dragonboard 410c
 
-* "CE Debian RPB - 15.10":https://builds.96boards.org/snapshots/reference-platform/debian/31/dragonboard410c/
+* "CE Debian RPB - 15.10":https://builds.96boards.org/releases/reference-platform/debian/dragonboard410c/15.10/
 ** Debian Jessie 8.2
 ** Linux Kernel 4.3 (plus additional patches)
 ** "Install instructions":https://github.com/96boards/documentation/wiki/CE-Debian-RPB-Dragonboard410c-15.10-Install
 ** "Build from source":https://github.com/96boards/documentation/wiki/CE-Debian-RPB-Dragonboard410c-15.10-Build
 ** "Known issues":https://github.com/96boards/documentation/wiki/RPB-15.10-Known-Issues#debian
-** "Test Report":https://github.com/96boards/documentation/wiki
+** "Test Report":https://builds.96boards.org/releases/reference-platform/debian/dragonboard410c/15.10/CE-Debian-RPB-15.10-Dragonboard410c-TestReport.pdf
