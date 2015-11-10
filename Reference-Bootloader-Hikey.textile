@@ -161,7 +161,7 @@ bc. sudo fastboot oem bootdevice [emmc|sd]
 
 h4. Control Auto Boot
 
-By default, auto boot feature is enabled.
+By default, auto boot feature is enabled, which means UEFI will automatically search and boot Grub 2. If you want to be able to interrupt UEFI booting (to use the UEFI shell), disable autoboot and it should give 10 seconds before booting.
 
 To disable auto boot:
 
