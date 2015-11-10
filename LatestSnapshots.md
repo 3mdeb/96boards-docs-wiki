@@ -285,6 +285,7 @@ Download the following files onto your Linux PC from:
 - boot-fat.uefi.img.gz
 - hikey-jessie_alip_2015MMDD-nnn.emmc.img.gz
 - ptable-linux.img
+- hikey-jessie_developer_2015MMDD-nnn.img.gz
 
 Note that the jessie image is a large file and may take several minutes (or longer on a slow internet connection) to load. You will need to accept the end user license for the Mali GPU software before you are able to download the OS image. 
 
@@ -781,7 +782,7 @@ $ sudo dpkg -i --force-all android-tools-fsutils_*.deb
 b) then do the following 
 
 ```
-$ gzip -d -c hikey_jessie_developer.img.gz > /tmp/jessie.img
+$ gzip -d -c hikey-jessie_developer_2015MMDD-nnn.img.gz > /tmp/jessie.img
 $ simg2img /tmp/jessie.img /tmp/raw.img
 $ mkdir /tmp/mnt
 $ sudo mount /tmp/raw.img /tmp/mnt
