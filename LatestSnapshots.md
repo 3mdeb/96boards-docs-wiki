@@ -670,6 +670,10 @@ The following are known software issues on the current release.
 This is under current investigation.
 3. **Apple Bluetooth Keyboards/Mice/Trackpads do not work**<br/>
 This is under current investigation. 
+4. **Perl warning about locales**<br/?
+Running 'sudo apt-get install dbus-x11' on the HiKey board may give a warning 'Setting locale failed.'. To get rid of the warning, do the following:
+sudo apt-get install locales
+sudo dpkg-reconfigure locales
 
 **Reporting New Issues**
 
