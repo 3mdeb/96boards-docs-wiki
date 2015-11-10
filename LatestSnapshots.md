@@ -736,12 +736,9 @@ $ git clone https://github.com/96boards/linux linux.git
 $ cd linux.git
 $ git clone https://github.com/96boards/wilink8-wlan_build-utilites.git build_utilities.git
 $ git clone -b hikey https://github.com/96boards/wilink8-wlan_wl18xx.git build_utilities.git/src/driver
-$ git clone -b R8.5  https://github.com/96boards/wilink8-wlan_wl18xx_fw.git\
-> build_utilities.git/src/fw_download
-$ git clone -b hikey https://github.com/96boards/wilink8-wlan_backports.git\
-> build_utilities.git/src/backports
-$ patch -p1 < build_utilities.git/patches/hikey_patches/\
-> 0001-defconfig-hikey-discard-CFG80211-and-MAC80211.patch
+$ git clone -b R8.5  https://github.com/96boards/wilink8-wlan_wl18xx_fw.git build_utilities.git/src/fw_download
+$ git clone -b hikey https://github.com/96boards/wilink8-wlan_backports.git build_utilities.git/src/backports
+$ patch -p1 < build_utilities.git/patches/hikey_patches/0001-defconfig-hikey-discard-CFG80211-and-MAC80211.patch
 ```
 
 Then compile the kernel as usual. 
