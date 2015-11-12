@@ -368,7 +368,7 @@ Note that for this release you MUST first update the primary bootloader using th
  
 **Preparation**
 
-**NOTE: Change these URLs to RELEASE URLs for final release notes**
+**TODO: Change these URLs to RELEASE URLs for final release notes**
 
 Download the following files onto a Linux PC:
 * [l-loader.bin](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/l-loader.bin)
