@@ -16,10 +16,10 @@ Information on board recovery and/or loading bootloader software onto the HiKey 
 THIS IS WORK IN PROGRESS
 
 The current builds this document refers to are:<br/>
-UEFI snapshot build #59<br/>
-DEBIAN community snapshot build #4<br/>
+UEFI snapshot build #81<br/>
+DEBIAN community snapshot build #366<br/>
 
-Note that the June 2015 release bootloader based on HiSilicon code is being deprecated and will not be supported in the next release. This Getting Started Guide therefore refers to the open source UEFI bootloader which will become the standard bootloader for the HiKey board.
+Note that the June 2015 released fastboot bootloader based on HiSilicon code is being deprecated and will not be supported in the next release. This Getting Started Guide therefore refers to the open source Arm Trusted Firmware and UEFI bootloader which will become the standard bootloader for the HiKey board.
 
 As we transition to UEFI, these set of kernel changes have been merged into the HiKey kernel.<br/>
 * https://github.com/96boards/linux/pull/108 - hikey <br/>
