@@ -182,8 +182,8 @@ LED | Trigger
 wifi_active | phy0tx (WiFi Tx)
 bt_active | hci0tx (Bluetooth Tx)
 user_led1 | heartbeat
-user_led2 | mmc0 disk access (eMMC)
-user_led3 | mmc1 disk access (microSD card)
+user_led2 | mmc0 (disk access, eMMC)
+user_led3 | mmc1 (disk access, microSD card)
 user_led4 | CPU core 0 active
 
 To change a user LED you can do the following as a root user:
@@ -595,12 +595,14 @@ Higher performance may be obtained by using forced air (fan) cooling on the HiKe
 The HDMI port on HiKey supports TVs and Monitors with an HDMI interface at display resolutions of 1920x1080 (or 1920x1200) pixels down to 640x480 pixels. Note that interlaced display modes are not currently supported. The mobile SoC used on the HiKey board does not have sufficiently flexible clocking arrangements to support all possible HDMI timings specified by monitors. 
 
 Note also that these modes are preferred and will be tried (in this order) first if they exist in EDID:
-* 1920x1200	16:10	Monitor
-* 1920x1080	16:9	TV
-* 1680x1050	16:10	Monitor
-* 1280x1024	5:4	Monitor
-* 1280x720	16:9	TV
-* 800x600		4:3	TV
+Resolution | Ratio | Usually on
+--- | ------- | ----
+1920x1200 | 	16:10 |	Monitor
+1920x1080 | 	16:9 |	TV
+1680x1050 | 	16:10 |	Monitor
+1280x1024 | 	5:4 |	Monitor
+1280x720 | 	16:9 |	TV
+800x600	|	4:3 |	TV
 
 **Debian Build**
 The Debian build uses Linux DRM drivers for the graphics system. When first powered up the board will attempt to read the EDID display data from the attached TV/monitor. It will then select the highest resolution format available up to 1920x1080 pixels. If all is well the selected default will work on your TV/Monitor and no more needs to be done. However, in some cases your monitor may not display correctly on the selected setting because the timing is not exactly correct. In this case we have provided a facility to enable you to cycle through the available EDID modes to find one that works correctly for your TV/Monitor.<br\><br\>
