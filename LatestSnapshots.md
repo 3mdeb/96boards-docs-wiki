@@ -51,7 +51,8 @@ If you already have a HiKey board you will need to do the following:
 - First, follow the instructions in [Board Recovery - Installing a Bootloader](#section-41), to update the bootloader software on your board
 - Then follow the instructions in [Updating the OS](#section-3), to install either the Debian or the Android Open Source Project (AOSP) build
 
-## 1. Snapshot release information <a name="section-0"></a>
+<a name="section-0"></a>
+## 1. Snapshot release information 
 
 1. Debian [#344](https://builds.96boards.org/snapshots/hikey/linaro/debian/344/) requires UEFI [#58](https://builds.96boards.org/snapshots/hikey/linaro/uefi/58/). <br/>
 a) No backwards compatibility <br/>
@@ -65,7 +66,8 @@ a) extended support for more HDMI modes <br/>
 b) switchable through hotkey 'Alt'+'PrtSc'+'g' <br/>
 c) SYSPLL reads from pctrl registers (therefore compatible with both 1.2GHz and 1.19GHz UEFI) <br/>
 
-## 2. Pre-Installed Debian Linux <a name="section-1"></a>
+<a name="section-1"></a>
+## 2. Pre-Installed Debian Linux 
 The HiKey board is ready to use “out of the box” with a preinstalled version of the Debian Linux distribution.
 
 To get started you will need a power supply, an HDMI monitor and a USB keyboard and mouse. 
@@ -169,7 +171,8 @@ The default user name is "linaro" and the default password for user linaro is "l
 
 The HiKey board does not support a battery powered RTC. System time will be obtained from the network if available. If you are not connecting to a network you will need to manually set the date on each power up
 
-**5. USB** <a name="section-15"></a>
+<a name="section-15"></a>
+**5. USB** 
 
 A utility is provided in /home/linaro/bin to change the configuration of the host (Type A and Expansion) and OTG USB ports. By default these ports operate in low/full speed modes (1.5/12 Mbits/s) to support mouse/keyboard devices. Other USB devices such as network or storage dongles/sticks will be limited to full speed mode. Using the usb_speed utility it is possible to support high speed devices (480 Mbits/s) as long as they are not mixed with full/low speed devices.
 
@@ -204,7 +207,8 @@ $ su bash
 $
 ```
 
-## 3. Installing Android Open Source Project <a name="section-2"></a>
+<a name="section-2"></a>
+## 3. Installing Android Open Source Project 
 
 Users may install a version of the Android Open Source Project (AOSP) onto the HiKey board. This will remove the factory installed Debian Linux OS. This section provides instructions on installing the AOSP build which consists of:
 - Derived from Linux 3.18 kernel
@@ -253,7 +257,8 @@ When flashing is completed power down the HiKey, remove Link 5-6 and power up th
 
 Please read the Hardware notes and the Known Issues later in this document before using the OS.
 
-## 4. Updating the OS <a name="section-3"></a>
+<a name="section-3"></a>
+## 4. Updating the OS 
 
 Updates to 96Boards supported operating systems will be made available from time to time at: 
 [http://builds.96boards.org/releases/hikey](http://builds.96boards.org/releases/hikey)
@@ -388,9 +393,11 @@ You may now use the updated OS.
 
 Please read the Hardware notes and the Known Issues later in this document before using the OS. 
 
-## 5. Board Recovery <a name="section-4"></a>
+<a name="section-4"></a>
+## 5. Board Recovery 
 
-### Installing a Bootloader <a name="section-41"></a>
+<a name="section-41"></a>
+### Installing a Bootloader 
 
 For most users a board can be “recovered” from a software failure by reloading the operating system using the instructions provided above. However, if the primary bootloader in the eMMC flash memory has been corrupted then the bootloader will need to be re-installed. This section describes how to reinstall the primary bootloader. 
 
@@ -579,13 +586,15 @@ If you have Python 3 installed, make sure to install with the right version, for
 $ sudo pip2.7 install pyserial
 ```
 
-## 6. Hardware Notes <a name="section-5"></a>
+<a name="section-5"></a>
+## 6. Hardware Notes 
 
 ### Schematics and HiKey Board Hardware User Guide
 - [Schematics](https://www.96boards.org/hikey-schematics)
 - [Hardware User Guide](https://www.96boards.org/hikey-userguide)
 
-### CPU Load <a name="section-51"></a>
+<a name="section-51"></a>
+### CPU Load 
 The supplied Linux 3.18-based kernel supports the thermal protection framework and DVFS. This will cause the HiKey CPU core frequencies to be reduced from the maximum 1.2GHz if the thermal setpoint of the SoC is reached. In an extreme case thermal shutoff will occur if DVFS has not been effective at reducing the SoC temperature to an acceptable level.
 
 Higher performance may be obtained by using forced air (fan) cooling on the HiKey board.
@@ -616,7 +625,8 @@ Finally, **if you are still having difficulties you can revert to a built in 720
 At the moment resolution is locked at **1280x720p.**(do not use hotkey Alt+PrtScr+g).<br\>
 Note that the fixed settings may not work on all monitors/TVs but have been demonstrated to work on most. 
 
-### USB Ports <a name="section-53"></a>
+<a name="section-53"></a>
+### USB Ports 
 There are multiple USB ports on the HiKey board:
 - One microUSB OTG port on the front edge of the board
 - Two Type A USB 2.0 host ports on the front edge of the board
@@ -640,7 +650,8 @@ In Debian the `usb_speed utility` (use `-h` option for help) is provided in `/ho
  
 In the AOSP build a small application is provided (usb-speed-switch) to change between High Speed and Full Speed operation.
 
-### UART Ports <a name="section-54"></a>
+<a name="section-54"></a>
+### UART Ports 
 In Debian the two 96Boards expansion IO UART serial ports will appear as `/dev/ttyAMA2` and `/dev/ttyAMA3` and are configured at 115200 baud by default. Note that /dev/ttyAMA3 requires an updated build from the daily snapshots. 
 
 Alternatively, you can modify the grub.cfg and the inittab file in the system image.
@@ -656,7 +667,8 @@ ttyAMA3::respawn:/sbin/getty -L  ttyAMA3 115200 vt100 # GENERIC_SERIAL
 
 Note that the LS expansion port I/O pins on the 96Boards 2mm header, including the UART signals, are at 1.8V levels. 
 
-## 7. Known Issues <a name="section-6"></a>
+<a name="section-6"></a>
+## 7. Known Issues 
 
 The following are known software issues on the current release.
 
@@ -684,7 +696,8 @@ To view the open bugs, click [here](https://bugs.96boards.org/buglist.cgi?bug_st
 
 To add a new bug, click [here](https://bugs.96boards.org/enter_bug.cgi?product=HiKey) and fill in the form.  Alternatively go to the [site](https://bugs.96boards.org/), click on the New menu item, then click on Consumer Edition Boards, then click on HiKey, and finally fill in the form.
 
-## 8. Building Software from Source Code <a name="section-7"></a>
+<a name="section-7"></a>
+## 8. Building Software from Source Code 
 
 THIS SECTION NEEDS REVIEW AND UPDATE FOR NEW RELEASE
 DO NOT USE THESE INSTRUCTIONS 
@@ -909,7 +922,8 @@ $ cd out/target/product/hikey
 
 Install the built files following the instructions on loading the AOSP build in [Section 2](#section-2) above. 
 
-### Appendix 1: Partition Information <a name="appendix-1"></a>
+<a name="appendix-1"></a>
+### Appendix 1: Partition Information 
 
 Table 1 describes the partition layout on the HiKey eMMC.
 
@@ -946,5 +960,6 @@ Table 2: boot partition files
 Note<sup>1</sup>: Kernel build image: `arch/arm64/boot/image`<br/>
 Note<sup>2</sup>: DTB: `arch/arm64/boot/dts/hi6220-hikey.dtb`
 
-### Appendix 2: New Features <a name="appendix-2"></a>
+<a name="appendix-2"></a>
+### Appendix 2: New Features 
 N/A
