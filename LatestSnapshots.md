@@ -309,7 +309,7 @@ You may now use the updated OS.
 
 **Using an SD Card**
 
-The built-in HiKey eMMC boot software also enables booting a kernel and root file system installed on an SD card. If an SD card is installed at power up the HiKey board will boot the software on the SD Card rather than the software flashed in the eMMC. <TODO: clarify this>
+The built-in HiKey eMMC boot software also enables booting a kernel and root file system installed on an SD card. If an SD card is installed at power up the HiKey board will boot the software on the SD Card rather than the software flashed in the eMMC. **TODO: clarify this**
 
 This section describes how to prepare a bootable SD card.
 
@@ -343,7 +343,7 @@ Then the following command will make the file system take up all the space left 
 ```
 $ sudo resize2fs /dev/sdb2
 ```
-If you power up and boot the HiKey board with the SD card the kernel and software on the SD card will be used and not the eMMC. <TODO: verify this> Your user files will also be created on the SD card. You may still access the eMMC files as follows:
+If you power up and boot the HiKey board with the SD card the kernel and software on the SD card will be used and not the eMMC. **TODO: verify this** Your user files will also be created on the SD card. You may still access the eMMC files as follows:
 ```
 $ sudo mount /dev/mmcblk0p9 /mnt
 ```
