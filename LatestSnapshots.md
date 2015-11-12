@@ -98,7 +98,9 @@ Next we describe how to set up wireless or wired networking and Bluetooth interf
 
 ### Wireless Network
 The HiKey board includes built in 2.4GHz IEEE802.11g/n WiFi networking. The board does not support the 5GHz band. To use the wireless LAN interface for the first time (or to switch wireless networks) you should click on the wireless LAN icon on the bottom right of the desktop display. The yellow LED between the microUSB and the Type A USB on the front board edge indicates wireless network activity.<br\><br\>
-Note that current snapshot builds require you to use an LXTerminal to set the initial network settings (rather than the UI). This will be fixed before the next release.
+
+You can configure the network from UI, or manually from console:
+
 ```
 $ sudo nmcli dev wifi con <SSID> password <your-WPA-password> name <your-network-name>
 ```
