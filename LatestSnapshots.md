@@ -111,7 +111,7 @@ $ sudo nmcli dev wifi
 ```
 
 ### Wired Network
-You can connect to a wired network by using a USB Ethernet adapter. Supported adapters should automatically work when the adapter is installed. Please read the information below on USB port speeds on the HiKey hardware. 
+You can connect to a wired network by using a USB Ethernet adapter. Supported adapters should automatically work when the adapter is installed. Please read the [information below](#section-53) on USB port speeds on the HiKey hardware. 
 
 ### Bluetooth
 The HiKey board includes built-in Bluetooth 4.0 LE support.
