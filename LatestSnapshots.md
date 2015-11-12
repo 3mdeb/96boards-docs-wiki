@@ -487,7 +487,7 @@ Done
 ```
 Note: You may see the word “failed” before Done. This is under investigation but is not fatal. As long as the “Done” is printed at the end you may proceed.
 
-The bootloader has now been installed into RAM. Wait a few seconds for the fast boot application to actually load. The following fastboot commands then load the partition table, the bootloader and other necessary files into the HiKey eMMC flash memory.
+The bootloader has now been installed into RAM. Wait a few seconds for the fastboot application to actually load. The following fastboot commands then load the partition table, the bootloader and other necessary files into the HiKey eMMC flash memory.
 ```
 $ sudo fastboot flash ptable ptable-linux.img
 $ sudo fastboot flash fastboot fip.bin
