@@ -629,7 +629,7 @@ In the AOSP build a small application is provided (usb-speed-switch) to change b
 
 <a name="section-54"></a>
 ### UART Ports 
-In Debian the two 96Boards expansion IO UART serial ports will appear as `/dev/ttyAMA2` and `/dev/ttyAMA3` and are configured at 115200 baud by default. Note that /dev/ttyAMA3 requires an updated build from the daily snapshots. 
+In Debian the two 96Boards expansion IO UART serial ports will appear as `/dev/ttyAMA2` and `/dev/ttyAMA3` and are configured at 115200 baud by default. Note in this release by default, UEFI and Kernel console are directed to /dev/ttyAMA3.
 
 Alternatively, you can modify the grub.cfg and the inittab file in the system image.
 
@@ -639,10 +639,7 @@ linux /Image console=tty0 console=ttyAMA3,115200 root=/dev/disk/by-partlabel/sys
 * inittab (init tty line)
 ttyAMA3::respawn:/sbin/getty -L  ttyAMA3 115200 vt100 # GENERIC_SERIAL
 
-
-
-
-Note that the LS expansion port I/O pins on the 96Boards 2mm header, including the UART signals, are at 1.8V levels. 
+Note that the LS expansion port I/O pins on the 96Boards 2mm header, including the UART signals, are at **1.8V** levels. 
 
 <a name="section-6"></a>
 ## 7. Known Issues 
