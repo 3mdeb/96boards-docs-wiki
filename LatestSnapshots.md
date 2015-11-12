@@ -26,8 +26,7 @@ As we transition to UEFI, these set of kernel changes have been merged into the 
 * https://github.com/96boards/linux/pull/106 - hikey-mainline-rebase <br/>
 
 **The kernel branches containing the above changes (hikey and hikey-mainline-rebase) will only boot with UEFI.**
-
-The 
+ 
 **The following information is provided in these release notes:**
 
 1. [Snapshot information](#section-0)<br/>
