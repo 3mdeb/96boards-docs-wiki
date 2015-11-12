@@ -160,7 +160,7 @@ The default user name is "linaro" and the default password for user linaro is "l
 
 **4. Clock**
 
-The HiKey board does not support a battery powered RTC. System time will be obtained from the network if available. If you are not connecting to a network you will need to manually set the date on each power up
+The HiKey board does not support a battery powered RTC. System time will be obtained from the network if available. If you are not connecting to a network you will need to manually set the date on each power up.
 
 <a name="section-15"></a>
 **5. USB** 
@@ -171,7 +171,7 @@ For information on using the utility do the following:
 ```
 $ sudo ~/bin/usb_speed -h
 ```
-Please refer to the Hardware Notes section below for further information on the USB port configuration of the HiKey board.
+Please refer to the [Hardware Notes section below](#section-53) for further information on the USB port configuration of the HiKey board.
 
 **6. System and User LEDS**
 
