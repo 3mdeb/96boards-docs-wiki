@@ -648,19 +648,20 @@ The following are known software issues on the current release.
 
 1. **Not Yet Supported**
     - HDMI and Expansion bus audio. At present only Bluetooth audio is supported (on both Debian and AOSP builds)
-    - Video playback in Debian. This will be addressed in a future software release
+    - Video playback in Debian. This will be addressed in a future software release ** TODO: check this **
     - Some video formats are not decoded in Android, and will not be played with the current release
-    - Hardware graphics acceleration (Mali GPU) for OpenGL ES on the Debian build. This will be addressed in a future software release. GPU acceleration is functional in the AOSP build
-    - The Bluetooth LED is not functional in the Android build
+    - Hardware graphics acceleration (Mali GPU) for OpenGL ES on the Debian build. This will be addressed in a future software release. GPU acceleration is functional in the AOSP build ** TODO: check this **
+    - The Bluetooth LED is not functional in the Android build ** TODO: check this **
 2. **USB gives occasional non-fatal kernel trace messages**<br/>
 `usb usb1: clear tt 1 (9032) error -22`<br/>
 This is under current investigation.
 3. **Apple Bluetooth Keyboards/Mice/Trackpads do not work**<br/>
 This is under current investigation. 
-4. **Perl warning about locales**<br/>
+4. **Perl warning about locales**<br/> **TODO: check this **
 Running 'sudo apt-get install dbus-x11' on the HiKey board may give a warning 'Setting locale failed.'. To get rid of the warning, do the following:
 sudo apt-get install locales
 sudo dpkg-reconfigure locales
+5. **TODO: any known bug, need to be added here **
 
 **Reporting New Issues**
 
