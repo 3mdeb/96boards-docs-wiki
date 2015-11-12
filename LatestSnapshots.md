@@ -74,7 +74,7 @@ To get started you will need a power supply, an HDMI monitor and a USB keyboard 
 
 **IMPORTANT NOTES**
 
-- HDMI EDID display data is used to determine the best display resolution. On monitors and TVs that support 1080p this resolution will be selected. If 1080p is not supported the next available resolution reported by EDID will be used. This selected mode will work with most but not all monitors/TVs. See [below for further information](#section-52) on what to do if your monitor/TV does not display the startup console and UI. 
+- HDMI EDID display data is used to determine the best display resolution. On monitors and TVs that support 1080p (or 1200p) this resolution will be selected. If 1080p is not supported the next available resolution reported by EDID will be used. This selected mode will work with most but not all monitors/TVs. See [below for further information](#section-52) on what to do if your monitor/TV does not display the startup console and UI. 
 - There are limitations on the usage of the USB ports on the HiKey board. Please refer to the [Hardware section](#section-53) in the document for further information.
 
 ### Power Supply
@@ -601,7 +601,15 @@ Higher performance may be obtained by using forced air (fan) cooling on the HiKe
 
 <a name="section-52"></a>
 ### HDMI Port
-The HDMI port on HiKey supports TVs and Monitors with an HDMI interface at display resolutions of 1920x1080 pixels down to 640x480 pixels. Note that interlaced display modes are not currently supported. The mobile SoC used on the HiKey board does not have sufficiently flexible clocking arrangements to support all possible HDMI timings specified by monitors. 
+The HDMI port on HiKey supports TVs and Monitors with an HDMI interface at display resolutions of 1920x1080 (or 1920x1200) pixels down to 640x480 pixels. Note that interlaced display modes are not currently supported. The mobile SoC used on the HiKey board does not have sufficiently flexible clocking arrangements to support all possible HDMI timings specified by monitors. 
+
+Note also that these modes are preferred and will be tried first if exists in EDID:
+* 1920x1200	16:10	Monitor
+* 1920x1080	16:9	TV
+* 1680x1050	16:10	Monitor
+* 1280x1024	5:4	Monitor
+* 1280x720	16:9	TV
+* 800x600		4:3	TV
 
 **Debian Build**
 The Debian build uses Linux DRM drivers for the graphics system. When first powered up the board will attempt to read the EDID display data from the attached TV/monitor. It will then select the highest resolution format available up to 1920x1080 pixels. If all is well the selected default will work on your TV/Monitor and no more needs to be done. However, in some cases your monitor may not display correctly on the selected setting because the timing is not exactly correct. In this case we have provided a facility to enable you to cycle through the available EDID modes to find one that works correctly for your TV/Monitor.<br\><br\>
