@@ -201,6 +201,9 @@ $
 <a name="section-2"></a>
 ## 3. Installing Android Open Source Project 
 
+IMPORTANT NOTE:<br/>
+Note that for this release you MUST first update the bootloader using the procedure described in [Board Recovery - Installing a Bootloader](#section-41). If you have not already done this then you will need to do so before proceeding.
+
 Users may install a version of the Android Open Source Project (AOSP) onto the HiKey board. This will remove the factory installed Debian Linux OS. This section provides instructions on installing the AOSP build which consists of:
 - Derived from Linux 3.18 kernel
 - AOSP Android Lollipop latest release (5.1)
@@ -347,7 +350,7 @@ If you power up and boot the HiKey board with the SD card the kernel and softwar
 ```
 $ sudo mount /dev/mmcblk0p9 /mnt
 ```
-Note: Do not mount and access other partitions on the eMMC unless you are an expert. The bootloader and other binary files necessary for correct operation are stored in the eMMC and if they are removed or changed your board may become “bricked”, in which case all your data will be lost and you will need to follow the process in [Section 4: Board Recovery](#section-4) to reload the HiKey software. 
+Note: Do not mount and access other partitions on the eMMC unless you are an expert. The bootloader and other binary files necessary for correct operation are stored in the eMMC and if they are removed or changed your board may become “bricked”, in which case all your data will be lost and you will need to follow the process in [Board Recovery](#section-4) to reload the HiKey software. 
 
 ### Android Open Source Project (AOSP)
 Instructions about installing AOSP on HiKey are described in [this Section above](#section-2).
