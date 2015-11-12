@@ -500,10 +500,14 @@ Once this has been completed the bootloader has been installed into eMMC.<br/>
 Power off the HiKey board by removing the power supply jack.
 
 Next change the link configuration as follows:
-1. Remove the 2nd jumper (Boot Select 3-4) so that the HiKey board will boot from the newly installed bootloader in eMMC.
-2. Install the 3rd jumper (GPIO3-1 5-6) so that the HiKey board will enter fastboot mode when powered up (if the link is open HiKey will try to boot an OS that is not yet installed).
 
-Now power up the HiKey board again.
+Name | Link | State
+---- | ---- | -----
+Auto Power up | Link 1-2 | closed
+Boot Select | Link 3-4 | open
+GPIO3-1 | Link 5-6 | closed
+
+Now connect power supply jack to your HiKey again.
 Check that the HiKey board is detected by your Linux PC:<br/>
 You should see the ID of the HiKey board returned
 ```
