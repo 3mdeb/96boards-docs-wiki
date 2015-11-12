@@ -179,12 +179,12 @@ Each board led has a directory in /sys/class/leds. By default the LEDs use the f
 
 LED | Trigger
 --- | -------
-wifi_active | phy0tx
-bt_active | hci0tx
+wifi_active | phy0tx (WiFi Tx)
+bt_active | hci0tx (Bluetooth Tx)
 user_led1 | heartbeat
-user_led2 | mmc0 disk access
+user_led2 | mmc0 disk access (eMMC)
 user_led3 | mmc1 disk access (microSD card)
-user_led4 | CPU core 0 active (not used)
+user_led4 | CPU core 0 active
 
 To change a user LED you can do the following as a root user:
 ```
