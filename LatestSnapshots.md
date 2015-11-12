@@ -585,7 +585,7 @@ The Debian build uses Linux DRM drivers for the graphics system. When first powe
 After the board has booted the User0 LED should be heartbeating about once per second. Using a connected keyboard cycle through the available EDID modes using the following key sequence:<br\>
 Right_Alt + PrintScr + G<br\><br\>
 Press the right hand Alt Key then the PrintScr key and then the G key so that finally all the keys are pressed. Each time you enter this sequence the HiKey will switch to the next screen mode. When you find one that works well write down the resolution and frequency from the TV display - for example 1280x1024@75Hz.<br\><br\>
-Once you have found a working resolution you may edit the file to make the new mode the default boot mode. Be very careful not to make mistakes editing this file or your kernel may not boot correctly. Note this file needs su privileges to modify:
+Once you have found a working resolution you may edit the grub.cfg file to make the new mode the default boot mode. Be very careful not to make mistakes editing this file or your kernel may not boot correctly. Note this file needs su privileges to modify:
 ```
 $ sudo vi /boot/grub/grub.cfg
 ```
@@ -593,9 +593,9 @@ Add the chosen display format into the file at the end of the linux line in the 
 ```
 video=HDMI-A-1:1280x1024@75
 ```
-[Note - at present the screen does not resize correctly for each resolution - this is planned to be fixed before release].
+[Note - at present the desktop screen does not resize correctly for each resolution - this is planned to be fixed next release.]
 
-Finally, **if you are still having difficulties you can revert to a built in 720p mode by starting up the HiKey with no HDMI device attached**. The UI will then come up at a fixed 1280x720 resolution which will be used when you then plug the HDMI monitor in. **Pressing hotkey Alt+PrtScr+g  will switch to another 1280x720p implementation and finally to 800x600p. **
+Finally, **if you are still having difficulties you can revert to a built-in 720p mode by starting up the HiKey with no HDMI device attached**. The UI will then come up at a fixed 1280x720 resolution which will be used when you then plug the HDMI monitor in. **Pressing hotkey Alt+PrtScr+g  will switch to a built-in 800x600 mode, then cycle back.**
 
 **Android Build**
 [Information on Android To Be Written]
