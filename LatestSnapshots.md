@@ -678,11 +678,11 @@ THIS SECTION NEEDS REVIEW AND UPDATE FOR NEW RELEASE
 DO NOT USE THESE INSTRUCTIONS 
 UPDATE FOR NEW KERNEL, WIFI MODULE AND BOOTLOADER
 
-### bootloader
+### Bootloader From Source
 For further information on the bootloader building from source, see the 96Boards documentation here:<br/>
 - [HiKey Bootloader Wiki](https://github.com/96boards/documentation/wiki/HiKeyUEFI)
 
-### kernel
+### Kernel From Source
 To build a kernel using a linux computer use the following instructions. These assume that you have a good level of knowledge in using Linaro tools and building Linux kernels.
 
 The HiKey kernel sources are located at: [https://github.com/96boards/linux](https://github.com/96boards/linux)
@@ -703,7 +703,7 @@ The following instructions can then be used to build the kernel:
 Git clone the source code tree:
 ```
 $ git clone https://github.com/96boards/linux.git
-$ git checkout -b working-hikey 96boards-hikey-15.05
+$ git checkout -b working-hikey 96boards-hikey-15.05 **TODO:update this**
 ```
 
 To build the kernel:
@@ -715,8 +715,7 @@ $ make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- defconfig
 $ make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j8 Image modules hi6220-hikey.dtb
 ```
 
-You will need to decide whether you want your kernel to built for internal eMMC usage, or usage on an installed microSD card.
-
+### WiFi Driver From Source
 The rootfs included in each hikey release uses a different wifi driver than the one defined in the kernel.config file present in the release page.
 https://builds.96boards.org/snapshots/hikey/linaro/debian/latest
 
@@ -788,7 +787,7 @@ $ sudo umount mnt/
 
 Notice that by rebuilding the image file you could also transfer your public ssh keys or private files - like wifi credentials - to the target before booting it.
 
-At this point you would have an image with the required drivers.
+At this point you would have an image with the required drivers. Now You will need to decide whether you want your kernel to install on internal eMMC, or on an installed microSD card.
 
 ### Install onto eMMC
 
@@ -843,6 +842,7 @@ $ sudo fastboot reboot
 Note: if you make ANY of your own changes to the tagged tree your built kernel will be named 3.18.0-linaro-hikey+ (use `uname -a` to see the kernel name). This means that the installed kernel modules in /lib/modules will not work correctly unless you install a new set of kernel modules in /lib/modules from your kernel build.
 
 ### Install onto the SD card
+**TODO: change this. UEFI always load kernel from eMMC's boot partition**
 
 1. Use the kernel Image and hi6220-hikey.dtb as explained above.
 2. Prepare your SD card. See [Using an SD Card]() for more information. There will be two partitions on it: `boot` and `rootfs`
