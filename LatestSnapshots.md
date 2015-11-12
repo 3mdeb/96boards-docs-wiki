@@ -148,7 +148,7 @@ Search the stable distribution for packages for the HiKey.
 
 **2. File Systems**
 
-The following is the default file system layout for HiKey running Linux:
+HiKey comes with two eMMC size: 4GB and 8GB. The following is the default file system layout for 4GB HiKey running Debian:
 ```
 /dev/mmcblk0p4    64M    15M    49M     /boot     copy of boot file system
 /dev/mmcblk0p9    3.0G   1.2G   1.8G    /         main user space file system
