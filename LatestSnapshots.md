@@ -267,9 +267,9 @@ Note that these snapshots represent engineering work in progress towards the nex
 
 IMPORTANT NOTE:<br/>
 The installation process will overwrite all contents of the eMMC memory. This will remove all installed software and all user files. Before updating the OS make sure that you have saved any user files or data that you want to keep onto an SD Card or USB memory stick etc.<br/><br/>
-Note that for this release you MUST first update the bootloader using the procedure described in Section 4 below. If you have not already done this then you will need to do so before proceeding. 
+Note that for this release you MUST first update the bootloader using the procedure described in [Board Recovery - Installing a Bootloader](#section-41). If you have not already done this then you will need to do so before proceeding. 
 
-To install updates you will need a Linux PC with fastboot support. For information on installing and setting up ATF/UEFI bootloader, see [Board Recovery - Installing a Bootloader](#section-41) below.
+To install updates you will need a Linux PC with fastboot support. See [section below](#section-42) about how to that for your Linux PC.
 
 Once fastboot is installed on the Linux PC proceed as follows:
 
@@ -437,7 +437,7 @@ Connect a standard microUSB cable between the HiKey microUSB and your Linux PC. 
 
 **Set Board Link options**
 
-For flashing the bootloader (fastboot), the top two links should be installed (closed) and the 3rd link should be removed (open):
+For flashing the bootloader, the top two links should be installed (closed) and the 3rd link should be removed (open):
 
 Name | Link | State
 ---- | ---- | -----
@@ -511,7 +511,7 @@ $ sudo fastboot devices
 0123456789abcdef fastboot
 ```
 
-Your bootloader has been successfully installed and you are now ready to install the operating system system files into the eMMC flash memory (see [Section 3: Updating the OS](#section-3), above). For Debian you will need to load only the system partition, and for AOSP the cache, system and user data partitions. 
+Your bootloader has been successfully installed and you are now ready to install the operating system system files into the eMMC flash memory (see [Updating the OS](#section-3), above). For Debian you will need to load only the system partition, and for AOSP the cache, system and user data partitions. 
 
 **Note:**<br/>
 This bootloader is based on UEFI and includes:
@@ -648,7 +648,7 @@ The reason for this limitation is that USB 2.0 split transfers are not supported
 
 In order to address this limitation the USB ports are by default configured into Low/Full speed operation.
 
-In Debian the `usb_speed utility` (use `-h` option for help) is provided in `/home/linaro/bin` to switch the USB ports between modes (see [Other Useful Information in Section 1](#section-15) above for details on this utility).
+In Debian the `usb_speed utility` (use `-h` option for help) is provided in `/home/linaro/bin` to switch the USB ports between modes (see [Other Useful Information](#section-15) above for details on this utility).
  
 In the AOSP build a small application is provided (usb-speed-switch) to change between High Speed and Full Speed operation.
 
@@ -867,7 +867,7 @@ Note: if you make ANY of your own changes to the tagged tree your built kernel w
 ### Install onto the SD card
 
 1. Use the kernel Image and hi6220-hikey.dtb as explained above.
-2. Prepare your SD card. See [Section 3: Using an SD Card]() for more information. There will be two partitions on it: `boot` and `rootfs`
+2. Prepare your SD card. See [Using an SD Card]() for more information. There will be two partitions on it: `boot` and `rootfs`
 3. Insert your SD card into your Linux PC and copy your newly built kernel and device tree blob onto the SD card boot partition - use your own SD card /dev device in place of /dev/sda1:
 ```
 $ sudo cp arch/arm64/boot/Image /dev/sda1/boot/Image
