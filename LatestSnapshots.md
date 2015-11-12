@@ -858,7 +858,7 @@ Plug your SD card to HiKey board.
 
 **Source for jessie rootfs build**
 
-We pull all the packages from Debian official repository. The only change is the uim package. Sources are available in github at [https://github.com/96boards](https://github.com/96boards)
+We pull most of the packages from Debian official repository. The remaining changes are available in github at [https://github.com/96boards](https://github.com/96boards)
 
 ### AOSP Build
 
