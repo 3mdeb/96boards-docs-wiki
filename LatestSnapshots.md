@@ -678,6 +678,11 @@ THIS SECTION NEEDS REVIEW AND UPDATE FOR NEW RELEASE
 DO NOT USE THESE INSTRUCTIONS 
 UPDATE FOR NEW KERNEL, WIFI MODULE AND BOOTLOADER
 
+### bootloader
+For further information on the bootloader building from source, see the 96Boards documentation here:<br/>
+- [HiKey Bootloader Wiki](https://github.com/96boards/documentation/wiki/HiKeyUEFI)
+
+### kernel
 To build a kernel using a linux computer use the following instructions. These assume that you have a good level of knowledge in using Linaro tools and building Linux kernels.
 
 The HiKey kernel sources are located at: [https://github.com/96boards/linux](https://github.com/96boards/linux)
