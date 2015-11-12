@@ -73,7 +73,7 @@ To get started you will need a power supply, an HDMI monitor and a USB keyboard 
 **IMPORTANT NOTES**
 
 - HDMI EDID display data is used to determine the best display resolution. On monitors and TVs that support 1080p this resolution will be selected. If 1080p is not supported the next available resolution reported by EDID will be used. This selected mode will work with most but not all monitors/TVs. See below for further information on what to do if your monitor/TV does not display the startup console and UI. 
-- There are limitations on the usage of the USB ports on the HiKey board. Please refer to the Hardware section in the document for further information.
+- There are limitations on the usage of the USB ports on the HiKey board. Please refer to the [Hardware section](#section-52) in the document for further information.
 
 ### Power Supply
 The HiKey board requires an external power supply providing 12V at 2A. (The board will also work with 9V or 15V power supplies). It is not possible to power the board from a USB power supply because the board can use more power than is available from a standard USB power supply.
