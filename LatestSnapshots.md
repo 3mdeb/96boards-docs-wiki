@@ -945,3 +945,6 @@ Table 2: boot partition files
 
 Note<sup>1</sup>: Kernel build image: `arch/arm64/boot/image`<br/>
 Note<sup>2</sup>: DTB: `arch/arm64/boot/dts/hi6220-hikey.dtb`
+
+### Appendix 2: New Features <a name="appendix-2"></a>
+N/A
