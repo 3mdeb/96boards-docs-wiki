@@ -1,5 +1,5 @@
 - [HiKey](https://github.com/96boards/documentation/wiki/HiKey)
-  - [Hardware Manuel](https://github.com/96boards/documentation/blob/master/hikey/HiKey_User_Guide_Rev0.2.pdf)
+  - [Hardware User Guide](https://github.com/96boards/documentation/blob/master/hikey/HiKey_User_Guide_Rev0.2.pdf)
   - [Getting Started](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted)
   - [UEFI](https://github.com/96boards/documentation/wiki/HiKeyUEFI)
   - [OP-TEE](https://github.com/96boards/documentation/wiki/HiKeyOPTEE)
