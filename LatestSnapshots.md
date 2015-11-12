@@ -254,11 +254,11 @@ Please read the Hardware notes and the Known Issues later in this document befor
 Updates to 96Boards supported operating systems will be made available from time to time at: 
 [http://builds.96boards.org/releases/hikey](http://builds.96boards.org/releases/hikey)
 
-To determine if you are running the latest release do the following from a command prompt:
+For Debian, to determine which release you are running do the following from a command prompt:
 ```
 $ uname -a
 ```
-If the build date is XXX Jun xx xx:xx:xx UTC 2015 your board is running the latest release. 
+From the output "is XXX MMM xx xx:xx:xx UTC 20YY ", you find build date MMM.YY, then you know which release you are running.
 
 Developer snapshot updates are also provided at:
 [http://builds.96boards.org/snapshots/hikey](http://builds.96boards.org/snapshots/hikey)
@@ -267,9 +267,9 @@ Note that these snapshots represent engineering work in progress towards the nex
 
 IMPORTANT NOTE:<br/>
 The installation process will overwrite all contents of the eMMC memory. This will remove all installed software and all user files. Before updating the OS make sure that you have saved any user files or data that you want to keep onto an SD Card or USB memory stick etc.<br/><br/>
-Note that for this release you MUST first update the bootloader using the procedure described in [Board Recovery - Installing a Bootloader](#section-41). If you have not already done this then you will need to do so before proceeding. 
+Note that for this release you MUST first update the bootloader using the procedure described in [Board Recovery - Installing a Bootloader](#section-41). If you have not already done this then you will need to do so before proceeding.
 
-To install updates you will need a Linux PC with fastboot support. See [section below](#section-42) about how to that for your Linux PC.
+To install updates you will need a Linux PC with fastboot support. See [section here](#section-42) about how to that for your Linux PC.
 
 Once fastboot is installed on the Linux PC proceed as follows:
 
@@ -296,26 +296,29 @@ $ sudo fastboot devices
 
 Then install the update using the downloaded files:
 
-Note: The ptable must be flashed first.<br/>
+Note: The ptable-linux.img must be flashed first.<br/>
 Note: The larger system file will take longer and will be loaded in several chunks due to its size.
 ```
 $ sudo fastboot flash ptable ptable-linux.img
 $ sudo fastboot flash boot boot-fat.uefi.img
 $ sudo fastboot flash system hikey-jessie_alip_2015MMDD-nnn.emmc.img
 ```
-When completed, power down the HiKey, remove Link 5-6 and power up the HiKey.  If you wish to use a keyboard and mouse in the Type A USB ports remember to remove the microUSB cable. 
+When completed, power down the HiKey, remove Link 5-6 and power up the HiKey.  If you wish to use a keyboard and mouse in the Type A USB ports, remember to remove the microUSB cable. 
 
 You may now use the updated OS.
 
 **Using an SD Card**
 
-The built-in HiKey eMMC boot software also enables booting a kernel and root file system installed on an SD card. If an SD card is installed at power up the HiKey board will boot the software on the SD Card rather than the software flashed in the eMMC.
+The built-in HiKey eMMC boot software also enables booting a kernel and root file system installed on an SD card. If an SD card is installed at power up the HiKey board will boot the software on the SD Card rather than the software flashed in the eMMC. <TODO: clarify this>
 
 This section describes how to prepare a bootable SD card.
 
 Download the following file onto your Linux PC from: 
 [http://builds.96boards.org/releases/hikey/linaro/debian/latest](http://builds.96boards.org/releases/hikey/linaro/debian/latest)
   - hikey-jessie_alip_2015MMDD-nnn.img.gz
+  - hikey-jessie_developer_2015MMDD-nnn.img.gz
+
+Note: _developer version comes with no graphics UI; _alip version comes with LXDE UI.
 
 Unzip the .gz file.  Install an SD card into your Linux PC. Make sure that you know the SD card device node before carrying out the next step.
 
@@ -340,7 +343,7 @@ Then the following command will make the file system take up all the space left 
 ```
 $ sudo resize2fs /dev/sdb2
 ```
-If you power up and boot the HiKey board with the SD card the kernel and software on the SD card will be used and not the eMMC. Your user files will also be created on the SD card. You may still access the eMMC files as follows:
+If you power up and boot the HiKey board with the SD card the kernel and software on the SD card will be used and not the eMMC. <TODO: verify this> Your user files will also be created on the SD card. You may still access the eMMC files as follows:
 ```
 $ sudo mount /dev/mmcblk0p9 /mnt
 ```
