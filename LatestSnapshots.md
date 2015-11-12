@@ -220,7 +220,7 @@ Uncompress the .tar.xz files using your operating system file manager, or with t
 ```
 $ xz --decompress [filename].tar.xz; tar -xvf [filename].tar
 ```
-To install updates you will need a Linux PC with fastboot support. For information on installing and setting up Fastboot see [Section 4. Board Recovery - Installing a Bootloader](#section-41) below.
+To install updates you will need a Linux PC with fastboot support. For information on installing and setting up Fastboot see [Board Recovery - Installing a Bootloader](#section-41) below.
 
 After setting up Fastboot on your Linux PC do the following:
 
