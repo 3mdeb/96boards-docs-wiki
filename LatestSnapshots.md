@@ -220,7 +220,7 @@ Uncompress the .tar.xz files using your operating system file manager, or with t
 ```
 $ xz --decompress [filename].tar.xz; tar -xvf [filename].tar
 ```
-To install updates you will need a Linux PC with fastboot support. For information on installing and setting up Fastboot see [Board Recovery - Installing a Bootloader](#section-41) below.
+To install updates you will need a Linux PC with fastboot support. For information on installing and setting up ATF/UEFI bootloader to HiKey, see [Board Recovery - Installing a Bootloader](#section-41) below.
 
 After setting up Fastboot on your Linux PC do the following:
 
@@ -269,7 +269,7 @@ IMPORTANT NOTE:<br/>
 The installation process will overwrite all contents of the eMMC memory. This will remove all installed software and all user files. Before updating the OS make sure that you have saved any user files or data that you want to keep onto an SD Card or USB memory stick etc.<br/><br/>
 Note that for this release you MUST first update the bootloader using the procedure described in Section 4 below. If you have not already done this then you will need to do so before proceeding. 
 
-To install updates you will need a Linux PC with fastboot support. For information on installing and setting up Fastboot see [Section 4: Board Recovery - Installing a Bootloader](#section-41) below.
+To install updates you will need a Linux PC with fastboot support. For information on installing and setting up ATF/UEFI bootloader, see [Board Recovery - Installing a Bootloader](#section-41) below.
 
 Once fastboot is installed on the Linux PC proceed as follows:
 
@@ -523,7 +523,7 @@ This bootloader is based on UEFI and includes:
 For further information on the bootloader, including how to build it from source, see the 96Boards documentation here:<br/>
 - [HiKey Bootloader Wiki](https://github.com/96boards/documentation/wiki/HiKeyUEFI)
 
-
+<a name="section-42"></a>
 **Installing Fastboot onto your PC**<br/>
 Step 1: Use the following commands
 ```
