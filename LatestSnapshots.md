@@ -83,7 +83,7 @@ The HiKey board requires an external power supply providing 12V at 2A. (The boar
 The HiKey board uses a standard DC Jack with a 1.7mm barrel, center pin positive. An adapter cable is provided with the board to also enable the use of power supplies with 2.1mm barrel jacks. 
 
 ### Monitor, Keyboard and Mouse
-A standard monitor or TV supporting at least 640x480 resolution is required. Interlaced operation is not currently supported. The maximum resolutions currently supported are 1920x1080p or 1600x1200p. Information on selecting the resolution is provided below. The keyboard and mouse can be combined or separate. 
+A standard monitor or TV supporting at least 640x480 resolution is required. Interlaced operation is not currently supported. The maximum resolutions currently supported are 1920x1080p or 1920x1200p. Information on selecting the resolution is [provided below](#section-52). The keyboard and mouse can be combined or separate. 
 
 ### Powering up the Board
 Link 1-2 causes HiKey to auto-power up when power is applied. The other two links should be not fitted (open). If Link 1-2 is not installed then the back edge push button switch is used to power on the HiKey board. 
