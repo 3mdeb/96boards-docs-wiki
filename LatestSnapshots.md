@@ -347,42 +347,7 @@ $ sudo mount /dev/mmcblk0p9 /mnt
 Note: Do not mount and access other partitions on the eMMC unless you are an expert. The bootloader and other binary files necessary for correct operation are stored in the eMMC and if they are removed or changed your board may become “bricked”, in which case all your data will be lost and you will need to follow the process in [Section 4: Board Recovery](#section-4) to reload the HiKey software. 
 
 ### Android Open Source Project (AOSP)
-
-Download the following files from:
-[http://builds.96boards.org/releases/hikey/linaro/aosp/](http://builds.96boards.org/releases/hikey/linaro/aosp/)
-- boot-fat.uefi.img.tar.xz
-- cache.img.tar.xz
-- system.img.tar.xz
-- userdata.img.tar.xz
-- ptable-aosp.img
-
-Uncompress the .tar.xz files using your operating system file manager, or with the following command for each file:
-```
-$ xz --decompress [filename].tar.xz; tar -xvf [filename].tar
-```
-
-Install Link 5-6 on the HiKey board. This tells the bootloader to start up in fastboot mode.
-
-Power on the HiKey board and verify communications from the Linux PC:
-```
-$ sudo fastboot devices
-0123456789abcdef fastboot
-```
-
-Then install the update using the downloaded files:
-```
-$ sudo fastboot flash ptable ptable-aosp.img
-$ sudo fastboot flash boot boot-fat.uefi.img
-$ sudo fastboot flash cache cache.img
-$ sudo fastboot flash system system.img
-$ sudo fastboot flash userdata userdata.img
-```
-
-When completed power down the HiKey, remove Link 5-6 and power up the HiKey.  If you wish to use a keyboard and mouse in the Type A USB ports remember to remove the microUSB cable. 
-
-You may now use the updated OS. 
-
-Please read the Hardware notes and the Known Issues later in this document before using the OS. 
+Instructions about installing AOSP on HiKey are described in [this Section above](#section-2).
 
 <a name="section-4"></a>
 ## 5. Board Recovery 
