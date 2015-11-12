@@ -633,11 +633,11 @@ In Debian the two 96Boards expansion IO UART serial ports will appear as `/dev/t
 
 Alternatively, you can modify the grub.cfg and the inittab file in the system image.
 
-* grub.cfg (linux boot line)
-linux /Image console=tty0 console=ttyAMA3,115200 root=/dev/disk/by-partlabel/system rootwait rw quiet efi=noruntime
+* grub.cfg (linux boot line) <br\>
+`linux /Image console=tty0 console=ttyAMA3,115200 root=/dev/disk/by-partlabel/system rootwait rw quiet efi=noruntime`
 
-* inittab (init tty line)
-ttyAMA3::respawn:/sbin/getty -L  ttyAMA3 115200 vt100 # GENERIC_SERIAL
+* inittab (init tty line) <br\>
+`ttyAMA3::respawn:/sbin/getty -L  ttyAMA3 115200 vt100 # GENERIC_SERIAL`
 
 Note that the LS expansion port I/O pins on the 96Boards 2mm header, including the UART signals, are at **1.8V** levels. 
 
