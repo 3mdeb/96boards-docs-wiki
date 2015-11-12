@@ -118,27 +118,16 @@ You can connect to a wired network by using a USB Ethernet adapter. Supported ad
 ### Bluetooth
 The HiKey board includes built-in Bluetooth 4.0 LE support.
 
-To setup a Bluetooth device open the Bluetooth Manager from the Preferences menu. If a “Bluetooth Turned Off” popup appears then select “Enable Bluetooth”
+To setup a Bluetooth device open the Bluetooth Manager from the Preferences menu. If a “Bluetooth Turned Off” popup appears then select “Enable Bluetooth”. Click on "Search" to search for devices. Try with your bluetooth audio and bluetooth keyboard/mouse. If you make the device trusted then this should operate over a reboot of the board.
 
-Click on Search to search for devices
+The blue LED between the microUSB and the Type A USB on the front board edge indicates bluetooth activity.
 
 ### Audio Device
-- Select the audio device you want to use
-- If you have not used this device before then Click Setup
-  - Click Next (use Random PassKey unless device requires a specific PassKey)
-  - Click Next (connect to audio sink)
-  - After a few seconds you should see that the device has been successfully added. Click on the Close button
+Bluetooth audio devices are supported on HiKey. Follow normal procedures of connecting a bluetooth device to connect to your HiKey.
 
-Now open the LXMusic player from the Sound & Video menu. Create a playlist from your music files. Supported audio formats are .mp3 and .ogg. You should now be able to play from the LXMusic player. 
+Note: HDMI audio is not supported in this release.
 
-### Keyboard/Mouse
-- Select the keyboard device you want to use
-- If you have not used this device before then Click Setup
-  - Click Next (use Random PassKey unless device requires a specific PassKey)
-  - Click Next (connect to Human Interface Device HID)
-  - After a few seconds you should see that the device has been successfully added. Click on the Close or Cancel button
-
-After the device has been successfully connected you should be able to use the Bluetooth keyboard/mouse. If you make the device trusted then this should operate over a reboot of the board. 
+Once Bluetooth sound sink is connected, you can open the LXMusic player from the Sound & Video menu. Create a playlist from your music files. Supported audio formats are .mp3 and .ogg. You should now be able to play from the LXMusic player. 
 
 ### Other Useful Information
 
