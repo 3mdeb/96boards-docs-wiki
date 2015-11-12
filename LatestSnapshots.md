@@ -431,7 +431,7 @@ For Debian:
 $ gunzip boot-fat.uefi.img.gz
 ```
 
-You will also need the fastboot application installed on your Linux PC – if this is not installed then follow the instructions at the end of this section. 
+You will also need the fastboot application installed on your Linux PC – if this is not installed then follow the instructions [at the end of this section](#section-42). 
 
 Connect a standard microUSB cable between the HiKey microUSB and your Linux PC. Do not power up the HiKey board yet.
 
