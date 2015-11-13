@@ -855,7 +855,7 @@ Plug your SD card to HiKey board.
 
 We pull most of the packages from Debian official repository. The remaining changes are available in github at [https://github.com/96boards](https://github.com/96boards)
 
-### AOSP Build
+### AOSP Build From Source
 
 AOSP sources are hosted in these repositories:
 - [https://github.com/96boards/android_hardware_ti_wpan](https://github.com/96boards/android_hardware_ti_wpan)
