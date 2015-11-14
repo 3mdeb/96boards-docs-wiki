@@ -1,5 +1,7 @@
 # HiKey - UEFI
 
+**NOTE**: Throughout this document, when you see Jumper pin1-6 on **J15**, it refers to original HiKey boards built by CircuitCo. If the board you have is built by **LEMAKER(R)**, then read these as "Jumper pin1-6 on **J601**"
+
 The following binaries are required:
 * l-loader.bin - used to switch from aarch32 to aarch64 and boot
 * fip.bin - firmware package
