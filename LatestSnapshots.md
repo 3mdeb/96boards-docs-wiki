@@ -901,6 +901,7 @@ Install the built files following the instructions on loading the AOSP build in 
 ### Appendix 1: Partition Information 
 
 Table 1 describes the partition layout on the HiKey eMMC.
+**TODO: need an update for 4GB and 8GB eMMC**
 
 Name | Partition | Offset | Size
 ---- | --------- | ------ | ----
