@@ -923,12 +923,18 @@ Note that for the Debian build the system and userdata partitions are merged to 
 
 Table 2 describes the binaries located in the boot partition.
 
+fastboot.efi  grub  grubaa64.efi  hi6220-hikey.dtb  Image  initrd.img
+
+
+
 File Name | Description | Supported Max. Size
 --------- | ----------- | -------------------
 Image | Kernel Image<sup>1</sup> | 16MB
-ramdisk.img | Ramdisk Image | 8MB
-lcb.dtb | Device Tree Binary<sup>2</sup> |512KB
-cmdline | Command line text file | 512B
+initrd.img | Ramdisk Image | 8MB
+hi6220-hikey.dtb | Device Tree Binary<sup>2</sup> |512KB
+fastboot.efi | fastboot application for UEFI | N/A
+grubaa64.efi | grub application for Aarch64 for UEFI | N/A
+grub/grub.conf | grub configuration file | N/A
 
 Table 2: boot partition files
 
