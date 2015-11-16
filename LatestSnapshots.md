@@ -645,6 +645,7 @@ The following are known software issues on the current release.
     - HDMI and Expansion bus audio. At present only Bluetooth audio is supported (on both Debian and AOSP builds)
     - Video playback in Debian. This will be addressed in a future software release ** TODO: check this **
     - Some video formats are not decoded in Android, and will not be played with the current release
+    - HDMI hotplug detection (HPD) is not supported. (Note: You can still plug in HDMI cable after the board booted, which make HDMI work through two candidate modes: 1280x720p and 800x600p. However these are not HPD, they is built-in default.)
     - Hardware graphics acceleration (Mali GPU) for OpenGL ES on the Debian build. This will be addressed in a future software release. GPU acceleration is functional in the AOSP build ** TODO: check this **
     - The Bluetooth LED is not functional in the Android build ** TODO: check this **
 2. **USB gives occasional non-fatal kernel trace messages**<br/>
