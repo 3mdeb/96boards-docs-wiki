@@ -66,6 +66,8 @@ a) extended support for more HDMI modes <br/>
 b) switchable through hotkey 'Alt'+'PrtSc'+'g' <br/>
 c) SYSPLL reads from pctrl registers (therefore compatible with both 1.2GHz and 1.19GHz UEFI) <br/>
 
+3. UEFI [#85](https://builds.96boards.org/snapshots/hikey/linaro/uefi/85/), Debian [#373](https://builds.96boards.org/snapshots/hikey/linaro/debian/373/), need to upgrade together. Starting from these two snapshots, new booting sequence was added into UEFI. It checks SD card booting first, if failed, falls back to eMMC. <br/>
+
 <a name="section-1"></a>
 ## 2. Pre-Installed Debian Linux 
 The HiKey board is ready to use “out of the box” with a preinstalled version of the Debian Linux distribution.
