@@ -801,19 +801,17 @@ Create a dummy ramdisk for the ramdisk image:
 $ touch initrd ; echo initrd | cpio -ov > initrd.img
 ```
 
-Create the boot image (KERN=Image, DTB=hi6220-hikey.dtb)
+Create the boot image (KERN=Image, DTB=hi6220-hikey.dtb, RAMDISK=initrd.img)
 ```
 $  mkdir boot-fat
 $  dd if=/dev/zero of=boot-fat.uefi.img bs=512 count=131072
-$  sudo mkfs.fat -n "BOOT IMG" boot-fat.uefi.img
+$  sudo mkfs.fat -F32 -n "boot" out/boot-fat.uefi.img
 $  sudo mount -o loop,rw,sync boot-fat.uefi.img boot-fat
-$  sudo cp -f $KERN $DTB boot-fat/ || true
-$  sudo cp -f ./initrd.img boot-fat/initrd.img || true
-$  sudo cp -f AndroidFastbootApp.efi boot-fat/fastboot.efi || true
-$  sudo cp -f grubaa64.efi boot-fat/ || true
-$  sudo mkdir boot-fat/grub
-$  sudo cp -f grub.cfg boot-fat/grub/ || true
-$  sync
+$  sudo cp -a $KERN $DTB $RAMDISK boot-fat/ || true
+$  sudo mkdir -p boot-fat/EFI/BOOT
+$  sudo cp -a AndroidFastbootApp.efi boot-fat/EFI/BOOT/fastboot.efi || true
+$  sudo cp -a grubaa64.efi boot-fat/EFI/BOOT/grubaa64.efi || true
+$  sudo cp -a grub.cfg boot-fat/EFI/BOOT/grub.cfg || true
 $  sudo umount boot-fat
 $  sudo rm -rf boot-fat
 ```
