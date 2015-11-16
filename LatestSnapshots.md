@@ -906,6 +906,7 @@ Install the built files following the instructions on loading the AOSP build in 
 <a name="appendix-1"></a>
 ### Appendix 1: Partition Information 
 
+<a name="table-1"></a>
 Table 1 describes the partition layout on the HiKey eMMC.
 **TODO: need an update for 4GB and 8GB eMMC**
 
@@ -928,6 +929,7 @@ Table 1: HiKey Partitions
 
 Note that for the Debian build the system and userdata partitions are merged to create a single system (root file system) partition. 
 
+<a name="table-2"></a>
 Table 2 describes the binaries located in the boot partition.
 
 File Name | Description | Supported Max. Size
