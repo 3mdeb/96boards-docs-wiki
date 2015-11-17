@@ -199,6 +199,12 @@ connect, the predefined boot entry is 1.
 
 Command to change boot order for the case jumper not on pin5-6:
 $sudo fastboot oem bootdevice [emmc|sd]
+By default, SD card is the boot device. The boot flow is in below.
+    a. If boot device is SD card.
+         1) If SD card is present, boot from SD card.
+         2) If SD card is _not_ present, boot from eMMC.
+    b. If boot device is eMMC.
+         Always boot from eMMC whether SD card is present. It's used when SD card is just mass storage device. For this case, people always leave SD card in slot.
 
 ```
 * Optional: To add fastboot to boot menu by manual:
