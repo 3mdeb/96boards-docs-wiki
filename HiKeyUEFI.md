@@ -89,7 +89,7 @@ arm-linux-gnueabihf-ld -Bstatic -Tl-loader.lds -Ttext 0xf9800800 start.o debug.o
 arm-linux-gnueabihf-objcopy -O binary loader temp
 python gen_loader.py -o l-loader.bin --img_loader=temp --img_bl1=bl1.bin
 # XXX sgdisk usage requires sudo
-sudo PTABLE=linux bash -x generate_ptable.sh
+sudo PTABLE=linux-4g bash -x generate_ptable.sh
 python gen_loader.py -o ptable-linux.img --img_prm_ptable=prm_ptable.img
 ```
 
