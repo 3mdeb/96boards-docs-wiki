@@ -28,7 +28,14 @@ h4. DragonBoard 410c
 
 * Freedreno graphics driver not provided by the image
 ** Newer mesa, libdrm and freedreno xorg driver is needed (to be available as part of the next release)
-** Workaround is to enable the qcom overlay PPA, and install the required packages (ADD INSTRUCTIONS)
+** Workaround is to enable the qcom overlay PPA, and install the required packages:
+
+bc. sudo su -
+echo "deb http://repo.linaro.org/ubuntu/qcom-overlay jessie main" > /etc/apt/sources.list.d/qcom-overlay-repo.list
+apt-get update
+apt-get install libdrm2 libdrm-freedreno1 libegl1-mesa libegl1-mesa-drivers libgbm1 libgl1-mesa-dri libgl1-mesa-glx libglapi-mesa libgles1-mesa libgles2-mesa libosmesa6 libwayland-egl1-mesa libxatracker2 xserver-xorg-video-freedreno
+reboot
+
 * Slow USB throughput: "https://www.96boards.org/forums/topic/super-slow-usb/":https://www.96boards.org/forums/topic/super-slow-usb/
 * "Bug 43":https://bugs.96boards.org/show_bug.cgi?id=43 - Iceweasel browser exits after file download complete
 * "Bug 121":https://bugs.96boards.org/show_bug.cgi?id=121 - Cannot soft power off or shutdown db410c
