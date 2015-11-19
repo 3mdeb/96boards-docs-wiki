@@ -109,6 +109,7 @@ The following files are now built:
 * optee_test/out/ta/rpc_test/d17f73a0-36ef-11e1-984a0002a5d5c51b.ta
 * optee_test/out/ta/storage/b689f2a7-8adf-477a-9f9932e90c0ad0a2.ta
 * optee_test/out/ta/create_fail_test/c3f6e2c0-3548-11e1-b86c0800200c9a66.ta
+* optee_test/out/ta/concurrent/e13010e0-2ae1-11e5-896a0002a5d5c51b.ta
 
 ## Copy built files to the file system
 
