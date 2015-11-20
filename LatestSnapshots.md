@@ -374,26 +374,27 @@ Note that for this release you MUST first update the primary bootloader using th
 
 **TODO: Change these URLs to RELEASE URLs for final release notes**
 
-Download the following files onto a Linux PC:
-* [l-loader.bin](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/l-loader.bin)
-* [fip.bin](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/fip.bin)
-* [ptable-linux.img for Debian](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux.img) or
-* [ptable-aosp.img for AOSP](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-aosp.img)
-* [nvme.img](https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/nvme.img)
+Download the following files onto a Linux PC from [http://builds.96boards.org/releases/hikey/linaro/uefi] (http://builds.96boards.org/releases/hikey/linaro/uefi)
+
+* l-loader.bin
+* fip.bin
+* ptable-linux.img for Debian or
+* ptable-aosp.img for AOSP
+* nvme.img
 
 You will also need the boot partition for the OS Image you want to run
-* [boot-fat.uefi.img for Debian] (https://builds.96boards.org/snapshots/hikey/linaro/debian/latest/boot-fat.uefi.img.gz)
-* [boot_fat.uefi.img for AOSP](https://builds.96boards.org/snapshots/hikey/linaro/aosp/latest/boot_fat.uefi.img.tar.xz)
+* [boot-fat.uefi.img for Debian] (https://builds.96boards.org/releases/hikey/linaro/debian/latest/boot-fat.uefi.img.gz)
+* [boot_fat.uefi.img for AOSP](https://builds.96boards.org/releases/hikey/linaro/aosp/latest/boot_fat.uefi.img.tar.xz)
 
 You can do this from your browser or from the command prompt:
 For example, to download the latest UEFI build and boot partition for Debian do:
 
 ```shell
-$ wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/l-loader.bin
-$ wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/fip.bin
-$ wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux.img
-$ wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/nvme.img
-$ wget https://builds.96boards.org/snapshots/hikey/linaro/debian/latest/boot-fat.uefi.img.gz
+$ wget https://builds.96boards.org/releases/hikey/linaro/uefi/latest/l-loader.bin
+$ wget https://builds.96boards.org/releases/hikey/linaro/uefi/latest/fip.bin
+$ wget https://builds.96boards.org/releases/hikey/linaro/uefi/latest/ptable-linux.img
+$ wget https://builds.96boards.org/releases/hikey/linaro/uefi/latest/nvme.img
+$ wget https://builds.96boards.org/releases/hikey/linaro/debian/latest/boot-fat.uefi.img.gz
 ```
 
 Uncompress the boot image as follows:
