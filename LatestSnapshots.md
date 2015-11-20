@@ -566,7 +566,7 @@ Higher performance may be obtained by using forced air (fan) cooling on the HiKe
 
 <a name="section-52"></a>
 ### HDMI Port
-The HDMI port on HiKey supports TVs and Monitors with an HDMI interface at display resolutions of 1920x1080 (or 1920x1200) pixels down to 640x480 pixels. Note that interlaced display modes are not currently supported. **The mobile SoC used on the HiKey board does not have sufficiently flexible clocking arrangements to support all possible HDMI timings specified by monitors.** A list of monitors/TVs can/cannot work with HiKey is stored [here](https://docs.google.com/spreadsheets/d/1aYNUlGx5J8RmfWrtML4lFJ-7tV8u-3AH_3IaiOlWfoE/edit?usp=sharing). **TODO: double check this link accessibility**
+The HDMI port on HiKey supports TVs and Monitors with an HDMI interface at display resolutions of 1920x1080 (or 1920x1200) pixels down to 640x480 pixels. Note that interlaced display modes are not currently supported. **The mobile SoC used on the HiKey board does not have sufficiently flexible clocking arrangements to support all possible HDMI timings specified by monitors.** A list of monitors/TVs can/cannot work with HiKey is stored [here](https://docs.google.com/spreadsheets/d/1aYNUlGx5J8RmfWrtML4lFJ-7tV8u-3AH_3IaiOlWfoE/edit?usp=sharing).
 
 Note also that these modes are preferred and will be tried (in this order) first if they exist in EDID:
 
