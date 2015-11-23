@@ -16,5 +16,6 @@
   - [Linux User Guide](https://github.com/96boards/documentation/blob/master/dragonboard410c/LinuxUserGuide_DragonBoard.pdf)
   - [[OpenEmbedded/Yocto|Dragonboard-410c-OpenEmbedded-and-Yocto]]
   - [LAVA] (https://github.com/96boards/documentation/wiki/D410CLAVA)
+  - [Schematics](http://linaro.co/db410c-schematics)
 - [Reference Software](https://github.com/96boards/documentation/wiki/ReferenceSoftware)
   - [Bootloader (Hikey)](https://github.com/96boards/documentation/wiki/Reference-Bootloader-Hikey)
