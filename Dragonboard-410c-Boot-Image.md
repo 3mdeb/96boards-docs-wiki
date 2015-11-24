@@ -3,27 +3,9 @@
 
 The boot image that can be used with fastboot uses a specific format, and this document provides instructions to create such a boot file. The boot image generally contains the kernel image, an initrd image as well as a specific/custom device tree image.
 
-NOTE: This section is for Ubuntu only! Android uses a different tree.
+NOTE: This section is for Ubuntu only! Android uses a different tools.
 
-## Building the kernel
-
-    git clone https://git.linaro.org/landing-teams/working/qualcomm/kernel.git
-    cd kernel
-    git checkout integration-linux-qcomlt
-    export CROSS_COMPILE=aarch64-linux-gnu-
-    export ARCH=arm64
-    export PATH=<path to your ARM64 cross compiler>:$PATH
-    make O=build-${ARCH} defconfig
-    make O=build-${ARCH} -j4 Image dtbs
-
-## Building the kernel modules (optional, only if you need them)
-    make O=build-${ARCH} modules
-    mkdir build-${ARCH}-modules
-    make O=build-${ARCH} INSTALL_MOD_PATH=build-${ARCH}-modules modules_install
-    tar -C build-${ARCH}-modules czf modules.tgz lib/modules
-    # try below command if the above doesn't work
-    tar czf modules.tgz build-${ARCH}/build-${ARCH}-modules/lib/modules
-    # copy modules.tgz (using SCP or SD card) to the device, tar xvf in the /
+This wiki page assumes that you have already built a kernel from source, and that you are currently located at the root of the kernel source tree you have built. If you don't know how to build the kernel from source, or which version to build, please refer to the release notes, there is section that provides kernel information (git tree, tag, defconfig, compiler version, ...). Note that the following instructions also assume that you have built the DTB files from the kernel sources.
 
 ## Getting the skales tools
 
