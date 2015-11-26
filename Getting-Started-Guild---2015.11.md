@@ -53,10 +53,10 @@ To get started you will need a power supply, an HDMI monitor, a USB keyboard and
 
 ### Power Supply
 
-The HiKey board requires an external power supply providing 12V at 2A. (The board will also work with 9V or 15V power supplies). It is not possible to power the board from a USB power supply because the board can use more power than is available from a standard USB power supply.
- 
-The HiKey board uses a DC jack with a 1.7mm barrel, center pin positive. An adapter cable is provided with the board to also enable the use of power supplies with 2.1mm barrel jack. 
+The HiKey board requires an external power supply providing 12V at 2A. (The board will also work with 9V or 15V power supplies). It is not possible to power the board from a USB power supply because we are not designing HiKey that way. Reasons behind that come from many folds: such as the board can use more power than is available from a standard USB power supply, and we supports both USB OTG and USB Host.
 
+The HiKey board uses a DC jack with a 1.7mm barrel, center pin positive. An adapter cable is provided with the board to also enable the use of power supplies with 2.1mm barrel jack. 
+ 
 ### Monitor
 
 A standard monitor or TV supporting at least 640x480 resolution is required. Interlaced operation is not currently supported. The maximum resolutions currently supported are 1920x1080p or 1920x1200p. Information on selecting the resolution is [provided below](#section-52).
