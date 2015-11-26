@@ -4,80 +4,64 @@
 
 ## Getting Started
 
-This document describes how to get started with the HiKey ARMv8 community development boards using latest Snapshot software rather than the release build shipped with the boards. 
+This document describes how to get started with the HiKey ARMv8 community development boards using latest snapshot software rather than the release build shipped with the boards. 
 
-##### Comments: (information useful for future editing) <br/>
-. We need to add this new section: how to upgrade from a (obsoleted) fastboot bootloader to a UEFI bootloader.
+##### Comments: (information useful for future editing) 
+. We need to add this new section: how to upgrade from obsoleted fastboot bootloader to a UEFI bootloader.
 This is the same as section: 
 Board Recovery
-Information on board recovery and/or loading bootloader software onto the HiKey board <br/>
-
+Information on board recovery and/or loading bootloader software on the HiKey board 
 
 THIS IS WORK IN PROGRESS
 
-The current builds this document refers to are:<br/>
-UEFI snapshot build #81<br/>
-DEBIAN community snapshot build #366<br/>
+The current builds this document refers to are:
+UEFI snapshot build #91
+DEBIAN snapshot build #382
 
-Note that the June 2015 released fastboot bootloader based on HiSilicon code is being deprecated and will not be supported in the next release. This Getting Started Guide therefore refers to the open source Arm Trusted Firmware and UEFI bootloader which will become the standard bootloader for the HiKey board.
-
-As we transition to UEFI, these set of kernel changes have been merged into the HiKey kernel.<br/>
-* https://github.com/96boards/linux/pull/108 - hikey <br/>
-* https://github.com/96boards/linux/pull/106 - hikey-mainline-rebase <br/>
-
-**The kernel branches containing the above changes (hikey and hikey-mainline-rebase) will only boot with UEFI.**
+Note that the June 2015 release comes with a fastboot bootloader based on HiSilicon code. It is deprecated and will not be supported in the upcoming releases. This Getting Started Guide therefore refers to the open source ARM Trusted Firmware and UEFI bootloader. It is the supported bootloader for the HiKey board.
  
 **The following information is provided in these release notes:**
 
-1. [Snapshot information](#section-0)<br/>
-2. [Pre-Installed Debian Linux](#section-1)<br/>
+1. [Snapshot information](#section-0)
+2. [Pre-Installed Debian Linux](#section-1)
 Information on the Debian 8.0 ("jessie") OS installation software
-3. [Installing Android Open Source Project](#section-2)<br/>Information on loading the AOSP version of Android 5.1 as an alternative OS onto the HiKey board
-4. [Updating the OS](#section-3)<br/>
+3. [Installing Android Open Source Project](#section-2)Information on loading the AOSP version of Android 5.1 as an alternative OS onto the HiKey board
+4. [Updating the OS](#section-3)
 Information on loading an OS update from 96Boards.org
-5. [Board Recovery](#section-4)<br/>
+5. [Board Recovery](#section-4)
 Information on board recovery and/or loading bootloader software onto the HiKey board
 6. [Hardware notes](#section-5)
 7. [Known Issues](#section-6)
-8. [Building Software from Source Code](#section-7)<br/>
+8. [Building Software from Source Code](#section-7)
 Information on building software for the HiKey board from source code
-9. [Appendices](#appendix-1)<br/>
+9. [Appendices](#appendix-1)
 Information on the partition table used on HiKey and the contents of the boot partition.
-10. [New Features](#appendix-2)<br/>
+10. [New Features](#appendix-2)
 Information on key new features introduced in this release. 
 
 ### Updating to the new Release
-If you already have a HiKey board you will need to do the following:
-- First, follow the instructions in [Board Recovery - Installing a Bootloader](#section-41), to update the bootloader software on your board
-- Then follow the instructions in [Updating the OS](#section-3), to install either the Debian or the Android Open Source Project (AOSP) build
+
+If you already have a HiKey board, you will need to do the following:
+- Follow the instructions in [Board Recovery - Installing a Bootloader](#section-41), to update the bootloader on your board
+- Follow the instructions in [Updating the OS](#section-3), to install either the Debian or the Android Open Source Project (AOSP) build
 
 <a name="section-0"></a>
-## 1. Snapshot release information 
+## 1. Snapshot release information
 
-1. Debian [#344](https://builds.96boards.org/snapshots/hikey/linaro/debian/344/) requires UEFI [#58](https://builds.96boards.org/snapshots/hikey/linaro/uefi/58/). <br/>
-a) No backwards compatibility <br/>
-b) The OS and bootloader MUST be updated together <br/>
-c) MCU firmware updated <br\>
-d) PSCI features supported: cpuidle, cpufreq, cpu hotplug and suspend/resume <br/>
-e) fastboot bootloader officially deprecated (device tree requires PSCI). <br/>
-
-2. Debian [#345](https://builds.96boards.org/snapshots/hikey/linaro/debian/345/): <br/>
-a) extended support for more HDMI modes <br/>
-b) switchable through hotkey 'Alt'+'PrtSc'+'g' <br/>
-c) SYSPLL reads from pctrl registers (therefore compatible with both 1.2GHz and 1.19GHz UEFI) <br/>
-
-3. Starting from Debian [#366](https://builds.96boards.org/snapshots/hikey/linaro/debian/345/), two files for HiSilicon proprietary fastboot bootloader support: boot-fat.emmc.img.gz and hi6220-hikey-spin-table.dtb are moved out of snapshot builds. As say, we don't support fastboot bootloader any more. <br/>
-
-4. UEFI [#85](https://builds.96boards.org/snapshots/hikey/linaro/uefi/85/), Debian [#373](https://builds.96boards.org/snapshots/hikey/linaro/debian/373/), need to upgrade together. Starting from these two snapshots, new booting sequence was added into UEFI. It checks SD card booting first, if failed, falls back to eMMC. <br/>
-
-5. Starting from Debian [#379](https://builds.96boards.org/snapshots/hikey/linaro/debian/379/), SD high speed cards (SDR50, SDR104, and DDR50) are supported. 
-
+- It is recommended to update the booloader and OS together 
+- MCU firmware updated <br\>
+- PSCI features supported: cpuidle, cpufreq, cpu hotplug and suspend/resume 
+- extended support for more HDMI modes 
+- switchable through hotkey 'Alt'+'PrtSc'+'g' 
+- SYSPLL reads from pctrl registers (therefore compatible with both 1.2GHz and 1.19GHz UEFI) 
+- new boot sequence: SD card booting first, fallback to eMMC. 
+- SD high speed cards (SDR50, SDR104, and DDR50) are supported.
 
 <a name="section-1"></a>
 ## 2. Pre-Installed Debian Linux 
 The HiKey board is ready to use “out of the box” with a preinstalled version of the Debian Linux distribution.
 
-To get started you will need a power supply, an HDMI monitor and a USB keyboard and mouse. 
+To get started you will need a power supply, an HDMI monitor, a USB keyboard and a mouse.
 
 **IMPORTANT NOTES**
 
@@ -85,44 +69,48 @@ To get started you will need a power supply, an HDMI monitor and a USB keyboard 
 - There are limitations on the usage of the USB ports on the HiKey board. Please refer to the [Hardware section](#section-53) in the document for further information.
 
 ### Power Supply
+
 The HiKey board requires an external power supply providing 12V at 2A. (The board will also work with 9V or 15V power supplies). It is not possible to power the board from a USB power supply because the board can use more power than is available from a standard USB power supply.
  
-The HiKey board uses a standard DC Jack with a 1.7mm barrel, center pin positive. An adapter cable is provided with the board to also enable the use of power supplies with 2.1mm barrel jacks. 
+The HiKey board uses a DC jack with a 1.7mm barrel, center pin positive. An adapter cable is provided with the board to also enable the use of power supplies with 2.1mm barrel jack. 
 
-### Monitor, Keyboard and Mouse
-A standard monitor or TV supporting at least 640x480 resolution is required. Interlaced operation is not currently supported. The maximum resolutions currently supported are 1920x1080p or 1920x1200p. Information on selecting the resolution is [provided below](#section-52). The keyboard and mouse can be combined or separate. 
+### Monitor
 
-### Powering up the Board
+A standard monitor or TV supporting at least 640x480 resolution is required. Interlaced operation is not currently supported. The maximum resolutions currently supported are 1920x1080p or 1920x1200p. Information on selecting the resolution is [provided below](#section-52).
+
+### Powering up the board
+
 Link 1-2 causes HiKey to auto-power up when power is applied. The other two links should be not fitted (open). If Link 1-2 is not installed then the back edge push button switch is used to power on the HiKey board. 
 
 Please refer to the Hardware User Guide (Chapter 1. Settings Jumper) for more information on board link options.
 
-A few seconds after applying power the right hand green User LED0 will start flashing once per second. The next User LED1 is used as a disk indicator showing access to the on-board eMMC flash memory. The startup console messages will then appear on the connected HDMI screen. 
+A few seconds after applying power the right hand green User LED0 will start flashing once per second. The next User LED1 is used as a disk indicator showing access to the on-board eMMC flash memory. The startup console messages will then appear on the connected HDMI screen.
 
-After about 10 seconds the LXDE User Interface will appear and you can start using the HiKey Linux software. 
-
-Next we describe how to set up wireless or wired networking and Bluetooth interfaces.
+After about 10 seconds the LXDE User Interface will appear and you can start using the HiKey Linux software.
 
 ### Wireless Network
-The HiKey board includes built in 2.4GHz IEEE802.11g/n WiFi networking. The board does not support the 5GHz band. To use the wireless LAN interface for the first time (or to switch wireless networks) you should click on the wireless LAN icon on the bottom right of the desktop display. The yellow LED between the microUSB and the Type A USB on the front board edge indicates wireless network activity.<br\><br\>
 
-You can configure the network from UI (Network Manager), or manually from console:
+The HiKey board includes built in 2.4GHz IEEE802.11g/n WiFi networking. The board does not support the 5GHz band. To use the wireless LAN interface for the first time (or to switch wireless networks) you should click on the wireless LAN icon on the bottom right of the desktop display. The yellow LED between the microUSB and the Type A USB on the front board edge indicates wireless network activity.
+
+You can configure the network from UI, or manually from console:
 
 ```
-$ sudo nmcli dev wifi con <SSID> password <your-WPA-password> name <your-network-name>
+$ sudo nmtui
 ```
-Insert your the SSID, password and a name to refer to the network by into the line above.
+
+Select 'Activate a connection', Choose your WiFi access point (SSID) and fill the relevant information (password, etc...)
 
 You can check network status by issuing this command.
 ```
-$ sudo nmcli dev status
 $ sudo nmcli dev wifi
 ```
 
 ### Wired Network
+
 You can connect to a wired network by using a USB Ethernet adapter. Supported adapters should automatically work when the adapter is installed. Please read the [information below](#section-53) on USB port speeds on the HiKey hardware. 
 
 ### Bluetooth
+
 The HiKey board includes built-in Bluetooth 4.0 LE support.
 
 To setup a Bluetooth device open the Bluetooth Manager from the Preferences menu. If a “Bluetooth Turned Off” popup appears then select “Enable Bluetooth”. Click on "Search" to search for devices. Try with your bluetooth audio and bluetooth keyboard/mouse. If you make the device trusted then this should operate over a reboot of the board.
@@ -130,7 +118,8 @@ To setup a Bluetooth device open the Bluetooth Manager from the Preferences menu
 The blue LED between the microUSB and the Type A USB on the front board edge indicates bluetooth activity.
 
 ### Audio Device
-Bluetooth audio devices are supported on HiKey. Follow normal procedures of connecting a bluetooth device to connect to your HiKey.
+
+Bluetooth audio devices are supported on HiKey. Follow normal procedures of connecting a bluetooth device to connect to your board.
 
 Note: HDMI audio is not supported in this release.
 
@@ -144,30 +133,29 @@ Before adding any software to your system you must do an update as follows:
 ```
 $ sudo apt-get update
 ```
-You can now add Debian packages to your system:
+You can now add install software to your system:
 ```
 $ sudo apt-get install [package-name]
 ```
-You can search for available packages here: 
-[https://www.debian.org/distrib/packages](https://www.debian.org/distrib/packages)
-
-Search the stable distribution for packages for the HiKey.
+You can search for available packages: 
+```
+$ apt-cache search [pattern]
+```
 
 **2. File Systems**
 
-HiKey comes with two eMMC size: 4GB and 8GB. The following is the default file system layout for 4GB HiKey running Debian:
-```
-/dev/mmcblk0p4    64M    15M    49M     /boot     copy of boot file system
-/dev/mmcblk0p9    3.0G   1.2G   1.8G    /         main user space file system
-```
+HiKey comes with two eMMC size: 4GB and 8GB.
 
 **3. Logging in**
 
-The default user name is "linaro" and the default password for user linaro is "linaro".
+The default user name is "linaro" and the default password for user linaro is also "linaro".
 
 **4. Clock**
 
-The HiKey board does not support a battery powered RTC. System time will be obtained from the network if available. If you are not connecting to a network you will need to manually set the date on each power up.
+The HiKey board does not support a battery powered RTC. System time will be obtained from the network if available. If you are not connecting to a network you will need to manually set the date on each power up or use fake-hwclock:
+```
+$ sudo apt-get install fake-hwclock
+```
 
 <a name="section-15"></a>
 **5. USB** 
@@ -176,7 +164,7 @@ A utility is provided in /home/linaro/bin to change the configuration of the hos
 
 For information on using the utility do the following:
 ```
-$ sudo ~/bin/usb_speed -h
+$ sudo usb_speed -h
 ```
 Please refer to the [Hardware Notes section below](#section-53) for further information on the USB port configuration of the HiKey board.
 
@@ -195,44 +183,43 @@ user_led4 | CPU core 0 active
 
 To change a user LED you can do the following as a root user:
 ```
-$ su bash
 # echo heartbeat > /sys/class/leds/<led_dir>/trigger      make a LED flash
 # cat /sys/class/leds/<led_dir>/trigger                   show triggers
 # echo none > /sys/class/leds/<led_dir>/trigger           remove triggers    
 # echo 1 > /sys/class/leds/<led_dir>/brightness           turn LED on
 # echo 0 > /sys/class/leds/<led_dir>/brightness           turn LED off
-# exit
-$
 ```
 
 <a name="section-2"></a>
-## 3. Installing Android Open Source Project 
+## 3. Installing build of Android Open Source Project 
 
-IMPORTANT NOTE:<br/>
+IMPORTANT NOTE:
 Note that for this release you MUST first update the bootloader using the procedure described in [Board Recovery - Installing a Bootloader](#section-41). If you have not already done this then you will need to do so before proceeding.
 
-Users may install a version of the Android Open Source Project (AOSP) onto the HiKey board. This will remove the factory installed Debian Linux OS. This section provides instructions on installing the AOSP build which consists of:
+Users may install a version of the build of Android Open Source Project (AOSP) onto the HiKey board. This will remove the factory installed Debian Linux OS. This section provides instructions on installing the AOSP build which consists of:
 - Derived from Linux 3.18 kernel
-- AOSP Android Lollipop latest release (5.1)
+- AOSP Android Lollipop (5.x)
 
 Download the following files from:
 [http://builds.96boards.org/releases/hikey/linaro/aosp/latest](http://builds.96boards.org/releases/hikey/linaro/aosp/latest)
 - boot_fat.uefi.img.tar.xz
 - cache.img.tar.xz
 - system.img.tar.xz
-- userdata.img.tar.xz
+- userdata-4gb.img.tar.xz (for 4G board) or userdata-8gb.img.tar.xz (for 8G board)
 
 Download the following file from:
 [http://builds.96boards.org/releases/hikey/linaro/binaries/latest](http://builds.96boards.org/releases/hikey/linaro/binaries/latest)
-- [ptable-aosp.img](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-aosp.img)
+- [ptable-aosp-4g.img](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-aosp-4g.img)
+or
+- [ptable-aosp-8g.img](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-aosp-8g.img)
 
 Uncompress the .tar.xz files using your operating system file manager, or with the following command for each file:
 ```
-$ xz --decompress [filename].tar.xz; tar -xvf [filename].tar
+$ tar -Jxf [filename].tar.xz
 ```
-To install updates you will need a Linux PC with fastboot support. For information on installing and setting up ATF/UEFI bootloader to HiKey, see [Board Recovery - Installing a Bootloader](#section-41) below.
+To install updates you will need a Linux PC with fastboot support. For information on installing and setting up UEFI bootloader to HiKey, see [Board Recovery - Installing a Bootloader](#section-41) below.
 
-After setting up Fastboot on your Linux PC do the following:
+After setting up fastboot on your Linux PC do the following:
 
 Install Link 5-6 on the HiKey board. This tells the bootloader to start up in fastboot mode.
 
@@ -243,10 +230,10 @@ $ sudo fastboot devices
 ```
 
 Then install the update using the downloaded files.
-Note that the ptable must be flashed first. Wait for a few seconds after the reboot command to allow the bootloader to restart using the new partition table. 
-Note also that the larger system file will take a few minutes due to its size. 
+
+Note: the ptable must be flashed first. Wait for a few seconds after the reboot command to allow the bootloader to restart using the new partition table.
 ```
-$ sudo fastboot flash ptable ptable-aosp.img
+$ sudo fastboot flash ptable ptable-aosp-8g.img
 $ sudo fastboot reboot
 $ sudo fastboot flash boot boot_fat.uefi.img
 $ sudo fastboot flash cache cache.img
@@ -256,27 +243,21 @@ $ sudo fastboot flash userdata userdata.img
 
 When flashing is completed power down the HiKey, remove Link 5-6 and power up the HiKey. You may now use the AOSP operating system.  Note the first time boot up will take a couple of minutes. 
 
-Please read the Hardware notes and the Known Issues later in this document before using the OS.
+Please read the Hardware notes and the Known Issues in this document before using the OS.
 
 <a name="section-3"></a>
 ## 4. Updating the OS 
 
-Updates to 96Boards supported operating systems will be made available from time to time at: 
+Updates to 96Boards supported operating systems will be made available at:
 [http://builds.96boards.org/releases/hikey](http://builds.96boards.org/releases/hikey)
-
-For Debian, to determine which release you are running do the following from a command prompt:
-```
-$ uname -a
-```
-From the output "is XXX MMM xx xx:xx:xx UTC 20YY ", you find build date MMM.YY, then you know which release you are running.
 
 Developer snapshot updates are also provided at:
 [http://builds.96boards.org/snapshots/hikey](http://builds.96boards.org/snapshots/hikey)
 
-Note that these snapshots represent engineering work in progress towards the next release. They may not be functional or stable and are provided as is without support. 
+Note that these snapshots represent engineering work in progress towards the next release. They may not be functional or stable and are provided as-is without support. 
 
-IMPORTANT NOTE:<br/>
-The installation process will overwrite all contents of the eMMC memory. This will remove all installed software and all user files. Before updating the OS make sure that you have saved any user files or data that you want to keep onto an SD Card or USB memory stick etc.<br/><br/>
+IMPORTANT NOTE:
+The installation process will overwrite all contents of the eMMC memory. This will remove all installed software and all user files. Before updating the OS, make sure that you have saved any user files or data that you want to keep onto an SD Card or USB memory stick.
 Note that for this release you MUST first update the bootloader using the procedure described in [Board Recovery - Installing a Bootloader](#section-41). If you have not already done this then you will need to do so before proceeding.
 
 To install updates you will need a Linux PC with fastboot support. See [section here](#section-42) about how to that for your Linux PC.
@@ -288,11 +269,15 @@ Once fastboot is installed on the Linux PC proceed as follows:
 Download the following files onto your Linux PC from: 
 [http://builds.96boards.org/releases/hikey/linaro/debian/latest](http://builds.96boards.org/releases/hikey/linaro/debian/latest)
 - boot-fat.uefi.img.gz
-- hikey-jessie_alip_2015MMDD-nnn.emmc.img.gz
-- ptable-linux.img
-- hikey-jessie_developer_2015MMDD-nnn.img.gz
+- hikey-jessie_alip_2015MMDD-nnn-4g.emmc.img.gz (for 4G board) or hikey-jessie_alip_2015MMDD-nnn-8g.img.gz (for 8G board)
 
-Note that the jessie image is a large file and may take several minutes (or longer on a slow internet connection) to load. You will need to accept the end user license for the Mali GPU software before you are able to download the OS image. 
+Download the following file from:
+[http://builds.96boards.org/releases/hikey/linaro/binaries/latest](http://builds.96boards.org/releases/hikey/linaro/binaries/latest)
+- [ptable-linux-4g.img](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-linux-4g.img)
+or
+- [ptable-linux-8g.img](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-linux-8g.img)
+
+Note that the Debian image is a large file and may take several minutes (or longer on a slow internet connection) to load. You will need to accept the end user license for the Mali GPU software before you are able to download the OS image. 
 
 Unzip the .gz files (using gunzip or equivalent)
 
@@ -306,14 +291,14 @@ $ sudo fastboot devices
 
 Then install the update using the downloaded files:
 
-Note: The ptable-linux.img must be flashed first.<br/>
-Note: The larger system file will take longer and will be loaded in several chunks due to its size.
+Note: the ptable must be flashed first. Wait for a few seconds after the reboot command to allow the bootloader to restart using the new partition table.
 ```
-$ sudo fastboot flash ptable ptable-linux.img
+$ sudo fastboot flash ptable ptable-linux-8g.img
+$ sudo fastboot reboot
 $ sudo fastboot flash boot boot-fat.uefi.img
-$ sudo fastboot flash system hikey-jessie_alip_2015MMDD-nnn.emmc.img
+$ sudo fastboot flash system hikey-jessie_alip_2015MMDD-nnn-8g.emmc.img
 ```
-When completed, power down the HiKey, remove Link 5-6 and power up the HiKey.  If you wish to use a keyboard and mouse in the Type A USB ports, remember to remove the microUSB cable. 
+When completed, power down the HiKey, remove Link 5-6 and power up the HiKey. If you wish to use a keyboard and mouse in the Type A USB ports, remember to remove the microUSB cable. 
 
 You may now use the updated OS.
 
@@ -325,41 +310,25 @@ This section describes how to prepare a bootable SD card.
 
 Download the following file onto your Linux PC from: 
 [http://builds.96boards.org/releases/hikey/linaro/debian/latest](http://builds.96boards.org/releases/hikey/linaro/debian/latest)
-  - hikey-jessie_alip_2015MMDD-nnn.img.gz
-  - hikey-jessie_developer_2015MMDD-nnn.img.gz
+  - hikey-jessie_alip_2015MMDD-nnn-4g.img.gz or hikey-jessie_alip_2015MMDD-nnn-8g.img.gz
 
 Note: _developer version comes with no graphics UI; _alip version comes with LXDE UI.
 
-Unzip the .gz file.  Install an SD card into your Linux PC. Make sure that you know the SD card device node before carrying out the next step.
+Extract the file. Install an SD card into your Linux PC. Make sure that you know the SD card device node before carrying out the next step.
 
 **Note:** for this example we assume the device node is `/dev/sdb`. Replace with your assigned SD card device.
 
 ```
-$ sudo dd if=hikey-jessie_alip_2015MMDD-nnn.img of=/dev/[sdb] bs=4M oflag=sync status=noxfer
+$ sudo dd if=hikey-jessie_alip_2015MMDD-nnn-8g.img of=/dev/[sdb] bs=4M oflag=sync status=noxfer
 ```
 
-If your SD card is more than 2GB capacity you may want to change the rootfs to use the rest of the SD card as follows:
+If your SD card capacity is more than 2GB capacity you may want to change the rootfs to use the rest of the SD card as follows:
 ```
-$ sudo fdisk /dev/sdb
+$ sudo resize-helper.sh
 ```
-- use p to list partitions
-- note the start cylinder number of rootfs
-- use d to delete the root partition info
-- use n to create the new primary partition (the start cylinder must be same as before)
-- use w to write the partition table (don’t worry about error message)
-- remove the disk and re-insert
-
-Then the following command will make the file system take up all the space left on the SD card
-```
-$ sudo resize2fs /dev/sdb2
-```
-If you power up and boot the HiKey board with the SD card the kernel and software on the SD card will be used and not the eMMC. **TODO: verify this** Your user files will also be created on the SD card. You may still access the eMMC files as follows:
-```
-$ sudo mount /dev/mmcblk0p9 /mnt
-```
-Note: Do not mount and access other partitions on the eMMC unless you are an expert. The bootloader and other binary files necessary for correct operation are stored in the eMMC and if they are removed or changed your board may become “bricked”, in which case all your data will be lost and you will need to follow the process in [Board Recovery](#section-4) to reload the HiKey software. 
 
 ### Android Open Source Project (AOSP)
+
 Instructions about installing AOSP on HiKey are described in [this Section above](#section-2).
 
 <a name="section-4"></a>
@@ -369,19 +338,14 @@ Instructions about installing AOSP on HiKey are described in [this Section above
 ### Installing a Bootloader 
 
 For most users a board can be “recovered” from a software failure by reloading the operating system using the instructions provided above. However, if the primary bootloader in the eMMC flash memory has been corrupted then the bootloader will need to be re-installed. This section describes how to reinstall the primary bootloader. 
-
-IMPORTANT NOTE:<br/>
-Note that for this release you MUST first update the primary bootloader using the information in this section. This is because the original closed source bootloader has been superseded by an open source UEFI bootloader for the HiKey board. 
  
 **Preparation**
-
-**TODO: Change these URLs to RELEASE URLs for final release notes**
 
 Download the following files onto a Linux PC:
 * [l-loader.bin](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/l-loader.bin)
 * [fip.bin](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/fip.bin)
-* [ptable-linux.img for Debian](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux.img) or
-* [ptable-aosp.img for AOSP](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-aosp.img)
+* [ptable-linux.img for Debian](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux-8g.img) or the 4G variant
+* [ptable-aosp.img for AOSP](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-aosp-8.img) or the 4G variant
 * [nvme.img](https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/nvme.img)
 
 You will also need the boot partition for the OS Image you want to run
@@ -394,7 +358,8 @@ For example, to download the latest UEFI build and boot partition for Debian do:
 ```shell
 $ wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/l-loader.bin
 $ wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/fip.bin
-$ wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux.img
+$ wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux-4g.img
+$ wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux-8g.img
 $ wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/nvme.img
 $ wget https://builds.96boards.org/snapshots/hikey/linaro/debian/latest/boot-fat.uefi.img.gz
 ```
@@ -434,25 +399,24 @@ $ ls /dev/ttyUSB*
 or
 $ dmesg
 ```
-The following instructions assume that `/dev/ttyUSB0` is the tty port for communication with the HiKey board. Adjust the port for your own tty port. 
-
-[hisi-idt.py](https://raw.githubusercontent.com/96boards/burn-boot/master/hisi-idt.py) is the Python download tool for the HiKey. This is used to install the bootloader as follows:
+[hisi-idt.py](https://raw.githubusercontent.com/96boards/burn-boot/master/hisi-idt.py) is the download tool for the HiKey. This is used to install the bootloader as follows:
 
 Execute the following commands as a script or individually:
 
-First, get the Python script that is needed to load the initial boot software onto the SoC:
+First, get the script that is needed to load the initial boot software:
 ```
 $ wget https://raw.githubusercontent.com/96boards/burn-boot/master/hisi-idt.py
 ```
 Run the script to initially prepare fastboot (make sure the modem interface is in the right ttyUSB as previously suggested):
 ```
-$ sudo python hisi-idt.py --img1=l-loader.bin -d /dev/ttyUSB0
+$ sudo python hisi-idt.py --img1=l-loader.bin
 ```
 After the python command has been issued you should see the following output. If you do not then see the "Problems with Python Downloader" section below
 ```
 +----------------------+
- Serial:  /dev/ttyUSB0
+ Serial:  /dev/serial/by-id/usb-䕇䕎䥎_㄰㌲㔴㜶㤸-if00-port0
  Image1:  l-loader.bin
+ Image2:  
 +----------------------+
 
 Sending l-loader.bin ...
@@ -460,16 +424,16 @@ Done
 ```
 Note: You may see the word “failed” before Done. This is under investigation but is not fatal. As long as the “Done” is printed at the end you may proceed.
 
-The bootloader has now been installed into RAM. Wait a few seconds for the fastboot application to actually load. The following fastboot commands then load the partition table, the bootloader and other necessary files into the HiKey eMMC flash memory.
+The bootloader has now been installed into RAM. Wait a few seconds for the fastboot application to actually load. The following fastboot commands then load the partition table, the bootloader and other necessary files into the HiKey eMMC flash memory (4G or 8G).
 ```
-$ sudo fastboot flash ptable ptable-linux.img
+$ sudo fastboot flash ptable ptable-linux-8g.img
 $ sudo fastboot flash fastboot fip.bin
 $ sudo fastboot flash nvme nvme.img
 $ sudo fastboot flash boot boot-fat.uefi.img
 $ sudo fastboot reboot
 ```
 
-Once this has been completed the bootloader has been installed into eMMC.<br/>
+Once this has been completed the bootloader has been installed into eMMC.
 Power off the HiKey board by removing the power supply jack.
 
 Next change the link configuration as follows:
@@ -481,7 +445,9 @@ Boot Select | Link 3-4 | open
 GPIO3-1 | Link 5-6 | closed
 
 Now connect power supply jack to your HiKey again.
-Check that the HiKey board is detected by your Linux PC:<br/>
+
+Check that the HiKey board is detected by your Linux PC
+
 You should see the ID of the HiKey board returned
 ```
 $ sudo fastboot devices
@@ -490,18 +456,20 @@ $ sudo fastboot devices
 
 Your bootloader has been successfully installed and you are now ready to install the operating system system files into the eMMC flash memory (see [Updating the OS](#section-3), above). For Debian you will need to load only the system partition, and for AOSP the cache, system and user data partitions. 
 
-**Note:**<br/>
+**Note:**
+
 This bootloader is based on UEFI and includes:
 - ARM Trusted Firmware
 - UEFI with DeviceTree
-- Grub
-- Fastboot support
+- GRUB
+- fastboot support
+- OP-TEE support
 
-For further information on the bootloader, including how to build it from source, see the 96Boards documentation here:<br/>
+For further information on the bootloader, including how to build it from source, see the 96Boards documentation here:
 - [HiKey Bootloader Wiki](https://github.com/96boards/documentation/wiki/HiKeyUEFI)
 
 <a name="section-42"></a>
-**Installing Fastboot onto your PC**<br/>
+**Installing Fastboot onto your PC**
 Step 1: Use the following commands
 ```
 $ sudo apt-get install android-tools-fastboot      On Debian/Ubuntu
@@ -510,7 +478,7 @@ $ sudo yum install android-tools                   On Fedora
 
 Step 2: Either create the file: /etc/udev/rules.d/51-android.rules with the following content, or append the content to the file if it already exists. You will need to have superuser privileges so use
 ```
-$ sudo vi /etc/udev/rules.d/51-android.rules       or 
+$ sudo vim /etc/udev/rules.d/51-android.rules       or 
 $ sudo gedit /etc/udev/rules.d/51-android.rules
 ```
  to create and edit the file.  Add the following to the file.
@@ -562,8 +530,9 @@ $ sudo pip2.7 install pyserial
 - [Hardware User Guide](https://www.96boards.org/hikey-userguide)
 
 <a name="section-51"></a>
-### CPU Load 
-The supplied Linux 3.18-based kernel supports the thermal protection framework and DVFS. This will cause the HiKey CPU core frequencies to be reduced from the maximum 1.2GHz if the thermal setpoint of the SoC is reached. In an extreme case thermal shutoff will occur if DVFS has not been effective at reducing the SoC temperature to an acceptable level.
+### CPU Load
+ 
+The current supplied Linux 3.18-based kernel supports the thermal protection framework and DVFS. This will cause the HiKey CPU core frequencies to be reduced from the maximum 1.2GHz if the thermal setpoint of the SoC is reached. In an extreme case thermal shutoff will occur if DVFS has not been effective at reducing the SoC temperature to an acceptable level.
 
 Higher performance may be obtained by using forced air (fan) cooling on the HiKey board.
 
@@ -583,29 +552,35 @@ Resolution | Ratio | Usually on
 800x600	| 4:3 | TV
 
 **Debian Build**
-The Debian build uses Linux DRM drivers for the graphics system. When first powered up the board will attempt to read the EDID display data from the attached TV/monitor. It will then select the highest resolution format available up to 1920x1080 pixels. If all is well the selected default will work on your TV/Monitor and no more needs to be done. However, in some cases your monitor may not display correctly on the selected setting because the timing is not exactly correct. In this case we have provided a facility to enable you to cycle through the available EDID modes to find one that works correctly for your TV/Monitor.<br\><br\>
-After the board has booted the User0 LED should be heartbeating about once per second. Using a connected keyboard cycle through the available EDID modes using the following key sequence:<br\>
-Right_Alt + PrintScr + G<br\><br\>
-Press the right hand Alt Key then the PrintScr key and then the G key so that finally all the keys are pressed. Each time you enter this sequence the HiKey will switch to the next screen mode. When you find one that works well write down the resolution and frequency from the TV display - for example 1280x1024@75Hz.<br\><br\>
+
+The Debian build uses Linux DRM drivers for the graphics system. When first powered up the board will attempt to read the EDID display data from the attached TV/monitor. It will then select the highest resolution format available up to 1920x1080 pixels. If all is well the selected default will work on your TV/Monitor and no more needs to be done. However, in some cases your monitor may not display correctly on the selected setting because the timing is not exactly correct. In this case we have provided a facility to enable you to cycle through the available EDID modes to find one that works correctly for your TV/Monitor.
+
+After the board has booted the User0 LED should be heartbeating about once per second. Using a connected keyboard cycle through the available EDID modes using the following key sequence: Right_Alt + PrintScr + G
+
+Press the right hand Alt Key then the PrintScr key and then the G key so that finally all the keys are pressed. Each time you enter this sequence the HiKey will switch to the next screen mode. When you find one that works well write down the resolution and frequency from the TV display - for example 1280x1024@75Hz.
+
 Once you have found a working resolution you may edit the grub.cfg file to make the new mode the default boot mode. Be very careful not to make mistakes editing this file or your kernel may not boot correctly. Note this file needs su privileges to modify:
 ```
-$ sudo vi /boot/grub/grub.cfg
+$ sudo vim /boot/grub/grub.cfg
 ```
-Add the chosen display format into the file at the end of the linux line in the following format, replacing 1280x1024 with your selected resolution and 75 with your selected frequency. 
+Add the chosen display format into the file at the end of the linux line in the following format, replacing 1280x1024 with your selected resolution and 75 with your selected frequency.
 ```
 video=HDMI-A-1:1280x1024@75
 ```
-[Note - at present the desktop screen does not resize correctly for each resolution - this is planned to be fixed next release.]
+[Note - at present the desktop screen does not resize correctly for each resolution - this is planned to be fixed in a future release.]
 
 Finally, **if you are still having difficulties you can revert to a built-in 720p mode by starting up the HiKey with no HDMI device attached**. The UI will then come up at a fixed 1280x720 resolution which will be used when you then plug the HDMI monitor in. **Pressing hotkey Alt+PrtScr+g  will switch to a built-in 800x600 mode, then cycle back.**
 
 **Android Build**
+
 [Information on Android To Be Written]
 At the moment resolution is locked at **1280x720p.**(do not use hotkey Alt+PrtScr+g).<br\>
-Note that the fixed settings may not work on all monitors/TVs but have been demonstrated to work on most. 
+
+Note: the fixed settings may not work on all monitors/TVs but have been demonstrated to work on most. 
 
 <a name="section-53"></a>
 ### USB Ports 
+
 There are multiple USB ports on the HiKey board:
 - One microUSB OTG port on the front edge of the board
 - Two Type A USB 2.0 host ports on the front edge of the board
@@ -613,7 +588,7 @@ There are multiple USB ports on the HiKey board:
 
 Please read the HiKey Board Hardware User Guide for more information on the following hardware restrictions:
 
-1. The microUSB OTG port may be used (in host or slave mode) OR the Type A host ports may be used. They may not both be used simultaneously. If a cable is inserted into the OTG port then the Type A ports and the expansion bus port will be automatically disabled. 
+1. The microUSB OTG port may be used (in host or slave mode) OR the Type A host ports may be used. They may not both be used simultaneously. If a cable is inserted into the OTG port then the Type A ports and the expansion bus port will be automatically disabled.
 2. For the microUSB OTG port a single Low Speed (1.5Mbit/sec), Full Speed (12Mbit/sec) or High Speed (480Mbit/sec) device is supported.
 3. For the USB host ports all attached USB devices MUST be one of the following two options:
     - Low Speed (1.5Mbit/sec) and Full Speed (12Mbit/sec) devices, or
@@ -625,28 +600,26 @@ The reason for this limitation is that USB 2.0 split transfers are not supported
 
 In order to address this limitation the USB ports are by default configured into Low/Full speed operation.
 
-In Debian the `usb_speed utility` (use `-h` option for help) is provided in `/home/linaro/bin` to switch the USB ports between modes (see [Other Useful Information](#section-15) above for details on this utility).
- 
+In Debian the `usb_speed utility` (use `-h` option for help) is provided to switch the USB ports between modes (see [Other Useful Information](#section-15) above for details on this utility).
+
 In the AOSP build a small application is provided (usb-speed-switch) to change between High Speed and Full Speed operation.
 
 <a name="section-54"></a>
 ### UART Ports 
-In Debian the two 96Boards expansion IO UART serial ports will appear as `/dev/ttyAMA2` and `/dev/ttyAMA3` and are configured at 115200 baud by default. Note in this release by default, UEFI and Kernel console are directed to /dev/ttyAMA3.
 
-Alternatively, you can modify the grub.cfg and the inittab file in the system image to switch to other UART.
+In Debian, the two 96Boards expansion IO UART serial ports will appear as `/dev/ttyAMA2` and `/dev/ttyAMA3` and are configured at 115200 baud by default. Note: UEFI and kernel console are directed to /dev/ttyAMA3.
 
-* grub.cfg (linux boot line) <br\>
-`linux /Image console=tty0 console=ttyAMA3,115200 root=/dev/disk/by-partlabel/system rootwait rw quiet efi=noruntime`
+Alternatively, you can modify grub.cfg in the system image to switch to other UART.
 
-* inittab (init tty line) <br\>
-`ttyAMA3::respawn:/sbin/getty -L  ttyAMA3 115200 vt100 # GENERIC_SERIAL`
+* /boot/grub/grub.cfg (linux boot line) <br\>
+`linux /boot/Image console=tty0 console=ttyAMA3,115200 root=/dev/disk/by-partlabel/system rootwait rw quiet efi=noruntime`
 
-Note that the LS expansion port I/O pins on the 96Boards 2mm header, including the UART signals, are at **1.8V** levels. 
+Note: the LS expansion port I/O pins on the 96Boards 2mm header, including the UART signals, are at **1.8V** levels. 
 
 <a name="section-6"></a>
 ## 7. Known Issues 
 
-The following are known software issues on the current release.
+The following are known issues on the current release.
 
 1. **Not Yet Supported**
     - HDMI and Expansion bus audio. At present only Bluetooth audio is supported (on both Debian and AOSP builds)
@@ -656,16 +629,12 @@ The following are known software issues on the current release.
     - Hardware graphics acceleration (Mali GPU) for OpenGL ES on the Debian build. This will be addressed in a future software release. GPU acceleration is functional in the AOSP build **TODO: check this**
     - The Bluetooth LED is not functional in the Android build **TODO: check this**
     - Power button behavior. **TODO: check this**
-2. **USB gives occasional non-fatal kernel trace messages**<br/>
-`usb usb1: clear tt 1 (9032) error -22`<br/>
+2. **USB gives occasional non-fatal kernel trace messages**
+`usb usb1: clear tt 1 (9032) error -22`
 This is under current investigation.
-3. **Apple Bluetooth Keyboards/Mice/Trackpads do not work**<br/>
+3. **Apple Bluetooth Keyboards/Mice/Trackpads do not work**
 This is under current investigation. 
-4. **Perl warning about locales**<br/> **TODO: check this **
-Running 'sudo apt-get install dbus-x11' on the HiKey board may give a warning 'Setting locale failed.'. To get rid of the warning, do the following:
-sudo apt-get install locales
-sudo dpkg-reconfigure locales
-5. **TODO: any known bug, need to be added here **
+4. **TODO: any known bug, need to be added here **
 
 **Reporting New Issues**
 
@@ -683,10 +652,12 @@ DO NOT USE THESE INSTRUCTIONS
 UPDATE FOR NEW KERNEL, WIFI MODULE AND BOOTLOADER
 
 ### Bootloader From Source
-For further information on the bootloader building from source, see the 96Boards documentation here:<br/>
+
+For further information on the bootloader building from source, see the 96Boards documentation here:
 - [HiKey Bootloader Wiki](https://github.com/96boards/documentation/wiki/HiKeyUEFI)
 
 ### Kernel From Source
+
 To build a kernel using a linux computer use the following instructions. These assume that you have a good level of knowledge in using Linaro tools and building Linux kernels.
 
 The HiKey kernel sources are located at: [https://github.com/96boards/linux](https://github.com/96boards/linux)
@@ -720,6 +691,7 @@ $ make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j8 Image modules hi6220-hike
 ```
 
 ### WiFi Driver From Source
+
 The rootfs included in each hikey release uses a different wifi driver than the one defined in the kernel.config file present in the release page.
 https://builds.96boards.org/snapshots/hikey/linaro/debian/latest
 
@@ -785,11 +757,11 @@ $ sudo mount /tmp/raw.img /tmp/mnt
 $ cd /tmp/mnt/lib/
 $ sudo tar xvf fw-modules.tar.bz2
 $ cd /tmp/
-$ sudo make_ext4fs -o -L rootfs -l 1500M -s jessie.updated.img mnt/ 
+$ sudo make_ext4fs -o -L rootfs -l 2G -s jessie.updated.img mnt/ 
 $ sudo umount mnt/
 ```
 
-Notice that by rebuilding the image file you could also transfer your public ssh keys or private files - like wifi credentials - to the target before booting it.
+Note: by rebuilding the image file you could also transfer your public ssh keys or private files - like wifi credentials - to the target before booting it.
 
 At this point you would have an image with the required drivers. Now You will need to decide whether you want your kernel to install on internal eMMC, or on an installed microSD card.
 
@@ -870,6 +842,7 @@ AOSP sources are hosted in these repositories:
 - [https://github.com/96boards/android_manifest](https://github.com/96boards/android_manifest)
 
 **Build setup**
+
 Please setup the host machine by following the instructions here: [http://source.android.com/source/initializing.html](http://source.android.com/source/initializing.html)
 
 NOTE: The build tries to mount a loop device as fat partition to create the boot-fat.img filesystem image. Please make sure your user is allowed to run those commands in sudo without password by running "visudo" and appending the following lines (replacing "`<USER>`" with your username):
@@ -943,7 +916,7 @@ grub/grub.conf | grub configuration file | N/A
 
 Table 2: boot partition files
 
-Note<sup>1</sup>: Kernel build image: `arch/arm64/boot/image`<br/>
+Note<sup>1</sup>: Kernel build image: `arch/arm64/boot/image`
 Note<sup>2</sup>: DTB: `arch/arm64/boot/dts/hi6220-hikey.dtb`
 
 <a name="appendix-2"></a>
