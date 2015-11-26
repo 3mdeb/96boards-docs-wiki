@@ -257,6 +257,8 @@ Download the following files onto your Linux PC from:
 - boot-fat.uefi.img.gz
 - hikey-jessie_alip_2015MMDD-nnn-4g.emmc.img.gz (for 4G board) or hikey-jessie_alip_2015MMDD-nnn-8g.emmc.img.gz (for 8G board)
 
+Note: _developer version comes with no graphics UI; _alip version comes with LXDE UI.
+
 Download the following file from:
 [http://builds.96boards.org/releases/hikey/linaro/binaries/latest](http://builds.96boards.org/releases/hikey/linaro/binaries/latest)
 - [ptable-linux-4g.img](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-linux-4g.img)
