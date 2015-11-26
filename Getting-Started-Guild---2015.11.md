@@ -67,7 +67,7 @@ Link 1-2 causes HiKey to auto-power up when power is applied. The other two link
 
 Please refer to the Hardware User Guide (Chapter 1. Settings Jumper) for more information on board link options.
 
-A few seconds after applying power the right hand green User LED0 will start flashing once per second. The next User LED1 is used as a disk indicator showing access to the on-board eMMC flash memory. The startup console messages will then appear on the connected HDMI screen.
+A few seconds after applying power the right hand green User LED0 will start flashing at a frequency corresponding to cpu's activity. The next User LED1 is used as a disk indicator showing access to the on-board eMMC flash memory. The startup console messages will then appear on the connected HDMI screen.
 
 After about 10 seconds the LXDE User Interface will appear and you can start using the HiKey Linux software.
 
