@@ -456,6 +456,7 @@ For further information on the bootloader, including how to build it from source
 
 <a name="section-42"></a>
 **Installing Fastboot onto your PC**
+
 Step 1: Use the following commands
 ```
 $ sudo apt-get install android-tools-fastboot      On Debian/Ubuntu
