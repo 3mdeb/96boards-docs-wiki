@@ -217,14 +217,14 @@ $ sudo fastboot devices
 
 Then install the update using the downloaded files.
 
-Note: the ptable must be flashed first. Wait for a few seconds after the reboot command to allow the bootloader to restart using the new partition table.
+Note: the ptable must be flashed first. Wait for a few seconds after the reboot command to allow the bootloader to restart using the new partition table. (Example goes with 8G)
 ```
 $ sudo fastboot flash ptable ptable-aosp-8g.img
 $ sudo fastboot reboot
 $ sudo fastboot flash boot boot_fat.uefi.img
 $ sudo fastboot flash cache cache.img
 $ sudo fastboot flash system system.img
-$ sudo fastboot flash userdata userdata.img
+$ sudo fastboot flash userdata userdata-8gb.img
 ```
 
 When flashing is completed power down the HiKey, remove Link 5-6 and power up the HiKey. You may now use the AOSP operating system.  Note the first time boot up will take a couple of minutes. 
