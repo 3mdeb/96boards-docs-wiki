@@ -4,22 +4,11 @@
 
 This document describes how to get started with the HiKey ARMv8 community development boards using the release build shipped with the boards.
 
-##### Comments: (information useful for future editing) 
-**NOTE**: For people who have boards with fastboot bootloarders, please refer to Board Recovery section to upgrade your boards to ATF/UEFI bootloader.
-Board Recovery
-Information on board recovery and/or loading bootloader software on the HiKey board 
-
-THIS IS WORK IN PROGRESS
-
-The current builds this document refers to are:
-UEFI snapshot build #91
-DEBIAN snapshot build #382
-
-Note that the June 2015 release comes with a fastboot bootloader based on HiSilicon code. It is deprecated and will not be supported in the upcoming releases. This Getting Started Guide therefore refers to the open source ARM Trusted Firmware and UEFI bootloader. It is the supported bootloader for the HiKey board.
+**NOTE** that the June 2015 release comes with a fastboot bootloader based on HiSilicon code. It is deprecated and will not be supported in the upcoming releases. This Getting Started Guide therefore refers to the open source ARM Trusted Firmware and UEFI bootloader. It is the supported bootloader for the HiKey board.
  
-**The following information is provided in these release notes:**
+**The following information is provided in this release notes:**
 
-1. [Snapshot information](#section-0)
+1. [New Features](#section-0)
 2. [Pre-Installed Debian Linux](#section-1)
 Information on the Debian 8.0 ("jessie") OS installation software
 3. [Installing Android Open Source Project](#section-2)Information on loading the AOSP version of Android 5.1 as an alternative OS onto the HiKey board
@@ -33,8 +22,6 @@ Information on board recovery and/or loading bootloader software onto the HiKey 
 Information on building software for the HiKey board from source code
 9. [Appendices](#appendix-1)
 Information on the partition table used on HiKey and the contents of the boot partition.
-10. [New Features](#appendix-2)
-Information on key new features introduced in this release. 
 
 ### Updating to the new Release
 
@@ -43,14 +30,13 @@ If you already have a HiKey board, you will need to do the following:
 - Follow the instructions in [Updating the OS](#section-3), to install either the Debian or the Android Open Source Project (AOSP) build
 
 <a name="section-0"></a>
-## 1. Snapshot release information
+## 1. New Features
 
-- It is recommended to update the booloader and OS together 
+- Arm Trusted Firmware and UEFI supported, with source open.
+- It is recommended to update the bootloader and OS together.
 - MCU firmware updated <br\>
 - PSCI features supported: cpuidle, cpufreq, cpu hotplug and suspend/resume 
-- extended support for more HDMI modes 
-- switchable through hotkey 'Alt'+'PrtSc'+'g' 
-- SYSPLL reads from pctrl registers (therefore compatible with both 1.2GHz and 1.19GHz UEFI) 
+- extended support for more HDMI modes, switchable through hotkey 'Alt'+'PrtSc'+'g' 
 - new boot sequence: SD card booting first, fallback to eMMC. 
 - SD high speed cards (SDR50, SDR104, and DDR50) are supported.
 
@@ -915,7 +901,3 @@ Table 2: boot partition files
 
 Note<sup>1</sup>: Kernel build image: `arch/arm64/boot/image`
 Note<sup>2</sup>: DTB: `arch/arm64/boot/dts/hi6220-hikey.dtb`
-
-<a name="appendix-2"></a>
-### Appendix 2: New Features 
-N/A
