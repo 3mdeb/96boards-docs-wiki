@@ -255,7 +255,7 @@ Once fastboot is installed on the Linux PC proceed as follows:
 Download the following files onto your Linux PC from: 
 [http://builds.96boards.org/releases/hikey/linaro/debian/latest](http://builds.96boards.org/releases/hikey/linaro/debian/latest)
 - boot-fat.uefi.img.gz
-- hikey-jessie_alip_2015MMDD-nnn-4g.emmc.img.gz (for 4G board) or hikey-jessie_alip_2015MMDD-nnn-8g.img.gz (for 8G board)
+- hikey-jessie_alip_2015MMDD-nnn-4g.emmc.img.gz (for 4G board) or hikey-jessie_alip_2015MMDD-nnn-8g.emmc.img.gz (for 8G board)
 
 Download the following file from:
 [http://builds.96boards.org/releases/hikey/linaro/binaries/latest](http://builds.96boards.org/releases/hikey/linaro/binaries/latest)
@@ -277,7 +277,7 @@ $ sudo fastboot devices
 
 Then install the update using the downloaded files:
 
-Note: the ptable must be flashed first. Wait for a few seconds after the reboot command to allow the bootloader to restart using the new partition table.
+Note: the ptable must be flashed first. Wait for a few seconds after the reboot command to allow the bootloader to restart using the new partition table. (Example goes with 8G board)
 ```
 $ sudo fastboot flash ptable ptable-linux-8g.img
 $ sudo fastboot reboot
