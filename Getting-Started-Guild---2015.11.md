@@ -1,14 +1,11 @@
-# 96Boards HiKey - Work in Progress
-
-**This document is a live document that will be kept updated to reflect changes in the latest snapshot builds for HiKey. Snapshot builds are NOT guaranteed to be stable but reflect the latest work on the HiKey platform. In due course these Getting Started notes will become the Getting Started notes for the next release**
+# 96Boards HiKey
 
 ## Getting Started
 
-This document describes how to get started with the HiKey ARMv8 community development boards using latest snapshot software rather than the release build shipped with the boards. 
+This document describes how to get started with the HiKey ARMv8 community development boards using the release build shipped with the boards.
 
 ##### Comments: (information useful for future editing) 
-. We need to add this new section: how to upgrade from obsoleted fastboot bootloader to a UEFI bootloader.
-This is the same as section: 
+**NOTE**: For people who have boards with fastboot bootloarders, please refer to Board Recovery section to upgrade your boards to ATF/UEFI bootloader.
 Board Recovery
 Information on board recovery and/or loading bootloader software on the HiKey board 
 
