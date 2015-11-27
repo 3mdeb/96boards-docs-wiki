@@ -624,8 +624,12 @@ This is under current investigation.
 This is under current investigation. 
 4. **Attempting BT file transfer freezes the board**
 This is under current investigation. 
-5. **On some boards no automatic boot to Linux after pressing reset button**
+5. **On some boards there is no automatic boot to Linux after pressing reset button**
 On some boards, after pressing 'reset' button on serial Mezanine board, HiKey boots to fastboot mode always.
+6. **Switching user may cause a blank screen** 
+Clicking on the Switch User button can cause the screen to go blank.
+This is being investigated.
+
 4. **TODO: any known bug, need to be added here **
 
 **Reporting New Issues**
