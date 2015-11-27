@@ -34,13 +34,14 @@ If you already have a HiKey board, you will need to do the following:
 <a name="section-0"></a>
 ## 1. New Features
 
-- ARM Trusted Firmware and UEFI supported, with source open.
-- It is recommended to update the bootloader and OS together.
+- ARM Trusted Firmware and UEFI supported, with source open. It is recommended to update the bootloader and OS together. <br\>
 - MCU firmware updated <br\>
 - PSCI features supported: cpuidle, cpufreq, cpu hotplug and suspend/resume 
 - Extended support for more HDMI modes, switchable through hotkey 'Alt'+'PrtSc'+'g' 
 - New boot sequence: SD card booting first, fallback to eMMC. 
 - SD high speed cards (SDR50, SDR104, and DDR50) are supported.
+- OpenGL ES 2.0 for Debian
+- Video playback on Debian
 
 <a name="section-1"></a>
 ## 2. Pre-Installed Debian Linux 
@@ -610,27 +611,22 @@ Note: the LS expansion port I/O pins on the 96Boards 2mm header, including the U
 The following are known issues on the current release.
 
 1. **Not Yet Supported**
-    - HDMI and Expansion bus audio. At present only Bluetooth audio is supported (on both Debian and AOSP builds)
-    - Video playback in Debian. This will be addressed in a future software release **TODO: check this**
+    - HDMI and Expansion bus audio. (At present only Bluetooth audio is supported)
     - Some video formats are not decoded in Android, and will not be played with the current release
     - HDMI hotplug detection (HPD) is not supported. (Note: You can still plug in HDMI cable after the board booted, which make HDMI work through two candidate modes: 1280x720p and 800x600p. However these are not HPD, they is built-in default.)
-    - Hardware graphics acceleration (Mali GPU) for OpenGL ES on the Debian build. This will be addressed in a future software release. GPU acceleration is functional in the AOSP build **TODO: check this**
     - The Bluetooth LED is not functional in the Android build **TODO: check this**
-    - Power button behavior. **TODO: check this**
+    - Power button behavior. https://bugs.96boards.org/show_bug.cgi?id=160 **TODO: check this**
+    - HDMI display sometimes goes off when in AOSP. See [bug #136](https://bugs.96boards.org/show_bug.cgi?id=136)
 2. **USB gives occasional non-fatal kernel trace messages**
 `usb usb1: clear tt 1 (9032) error -22`
 This is under current investigation.
 3. **Apple Bluetooth Keyboards/Mice/Trackpads do not work**
 This is under current investigation. 
 4. **Attempting BT file transfer freezes the board**
-This is under current investigation. 
-5. **On some boards there is no automatic boot to Linux after pressing reset button**
-On some boards, after pressing 'reset' button on serial Mezanine board, HiKey boots to fastboot mode always.
-6. **Switching user may cause a blank screen** 
+This is under current investigation.  **TODO check this**
+5. **Switching user may cause a blank screen** 
 Clicking on the Switch User button can cause the screen to go blank.
 This is being investigated.
-
-4. **TODO: any known bug, need to be added here **
 
 **Reporting New Issues**
 
