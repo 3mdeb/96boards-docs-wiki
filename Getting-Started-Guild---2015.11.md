@@ -34,12 +34,12 @@ If you already have a HiKey board, you will need to do the following:
 <a name="section-0"></a>
 ## 1. New Features
 
-- Arm Trusted Firmware and UEFI supported, with source open.
+- ARM Trusted Firmware and UEFI supported, with source open.
 - It is recommended to update the bootloader and OS together.
 - MCU firmware updated <br\>
 - PSCI features supported: cpuidle, cpufreq, cpu hotplug and suspend/resume 
-- extended support for more HDMI modes, switchable through hotkey 'Alt'+'PrtSc'+'g' 
-- new boot sequence: SD card booting first, fallback to eMMC. 
+- Extended support for more HDMI modes, switchable through hotkey 'Alt'+'PrtSc'+'g' 
+- New boot sequence: SD card booting first, fallback to eMMC. 
 - SD high speed cards (SDR50, SDR104, and DDR50) are supported.
 
 <a name="section-1"></a>
@@ -164,7 +164,7 @@ bt_active | hci0tx (Bluetooth Tx)
 user_led1 | heartbeat
 user_led2 | mmc0 (disk access, eMMC)
 user_led3 | mmc1 (disk access, microSD card)
-user_led4 | CPU core 0 active
+user_led4 | CPU core 0 active(not used)
 
 To change a user LED you can do the following as a root user:
 ```
@@ -245,7 +245,7 @@ IMPORTANT NOTE:
 The installation process will overwrite all contents of the eMMC memory. This will remove all installed software and all user files. Before updating the OS, make sure that you have saved any user files or data that you want to keep onto an SD Card or USB memory stick.
 Note that for this release you MUST first update the bootloader using the procedure described in [Board Recovery - Installing a Bootloader](#section-41). If you have not already done this then you will need to do so before proceeding.
 
-To install updates you will need a Linux PC with fastboot support. See [section here](#section-42) about how to that for your Linux PC.
+To install updates you will need a Linux PC with fastboot support. See [section here](#section-42) about how to do that for your Linux PC.
 
 Once fastboot is installed on the Linux PC proceed as follows:
 
