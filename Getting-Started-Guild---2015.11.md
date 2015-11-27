@@ -394,9 +394,9 @@ First, get the script that is needed to load the initial boot software:
 ```
 $ wget https://raw.githubusercontent.com/96boards/burn-boot/master/hisi-idt.py
 ```
-Run the script to initially prepare fastboot (make sure the modem interface is in the right ttyUSB as previously suggested):
+Run the script to initially prepare fastboot (make sure the modem interface is in the right ttyUSB as previously suggested. In this example, use ttyUSB0):
 ```
-$ sudo python hisi-idt.py --img1=l-loader.bin
+$ sudo python hisi-idt.py -d /dev/ttyUSB0 --img1=l-loader.bin
 ```
 After the python command has been issued you should see the following output. If you do not then see the "Problems with Python Downloader" section below
 ```
