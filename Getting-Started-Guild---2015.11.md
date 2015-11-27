@@ -376,7 +376,7 @@ Please refer to the [Hardware User Guide](https://www.96boards.org/wp-content/up
 
 Now connect the HiKey power supply to the board.
 
-**Note:** USB does NOT power the HiKey board because the power supply requirements in certain use cases can exceed the power supply available on a USB port. You must use an external power supply.
+**Note:** USB does NOT power the HiKey board. You must use an external power supply.
 
 **Note:** The HiKey board will remain in USB load mode for 90 seconds from power up. If you take longer than 90 seconds to start the install then power cycle the board before trying again.
 
