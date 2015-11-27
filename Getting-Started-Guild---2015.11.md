@@ -652,10 +652,10 @@ The HiKey kernel sources are located at: [https://github.com/96boards/linux](htt
 
 To build a kernel, make sure you have an AArch64 cross-toolchain installed on your linux computer, and configured to cross compile to ARMv8 code. For example, Linaro GCC 4.9:
 ```
-$ wget http://releases.linaro.org/14.09/components/toolchain/binaries/\ 
-> gcc-linaro-aarch64-linux-gnu-4.9-2014.09_linux.tar.xz
-$ mkdir ~/arm64-tc/bin
-$ tar --strip-components=1 -C ~/arm64-tc/bin -xf gcc-linaro-aarch64-linux-gnu-4.9-2014.09_linux.tar.xz
+$ wget http://releases.linaro.org/14.09/components/toolchain/binaries/\
+gcc-linaro-aarch64-linux-gnu-4.9-2014.09_linux.tar.xz
+$ mkdir ~/arm64-tc
+$ tar --strip-components=1 -C ~/arm64-tc -xf gcc-linaro-aarch64-linux-gnu-4.9-2014.09_linux.tar.xz
 $ export PATH=~/arm64-tc/bin:$PATH
 ```
 
@@ -731,7 +731,7 @@ a) install simg2img and make_ext4fs both from Linaro's modified package 'android
 
 ```
 $ wget http://repo.linaro.org/ubuntu/linaro-overlay/pool/main/a/android-tools/\
-> android-tools-fsutils_4.2.2+git20130218-3ubuntu41+linaro1_amd64.deb
+android-tools-fsutils_4.2.2+git20130218-3ubuntu41+linaro1_amd64.deb
 $ sudo dpkg -i --force-all android-tools-fsutils_*.deb
 ```
 
