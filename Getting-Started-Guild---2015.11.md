@@ -329,15 +329,15 @@ For most users a board can be “recovered” from a software failure by reloadi
 **Preparation**
 
 Download the following files onto a Linux PC:
-* [l-loader.bin](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/l-loader.bin)
-* [fip.bin](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/fip.bin)
-* [ptable-linux.img for Debian](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux-8g.img) or the 4G variant  **TODO**
-* [ptable-aosp.img for AOSP](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-aosp-8.img) or the 4G variant **TODO**
-* [nvme.img](https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/nvme.img)
+* [l-loader.bin](http://builds.96boards.org/releases/hikey/linaro/uefi/latest/l-loader.bin)
+* [fip.bin](http://builds.96boards.org/releases/hikey/linaro/uefi/latest/fip.bin)
+* [ptable-linux-4g.img](http://builds.96boards.org/releases/hikey/linaro/uefi/latest/ptable-linux-4g.img) or [ptable-linux-8g.img](http://builds.96boards.org/releases/hikey/linaro/uefi/latest/ptable-linux-8g.img) for Debian.
+* [ptable-aosp-4g.img](http://builds.96boards.org/releases/hikey/linaro/uefi/latest/ptable-aosp-4g.img) or [ptable-aosp-8g.img](http://builds.96boards.org/releases/hikey/linaro/uefi/latest/ptable-aosp-8g.img) for AOSP.
+* [nvme.img](https://builds.96boards.org/releases/hikey/linaro/uefi/latest/nvme.img)
 
 You will also need the boot partition for the OS Image you want to run
-* [boot-fat.uefi.img for Debian] (https://builds.96boards.org/snapshots/hikey/linaro/debian/latest/boot-fat.uefi.img.gz)
-* [boot_fat.uefi.img for AOSP](https://builds.96boards.org/snapshots/hikey/linaro/aosp/latest/boot_fat.uefi.img.tar.xz)
+* [boot-fat.uefi.img for Debian] (https://builds.96boards.org/releases/hikey/linaro/debian/latest/boot-fat.uefi.img.gz)
+* [boot_fat.uefi.img for AOSP](https://builds.96boards.org/releases/hikey/linaro/aosp/latest/boot_fat.uefi.img.tar.xz)
 
 You can do this from your browser or from the command prompt:
 For example, to download the latest UEFI build and boot partition for Debian do:
