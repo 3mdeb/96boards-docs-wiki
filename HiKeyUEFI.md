@@ -184,6 +184,8 @@ Command to enable auto boot:
 $sudo fastboot oem autoboot 1
 
 ```
+
+<a name="section-boot-order"></a>
 * Control Boot Order
 ```shell
 If auto boot feature is enabled, a predefined boot entry will be selected
