@@ -401,7 +401,7 @@ $ sudo python hisi-idt.py -d /dev/ttyUSB0 --img1=l-loader.bin
 After the python command has been issued you should see the following output. If you do not then see the "Problems with Python Downloader" section below
 ```
 +----------------------+
- Serial:  /dev/serial/by-id/usb-䕇䕎䥎_㄰㌲㔴㜶㤸-if00-port0
+ Serial:  /dev/ttyUSB0
  Image1:  l-loader.bin
  Image2:  
 +----------------------+
@@ -411,7 +411,7 @@ Done
 ```
 Note: You may see the word “failed” before Done. This is under investigation but is not fatal. As long as the “Done” is printed at the end you may proceed.
 
-The bootloader has now been installed into RAM. Wait a few seconds for the fastboot application to actually load. The following fastboot commands then load the partition table, the bootloader and other necessary files into the HiKey eMMC flash memory (4G or 8G).
+The bootloader has now been installed into RAM. Wait a few seconds for the fastboot application to actually load. The following fastboot commands then load the partition table, the bootloader and other necessary files into the HiKey eMMC flash memory (4G or 8G). Taking 8G as example.
 ```
 $ sudo fastboot flash ptable ptable-linux-8g.img
 $ sudo fastboot flash fastboot fip.bin
