@@ -597,7 +597,7 @@ In the AOSP build a small application is provided (usb-speed-switch) to change b
 
 In Debian, the two 96Boards expansion IO UART serial ports will appear as `/dev/ttyAMA2` and `/dev/ttyAMA3` and are configured at 115200 baud by default. Note: UEFI and kernel console are directed to /dev/ttyAMA3.
 
-Alternatively, you can modify grub.cfg in the system image to switch to other UART.
+Alternatively, you can modify grub.cfg in the boot image to switch to other UART.
 
 * /EFI/BOOT/grub.cfg (linux boot line) <br\>
 `linux /boot/Image console=tty0 console=ttyAMA3,115200 root=/dev/disk/by-partlabel/system rootwait rw quiet efi=noruntime`
