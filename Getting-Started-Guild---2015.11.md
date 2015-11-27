@@ -622,6 +622,10 @@ The following are known issues on the current release.
 This is under current investigation.
 3. **Apple Bluetooth Keyboards/Mice/Trackpads do not work**
 This is under current investigation. 
+4. **Attempting BT file transfer freezes the board**
+This is under current investigation. 
+5. **On some boards no automatic boot to Linux after pressing reset button**
+On some boards, after pressing 'reset' button on serial Mezanine board, HiKey boots to fastboot mode always.
 4. **TODO: any known bug, need to be added here **
 
 **Reporting New Issues**
