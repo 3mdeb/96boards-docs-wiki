@@ -547,9 +547,9 @@ After the board has booted the User0 LED should be heartbeating about once per s
 
 Press the right hand Alt Key then the PrintScr key and then the G key so that finally all the keys are pressed. Each time you enter this sequence the HiKey will switch to the next screen mode. When you find one that works well write down the resolution and frequency from the TV display - for example 1280x1024@75Hz.
 
-Once you have found a working resolution you may edit the grub.cfg file to make the new mode the default boot mode. Be very careful not to make mistakes editing this file or your kernel may not boot correctly. Note this file needs su privileges to modify:
+Once you have found a working resolution you may edit grub.cfg to make the new mode the default boot mode. Be very careful not to make mistakes editing this file or your kernel may not boot correctly. Note this file needs su privileges to modify:
 ```
-$ sudo vim /boot/grub/grub.cfg
+$ sudo vim /EFI/BOOT/grub.cfg
 ```
 Add the chosen display format into the file at the end of the linux line in the following format, replacing 1280x1024 with your selected resolution and 75 with your selected frequency.
 ```
@@ -599,7 +599,7 @@ In Debian, the two 96Boards expansion IO UART serial ports will appear as `/dev/
 
 Alternatively, you can modify grub.cfg in the system image to switch to other UART.
 
-* /boot/grub/grub.cfg (linux boot line) <br\>
+* /EFI/BOOT/grub.cfg (linux boot line) <br\>
 `linux /boot/Image console=tty0 console=ttyAMA3,115200 root=/dev/disk/by-partlabel/system rootwait rw quiet efi=noruntime`
 
 Note: the LS expansion port I/O pins on the 96Boards 2mm header, including the UART signals, are at **1.8V** levels. 
