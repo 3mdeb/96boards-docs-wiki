@@ -628,7 +628,7 @@ This is under current investigation.  **TODO check this**
 5. **Switching user may cause a blank screen** 
 Clicking on the Switch User button can cause the screen to go blank.
 This is being investigated.
-6. **Coresight is currently not supported.**
+6. **Coresight is not supported.**
 7. **Iceweasel browser exits after file download complete.**
 When downloading a file using Iceweasel, the download works but the browser exits.
 8. **Debian ALIP image: Viewing JPG images with 'Image Viewer' show incorrect colors.**
