@@ -637,9 +637,8 @@ This is being investigated.
 10. **AOSP: Plugging the SD card in/out may reset the board.**
 11. **Executing 'reboot -p' on AOSP to shutdown the board does not turn off the HDMI monitor** 
 12. **When running CTS tests, the HDMI display turns off while the tesst are still running.**
+
 **Reporting New Issues**
-
-
 To report new issues with the HiKey please use the [96Boards Bug Tracker](https://bugs.96boards.org).
 
 To view the open bugs, click [here](https://bugs.96boards.org/buglist.cgi?bug_status=__open__&list_id=144&order=Importance&product=HiKey&query_format=specific).  Alternatively go to the [site](https://bugs.96boards.org/), click on the Search menu item, select HiKey in the product dropdown list and click the search button.
