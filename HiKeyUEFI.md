@@ -186,6 +186,8 @@ $sudo fastboot oem autoboot 1
 ```
 
 <a name="section-boot-order"></a>
+HiKey supports booting from both eMMC and microSD card. To,
+
 * Control Boot Order
 ```shell
 If auto boot feature is enabled, a predefined boot entry will be selected
