@@ -861,9 +861,9 @@ $ cd android/
 ```
 
 Download and extract the Mali vendor binaries in the above directory:
-http://builds.96boards.org/snapshots/hikey/linaro/binaries/20150607/vendor.tar.bz2
+http://builds.96boards.org/snapshots/hikey/linaro/binaries/20150706/vendor.tar.bz2
 ```
-$ repo init -u https://android.googlesource.com/platform/manifest -b android-5.1.1_r1\
+$ repo init -u https://android.googlesource.com/platform/manifest -b android-5.1.1_r24\
 > -g "default,-device,hikey"
 $ cd .repo/
 $ git clone https://github.com/96boards/android_manifest -b android-5.0 local_manifests
