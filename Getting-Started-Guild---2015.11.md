@@ -635,8 +635,10 @@ When downloading a file using Iceweasel, the download works but the browser exit
 This is being investigated.
 9. **Fastboot flashing on Windows is not supported. Only Linux PC is supported.**
 10. **AOSP: Plugging the SD card in/out may reset the board.**
-
+11. **Executing 'reboot -p' on AOSP to shutdown the board does not turn off the HDMI monitor** 
+12. **When running CTS tests, the HDMI display turns off while the tesst are still running.**
 **Reporting New Issues**
+
 
 To report new issues with the HiKey please use the [96Boards Bug Tracker](https://bugs.96boards.org).
 
