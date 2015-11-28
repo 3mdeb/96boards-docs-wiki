@@ -292,7 +292,7 @@ You may now use the updated OS.
 
 **Using an SD Card**
 
-The built-in HiKey eMMC boot software also enables booting a kernel and root file system installed on an SD card. If an SD card is installed at power up the HiKey board will boot the software on the SD Card rather than the software flashed in the eMMC. **TODO: clarify this**
+NOTE: The UEFI bootloader on HiKey also enables booting a kernel and root file system installed on an SD card (microSD). To control boot order, follow [the instruction here](https://github.com/96boards/documentation/wiki/HiKeyUEFI#section-boot-order). 
 
 This section describes how to prepare a bootable SD card.
 
