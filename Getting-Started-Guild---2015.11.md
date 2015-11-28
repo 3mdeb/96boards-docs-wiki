@@ -34,7 +34,7 @@ If you already have a HiKey board, you will need to do the following:
 <a name="section-0"></a>
 ## 1. New Features
 
-- ARM Trusted Firmware and UEFI supported, with source open. It is recommended to update the bootloader and OS together. <br\>
+- [ARM Trusted Firmware and UEFI supported](https://github.com/96boards/documentation/wiki/HiKeyUEFI), with source open. It is recommended to update the bootloader and OS together. <br\>
 - MCU firmware updated <br\>
 - PSCI features supported: cpuidle, cpufreq, cpu hotplug and suspend/resume 
 - Extended support for more HDMI modes, switchable through hotkey 'Alt'+'PrtSc'+'g' 
@@ -43,7 +43,7 @@ If you already have a HiKey board, you will need to do the following:
 - OpenGL ES 2.0 for Debian
 - Video playback on Debian
 
-For getting started guide about ATF/UEFI, please see [WiKi](https://github.com/96boards/documentation/wiki/HiKeyUEFI).
+For getting started guide about [ATF/UEFI, please see WiKi](https://github.com/96boards/documentation/wiki/HiKeyUEFI).
 
 <a name="section-1"></a>
 ## 2. Pre-Installed Debian Linux 
