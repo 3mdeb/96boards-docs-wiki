@@ -43,6 +43,8 @@ If you already have a HiKey board, you will need to do the following:
 - OpenGL ES 2.0 for Debian
 - Video playback on Debian
 
+For getting started guide, please see [WiKi](https://github.com/96boards/documentation/wiki/HiKeyUEFI).
+
 <a name="section-1"></a>
 ## 2. Pre-Installed Debian Linux 
 The HiKey board is ready to use “out of the box” with a preinstalled version of the Debian Linux distribution.
