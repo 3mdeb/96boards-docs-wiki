@@ -135,6 +135,7 @@ HiKey comes with two eMMC size: 4GB and 8GB.
 **3. Logging in**
 
 The default user name is "linaro" and the default password for user linaro is also "linaro".
+Note: If you plan to use the board for production or allow remote access to the board, please change the default password.
 
 **4. Clock**
 
@@ -627,7 +628,7 @@ This is under current investigation.  **TODO check this**
 5. **Switching user may cause a blank screen** 
 Clicking on the Switch User button can cause the screen to go blank.
 This is being investigated.
-
+6. **
 **Reporting New Issues**
 
 To report new issues with the HiKey please use the [96Boards Bug Tracker](https://bugs.96boards.org).
