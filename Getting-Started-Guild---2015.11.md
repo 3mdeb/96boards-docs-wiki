@@ -636,7 +636,7 @@ This is being investigated.
 10. **Shutdown not working - executing 'reboot -p' from serial console will shutdown the board very quickly, but cannot turn off HDMI monitor, and the signal is still there.** 
 11. **When running CTS tests, the HDMI display turns off while the tesst are still running.**
 12. **UEFI may hang occasionally when the uSD card is present.**
-13. **Bluetooth transfer on large files is not stable.**
+13. **Bluetooth transfer on large files is not stable in AOSP build.**
 
 **Reporting New Issues**
 To report new issues with the HiKey please use the [96Boards Bug Tracker](https://bugs.96boards.org).
