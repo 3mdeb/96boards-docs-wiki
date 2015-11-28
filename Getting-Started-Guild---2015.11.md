@@ -628,7 +628,14 @@ This is under current investigation.  **TODO check this**
 5. **Switching user may cause a blank screen** 
 Clicking on the Switch User button can cause the screen to go blank.
 This is being investigated.
-6. **
+6. **Coresight is currently not supported.**
+7. **Iceweasel browser exits after file download complete.**
+When downloading a file using Iceweasel, the download works but the browser exits.
+8. **Debian ALIP image: Viewing JPG images with 'Image Viewer' show incorrect colors.**
+This is being investigated.
+9. **Fastboot flashing on Windows is not supported. Only Linux PC is supported.**
+10. **AOSP: Plugging the SD card in/out may reset the board.**
+
 **Reporting New Issues**
 
 To report new issues with the HiKey please use the [96Boards Bug Tracker](https://bugs.96boards.org).
