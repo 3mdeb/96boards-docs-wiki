@@ -4,7 +4,7 @@
 
 This document describes how to get started with the HiKey ARMv8 community development boards using the release build shipped with the boards.
 
-**NOTE** that the June 2015 release comes with a fastboot bootloader based on HiSilicon code. It is deprecated and will not be supported in the upcoming releases. This Getting Started Guide therefore refers to the open source ARM Trusted Firmware and UEFI bootloader. It is the supported bootloader for the HiKey board.
+**NOTE** that the June 2015 release comes with a fastboot bootloader based on HiSilicon code. It is deprecated and will not be supported in the upcoming releases. This Getting Started Guide therefore refers to the open source [ARM Trusted Firmware and UEFI bootloader](https://github.com/96boards/documentation/wiki/HiKeyUEFI). It is the supported bootloader for the HiKey board.
 
 **NOTE** there are two types of eMMC sized HiKey. Those with "LEMAKER" mark in top side and black in color are 8GB ones. Otherwise, they are 4GB.
 
