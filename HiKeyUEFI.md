@@ -10,25 +10,30 @@ The following binaries are required:
 
 ## Install from prebuilt binaries
 
-Latest UEFI build is published [here](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest). Download the following files:
+Latest UEFI snapshot builds are published [here](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest). Download the following files:
 * [l-loader.bin](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/l-loader.bin)
 * [fip.bin](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/fip.bin)
 * [ptable-linux.img](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux.img)
 
-Latest Debian based builds are published [here](https://builds.96boards.org/snapshots/hikey/linaro/debian/latest). You can pick a boot partition and an eMMC rootfs:
-* [boot-fat.uefi.img.gz](http://builds.96boards.org/snapshots/hikey/linaro/debian/latest/boot-fat.uefi.img.gz)
-* [hikey-jessie_developer_YYYYMMDD-XXX.emmc.img.gz](http://builds.96boards.org/snapshots/hikey/linaro/debian/305/hikey-jessie_developer_20150526-305.emmc.img.gz)
+Latest UEFI release build is published [here](http://builds.96boards.org/releases/hikey/linaro/uefi/latest).
 
-For example, to download the latest UEFI build and Debian build 305 so:
+Latest Debian snapshot builds are published [here](https://builds.96boards.org/snapshots/hikey/linaro/debian/latest). You can pick a boot partition and an eMMC rootfs:
+* boot-fat.uefi.img.gz
+* hikey-jessie_developer_YYYYMMDD-XXX-4g.emmc.img.gz or hikey-jessie_developer_YYYYMMDD-XXX-8g.emmc.img.gz
+
+Latest Debian release build is published [here](https://builds.96boards.org/releases/hikey/linaro/debian/latest).
+
+For example, to download the latest UEFI build and Debian build:
 
 ```shell
-wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/l-loader.bin
-wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/fip.bin
-wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux.img
-wget https://builds.96boards.org/snapshots/hikey/linaro/debian/latest/boot-fat.uefi.img.gz
-wget https://builds.96boards.org/snapshots/hikey/linaro/debian/305/hikey-jessie_developer_20150526-305.emmc.img.gz
+wget https://builds.96boards.org/releases/hikey/linaro/uefi/latest/l-loader.bin
+wget https://builds.96boards.org/releases/hikey/linaro/uefi/latest/fip.bin
+wget https://builds.96boards.org/releases/hikey/linaro/uefi/latest/ptable-linux.img
+wget https://builds.96boards.org/releases/hikey/linaro/debian/latest/boot-fat.uefi.img.gz
+wget https://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_developer_YYYYMMDD-XXX-4g.emmc.img.gz (or hikey-jessie_developer_YYYYMMDD-XXX-8g.emmc.img.gz)
 gunzip *.img.gz
 ```
+
 Now skip to the [Flash binaries to eMMC](#flash-emmc) section.
 
 ## Source code
