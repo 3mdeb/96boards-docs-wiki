@@ -824,7 +824,7 @@ boot | 6 | 0x00E0_0000 | 0x0400_0000 (64MB)
 Reserved |7 | 0x04E0_0000 | 0x1000_0000 (256MB)
 cache | 8 | 0x14E0_0000 | 0x1000_0000 (256MB)
 system | 9 | 0x24E0_0000 | 0x6000_0000 (1536MB)
-userdata | 10 | 0x84E0_0000 | 0x6000_0000 (1536MB)
+userdata | 10 | 0x84E0_0000 | to the end of eMMC
 
 Table 1: HiKey Partitions
 
