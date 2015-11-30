@@ -337,11 +337,11 @@ For most users a board can be “recovered” from a software failure by reloadi
 **Preparation**
 
 Download the following files onto a Linux PC:
-* [l-loader.bin](https://builds.96boards.org/releases/hikey/linaro/uefi/latest/l-loader.bin)
-* [fip.bin](https://builds.96boards.org/releases/hikey/linaro/uefi/latest/fip.bin)
-* [ptable-linux-4g.img](https://builds.96boards.org/releases/hikey/linaro/uefi/latest/ptable-linux-4g.img) or [ptable-linux-8g.img](https://builds.96boards.org/releases/hikey/linaro/uefi/latest/ptable-linux-8g.img) for Debian.
-* [ptable-aosp-4g.img](https://builds.96boards.org/releases/hikey/linaro/uefi/latest/ptable-aosp-4g.img) or [ptable-aosp-8g.img](https://builds.96boards.org/releases/hikey/linaro/uefi/latest/ptable-aosp-8g.img) for AOSP.
-* [nvme.img](https://builds.96boards.org/releases/hikey/linaro/uefi/latest/nvme.img)
+* [l-loader.bin](https://builds.96boards.org/releases/hikey/linaro/binaries/latest/l-loader.bin)
+* [fip.bin](https://builds.96boards.org/releases/hikey/linaro/binaries/latest/fip.bin)
+* [ptable-linux-4g.img](https://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-linux-4g.img) or [ptable-linux-8g.img](https://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-linux-8g.img) for Debian.
+* [ptable-aosp-4g.img](https://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-aosp-4g.img) or [ptable-aosp-8g.img](https://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-aosp-8g.img) for AOSP.
+* [nvme.img](https://builds.96boards.org/releases/hikey/linaro/binaries/latest/nvme.img)
 
 You will also need the boot partition for the OS Image you want to run
 * [boot-fat.uefi.img for Debian] (https://builds.96boards.org/releases/hikey/linaro/debian/latest/boot-fat.uefi.img.gz)
