@@ -836,8 +836,7 @@ File Name | Description | Supported Max. Size
 --------- | ----------- | -------------------
 Image | Kernel Image<sup>1</sup> | 16MB
 ramdisk.img | Ramdisk Image | 8MB
-lcb.dtb | Device Tree Binary<sup>2</sup> |512KB
-cmdline | Command line text file | 512B
+hi6220-hikey.dtb | Device Tree Binary<sup>2</sup> |512KB
 
 Table 2: boot partition files
 
