@@ -348,7 +348,7 @@ You will also need the boot partition for the OS Image you want to run
 * [boot_fat.uefi.img for AOSP](https://builds.96boards.org/releases/hikey/linaro/aosp/latest/boot_fat.uefi.img.tar.xz)
 
 You can do this from your browser or from the command prompt:
-For example, to download the latest snapshot UEFI build and boot partition for Debian do:
+For example, to download the latest UEFI build and boot partition for Debian do:
 
 ```shell
 $ wget https://builds.96boards.org/releases/hikey/linaro/binaries/l-loader.bin
@@ -358,7 +358,6 @@ $ wget https://builds.96boards.org/releases/hikey/linaro/binaries/ptable-linux-8
 $ wget https://builds.96boards.org/releases/hikey/linaro/binaries/nvme.img
 $ wget https://builds.96boards.org/releases/hikey/linaro/debian/latest/boot-fat.uefi.img.gz
 ```
-_Latest Debian release build is published [here](https://builds.96boards.org/releases/hikey/linaro/debian/latest)._
 
 Uncompress the boot image as follows:
 ```shell
