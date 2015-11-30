@@ -214,10 +214,12 @@ HiKey supports booting from both eMMC and microSD card. To,
 If auto boot feature is enabled, a predefined boot entry will be selected
 by default.
 
+```shell
 Boot entries:
 1 -- Android Fastboot App
 2 -- grub on eMMC
 3 -- SD
+```
 
 If SD card is in slot, booting from SD (entry #3) is the highest priority. Otherwise, system will boot from eMMC (entry #2) instead.
 If jumper on pin5-6 of J15 is connected, entry #1 is the highest priority instead.
