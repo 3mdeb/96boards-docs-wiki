@@ -712,7 +712,7 @@ $ dd if=/dev/zero of=boot-fat.emmc.img bs=512 count=131072
 $ sudo mkfs.fat -n "BOOT IMG" boot-fat.emmc.img
 $ sudo mount -o loop,rw,sync boot-fat.emmc.img boot-fat
 $ sudo cp -a arch/arm64/boot/Image boot-fat/Image
-$ sudo cp arch/arm64/boot/dts/hi6220-hikey.dtb boot-fat/lcb.dtb
+$ sudo cp arch/arm64/boot/dts/hi6220-hikey.dtb boot-fat/hi6220-hikey.dtb
 $ sudo cp initrd.img boot-fat/ramdisk.img
 $ sudo cp cmdline boot-fat/cmdline
 $ sudo umount boot-fat
@@ -730,7 +730,7 @@ $ sudo fastboot reboot
 $ mkdir tmp
 $ sudo mount boot-fat.emmc.img tmp
 $ sudo cp YOUR-KERNEL-BUILD/arch/arm64/boot/Image tmp/Image
-$ sudo cp YOUR-KERNEL-BUILD/arch/arm64/boot/dts/hi6220-hikey.dtb tmp/lcb.dtb
+$ sudo cp YOUR-KERNEL-BUILD/arch/arm64/boot/dts/hi6220-hikey.dtb tmp/hi6220-hikey.dtb
 $ sudo umount tmp
 $ rm -rf tmp
 ```
@@ -750,7 +750,7 @@ Note: if you make ANY of your own changes to the tagged tree your built kernel w
 3. Insert your SD card into your Linux PC and copy your newly built kernel and device tree blob onto the SD card boot partition - use your own SD card /dev device in place of /dev/sda1:
 ```
 $ sudo cp arch/arm64/boot/Image /dev/sda1/boot/Image
-$ sudo cp arch/arm64/boot/dts/hi6220-hikey.dtb /dev/sda1/boot/lcb.dtb
+$ sudo cp arch/arm64/boot/dts/hi6220-hikey.dtb /dev/sda1/boot/hi6220-hikey.dtb
 ```
 
 Note: File names must not be changed - Refer to [Appendix 1](#appendix-1) to see the 4 files that are expected to be in the boot partition. If any of these are missing from the SD card boot partition, HiKey will fall back to the eMMC boot partition and boot from eMMC.
