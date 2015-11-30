@@ -101,6 +101,25 @@ python gen_loader.py -o ptable-linux.img --img_prm_ptable=prm_ptable.img
 
 The files fip.bin, l-loader.bin and ptable-linux.img are now built. All the image files are in $BUILD/l-loader directory. The Fastboot App is at adk2/Build/HiKey/RELEASE_GCC49/AARCH64/AndroidFastbootApp.efi
 
+### Create or modify menu entry in GRUB
+GRUB is the loader to OS. Now both debian and AOSP are booted by GRUB on HiKey. If user wants to create his own kernel, creating a new menu entry is preferred.
+
+grub.cfg is stored in /EFI/BOOT directory of boot partition (boot-fat.uefi.img). Append new entry in grub.cfg. In this case, only custom kernel and dtb file are stored in rootfs. And still use the initrd that are installed in rootfs.
+
+```shell
+menuentry 'Custom Kernel' {
+    search.fs_label rootfs boot
+    search.fs_label boot esp
+    linux ($esp)/Image console=tty0 console=ttyAMA3,115200 root=/dev/disk/by-partlabel/system rootwait rw efi=noruntime
+    initrd ($root)/boot/initrd.img
+    devicetree ($esp)/hi6220-hikey.dtb
+}
+```
+
+User can also store custom kernel & dtb file into rootfs. Just update grub.cfg according to the change.
+
+Since boot partition could be mounted after system boot, user could edit grub.cfg directly. Or user could unpack boot-fat.uefi.img, edit it and pack again.
+
 ### EFI boot partition (boot-fat.uefi.img)
 The boot partition is a 64MB FAT partition. In prebuilt boot partition, there are grubaa64.efi, grub.cfg and fastboot.efi. Kernel, initrd and dtb files are stored in rootfs (partition 9 in eMMC).
 
