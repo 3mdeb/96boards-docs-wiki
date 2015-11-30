@@ -102,19 +102,15 @@ python gen_loader.py -o ptable-linux.img --img_prm_ptable=prm_ptable.img
 The files fip.bin, l-loader.bin and ptable-linux.img are now built. All the image files are in $BUILD/l-loader directory. The Fastboot App is at adk2/Build/HiKey/RELEASE_GCC49/AARCH64/AndroidFastbootApp.efi
 
 ### EFI boot partition (boot-fat.uefi.img)
+The boot partition is a 64MB FAT partition. In prebuilt boot partition, there are grubaa64.efi, grub.cfg and fastboot.efi. Kernel, initrd and dtb files are stored in rootfs (partition 9 in eMMC).
 
-The boot partition is a 64MB FAT partition and contains kernel/dtb files. It is assumed the kernel has been built. See Getting Started instructions for more information on building the kernel.
-
+If user wants to create his own boot partition, it's better to be based on prebuilt boot-fat.uefi.img. See Getting Started instructions for more information on building the kernel. See GRUB section for more information on creating new entry in grub.cfg.
 ```shell
-$ mkdir boot-fat
-$ dd if=/dev/zero of=boot-fat.uefi.img bs=512 count=131072
-$ sudo mkfs.fat -n "BOOT IMG" boot-fat.uefi.img
+$ mkdir -p boot-fat
 $ sudo mount -o loop,rw,sync boot-fat.uefi.img boot-fat
-$ sudo cp -a path/to/Image path/to/hi6220-hikey.dtb boot-fat/ || true
-$ sudo cp -a path/to/initrd.img-* boot-fat/initrd.img || true
-$ sudo cp path/to/AndroidFastbootApp.efi boot-fat/fastboot.efi
-$ sudo umount boot-fat
-$ rm -rf boot-fat
+# command to copy custom kernel & dtb file into boot-fat
+$ sync
+$ sudo umount boot-fat.uefi.img
 ```
 
 ## Flash binaries to eMMC <a name="flash-emmc"></a>
