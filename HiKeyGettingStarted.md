@@ -354,9 +354,10 @@ For most users a board can be “recovered” from a software failure by reloadi
 Download the following files onto a Linux PC:
 [https://builds.96boards.org/releases/hikey/linaro/binaries/latest](https://builds.96boards.org/releases/hikey/linaro/binaries/latest)
 - ptable-linux.img
-- l-loader.bin
-- fip.bin
+- fastboot1.img
+- fastboot2.img
 - nvme.img
+- mcuimage.bin
 
 You will also need the fastboot application installed on your Linux PC – if this is not installed use the following commands
 ```
@@ -436,7 +437,7 @@ $ alias python=python2.7
 
 Run the script to initially prepare fastboot:
 ```
-$ sudo python hisi-idt.py -d /dev/ttyUSB0 --img1 l-loader.bin
+$ sudo python hisi-idt.py -d /dev/ttyUSB0 --img1 fastboot1.img --img2 fastboot2.img
 ```
 
 If you get the following error message, while running the hisi-idt.py script:
@@ -460,22 +461,26 @@ After the python command has been issued you should see the following output:
 ```
 +----------------------+
  Serial:  /dev/ttyUSB0
- Image1:  l-loader.bin
- Image2:  
+ Image1:  fastboot1.img
+ Image2:  fastboot2.img
 +----------------------+
 
-Sending l-loader.bin ...
+Sending fastboot1.img ...
+Done
+
+Sending fastboot2.img ...
 Done
 ```
 
 Note: You may see the word “failed” before Done. This is under investigation but is not fatal. As long as the “Done” is printed at the end you may proceed.
 
-The bootloader has now been installed into RAM. Wait a few seconds for l-loader.bin to actually load. The following fastboot commands then load the partition table, the bootloaders and other necessary files into the HiKey eMMC flash memory.
+The bootloader has now been installed into RAM. Wait a few seconds for fastboot to actually load. The following fastboot commands then load the partition table, the bootloaders and other necessary files into the HiKey eMMC flash memory.
 ```
 $ sudo fastboot flash ptable ptable-linux.img
-# l-loader.bin could only be flushed in recovery mode. It's recommended to use hisi.py to update l-loader.bin.
-$ sudo fastboot flash fastboot fip.bin
+$ sudo fastboot flash fastboot1 fastboot1.img
+$ sudo fastboot flash fastboot fastboot2.img
 $ sudo fastboot flash nvme nvme.img
+$ sudo fastboot flash mcuimage mcuimage.bin
 $ sudo fastboot reboot
 ```
 
@@ -712,7 +717,7 @@ $ dd if=/dev/zero of=boot-fat.emmc.img bs=512 count=131072
 $ sudo mkfs.fat -n "BOOT IMG" boot-fat.emmc.img
 $ sudo mount -o loop,rw,sync boot-fat.emmc.img boot-fat
 $ sudo cp -a arch/arm64/boot/Image boot-fat/Image
-$ sudo cp arch/arm64/boot/dts/hi6220-hikey.dtb boot-fat/hi6220-hikey.dtb
+$ sudo cp arch/arm64/boot/dts/hi6220-hikey.dtb boot-fat/lcb.dtb
 $ sudo cp initrd.img boot-fat/ramdisk.img
 $ sudo cp cmdline boot-fat/cmdline
 $ sudo umount boot-fat
@@ -730,7 +735,7 @@ $ sudo fastboot reboot
 $ mkdir tmp
 $ sudo mount boot-fat.emmc.img tmp
 $ sudo cp YOUR-KERNEL-BUILD/arch/arm64/boot/Image tmp/Image
-$ sudo cp YOUR-KERNEL-BUILD/arch/arm64/boot/dts/hi6220-hikey.dtb tmp/hi6220-hikey.dtb
+$ sudo cp YOUR-KERNEL-BUILD/arch/arm64/boot/dts/hi6220-hikey.dtb tmp/lcb.dtb
 $ sudo umount tmp
 $ rm -rf tmp
 ```
@@ -750,7 +755,7 @@ Note: if you make ANY of your own changes to the tagged tree your built kernel w
 3. Insert your SD card into your Linux PC and copy your newly built kernel and device tree blob onto the SD card boot partition - use your own SD card /dev device in place of /dev/sda1:
 ```
 $ sudo cp arch/arm64/boot/Image /dev/sda1/boot/Image
-$ sudo cp arch/arm64/boot/dts/hi6220-hikey.dtb /dev/sda1/boot/hi6220-hikey.dtb
+$ sudo cp arch/arm64/boot/dts/hi6220-hikey.dtb /dev/sda1/boot/lcb.dtb
 ```
 
 Note: File names must not be changed - Refer to [Appendix 1](#appendix-1) to see the 4 files that are expected to be in the boot partition. If any of these are missing from the SD card boot partition, HiKey will fall back to the eMMC boot partition and boot from eMMC.
@@ -819,7 +824,7 @@ boot | 6 | 0x00E0_0000 | 0x0400_0000 (64MB)
 Reserved |7 | 0x04E0_0000 | 0x1000_0000 (256MB)
 cache | 8 | 0x14E0_0000 | 0x1000_0000 (256MB)
 system | 9 | 0x24E0_0000 | 0x6000_0000 (1536MB)
-userdata | 10 | 0x84E0_0000 | to the end of eMMC
+userdata | 10 | 0x84E0_0000 | 0x6000_0000 (1536MB)
 
 Table 1: HiKey Partitions
 
@@ -831,7 +836,8 @@ File Name | Description | Supported Max. Size
 --------- | ----------- | -------------------
 Image | Kernel Image<sup>1</sup> | 16MB
 ramdisk.img | Ramdisk Image | 8MB
-hi6220-hikey.dtb | Device Tree Binary<sup>2</sup> |512KB
+lcb.dtb | Device Tree Binary<sup>2</sup> |512KB
+cmdline | Command line text file | 512B
 
 Table 2: boot partition files
 
