@@ -213,46 +213,6 @@ By default, SD card is the boot device. The boot flow is in below.
          Always boot from eMMC whether SD card is present. It's used when SD card is just mass storage device. For this case, people always leave SD card in slot.
 
 ```
-* Optional: To add fastboot to boot menu by manual:
-```shell
-The default boot selection will start in  10 seconds  
-[3] Boot Manager  
-Start: 3  
-[1] Add Boot Device Entry  
-Choice: 1  
-[1] BOOT IMG (63 MB)  
-        - VenHw(B549F005-4BD4-4020-A0CB-06F42BDA68C3)/HD(6,GPT,5C0F213C-17E1-4149-88C8-8B50FB4EC70E,0x7000,0x20000)  
-        Select the Boot Device: 1  
-        File path of the EFI Application or the kernel: fastboot.efi  
-        Is your application an OS loader? [y/n] n  
-        Arguments to pass to the EFI Application:  
-        Description for this new Entry: f  
-[1] Add Boot Device Entry  
-[2] Update Boot Device Entry  
-[3] Remove Boot Device Entry  
-[4] Reorder Boot Device Entries  
-[5] Update FDT path  
-[6] Set Boot Timeout  
-[7] Return to main menu  
-Choice: 7  
-[1] Linux from eMMC  
-VenHw(B549F005-4BD4-4020-A0CB-06F42BDA68C3)/HD(6,GPT,5C0F213C-17E1-4149-88C8-8B50FB4EC70E,0x7000,0x20000)/Image  
-Initrd: VenHw(B549F005-4BD4-4020-A0CB-06F42BDA68C3)/HD(6,GPT,5C0F213C-17E1-4149-88C8-8B50FB4EC70E,0x7000,0x20000)/initrd.img  
-Arguments: console=ttyAMA0,115200 earlycon=pl011,0xf8015000 root=/dev/mmcblk0p9 rw verbose debug user_debug=31 loglevel=8  
-LoaderType: Linux kernel with FDT support  
-[2] f  
-VenHw(B549F005-4BD4-4020-A0CB-06F42BDA68C3)/HD(6,GPT,5C0F213C-17E1-4149-88C8-8B50FB4EC70E,0x7000,0x20000)/fastboot.efi  
-Arguments:  
-[3] Shell  
-[4] Boot Manager  
-Start: 2  
-add-symbol-file /home/zhangfei/work/96board/linaro-edk2/Build/HiKey/DEBUG_GCC48/AARCH64/EmbeddedPkg/Application/Andro
-idFastboot/AndroidFastbootApp/DEBUG/AndroidFastbootApp.dll 0x3AA87260
-Loading driver at 0x0003AA87000 EntryPoint=0x0003AA87260 AndroidFastbootApp.efi
-Android Fastboot mode - version 0.4. Press any key to quit.  
-
-Note: fastboot.efi is renamed from $BUILD/linaro-edk2/Build/HiKey/RELEASE_GCC48/AARCH64/EmbeddedPkg/Application/AndroidFastboot/AndroidFastbootApp/OUTPUT/AndroidFastbootApp.efi
-```
 
 ## Set Serial Number in recovery mode
 
