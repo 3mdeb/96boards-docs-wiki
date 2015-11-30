@@ -628,8 +628,8 @@ The following are known issues on the current release.
 This is under current investigation.
 3. **Apple Bluetooth Keyboards/Mice/Trackpads do not work**
 This is under current investigation. 
-4. **Attempting BT file transfer freezes the board**
-This is under current investigation.  **TODO check this**
+4. **Attempting BT file transfer on the Debian build freezes the board.**
+This is under current investigation.
 5. **Switching user may cause a blank screen** 
 Clicking on the Switch User button can cause the screen to go blank.
 This is being investigated.
