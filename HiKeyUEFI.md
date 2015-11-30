@@ -202,7 +202,7 @@ by default.
 Boot entries:
 1 -- Android Fastboot App
 2 -- grub on eMMC
-3 -- grub on SD
+3 -- SD
 
 By default, the predefined boot entry is 2. If jumper on pin5-6 of J15 is
 connect, the predefined boot entry is 1.
