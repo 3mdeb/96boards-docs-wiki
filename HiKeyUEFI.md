@@ -225,6 +225,7 @@ If SD card is in slot, booting from SD (entry #3) is the highest priority. Other
 If jumper on pin5-6 of J15 is connected, entry #1 is the highest priority instead.
 
 Although booting from SD is higher priority than booting from eMMC (without jumper on pin5-6), user still can change the priority.
+```shell
 $sudo fastboot oem bootdevice [emmc|sd]
 By default, SD card is the boot device. The boot flow is in below.
     a. If boot device is SD card.
@@ -232,7 +233,7 @@ By default, SD card is the boot device. The boot flow is in below.
          2) If SD card is _not_ present, boot from eMMC.
     b. If boot device is eMMC.
          Always boot from eMMC whether SD card is present. It's used when SD card is just mass storage device. For this case, people always leave SD card in slot.
-
+```
 
 ## Set Serial Number in recovery mode
 
