@@ -258,24 +258,32 @@ $sudo fastboot oem led1 off
 ```
 All four leds could be controlled by fastboot command. They are from led1 to led4.
 
-## Use UART0 as console
+## How to Use UART0 as console
+
+By default, UART3 is used as serial console. There's UART3 port on LS connector on HiKey. If user wants to use UART0 instead, he has to change a few things below.
 
 * Use UART0 as console in ARM Trust Firmware
 ```shell
 # Update $CROSS_COMPILE in uefi-tools/atf-build.sh
 CROSS_COMPILE="$CROSS_COMPILE" make -j$NUM_THREADS PLAT="$ATF_PLATFORM" $SPD_OPTION DEBUG=$DEBUG CONSOLE=PL011_UART0_BASE CRASH_CONSOLE_BASE=PL011_UART0_BASE
+
+# Rebuild ARM Trust Firmware
 ```
 
 * Use UART0 as console in UEFI
 ```shell
 # Update SERIAL_BASE in HisiPkg/HiKeyPkg/HiKey.dsc file.
 DEFINE SERIAL_BASE = 0xF8015000
+
+# Rebuild UEFI
 ```
 
 * Use UART0 as console in kernel
 ```shell
 # Update kernel command line in grub.cfg
 linux ($root)/boot/Image console=tty0 console=ttyAMA0,115200 console=ttyAMA3,115200 root=/dev/disk/by-partlabel/system rootwait rw quiet efi=noruntime
+
+# Don't need to build kernel again.
 ```
 
 ## Known Issues
