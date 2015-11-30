@@ -63,6 +63,7 @@ export PATH="${PWD}/arm-tc/bin:${PWD}/arm64-tc/bin:$PATH"
 ### Get the source code
 
 ```shell
+# --depth 1 means to fetch code without commit history
 git clone -b hikey --depth 1 https://github.com/96boards/edk2.git linaro-edk2
 git clone -b hikey --depth 1 https://github.com/96boards/arm-trusted-firmware.git
 git clone --depth 1 https://github.com/96boards/l-loader.git
