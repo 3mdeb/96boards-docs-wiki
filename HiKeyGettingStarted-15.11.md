@@ -685,7 +685,7 @@ The following instructions can then be used to build the kernel:
 Git clone the source code tree:
 ```
 $ git clone https://github.com/96boards/linux.git
-$ git checkout -b working-hikey 96boards-hikey-15.05 **TODO:update this**
+$ git checkout -b working-hikey 96boards-hikey-15.11
 ```
 
 To build the kernel:
