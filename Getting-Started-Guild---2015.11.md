@@ -912,14 +912,6 @@ Table 2 describes the binaries located in the boot partition.
 
 File Name | Description | Supported Max. Size
 --------- | ----------- | -------------------
-Image | Kernel Image<sup>1</sup> | 16MB
-initrd.img | Ramdisk Image | 8MB
-hi6220-hikey.dtb | Device Tree Binary<sup>2</sup> |512KB
-fastboot.efi | fastboot application for UEFI | N/A
-grubaa64.efi | grub application for Aarch64 for UEFI | N/A
-grub/grub.conf | grub configuration file | N/A
-
-Table 2: boot partition files
-
-Note<sup>1</sup>: Kernel build image: `arch/arm64/boot/image`
-Note<sup>2</sup>: DTB: `arch/arm64/boot/dts/hi6220-hikey.dtb`
+EFI/BOOT/fastboot.efi | fastboot application for UEFI | N/A
+EFI/BOOT/grubaa64.efi | grub application for Aarch64 for UEFI | N/A
+EFI/BOOT/grub.cfg | grub configuration file | N/A
