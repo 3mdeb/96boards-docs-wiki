@@ -622,7 +622,7 @@ The following are known issues on the current release.
     - HDMI and Expansion bus audio. (At present only Bluetooth audio is supported)
     - Some video formats are not decoded in Android, and will not be played with the current release
     - HDMI hotplug detection (HPD) is not supported. (Note: You can still plug in HDMI cable after the board booted, which make HDMI work through two candidate modes: 1280x720p and 800x600p. However these are not HPD, they is built-in default.)
-    - Power button behavior. [bug #160](https://bugs.96boards.org/show_bug.cgi?id=160)
+    - Behaviors of power on button not following hardware user guide. [bug #160](https://bugs.96boards.org/show_bug.cgi?id=160)
     - HDMI display sometimes goes off when in AOSP. See [bug #136](https://bugs.96boards.org/show_bug.cgi?id=136)
 2. **USB gives occasional non-fatal kernel trace messages**
 `usb usb1: clear tt 1 (9032) error -22`
