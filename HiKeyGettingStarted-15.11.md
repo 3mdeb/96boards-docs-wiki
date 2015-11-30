@@ -704,8 +704,7 @@ https://builds.96boards.org/releases/hikey/linaro/debian/latest
 
 Latest Debian release build is published [here](https://builds.96boards.org/releases/hikey/linaro/debian/latest).
 
-By default, hikey includes the TI R8.5 wl18 driver (some information below)
-https://processors.wiki.ti.com/index.php/WL18xx_System_Build_Scripts
+By default, HiKey includes TI R8.5 wl18 driver.
 
 In order to compile and install this driver you will have to do the following:
 
