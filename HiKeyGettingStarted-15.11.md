@@ -194,17 +194,17 @@ Users may install a version of the build of Android Open Source Project (AOSP) o
 - AOSP Android Lollipop (5.x)
 
 Download the following files from:
-[http://builds.96boards.org/releases/hikey/linaro/aosp/latest](http://builds.96boards.org/releases/hikey/linaro/aosp/latest)
+[https://builds.96boards.org/releases/hikey/linaro/aosp/latest](https://builds.96boards.org/releases/hikey/linaro/aosp/latest)
 - boot_fat.uefi.img.tar.xz
 - cache.img.tar.xz
 - system.img.tar.xz
 - userdata-4gb.img.tar.xz (for 4G board) or userdata-8gb.img.tar.xz (for 8G board)
 
 Download the following file from:
-[http://builds.96boards.org/releases/hikey/linaro/binaries/latest](http://builds.96boards.org/releases/hikey/linaro/binaries/latest)
-- [ptable-aosp-4g.img](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-aosp-4g.img)
+[https://builds.96boards.org/releases/hikey/linaro/binaries/latest](https://builds.96boards.org/releases/hikey/linaro/binaries/latest)
+- [ptable-aosp-4g.img](https://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-aosp-4g.img)
 or
-- [ptable-aosp-8g.img](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-aosp-8g.img)
+- [ptable-aosp-8g.img](https://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-aosp-8g.img)
 
 Uncompress the .tar.xz files using your operating system file manager, or with the following command for each file:
 ```
@@ -242,10 +242,10 @@ Please read the Hardware notes and the Known Issues in this document before usin
 ## 4. Updating the OS 
 
 Updates to 96Boards supported operating systems will be made available at:
-[http://builds.96boards.org/releases/hikey](http://builds.96boards.org/releases/hikey)
+[https://builds.96boards.org/releases/hikey](https://builds.96boards.org/releases/hikey)
 
 Developer snapshot updates are also provided at:
-[http://builds.96boards.org/snapshots/hikey](http://builds.96boards.org/snapshots/hikey)
+[https://builds.96boards.org/snapshots/hikey](https://builds.96boards.org/snapshots/hikey)
 
 Note that these snapshots represent engineering work in progress towards the next release. They may not be functional or stable and are provided as-is without support. 
 
@@ -260,17 +260,17 @@ Once fastboot is installed on the Linux PC proceed as follows:
 ### Debian Linux OS
 
 Download the following files onto your Linux PC from: 
-[http://builds.96boards.org/releases/hikey/linaro/debian/latest](http://builds.96boards.org/releases/hikey/linaro/debian/latest)
+[https://builds.96boards.org/releases/hikey/linaro/debian/latest](https://builds.96boards.org/releases/hikey/linaro/debian/latest)
 - boot-fat.uefi.img.gz
 - hikey-jessie_alip_2015MMDD-nnn-4g.emmc.img.gz (for 4G board) or hikey-jessie_alip_2015MMDD-nnn-8g.emmc.img.gz (for 8G board)
 
 Note: _developer version comes with no graphics UI; _alip version comes with LXDE UI.
 
 Download the following file from:
-[http://builds.96boards.org/releases/hikey/linaro/binaries/latest](http://builds.96boards.org/releases/hikey/linaro/binaries/latest)
-- [ptable-linux-4g.img](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-linux-4g.img)
+[https://builds.96boards.org/releases/hikey/linaro/binaries/latest](https://builds.96boards.org/releases/hikey/linaro/binaries/latest)
+- [ptable-linux-4g.img](https://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-linux-4g.img)
 or
-- [ptable-linux-8g.img](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-linux-8g.img)
+- [ptable-linux-8g.img](https://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-linux-8g.img)
 
 Note that the Debian image is a large file and may take several minutes (or longer on a slow internet connection) to load. You will need to accept the end user license for the Mali GPU software before you are able to download the OS image. 
 
@@ -304,7 +304,7 @@ NOTE: The UEFI bootloader on HiKey also enables booting a kernel and root file s
 This section describes how to prepare a bootable SD card.
 
 Download the following file onto your Linux PC from: 
-[http://builds.96boards.org/releases/hikey/linaro/debian/latest](http://builds.96boards.org/releases/hikey/linaro/debian/latest)
+[https://builds.96boards.org/releases/hikey/linaro/debian/latest](https://builds.96boards.org/releases/hikey/linaro/debian/latest)
   - hikey-jessie_alip_2015MMDD-nnn-4g.img.gz or hikey-jessie_alip_2015MMDD-nnn-8g.img.gz
 
 Note: _developer version comes with no graphics UI; _alip version comes with LXDE UI.
@@ -337,10 +337,10 @@ For most users a board can be “recovered” from a software failure by reloadi
 **Preparation**
 
 Download the following files onto a Linux PC:
-* [l-loader.bin](http://builds.96boards.org/releases/hikey/linaro/uefi/latest/l-loader.bin)
-* [fip.bin](http://builds.96boards.org/releases/hikey/linaro/uefi/latest/fip.bin)
-* [ptable-linux-4g.img](http://builds.96boards.org/releases/hikey/linaro/uefi/latest/ptable-linux-4g.img) or [ptable-linux-8g.img](http://builds.96boards.org/releases/hikey/linaro/uefi/latest/ptable-linux-8g.img) for Debian.
-* [ptable-aosp-4g.img](http://builds.96boards.org/releases/hikey/linaro/uefi/latest/ptable-aosp-4g.img) or [ptable-aosp-8g.img](http://builds.96boards.org/releases/hikey/linaro/uefi/latest/ptable-aosp-8g.img) for AOSP.
+* [l-loader.bin](https://builds.96boards.org/releases/hikey/linaro/uefi/latest/l-loader.bin)
+* [fip.bin](https://builds.96boards.org/releases/hikey/linaro/uefi/latest/fip.bin)
+* [ptable-linux-4g.img](https://builds.96boards.org/releases/hikey/linaro/uefi/latest/ptable-linux-4g.img) or [ptable-linux-8g.img](https://builds.96boards.org/releases/hikey/linaro/uefi/latest/ptable-linux-8g.img) for Debian.
+* [ptable-aosp-4g.img](https://builds.96boards.org/releases/hikey/linaro/uefi/latest/ptable-aosp-4g.img) or [ptable-aosp-8g.img](https://builds.96boards.org/releases/hikey/linaro/uefi/latest/ptable-aosp-8g.img) for AOSP.
 * [nvme.img](https://builds.96boards.org/releases/hikey/linaro/uefi/latest/nvme.img)
 
 You will also need the boot partition for the OS Image you want to run
@@ -351,12 +351,12 @@ You can do this from your browser or from the command prompt:
 For example, to download the latest snapshot UEFI build and boot partition for Debian do:
 
 ```shell
-$ wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/l-loader.bin
-$ wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/fip.bin
-$ wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux-4g.img
-$ wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux-8g.img
-$ wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/nvme.img
-$ wget https://builds.96boards.org/snapshots/hikey/linaro/debian/latest/boot-fat.uefi.img.gz
+$ wget https://builds.96boards.org/releases/hikey/linaro/binaries/l-loader.bin
+$ wget https://builds.96boards.org/releases/hikey/linaro/binaries/fip.bin
+$ wget https://builds.96boards.org/releases/hikey/linaro/binaries/ptable-linux-4g.img
+$ wget https://builds.96boards.org/releases/hikey/linaro/binaries/ptable-linux-8g.img
+$ wget https://builds.96boards.org/releases/hikey/linaro/binaries/nvme.img
+$ wget https://builds.96boards.org/releases/hikey/linaro/debian/latest/boot-fat.uefi.img.gz
 ```
 _Latest Debian release build is published [here](https://builds.96boards.org/releases/hikey/linaro/debian/latest)._
 
@@ -671,7 +671,7 @@ The HiKey kernel sources are located at: [https://github.com/96boards/linux](htt
 
 To build a kernel, make sure you have an AArch64 cross-toolchain installed on your linux computer, and configured to cross compile to ARMv8 code. For example, Linaro GCC 4.9:
 ```
-$ wget http://releases.linaro.org/14.09/components/toolchain/binaries/\
+$ wget https://releases.linaro.org/14.09/components/toolchain/binaries/\
 gcc-linaro-aarch64-linux-gnu-4.9-2014.09_linux.tar.xz
 $ mkdir ~/arm64-tc
 $ tar --strip-components=1 -C ~/arm64-tc -xf gcc-linaro-aarch64-linux-gnu-4.9-2014.09_linux.tar.xz
@@ -700,12 +700,12 @@ $ make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j8 Image modules hi6220-hike
 ### WiFi Driver From Source
 
 The rootfs included in each HiKey release uses a different wifi driver than the one defined in the kernel.config file present in the release page.
-https://builds.96boards.org/snapshots/hikey/linaro/debian/latest
+https://builds.96boards.org/releases/hikey/linaro/debian/latest
 
 Latest Debian release build is published [here](https://builds.96boards.org/releases/hikey/linaro/debian/latest).
 
 By default, hikey includes the TI R8.5 wl18 driver (some information below)
-http://processors.wiki.ti.com/index.php/WL18xx_System_Build_Scripts
+https://processors.wiki.ti.com/index.php/WL18xx_System_Build_Scripts
 
 In order to compile and install this driver you will have to do the following:
 
@@ -751,7 +751,7 @@ To include the drivers compiled above in a jessie image you would:
 a) install simg2img and make_ext4fs both from Linaro's modified package 'android-tools-fsutils' 
 
 ```
-$ wget http://repo.linaro.org/ubuntu/linaro-overlay/pool/main/a/android-tools/\
+$ wget https://repo.linaro.org/ubuntu/linaro-overlay/pool/main/a/android-tools/\
 android-tools-fsutils_4.2.2+git20130218-3ubuntu41+linaro1_amd64.deb
 $ sudo dpkg -i --force-all android-tools-fsutils_*.deb
 ```
@@ -852,7 +852,7 @@ AOSP sources are hosted in these repositories:
 
 **Build setup**
 
-Please setup the host machine by following the instructions here: [http://source.android.com/source/initializing.html](http://source.android.com/source/initializing.html)
+Please setup the host machine by following the instructions here: [https://source.android.com/source/initializing.html](https://source.android.com/source/initializing.html)
 
 NOTE: The build tries to mount a loop device as fat partition to create the boot-fat.img filesystem image. Please make sure your user is allowed to run those commands in sudo without password by running "visudo" and appending the following lines (replacing "`<USER>`" with your username):
 ```
