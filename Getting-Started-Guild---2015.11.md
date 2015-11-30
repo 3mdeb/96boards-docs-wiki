@@ -358,7 +358,8 @@ $ wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-lin
 $ wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/nvme.img
 $ wget https://builds.96boards.org/snapshots/hikey/linaro/debian/latest/boot-fat.uefi.img.gz
 ```
-Latest Debian release build is published [here](https://builds.96boards.org/releases/hikey/linaro/debian/latest).
+_Latest Debian release build is published [here](https://builds.96boards.org/releases/hikey/linaro/debian/latest)._
+
 Uncompress the boot image as follows:
 ```shell
 $ gunzip boot-fat.uefi.img.gz
