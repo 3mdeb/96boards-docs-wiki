@@ -113,6 +113,11 @@ Note: HDMI audio is not supported in this release.
 
 Once Bluetooth sound sink is connected, you can open the LXMusic player from the Sound & Video menu. Create a playlist from your music files. Supported audio formats are .mp3 and .ogg. You should now be able to play from the LXMusic player. 
 
+Note: LXmusic uses xmms2 as the player backend, you may need to install xmms2 and related plugins if they are not installed, otherwise music may cannot be played.
+```
+$ sudo apt-get install xmms2 xmms2-plugin-*
+```
+
 ### Other Useful Information
 
 **1. Updating and Adding Software**
