@@ -210,7 +210,7 @@ $sudo fastboot oem autoboot 1
 HiKey supports booting from both eMMC and microSD card. To,
 
 ### Boot Sequence
-```shell
+
 If auto boot feature is enabled, a predefined boot entry will be selected
 by default.
 
@@ -231,7 +231,6 @@ By default, SD card is the boot device. The boot flow is in below.
     b. If boot device is eMMC.
          Always boot from eMMC whether SD card is present. It's used when SD card is just mass storage device. For this case, people always leave SD card in slot.
 
-```
 
 ## Set Serial Number in recovery mode
 
