@@ -222,6 +222,7 @@ Boot entries:
 ```
 
 If SD card is in slot, booting from SD (entry #3) is the highest priority. Otherwise, system will boot from eMMC (entry #2) instead.
+
 If jumper on pin5-6 of J15 is connected, entry #1 is the highest priority instead.
 
 Although booting from SD is higher priority than booting from eMMC (without jumper on pin5-6), user still can change the priority.
