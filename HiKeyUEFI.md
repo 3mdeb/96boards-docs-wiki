@@ -209,7 +209,7 @@ $sudo fastboot oem autoboot 1
 <a name="section-boot-order"></a>
 HiKey supports booting from both eMMC and microSD card. To,
 
-* Control Boot Order
+### Boot Sequence
 ```shell
 If auto boot feature is enabled, a predefined boot entry will be selected
 by default.
@@ -219,10 +219,10 @@ Boot entries:
 2 -- grub on eMMC
 3 -- SD
 
-By default, the predefined boot entry is 2. If jumper on pin5-6 of J15 is
-connect, the predefined boot entry is 1.
+If SD card is in slot, booting from SD (entry #3) is the highest priority. Otherwise, system will boot from eMMC (entry #2) instead.
+If jumper on pin5-6 of J15 is connected, entry #1 is the highest priority instead.
 
-Command to change boot order for the case jumper not on pin5-6:
+Although booting from SD is higher priority than booting from eMMC (without jumper on pin5-6), user still can change the priority.
 $sudo fastboot oem bootdevice [emmc|sd]
 By default, SD card is the boot device. The boot flow is in below.
     a. If boot device is SD card.
