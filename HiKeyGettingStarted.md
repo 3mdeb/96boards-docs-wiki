@@ -354,10 +354,9 @@ For most users a board can be “recovered” from a software failure by reloadi
 Download the following files onto a Linux PC:
 [https://builds.96boards.org/releases/hikey/linaro/binaries/latest](https://builds.96boards.org/releases/hikey/linaro/binaries/latest)
 - ptable-linux.img
-- fastboot1.img
-- fastboot2.img
+- l-loader.bin
+- fip.bin
 - nvme.img
-- mcuimage.bin
 
 You will also need the fastboot application installed on your Linux PC – if this is not installed use the following commands
 ```
@@ -437,7 +436,7 @@ $ alias python=python2.7
 
 Run the script to initially prepare fastboot:
 ```
-$ sudo python hisi-idt.py -d /dev/ttyUSB0 --img1 fastboot1.img --img2 fastboot2.img
+$ sudo python hisi-idt.py -d /dev/ttyUSB0 --img1 l-loader.bin
 ```
 
 If you get the following error message, while running the hisi-idt.py script:
@@ -461,26 +460,22 @@ After the python command has been issued you should see the following output:
 ```
 +----------------------+
  Serial:  /dev/ttyUSB0
- Image1:  fastboot1.img
- Image2:  fastboot2.img
+ Image1:  l-loader.bin
+ Image2:  
 +----------------------+
 
-Sending fastboot1.img ...
-Done
-
-Sending fastboot2.img ...
+Sending l-loader.bin ...
 Done
 ```
 
 Note: You may see the word “failed” before Done. This is under investigation but is not fatal. As long as the “Done” is printed at the end you may proceed.
 
-The bootloader has now been installed into RAM. Wait a few seconds for fastboot to actually load. The following fastboot commands then load the partition table, the bootloaders and other necessary files into the HiKey eMMC flash memory.
+The bootloader has now been installed into RAM. Wait a few seconds for l-loader.bin to actually load. The following fastboot commands then load the partition table, the bootloaders and other necessary files into the HiKey eMMC flash memory.
 ```
 $ sudo fastboot flash ptable ptable-linux.img
-$ sudo fastboot flash fastboot1 fastboot1.img
-$ sudo fastboot flash fastboot fastboot2.img
+# l-loader.bin could only be flushed in recovery mode. It's recommended to use hisi.py to update l-loader.bin.
+$ sudo fastboot flash fastboot fip.bin
 $ sudo fastboot flash nvme nvme.img
-$ sudo fastboot flash mcuimage mcuimage.bin
 $ sudo fastboot reboot
 ```
 
