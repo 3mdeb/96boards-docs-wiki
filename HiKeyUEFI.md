@@ -15,7 +15,7 @@ Latest UEFI snapshot builds are published [here](http://builds.96boards.org/snap
 * [fip.bin](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/fip.bin)
 * [ptable-linux-4g.img](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux-4g.img) or [ptable-linux-8g.img](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux-8g.img)
 
-Latest UEFI release build is published [here](http://builds.96boards.org/releases/hikey/linaro/uefi/latest).
+Note: Latest UEFI release build is published [here](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/), and you can go to this link to get the prebuilt binaries.
 
 Latest Debian snapshot builds are published [here](https://builds.96boards.org/snapshots/hikey/linaro/debian/latest). You can pick a boot partition and an eMMC rootfs:
 * boot-fat.uefi.img.gz
