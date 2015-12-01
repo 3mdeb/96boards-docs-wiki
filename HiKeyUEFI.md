@@ -108,7 +108,7 @@ grub.cfg is stored in /EFI/BOOT directory of boot partition (boot-fat.uefi.img).
 
 ```shell
 menuentry 'Custom Kernel' {
-    search.fs_label rootfs boot
+    search.fs_label rootfs root
     search.fs_label boot esp
     linux ($esp)/Image console=tty0 console=ttyAMA3,115200 root=/dev/disk/by-partlabel/system rootwait rw efi=noruntime
     initrd ($root)/boot/initrd.img
