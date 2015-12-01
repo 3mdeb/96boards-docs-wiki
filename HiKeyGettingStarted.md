@@ -641,7 +641,8 @@ This is being investigated.
 9. **AOSP build can only work at 720p mode. When using 1080p mode, the color scheme is not stable.**
 10. **Shutdown not working - executing 'reboot -p' from serial console will shutdown the board very quickly, but cannot turn off HDMI monitor, and the signal is still there.** 
 11. **UEFI may hang occasionally when the uSD card is present.**
-12. **Bluetooth transfer on large files is not stable in AOSP build.**
+12. **Hot plugging an SD card may not work on some UHS class 1 SD cards on AOSP build.**
+13. **Display sleep may not always work on AOSP**
 
 **Reporting New Issues**
 To report new issues with the HiKey please use the [96Boards Bug Tracker](https://bugs.96boards.org).
