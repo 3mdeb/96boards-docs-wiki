@@ -240,6 +240,9 @@ By default, SD card is the boot device. The boot flow is in below.
 
 * Generate new serial number
 ```shell
+# In recovery mode, we need to input this command to run initial program with fastboot protocol.
+$sudo python hisi-idt.py --img1=l-loader.bin
+# Change serial number by custom fastboot command.
 $sudo fastboot oem serialno
 ```
 By default, random serial number is generated in recovery mode. If user wants to generate new serial number, run the above command when hikey is in recovery mode. Then power off. In the next time, fastboot will use the new generated serial number for transmission.
