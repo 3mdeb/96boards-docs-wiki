@@ -55,8 +55,8 @@ Prerequisites:
 
 ```shell
 mkdir arm-tc arm64-tc
-tar --strip-components=1 -C ${PWD}/arm-tc -xf gcc-linaro-arm-linux-gnueabihf-4.9-*_linux.tar.xz
-tar --strip-components=1 -C ${PWD}/arm64-tc -xf gcc-linaro-aarch64-linux-gnu-4.9-*_linux.tar.xz
+tar --strip-components=1 -C ${PWD}/arm-tc -xf gcc-linaro-4.9-*-x86_64_aarch64-linux-gnu.tar.xz
+tar --strip-components=1 -C ${PWD}/arm64-tc -xf gcc-linaro-4.9-*-x86_64_arm-linux-gnueabihf.tar.xz
 export PATH="${PWD}/arm-tc/bin:${PWD}/arm64-tc/bin:$PATH"
 ```
 
@@ -207,7 +207,7 @@ $sudo fastboot oem autoboot 1
 ```
 
 <a name="section-boot-order"></a>
-HiKey supports booting from both eMMC and microSD card. To,
+HiKey supports booting from both eMMC and microSD card.
 
 ### Boot Sequence
 
@@ -233,7 +233,7 @@ By default, SD card is the boot device. The boot flow is in below.
          1) If SD card is present, boot from SD card.
          2) If SD card is _not_ present, boot from eMMC.
     b. If boot device is eMMC.
-         Always boot from eMMC whether SD card is present. It's used when SD card is just mass storage device. For this case, people always leave SD card in slot.
+         Always boot from eMMC whether SD card is present or not. It's used when SD card is just mass storage device. For this case, people always leave SD card in slot.
 ```
 
 ## Set Serial Number in recovery mode
