@@ -5,7 +5,7 @@
 The following binaries are required:
 * l-loader.bin - used to switch from aarch32 to aarch64 and boot
 * fip.bin - firmware package
-* ptable-aosp.img or ptable-linux.img - partition tables for respectively AOSP images or Linux images
+* ptable-aosp-[4g|8g].img or ptable-linux-[4g|8g].img - partition tables for respectively AOSP images or Linux images
 * kernel and dtb images - included in the boot partition
 
 ## Install from prebuilt binaries
@@ -13,7 +13,7 @@ The following binaries are required:
 Latest UEFI snapshot builds are published [here](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest). Download the following files:
 * [l-loader.bin](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/l-loader.bin)
 * [fip.bin](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/fip.bin)
-* [ptable-linux.img](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux.img)
+* [ptable-linux-[4g|8g].img](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux.img)
 
 Latest UEFI release build is published [here](http://builds.96boards.org/releases/hikey/linaro/uefi/latest).
 
