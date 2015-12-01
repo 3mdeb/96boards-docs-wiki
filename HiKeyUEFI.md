@@ -166,7 +166,13 @@ $ sudo fastboot flash system hikey-jessie_alip_2015MMDD-nnn.emmc.img
 
 * Or Interrupt the boot by pressing any select
 ```shell
-[2] Shell
+The default boot selection will start in 10 seconds
+[1] fastboot
+[2] boot from eMMC
+[3] boot from SD card
+[4] Shell
+[5] Boot Manager
+Start:
 ```
 * At the "Shell>" prompt, type: fastboot
 ```shell
