@@ -99,7 +99,7 @@ sudo PTABLE=linux-4g bash -x generate_ptable.sh
 python gen_loader.py -o ptable-linux.img --img_prm_ptable=prm_ptable.img
 ```
 
-The files fip.bin, l-loader.bin and ptable-linux.img are now built. All the image files are in $BUILD/l-loader directory. The Fastboot App is at adk2/Build/HiKey/RELEASE_GCC49/AARCH64/AndroidFastbootApp.efi
+The files fip.bin, l-loader.bin and ptable-linux.img are now built. All the image files are in $BUILD/l-loader directory. The Fastboot App is at edk2/Build/HiKey/RELEASE_GCC49/AARCH64/AndroidFastbootApp.efi
 
 ### Create or modify menu entry in GRUB
 GRUB is the loader to OS. Now both debian and AOSP are booted by GRUB on HiKey. If user wants to create his own kernel, creating a new menu entry is preferred.
