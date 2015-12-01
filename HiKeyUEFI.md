@@ -13,7 +13,7 @@ The following binaries are required:
 Latest UEFI snapshot builds are published [here](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest). Download the following files:
 * [l-loader.bin](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/l-loader.bin)
 * [fip.bin](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/fip.bin)
-* [ptable-linux-[4g|8g].img](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux.img)
+* [ptable-linux-4g.img](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux-4g.img) or [ptable-linux-8g.img](http://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux-8g.img)
 
 Latest UEFI release build is published [here](http://builds.96boards.org/releases/hikey/linaro/uefi/latest).
 
