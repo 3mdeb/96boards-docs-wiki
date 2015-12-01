@@ -1,0 +1,40 @@
+h2. Reference Software Platform Enterprise Edition
+
+Draft for EE specific instructions and documentation.
+
+h3. Setting up DHCP/TFTP server for network installers
+
+Example using dnsmasq, which is a lightweight, easy to configure DNS forwarder and DHCP server with BOOTP/TFTP/PXE functionality.
+
+Debian/Ubuntu:
+
+bc. sudo apt-get install dnsmasq
+
+Fedora/CentOS/RHEL:
+
+bc. yum install dnsmasq
+
+This guide assumes you already know the network interface that will provide the DHCP/TFTP/PXE functionality for the target server. In this case, we are using @eth1@ as our secondary interface, with address @192.168.3.1@.
+
+Following is the /etc/dnsmasq.conf providing the required functionality for PXE:
+
+bc. interface=eth1
+dhcp-range=192.168.3.10,192.168.3.100,255.255.255.0,1h
+dhcp-boot=BOOTAA64.EFI
+enable-tftp
+tftp-root=/srv/tftp
+
+Now make sure the tftp-root directory is available, and then start/restart the dnsmasq service:
+
+bc. sudo mkdir -p /srv/tftp
+sudo systemctl restart dnsmasq
+
+Since this guide assumes UEFI support, you don't need to worry about pxelinux specific configurations. All we need is to give DHCP the UEFI binary for the Grub 2 bootloader (that can then load the kernel, initrd and other extra files from the tftp server).
+
+
+* UEFI Build instructions per platform
+* How to flash UEFI/Firmware per platform
+* Installing Debian Jessie
+* Installing Fedora 23
+* Installing CentOS 7
+* Customizing Kernel
