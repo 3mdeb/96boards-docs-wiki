@@ -149,10 +149,49 @@ Welcome to Fedora 23 (Twenty Three) dracut-043-60.git20150811.fc23 (Initramfs)!
 [   23.757345] dracut-initqueue[685]: Dload  Upload   Total   Spent    Left  Speed
 100   958  100   958    0     0   1514      0 --:--:-- --:--:-- --:--:--  1513  0 --:--:-- --:--:-- --:--:--     0
 ...
+Welcome to Fedora 23 (Twenty Three)!
+...
+Starting installer, one moment...
+anaconda 23.19.10-1 for Fedora 23 started.
+ * installation log files are stored in /tmp during the installation
+ * shell is available on TTY2
+ * if the graphical installation interface fails to start, try again with the
+   inst.text bootoption to start text installation
+ * when reporting a bug add logs from /tmp as separate text/plain attachments
+00:29:26 X startup failed, falling back to text mode
+================================================================================
+================================================================================
+VNC
+.
+X was unable to start on your machine.  Would you like to start VNC to connect t
+o this computer from another computer and perform a graphical installation or co
+ntinue with a text mode installation?
+.
+ 1) Start VNC
+.
+ 2) Use text mode
+.
+  Please make your choice from above ['q' to quit | 'c' to continue |
+  'r' to refresh]: 
+.
+[anaconda]1:main* 2:shell  3:log  4:storage-log >Switch tab: Alt+Tab | Help: F1 
 
-* UEFI Build instructions per platform
-* How to flash UEFI/Firmware per platform
-* Installing Debian Jessie
-* Installing Fedora 23
-* Installing CentOS 7
-* Customizing Kernel
+For the text mode installer, just enter @2@ and follow the instructions available in the console.
+
+Menu items without that are not @[x]@ must be set. Enter the menu number associated with the menu in order to configure it.
+
+h4. Finishing the installation
+
+After selecting the installation destination, the partitioning scheme, root password and users (optional), just enter @b@ to proceed with the installation.
+
+Once the installation is completed, you should be able to simply reboot the system in order to boot your new Fedora 23 system.
+
+h3. Installing Debian "Jessie" 8.2
+
+h3. Installing CentOS 7
+
+h3. UEFI/EDK2
+
+h4. Building
+
+h4. Flashing
