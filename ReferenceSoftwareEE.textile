@@ -186,9 +186,154 @@ After selecting the installation destination, the partitioning scheme, root pass
 
 Once the installation is completed, you should be able to simply reboot the system in order to boot your new Fedora 23 system.
 
-h3. Installing Debian "Jessie" 8.2
-
 h3. Installing CentOS 7
+
+This guide is not to be a replacement of the official CentOS Installer documentation, but instead be a quick walkthrough for the network installer. You can find the original documentation at "https://wiki.centos.org/SpecialInterestGroup/AltArch/AArch64":https://wiki.centos.org/SpecialInterestGroup/AltArch/AArch64
+
+This guide is also heavily based on the instructions used for Fedora 23.
+
+h4. Setting up the TFTP server
+
+Back to your dnsmasq server, download the required CentOS 7 installer files at your tftp-root directory. In this example, this directory is configured to @/srv/tftp@. As part of this example we're using the same Grub 2 that is provided by Fedora 23 (TODO: update for the CentOS or common grub 2).
+
+Downloading required Grub 2 UEFI files:
+
+*Note:* Because of bug "1251600":https://bugzilla.redhat.com/show_bug.cgi?id=1251600, we need to use both @BOOTAA64.EFI@ and @grubaa64.efi@ from the Fedora 22 release.
+
+bc. sudo su -
+cd /srv/tftp/
+wget http://dl.fedoraproject.org/pub/fedora-secondary/releases/22/Server/aarch64/os/EFI/BOOT/BOOTAA64.EFI
+wget http://dl.fedoraproject.org/pub/fedora-secondary/releases/22/Server/aarch64/os/EFI/BOOT/grubaa64.efi
+wget http://dl.fedoraproject.org/pub/fedora-secondary/releases/23/Server/aarch64/os/EFI/BOOT/MokManager.efi
+
+Downloading upstream Kernel and Initrd
+
+bc. mkdir /srv/tftp/centos7
+cd /srv/tftp/centos7
+wget http://mirror.centos.org/altarch/7/os/aarch64/images/pxeboot/vmlinuz
+wget http://mirror.centos.org/altarch/7/os/aarch64/images/pxeboot/initrd.img
+
+Creating the Grub 2 config file (@grub.cfg@):
+
+bc. menuentry 'Install CentOS 7 64-bit' --class red --class gnu-linux --class gnu --class os {
+    linux (tftp)/centos7/vmlinuz ip=dhcp inst.repo=http://mirror.centos.org/altarch/7/os/aarch64/
+    initrd (tftp)/centos7/initrd.img
+}
+
+You should now have the following file tree structure:
+
+bc. /srv/tftp/
+├── BOOTAA64.EFI
+├── centos7
+│   ├── initrd.img
+│   └── vmlinuz
+├── grubaa64.efi
+├── grub.cfg
+└── MokManager.efi
+
+Now just make sure that @/etc/dnsmasq.conf@ is pointing out to the right boot file, like:
+
+bc. dhcp-boot=BOOTAA64.EFI
+
+h4. Booting the installer
+
+Now boot your platform of choice, selecting PXE boot when presented by UEFI (make sure to boot with the right network interface, in case more than one is available).
+
+You should see the following (using AMD Seattle's Overdrive as example):
+
+bc. NOTICE:  BL3-1: 
+NOTICE:  BL3-1: Built : 18:22:46, Nov 23 2015
+INFO:    BL3-1: Initializing runtime services
+INFO:    BL3-1: Preparing for EL3 exit to normal world
+INFO:    BL3-1: Next image address = 0x8000000000
+INFO:    BL3-1: Next image spsr = 0x3c9
+Boot firmware (version  built at 18:27:24 on Nov 23 2015)
+Version 2.17.1249. Copyright (C) 2015 American Megatrends, Inc.                 
+BIOS Date: 11/23/2015 18:23:09 Ver: ROD0085E00                                  
+Press <DEL> or <ESC> to enter setup.  
+.
+>>Checking Media Presence......
+>>Media Present......
+>>Start PXE over IPv4.
+  Station IP address is 192.168.3.57
+  Server IP address is 192.168.3.1
+  NBP filename is BOOTAA64.EFI
+  NBP filesize is 885736 Bytes
+>>Checking Media Presence......
+>>Media Present......
+ Downloading NBP file...
+ Succeed to download NBP file.
+ Fetching Netboot Image
+
+At this stage you should be able to see the Grub 2 menu, like:
+
+bc. Install CentOS 7 64-bit
+.
+Use the  and  keys to change the selection.                       
+Press 'e' to edit the selected item, or 'c' for a command prompt.
+
+Now just hit enter and wait for the kernel and initrd to load, which automatically loads the installer and provides you the installer console menu, so you can finally install CentOS 7.
+
+You should see the following:
+
+bc.EFI stub: Booting Linux Kernel...
+EFI stub: Using DTB from configuration table
+EFI stub: Exiting boot services and installing virtual address map...
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Initializing cgroup subsys cpuset
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Initializing cgroup subsys cpuacct
+[    0.000000] Linux version 3.19.0-0.79.aa7a.aarch64 (mockbuild@apmb0.centos.lab) (gcc version 4.8.3 20140911 (Red Hat 4.8.3-9) (GCC) ) #1 SMP Tue Jun 30 23:10:30 CDT 2015
+[    0.000000] CPU: AArch64 Processor [411fd072] revision 2
+[    0.000000] Detected PIPT I-cache on CPU0
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] EFI v2.40 by American Megatrends
+[    0.000000] efi:  ACPI 2.0=0x83ff1c6000  SMBIOS 3.0=0x83ff349718 
+...
+Welcome to CentOS Linux 7 (AltArch) dracut-033-241.el7.3 (Initramfs)!
+...
+dracut-initqueue[610]: RTNETLINK answers: File exists
+dracut-initqueue[610]: % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+dracut-initqueue[610]: Dload  Upload   Total   Spent    Left  Speed
+100   287  100   287    0     0    390      0 --:--:-- --:--:-- --:--:--   389:--:-- --:--:--     0
+...
+Welcome to CentOS Linux 7 (AltArch)!
+...
+Starting installer, one moment...
+anaconda 19.31.123-1 for CentOS Linux 7 started.
+ * installation log files are stored in /tmp during the installation
+ * shell is available on TTY2
+ * if the graphical installation interface fails to start, try again with the
+   inst.text bootoption to start text installation
+ * when reporting a bug add logs from /tmp as separate text/plain attachments
+03:22:14 X startup failed, falling back to text mode
+================================================================================
+================================================================================
+VNC
+.
+X was unable to start on your machine.  Would you like to start VNC to connect t
+o this computer from another computer and perform a graphical installation or co
+ntinue with a text mode installation?
+.
+ 1) Start VNC
+.
+ 2) Use text mode
+.
+  Please make your choice from above ['q' to quit | 'c' to continue |
+  'r' to refresh]: 2
+[anaconda] 1:main* 2:shell  3:log  4:storage-log  5:program-log                 
+
+For the text mode installer, just enter @2@ and follow the instructions available in the console.
+
+Menu items without that are not @[x]@ must be set. Enter the menu number associated with the menu in order to configure it.
+
+h4. Finishing the installation
+
+After selecting the installation destination, the partitioning scheme, root password and users (optional), just enter @b@ to proceed with the installation.
+
+Once the installation is completed, you should be able to simply reboot the system in order to boot your new CentOS 7 system.
+
+h3. Installing Debian "Jessie" 8.2
 
 h3. UEFI/EDK2
 
