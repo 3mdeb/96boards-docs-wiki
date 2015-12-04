@@ -357,7 +357,6 @@ Downloading upstream Kernel and Initrd
 
 bc. mkdir /srv/tftp/debian
 cd /srv/tftp/debian
-
 wget http://http.us.debian.org/debian/dists/jessie/main/installer-arm64/current/images/netboot/debian-installer/arm64/linux
 wget http://http.us.debian.org/debian/dists/jessie/main/installer-arm64/current/images/netboot/debian-installer/arm64/initrd.gz
 
