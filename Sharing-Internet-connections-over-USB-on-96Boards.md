@@ -90,7 +90,7 @@ After having connected the usb cable, the target’s device console should have 
 
 ## Bridge the network
 
-Using the network manager applet on the host we have to create a new connection of ethernet type to be shared with the usb interface; the way the interface is identified is via its MAC address.
+We will use the network manager applet on the host to create a new connection of ethernet type to be shared with the usb interface. The way the interface is identified is via its MAC address.
 
 * Select Edit Connections
 * Select Add to create a new Ethernet connection
