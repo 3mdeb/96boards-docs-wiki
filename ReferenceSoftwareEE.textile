@@ -464,6 +464,123 @@ Once the installation is completed, you should be able to simply reboot the syst
 
 h3. UEFI/EDK2
 
+EDK2 is a modern, feature-rich, cross-platform firmware development environment for the UEFI and PI specifications.
+
+The reference UEFI/EDK2 tree used by the EE-RPB comes from Linaro, which is available at https://git.linaro.org/uefi/linaro-edk2.git
+
+The Linaro EDK2 tree is based on upstream (with constant rebases), covered by monthly validation and releases, in order to provide a more stable reference. This tree also contains two extra submodules, LinaroPkg and OpenPlatformPkg, with the latter providing the hardware specific support and drivers (since EDK2 upstream only provides the common and generic pieces).
+
+EDK2 is currently used by 96boards HuskyBoard, AMD Overdrive, ARM Juno r0/r1 and HiSilicon D02.
+
 h4. Building
 
+h5. Pre-Requisites
+
+Make sure the build dependencies are available at your host machine.
+
+On Debian/Ubuntu:
+
+bc. sudo apt-get install uuid-dev build-essential
+
+On RHEL/CentOS/Fedora:
+
+bc. sudo yum install uuid-devel libuuid-devel
+
+If cross compiling, you also need to separately add the required toolchains. Ubuntu has a prebuilt arm-linux-gnueabihf toolchain, but not an aarch64-linux-gnu one.
+
+Download Linaro's GCC 4.9 cross-toolchain for Aarch64, and make it available in your @PATH@. You can download and use the Linaro GCC binary (Linaro GCC 4.9-2015.02), available at "http://releases.linaro.org/15.02/components/toolchain/binaries/aarch64-linux-gnu/gcc-linaro-4.9-2015.02-3-x86_64_aarch64-linux-gnu.tar.xz":http://releases.linaro.org/15.02/components/toolchain/binaries/aarch64-linux-gnu/gcc-linaro-4.9-2015.02-3-x86_64_aarch64-linux-gnu.tar.xz
+
+bc. mkdir arm-tc arm64-tc
+tar --strip-components=1 -C ${PWD}/arm-tc -xf gcc-linaro-arm-linux-gnueabihf-4.9-*_linux.tar.xz
+tar --strip-components=1 -C ${PWD}/arm64-tc -xf gcc-linaro-aarch64-linux-gnu-4.9-*_linux.tar.xz
+export PATH="${PWD}/arm-tc/bin:${PWD}/arm64-tc/bin:$PATH"
+
+h5. Getting the source code
+
+UEFI/EDK2:
+
+bc. git clone -b release --depth 1 http://git.linaro.org/git/uefi/linaro-edk2.git
+
+ARM Trusted Firmware:
+
+bc. git clone --depth 1 https://github.com/ARM-software/arm-trusted-firmware.git
+
+UEFI Tools (helpers and scripts to make the build process easy):
+
+bc. git clone git://git.linaro.org/uefi/uefi-tools.git
+
+h5. Building UEFI/EDK2 for Juno R0/R1
+
+bc. export AARCH64_TOOLCHAIN=GCC49
+export EDK2_DIR=${PWD}/linaro-edk2
+export UEFI_TOOLS_DIR=${PWD}/uefi-tools
+cd ${EDK2_DIR}
+${UEFI_TOOLS_DIR}/uefi-build.sh -b RELEASE -a ../arm-trusted-firmware juno
+
+The output files:
+
+* @Build/ArmJuno/RELEASE_GCC49/AARCH64/FV/BL33_AP_UEFI.fd@ - UEFI
+
+h5. Building UEFI/EDK2 for D02
+
+bc. export AARCH64_TOOLCHAIN=GCC49
+export EDK2_DIR=${PWD}/linaro-edk2
+export UEFI_TOOLS_DIR=${PWD}/uefi-tools
+cd ${EDK2_DIR}
+${UEFI_TOOLS_DIR}/uefi-build.sh -b RELEASE D02
+
+The output files:
+
+* @UEFI_D02.fd@
+* @CH02TEVBC_V03.bin@
+
+FIXME: Add the correct output files
+
 h4. Flashing
+
+h5. Juno R0/R1
+
+h6. Clean flash
+
+Power on the board, and (if prompted) press Enter to stop auto boot. Once in Juno's boot monitor, use the following commands to erase Juno's flash and export it as an external storage:
+
+bc. Cmd> flash
+Flash> eraseall
+Flash> quit
+Cmd> usb_on
+
+This will delete any binaries and UEFI settings currently stored in the Juno's flash, then mount the Juno's MMC card as an external storage device on your host PC.
+
+From your host PC, delete all files on your Juno's mounted MMC card, then copy the firmware plus the built UEFI:
+
+bc. sudo rm -rf /media/recovery/* # Change to the correct mount path
+git clone https://git.linaro.org/arm/vexpress-firmware.git # ARM Firmware for Juno
+bc. cp Build/ArmJuno/RELEASE_GCC49/AARCH64/FV/BL33_AP_UEFI.fd vexpress-firmware/SOFTWARE/uefi.bin
+cp -rf vexpress-firmware/* /media/recovery
+
+FIXME: Add extra steps for cert create.
+
+Be sure to issue a sync command on your host PC afterwards, which will guarantee that the copy has completed:
+
+bc. sync
+
+Finally, power cycle the Juno. After it has finished copying the contents of the MMC card into Flash, the board will boot up and run the new software images.
+
+h6. Upgrading firmware
+
+h5. D02
+
+h6. Clean flash
+
+h6. Upgrading firmware
+
+h3. Extras
+
+h4. Setting boot mode to PXE
+
+h4. Setting boot mode to TFTP
+
+h3. Links and References:
+
+* https://community.arm.com/docs/DOC-10804
+* https://community.arm.com/docs/DOC-8396
