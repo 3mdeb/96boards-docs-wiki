@@ -6,6 +6,10 @@ h3. Boot Firmware
 
 The "UEFI/EDK2 guide for EE":https://github.com/96boards/documentation/wiki/UEFI-EDK2-Guide-for-EE provides information about building and flashing the boot firmware on the supported boards.
 
+h3. Reference Kernel
+
+TODO (once we have our reference kernel for EE)
+
 h3. Network Installers
 
 In order to install a distribution from network, PXE (DCHP/TFTP) booting is required. Since we requires UEFI for for the Enterprise Edition, the setup is usually easier since all is usually required is GRUB 2 (and its configuration). Check "this link":https://github.com/96boards/documentation/wiki/DHCP-TFTP-server-for-UEFI-distro-network-installers for instructions on how to quickly setup your own PXE server (using dnmasq).
