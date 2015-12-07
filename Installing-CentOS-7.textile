@@ -16,7 +16,6 @@ bc. sudo su -
 cd /srv/tftp/
 wget http://dl.fedoraproject.org/pub/fedora-secondary/releases/22/Server/aarch64/os/EFI/BOOT/BOOTAA64.EFI
 wget http://dl.fedoraproject.org/pub/fedora-secondary/releases/22/Server/aarch64/os/EFI/BOOT/grubaa64.efi
-wget http://dl.fedoraproject.org/pub/fedora-secondary/releases/23/Server/aarch64/os/EFI/BOOT/MokManager.efi
 
 Downloading upstream Kernel and Initrd
 
