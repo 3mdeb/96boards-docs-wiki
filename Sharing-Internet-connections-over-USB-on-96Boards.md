@@ -112,9 +112,9 @@ If you haven’t done this before, maybe it is the time to resynchronize the boa
 	$ sudo apt-get upgrade
 
 
-Note: Windows users wanting to connect to the 96Boards platform via direct USB link, would have 
-$sudo modprobe g_ether
-plug the USB cable to the OTG port in the 96Board.
-on the Windows machine, install the Linux RNDIS driver located in the 96Boards kernel tree (Documentation/usb/linux.inf) 
+Note: Windows users wanting to connect to the 96Boards platform via direct USB link, would have to:  
+`$sudo modprobe g_ether` <br />
+plug the USB cable to the OTG port in the 96Board. <br />
+install the Linux RNDIS driver located in the 96Boards kernel tree (Documentation/usb/linux.inf) on the Windows host <br />
 And then configure the Windows network as they would usually do.
 
