@@ -1,21 +1,21 @@
-- [HiKey](https://github.com/96boards/documentation/wiki/HiKey)
+- [[HiKey | HiKey]]
   - [Hardware User Guide](https://github.com/96boards/documentation/blob/master/hikey/HiKey_User_Guide_Rev0.2.pdf)
-  - [Getting Started](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted)
-  - [UEFI](https://github.com/96boards/documentation/wiki/HiKeyUEFI)
-  - [OP-TEE](https://github.com/96boards/documentation/wiki/HiKeyOPTEE)
-  - [LAVA](https://github.com/96boards/documentation/wiki/HiKeyLAVA)
-  - [JTAG](https://github.com/96boards/documentation/wiki/JTAG-on-HiKey)
-  - [Snapshots](https://github.com/96boards/documentation/wiki/LatestSnapshots)
+  - [[Getting Started | HiKeyGettingStarted]]
+  - [[UEFI | HiKeyUEFI]]
+  - [[OP-TEE | HiKeyOPTEE]]
+  - [[LAVA | HiKeyLAVA]]
+  - [[JTAG | JTAG-on-HiKey]]
+  - [[Snapshots | LatestSnapshots]]
   - [Hi6220 SoC Spec](https://github.com/96boards/documentation/blob/master/hikey/Hi6220V100_Multi-Mode_Application_Processor_Function_Description.pdf)
   - [Schematics](https://github.com/96boards/documentation/blob/master/hikey/96Boards-Hikey-Rev-A1.pdf)
-- [Dragonboard 410c](https://github.com/96boards/documentation/wiki/Dragonboard-410c)
-  - [Installation Guide for Linux and Android](https://github.com/96boards/documentation/wiki/Dragonboard-410c-Installation-Guide-for-Linux-and-Android)
-  - [Creation of Kernel Boot Image](https://github.com/96boards/documentation/wiki/Dragonboard-410c-Boot-Image)
+- [[Dragonboard 410c | Dragonboard-410c]]
+  - [[Installation Guide for Linux and Android | Dragonboard-410c-Installation-Guide-for-Linux-and-Android]]
+  - [[Creation of Kernel Boot Image | Dragonboard-410c-Boot-Image]]
   - [Hardware Manual](https://github.com/96boards/documentation/blob/master/dragonboard410c/HardwareManual_DragonBoard.pdf)
   - [Android User Guide](https://github.com/96boards/documentation/blob/master/dragonboard410c/AndroidUserGuide_DragonBoard.pdf)
   - [Linux User Guide](https://github.com/96boards/documentation/blob/master/dragonboard410c/LinuxUserGuide_DragonBoard.pdf)
   - [[OpenEmbedded/Yocto|Dragonboard-410c-OpenEmbedded-and-Yocto]]
-  - [LAVA] (https://github.com/96boards/documentation/wiki/D410CLAVA)
+  - [[LAVA|D410CLAVA]]
   - [Schematics](http://linaro.co/db410c-schematics)
-- [Reference Software](https://github.com/96boards/documentation/wiki/ReferenceSoftware)
-  - [Bootloader (Hikey)](https://github.com/96boards/documentation/wiki/Reference-Bootloader-Hikey)
+- [[Reference Software | ReferenceSoftware]]
+  - [[Bootloader (Hikey) | Reference-Bootloader-Hikey]]
