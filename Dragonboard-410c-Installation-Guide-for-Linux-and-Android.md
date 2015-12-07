@@ -2,7 +2,7 @@
 
 This Users Guide provides a general overview for getting started with Linux and Android installations supporting the [DragonBoard 410c](https://www.96boards.org/products/ce/dragonboard410c/).   There are two primary ways to install software onto the DragonBoard 410c.  
 First and simplest, an installer image can be downloaded and put on an SD Card.  This can then be placed into the board and will automatically boot and install either and Android or Linux Desktop into the board.  See the [Installing Image using an SD Card Image](#installing-image-using-an-sd-card-image) section to use this method.   
-Second, fastboot is supported by the board and can be used for installs.  This is for advanced users who are most likely modifying/customizing source code and will need to download such updates to the board for test/execution. See [Install Android or Ubuntu Using Fastboot](#install-android-or-ubuntu-using-fastboot) to use this method.  When installing Ubuntu using Fastboot, note that the default flow is for installing a Developer(console-only) image.  There is an option in that section, however, to install an LXDE desktop Ubuntu image instead.  When installing Ubuntu using the SD Card method, LXDE desktop install is currently the only option, and there is not a Console-only choice; Fastboot is the only way to attain a Console-only Ubuntu install.
+Second, fastboot is supported by the board and can be used for installs.  This is for advanced users who are most likely modifying/customizing source code and will need to download such updates to the board for test/execution. See [Install Android or Debian Using Fastboot](#install-android-or-debian-using-fastboot) to use this method.  When installing Debian using Fastboot, note that the default flow is for installing a Developer(console-only) image.  There is an option in that section, however, to install an LXDE desktop Debian image instead.  When installing Debian using the SD Card method, LXDE desktop install is currently the only option, and there is not a Console-only choice; Fastboot is the only way to attain a Console-only Debian install.
 This document also contains additional supporting sections such as [Setting Up the UART console](#setting-up-the-uart-console) and [creating and installing a rescue image](#create--install-a-rescue-image) in the case that the board experiences an irrecoverable error and no longer functions.    
 
 **Table of Contents**
@@ -10,20 +10,20 @@ This document also contains additional supporting sections such as [Setting Up t
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [Install Android or Ubuntu from an SD Card](#install-android-or-ubuntu-from-an-sd-card)
+- [Install Android or Debian from an SD Card](#install-android-or-debian-from-an-sd-card)
   - [Overview](#overview)
   - [Installing Image using an SD Card Image](#installing-image-using-an-sd-card-image)
   - [Flashing the SD Card Image to the DB410c](#flashing-the-sd-card-image-to-the-db410c)
-- [Install Android or Ubuntu Using Fastboot](#install-android-or-ubuntu-using-fastboot)
-  - [Install Linaro/Ubuntu release](#install-linaroubuntu-release)
+- [Install Android or Debian Using Fastboot](#install-android-or-debian-using-fastboot)
+  - [Install Linaro/Debian release](#install-linarodebian-release)
     - [Flash the bootloader into on-board eMMC](#flash-the-bootloader-into-on-board-emmc)
-    - [Flash the Linaro/Ubuntu release](#flash-the-linaroubuntu-release)
+    - [Flash the Linaro/Debian release](#flash-the-linarodebian-release)
   - [Install Android release](#install-android-release)
     - [Flash the bootloader into on-board eMMC](#flash-the-bootloader-into-on-board-emmc-1)
     - [Flash the Android release](#flash-the-android-release)
 - [Understanding Build Folder Layout](#understanding-build-folder-layout)
   - [Bootloaders and Rescue Image](#bootloaders-and-rescue-image)
-  - [Ubuntu Images](#ubuntu-images)
+  - [Debian Images](#debian-images)
   - [Android Images](#android-images)
   - [Snapshots Folders](#snapshots-folders)
 - [Switching between Android and Linaro Linux releases](#switching-between-android-and-linaro-linux-releases)
@@ -38,22 +38,22 @@ This document also contains additional supporting sections such as [Setting Up t
 - [Description of LED’s and Connectors](#description-of-led%E2%80%99s-and-connectors)
   - [Connectors / Switch](#connectors--switch)
   - [LEDs](#leds)
-    - [Ubuntu Images](#ubuntu-images-1)
+    - [Debian Images](#debian-images-1)
     - [Android Images](#android-images-1)
 - [Using USB](#using-usb)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Install Android or Ubuntu from an SD Card
+## Install Android or Debian from an SD Card
 
 ### Overview
 
 This section provides information about the installation of pre-built
-Android or Ubuntu SD card images onto the DragonBoard™ 410c. This
+Android or Debian SD card images onto the DragonBoard™ 410c. This
 installation method targets the following user/developer use-cases:
 
 - Just getting familiar with the DragonBoard™ 410c
-- A user that wants to extend the Ubuntu or Android installation by
+- A user that wants to extend the Debian or Android installation by
   adding new packages or applications. This user is using the
   DragonBoard™ 410c as an end product, like a lightweight desktop,
   etc.
@@ -61,7 +61,7 @@ installation method targets the following user/developer use-cases:
 For a user / developer that plans to be extending the functionality
 through adding his or her own code and will be downloading many
 iterative experimental versions of self-compiled OS’s, it is recommended
-to go directly to the [Install Android or Ubuntu Using Fastboot](#install-android-or-ubuntu-using-fastboot)  section of this document.
+to go directly to the [Install Android or Debian Using Fastboot](#install-android-or-debian-using-fastboot)  section of this document.
 
 This SD card image includes a flashing program (herein referred to as
 ”FT” for “Flashing Tool”) that will be executed from the DragonBoard™
@@ -71,7 +71,7 @@ development system (herein referred to as the “host PC”).
 
 The FT will execute from the DB410c and provide a very simple way to
 install target software once the SD Card has been created as shown in
-the next section. It can be configured to install Android or Ubuntu
+the next section. It can be configured to install Android or Debian
 into the target eMMC memory, subsequently allowing the target to
 directly boot into the OS installed, and no longer requiring the SD
 Card.
@@ -89,7 +89,7 @@ section are executed entirely from the host PC. It is assumed that the
 developer is using a Linux development host.  
 
 Two SD installation images are released at Linaro, one for each of the
-following OS’s: Android and Ubuntu.
+following OS’s: Android and Debian.
 
 The steps to create the SD Card Image are as follows:
 
@@ -101,7 +101,7 @@ sure no valuable files you wish to retain are on the microSD Card.
 **Step 2: Download desired SD Card Image**
 
 Click on the link below to begin download of the latest SD-Card install image: 
-- [Ubuntu SD Card Install image](http://builds.96boards.org/releases/dragonboard410c/linaro/ubuntu/latest/dragonboard410c_sdcard_install_ubuntu*.zip)
+- [Debian SD Card Install image](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/dragonboard410c_sdcard_install_debian*.zip)
 - [Android SD Card Install image](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/dragonboard410c_sdcard_install_android*.zip)
 
 - It’s recommended to download the associated MD5SUMs for the
@@ -109,7 +109,7 @@ Click on the link below to begin download of the latest SD-Card install image:
   the md5sum command on the command line. To become familiar with
   md5sum command usage, type “man md5sum” on the command line of the
   Linux host PC.
-  - [Ubuntu MD5SUM](http://builds.96boards.org/releases/dragonboard410c/linaro/ubuntu/latest/MD5SUMS.txt)
+  - [Debian MD5SUM](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/MD5SUMS.txt)
   - [Android MD5SUM](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/MD5SUMS)
 
 **Step 3: Unzip the downloaded install file**
@@ -117,7 +117,7 @@ Click on the link below to begin download of the latest SD-Card install image:
 Note the directory that the install file was extracted to, as this will
 be required in the next step. There are multiple tools to unzip and
 extract these archives. In this workflow, “Archive Manager,” available
-by default in Ubuntu Desktop, was used.
+by default in Ubuntu/Debian Desktop, was used.
 
 **Step 4: Write the SD image onto an SD card**
 
@@ -137,7 +137,7 @@ sudo dd if=db410c_sd_install_YYY.img of=/dev/XXX bs=4M oflag=sync status=noxfer
 
 Where:
 
-- YYY can be android or ubuntu
+- YYY can be android or debian
 - where XXX is the device name
 
 **Warning:** Executing the sync flag command as outlined above is very
@@ -198,12 +198,12 @@ connected to the DB410c.
   reboot into the newly installed OS
 
 Upon completion of the above, the user will now see either an Android or
-an Ubuntu Desktop, depending upon which one was installed.
+an Debian Desktop, depending upon which one was installed.
 
 Congratulations! You are now booting your newly installed OS directly
 from eMMC on the DragonBoard™ 410c!
 
-## Install Android or Ubuntu Using Fastboot
+## Install Android or Debian Using Fastboot
 
 This section provides an alternative method for installing images onto
 the DB410c.  This is for advanced users that plan to be flashing many versions of the OS into the DB410c.
@@ -223,7 +223,7 @@ sudo apt-get install android-tools-fastboot
   - by following the procedure outlined in the [Create / Install a Rescue Image](#create--install-a-rescue-image) section of this document
   - by following the procedure in the [Installing Image using an SD Card Image](#installing-image-using-an-sd-card-image) section of this document
 
-### Install Linaro/Ubuntu release
+### Install Linaro/Debian release
 
 #### Flash the bootloader into on-board eMMC
 
@@ -254,28 +254,28 @@ sudo ./flashall
 
 The bootloader is now installed on the DB410c.
 
-#### Flash the Linaro/Ubuntu release
+#### Flash the Linaro/Debian release
 
 This section assumes the DB410c is still in fastboot mode from the
 previous section.  This procedure also assumes that the developer will be using the latest build.
 
-Flash the Linaro/Ubuntu boot image and root file system by
+Flash the Linaro/Debian boot image and root file system by
 performing the following steps:
-- Initiate the download of the latest Ubuntu boot image zip by clicking [**here**](http://builds.96boards.org/releases/dragonboard410c/linaro/ubuntu/latest/boot-linaro-vivid-qcom-snapdragon-arm64*.img.gz)
-- Initiate the download of the latest Ubuntu Root File System(RootFS) zip by clicking [**here**](http://builds.96boards.org/releases/dragonboard410c/linaro/ubuntu/latest/linaro-vivid-developer-qcom-snapdragon-arm64*.img.gz)
+- Initiate the download of the latest Debian boot image zip by clicking [**here**](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/boot-linaro-jessie-qcom-snapdragon-arm64*.img.gz)
+- Initiate the download of the latest Debian Root File System(RootFS) zip by clicking [**here**](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/linaro-jessie-developer-qcom-snapdragon-arm64*.img.gz)
 
   Their names will be similar to the following:
-  - ./boot-linaro-vivid-qcom-snapdragon-arm64-BUILD#.img.gz
-  - ./linaro-vivid-developer-qcom-snapdragon-arm64-BUILD#.img.gz
+  - ./boot-linaro-jessie-qcom-snapdragon-arm64-BUILD#.img.gz
+  - ./linaro-jessie-developer-qcom-snapdragon-arm64-BUILD#.img.gz
 
   Where BUILD# is the date/Build stamp for the downloaded file
 
-**Note:** The procedure above loads the command line ubuntu, denoted by
+**Note:** The procedure above loads the command line debian, denoted by
 “developer” in the name.  If the user wishes to load a graphical X
-version based on LXDE, click [**here**](http://builds.96boards.org/releases/dragonboard410c/linaro/ubuntu/latest/linaro-vivid-alip-qcom-snapdragon-arm64*.img.gz) and use this file in the place of the above RootFS file for the rest of this install.  This file's name will be similar to the following:
+version based on LXDE, click [**here**](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/linaro-jessie-alip-qcom-snapdragon-arm64*.img.gz) and use this file in the place of the above RootFS file for the rest of this install.  This file's name will be similar to the following:
 
 ```shell
-  linaro-vivid-alip-qcom-snapdragon-arm64-BUILD#.img.gz
+  linaro-jessie-alip-qcom-snapdragon-arm64-BUILD#.img.gz
 ```
 
 - Flash the boot image and rootfs to the DB410c by executing the
@@ -289,8 +289,8 @@ sudo fastboot devices
 cd <extraction directory>
 
 gunzip *.img.gz
-sudo fastboot flash boot boot-linaro-vivid-qcom-snapdragon-arm64-BUILD#.img
-sudo fastboot flash rootfs linaro-vivid-developer-qcom-snapdragon-arm64-BUILD#.img
+sudo fastboot flash boot boot-linaro-jessie-qcom-snapdragon-arm64-BUILD#.img
+sudo fastboot flash rootfs linaro-jessie-developer-qcom-snapdragon-arm64-BUILD#.img
 ```
 
 **Note:** Replace BUILD# in the above commands with the file-specific date/build stamp. 
@@ -385,27 +385,27 @@ Location:  http://builds.96boards.org/releases/dragonboard410c/linaro/rescue
 Contains Bootloader and Rescue images.  
 Files of interest:
 - dragonboard410c_sdcard_rescue-BUILD#.zip             - Rescue image for DB410c
-- dragonboard410c_bootloader_emmc_linux-BUILD#.zip     - Ubuntu-specific Bootloader
+- dragonboard410c_bootloader_emmc_linux-BUILD#.zip     - Linux-specific Bootloader
 - dragonboard410c_bootloader_emmc_android-BUILD#.zip   - Android-specific Bootloader
 - MD5SUMS.txt - Contains checksums for all the zip files to verify that downloads were not corrupted
 
-### Ubuntu Images
-Location:  http://builds.96boards.org/releases/dragonboard410c/linaro/ubuntu
+### Debian Images
+Location:  http://builds.96boards.org/releases/dragonboard410c/linaro/debian
 
-Contains the Ubuntu boot images and rootFS for both developer (console-only) and LXDE builds.  
-Also contains the SC Card auto-install file for Ubuntu.
+Contains the Debian boot images and rootFS for both developer (console-only) and LXDE builds.  
+Also contains the SC Card auto-install file for Debian.
 Files of interest:
-- dragonboard410c_sdcard_install_ubuntu-BUILD#.zip - SD Card Auto-Install file of fastboot recovery, Linux Bootloader, Ubuntu Boot Image, and LXDE RootFS 
-- boot-linaro-vivid-qcom-snapdragon-arm64-BUILD#.img.gz           - Ubuntu Boot Image
-- linaro-vivid-developer-qcom-snapdragon-arm64-BUILD#.img.gz      - Console only Ubuntu RootFS
-- linaro-vivid-alip-qcom-snapdragon-arm64-BUILD#.img.gz           -  LXDE Desktop RootFS
+- dragonboard410c_sdcard_install_debian-BUILD#.zip - SD Card Auto-Install file of fastboot recovery, Linux Bootloader, Debian Boot Image, and LXDE RootFS 
+- boot-linaro-jessie-qcom-snapdragon-arm64-BUILD#.img.gz           - Debian Boot Image
+- linaro-jessie-developer-qcom-snapdragon-arm64-BUILD#.img.gz      - Console only Debian RootFS
+- linaro-jessie-alip-qcom-snapdragon-arm64-BUILD#.img.gz           -  LXDE Desktop RootFS
 - MD5SUMS.txt - Contains checksums for all the zip files to verify that downloads were not corrupted
 
 ### Android Images
 Location:  http://builds.96boards.org/releases/dragonboard410c/qualcomm/android
 
 Contains Android boot images and RootFS for Android install.
-Also contains the SC Card auto-install file for Ubuntu.
+Also contains the SD Card auto-install file for Debian.
 Files of interest:  
 - The six files required for an Android Install  
   - boot.img.tar.xz  
@@ -438,7 +438,7 @@ Note: In general, using images from snapshots/ instead of releases/ should be th
 ## Switching between Android and Linaro Linux releases
 It is possible to switch back and forth between the Android and the
 Linaro Linux builds. To do so, simply follow the
-regular instructions from the [Install Android or Ubuntu Using Fastboot](#install-android-or-ubuntu-using-fastboot) section, and make sure to install the
+regular instructions from the [Install Android or Debian Using Fastboot](#install-android-or-debian-using-fastboot) section, and make sure to install the
 appropriate bootloader release package, since the partition table used
 for both Android and Linux are different.
 
@@ -465,7 +465,7 @@ fastboot boot boot.img
 ## Replacing the Bootloader
 If a boot image has been flashed into the boot partition as described herein, the DB410c will automatically boot when it is powered on. If it is required for any reason to reflash another boot image, there are three options:
 
-1. Follow the instructions to install the boot image in either the Ubuntu or the Android sub-section of the [Install Android or Ubuntu Using Fastboot](#install-android-or-ubuntu-using-fastboot) section of this document.
+1. Follow the instructions to install the boot image in either the Debian or the Android sub-section of the [Install Android or Debian Using Fastboot](#install-android-or-debian-using-fastboot) section of this document.
 
 2. Using the Vol- button (S4 on the DNB410c) to force the DB410c into fastboot mode
   - Power down the DB410c
@@ -501,7 +501,7 @@ please check this wiki with instruction to rebuild your own boot image:
 This section provides the instructions for creating a “rescue image”
 that can then be used to install fastboot on the DragonBoard™ 410c.
 After this section has been completed, the user will be able to follow
-the procedures in the [Install Android or Ubuntu Using Fastboot](#install-android-or-ubuntu-using-fastboot) section to install updated/customized OS’s.
+the procedures in the [Install Android or Debian Using Fastboot](#install-android-or-debian-using-fastboot) section to install updated/customized OS’s.
 
 ### Download the Rescue Image  
 
@@ -681,8 +681,8 @@ the board. These items are described further in this section
 Located by the USB ports are a series of LEDs used to provide
 information to the user. Their usage is defined as follows:
 
-#### Ubuntu Images
-When Ubuntu-based images are installed, the following table defines the LED usage/behaviors.
+#### Debian Images
+When Debian-based images are installed, the following table defines the LED usage/behaviors.
 ```
 +----------------------+----------------------+--------------------------+
 | LED Board Identifier | Description          | Behavior                 |
