@@ -2,11 +2,13 @@ h2. UEFI/EDK2
 
 EDK2 is a modern, feature-rich, cross-platform firmware development environment for the UEFI and PI specifications.
 
-The reference UEFI/EDK2 tree used by the EE-RPB comes from Linaro, which is available at https://git.linaro.org/uefi/linaro-edk2.git
+The reference UEFI/EDK2 tree used by the EE-RPB comes from Linaro, which is available at "https://git.linaro.org/uefi/linaro-edk2.git":https://git.linaro.org/uefi/linaro-edk2.git
 
-The Linaro EDK2 tree is based on upstream (with constant rebases), covered by monthly validation and releases, in order to provide a more stable reference. This tree also contains two extra submodules, LinaroPkg and OpenPlatformPkg, with the latter providing the hardware specific support and drivers (since EDK2 upstream only provides the common and generic pieces).
+The Linaro EDK2 tree is based on upstream (with constant rebases), covered by monthly validation and releases, in order to provide a more stable reference. This tree also contains two extra git submodules, LinaroPkg and OpenPlatformPkg, with the latter providing the hardware specific support and drivers (since EDK2 upstream only provides the common and generic pieces).
 
 EDK2 is currently used by 96boards HuskyBoard, AMD Overdrive, ARM Juno r0/r1 and HiSilicon D02.
+
+This guide provides enough information on how to build UEFI/EDK2 from scratch, but meant to be a quick guide. For further information please also check the official Linaro UEFI documentation, available at "https://wiki.linaro.org/ARM/UEFI":https://wiki.linaro.org/ARM/UEFI and  "https://wiki.linaro.org/LEG/Engineering/Kernel/UEFI/build":https://wiki.linaro.org/LEG/Engineering/Kernel/UEFI/build
 
 h3. Building
 
