@@ -1,0 +1,124 @@
+h2. Installing Debian "Jessie" 8.2
+
+This guide is not to be a replacement of the official Debian Installer documentation, but instead be a quick walkthrough for the network installer. You can find the original documentation at "https://www.debian.org/releases/jessie/arm64/index.html.en":https://www.debian.org/releases/jessie/arm64/index.html.en
+
+h3. Setting up the TFTP server
+
+Back to your dnsmasq server (check "this link":https://github.com/96boards/documentation/wiki/DHCP-TFTP-server-for-UEFI-distro-network-installers for instructions on how to setup your own TFTP/DCHP server), download the required Debian installer files at your tftp-root directory. In this example, this directory is configured to @/srv/tftp@. As part of this example we're using the same Grub 2 that is provided by Fedora 23 (TODO: update for the Debian or common grub 2).
+
+Downloading required Grub 2 UEFI files:
+
+*Note:* Because of bug "1251600":https://bugzilla.redhat.com/show_bug.cgi?id=1251600, we need to use both @BOOTAA64.EFI@ and @grubaa64.efi@ from the Fedora 22 release.
+
+bc. sudo su -
+cd /srv/tftp/
+wget http://dl.fedoraproject.org/pub/fedora-secondary/releases/22/Server/aarch64/os/EFI/BOOT/BOOTAA64.EFI
+wget http://dl.fedoraproject.org/pub/fedora-secondary/releases/22/Server/aarch64/os/EFI/BOOT/grubaa64.efi
+
+Downloading upstream Kernel and Initrd
+
+bc. mkdir /srv/tftp/debian
+cd /srv/tftp/debian
+wget http://http.us.debian.org/debian/dists/jessie/main/installer-arm64/current/images/netboot/debian-installer/arm64/linux
+wget http://http.us.debian.org/debian/dists/jessie/main/installer-arm64/current/images/netboot/debian-installer/arm64/initrd.gz
+
+Creating the Grub 2 config file (@grub.cfg@):
+
+bc. menuentry 'Install Debian 64-bit' --class debian --class gnu-linux --class gnu --class os {
+    linux (tftp)/debian/linux
+    initrd (tftp)/debian/initrd.gz
+}
+
+You should now have the following file tree structure:
+
+bc. /srv/tftp/
+├── BOOTAA64.EFI
+├── debian
+│   ├── initrd.gz
+│   └── linux
+├── grubaa64.efi
+└── grub.cfg
+
+Now just make sure that @/etc/dnsmasq.conf@ is pointing out to the right boot file, like:
+
+bc. dhcp-boot=BOOTAA64.EFI
+
+h3. Booting the installer
+
+Now boot your platform of choice, selecting PXE boot when presented by UEFI (make sure to boot with the right network interface, in case more than one is available).
+
+You should see the following (using AMD Seattle's Overdrive as example):
+
+bc. NOTICE:  BL3-1: 
+NOTICE:  BL3-1: Built : 18:22:46, Nov 23 2015
+INFO:    BL3-1: Initializing runtime services
+INFO:    BL3-1: Preparing for EL3 exit to normal world
+INFO:    BL3-1: Next image address = 0x8000000000
+INFO:    BL3-1: Next image spsr = 0x3c9
+Boot firmware (version  built at 18:27:24 on Nov 23 2015)
+Version 2.17.1249. Copyright (C) 2015 American Megatrends, Inc.                 
+BIOS Date: 11/23/2015 18:23:09 Ver: ROD0085E00                                  
+Press <DEL> or <ESC> to enter setup.  
+.
+>>Checking Media Presence......
+>>Media Present......
+>>Start PXE over IPv4.
+  Station IP address is 192.168.3.57
+  Server IP address is 192.168.3.1
+  NBP filename is BOOTAA64.EFI
+  NBP filesize is 885736 Bytes
+>>Checking Media Presence......
+>>Media Present......
+ Downloading NBP file...
+ Succeed to download NBP file.
+ Fetching Netboot Image
+
+At this stage you should be able to see the Grub 2 menu, like:
+
+bc. Install Debian 64-bit
+.
+Use the  and  keys to change the selection.                       
+Press 'e' to edit the selected item, or 'c' for a command prompt.
+
+Now just hit enter and wait for the kernel and initrd to load, which automatically loads the installer and provides you the installer console menu, so you can finally install Debian.
+
+You should see the following:
+
+bc. EFI stub: Booting Linux Kernel...
+EFI stub: Using DTB from configuration table
+EFI stub: Exiting boot services and installing virtual address map...
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Initializing cgroup subsys cpuset
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Initializing cgroup subsys cpuacct
+[    0.000000] Linux version 4.2.3-300.fc23.aarch64 (mockbuild@aarch64-08a.arm.fedoraproject.org) (gcc version 5.1.1 20150618 (Red Hat 5.1.1-4) (GCC) ) #1 SMP Thu Oct 8 01:39:38 UTC 2015
+[    0.000000] CPU: AArch64 Processor [411fd072] revision 2
+[    0.000000] Detected PIPT I-cache on CPU0
+[    0.000000] alternatives: enabling workaround for ARM erratum 832075
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] EFI v2.40 by American Megatrends
+[    0.000000] efi:  ACPI 2.0=0x83ff1c6000  SMBIOS 3.0=0x83ff349718
+...
+  ┌───────────────────────┤ [!!] Select a language ├────────────────────────┐
+  │                                                                         │
+  │ Choose the language to be used for the installation process. The        │
+  │ selected language will also be the default language for the installed   │
+  │ system.                                                                 │
+  │                                                                         │
+  │ Language:                                                               │
+  │                                                                         │
+  │                               C                                         │
+  │                               English                                   │
+  │                                                                         │
+  │     <Go Back>                                                           │
+  │                                                                         │
+  └─────────────────────────────────────────────────────────────────────────┘
+<Tab> moves; <Space> selects; <Enter> activates buttons
+
+TODO: update the kernel and image used, since the kernel from jessie doesn't work well with Seattle.
+
+h3. Finishing the installation
+
+For using the installer, please check the documentation available at "https://www.debian.org/releases/jessie/arm64/ch06.html.en":https://www.debian.org/releases/jessie/arm64/ch06.html.en
+
+Once the installation is completed, you should be able to simply reboot the system in order to boot your new Debian system.
