@@ -75,12 +75,12 @@ Press <DEL> or <ESC> to enter setup.
 
 At this stage you should be able to see the Grub 2 menu, like:
 
-bc. Install Fedora 64-bit
+bc. Install Fedora 23 ARM 64-bit
 .
 Use the  and  keys to change the selection.                       
 Press 'e' to edit the selected item, or 'c' for a command prompt.
 
-Now just hit enter and wait for the kernel and initrd to load, which automatically loads the installer and provides you the installer console menu, so you can finally install Fedora 23.
+Now just hit enter and wait for the kernel and initrd to load, which automatically loads the installer and provides you the installer console menu, so you can finally install Fedora 23 (just make sure that target device has external network access, since the installer is downloaded automatically after booting the kernel).
 
 You should see the following:
 
@@ -142,3 +142,7 @@ h3. Finishing the installation
 After selecting the installation destination, the partitioning scheme, root password and users (optional), just enter @b@ to proceed with the installation.
 
 Once the installation is completed, you should be able to simply reboot the system in order to boot your new Fedora 23 system.
+
+h3. Automating the installation with kickstart
+
+TODO
