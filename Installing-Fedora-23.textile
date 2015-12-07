@@ -37,7 +37,7 @@ bc. /srv/tftp/
 │   ├── initrd.img
 │   └── vmlinuz
 ├── grubaa64.efi
-├── grub.cfg
+└── grub.cfg
 
 Now just make sure that @/etc/dnsmasq.conf@ is pointing out to the right boot file, like:
 
