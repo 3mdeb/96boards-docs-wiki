@@ -124,7 +124,7 @@ Be sure to issue a sync command on your host PC afterwards, which will guarantee
 
 bc. sync
 
-Finally, power cycle the Juno. After it has finished copying the contents of the MMC card into Flash, the board will boot up and run the new firmware.
+Then just power cycle the Juno and the board should see and use the new firmware.
 
 h4. D02
 
