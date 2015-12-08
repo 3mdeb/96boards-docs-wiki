@@ -139,7 +139,7 @@ h4. D02
 
 h5. Clean flash
 
-h4. Upgrading firmware
+h5. Upgrading firmware
 
 To upgrade UEFI, you need setup a ftp server and run below command under *EBL*:
 
