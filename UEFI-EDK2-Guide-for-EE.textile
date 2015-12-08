@@ -153,8 +153,19 @@ Use "DediProg SF100":http://www.dediprog.com/pd/spi-flash-solution/sf100 to flas
 
 The Dediprog flashing tool is also available for Linux, please check for "https://github.com/DediProgSW/SF100Linux":https://github.com/DediProgSW/SF100Linux for build and use instructions.
 
+First unplug the power cord before flashing the new firmware, then erase the SPI flash memory:
+
 bc. dpcmd --type MX25L12835F -e
-dpcmd --type MX25L12835F -p /tmp/ROD0085E.rom
+
+Now just flash the firmware that was built on the previous steps:
+
+bc. dpcmd --type MX25L12835F -p FIRMWARE.rom
+
+Now just plug the power cable back and it should boot the new firmware.
+
+h5. Upgrading firmware
+
+There is currently no easy way to update just the UEFI/EDK2 firmware, so please follow the clean flash process as described above.
 
 h2. Extras
 
