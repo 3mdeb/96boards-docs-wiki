@@ -37,11 +37,15 @@ h4. Getting the source code
 
 UEFI/EDK2:
 
-bc. git clone -b release --depth 1 http://git.linaro.org/git/uefi/linaro-edk2.git
+bc. git clone -b release http://git.linaro.org/git/uefi/linaro-edk2.git
+cd linaro-edk2
+git submodule init
+git submodule update
 
-ARM Trusted Firmware:
+ARM Trusted Firmware (in case it is supported by your target hardware):
 
-bc. git clone --depth 1 https://github.com/ARM-software/arm-trusted-firmware.git
+bc. git clone https://github.com/ARM-software/arm-trusted-firmware.git
+git checkout -b known_rev 53d069c28c2738c3a4f59211fbc61323ec28208c # suggested revision to avoid surprises
 
 UEFI Tools (helpers and scripts to make the build process easy):
 
@@ -50,29 +54,24 @@ bc. git clone git://git.linaro.org/uefi/uefi-tools.git
 h4. Building UEFI/EDK2 for Juno R0/R1
 
 bc. export AARCH64_TOOLCHAIN=GCC49
-export EDK2_DIR=${PWD}/linaro-edk2
+export LINARO_EDK2_DIR=${PWD}/linaro-edk2
 export UEFI_TOOLS_DIR=${PWD}/uefi-tools
-cd ${EDK2_DIR}
-${UEFI_TOOLS_DIR}/uefi-build.sh -b RELEASE -a ../arm-trusted-firmware juno
+export ARMTF_DIR=${PWD}/arm-trusted-firmware
+cd ${LINARO_EDK2_DIR}
+${UEFI_TOOLS_DIR}/uefi-build.sh -c LinaroPkg/platforms.config -b DEBUG -a $ARMTF_DIR juno
 
 The output files:
 
-* @Build/ArmJuno/RELEASE_GCC49/AARCH64/FV/BL33_AP_UEFI.fd@ - UEFI
+* @Build/ArmJuno/DEBUG_GCC49/FV/bl1.bin@
+* @Build/ArmJuno/DEBUG_GCC49/FV/fip.bin@
 
 h4. Building UEFI/EDK2 for D02
 
-bc. export AARCH64_TOOLCHAIN=GCC49
-export EDK2_DIR=${PWD}/linaro-edk2
-export UEFI_TOOLS_DIR=${PWD}/uefi-tools
-cd ${EDK2_DIR}
-${UEFI_TOOLS_DIR}/uefi-build.sh -b RELEASE D02
+TODO
 
-The output files:
+h4. Building UEFI/EDK2 for Overdrive
 
-* @UEFI_D02.fd@
-* @CH02TEVBC_V03.bin@
-
-FIXME: Add the correct output files
+TODO
 
 h3. Flashing
 
@@ -89,22 +88,43 @@ Cmd> usb_on
 
 This will delete any binaries and UEFI settings currently stored in the Juno's flash, then mount the Juno's MMC card as an external storage device on your host PC.
 
-From your host PC, delete all files on your Juno's mounted MMC card, then copy the firmware plus the built UEFI:
+In order to do a clean flash on Juno, you will also need to flash the firmware provided by ARM, which can be downloaded from the Linaro ARM LT Versatile Express Firmware git tree:
 
-bc. sudo rm -rf /media/recovery/* # Change to the correct mount path
-git clone https://git.linaro.org/arm/vexpress-firmware.git # ARM Firmware for Juno
-bc. cp Build/ArmJuno/RELEASE_GCC49/AARCH64/FV/BL33_AP_UEFI.fd vexpress-firmware/SOFTWARE/uefi.bin
-cp -rf vexpress-firmware/* /media/recovery
+bc. git clone -b juno-0.11.6-linaro1 --depth 1 https://git.linaro.org/arm/vexpress-firmware.git
 
-FIXME: Add extra steps for cert create.
+Then copy over the UEFI/EDK2 files that were built in the previous steps, copying them to the right firmware folder location:
+
+bc. cp $LINARO_EDK2_DIR/Build/ArmJuno/DEBUG_GCC49/FV/bl1.bin vexpress-firmware/SOFTWARE
+cp $LINARO_EDK2_DIR/Build/ArmJuno/DEBUG_GCC49/FV/fip.bin vexpress-firmware/SOFTWARE
+
+Now just copy cover all the files that are now available at the @vexpress-firmware@ folder into the mounted MMC card (which is provided as an external storage after calling @usb_on@):
+
+bc. cp -rf vexpress-firmware/* /media/recovery
 
 Be sure to issue a sync command on your host PC afterwards, which will guarantee that the copy has completed:
 
 bc. sync
 
-Finally, power cycle the Juno. After it has finished copying the contents of the MMC card into Flash, the board will boot up and run the new software images.
+Finally, power cycle the Juno. After it has finished copying the contents of the MMC card into Flash, the board will boot up and run the new firmware.
 
-h5. Upgrading firmware
+h5. Upgrading UEFI/EDK2
+
+If you already have a known working firmware available in your Juno, you simply need to update @bl1.bin@ and @fip.bin@, by mounting Juno's MMC over usb (as described in the procedure for clean flash).
+
+Export Juno's MMC as a usb storage device on your host machine:
+
+bc. Cmd> usb_on
+
+Then just copy over the UEFI/EDK2 files that were built in the previous steps:
+
+bc. cp $LINARO_EDK2_DIR/Build/ArmJuno/DEBUG_GCC49/FV/bl1.bin /media/recovery/SOFTWARE
+cp $LINARO_EDK2_DIR/Build/ArmJuno/DEBUG_GCC49/FV/fip.bin /media/recovery/SOFTWARE
+
+Be sure to issue a sync command on your host PC afterwards, which will guarantee that the copy has completed:
+
+bc. sync
+
+Finally, power cycle the Juno. After it has finished copying the contents of the MMC card into Flash, the board will boot up and run the new firmware.
 
 h4. D02
 
