@@ -92,12 +92,12 @@ In order to do a clean flash on Juno, you will also need to flash the firmware p
 
 bc. git clone -b juno-0.11.6-linaro1 --depth 1 https://git.linaro.org/arm/vexpress-firmware.git
 
-Then copy over the UEFI/EDK2 files that were built in the previous steps, copying them to the right firmware folder location:
+Then copy over the UEFI/EDK2 files that were built in the previous steps, making sure they get copied to the right firmware folder location:
 
 bc. cp $LINARO_EDK2_DIR/Build/ArmJuno/DEBUG_GCC49/FV/bl1.bin vexpress-firmware/SOFTWARE
 cp $LINARO_EDK2_DIR/Build/ArmJuno/DEBUG_GCC49/FV/fip.bin vexpress-firmware/SOFTWARE
 
-Now just copy cover all the files that are now available at the @vexpress-firmware@ folder into the mounted MMC card (which is provided as an external storage after calling @usb_on@):
+Now just copy all the files that are now available in the @vexpress-firmware@ folder into the mounted MMC card (which is provided as an external storage after calling @usb_on@):
 
 bc. cp -rf vexpress-firmware/* /media/recovery
 
