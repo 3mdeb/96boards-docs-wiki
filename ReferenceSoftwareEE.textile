@@ -15,6 +15,6 @@ h3. Network Installers
 In order to install a distribution from network, PXE (DCHP/TFTP) booting is required. Since we requires UEFI for for the Enterprise Edition, the setup is usually easier since all is usually required is GRUB 2 (and its configuration). Check "this link":https://github.com/96boards/documentation/wiki/DHCP-TFTP-server-for-UEFI-distro-network-installers for instructions on how to quickly setup your own PXE server (using *dnsmasq*).
 
 Install instructions for the tested/supported distributions:
-* "Debian 'Jessie' 8.2":https://github.com/96boards/documentation/wiki/Installing-Debian-Jessie
+* "Debian 8.x 'Jessie'":https://github.com/96boards/documentation/wiki/Installing-Debian-Jessie
 * "CentOS 7":https://github.com/96boards/documentation/wiki/Installing-CentOS-7
 * "Fedora 23":https://github.com/96boards/documentation/wiki/Installing-Fedora-23
