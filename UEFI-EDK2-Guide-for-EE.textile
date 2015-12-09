@@ -193,13 +193,7 @@ h5. Upgrading firmware
 
 There is currently no easy way to update just the UEFI/EDK2 firmware, so please follow the clean flash process instead.
 
-h2. Extras
-
-h3. Setting boot mode to PXE
-
-h3. Setting boot mode to TFTP
-
 h3. Links and References:
 
-* https://community.arm.com/docs/DOC-10804
-* https://community.arm.com/docs/DOC-8396
+* "ARM - Using Linaro's deliverables on Juno":https://community.arm.com/docs/DOC-10804
+* "ARM - FAQ: General troubleshooting on the Juno":https://community.arm.com/docs/DOC-8396
