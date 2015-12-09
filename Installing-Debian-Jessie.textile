@@ -4,23 +4,16 @@ This guide is not to be a replacement of the official Debian Installer documenta
 
 h3. Setting up the TFTP server
 
-Back to your dnsmasq server (check "this link":https://github.com/96boards/documentation/wiki/DHCP-TFTP-server-for-UEFI-distro-network-installers for instructions on how to setup your own TFTP/DCHP server), download the required Debian installer files at your tftp-root directory. In this example, this directory is configured to @/srv/tftp@. As part of this example we're using the same Grub 2 that is provided by Fedora 23 (TODO: update for the Debian or common grub 2).
+Back to your dnsmasq server (check "this link":https://github.com/96boards/documentation/wiki/DHCP-TFTP-server-for-UEFI-distro-network-installers for instructions on how to setup your own TFTP/DCHP server), download the required Debian installer files at your tftp-root directory. In this example, this directory is configured to @/srv/tftp@.
 
-Downloading required Grub 2 UEFI files:
+Since the kernel, initrd and GRUB 2 is part of the debian-installer tarball, that is all you need.
 
-*Note:* Because of bug "1251600":https://bugzilla.redhat.com/show_bug.cgi?id=1251600, we need to use both @BOOTAA64.EFI@ and @grubaa64.efi@ from the Fedora 22 release.
+Downloading debian-installer:
 
 bc. sudo su -
 cd /srv/tftp/
-wget http://dl.fedoraproject.org/pub/fedora-secondary/releases/22/Server/aarch64/os/EFI/BOOT/BOOTAA64.EFI
-wget http://dl.fedoraproject.org/pub/fedora-secondary/releases/22/Server/aarch64/os/EFI/BOOT/grubaa64.efi
-
-Downloading upstream Kernel and Initrd
-
-bc. mkdir /srv/tftp/debian
-cd /srv/tftp/debian
-wget http://http.us.debian.org/debian/dists/jessie/main/installer-arm64/current/images/netboot/debian-installer/arm64/linux
-wget http://http.us.debian.org/debian/dists/jessie/main/installer-arm64/current/images/netboot/debian-installer/arm64/initrd.gz
+wget http://http.us.debian.org/debian/dists/jessie/main/installer-arm64/current/images/netboot/netboot.tar.gz
+tar -zxvf netboot.tar.gz
 
 Creating the Grub 2 config file (@grub.cfg@):
 
