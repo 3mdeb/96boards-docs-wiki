@@ -25,6 +25,16 @@ _Requires an ethernet cable and a USB-to-ethernet adapter._
 
 The 96Boards platform is now connected to your local network and the host’s Internet connection is being shared.
 
+You can retrieve the board IP address directly from the host. Once the board is running, you can inspect the following file on your host PC:
+
+    $ cat /var/lib/misc/dnsmasq.leases 
+    1449657413 a0:ce:c8:01:76:90 10.42.0.126 linaro-alip *
+
+And you can note:
+* the second argument is the board MAC address
+* the third argument is its local IP address
+* if you have more than one board connected, you will see several lines in this file
+
 # Method 2: USB OTG networking.
 
 _Use Case: the host can access the Internet either via WIFI or ETH_
