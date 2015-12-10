@@ -2,7 +2,7 @@ h2. Installing CentOS 7
 
 This guide is not to be a replacement of the official CentOS Installer documentation, but instead be a quick walkthrough for the network installer. You can find the original documentation at "https://wiki.centos.org/SpecialInterestGroup/AltArch/AArch64":https://wiki.centos.org/SpecialInterestGroup/AltArch/AArch64
 
-This guide is also heavily based on the instructions for "Fedora 23":https://github.com/96boards/documentation/wiki/Installing-Fedora-23 used for Fedora 23.
+This guide is also heavily based on the instructions for "Fedora 23":https://github.com/96boards/documentation/wiki/Installing-Fedora-23.
 
 h3. Setting up the TFTP server
 
