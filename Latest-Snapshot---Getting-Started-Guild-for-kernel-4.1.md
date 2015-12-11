@@ -2,8 +2,10 @@
 
 These are the instructions. Please update the wiki with these :
 `
-repo init -u git clone https://android.googlesource.com/platform/manifest -b android-6.0.0_r26
+repo init -u git clone https://android.googlesource.com/platform/manifest -b android-6.0.0_r260
+
 cd .repo/
+
 git clone https://github.com/96boards/android_manifest -b android-6.0 local_manifests
 cd ../
 repo sync -j16
