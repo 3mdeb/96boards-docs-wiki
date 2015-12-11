@@ -12,7 +12,7 @@ make ARCH=arm64 CROSS_COMPILE=$AOSP_SRC/prebuilts/gcc/linux-x86/aarch64/aarch64-
 make ARCH=arm64 CROSS_COMPILE=$AOSP_SRC/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-android- Image dtbs
 ```
 
-Above should work with released "kernel_config" .  Our build system passes KCFLAGS=" -fno-pic "  while building the kernel. Try setting the same.  **NOTE**
+**NOTE**: Above should work with released "kernel_config" .  Our build system passes KCFLAGS=" -fno-pic "  while building the kernel. Try setting the same. 
 
 ### To build AOSP (Android M)
 
@@ -26,9 +26,8 @@ repo sync -j16
 Download and extract vendor tarball from the link below:
 http://builds.96boards.org/snapshots/hikey/linaro/binaries/20150706/vendor.tar.bz2
 
-NOTE: Please download this from a browser. You need to accept "END USER LICENCE AGREEMENT FOR THE MALI GPU USERSPACE DRIVER (“MALI GPU DRIVER”)" EULA license. </br>
-
-NOTE: Currently it includes Mali library.
+**NOTE**: Please download this from a browser. You need to accept "END USER LICENCE AGREEMENT FOR THE MALI GPU USERSPACE DRIVER (“MALI GPU DRIVER”)" EULA license. </br>
+**NOTE**: Currently it includes Mali library.
 
 ```
 source build/envsetup.sh
