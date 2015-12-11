@@ -26,7 +26,7 @@ repo sync -j16
 Download and extract vendor tarball from the link below:
 http://builds.96boards.org/snapshots/hikey/linaro/binaries/20150706/vendor.tar.bz2
 
-**NOTE**: Please download this from a browser. You need to accept "END USER LICENCE AGREEMENT FOR THE MALI GPU USERSPACE DRIVER (“MALI GPU DRIVER”)" EULA license. </br>
+**NOTE**: Please download this from a browser. You need to accept "END USER LICENCE AGREEMENT FOR THE MALI GPU USERSPACE DRIVER (“MALI GPU DRIVER”)" EULA license.   
 **NOTE**: Currently it includes Mali library.
 
 ```
