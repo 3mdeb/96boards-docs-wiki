@@ -6,7 +6,9 @@ This document describes how to get started with the HiKey ARMv8 community develo
 
 **NOTE** that the June 2015 release comes with a fastboot bootloader based on HiSilicon code. It is deprecated and will not be supported in the upcoming releases. This Getting Started Guide therefore refers to the open source [ARM Trusted Firmware and UEFI bootloader](https://github.com/96boards/documentation/wiki/HiKeyUEFI). It is the supported bootloader for the HiKey board.
 
-**NOTE** there are two types of eMMC sized HiKey. Those with "LEMAKER" mark in top side and black in color are 8GB ones. Otherwise, they are 4GB.
+**NOTE** there are two types of eMMC sized HiKey, 4GB vs. 8GB. Those with "LEMAKER" mark in top side and black in color are 8GB ones. Otherwise, they are 4GB.
+
+**NOTE** there are two types of LPDDR RAM sized HiKey, 1GB vs. 2GB. You can identify them by checking silkmasks on chips: K4E8E304EE-EGCE is 8Gb/1GB, K4E6E304EE-EGCE is 16Gb/2GB.
 
 **The following information is provided in this release notes:**
 
