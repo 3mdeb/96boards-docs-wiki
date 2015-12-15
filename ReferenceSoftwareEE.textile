@@ -18,3 +18,9 @@ Install instructions for the tested/supported distributions:
 * "Debian 8.x 'Jessie'":https://github.com/96boards/documentation/wiki/Installing-Debian-Jessie
 * "CentOS 7":https://github.com/96boards/documentation/wiki/Installing-CentOS-7
 * "Fedora 23":https://github.com/96boards/documentation/wiki/Installing-Fedora-23
+
+h3. Components
+
+h4. OpenStack
+
+h4. Hadoop
