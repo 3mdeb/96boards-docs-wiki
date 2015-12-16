@@ -375,3 +375,55 @@ Now just do a normal PXE boot, and debian-installer should automatically load an
 Also make sure to check debian-installer's @/var/log/syslog@ (by opening a shell) when debugging the installer.
 
 h3. Building debian-installer from source
+
+h4. Build kernel package and udebs
+
+Check the debian "kernel-handbook":http://kernel-handbook.alioth.debian.org/ch-common-tasks.html for the instructions required to build the debian kernel package from scratch. Since the installer only understands @udeb@ packages, it is a good idea to reuse the official kernel packaging instructions and rules.
+
+You can also find the custom kernel source package created as part of the EE-RPB effort at "https://builds.96boards.org/snapshots/reference-platform/components/linux/enterprise/latest/":https://builds.96boards.org/snapshots/reference-platform/components/linux/enterprise/latest/
+
+h4. Rebuilding debian-installer with the new udebs
+
+bc. # Build the installer
+sudo apt-get build-dep debian-installer
+dget http://ftp.us.debian.org/debian/pool/main/d/debian-installer/debian-installer_20150422+deb8u2.dsc
+cd debian-installer-*
+# Config changes
+cd build
+sed -i "s/LINUX_KERNEL_ABI.*/LINUX_KERNEL_ABI = YOUR_KERNEL_ABI/g" config/common
+sed -i "s/PRESEED.*/PRESEED = default-preseed/g" config/common
+# Download udebs
+cd localudebs
+wget <list of your custom udeb files created by the kernel debian package>
+cd ..
+# Local pkg-list (include all udebs, as d-i will not be able to find them online)
+cat <<EOF > pkg-lists/local
+ext4-modules-\${kernel:Version}
+fat-modules-\${kernel:Version}
+btrfs-modules-\${kernel:Version}
+md-modules-\${kernel:Version}
+efi-modules-\${kernel:Version}
+scsi-modules-\${kernel:Version}
+jfs-modules-\${kernel:Version}
+xfs-modules-\${kernel:Version}
+ata-modules-\${kernel:Version}
+sata-modules-\${kernel:Version}
+usb-storage-modules-\${kernel:Version}
+EOF
+# Set up local repo
+cat <<EOF > sources.list.udeb
+deb [trusted=yes] copy:/PATH/TO/your/installer/d-i/debian-installer-20150422/build/ localudebs/
+deb http://httpredir.debian.org/debian jessie main/debian-installer
+EOF
+# Default preseed to skip known errors (as the kernel provided by local udebs)
+cat <<EOF > default-preseed
+# Continue install on "no kernel modules were found for this kernel"
+d-i anna/no_kernel_modules boolean true
+# Continue install on "no installable kernels found"
+d-i base-installer/kernel/skip-install boolean true
+d-i base-installer/kernel/no-kernels-found boolean true
+d-i preseed/late_command string in-target wget <your linux-image.deb>; dpkg -i linux-image-*.deb 
+EOF
+fakeroot make build_netboot
+
+You should now find your custom debian-installer at @dest/netboot/netboot.tar.gz@.
