@@ -6,7 +6,7 @@ h3. Setting up the TFTP server
 
 Back to your dnsmasq server (check "this link":https://github.com/96boards/documentation/wiki/DHCP-TFTP-server-for-UEFI-distro-network-installers for instructions on how to setup your own TFTP/DCHP server), download the required Debian installer files at your tftp-root directory. In this example, this directory is configured to @/srv/tftp@.
 
-Since the kernel, initrd and GRUB 2 is part of the debian-installer tarball, that is all you need.
+Since the kernel, initrd and GRUB 2 is part of the debian-installer tarball (@netboot.tar.gz@), that is the only file you will need to download and use.
 
 h4. Debian Installer
 
