@@ -97,7 +97,7 @@ git clone https://github.com/OP-TEE/optee_test.git
 export OPTEE_TEST_DIR=${PWD}/optee_test
 
 cd ${OPTEE_TEST_DIR}
-make CROSS_COMPILE_HOST=aarch64-linux-gnu- CROSS_COMPILE_TA=arm-linux-gnueabihf- TA_DEV_KIT_DIR=${OPTEE_OS_DIR}/out/arm-plat-hikey/export-user_ta CFG_DEV_PATH=${PWD}/.. O=${OPTEE_TEST_DIR}/out clean all
+make CROSS_COMPILE_HOST=aarch64-linux-gnu- CROSS_COMPILE_TA=arm-linux-gnueabihf- TA_DEV_KIT_DIR=${OPTEE_OS_DIR}/out/arm-plat-hikey/export-ta_arm32 CFG_DEV_PATH=${PWD}/.. O=${OPTEE_TEST_DIR}/out clean all
 cd ..
 ```
 
