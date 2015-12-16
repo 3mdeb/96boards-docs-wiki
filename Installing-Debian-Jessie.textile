@@ -278,17 +278,14 @@ You should see the following:
 bc. EFI stub: Booting Linux Kernel...
 EFI stub: Using DTB from configuration table
 EFI stub: Exiting boot services and installing virtual address map...
-[    0.000000] Booting Linux on physical CPU 0x0
-[    0.000000] Initializing cgroup subsys cpuset
-[    0.000000] Initializing cgroup subsys cpu
-[    0.000000] Initializing cgroup subsys cpuacct
-[    0.000000] Linux version 4.2.3-300.fc23.aarch64 (mockbuild@aarch64-08a.arm.fedoraproject.org) (gcc version 5.1.1 20150618 (Red Hat 5.1.1-4) (GCC) ) #1 SMP Thu Oct 8 01:39:38 UTC 2015
-[    0.000000] CPU: AArch64 Processor [411fd072] revision 2
-[    0.000000] Detected PIPT I-cache on CPU0
-[    0.000000] alternatives: enabling workaround for ARM erratum 832075
-[    0.000000] efi: Getting EFI parameters from FDT:
-[    0.000000] EFI v2.40 by American Megatrends
-[    0.000000] efi:  ACPI 2.0=0x83ff1c6000  SMBIOS 3.0=0x83ff349718
+[    0.355175] ACPI: IORT: Failed to get table, AE_NOT_FOUND
+[    0.763784] kvm [1]: error: no compatible GIC node found
+[    0.763818] kvm [1]: error initializing Hyp mode: -19
+[    0.886298] Failed to find cpu0 device node
+[    0.947082] zswap: default zpool zbud not available
+[    0.951959] zswap: pool creation failed
+Starting system log daemon: syslogd, klogd.
+
 ...
   ┌───────────────────────┤ [!!] Select a language ├────────────────────────┐
   │                                                                         │
@@ -305,8 +302,6 @@ EFI stub: Exiting boot services and installing virtual address map...
   │                                                                         │
   └─────────────────────────────────────────────────────────────────────────┘
 <Tab> moves; <Space> selects; <Enter> activates buttons
-
-TODO: update the kernel and image used, since the kernel from jessie doesn't work well with Seattle.
 
 h3. Finishing the installation
 
