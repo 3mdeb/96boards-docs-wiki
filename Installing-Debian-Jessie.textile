@@ -8,11 +8,17 @@ Back to your dnsmasq server (check "this link":https://github.com/96boards/docum
 
 Since the kernel, initrd and GRUB 2 is part of the debian-installer tarball, that is all you need.
 
-Downloading debian-installer:
+h4. Debian Installer
+
+The released debian-installer from Debian Jessie contains a kernel based on 3.16, which doesn't yet provide support for development boards used by the reference software project. For a complete enterprise experience (including support for tip-based kernel with ACPI support and additional platforms), we also build and publish a custom debian installer that incorporates a more recent kernel.
+
+Our custom installer changes nothing more than the kernel, and you can also find the instructions to build it from source at *TODO*
+
+*Downloading debian-installer:*
 
 bc. sudo su -
 cd /srv/tftp/
-wget http://http.us.debian.org/debian/dists/jessie/main/installer-arm64/current/images/netboot/netboot.tar.gz
+wget https://builds.96boards.org/snapshots/reference-platform/components/debian-installer/latest/netboot.tar.gz
 tar -zxvf netboot.tar.gz
 
 You should now have the following file tree structure:
@@ -307,3 +313,7 @@ h3. Finishing the installation
 For using the installer, please check the documentation available at "https://www.debian.org/releases/jessie/arm64/ch06.html.en":https://www.debian.org/releases/jessie/arm64/ch06.html.en
 
 Once the installation is completed, you should be able to simply reboot the system in order to boot your new Debian system.
+
+h3. Automating debian-installer with preseeds
+
+h3. Building debian-installer from source
