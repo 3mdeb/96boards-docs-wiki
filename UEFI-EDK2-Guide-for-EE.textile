@@ -169,7 +169,7 @@ USB storage upgrade:
 # Copy the @.fd@ file to a FAT32 partition on USB (UEFI can only recognize FAT32 file system), then run the following command (from *EBL*):
 @newbios fs1:\<file path to .fd file>@
 
-On EBL it is fs1 for USB first partition, while fs0 is for ramdisk.
+On EBL fs1 is for USB first partition, while fs0 the ramdisk.
 
 h4. AMD Overdrive
 
