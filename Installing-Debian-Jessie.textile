@@ -314,6 +314,64 @@ For using the installer, please check the documentation available at "https://ww
 
 Once the installation is completed, you should be able to simply reboot the system in order to boot your new Debian system.
 
-h3. Automating debian-installer with preseeds
+h3. Automating the installation using preseeding
+
+Preseeding provides a way to set answers to questions asked during the installation process, without having to manually enter the answers while the installation is running. This makes it possible to fully automate the installation over network, when used together with the debian-installer.
+
+This document only provides a quick way for you to get started with preseeding. For the complete guide, please check the "Debian GNU/Linux Installation Guide":https://www.debian.org/releases/jessie/arm64/apb.html and "example-preseed.txt":https://www.debian.org/releases/jessie/example-preseed.txt
+
+h4. Creating the preseed file
+
+Check "example-preseed.txt":https://www.debian.org/releases/jessie/example-preseed.txt for a wide list of options supported by the Debian Jessie installer. Your file needs to use a similar format, but customized for your own needs.
+
+Once created, make sure the file gets published into a network address that can be reachable from your target device.
+
+Preseed example (@preseed.cfg@):
+
+bc. d-i debian-installer/locale string en_US
+d-i console-setup/ask_detect boolean false
+d-i console-setup/layoutcode string us
+d-i netcfg/choose_interface select eth1
+d-i netcfg/dhcp_timeout string 60
+d-i netcfg/get_hostname string unassigned-hostname
+d-i netcfg/get_domain string unassigned-domain
+d-i netcfg/hostname string overdrive
+d-i mirror/country string manual
+d-i mirror/http/hostname string ftp.br.debian.org
+d-i mirror/http/directory string /debian
+d-i mirror/http/proxy string
+d-i clock-setup/utc boolean true
+d-i time/zone string UTC
+d-i clock-setup/ntp boolean true
+d-i clock-setup/ntp-server string ntp.ubuntu.com
+d-i passwd/root-password-crypted password WIFHpCZovQdhU
+d-i passwd/user-fullname string Linaro
+d-i passwd/username string linaro
+d-i passwd/user-password-crypted password WIFHpCZovQdhU
+
+In this example, this content is also available at "http://people.linaro.org/~ricardo.salveti/preseed.cfg":http://people.linaro.org/~ricardo.salveti/preseed.cfg
+
+h4. Setting up grub.cfg
+
+Now back to your tftp server, change the original @grub.cfg@ file adding the location of your preseed file:
+
+bc. $ cat /srv/tftp/debian-installer/arm64/grub/grub.cfg 
+# Force grub to automatically load the first option
+set default=0
+set timeout=1
+menuentry 'Install with preseeding' {
+    linux    /debian-installer/arm64/linux auto=true priority=critical url=http://people.linaro.org/~ricardo.salveti/preseed.cfg ---
+    initrd   /debian-installer/arm64/initrd.gz
+}
+
+The @auto@ kernel parameter is an alias for @auto-install/enable@ and setting it to @true@ delays the locale and keyboard questions until after there has been a chance to preseed them, while @priority@ is an alias for @debconf/priority@ and setting it to @critical@ stops any questions with a lower priority from being asked.
+
+In case your system contains more than one network interface, also make sure to add the one to be used via the @interface@ argument, like @interface=eth1@.
+
+h4. Booting the system
+
+Now just do a normal PXE boot, and debian-installer should automatically load and use the preseeds file provided by @grub.cfg@. In case there is still a dialog that stops your installation that means not all the debian-installer options are provided by your preseeds file. Get back to "example-preseed.txt":https://www.debian.org/releases/jessie/example-preseed.txt and try to identify what is missing step.
+
+Also make sure to check debian-installer's @/var/log/syslog@ (by opening a shell) when debugging the installer.
 
 h3. Building debian-installer from source
