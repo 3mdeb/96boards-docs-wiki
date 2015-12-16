@@ -12,7 +12,7 @@ h4. Debian Installer
 
 The released debian-installer from Debian Jessie contains a kernel based on 3.16, which doesn't yet provide support for development boards used by the reference software project. For a complete enterprise experience (including support for tip-based kernel with ACPI support and additional platforms), we also build and publish a custom debian installer that incorporates a more recent kernel.
 
-Our custom installer changes nothing more than the kernel, and you can also find the instructions to build it from source at *TODO*
+Our custom installer changes nothing more than the kernel, and you can also find the instructions to build it from source at the end of this document.
 
 *Downloading debian-installer:*
 
