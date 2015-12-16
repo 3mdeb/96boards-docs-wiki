@@ -2,9 +2,9 @@ h2. UEFI/EDK2
 
 EDK2 is a modern, feature-rich, cross-platform firmware development environment for the UEFI and PI specifications.
 
-The reference UEFI/EDK2 tree used by the EE-RPB comes from Linaro, which is available at "https://git.linaro.org/uefi/linaro-edk2.git":https://git.linaro.org/uefi/linaro-edk2.git
+The reference UEFI/EDK2 tree used by the EE-RPB comes directly from "upstream":https://github.com/tianocore/edk2, based on a specific commit that gets validated and published as part of the Linaro EDK2 effort (which is available at "https://git.linaro.org/uefi/linaro-edk2.git":https://git.linaro.org/uefi/linaro-edk2.git).
 
-The Linaro EDK2 tree is based on upstream (with constant rebases), covered by monthly validation and releases, in order to provide a more stable reference. This tree also contains two extra git submodules, LinaroPkg and OpenPlatformPkg, with the latter providing the hardware specific support and drivers (since EDK2 upstream only provides the common and generic pieces).
+Since there is no hardware specific support as part of EDK2 upstream, an external module called "OpenPlatformPkg":https://git.linaro.org/uefi/OpenPlatformPkg.git is also required as part of the build process.
 
 EDK2 is currently used by 96boards HuskyBoard, AMD Overdrive, ARM Juno r0/r1 and HiSilicon D02.
 
@@ -37,15 +37,16 @@ h4. Getting the source code
 
 UEFI/EDK2:
 
-bc. git clone -b release http://git.linaro.org/git/uefi/linaro-edk2.git
-cd linaro-edk2
-git submodule init
-git submodule update
+bc. git clone https://github.com/tianocore/edk2.git
+git clone https://git.linaro.org/uefi/OpenPlatformPkg.git
+cd edk2
+git checkout -b stable-baseline 4960d8e00427d52c8db5da492ac7aff38cbc9d30 # revision provided by https://git.linaro.org/uefi/linaro-edk2.git
+ln -s ../OpenPlatformPkg
 
 ARM Trusted Firmware (in case it is supported by your target hardware):
 
 bc. git clone https://github.com/ARM-software/arm-trusted-firmware.git
-git checkout -b known_rev 53d069c28c2738c3a4f59211fbc61323ec28208c # suggested revision to avoid surprises
+git checkout -b stable-baseline 53d069c28c2738c3a4f59211fbc61323ec28208c # suggested revision to avoid surprises
 
 UEFI Tools (helpers and scripts to make the build process easy):
 
@@ -54,11 +55,11 @@ bc. git clone git://git.linaro.org/uefi/uefi-tools.git
 h4. Building UEFI/EDK2 for Juno R0/R1
 
 bc. export AARCH64_TOOLCHAIN=GCC49
-export LINARO_EDK2_DIR=${PWD}/linaro-edk2
+export LINARO_EDK2_DIR=${PWD}/edk2
 export UEFI_TOOLS_DIR=${PWD}/uefi-tools
 export ARMTF_DIR=${PWD}/arm-trusted-firmware
 cd ${LINARO_EDK2_DIR}
-${UEFI_TOOLS_DIR}/uefi-build.sh -c LinaroPkg/platforms.config -b DEBUG -a $ARMTF_DIR juno
+${UEFI_TOOLS_DIR}/uefi-build.sh -b DEBUG -a $ARMTF_DIR juno
 
 The output files:
 
@@ -68,11 +69,19 @@ The output files:
 h4. Building UEFI/EDK2 for D02
 
 bc. export AARCH64_TOOLCHAIN=GCC49
-export LINARO_EDK2_DIR=${PWD}/linaro-edk2
+export LINARO_EDK2_DIR=${PWD}/edk2
 export UEFI_TOOLS_DIR=${PWD}/uefi-tools
 export ARMTF_DIR=${PWD}/arm-trusted-firmware
-cd ${LINARO_EDK2_DIR}
-${UEFI_TOOLS_DIR}/uefi-build.sh -c LinaroPkg/platforms.config -b DEBUG d02
+
+Since D02 support is not yet merged in OpenPlatformPkg, a specific branch needs to be used for it:
+
+bc. cd OpenPlatformPkg
+git checkout d02-release
+
+Then just proceed with the build:
+
+bc. cd ${LINARO_EDK2_DIR}
+${UEFI_TOOLS_DIR}/uefi-build.sh -b DEBUG d02
 
 The output file:
 
