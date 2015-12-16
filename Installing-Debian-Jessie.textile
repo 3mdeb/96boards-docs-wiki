@@ -285,7 +285,6 @@ EFI stub: Exiting boot services and installing virtual address map...
 [    0.947082] zswap: default zpool zbud not available
 [    0.951959] zswap: pool creation failed
 Starting system log daemon: syslogd, klogd.
-
 ...
   ┌───────────────────────┤ [!!] Select a language ├────────────────────────┐
   │                                                                         │
