@@ -10,8 +10,6 @@ Back to your dnsmasq server (check "this link":https://github.com/96boards/docum
 
 Downloading required Grub 2 UEFI files:
 
-*Note:* Because of bug "1251600":https://bugzilla.redhat.com/show_bug.cgi?id=1251600, we need to use both @BOOTAA64.EFI@ and @grubaa64.efi@ from the Fedora 22 release.
-
 bc. sudo su -
 cd /srv/tftp/
 wget http://mirror.centos.org/altarch/7/os/aarch64/EFI/BOOT/BOOTAA64.EFI
