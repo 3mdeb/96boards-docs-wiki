@@ -8,7 +8,19 @@ Prerequisites:
 * GCC 4.9 - cross-toolchain for Aarch64 available in your PATH. [Linaro GCC 4.9-2015.05](http://releases.linaro.org/15.05/components/toolchain/binaries/aarch64-linux-gnu/gcc-linaro-4.9-2015.05-x86_64_aarch64-linux-gnu.tar.xz) is used in the build instructions.
 * GCC cross-toolchain for gnueabihf available in your PATH. [Linaro GCC 4.9-2015.05](http://releases.linaro.org/15.05/components/toolchain/binaries/arm-linux-gnueabihf/gcc-linaro-4.9-2015.05-x86_64_arm-linux-gnueabihf.tar.xz) is used in the build instructions.
 
-### Install custom toolchain(s)
+**Contents**
+
+1. [Install custom toolchain(s)] (#toolchain)
+2. [Build the kernel] (#build-kernel)
+3. [Build the OP-TEE Linux kernel driver] (#optee-driver)
+4. [Build UEFI for HiKey] (#uefi-hikey)
+5. [Build the OP-TEE client] (#optee-client)
+6. [Build the OP-TEE test suite] (#optee-test)
+7. [Copy built files to the file system] (#rootfs)
+8. [Flash binaries to eMMC] (#flash)
+9. [Running and Testing] (#runtest)
+
+### Install custom toolchain(s) <a name="toolchain"></a>
 
 ```
 mkdir arm-tc arm64-tc
@@ -121,7 +133,7 @@ The following files are now built:
 * optee_test/out/ta/create_fail_test/c3f6e2c0-3548-11e1-b86c0800200c9a66.ta
 * optee_test/out/ta/concurrent/e13010e0-2ae1-11e5-896a0002a5d5c51b.ta
 
-## Copy built files to the file system
+## Copy built files to the file system <a name="rootfs"></a>
 
 **NOTE:** Make sure you complete building the OP-TEE driver, client and test suite first!
 
@@ -173,7 +185,7 @@ sudo make_ext4fs -o -L rootfs -l 1500M -s jessie.updated.img mnt/
 sudo umount mnt/
 ```
 
-## Flash binaries to eMMC
+## Flash binaries to eMMC <a name="flash"></a>
 In addition to the fip.bin and jessie.updated.img built and created above, you also need:
 
 ```shell
@@ -210,7 +222,7 @@ $ sudo fastboot flash system jessie.updated.img
 * remove the jumper of pin3-pin4 on J15
 * turn on HiKey board
 
-## Running and Testing
+## Running and Testing <a name="runtest"></a>
 
 On the HiKey board serial console:
 
