@@ -10,6 +10,30 @@ h3. Reference Kernel
 
 TODO (once we have our reference kernel for EE)
 
+h3. Quick Start
+
+h4. AMD Overdrive
+
+Since the EDK2 based firmware is not yet supported (work in progress), the original AMI BIOS based firmware from AMD is required.
+
+At the time of 15.12 release the latest firmware version for Overdrive (*B0*) is 0.0.8.5.
+
+Only *B0* is supported by the 15.12 release.
+
+After flashing/updating the firmware, proceed to the network installer instructions in order to install your favorite distribution. No special setup is required for Overdrive.
+
+h5. Flashing the firmware
+
+Follow the instructions available as part of the "UEFI EDK2 Guide":https://github.com/96boards/documentation/wiki/UEFI-EDK2-Guide-for-EE#amd-overdrive in order to flash your AMD Overdrive. The tested flashing process requires "DediProg SF100":http://www.dediprog.com/pd/spi-flash-solution/SF100, but a board like the "SPI Hook":http://www.tincantools.com/SPI_Hook.html should also be compatible with it (not yet tested).
+
+h4. HiSilicon D02
+
+UEFI/EDK2 is supported by D02 (with build from source instructions available as part of the "UEFI EDK2 Guide":https://github.com/96boards/documentation/wiki/UEFI-EDK2-Guide-for-EE#building), and since ACPI support is new, please make sure you are using the latest firmware available at "https://builds.96boards.org/snapshots/reference-platform/components/uefi/latest/release/d02/":https://builds.96boards.org/snapshots/reference-platform/components/uefi/latest/release/d02/ before proceeding with kernel testing or installing your favorite distribution (and please make sure to report your firmware version when reporting issues and bugs).
+
+h5. Flashing the firmware
+
+Follow the instructions available as part of the "UEFI EDK2 Guide":https://github.com/96boards/documentation/wiki/UEFI-EDK2-Guide-for-EE#d02 in order to flash your D02. The tested flashing process only requires access to a TFTP server, since the firmware supports fetching the firmware from the network.
+
 h3. Network Installers
 
 In order to install a distribution from network, PXE (DCHP/TFTP) booting is required. Since we require UEFI for for the Enterprise Edition, the setup is usually easier since all you need is to load GRUB 2 (and its configuration). Check "this link":https://github.com/96boards/documentation/wiki/DHCP-TFTP-server-for-UEFI-distro-network-installers for instructions on how to quickly setup your own PXE server (using *dnsmasq*).
