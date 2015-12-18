@@ -314,6 +314,10 @@ Preseeding provides a way to set answers to questions asked during the installat
 
 This document only provides a quick way for you to get started with preseeding. For the complete guide, please check the "Debian GNU/Linux Installation Guide":https://www.debian.org/releases/jessie/arm64/apb.html and "example-preseed.txt":https://www.debian.org/releases/jessie/example-preseed.txt
 
+*Note:* Since we require an external kernel to be installed during the install process, this is done via the @preseed/late_command@ argument, so you if you decide to use that command as part of your preseed file, make sure to add the following as part of the multi-line command:
+
+bc. d-i preseed/late_command string in-target apt-get install -y linux-image-4.4.0-trunk-arm64; # here you can add 'in-target foobar' for additional commands
+
 h4. Creating the preseed file
 
 Check "example-preseed.txt":https://www.debian.org/releases/jessie/example-preseed.txt for a wide list of options supported by the Debian Jessie installer. Your file needs to use a similar format, but customized for your own needs.
