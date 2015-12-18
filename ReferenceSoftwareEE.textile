@@ -1,7 +1,5 @@
 h2. Reference Software Platform Enterprise Edition
 
-Draft for EE specific instructions and documentation.
-
 h3. Boot Firmware
 
 The "UEFI/EDK2 guide for EE":https://github.com/96boards/documentation/wiki/UEFI-EDK2-Guide-for-EE provides information about building and flashing the boot firmware for the supported boards.
