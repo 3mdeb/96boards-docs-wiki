@@ -43,7 +43,7 @@ cd edk2
 git checkout -b stable-baseline 4960d8e00427d52c8db5da492ac7aff38cbc9d30 # revision provided by https://git.linaro.org/uefi/linaro-edk2.git
 ln -s ../OpenPlatformPkg
 
-ARM Trusted Firmware (in case it is supported by your target hardware):
+ARM Trusted Firmware (in case it is supported by your target hardware, only used by Juno at this point):
 
 bc. git clone https://github.com/ARM-software/arm-trusted-firmware.git
 git checkout -b stable-baseline 53d069c28c2738c3a4f59211fbc61323ec28208c # suggested revision to avoid surprises
