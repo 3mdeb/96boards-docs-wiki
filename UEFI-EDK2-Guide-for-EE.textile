@@ -179,7 +179,7 @@ Network upgrade:
 # Make sure the built firmware is available in your FTP server (@PV660D02.fd@)
 # Download and flash the firmware file from the FTP server:
 @biosupdate <server ip> -u <user> -p <password> -f <UEFI image file name> master@, like
-@biosupdate 10.0.0.10 -p anonymous -u anonymous -f PV660D02.fd master@
+@biosupdate 10.0.0.10 -u anonymous -p anonymous -f PV660D02.fd master@
 
 
 USB storage upgrade:
