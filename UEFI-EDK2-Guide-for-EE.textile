@@ -18,11 +18,11 @@ Make sure the build dependencies are available at your host machine.
 
 On Debian/Ubuntu:
 
-bc. sudo apt-get install uuid-dev build-essential
+bc. sudo apt-get install uuid-dev build-essential iasl
 
 On RHEL/CentOS/Fedora:
 
-bc. sudo yum install uuid-devel libuuid-devel
+bc. sudo yum install uuid-devel libuuid-devel iasl
 
 If cross compiling, you also need to separately add the required toolchains. Ubuntu has a prebuilt arm-linux-gnueabihf toolchain, but not an aarch64-linux-gnu one.
 
