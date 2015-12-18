@@ -12,7 +12,7 @@ Since we want the same kernel config to be used for all our builds and distribut
 
 At the time of the 15.12 release, the kernel is based on *4.4-rc4*.
 
-For future releases we will also have kernel config fragments, which will make it easier for other projects and distributions to consume.
+For future releases we will also have kernel config fragments for key functionality that will make it easier for other projects and distributions to consume.
 
 The Reference Platform kernel will act as an integration point (very similar to linux-next) for various upstream-targeted features and platform-enablement code on the latest kernel. It is not meant to be a stable kernel - the "LSK":https://wiki.linaro.org/LSK is already available for that.
 
