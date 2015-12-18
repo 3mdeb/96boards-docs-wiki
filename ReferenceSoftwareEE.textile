@@ -6,7 +6,13 @@ The "UEFI/EDK2 guide for EE":https://github.com/96boards/documentation/wiki/UEFI
 
 h3. Reference Kernel
 
-TODO (once we have our reference kernel for EE)
+The reference kernel used by the enterprise release (and soon to be shared with CE) can be found at "https://git.linaro.org/people/amit.kucheria/kernel.git/shortlog/refs/heads/96b-kernelci":https://git.linaro.org/people/amit.kucheria/kernel.git/shortlog/refs/heads/96b-kernelci
+
+Since we want the same kernel config to be used for all our builds and distributions, it is also available as part of the same kernel tree, and can be found at "arch/arm64/configs/distro.config":https://git.linaro.org/people/amit.kucheria/kernel.git/blob/refs/heads/96b-kernelci:/arch/arm64/configs/distro.config
+
+At the time of the 15.12 release, the kernel is based on *4.4-rc4*.
+
+For future releases we will also have kernel config fragments, which will make it easier for other projects and distributions to consume.
 
 h3. Quick Start
 
@@ -14,7 +20,7 @@ h4. AMD Overdrive
 
 Since the EDK2 based firmware is not yet supported (work in progress), the original AMI BIOS based firmware from AMD is required.
 
-At the time of 15.12 release the latest firmware version for Overdrive (*B0*) is 0.0.8.5.
+At the time of the 15.12 release the latest firmware version for Overdrive (*B0*) is 0.0.8.5.
 
 Only *B0* is supported by the 15.12 release.
 
