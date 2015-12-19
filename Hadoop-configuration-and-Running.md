@@ -2,35 +2,35 @@
 ### # add hduser (dedicated user for running Hadoop) to hadoop usergroup
 $ sudo adduser - -ingroup hadoop hduser
 
-# switch to hduser
+### # switch to hduser
 $ su - hduser
 
-# generate ssh key for hduser
+### # generate ssh key for hduser
 $ ssh-keygen -t rss -P “”
 
-# enable ssh access to local machine
+### # enable ssh access to local machine
 $ cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
 
-# test ssh setup
+### # test ssh setup
 $ ssh localhost
 
-# disabling IPv6
+### # disabling IPv6
 $ sudo nano /etc/sysctl.conf
 
-— add the below lines and save
+### #— add the below lines and save
 net.ipv6.conf.all.disable_ipv6 = 1
 net.ipv6.conf.default.disable_ipv6 = 1
 net.ipv6.conf.lo.disable_ipv6 = 1
 
-— now restart the system
+### # — now restart the system
 
-# disabling IPv6
+### # disabling IPv6
 $ sudo nano /etc/hadoop/conf/hadoop-env.sh
 
-— uncomment line # export HADOOP_OPTS=-Djava.net.preferIPV4stack=true
-— now restart the system
+### # — uncomment line # export HADOOP_OPTS=-Djava.net.preferIPV4stack=true
+### # — now restart the system
 
-# switch to hduser
+### # switch to hduser
 $ su hduser
 
 $ su mkdir -p /app/hadoop/tmp
@@ -41,10 +41,10 @@ $ sudo chmod 750 /app/hadoop/tmp
 
 $ cd
 
-# Configure Environment Variables.
+### # Configure Environment Variables.
 $ nano .bashrc
 
-— add the following and save
+### # — add the following and save
 
 export HADOOP_HOME=/usr/local/hadoop
 export PATH=$PATH:$HADOOP_HOME/bin
@@ -60,10 +60,10 @@ export HADOOP_YARN_HOME=$HADOOP_HOME
 export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
 
 
-### Java_HOME 
+### # Java_HOME 
 export JAVA_HOME="$(/usr/libexec/java_home)"
 
-### HADOOP Environment variables
+### # HADOOP Environment variables
 export HADOOP_PREFIX="/usr/local/Cellar/hadoop/2.2.0"
 export HADOOP_HOME=$HADOOP_PREFIX
 export HADOOP_COMMON_HOME=$HADOOP_PREFIX
@@ -83,7 +83,7 @@ $ cd /etc/hadoop/conf
 
 $ nano core-site.xml
 
-— add the following:
+### # — add the following:
 <property>
   <name>hadoop.tmp.dir</name>
   <value>/app/hadoop/tmp</value>
@@ -123,6 +123,5 @@ $ nano hdfs-site.xml
   </description>
 </property>
 
-# Format Namenode. This step is needed for the first time. Doing it every time will result in loss of content on HDFS.
+### # Format Namenode. This step is needed for the first time. Doing it every time will result in loss of content on HDFS.
 $ hadoop namenode –format
-
