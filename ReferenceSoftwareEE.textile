@@ -61,4 +61,4 @@ Follow the steps as defined in "Hadoop Installation":https://github.com/96boards
 
 h5. Setup and Running Hadoop
 
-Follow the steps as defined in 
+Follow the steps as defined in "Hadoop Setup and Running":https://github.com/96boards/documentation/wiki/Hadoop-configuration-and-Running
