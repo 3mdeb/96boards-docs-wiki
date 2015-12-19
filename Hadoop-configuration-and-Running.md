@@ -1,4 +1,4 @@
-This post concentrates on Running Hadoop after installing ODPi components built using Apache BigTop. These steps are only for configuring it on a single node and running them on a single node.
+This post concentrates on Running Hadoop after [installing](https://github.com/96boards/documentation/wiki/Hadoop-Installation) ODPi components built using Apache BigTop. These steps are only for configuring it on a single node and running them on a single node.
 
 
 add hduser (dedicated user for running Hadoop) to hadoop usergroup
