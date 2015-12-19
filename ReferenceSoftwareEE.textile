@@ -57,8 +57,8 @@ h4. Hadoop
 
 h5. Installation
 
-Follow the steps as defined in "Hadoop Installation":https://github.com/96boards/documentation/wiki/Hadoop-Installation
+Follow the steps as defined in "ODPi Hadoop Installation":https://github.com/96boards/documentation/wiki/ODPi-Hadoop-Installation
 
 h5. Setup and Running Hadoop
 
-Follow the steps as defined in "Hadoop Setup and Running":https://github.com/96boards/documentation/wiki/Hadoop-configuration-and-Running
+Follow the steps as defined in "ODPi Hadoop Setup and Running":https://github.com/96boards/documentation/wiki/Hadoop-configuration-and-Running
