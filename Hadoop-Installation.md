@@ -1,49 +1,53 @@
 This post concentrates on installing ODPi components built using Apache BigTop. These steps are only for configuring it on a single node and running them on a single node.
 
-## Prerequisites:
+# Prerequisites:
 
-√ Java 7 installed
+* Java 7 installed
 
-## Repo:
+# Repo:
 
 ODPi deb and rpm packages can be found on Linaro repositories:
 
-	• Debian Jessie - [http://repo.linaro.org/ubuntu/linaro-staging/](http://repo.linaro.org/ubuntu/linaro-staging/)
-	• CentOS 7 - [http://repo.linaro.org/rpm/linaro-overlay/centos-7](http://repo.linaro.org/rpm/linaro-overlay/centos-7)
+* Debian Jessie - http://repo.linaro.org/ubuntu/linaro-staging/
+* CentOS 7 - http://repo.linaro.org/rpm/linaro-overlay/centos-7/
 
 
-### To Install them:
+# Installation :
 
-h4. On CentOS:
+### On Debian:
 
-$ wget http://repo.linaro.org/rpm/linaro-overlay/centos-7/linaro-overlay.repo -O /etc/yum.repos.d/linaro-overlay.repo
+add to repo list
 
-$ sudo yum update
+> $ echo "deb http://repo.linaro.org/ubuntu/linaro-staging jessie main" > /etc/apt/sources.list.d/linaro-overlay-repo.list
 
-h4. On Debian:
+add the public key to authenticate package and add to trusted list
+> $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E13D88F7E3C1D56C
 
-$ cd /etc/apt/sources.list.d
+update the source list
+> $ sudo apt-get update
 
-# add to repo list
-$ sudo nano linaro-overlay-repo.list
-— paste ‘deb http://repo.linaro.org/ubuntu/linaro-staging jessie main’
-— save the file
+Install all dependencies
+> $ sudo apt-get build-dep build-essential
 
-# update the source list
-$ sudo apt-get update
+Install Hadoop packages 
+> $ sudo apt-get install -ft jessie bigtop-tomcat hadoop* spark
 
-might give the following error 
-W: GPG error: http://repo.linaro.org jessie InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY E13D88F7E3C1D56C
+type hadoop to check if hadoop is installed.
+> $ hadoop
 
-# add the public key to authenticate package and add to trusted list
-$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E13D88F7E3C1D56C
+### On CentOS:
 
-$ sudo apt-get update
+> $ wget http://repo.linaro.org/rpm/linaro-overlay/centos-7/linaro-overlay.repo -O /etc/yum.repos.d/linaro-overlay.repo
 
-# Install all dependencies
-$ sudo apt-get build-dep build-essential
+> $ sudo yum update
 
-# Install hadoop packages 
-$ sudo apt-get install -ft jessie bigtop-tomcat hadoop* spark
+> $ yum install [a-q]*
 
-— — type hadoop to check if installed….
+> $ yum install [s-z]*
+
+type hadoop to check if hadoop is installed.
+
+> $ hadoop
+
+
+#### Errors / Resolution
