@@ -1,5 +1,5 @@
 
-# add hduser (dedicated user for running Hadoop) to hadoop usergroup
+### # add hduser (dedicated user for running Hadoop) to hadoop usergroup
 $ sudo adduser - -ingroup hadoop hduser
 
 # switch to hduser
