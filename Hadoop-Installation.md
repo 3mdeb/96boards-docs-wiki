@@ -1,25 +1,25 @@
 This post concentrates on installing ODPi components built using Apache BigTop. These steps are only for configuring it on a single node and running them on a single node.
 
-Prerequisites:
+## ## Prerequisites:
 
-Java 7 installed
+√ Java 7 installed
 
-Repo:
+## ## Repo:
 
 ODPi deb and rpm packages can be found on Linaro repositories:
 	•	Debian Jessie - http://repo.linaro.org/ubuntu/linaro-staging/
 	•	CentOS 7 - http://repo.linaro.org/rpm/linaro-overlay/centos-7
 
 
-To Install them:
+### To Install them:
 
-On CentOS:
+h4. On CentOS:
 
 $ wget http://repo.linaro.org/rpm/linaro-overlay/centos-7/linaro-overlay.repo -O /etc/yum.repos.d/linaro-overlay.repo
 
 $ sudo yum update
 
-On Debian:
+h4. On Debian:
 
 $ cd /etc/apt/sources.list.d
 
