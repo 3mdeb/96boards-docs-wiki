@@ -1,85 +1,91 @@
-
-### # add hduser (dedicated user for running Hadoop) to hadoop usergroup
-$ sudo adduser - -ingroup hadoop hduser
-
-### # switch to hduser
-$ su - hduser
-
-### # generate ssh key for hduser
-$ ssh-keygen -t rss -P “”
-
-### # enable ssh access to local machine
-$ cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
-
-### # test ssh setup
-$ ssh localhost
-
-### # disabling IPv6
-$ sudo nano /etc/sysctl.conf
-
-### #— add the below lines and save
-net.ipv6.conf.all.disable_ipv6 = 1
-net.ipv6.conf.default.disable_ipv6 = 1
-net.ipv6.conf.lo.disable_ipv6 = 1
-
-### # — now restart the system
-
-### # disabling IPv6
-$ sudo nano /etc/hadoop/conf/hadoop-env.sh
-
-### # — uncomment line # export HADOOP_OPTS=-Djava.net.preferIPV4stack=true
-### # — now restart the system
-
-### # switch to hduser
-$ su hduser
-
-$ su mkdir -p /app/hadoop/tmp
-
-$ sudo chown hduser:hadoop /app/hadoop/tmp
-
-$ sudo chmod 750 /app/hadoop/tmp
-
-$ cd
-
-### # Configure Environment Variables.
-$ nano .bashrc
-
-### # — add the following and save
-
-export HADOOP_HOME=/usr/local/hadoop
-export PATH=$PATH:$HADOOP_HOME/bin
-export HADOOP_PREFIX=$HADOOP_HOME
-export PATH=/usr/lib/hadoop/libexec:/etc/hadoop/conf:$HADOOP_HOME/bin/:$PATH
-export HADOOP_MAPRED_HOME=$HADOOP_HOME
-export HADOOP_COMMON_HOME=$HADOOP_HOME
-export HADOOP_HDFS_HOME=$HADOOP_HOME
-export YARN_HOME=$HADOOP_HOME
-export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
-export HADOOP_OPTS="-Djava.library.path=$HADOOP_PREFIX/lib/native”
-export HADOOP_YARN_HOME=$HADOOP_HOME
-export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+This post concentrates on Running Hadoop after installing ODPi components built using Apache BigTop. These steps are only for configuring it on a single node and running them on a single node.
 
 
-### # Java_HOME 
-export JAVA_HOME="$(/usr/libexec/java_home)"
+add hduser (dedicated user for running Hadoop) to hadoop usergroup
+> $ sudo adduser - -ingroup hadoop hduser
 
-### # HADOOP Environment variables
-export HADOOP_PREFIX="/usr/local/Cellar/hadoop/2.2.0"
-export HADOOP_HOME=$HADOOP_PREFIX
-export HADOOP_COMMON_HOME=$HADOOP_PREFIX
-export HADOOP_CONF_DIR=$HADOOP_PREFIX/libexec/etc/hadoop
-export HADOOP_HDFS_HOME=$HADOOP_PREFIX
-export HADOOP_MAPRED_HOME=$HADOOP_PREFIX
-export HADOOP_YARN_HOME=$HADOOP_PREFIX
+switch to hduser
+> $ su - hduser
 
-export CLASSPATH=$CLASSPATH:.
-export CLASSPATH=$CLASSPATH:$HADOOP_HOME/libexec/share/hadoop/common/hadoop-common-2.2.0.jar
-export CLASSPATH=$CLASSPATH:$HADOOP_HOME/libexec/share/hadoop/hdfs/hadoop-hdfs-2.2.0.jar
+generate ssh key for hduser
+> $ ssh-keygen -t rss -P “”
 
+enable ssh access to local machine
+> $ cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
 
-$ exec bash
+test ssh setup
+> $ ssh localhost
 
-$ cd /etc/hadoop/conf
+disabling IPv6
+> $ sudo nano /etc/sysctl.conf
+
+add the below lines and save
+>net.ipv6.conf.all.disable_ipv6 = 1
+
+>net.ipv6.conf.default.disable_ipv6 = 1
+
+>net.ipv6.conf.lo.disable_ipv6 = 1
+
+-
+> $ sudo nano /etc/hadoop/conf/hadoop-env.sh
+
+uncomment line 
+>  \# export HADOOP_OPTS=-Djava.net.preferIPV4stack=true
+
+now restart the system
+
+switch to hduser
+> $ su hduser
+
+> $ su mkdir -p /app/hadoop/tmp
+
+> $ su chown hduser:hadoop /app/hadoop/tmp
+
+> $ su chmod 750 /app/hadoop/tmp
+
+> $ cd
+
+Configure Environment Variables.
+> $ nano .bashrc
+
+add the following and save
+
+>export HADOOP_HOME=/usr/local/hadoop
+
+>export PATH=$PATH:$HADOOP_HOME/bin
+
+>export HADOOP_PREFIX=$HADOOP_HOME
+
+>export PATH=/usr/lib/hadoop/libexec:/etc/hadoop/conf:$HADOOP_HOME/bin/:$PATH
+
+>export HADOOP_MAPRED_HOME=$HADOOP_HOME
+
+>export HADOOP_COMMON_HOME=$HADOOP_HOME
+
+>export HADOOP_HDFS_HOME=$HADOOP_HOME
+
+>export YARN_HOME=$HADOOP_HOME
+
+>export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
+
+>export HADOOP_OPTS="-Djava.library.path=$HADOOP_PREFIX/lib/native”
+
+>export HADOOP_YARN_HOME=$HADOOP_HOME
+
+>export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+
+> export JAVA_HOME="$(/usr/libexec/java_home)"
+
+> export CLASSPATH=$CLASSPATH:.
+
+> export CLASSPATH=$CLASSPATH:$HADOOP_HOME/libexec/share/hadoop/common/hadoop-common-2.2.0.jar
+
+> export CLASSPATH=$CLASSPATH:$HADOOP_HOME/libexec/share/hadoop/hdfs/hadoop-hdfs-2.2.0.jar
+
+> $ exec bash
+
+-
+> $ cd /etc/hadoop/conf
 
 $ nano core-site.xml
 
