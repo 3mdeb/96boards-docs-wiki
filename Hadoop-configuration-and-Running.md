@@ -87,47 +87,59 @@ add the following and save
 -
 > $ cd /etc/hadoop/conf
 
-$ nano core-site.xml
+Edit core-site.xml
+> $ nano core-site.xml
 
-### # — add the following:
-<property>
-  <name>hadoop.tmp.dir</name>
-  <value>/app/hadoop/tmp</value>
-  <description>A base for other temporary directories.</description>
-</property>
+add the following:
 
-<property>
-  <name>fs.default.name</name>
-  <value>hdfs://localhost:54310</value>
-  <description>The name of the default file system.  A URI whose
-  scheme and authority determine the FileSystem implementation.  The
-  uri's scheme determines the config property (fs.SCHEME.impl) naming
-  the FileSystem implementation class.  The uri's authority is used to
-  determine the host, port, etc. for a filesystem.</description>
-</property>
+    <property>
+      <name>hadoop.tmp.dir</name>
+      <value>/app/hadoop/tmp</value>
+      <description>A base for other temporary directories.</description>
+    </property>
+
+    <property>
+      <name>fs.default.name</name>
+      <value>hdfs://localhost:54310</value>
+      <description>The name of the default file system.  A URI whose
+      scheme and authority determine the FileSystem implementation.  The
+      uri's scheme determines the config property (fs.SCHEME.impl) naming
+      the FileSystem implementation class.  The uri's authority is used to
+      determine the host, port, etc. for a filesystem.</description>
+    </property>
 
 
-$ nano mapred-site.xml
+Edit mapred-site.xml
 
-<property>
-  <name>mapred.job.tracker</name>
-  <value>localhost:54311</value>
-  <description>The host and port that the MapReduce job tracker runs
-  at.  If "local", then jobs are run in-process as a single map
-  and reduce task.
-  </description>
-</property>
+> $ nano mapred-site.xml
 
-$ nano hdfs-site.xml
+add the following lines: 
 
-<property>
-  <name>dfs.replication</name>
-  <value>1</value>
-  <description>Default block replication.
-  The actual number of replications can be specified when the file is created.
-  The default is used if replication is not specified in create time.
-  </description>
-</property>
+    <property>
+      <name>mapred.job.tracker</name>
+      <value>localhost:54311</value>
+      <description>The host and port that the MapReduce job tracker runs
+      at.  If "local", then jobs are run in-process as a single map
+      and reduce task.
+      </description>
+    </property>
 
-### # Format Namenode. This step is needed for the first time. Doing it every time will result in loss of content on HDFS.
-$ hadoop namenode –format
+
+Edit hdfs-site.xml
+
+> $ nano hdfs-site.xml
+
+Add the following lines:
+
+    <property>
+      <name>dfs.replication</name>
+      <value>1</value>
+      <description>Default block replication.
+      The actual number of replications can be specified when the file is created.
+      The default is used if replication is not specified in create time.
+      </description>
+    </property>
+
+
+Format Namenode. This step is needed for the first time. Doing it every time will result in loss of content on HDFS.
+> $ hadoop namenode –format
