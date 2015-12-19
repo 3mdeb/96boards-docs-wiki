@@ -49,5 +49,5 @@ type hadoop to check if hadoop is installed.
 
 > $ hadoop
 
-### [Setup, Configuration and Running Hadoop](https://github.com/96boards/documentation/wiki/Hadoop-configuration-and-Running) 
+### [Setup, Configuration and Running Hadoop](https://github.com/96boards/documentation/wiki/ODPi-BigTop-Hadoop-configuration-and-Running) 
 #### Errors / Resolution
