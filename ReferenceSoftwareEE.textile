@@ -56,7 +56,9 @@ h4. OpenStack
 h4. Hadoop
 
 h5. Installation
+
 Follow the steps as defined in "Hadoop Installation":https://github.com/96boards/documentation/wiki/Hadoop-Installation
 
 h5. Setup and Running Hadoop
+
 Follow the steps as defined in 
