@@ -1,38 +1,44 @@
 This post concentrates on Running Hadoop after [installing](https://github.com/96boards/documentation/wiki/ODPi-Hadoop-Installation) ODPi components built using Apache BigTop. These steps are only for configuring it on a single node and running them on a single node.
 
+Add hduser (dedicated user for running Hadoop) to hadoop usergroup:
 
-add hduser (dedicated user for running Hadoop) to hadoop usergroup
-> $ sudo adduser - -ingroup hadoop hduser
+    $ sudo adduser --ingroup hadoop hduser
 
-switch to hduser
-> $ su - hduser
+Switch to hduser:
 
-generate ssh key for hduser
-> $ ssh-keygen -t rss -P “”
+    $ su - hduser
 
-enable ssh access to local machine
-> $ cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
+Generate ssh key for hduser:
 
-test ssh setup
-> $ ssh localhost
+    $ ssh-keygen -t rsa -P ""
 
-disabling IPv6
-> $ sudo nano /etc/sysctl.conf
+Enable ssh access to local machine:
 
-add the below lines and save
->net.ipv6.conf.all.disable_ipv6 = 1
+    $ cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
 
->net.ipv6.conf.default.disable_ipv6 = 1
+Test ssh setup, as hduser:
 
->net.ipv6.conf.lo.disable_ipv6 = 1
+    $ ssh localhost
 
--
-> $ sudo nano /etc/hadoop/conf/hadoop-env.sh
+Disabling IPv6:
 
-uncomment line 
->  \# export HADOOP_OPTS=-Djava.net.preferIPV4stack=true
+    $ sudo nano /etc/sysctl.conf
 
-now restart the system
+Add the below lines and save:
+
+    net.ipv6.conf.all.disable_ipv6 = 1
+    net.ipv6.conf.default.disable_ipv6 = 1
+    net.ipv6.conf.lo.disable_ipv6 = 1
+
+Prefer IPv4 on Hadoop:
+
+    $ sudo nano /etc/hadoop/conf/hadoop-env.sh
+
+Uncomment line:
+
+    # export HADOOP_OPTS=-Djava.net.preferIPV4stack=true
+
+Save and restart the system.
 
 switch to hduser
 > $ su hduser
