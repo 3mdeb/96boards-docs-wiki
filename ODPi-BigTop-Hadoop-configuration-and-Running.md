@@ -143,3 +143,9 @@ Add the following lines:
 
 Format Namenode. This step is needed for the first time. Doing it every time will result in loss of content on HDFS.
 > $ hadoop namenode –format
+
+Start all hadoop services 
+> $ start-all.sh
+
+Check if hadoop is running. jps command should list namenode, datanode, yarn resource manager.
+> $ jps
