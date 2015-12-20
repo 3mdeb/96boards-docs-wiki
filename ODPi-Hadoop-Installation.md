@@ -2,7 +2,7 @@ This post concentrates on installing ODPi components built using Apache BigTop. 
 
 # Prerequisites:
 
-* Java 7 installed (e.g. openjdk-7-jre: `sudo apt-get install openjdk-7-jre`)
+* Java 7 (e.g. openjdk-7-jre)
 
 # Repo:
 
