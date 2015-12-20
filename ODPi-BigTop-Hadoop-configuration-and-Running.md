@@ -40,63 +40,46 @@ Uncomment line:
 
 Save and restart the system.
 
-switch to hduser
-> $ su hduser
+Back to the system, switch to hduser, and configure the app environment:
 
-> $ su mkdir -p /app/hadoop/tmp
+    $ su - hduser
+    $ su mkdir -p /app/hadoop/tmp
+    $ su chown hduser:hadoop /app/hadoop/tmp
+    $ su chmod 750 /app/hadoop/tmp
 
-> $ su chown hduser:hadoop /app/hadoop/tmp
+Configure Environment Variables:
 
-> $ su chmod 750 /app/hadoop/tmp
+    $ nano ~/.bashrc
 
-> $ cd
+Add the following and save:
 
-Configure Environment Variables.
-> $ nano .bashrc
-
-add the following and save
-
->export HADOOP_HOME=/usr/local/hadoop
-
->export PATH=$PATH:$HADOOP_HOME/bin
-
->export HADOOP_PREFIX=$HADOOP_HOME
-
->export PATH=/usr/lib/hadoop/libexec:/etc/hadoop/conf:$HADOOP_HOME/bin/:$PATH
-
->export HADOOP_MAPRED_HOME=$HADOOP_HOME
-
->export HADOOP_COMMON_HOME=$HADOOP_HOME
-
->export HADOOP_HDFS_HOME=$HADOOP_HOME
-
->export YARN_HOME=$HADOOP_HOME
-
->export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
-
->export HADOOP_OPTS="-Djava.library.path=$HADOOP_PREFIX/lib/native”
-
->export HADOOP_YARN_HOME=$HADOOP_HOME
-
->export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
-
-> export JAVA_HOME="$(/usr/libexec/java_home)"
-
-> export CLASSPATH=$CLASSPATH:.
-
-> export CLASSPATH=$CLASSPATH:$HADOOP_HOME/libexec/share/hadoop/common/hadoop-common-2.2.0.jar
-
-> export CLASSPATH=$CLASSPATH:$HADOOP_HOME/libexec/share/hadoop/hdfs/hadoop-hdfs-2.2.0.jar
+    export HADOOP_HOME=/usr/local/hadoop
+    export PATH=$PATH:$HADOOP_HOME/bin
+    export HADOOP_PREFIX=$HADOOP_HOME
+    export PATH=/usr/lib/hadoop/libexec:/etc/hadoop/conf:$HADOOP_HOME/bin/:$PATH
+    export HADOOP_MAPRED_HOME=$HADOOP_HOME
+    export HADOOP_COMMON_HOME=$HADOOP_HOME
+    export HADOOP_HDFS_HOME=$HADOOP_HOME
+    export YARN_HOME=$HADOOP_HOME
+    export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
+    export HADOOP_OPTS="-Djava.library.path=$HADOOP_PREFIX/lib/native”
+    export HADOOP_YARN_HOME=$HADOOP_HOME
+    export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+    export JAVA_HOME="$(/usr/libexec/java_home)"
+    export CLASSPATH=$CLASSPATH:.
+    export CLASSPATH=$CLASSPATH:$HADOOP_HOME/libexec/share/hadoop/common/hadoop-common-2.2.0.jar
+    export CLASSPATH=$CLASSPATH:$HADOOP_HOME/libexec/share/hadoop/hdfs/hadoop-hdfs-2.2.0.jar
 
 > $ exec bash
 
 -
-> $ cd /etc/hadoop/conf
 
-Edit core-site.xml
-> $ nano core-site.xml
+Edit core-site.xml:
 
-add the following:
+    $ cd /etc/hadoop/conf
+    $ nano core-site.xml
+
+And add the following:
 
     <property>
       <name>hadoop.tmp.dir</name>
@@ -114,12 +97,11 @@ add the following:
       determine the host, port, etc. for a filesystem.</description>
     </property>
 
+Edit mapred-site.xml:
 
-Edit mapred-site.xml
+    $ nano mapred-site.xml
 
-> $ nano mapred-site.xml
-
-add the following lines: 
+And add the following lines: 
 
     <property>
       <name>mapred.job.tracker</name>
@@ -130,12 +112,11 @@ add the following lines:
       </description>
     </property>
 
+Edit hdfs-site.xml:
 
-Edit hdfs-site.xml
+    $ nano hdfs-site.xml
 
-> $ nano hdfs-site.xml
-
-Add the following lines:
+And add the following lines:
 
     <property>
       <name>dfs.replication</name>
@@ -146,12 +127,14 @@ Add the following lines:
       </description>
     </property>
 
-
 Format Namenode. This step is needed for the first time. Doing it every time will result in loss of content on HDFS.
-> $ hadoop namenode –format
 
-Start all hadoop services 
-> $ start-all.sh
+    $ hadoop namenode –format
+
+Start all hadoop services:
+
+    $ start-all.sh
 
 Check if hadoop is running. jps command should list namenode, datanode, yarn resource manager.
-> $ jps
+
+    $ jps
