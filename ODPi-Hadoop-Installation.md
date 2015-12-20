@@ -32,8 +32,6 @@ Install all dependencies
 Install Hadoop packages 
 > $ sudo apt-get install -ft jessie bigtop-tomcat hadoop* spark
 
-type hadoop to check if hadoop is installed.
-> $ hadoop
 
 ### On CentOS:
 
@@ -45,9 +43,13 @@ type hadoop to check if hadoop is installed.
 
 > $ yum install [s-z]*
 
-type hadoop to check if hadoop is installed.
 
-> $ hadoop
+### Verifying Installation 
+
+Packages would get installed in /usr/lib 
+
+type hadoop to check if hadoop is installed.
+> $ hadoop 
 
 ### [Setup, Configuration and Running Hadoop](https://github.com/96boards/documentation/wiki/ODPi-BigTop-Hadoop-configuration-and-Running) 
 #### Errors / Resolution
