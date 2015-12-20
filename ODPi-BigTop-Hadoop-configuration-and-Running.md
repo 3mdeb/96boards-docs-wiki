@@ -70,9 +70,7 @@ Add the following and save:
     export CLASSPATH=$CLASSPATH:$HADOOP_HOME/libexec/share/hadoop/common/hadoop-common-2.2.0.jar
     export CLASSPATH=$CLASSPATH:$HADOOP_HOME/libexec/share/hadoop/hdfs/hadoop-hdfs-2.2.0.jar
 
-> $ exec bash
-
--
+Execute the terminal environment again (`bash`), or simply logout and change to `hduser` again.
 
 Edit core-site.xml:
 
