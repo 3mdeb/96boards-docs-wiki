@@ -53,7 +53,7 @@ Configure Environment Variables:
 
 Add the following and save:
 
-    export HADOOP_HOME=/usr/local/hadoop
+    export HADOOP_HOME=/usr/lib/hadoop
     export PATH=$PATH:$HADOOP_HOME/bin
     export HADOOP_PREFIX=$HADOOP_HOME
     export PATH=/usr/lib/hadoop/libexec:/etc/hadoop/conf:$HADOOP_HOME/bin/:$PATH
@@ -67,8 +67,8 @@ Add the following and save:
     export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
     export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
     export CLASSPATH=$CLASSPATH:.
-    export CLASSPATH=$CLASSPATH:$HADOOP_HOME/libexec/share/hadoop/common/hadoop-common-2.2.0.jar
-    export CLASSPATH=$CLASSPATH:$HADOOP_HOME/libexec/share/hadoop/hdfs/hadoop-hdfs-2.2.0.jar
+    export CLASSPATH=$CLASSPATH:$HADOOP_HOME/hadoop-common-2.6.0.jar
+    export CLASSPATH=$CLASSPATH:$HADOOP_HOME/client/hadoop-hdfs-2.6.0.jar
 
 Execute the terminal environment again (`bash`), or simply logout and change to `hduser` again.
 
