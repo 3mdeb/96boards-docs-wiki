@@ -40,15 +40,15 @@ Uncomment line:
 
 Save and restart the system.
 
-Back to the system, switch to hduser, and configure the app environment:
+Back to the system, configure the app environment:
 
-    $ su - hduser
-    $ su mkdir -p /app/hadoop/tmp
-    $ su chown hduser:hadoop /app/hadoop/tmp
-    $ su chmod 750 /app/hadoop/tmp
+    $ sudo mkdir -p /app/hadoop/tmp
+    $ sudo chown hduser:hadoop /app/hadoop/tmp
+    $ sudo chmod 750 /app/hadoop/tmp
 
 Configure Environment Variables:
 
+    $ su - hduser
     $ nano ~/.bashrc
 
 Add the following and save:
