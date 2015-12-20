@@ -16,40 +16,55 @@ ODPi deb and rpm packages can be found on Linaro repositories:
 
 ### On Debian:
 
-add to repo source list
+Add to repo source list:
 
-> $ echo "deb http://repo.linaro.org/ubuntu/linaro-staging jessie main" > /etc/apt/sources.list.d/linaro-overlay-repo.list
+    $ echo "deb http://repo.linaro.org/ubuntu/linaro-staging jessie main" > /etc/apt/sources.list.d/linaro-overlay-repo.list
+    $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E13D88F7E3C1D56C
 
-add the public key to authenticate package and add to trusted list
-> $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E13D88F7E3C1D56C
+Update the source list and install the dependencies:
 
-update the source list
-> $ sudo apt-get update
+    $ sudo apt-get update
+    $ sudo apt-get build-dep build-essential
 
-Install all dependencies
-> $ sudo apt-get build-dep build-essential
+Install Hadoop packages:
 
-Install Hadoop packages 
-> $ sudo apt-get install -ft jessie bigtop-tomcat hadoop* spark
-
+    $ sudo apt-get install -ft jessie bigtop-tomcat hadoop* spark
 
 ### On CentOS:
 
-> $ wget http://repo.linaro.org/rpm/linaro-overlay/centos-7/linaro-overlay.repo -O /etc/yum.repos.d/linaro-overlay.repo
-
-> $ sudo yum update
-
-> $ yum install [a-q]*
-
-> $ yum install [s-z]*
-
+    $ wget http://repo.linaro.org/rpm/linaro-overlay/centos-7/linaro-overlay.repo -O /etc/yum.repos.d/linaro-overlay.repo
+    $ sudo yum update
+    $ yum install [a-q]*
+    $ yum install [s-z]*
 
 ### Verifying Installation 
 
 Packages would get installed in /usr/lib 
 
-type hadoop to check if hadoop is installed.
-> $ hadoop 
+Type hadoop to check if hadoop is installed:
+
+    $ hadoop
+
+And you should see the following:
+
+    linaro@debian:~$ hadoop
+    Usage: hadoop [--config confdir] COMMAND
+           where COMMAND is one of:
+      fs                   run a generic filesystem user client
+      version              print the version
+      jar <jar>            run a jar file
+      checknative [-a|-h]  check native hadoop and compression libraries availability
+      distcp <srcurl> <desturl> copy file or directories recursively
+      archive -archiveName NAME -p <parent path> <src>* <dest> create a hadoop archive
+      classpath            prints the class path needed to get the
+      credential           interact with credential providers
+                           Hadoop jar and the required libraries
+      daemonlog            get/set the log level for each daemon
+      trace                view and modify Hadoop tracing settings
+     or
+      CLASSNAME            run the class named CLASSNAME
+     
+    Most commands print help when invoked w/o parameters.
 
 ### [Setup, Configuration and Running Hadoop](https://github.com/96boards/documentation/wiki/ODPi-BigTop-Hadoop-configuration-and-Running) 
 #### Errors / Resolution
