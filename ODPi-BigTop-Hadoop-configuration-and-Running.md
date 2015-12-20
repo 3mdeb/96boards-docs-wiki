@@ -65,7 +65,7 @@ Add the following and save:
     export HADOOP_OPTS="-Djava.library.path=$HADOOP_PREFIX/lib/native"
     export HADOOP_YARN_HOME=$HADOOP_HOME
     export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
-    export JAVA_HOME="$(/usr/libexec/java_home)"
+    export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
     export CLASSPATH=$CLASSPATH:.
     export CLASSPATH=$CLASSPATH:$HADOOP_HOME/libexec/share/hadoop/common/hadoop-common-2.2.0.jar
     export CLASSPATH=$CLASSPATH:$HADOOP_HOME/libexec/share/hadoop/hdfs/hadoop-hdfs-2.2.0.jar
