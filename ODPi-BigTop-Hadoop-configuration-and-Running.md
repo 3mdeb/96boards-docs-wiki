@@ -59,7 +59,7 @@ Add the following and save:
     export PATH=/usr/lib/hadoop/libexec:/etc/hadoop/conf:$HADOOP_HOME/bin/:$PATH
     export HADOOP_MAPRED_HOME=$HADOOP_HOME
     export HADOOP_COMMON_HOME=$HADOOP_HOME
-    export HADOOP_HDFS_HOME=$HADOOP_HOME
+    export HADOOP_HDFS_HOME=/usr/lib/hadoop-hdfs
     export YARN_HOME=$HADOOP_HOME
     export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
     export HADOOP_OPTS="-Djava.library.path=$HADOOP_PREFIX/lib/native"
@@ -127,7 +127,7 @@ And add the following lines:
 
 Format Namenode. This step is needed for the first time. Doing it every time will result in loss of content on HDFS.
 
-    $ hadoop namenode –format
+    $ hdfs namenode -format
 
 Start all hadoop services:
 
