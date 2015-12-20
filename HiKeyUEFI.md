@@ -161,6 +161,8 @@ $ sudo fastboot flash system hikey-jessie_alip_2015MMDD-nnn.emmc.img
 * remove the jumper of pin3-pin4 on J15
 * turn on HiKey board
 
+Note: UEFI may report "Fail to start BootNext" if you have an SD card installed, see [Boot Sequence](#boot-sequence) for more information. 
+
 ## Run Fastboot from UEFI
 * make sure that jumper of pin5-pin6 on J15 are connected
 
