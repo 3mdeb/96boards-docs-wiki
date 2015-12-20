@@ -333,7 +333,7 @@ d-i netcfg/get_hostname string unassigned-hostname
 d-i netcfg/get_domain string unassigned-domain
 d-i netcfg/hostname string debian
 d-i mirror/country string manual
-d-i mirror/http/hostname string ftp.br.debian.org
+d-i mirror/http/hostname string httpredir.debian.org
 d-i mirror/http/directory string /debian
 d-i mirror/http/proxy string
 d-i passwd/root-password password linaro123
@@ -342,19 +342,22 @@ d-i passwd/user-fullname string Linaro User
 d-i passwd/username string linaro
 d-i passwd/user-password password linaro
 d-i passwd/user-password-again password linaro
-d-i clock-setup/utc boolean true
+d-i passwd/user-default-groups string audio cdrom video sudo
 d-i time/zone string UTC
+d-i clock-setup/ntp boolean true
+d-i clock-setup/utc boolean true
 d-i partman-auto/disk string /dev/sda
-d-i partman-auto/method string lvm
+d-i partman-auto/method string regular
 d-i partman-lvm/device_remove_lvm boolean true
-d-i partman-lvm/confirm boolean true
-d-i partman-lvm/confirm_nooverwrite boolean true
-d-i partman-auto/choose_recipe select home
-d-i partman-partitioning/confirm_write_new_label boolean true
+d-i partman-md/device_remove_md boolean true
+d-i partman-auto/choose_recipe select atomic
+d-i partman/confirm_write_new_label boolean true
 d-i partman/choose_partition select finish
 d-i partman/confirm boolean true
 d-i partman/confirm_nooverwrite boolean true
+popularity-contest popularity-contest/participate boolean false
 tasksel tasksel/first multiselect standard, web-server
+d-i pkgsel/include string openssh-server build-essential ca-certificates sudo vim ntp
 d-i pkgsel/upgrade select safe-upgrade
 d-i finish-install/reboot_in_progress note
 
@@ -393,20 +396,29 @@ You can also find the custom kernel source package created as part of the EE-RPB
 
 h4. Rebuilding debian-installer with the new udebs
 
-bc. # Build the installer
-sudo apt-get build-dep debian-installer
+To build the installer, make sure you're running on a native @arm64@ system, preferably running Debian Jessie.
+
+Download the installer (from jessie):
+
+bc. sudo apt-get build-dep debian-installer
 dget http://ftp.us.debian.org/debian/pool/main/d/debian-installer/debian-installer_20150422+deb8u2.dsc
-cd debian-installer-*
-# Config changes
+
+Change the kernel abi and set a default local preseed (so it can install your kernel during the install process):
+
+bc. cd debian-installer-*
 cd build
 sed -i "s/LINUX_KERNEL_ABI.*/LINUX_KERNEL_ABI = YOUR_KERNEL_ABI/g" config/common
 sed -i "s/PRESEED.*/PRESEED = default-preseed/g" config/common
-# Download udebs
-cd localudebs
+
+Download the kernel udebs that you created at the localudebs folder:
+
+bc. cd localudebs
 wget <list of your custom udeb files created by the kernel debian package>
 cd ..
-# Local pkg-list (include all udebs, as d-i will not be able to find them online)
-cat <<EOF > pkg-lists/local
+
+Create a local pkg-list to include the udebs created (otherwise d-i will not be able to find them online):
+
+bc. cat <<EOF > pkg-lists/local
 ext4-modules-\${kernel:Version}
 fat-modules-\${kernel:Version}
 btrfs-modules-\${kernel:Version}
@@ -419,13 +431,17 @@ ata-modules-\${kernel:Version}
 sata-modules-\${kernel:Version}
 usb-storage-modules-\${kernel:Version}
 EOF
-# Set up local repo
-cat <<EOF > sources.list.udeb
+
+Set up the local repo, so the installer can locate your udebs (from localudebs):
+
+bc. cat <<EOF > sources.list.udeb
 deb [trusted=yes] copy:/PATH/TO/your/installer/d-i/debian-installer-20150422/build/ localudebs/
 deb http://httpredir.debian.org/debian jessie main/debian-installer
 EOF
-# Default preseed to skip known errors (as the kernel provided by local udebs)
-cat <<EOF > default-preseed
+
+Default preseed to skip known errors (as the kernel provided by local udebs):
+
+bc. cat <<EOF > default-preseed
 # Continue install on "no kernel modules were found for this kernel"
 d-i anna/no_kernel_modules boolean true
 # Continue install on "no installable kernels found"
@@ -433,6 +449,9 @@ d-i base-installer/kernel/skip-install boolean true
 d-i base-installer/kernel/no-kernels-found boolean true
 d-i preseed/late_command string in-target wget <your linux-image.deb>; dpkg -i linux-image-*.deb 
 EOF
-fakeroot make build_netboot
+
+Now just build the installer:
+
+bc. fakeroot make build_netboot
 
 You should now find your custom debian-installer at @dest/netboot/netboot.tar.gz@.
