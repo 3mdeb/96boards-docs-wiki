@@ -6,6 +6,10 @@ Please check this "video":http://connect.linaro.org/resource/sfo15/sfo15-104-the
 
 h3. Resources:
 
+h4. Releases
+* "2015.12":https://github.com/96boards/documentation/wiki/RP-Release-2015.12 (Release 1)
+* "2015.10":https://github.com/96boards/documentation/wiki/RP-Release-2015.10 (Alpha)
+
 h4. General:
 
 * "Reference Software Platorm - CI Jobs and Builds":https://github.com/96boards/documentation/wiki/Reference-Software-CI
@@ -18,12 +22,7 @@ h4. Dragonboard 410c:
 
 * "Rescue Image Guide":https://github.com/96boards/documentation/wiki/Dragonboard-410c-Installation-Guide-for-Linux-and-Android#create--install-a-rescue-image
 
-h4. Releases
-* "2015.12":https://github.com/96boards/documentation/wiki/RP-Release-2015.12 (Release 1)
-* "2015.10":https://github.com/96boards/documentation/wiki/RP-Release-2015.10 (Alpha)
-
-
-h5. Feedback and Support
+h3. Feedback and Support
 
 For general questions or support requests, please go to the "96boards.org Community forum":https://www.96boards.org/forums/. For development questions and topics, please use the "96Boards.org development mailing-list":https://lists.96boards.org/mailman/listinfo/dev (dev@lists.96boards.org).
 
