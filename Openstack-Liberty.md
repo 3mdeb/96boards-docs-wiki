@@ -234,7 +234,7 @@ Answer the questions asked by debconf:
 * Neutron administrator password: **\<enter a password>**
 * Metadata proxy shared secret: **\<enter a shared secret string>**
 * API to activate: **choose osapi_compute and metadata**
-* Value for my_ip: **<default>**
+* Value for my_ip: **\<default>**
 * Register Nova in the Keystone endpoint catalog? **Yes**
 * Keystone authentication token: **\<enter the keystone token>**
 
