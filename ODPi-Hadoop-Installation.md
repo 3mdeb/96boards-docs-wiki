@@ -1,4 +1,4 @@
-This post concentrates on installing ODPi components built using Apache BigTop. These steps are only for configuring it on a single node and running them on a single node.
+This post concentrates on installing ODPi components built using Apache BigTop. These steps configure and run the components on a single node.
 
 # Prerequisites:
 
