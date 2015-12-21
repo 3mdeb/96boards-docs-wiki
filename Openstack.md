@@ -107,13 +107,13 @@ Answer the questions asked by debconf:
 * Set up a database for Keystone: **Yes**
 * Configure database for keystone with dbconfig-common: **Yes**
 * Database type to be used by keystone: **mysql**
-* Password of the database's administrative user: **<use the password you used during database install>**
-* MySQL application password for keystone: **<enter a password>**
-* Authentication server administration token: **<enter a token value>**
+* Password of the database's administrative user: **\<use the password you used during database install>**
+* MySQL application password for keystone: **\<enter a password>**
+* Authentication server administration token: **\<enter a token value>**
 * Register administration tenants? **Yes**
-* Password of the administrative user: **<enter a password>**
+* Password of the administrative user: **\<enter a password>**
 * Register Keystone endpoint? **Yes**
-* Keystone endpoint IP address: **<use default, or localhost, or controller>**
+* Keystone endpoint IP address: **\<use default, or localhost, or controller>**
 
 Use the following for /etc/keystone/keystone.conf:
 
