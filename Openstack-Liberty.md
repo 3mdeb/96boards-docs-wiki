@@ -240,3 +240,48 @@ Answer the questions asked by debconf:
 #### Finalize installation
 
 Omit this section of the guide.
+
+
+
+## Add the Networking service (Neutron)
+
+Follow the Openstack guide with the exception of the following changes documented here.
+
+### Install and configure
+
+#### Prerequisites
+
+Omit this section of the guide.  These operations will be done during package installation later.
+
+#### Install and configure components
+
+    $ sudo apt-get install neutron-server neutron-plugin-ml2 neutron-plugin-linuxbridge-agent \
+      neutron-dhcp-agent neutron-metadata-agent python-neutronclient
+
+Answer the questions asked by debconf:
+
+**TODO: Verify debconf questions**
+
+* neutron-common
+  * Set up a database for Neutron: **Yes**
+  * Configure database for neutron-common with dbconfig-common? **Yes**
+  * Database type to be used by neutron-common: **mysql**
+  * Password of the database's administrative user: **\<enter a password>**
+  * MySQL application password for neutron-common: **\<enter a password>**
+  * IP address of your RabbitMQ host: **\<use default, or localhost, or controller>**
+  * Username for connection to the RabbitMQ server: **guest**
+  * Password for connection to the RabbitMQ server: **\<blank>**
+  * Authentication server hostname: **\<use default, or localhost, or controller>**
+  * Authentication server password: **\<enter a password>**
+  * Neutron plugin: **ml2**
+* neutron-metadata-agent
+  * Auth server hostname: **\<use default, or localhost, or controller>**
+  * Auth server password: **\<enter a password>**
+  * Name of the region to be used by the metadata server: **\<default>**
+  * Metadata proxy shared secret: **\<enter the shared secret string entered for Nova>**
+  * Register Neutron in the Keystone endpoint catalog? **Yes**
+  * Keystone authentication token: **\<enter a token value>**
+
+#### Finalize installation
+
+Omit this section of the guide.
