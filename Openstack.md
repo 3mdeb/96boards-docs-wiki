@@ -122,7 +122,7 @@ If you encounter dependency issues with package installation, you will need to m
 
     $ sudo apt-get install python-cryptography/testing
 
-Then, install the meta package:
+Then, install the apache and the keystone meta package:
 
     $ sudo apt-get install openstack-cloud-identity
 
@@ -142,3 +142,4 @@ Answer the questions asked by debconf:
 #### Finalize the installation
 
 Nothing to do.
+
