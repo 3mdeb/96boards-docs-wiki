@@ -1,3 +1,7 @@
+- [[Reference Software | ReferenceSoftware]]
+  - [[Enterprise Edition | ReferenceSoftwareEE]]
+  - [[Consumer Edition | ReferenceSoftwareCE]]
+    - [[Bootloader (Hikey) | Reference-Bootloader-Hikey]]
 - [[HiKey | HiKey]]
   - [Hardware User Guide](https://github.com/96boards/documentation/blob/master/hikey/HiKey_User_Guide_Rev0.2.pdf)
   - [[Getting Started | HiKeyGettingStarted]]
@@ -18,6 +22,3 @@
   - [[OpenEmbedded/Yocto|Dragonboard-410c-OpenEmbedded-and-Yocto]]
   - [[LAVA|D410CLAVA]]
   - [Schematics](http://linaro.co/db410c-schematics)
-- [[Reference Software | ReferenceSoftware]]
-  - [[Bootloader (Hikey) | Reference-Bootloader-Hikey]]
-  - [[Enterprise | ReferenceSoftwareEE]]
