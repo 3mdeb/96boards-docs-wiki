@@ -108,11 +108,11 @@ Do not perform the database creation steps.  They will be done during meta packa
 
 If you encounter dependency issues with package installation, you will need to manually install some dependency packages from testing first:
 
-    $ sudo apt-get -t testing install python-cryptography
+    $ sudo apt-get install python-cryptography/testing
 
 Do not Then, install the meta package:
 
-    $ sudo apt-get -t testing install openstack-cloud-identity
+    $ sudo apt-get install openstack-cloud-identity
 
 Answer the questions asked by debconf:
 
