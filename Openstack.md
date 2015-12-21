@@ -122,7 +122,7 @@ If you encounter dependency issues with package installation, you will need to m
 
     $ sudo apt-get install python-cryptography/testing
 
-Do not Then, install the meta package:
+Then, install the meta package:
 
     $ sudo apt-get install openstack-cloud-identity
 
