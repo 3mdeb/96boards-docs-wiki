@@ -116,7 +116,7 @@ Follow the Openstack guide with the exception of the following changes documente
 
 #### Prerequisites
 
-Do not perform the database creation steps.  They will be done during meta package installation later.
+Omit this section of the guide.  These operations will be done during meta package installation later.
 
 #### Install and configure components
 
@@ -157,3 +157,38 @@ Omit this section of the guide.
 
 Omit this section of the guide.
 
+## Add the Image service (Glance)
+
+Follow the Openstack guide with the exception of the following changes documented here.
+
+### Install and configure
+
+#### Prerequisites
+
+Omit this section of the guide.  These operations will be done during package installation later.
+
+#### Install and configure components
+
+    $ sudo apt-get install glance python-glanceclient
+
+Answer the questions asked by debconf:
+
+**TODO: Verify debconf questions**
+
+* Set up a database for Glance: **Yes**
+* Configure database for glance-common with dbconfig-common? **Yes**
+* Database type to be used by glance-common: **mysql**
+* Password of the database's administrative user: **\<enter a password>**
+* MySQL application password for glance-common: **\<enter a password>**
+* IP address of your RabbitMQ host: **\<use default, or localhost, or controller>**
+* Username for connection to the RabbitMQ server: **guest**
+* Password for connection to the RabbitMQ server: **\<enter a password>*
+* Register Glance in the Keystone endpoint catalog? **Yes**
+* Keystone authentication token: **\<enter a token value>**
+* Pipeline flavor: **keystone**
+* Authentication server hostname: **\<use default, or localhost, or controller>**
+* Authentication server password: **\<enter a password>*
+
+#### Finalize installation
+
+Omit this section of the guide.
