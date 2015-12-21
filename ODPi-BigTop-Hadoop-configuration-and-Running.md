@@ -2,27 +2,27 @@ This post concentrates on Running Hadoop after [installing](https://github.com/9
 
 Add hduser (dedicated user for running Hadoop) to hadoop usergroup:
 
-    $ sudo adduser --ingroup hadoop hduser
+    sudo adduser --ingroup hadoop hduser
 
 Switch to hduser:
 
-    $ su - hduser
+    su - hduser
 
 Generate ssh key for hduser:
 
-    $ ssh-keygen -t rsa -P ""
+    ssh-keygen -t rsa -P ""
 
 Enable ssh access to local machine:
 
-    $ cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
+    cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
 
 Test ssh setup, as hduser:
 
-    $ ssh localhost
+    ssh localhost
 
 Disabling IPv6:
 
-    $ sudo nano /etc/sysctl.conf
+    sudo nano /etc/sysctl.conf
 
 Add the below lines and save:
 
@@ -32,7 +32,7 @@ Add the below lines and save:
 
 Prefer IPv4 on Hadoop:
 
-    $ sudo nano /etc/hadoop/conf/hadoop-env.sh
+    sudo nano /etc/hadoop/conf/hadoop-env.sh
 
 Uncomment line:
 
@@ -42,14 +42,14 @@ Save and restart the system.
 
 Back to the system, configure the app environment:
 
-    $ sudo mkdir -p /app/hadoop/tmp
-    $ sudo chown hduser:hadoop /app/hadoop/tmp
-    $ sudo chmod 750 /app/hadoop/tmp
+    sudo mkdir -p /app/hadoop/tmp
+    sudo chown hduser:hadoop /app/hadoop/tmp
+    sudo chmod 750 /app/hadoop/tmp
 
 Configure Environment Variables:
 
-    $ su - hduser
-    $ nano ~/.bashrc
+    su - hduser
+    nano ~/.bashrc
 
 Add the following and save:
 
@@ -74,8 +74,8 @@ Execute the terminal environment again (`bash`), or simply logout and change to 
 
 Edit core-site.xml:
 
-    $ cd /etc/hadoop/conf
-    $ nano core-site.xml
+    cd /etc/hadoop/conf
+    nano core-site.xml
 
 And add the following:
 
@@ -97,7 +97,7 @@ And add the following:
 
 Edit mapred-site.xml:
 
-    $ nano mapred-site.xml
+    nano mapred-site.xml
 
 And add the following lines: 
 
@@ -112,7 +112,7 @@ And add the following lines:
 
 Edit hdfs-site.xml:
 
-    $ nano hdfs-site.xml
+    nano hdfs-site.xml
 
 And add the following lines:
 
@@ -127,12 +127,12 @@ And add the following lines:
 
 Format Namenode. This step is needed for the first time. Doing it every time will result in loss of content on HDFS.
 
-    $ hdfs namenode -format
+    hdfs namenode -format
 
 Start all hadoop services:
 
-    $ start-all.sh
+    start-all.sh
 
 Check if hadoop is running. jps command should list namenode, datanode, yarn resource manager.
 
-    $ jps
+    jps
