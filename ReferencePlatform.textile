@@ -6,6 +6,10 @@ Please check this "video":http://connect.linaro.org/resource/sfo15/sfo15-104-the
 
 h3. Resources:
 
+h4. Latest News
+* Hikey and Dragonboard 401c builds with 4.3 kernel
+* Overdrive and D02 support with 4.4-rc4 kernel
+
 h4. Releases
 * "2015.12":https://github.com/96boards/documentation/wiki/RP-Release-2015.12 (Release 1)
 * "2015.10":https://github.com/96boards/documentation/wiki/RP-Release-2015.10 (Alpha)
@@ -13,14 +17,6 @@ h4. Releases
 h4. General:
 
 * "Reference Software Platorm - CI Jobs and Builds":https://github.com/96boards/documentation/wiki/Reference-Software-CI
-
-h4. Hikey:
-
-* "Reference Bootloader":https://github.com/96boards/documentation/wiki/Reference-Bootloader-Hikey
-
-h4. Dragonboard 410c:
-
-* "Rescue Image Guide":https://github.com/96boards/documentation/wiki/Dragonboard-410c-Installation-Guide-for-Linux-and-Android#create--install-a-rescue-image
 
 h3. Feedback and Support
 
