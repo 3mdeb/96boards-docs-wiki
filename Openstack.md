@@ -184,12 +184,14 @@ Answer the questions asked by debconf:
 * MySQL application password for glance-common: **\<enter a password>**
 * IP address of your RabbitMQ host: **\<use default, or localhost, or controller>**
 * Username for connection to the RabbitMQ server: **guest**
-* Password for connection to the RabbitMQ server: **\<enter a password>*
+* Password for connection to the RabbitMQ server: **\<blank>**
+* Auth server hostname: **\<use default, or localhost, or controller>**
+* Auth server password: **\<enter a password>**
 * Register Glance in the Keystone endpoint catalog? **Yes**
 * Keystone authentication token: **\<enter a token value>**
 * Pipeline flavor: **keystone**
 * Authentication server hostname: **\<use default, or localhost, or controller>**
-* Authentication server password: **\<enter a password>*
+* Authentication server password: **\<enter a password>**
 
 #### Finalize installation
 
@@ -217,19 +219,23 @@ Answer the questions asked by debconf:
 
 **TODO: Verify debconf questions**
 
-* Set up a database for Glance: **Yes**
-* Configure database for glance-common with dbconfig-common? **Yes**
-* Database type to be used by glance-common: **mysql**
+* Set up a database for Nova: **Yes**
+* Configure database for nova-common with dbconfig-common? **Yes**
+* Database type to be used by nova-common: **mysql**
 * Password of the database's administrative user: **\<enter a password>**
-* MySQL application password for glance-common: **\<enter a password>**
+* MySQL application password for nova-common: **\<enter a password>**
 * IP address of your RabbitMQ host: **\<use default, or localhost, or controller>**
 * Username for connection to the RabbitMQ server: **guest**
-* Password for connection to the RabbitMQ server: **\<enter a password>*
-* Register Glance in the Keystone endpoint catalog? **Yes**
+* Password for connection to the RabbitMQ server: **\<blank>**
+* Auth server hostname: **\<use default, or localhost, or controller>**
+* Auth server password: **\<enter a password>**
+* Neutron server URL: **http://\<use default, or localhost, or controller>:9696**
+* Neutron administrator password: **\<enter a password>**
+* Metadata proxy shared secret: **\<enter a shared secret string>**
+* API to activate: **choose osapi_compute and metadata**
+* Value for my_ip: **<default>**
+* Register Nova in the Keystone endpoint catalog? **Yes**
 * Keystone authentication token: **\<enter a token value>**
-* Pipeline flavor: **keystone**
-* Authentication server hostname: **\<use default, or localhost, or controller>**
-* Authentication server password: **\<enter a password>*
 
 #### Finalize installation
 
