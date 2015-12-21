@@ -8,17 +8,21 @@ Each section below will correspond to a section in the guide.  Guide sections th
 
 An image must be configured specially in glance to be able to boot correctly on aarch64.  
 To attach the devices to the virtio bus (which does not allow hotplugging a volume, but will work if the image does not have SCSI support), the following properties must be set:
+
 `
 --property hw_machine_type=virt
 --property os_command_line='root=/dev/vda rw rootwait console=ttyAMA0'
 --property hw_cdrom_bus=virtio
 `
+
 To attach the devices to the SCSI bus (which does allow hotplugging a volume, but might not be supported by the guest image), the following properties must be set:
+
 ` 
 --property hw_scsi_model='virtio-scsi'
 --property hw_disk_bus='scsi'
 --property os_command_line='root=/dev/sda rw rootwait console=ttyAMA0'
 `
+
 You can set these properties when you are uploading the image into glance, or modify the image if you have already uploaded it.
 
 
