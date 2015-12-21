@@ -43,6 +43,12 @@ If missing, add the following to /etc/apt/sources.list.d directory:
 
 `$ sudo echo "deb http://repo.linaro.org/ubuntu/linaro-overlay jessie-backports main" > /etc/apt/sources.list.d/jessie-backports.list`
 
+Create `/etc/apt/preferences.d/jessie-backports`:
+
+    Package: *
+    Pin: release a=jessie-backports
+    Pin-Priority: 700
+
 Then, make sure to run apt-get update:
 
 `apt-get update`
