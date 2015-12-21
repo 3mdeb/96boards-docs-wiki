@@ -98,5 +98,7 @@ The instructions in this section are not required, as Telemetry is not installed
 
 ## Add the Identity service
 
-Follow the Openstack guide.
+In the Install and configure components section, if you encounter dependency issues with package installation, you will need to manually install some dependency packages from testing first:
+
+    $ sudo apt-get -t testing install python-cryptography
 
