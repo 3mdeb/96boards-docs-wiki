@@ -47,6 +47,8 @@ If missing, add the following to /etc/apt/sources.list.d directory:
 
     $ sudo echo "deb http://repo.linaro.org/ubuntu/linaro-overlay testing main" > /etc/apt/sources.list.d/testing.list`
 
+## Modify repository priorities
+
 Create `/etc/apt/preferences.d/jessie-backports`:
 
     Package: *
