@@ -42,7 +42,7 @@ Follow the instructions available as part of the "UEFI EDK2 Guide":https://githu
 
 h3. Network Installers
 
-In order to install a distribution from network, PXE (DCHP/TFTP) booting is required. Since we require UEFI for for the Enterprise Edition, the setup is usually easier since all you need is to load GRUB 2 (and its configuration). Check "this link":https://github.com/96boards/documentation/wiki/DHCP-TFTP-server-for-UEFI-distro-network-installers for instructions on how to quickly setup your own PXE server (using *dnsmasq*).
+In order to install a distribution from network, PXE (DCHP/TFTP) booting is required. Since we require UEFI for the Enterprise Edition, the setup is usually easier since all you need is to load GRUB 2 (and its configuration). Check "this link":https://github.com/96boards/documentation/wiki/DHCP-TFTP-server-for-UEFI-distro-network-installers for instructions on how to quickly setup your own PXE server (using *dnsmasq*).
 
 Install instructions for the tested/supported distributions:
 * "Debian 8.x 'Jessie'":https://github.com/96boards/documentation/wiki/Installing-Debian-Jessie
