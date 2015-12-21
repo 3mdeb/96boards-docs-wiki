@@ -16,7 +16,7 @@ ODPi deb and rpm packages can be found on Linaro repositories:
 
 ### On Debian:
 
-Add to repo source list (not required if you are using the installer from the Reference Platform):
+Add to repo source list (**not required if you are using the installer from the Reference Platform**):
 
     echo "deb http://repo.linaro.org/ubuntu/linaro-overlay jessie main" > /etc/apt/sources.list.d/linaro-overlay-repo.list
     sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E13D88F7E3C1D56C
