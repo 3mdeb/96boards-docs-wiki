@@ -47,9 +47,15 @@ In order to install a distribution from network, PXE (DCHP/TFTP) booting is requ
 Install instructions for the tested/supported distributions:
 * "Debian 8.x 'Jessie'":https://github.com/96boards/documentation/wiki/Installing-Debian-Jessie
 * "CentOS 7":https://github.com/96boards/documentation/wiki/Installing-CentOS-7
+
+h4. Other distributions
+
+Only Debian and CentOS are officially released and validated as part of the reference software platform project, but other distributions can be easily supported as well (just need kernel and installer changes).
+
+Extra resources for other distributions:
 * "Fedora 23":https://github.com/96boards/documentation/wiki/Installing-Fedora-23
 
-h3. Components
+h3. Enterprise Software Components
 
 h4. OpenStack
 
