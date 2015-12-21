@@ -98,9 +98,21 @@ The instructions in this section are not required, as Telemetry is not installed
 
 ## Add the Identity service (Keystone)
 
-In the Install and configure components section, if you encounter dependency issues with package installation, you will need to manually install some dependency packages from testing first:
+### Install and configure
+
+#### Prerequisites
+
+Do not perform the database creation steps.  They will be done during meta package installation later.
+
+#### Install and configure components
+
+If you encounter dependency issues with package installation, you will need to manually install some dependency packages from testing first:
 
     $ sudo apt-get -t testing install python-cryptography
+
+Do not Then, install the meta package:
+
+    $ sudo apt-get -t testing install openstack-cloud-identity
 
 Answer the questions asked by debconf:
 
@@ -115,32 +127,6 @@ Answer the questions asked by debconf:
 * Register Keystone endpoint? **Yes**
 * Keystone endpoint IP address: **\<use default, or localhost, or controller>**
 
-Use the following for /etc/keystone/keystone.conf:
+#### Finalize the installation
 
-    [DEFAULT]
-    admin_token = ADMIN
-    verbose = true
-
-    [database]
-    connection = mysql+pymysql://keystone:KEYSTONE_DBPASS@controller/keystone
-
-    [memcache]
-    servers = localhost:11211
-
-    [revoke]
-    driver = sql
-
-    [token]
-    provider = uuid
-    driver = memcache
-
-Then populate the service database:
-
-    $ sudo su -s /bin/sh -c "keystone-manage db_sync" keystone
-
-## Configure the Apache HTTP server
-
-The package install already created the wsgi-keystone.conf, but you will need to link it in sites-enabled:
-
-    $ sudo ln -s /etc/apache2/sites-available/wsgi-keystone.conf /etc/apache2/sites-enabled
-
+Nothing to do.
