@@ -102,7 +102,8 @@ Answer the questions asked by debconf:
 
 Install the openstack client:
 
-    $ apt-get install python-openstackclient
+    $ apt-get install python-openstackclient python-pymysql
+
 ### NoSQL Database
 
 The instructions in this section are not required, as Telemetry is not installed.
