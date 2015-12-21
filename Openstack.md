@@ -92,6 +92,17 @@ Run sysctl to apply the changes:
 
 Do not enable the `cloud-archive:liberty` repository.
 
+Install some dependencies:
+
+    $ sudo apt-get install openstack-cloud-services
+
+Answer the questions asked by debconf:
+
+* New password for the MySQL "root" user: \<enter a password -- possibly "root">
+
+Install the openstack client:
+
+    $ apt-get install python-openstackclient
 ### NoSQL Database
 
 The instructions in this section are not required, as Telemetry is not installed.
