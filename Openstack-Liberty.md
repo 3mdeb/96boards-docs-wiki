@@ -287,3 +287,37 @@ Answer the questions asked by debconf:
 #### Finalize installation
 
 Omit this section of the guide.
+
+
+
+## Launch an instance
+
+### Create virtual networks
+
+Follow section “Public provider network”
+
+### Public provider network
+
+Create the public network
+
+Step (3) Match these values to your existing network.
+
+Return to “Launch an instance”
+
+### Launch an instance 
+
+Follow section “Launch an instance on the public network”
+
+### Launch an instance on the public network
+
+#### Access the instance using the virtual console
+
+Skip this section because VNC is disabled.
+
+#### Access the instance remotely
+
+Ensure that the instance has booted before attempting to access it over the network. This may take some time since the image is run using qemu without kvm.
+
+To check progress use nova console-log to look at the output from the instance. The instance ID can be found using nova list.
+
+    nova console-log --length=10 INSTANCE_ID
