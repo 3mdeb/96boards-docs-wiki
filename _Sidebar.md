@@ -2,7 +2,7 @@
   - [[Enterprise Edition | ReferencePlatformEE]]
   - [[Consumer Edition | ReferencePlatformCE]]
     - [[Bootloader (Hikey) | Reference-Bootloader-Hikey]]
-  - [[Reference Platform Kernel Policy | ReferencePlatform-KernelPolicy]]
+  - [[Kernel Policy | ReferencePlatform-KernelPolicy]]
 - [[HiKey | HiKey]]
   - [Hardware User Guide](https://github.com/96boards/documentation/blob/master/hikey/HiKey_User_Guide_Rev0.2.pdf)
   - [[Getting Started | HiKeyGettingStarted]]
