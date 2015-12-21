@@ -188,7 +188,7 @@ Answer the questions asked by debconf:
 * Auth server hostname: **\<use default, or localhost, or controller>**
 * Auth server password: **\<enter a password>**
 * Register Glance in the Keystone endpoint catalog? **Yes**
-* Keystone authentication token: **\<enter a token value>**
+* Keystone authentication token: **\<enter the keystone token>**
 * Pipeline flavor: **keystone**
 * Authentication server hostname: **\<use default, or localhost, or controller>**
 * Authentication server password: **\<enter a password>**
@@ -235,7 +235,7 @@ Answer the questions asked by debconf:
 * API to activate: **choose osapi_compute and metadata**
 * Value for my_ip: **<default>**
 * Register Nova in the Keystone endpoint catalog? **Yes**
-* Keystone authentication token: **\<enter a token value>**
+* Keystone authentication token: **\<enter the keystone token>**
 
 #### Finalize installation
 
@@ -280,7 +280,7 @@ Answer the questions asked by debconf:
   * Name of the region to be used by the metadata server: **\<default>**
   * Metadata proxy shared secret: **\<enter the shared secret string entered for Nova>**
   * Register Neutron in the Keystone endpoint catalog? **Yes**
-  * Keystone authentication token: **\<enter a token value>**
+  * Keystone authentication token: **\<enter the keystone token>**
 
 #### Finalize installation
 
