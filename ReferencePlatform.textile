@@ -18,31 +18,8 @@ h4. Dragonboard 410c:
 
 * "Rescue Image Guide":https://github.com/96boards/documentation/wiki/Dragonboard-410c-Installation-Guide-for-Linux-and-Android#create--install-a-rescue-image
 
-h4. Reference Platform Builds - 15.12 (WIP)
-
-h5. HiKey
-
-* "CE Debian RPB - 15.12":https://builds.96boards.org/snapshots/reference-platform/debian/latest/hikey/
-** "Install instructions":https://github.com/96boards/documentation/wiki/CE-Debian-RPB-HiKey-15.12-Install
-** "Build from source":https://github.com/96boards/documentation/wiki/CE-Debian-RPB-HiKey-15.12-Build
-** "Known issues":https://github.com/96boards/documentation/wiki/RPB-15.12-Known-Issues#debian
-** "Test Report":https://builds.96boards.org/releases/reference-platform/debian/hikey/15.12/CE-Debian-RPB-15.12-HiKey-TestReport.pdf
-
-* "CE AOSP RPB - 15.12":https://builds.96boards.org/snapshots/reference-platform/aosp/hikey/latest/
-** "Install instructions":https://github.com/96boards/documentation/wiki/CE-AOSP-RPB-HiKey-15.12-Install
-** "Build from source":https://github.com/96boards/documentation/wiki/CE-AOSP-RPB-HiKey-15.12-Build
-** "Known issues":https://github.com/96boards/documentation/wiki/RPB-15.12-Known-Issues#aosp
-** "Test Report":https://builds.96boards.org/releases/reference-platform/aosp/hikey/15.12/CE-AOSP-RPB-15.12-HiKey-TestReport.pdf
-
-h5. Dragonboard 410c
-
-* "CE Debian RPB - 15.10":https://builds.96boards.org/snapshots/reference-platform/debian/latest/dragonboard410c
-** "Install instructions":https://github.com/96boards/documentation/wiki/CE-Debian-RPB-Dragonboard410c-15.12-Install
-** "Build from source":https://github.com/96boards/documentation/wiki/CE-Debian-RPB-Dragonboard410c-15.12-Build
-** "Known issues":https://github.com/96boards/documentation/wiki/RPB-15.12-Known-Issues#debian
-** "Test Report":https://builds.96boards.org/releases/reference-platform/debian/dragonboard410c/15.10/CE-Debian-RPB-15.12-Dragonboard410c-TestReport.pdf
-
-h4. Older Releases
+h4. Releases
+* "2015.12":https://github.com/96boards/documentation/wiki/RP-Release-2015.12 (Release 1)
 * "2015.10":https://github.com/96boards/documentation/wiki/RP-Release-2015.10 (Alpha)
 
 
