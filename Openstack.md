@@ -110,6 +110,8 @@ The instructions in this section are not required, as Telemetry is not installed
 
 ## Add the Identity service (Keystone)
 
+Follow the Openstack guide with the exception of the following changes documented here.
+
 ### Install and configure
 
 #### Prerequisites
@@ -138,6 +140,10 @@ Answer the questions asked by debconf:
 * Password of the administrative user: **\<enter a password>**
 * Register Keystone endpoint? **Yes**
 * Keystone endpoint IP address: **\<use default, or localhost, or controller>**
+
+#### Configure the Apache HTTP server
+
+Omit this section of the guide.
 
 #### Finalize the installation
 
