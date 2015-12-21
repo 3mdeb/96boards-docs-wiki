@@ -8,7 +8,7 @@ Each section below will correspond to a section in the guide.  Guide sections th
 
 ## Verify/enable additional repositories
 
-Verify that the linaro-overly and jessie backports repositories are enabled.
+Verify that the `linaro-overly` and `jessie-backports` repositories are enabled.
 
 If missing, add the following to /etc/apt/sources.list.d directory:
 
