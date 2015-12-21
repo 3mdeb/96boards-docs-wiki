@@ -127,11 +127,16 @@ And add the following lines:
 
 Format Namenode. This step is needed for the first time. Doing it every time will result in loss of content on HDFS.
 
+    sudo /etc/init.d/hadoop-hdfs-namenode init
     hdfs namenode -format
 
-Start all hadoop services:
+Create a sub-directory structure in HDFS:
 
-    start-all.sh
+    sudo /usr/lib/hadoop/libexec/init-hdfs.sh
+
+Start the YARN daemons:
+
+    sudo service hadoop-yarn-resourcemanager startsudo service hadoop-yarn-nodemanager start
 
 Check if hadoop is running. jps command should list namenode, datanode, yarn resource manager.
 
