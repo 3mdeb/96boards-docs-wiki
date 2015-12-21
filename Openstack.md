@@ -10,14 +10,17 @@ Each page below will correspond to a section in the guide.  Guide sections that 
 
 Verify that the linaro-overly and jessie backports repositories are enabled.
 
-If missing, add the following to /etc/apt/sources.list.d directory
+If missing, add the following to /etc/apt/sources.list.d directory:
+
 `$ sudo echo "deb http://repo.linaro.org/ubuntu/linaro-overlay jessie main" > /etc/apt/sources.list.d/linaro-overlay-repo.list`
 `$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E13D88F7E3C1D56C`
 
-If missing, add the following to /etc/apt/sources.list.d directory
+If missing, add the following to /etc/apt/sources.list.d directory:
+
 `$ sudo echo "deb http://repo.linaro.org/ubuntu/linaro-overlay jessie-backports main" > /etc/apt/sources.list.d/jessie-backports.list`
 
 Then, make sure to run apt-get update:
+
 `apt-get update`
 
 
