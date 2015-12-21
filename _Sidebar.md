@@ -1,6 +1,6 @@
 - [[Reference Platform | ReferencePlatform]]
-  - [[Enterprise Edition | ReferencePlatformEE]]
-  - [[Consumer Edition | ReferencePlatformCE]]
+  - [[Enterprise Edition | ReferenceSoftwareEE]]
+  - [[Consumer Edition | ReferenceSoftwareCE]]
     - [[Bootloader (Hikey) | Reference-Bootloader-Hikey]]
   - [[Kernel Policy | RP-Kernel-Policy]]
 - [[HiKey | HiKey]]
