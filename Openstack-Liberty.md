@@ -212,8 +212,9 @@ Omit this section of the guide.  These operations will be done during package in
 #### Install and configure components
 
     $ sudo apt-get install websockify/testing
-    $ sudo apt-get install nova-api nova-cert nova-conductor nova-consoleauth \
-      nova-novncproxy nova-scheduler python-novaclient nova-compute
+    $ sudo apt-get install nova-api nova-cert nova-conductor \
+      nova-consoleauth nova-novncproxy nova-scheduler \
+      python-novaclient nova-compute
 
 Answer the questions asked by debconf:
 
@@ -255,8 +256,9 @@ Omit this section of the guide.  These operations will be done during package in
 
 #### Install and configure components
 
-    $ sudo apt-get install neutron-server neutron-plugin-ml2 neutron-plugin-linuxbridge-agent \
-      neutron-dhcp-agent neutron-metadata-agent python-neutronclient
+    $ sudo apt-get install neutron-server neutron-plugin-ml2 \
+      neutron-plugin-linuxbridge-agent neutron-dhcp-agent \
+      neutron-metadata-agent python-neutronclient
 
 Answer the questions asked by debconf:
 
