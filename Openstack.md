@@ -102,3 +102,34 @@ In the Install and configure components section, if you encounter dependency iss
 
     $ sudo apt-get -t testing install python-cryptography
 
+When prompted to configure keystone, answer **No** to all of the questions.
+
+Use the following for /etc/keystone/keystone.conf:
+
+    [DEFAULT]
+    admin_token = ADMIN
+    verbose = true
+
+    [database]
+    connection = mysql+pymysql://keystone:KEYSTONE_DBPASS@controller/keystone
+
+    [memcache]
+    servers = localhost:11211
+
+    [revoke]
+    driver = sql
+
+    [token]
+    provider = uuid
+    driver = memcache
+
+Then populate the service database:
+
+    $ sudo su -s /bin/sh -c "keystone-manage db_sync" keystone
+
+## Configure the Apache HTTP server
+
+The package install already created the wsgi-keystone.conf, but you will need to link it in sites-enabled:
+
+    $ sudo ln -s /etc/apache2/sites-available/wsgi-keystone.conf /etc/apache2/sites-enabled
+
