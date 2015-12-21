@@ -28,7 +28,7 @@ To attach the devices to the SCSI bus (which does allow hotplugging a volume, bu
 You can set these properties when you are uploading the image into glance, or modify the image if you have already uploaded it.
 
 
-# Installation
+# Pre-Installation
 
 ## Verify/enable additional repositories
 
@@ -59,7 +59,7 @@ Update /etc/hosts to add “controller” as an alias for localhost.
 
     127.0.0.1       localhost controller
 
-### Disable IPV6
+## Disable IPV6
 
 Add the following to /etc/sysctl.conf:
 
@@ -71,6 +71,10 @@ Add the following to /etc/sysctl.conf:
 Run sysctl to apply the changes:
 
     $ sudo sysctl -p
+
+# Following the Openstack guide
+
+## Environment
 
 ### Openstack Packages
 
