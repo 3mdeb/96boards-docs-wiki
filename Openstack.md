@@ -141,5 +141,13 @@ Answer the questions asked by debconf:
 
 #### Finalize the installation
 
-Nothing to do.
+Omit this section of the guide.
+
+### Create the service entity and API endpoints
+
+Omit this section of the guide.
+
+### Create projects, users, and roles
+
+Omit this section of the guide.
 
