@@ -84,7 +84,7 @@ Run sysctl to apply the changes:
 
     $ sudo sysctl -p
 
-# Following the Openstack guide
+# Following the Openstack guide...
 
 ## Environment
 
@@ -96,7 +96,7 @@ Do not enable the `cloud-archive:liberty` repository.
 
 The instructions in this section are not required, as Telemetry is not installed.
 
-## Add the Identity service
+## Add the Identity service (Keystone)
 
 In the Install and configure components section, if you encounter dependency issues with package installation, you will need to manually install some dependency packages from testing first:
 
