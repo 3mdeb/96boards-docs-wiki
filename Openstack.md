@@ -1,10 +1,10 @@
-# Installing Openstack Liberty
-
-## Introduction
+# Introduction
 
 In general, the instructions in the Liberty install guide should be followed: http://docs.openstack.org/liberty/install-guide-ubuntu/overview.html.  This guide will describe changes to the documented procedures that should be kept in mind while going through the guide.
 
 Each section below will correspond to a section in the guide.  Guide sections that do not have a corresponding section below may be followed as-is.
+
+# Installation
 
 ## Verify/enable additional repositories
 
