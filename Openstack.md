@@ -4,7 +4,9 @@ In general, the instructions in the Liberty install guide should be followed: ht
 
 Each section below will correspond to a section in the guide.  Guide sections that do not have a corresponding section below may be followed as-is.
 
-# Configuring images for aarch64
+# Release Notes
+
+## Configuring images for aarch64
 
 An image must be configured specially in glance to be able to boot correctly on aarch64.  
 To attach the devices to the virtio bus (which does not allow hotplugging a volume, but will work if the image does not have SCSI support), the following properties must be set:
@@ -55,7 +57,7 @@ Update /etc/hosts to add “controller” as an alias for localhost.
 
 ## Openstack Packages
 
-Do not follow any add-apt-repository steps (i.e. cloud-archive:liberty), or install any of the Openstack packages provided by the distribution.
+Do not enable the `cloud-archive:liberty` repository.
 
 ## NoSQL Database
 
