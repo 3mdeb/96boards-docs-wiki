@@ -1,6 +1,6 @@
-- [[Reference Software | ReferenceSoftware]]
-  - [[Enterprise Edition | ReferenceSoftwareEE]]
-  - [[Consumer Edition | ReferenceSoftwareCE]]
+- [[Reference Platform | ReferencePlatform]]
+  - [[Enterprise Edition | ReferencePlatformEE]]
+  - [[Consumer Edition | ReferencePlatformCE]]
     - [[Bootloader (Hikey) | Reference-Bootloader-Hikey]]
 - [[HiKey | HiKey]]
   - [Hardware User Guide](https://github.com/96boards/documentation/blob/master/hikey/HiKey_User_Guide_Rev0.2.pdf)
