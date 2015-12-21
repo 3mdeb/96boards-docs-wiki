@@ -45,4 +45,19 @@ Then, make sure to run apt-get update:
 
 `apt-get update`
 
+## Environment
+
+Update /etc/hosts to add “controller” as an alias for localhost.
+
+`
+127.0.0.1       localhost controller
+`
+
+## Openstack Packages
+
+Do not follow any add-apt-repository steps (i.e. cloud-archive:liberty), or install any of the Openstack packages provided by the distribution.
+
+## NoSQL Database
+
+The instructions in this section are not required, as Telemetry is not installed.
 
