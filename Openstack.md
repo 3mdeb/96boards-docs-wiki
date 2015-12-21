@@ -36,12 +36,12 @@ Verify that the `linaro-overly` and `jessie-backports` repositories are enabled.
 
 If missing, add the following to /etc/apt/sources.list.d directory:
 
-`$ sudo echo "deb http://repo.linaro.org/ubuntu/linaro-overlay jessie main" > /etc/apt/sources.list.d/linaro-overlay-repo.list`
-`$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E13D88F7E3C1D56C`
+    $ sudo echo "deb http://repo.linaro.org/ubuntu/linaro-overlay jessie main" > /etc/apt/sources.list.d/linaro-overlay-repo.list`
+    $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E13D88F7E3C1D56C`
 
 If missing, add the following to /etc/apt/sources.list.d directory:
 
-`$ sudo echo "deb http://repo.linaro.org/ubuntu/linaro-overlay jessie-backports main" > /etc/apt/sources.list.d/jessie-backports.list`
+    $ sudo echo "deb http://repo.linaro.org/ubuntu/linaro-overlay jessie-backports main" > /etc/apt/sources.list.d/jessie-backports.list`
 
 Create `/etc/apt/preferences.d/jessie-backports`:
 
@@ -51,21 +51,34 @@ Create `/etc/apt/preferences.d/jessie-backports`:
 
 Then, make sure to run apt-get update:
 
-`apt-get update`
+    $ apt-get update
 
 ## Environment
 
 Update /etc/hosts to add “controller” as an alias for localhost.
 
-`
-127.0.0.1       localhost controller
-`
+    127.0.0.1       localhost controller
 
-## Openstack Packages
+### Disable IPV6
+
+Add the following to /etc/sysctl.conf:
+
+    net.ipv6.conf.all.disable_ipv6 = 1
+    net.ipv6.conf.default.disable_ipv6 = 1
+    net.ipv6.conf.lo.disable_ipv6 = 1
+    net.ipv6.conf.eth0.disable_ipv6 = 1
+
+Save and restart the system.
+
+### Openstack Packages
 
 Do not enable the `cloud-archive:liberty` repository.
 
-## NoSQL Database
+### NoSQL Database
 
 The instructions in this section are not required, as Telemetry is not installed.
+
+## Add the Identity service
+
+Follow the Openstack guide.
 
