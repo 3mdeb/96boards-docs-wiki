@@ -68,7 +68,9 @@ Add the following to /etc/sysctl.conf:
     net.ipv6.conf.lo.disable_ipv6 = 1
     net.ipv6.conf.eth0.disable_ipv6 = 1
 
-Save and restart the system.
+Run sysctl to apply the changes:
+
+    $ sudo sysctl -p
 
 ### Openstack Packages
 
