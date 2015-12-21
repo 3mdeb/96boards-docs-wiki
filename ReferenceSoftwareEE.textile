@@ -1,4 +1,4 @@
-h2. Reference Software Platform Enterprise Edition
+h2. Reference Platform (Enterprise Edition)
 
 h3. Boot Firmware
 
