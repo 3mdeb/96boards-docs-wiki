@@ -1,5 +1,8 @@
 - [[Reference Platform | ReferencePlatform]]
   - [[Enterprise Edition | ReferenceSoftwareEE]]
+    - [[Installing ODPi BigTop Hadoop | ODPi-Hadoop-Installation]]
+    - [[Running ODPi BigTop Hadoop | ODPi-BigTop-Hadoop-configuration-and-Running]]
+    - [[Openstack Liberty | Openstack-Liberty]]
   - [[Consumer Edition | ReferencePlatformCE]]
     - [[Bootloader (Hikey) | Reference-Bootloader-Hikey]]
   - [[Kernel Policy | RP-Kernel-Policy]]
