@@ -104,7 +104,8 @@ Or the following on a 8G compatible device:
 
 bc. sudo fastboot flash userdata userdata-8gb.img
 
-Once flashed, make sure recovery mode is not enabled (pin3-pin4 on J15), then just reboot the board and enjoy :-)
+
+Once flashed, make sure recovery mode is not enabled (pin3-pin4 on J15), that you don't have any sd card in place (since it first tries to boot from sd card, boot order can be changed with @sudo fastboot oem bootdevice [emmc|sd]@), then just reboot the board and enjoy :-)
 
 h3. Additional resources
 
