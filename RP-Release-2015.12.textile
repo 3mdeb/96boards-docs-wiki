@@ -8,22 +8,34 @@ h5. Highlights for this release:
 
 h6. Consumer Edition
 
-HiKey:
-CE AOSP RPB based on Android M, now based on a 4.1 kernel (with several contributions already available in AOSP upstream)
-CE Debian RPB, including a 4.3 kernel and support for the LeMaker version
-DragonBoard410c:
-CE Debian RPB, including a 4.3 kernel, with updated firmware and rootfs
-Initial support for CE AOSP RPB (covered by LMG), but not yet published as part of this release
+* CE Debian RPB for DragonBoard410 and HiKey (including support for the LeMaker version):
+** Debian 8.2 "Jessie"
+** 4.3 kernel (with additional patches)
+** OpenJDK 8 included by default
+** 96Boards artworks and default settings
+* CE AOSP RPB for HiKey:
+** AOSP Android Marshmallow 6.0
+** 4.1 based kernel
 
 h6. Enterprise Edition
 
-UEFI/EDK2 support for D02
-Linux Kernel (4.4-rc4) including support for D02 and Overdrive (with ACPI)
-Debian (Jessie) and CentOS network installer support, using the reference kernel and config by default
-Docker 1.9.1, MongoDB, OpenStack Liberty, ODPi BigTop (Hadoop, Spark, etc) and OpenJDK 8
-Documentation covering build from source, firmware flashing and Debian/CentOS network installer (including automation with preseed/kickstart)
+* Firmware:
+** UEFI/EDK2 support for D02, provided by OpenPlatformPkg
+* Linux:
+** 4.4-rc4 based, including support for D02 and Overdrive
+** ACPI support for D02 and Overdrive (mandatory for the enterprise edition)
+* Distributions:
+** Debian Jessie network installer (using latest kernel)
+** CentOS 7 network installer (using latest kernel)
+* Enterprise Components:
+** Docker 1.9.1
+** OpenStack Liberty
+** ODPi BigTop (Hadoop, Spark, etc)
+** OpenJDK 8
 
 The complete list of known issues for this release: "https://github.com/96boards/documentation/wiki/RPB-15.12-Known-Issues":https://github.com/96boards/documentation/wiki/RPB-15.12-Known-Issues
+
+h4. Board specific artifacts
 
 h5. HiKey
 
@@ -46,3 +58,7 @@ h5. Dragonboard 410c
 ** "Build from source":https://github.com/96boards/documentation/wiki/CE-Debian-RPB-Dragonboard410c-15.12-Build
 ** "Known issues":https://github.com/96boards/documentation/wiki/RPB-15.12-Known-Issues#debian
 ** "Test Report":https://builds.96boards.org/releases/reference-platform/debian/dragonboard410c/15.10/CE-Debian-RPB-15.12-Dragonboard410c-TestReport.pdf
+
+h5. Enterprise
+
+Documentation covering build from source, firmware flashing and Debian/CentOS network installer (including automation with preseed/kickstart)
