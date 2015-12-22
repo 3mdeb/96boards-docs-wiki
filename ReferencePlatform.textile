@@ -9,6 +9,7 @@ h3. Resources:
 h4. Latest News
 * Hikey and Dragonboard 401c builds with 4.3 kernel
 * ARM Juno r1, AMD Overdrive and HiSilicon D02 support with 4.4-rc4 kernel
+* "Kernel policy":https://github.com/96boards/documentation/wiki/RP-Kernel-Policy for both Enderprise and Consumer Editions now published
 
 h4. Enterprise and Consumer Edition Specific Documentation
 
