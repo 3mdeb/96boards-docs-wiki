@@ -6,6 +6,7 @@
   - [[Consumer Edition | ReferencePlatformCE]]
     - [[Bootloader (Hikey) | Reference-Bootloader-Hikey]]
   - [[Kernel Policy | RP-Kernel-Policy]]
+  - [[2015.12 Release | RP-Release-2015.12]]
 - [[HiKey | HiKey]]
   - [Hardware User Guide](https://github.com/96boards/documentation/blob/master/hikey/HiKey_User_Guide_Rev0.2.pdf)
   - [[Getting Started | HiKeyGettingStarted]]
