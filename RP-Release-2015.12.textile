@@ -17,7 +17,7 @@ h6. Consumer Edition
 ** 4.3 kernel (with additional patches)
 ** OpenJDK 8 included by default
 ** 96Boards artworks and default settings
-* CE AOSP RPB for HiKey:
+* CE AOSP RPB for HiKey (including support for the LeMaker version):
 ** AOSP Android Marshmallow 6.0
 ** 4.1 based kernel
 
