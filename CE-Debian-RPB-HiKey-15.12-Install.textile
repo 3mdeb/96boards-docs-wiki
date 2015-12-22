@@ -1,13 +1,6 @@
 
 h2. 96Boards - CE Debian Reference Platform Build 15.12 - HiKey
 
-Build description:
-* Build URL: "https://ci.linaro.org/jenkins/job/96boards-reference-platform-debian/BOARD=hikey,label=docker-utopic-amd64/35/":https://ci.linaro.org/jenkins/job/96boards-reference-platform-debian/BOARD=hikey,label=docker-utopic-amd64/35/
-* Kernel packages: "https://builds.96boards.org/snapshots/reference-platform/components/linux/hikey/17":https://builds.96boards.org/snapshots/reference-platform/components/linux/hikey/17
-* ALIP Rootfs: "http://snapshots.linaro.org/debian/images/alip-arm64/55":http://snapshots.linaro.org/debian/images/alip-arm64/55
-* Grub UEFI: "http://builds.96boards.org/snapshots/reference-platform/components/grub/5":http://builds.96boards.org/snapshots/reference-platform/components/grub/5
-* ARM TF / EDK2 UEFI: "http://builds.96boards.org/snapshots/reference-platform/components/uefi/34/release/hikey":http://builds.96boards.org/snapshots/reference-platform/components/uefi/34/release/hikey
-
 h2. Install Instructions
 
 This guide describes how to get started with the CE Debian Reference Platform Build, release 15.12, for HiKey.
