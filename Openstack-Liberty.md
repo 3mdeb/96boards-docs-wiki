@@ -202,8 +202,6 @@ Omit this section of the guide.  These operations will be done during package in
 
 Answer the questions asked by debconf:
 
-**TODO: Verify debconf questions**
-
 * Set up a database for Nova: **Yes**
 * Configure database for nova-common with dbconfig-common? **Yes**
 * Database type to be used by nova-common: **mysql**
