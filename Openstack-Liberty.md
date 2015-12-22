@@ -245,11 +245,10 @@ Answer the questions asked by debconf:
 
 Ensure that vnc and spice are disabled in `/etc/nova/nova.conf`.  Look for the following keys in `nova.conf` and set them to False:
 
-    [vnc]
-    enabled = False
+    vnc_enabled=false
 
     [spice]
-    enabled = False
+    enabled=false
 
 If you make changes to nova.conf, restart the nova services:
 
@@ -295,6 +294,9 @@ Answer the questions asked by debconf:
 * neutron-server
   * Register Neutron in the Keystone endpoint catalog? **Yes**
   * Keystone authentication token: **\<enter the keystone token>**
+
+#### Configure networking options
+Follow "Networking Option 1: Provider networks".
 
 #### Finalize installation
 
