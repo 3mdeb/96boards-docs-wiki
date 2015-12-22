@@ -213,7 +213,7 @@ Answer the questions asked by debconf:
 * Neutron server URL: **http://\<use default, or localhost, or controller>:9696**
 * Neutron administrator password: **\<enter a password>**
 * Metadata proxy shared secret: **\<enter a shared secret string>**
-* API to activate: **choose osapi_compute and metadata**
+* API to activate: choose **osapi_compute and metadata**
 * Value for my_ip: **\<default>**
 * Register Nova in the Keystone endpoint catalog? **Yes**
 * Keystone authentication token: **\<enter the keystone token>**
