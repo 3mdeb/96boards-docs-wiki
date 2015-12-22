@@ -39,6 +39,10 @@ h6. Consumer Edition
 
 The complete list of known issues for this release: "https://github.com/96boards/documentation/wiki/RPB-15.12-Known-Issues":https://github.com/96boards/documentation/wiki/RPB-15.12-Known-Issues
 
+h5. Enterprise
+
+Documentation covering build from source, firmware flashing and Debian/CentOS network installer (including automation with preseed/kickstart)
+
 h5. HiKey
 
 * "CE Debian RPB - 15.12":https://builds.96boards.org/releases/reference-platform/debian/hikey/15.12/
@@ -60,7 +64,3 @@ h5. Dragonboard 410c
 ** "Build from source":https://github.com/96boards/documentation/wiki/CE-Debian-RPB-Dragonboard410c-15.12-Build
 ** "Known issues":https://github.com/96boards/documentation/wiki/RPB-15.12-Known-Issues#debian
 ** "Test Report":https://builds.96boards.org/releases/reference-platform/debian/dragonboard410c/15.12/CE-Debian-RPB-15.12-Dragonboard410c-TestReport.pdf
-
-h5. Enterprise
-
-Documentation covering build from source, firmware flashing and Debian/CentOS network installer (including automation with preseed/kickstart)
