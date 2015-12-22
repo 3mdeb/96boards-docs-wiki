@@ -223,11 +223,11 @@ Answer the questions asked by debconf:
 
 Ensure that vnc and spice are disabled in `/etc/nova/nova.conf`.  Look for the following keys in `nova.conf` and set them to False:
 
-[vnc]
-enabled = False
+    [vnc]
+    enabled = False
 
-[spice]
-enabled = False
+    [spice]
+    enabled = False
 
 If you make changes to nova.conf, restart the nova services:
 
