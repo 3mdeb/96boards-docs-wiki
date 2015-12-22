@@ -157,6 +157,7 @@ Boot entries:
 By default, the predefined boot entry is 2. If jumper on pin5-6 of J15 is connect, the predefined boot entry is 1.
 
 To change boot order for the case jumper not on pin5-6:
+
 bc. sudo fastboot oem bootdevice [emmc|sd]
 
 h4. Control Auto Boot
