@@ -23,11 +23,11 @@ h4. HiKey
 * "Bug 145":https://bugs.96boards.org/show_bug.cgi?id=145 - Thermal sensor is not readable
 * "Bug 147":https://bugs.96boards.org/show_bug.cgi?id=147 - Highest resolution of 1080p monitor cannot be detected
 * "Bug 148":https://bugs.96boards.org/show_bug.cgi?id=148 - Bluetooth doesn't work
-* "Bug 150":https://bugs.96boards.org/show_bug.cgi?id=150 - Cannot login when the screen is locked
 * "Bug 151":https://bugs.96boards.org/show_bug.cgi?id=151 - glxgears: couldn't get an RGB, Double-buffered visual
 * "Bug 152":https://bugs.96boards.org/show_bug.cgi?id=152 - SD-Card doesn't work
 * "Bug 159":https://bugs.96boards.org/show_bug.cgi?id=159 - No sound cards found
 * "Bug 160":https://bugs.96boards.org/show_bug.cgi?id=160 - Behaviors of power on button not following hardware user guide
+* "Bug 211":https://bugs.96boards.org/show_bug.cgi?id=211 - Fails to enter fastboot mode from grub boot menu
 
 h4. DragonBoard 410c
 
