@@ -59,6 +59,8 @@ h3. Enterprise Software Components
 
 h4. OpenStack
 
+Checking "Openstack-Liberty":https://github.com/96boards/documentation/wiki/Openstack-Liberty for instructions on how to install and run OpenStack Liberty on Debian Jessie.
+
 h4. Hadoop
 
 h5. Installation
