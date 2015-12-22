@@ -11,7 +11,7 @@ h4. HiSilicon D02
 * "Bug 1965":https://bugs.linaro.org/show_bug.cgi?id=1965 - D02: kernel unable to find valid mac for the network interfaces
 * "Bug 1967":https://bugs.linaro.org/show_bug.cgi?id=1967 - D02: unhandled level 3 permission fault (11)
 * SATA: Due to bugs in the SATA controller, there is a risk of disk corruption when installing to a SATA disk. This is expected to be fixed in subsequent silicon revisions.
-* SAS: not yet supported in EDK2. For it to work on linux only, the "patch":https://git.linaro.org/uefi/OpenPlatformPkg.git/commit/96d58c4318584f066b1bb7f1c48b72e7e25cf709 needs to be reverted on UEFI/EDK2, but then an alternative boot method needs to be used (since UEFI/EDK2 is unable to load grub/kernel from SAS).
+* SAS: not yet supported in EDK2. For it to work on linux only, this "patch":https://git.linaro.org/uefi/OpenPlatformPkg.git/commit/96d58c4318584f066b1bb7f1c48b72e7e25cf709 needs to be reverted on UEFI/EDK2, but then an alternative boot method needs to be used (since UEFI/EDK2 is unable to load grub/kernel from SAS).
 
 h4. AMD Overdrive
 
