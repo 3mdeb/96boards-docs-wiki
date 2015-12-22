@@ -169,4 +169,20 @@ Alternatively, check if yarn managers are running:
     sudo /etc/init.d/hadoop-yarn-resourcemanger status
     sudo /etc/init.d/hadoop-yarn-nodemanager status
 
+You would see like below:
+
+    ● hadoop-yarn-nodemanager.service - LSB: Hadoop nodemanager
+        Loaded: loaded (/etc/init.d/hadoop-yarn-nodemanager)
+        Active: active (running) since Tue 2015-12-22 18:25:03 UTC; 1h 24min ago
+        CGroup: /system.slice/hadoop-yarn-nodemanager.service
+                └─10366 /usr/lib/jvm/java-1.7.0-openjdk-arm64/bin/java -Dproc_node...
+
+    Dec 22 18:24:57 debian su[10348]: Successful su for yarn by root
+    Dec 22 18:24:57 debian su[10348]: + ??? root:yarn
+    Dec 22 18:24:57 debian su[10348]: pam_unix(su:session): session opened for ...0)
+    Dec 22 18:24:57 debian hadoop-yarn-nodemanager[10305]: starting nodemanager, ...
+    Dec 22 18:24:58 debian su[10348]: pam_unix(su:session): session closed for ...rn
+    Dec 22 18:25:03 debian hadoop-yarn-nodemanager[10305]: Started Hadoop nodeman...
+
+
 
