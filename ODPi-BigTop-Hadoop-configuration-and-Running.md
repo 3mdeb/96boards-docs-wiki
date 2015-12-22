@@ -157,7 +157,7 @@ Start the YARN daemons:
 
 Check if hadoop is running. jps command should list namenode, datanode, yarn resource manager. or use ps aux 
 
-    jps
+    sudo jps
 or
 
     ps aux | grep java
