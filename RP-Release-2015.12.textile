@@ -35,8 +35,6 @@ h6. Enterprise Edition
 
 The complete list of known issues for this release: "https://github.com/96boards/documentation/wiki/RPB-15.12-Known-Issues":https://github.com/96boards/documentation/wiki/RPB-15.12-Known-Issues
 
-h4. Board specific artifacts
-
 h5. HiKey
 
 * "CE Debian RPB - 15.12":https://builds.96boards.org/snapshots/reference-platform/debian/latest/hikey/
