@@ -159,4 +159,5 @@ Check if hadoop is running. jps command should list namenode, datanode, yarn res
 
     jps
 or
+
     ps aux | grep java
