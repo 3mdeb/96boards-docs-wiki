@@ -92,7 +92,7 @@ Install some dependencies:
 
 Answer the questions asked by debconf:
 
-* New password for the MySQL "root" user: \<enter a password -- possibly "root">
+* New password for the MySQL **root** user: \<enter a password -- possibly "root">
 
 Install the openstack client:
 
