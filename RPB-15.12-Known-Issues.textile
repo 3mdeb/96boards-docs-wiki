@@ -15,10 +15,6 @@ h4. AMD Overdrive
 
 * UEFI/EDK2 is not yet supported
 
-h4. OpenStack
-
-h4. Hadoop
-
 h3. Debian
 
 h4. HiKey
