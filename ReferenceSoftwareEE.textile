@@ -59,14 +59,14 @@ h3. Enterprise Software Components
 
 h4. OpenStack
 
-Check "Openstack-Liberty":https://github.com/96boards/documentation/wiki/Openstack-Liberty for instructions on how to install and run OpenStack Liberty on Debian Jessie.
+Follow the "instructions":https://github.com/96boards/documentation/wiki/Openstack-Liberty on how to install and run OpenStack Liberty on Debian Jessie.
 
-h4. Hadoop
+h4. Hadoop (ODPi BigTop)
 
 h5. Installation
 
-Follow the steps as defined in "ODPi Hadoop Installation":https://github.com/96boards/documentation/wiki/ODPi-Hadoop-Installation
+Follow the "instructions":https://github.com/96boards/documentation/wiki/ODPi-Hadoop-Installation to install ODPi BigTop Hadoop
 
 h5. Setup and Running Hadoop
 
-Follow the steps as defined in "ODPi Hadoop Setup and Running":https://github.com/96boards/documentation/wiki/ODPi-BigTop-Hadoop-configuration-and-Running
+Follow the "instructions":https://github.com/96boards/documentation/wiki/ODPi-BigTop-Hadoop-configuration-and-Running to configure and install Hadoop
