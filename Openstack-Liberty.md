@@ -218,7 +218,7 @@ Omit this section of the guide.  These operations will be done during package in
 #### Install and configure components
 
     $ sudo apt-get install nova-api nova-cert nova-conductor \
-      nova-consoleauth nova-novncproxy nova-scheduler \
+      nova-consoleauth nova-scheduler \
       python-novaclient nova-compute
 
 Answer the questions asked by debconf:
