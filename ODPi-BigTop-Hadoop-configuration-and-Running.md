@@ -154,6 +154,8 @@ Create a sub-directory structure in HDFS:
 Start the YARN daemons:
 
     for i in hadoop-hdfs-namenode hadoop-hdfs-datanode ; do sudo service $i start ; done
+    sudo /etc/init.d/hadoop-yarn-resourcemanager start
+    sudo /etc/init.d/hadoop-yarn-nodemanager start
 
 Check if hadoop is running. jps command should list namenode, datanode, yarn resource manager. or use ps aux 
 
@@ -161,3 +163,10 @@ Check if hadoop is running. jps command should list namenode, datanode, yarn res
 or
 
     ps aux | grep java
+
+Alternatively, check if yarn managers are running:
+    
+    sudo /etc/init.d/hadoop-yarn-resourcemanger status
+    sudo /etc/init.d/hadoop-yarn-nodemanager status
+
+
