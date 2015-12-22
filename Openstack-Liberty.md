@@ -221,9 +221,18 @@ Answer the questions asked by debconf:
 
 #### Finalize installation
 
-TODO: Ensure that vnc and spice are disabled in /etc/nova/nova.conf.
+Ensure that vnc and spice are disabled in `/etc/nova/nova.conf`.  Look for the following keys in `nova.conf` and set them to False:
 
-Omit this section of the guide.
+[vnc]
+enabled = False
+
+[spice]
+enabled = False
+
+If you make changes to nova.conf, restart the nova services:
+
+    $ sudo service nova-compute restart
+
 
 
 ## Add the Networking service (Neutron)
