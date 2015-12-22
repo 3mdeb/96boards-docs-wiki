@@ -1,7 +1,4 @@
-
-h2. 96Boards - CE Debian Reference Platform Build 15.12 - HiKey
-
-h2. Install Instructions
+h2. Install Instructions - CE Debian RPB 15.12 - HiKey
 
 This guide describes how to get started with the CE Debian Reference Platform Build, release 15.12, for HiKey.
 
