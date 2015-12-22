@@ -53,7 +53,10 @@ h3. AOSP
 
 h4. HiKey
 
+* "Bug 20":https://bugs.96boards.org/show_bug.cgi?id=20 - USB kernel trace errors -22
+* "Bug 124":https://bugs.96boards.org/show_bug.cgi?id=124 - CPU frequency will be reset to lowest when it is heavily loaded
 * "Bug 136":https://bugs.96boards.org/show_bug.cgi?id=136 - HDMI goes off while running CTS
-* "Bug 161":https://bugs.96boards.org/show_bug.cgi?id=161 - Fails to enter sleep mode
 * "Bug 163":https://bugs.96boards.org/show_bug.cgi?id=163 - HDMI audio not working
 * "Bug 164":https://bugs.96boards.org/show_bug.cgi?id=164 - Behaviors of power on button not following hardware user guide
+* "Bug 180":https://bugs.96boards.org/show_bug.cgi?id=180 - Shutdown cannot turn off HDMI monitor
+* "Bug 204":https://bugs.96boards.org/show_bug.cgi?id=204 - File download crashes the build-in browser
