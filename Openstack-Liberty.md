@@ -34,7 +34,7 @@ You can set these properties when you are uploading the image into glance, or mo
 
 ## Verify/enable additional repositories
 
-Verify that the `linaro-overly` and `jessie-backports` repositories are enabled.
+Verify that the `linaro-overlay` and `jessie-backports` repositories are enabled.
 
 If missing, add the following to /etc/apt/sources.list.d directory:
 
