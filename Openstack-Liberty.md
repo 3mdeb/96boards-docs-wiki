@@ -36,7 +36,7 @@ You can set these properties when you are uploading the image into glance, or mo
 
 Verify that the `linaro-overlay` and `jessie-backports` repositories are enabled.
 
-If missing, add the following to /etc/apt/sources.list.d directory:
+Check if they are available by checking `/etc/apt/sources.list` and `/etc/apt/sources.list.d`. If missing, add the following to /etc/apt/sources.list.d directory:
 
     $ echo "deb http://repo.linaro.org/ubuntu/linaro-overlay jessie main" | sudo tee /etc/apt/sources.list.d/linaro-overlay-repo.list
     $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E13D88F7E3C1D56C
