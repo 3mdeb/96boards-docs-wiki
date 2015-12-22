@@ -45,6 +45,8 @@ Back to the system, configure the app environment:
     sudo mkdir -p /app/hadoop/tmp
     sudo chown hduser:hadoop /app/hadoop/tmp
     sudo chmod 750 /app/hadoop/tmp
+    sudo chown hduser:hadoop /usr/lib/hadoop
+    sudo chmod 750 /usr/lib/hadoop
 
 Configure Environment Variables:
 
