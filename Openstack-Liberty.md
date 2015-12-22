@@ -186,12 +186,12 @@ Omit this section of the guide.
 
 The CirrOS image to run on aarch64 is the file that ends in `-uec.tar.gz`.  It must be extracted and each file (kernel, initrd, disk image) uploaded to Glance separately.
 
-* Download the CirrOS AArch64 UEC tarball and untar it.
+Download the CirrOS AArch64 UEC tarball and untar it:
 
     $ wget http://download.cirros-cloud.net/daily/20150923/cirros-d150923-aarch64-uec.tar.gz
     $ tar xvf cirros-d150923-aarch64-uec.tar.gz
 
-* Upload the image parts into Glance.  You will need to make note of the IDs assigned to the kernel and initrd and pass them on the command line when uploading the disk image:
+Upload the image parts into Glance.  You will need to make note of the IDs assigned to the kernel and initrd and pass them on the command line when uploading the disk image:
 
     $ glance image-create --name "cirros-kernel" --visibility public --progress \
       --container-format aki --disk-format aki --file cirros-d150923-aarch64-vmlinuz
