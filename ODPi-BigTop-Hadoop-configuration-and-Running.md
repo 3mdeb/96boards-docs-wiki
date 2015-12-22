@@ -8,6 +8,9 @@ give any password for hduser. Retype the password again when asked. Just press <
 
     sudo usermod -a -G hadoop hduser
 
+Add hduser to sudoers list:
+
+    sudo adduser hduser sudo
 
 Switch to hduser:
 
@@ -16,6 +19,8 @@ Switch to hduser:
 Generate ssh key for hduser:
 
     ssh-keygen -t rsa -P ""
+
+Press <enter> to leave to default file name.
 
 Enable ssh access to local machine:
 
@@ -29,7 +34,7 @@ Disabling IPv6:
 
     sudo nano /etc/sysctl.conf
 
-Add the below lines and save:
+Add the below lines to the end and save:
 
     net.ipv6.conf.all.disable_ipv6 = 1
     net.ipv6.conf.default.disable_ipv6 = 1
@@ -53,12 +58,13 @@ Back to the system, configure the app environment:
     sudo chown hduser:hadoop /usr/lib/hadoop
     sudo chmod 750 /usr/lib/hadoop
 
-Configure Environment Variables:
+Add Environment Variables to bash file :
 
-    su - hduser
-    nano ~/.bashrc
+    su hduser
+    cd
+    sudo nano .bashrc
 
-Add the following and save:
+Add the following to the end and save:
 
     export HADOOP_HOME=/usr/lib/hadoop
     export HADOOP_OPTS="-Djava.library.path=$HADOOP_PREFIX/lib/native"
@@ -82,15 +88,10 @@ Execute the terminal environment again (`bash`), or simply logout and change to 
 Edit core-site.xml:
 
     cd /etc/hadoop/conf
-    nano core-site.xml
+    sudo nano core-site.xml
 
-And add the following:
-
-    <property>
-      <name>hadoop.tmp.dir</name>
-      <value>/app/hadoop/tmp</value>
-      <description>A base for other temporary directories.</description>
-    </property>
+And add/modify the following settings:
+Look for property with <name> fs.defaultFS</name> and modify as below:
 
     <property>
       <name>fs.default.name</name>
@@ -102,11 +103,21 @@ And add the following:
       determine the host, port, etc. for a filesystem.</description>
     </property>
 
+Add this to the bottom before </configuration> tag:
+
+    <property>
+      <name>hadoop.tmp.dir</name>
+      <value>/app/hadoop/tmp</value>
+      <description>A base for other temporary directories.</description>
+    </property>
+
+
 Edit mapred-site.xml:
 
-    nano mapred-site.xml
+    sudo nano mapred-site.xml
 
-And add the following lines: 
+Modify existing properties as follows: 
+Look for property tag with <name> as mapred.job.tracker and modify as below:
 
     <property>
       <name>mapred.job.tracker</name>
@@ -119,9 +130,9 @@ And add the following lines:
 
 Edit hdfs-site.xml:
 
-    nano hdfs-site.xml
+    sudo nano hdfs-site.xml
 
-And add the following lines:
+Modify existing property as below :
 
     <property>
       <name>dfs.replication</name>
@@ -142,8 +153,10 @@ Create a sub-directory structure in HDFS:
 
 Start the YARN daemons:
 
-    for i in hadoop-namenode hadoop-datanode hadoop-jobtracker hadoop-tasktracker ; do sudo service $i start ; done
+    for i in hadoop-hdfs-namenode hadoop-hdfs-datanode ; do sudo service $i start ; done
 
-Check if hadoop is running. jps command should list namenode, datanode, yarn resource manager.
+Check if hadoop is running. jps command should list namenode, datanode, yarn resource manager. or use ps aux 
 
     jps
+or
+    ps aux | grep java
