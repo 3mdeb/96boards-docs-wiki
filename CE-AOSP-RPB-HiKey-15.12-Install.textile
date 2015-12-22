@@ -107,4 +107,4 @@ Once flashed, make sure recovery mode is not enabled (pin3-pin4 on J15), then ju
 
 h3. Additional resources
 
-For known issues and more information about this release, please check "https://github.com/96boards/documentation/wiki/ReferenceSoftware":https://github.com/96boards/documentation/wiki/ReferencePlatform
+For known issues and more information about this release, please check "https://github.com/96boards/documentation/wiki/ReferencePlatform":https://github.com/96boards/documentation/wiki/ReferencePlatform
