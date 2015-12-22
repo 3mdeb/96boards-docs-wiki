@@ -164,8 +164,6 @@ Omit this section of the guide.  These operations will be done during package in
 
 Answer the questions asked by debconf:
 
-**TODO: Verify debconf questions**
-
 * Set up a database for Glance: **Yes**
 * Configure database for glance-common with dbconfig-common? **Yes**
 * Database type to be used by glance-common: **mysql**
@@ -174,13 +172,11 @@ Answer the questions asked by debconf:
 * IP address of your RabbitMQ host: **\<use default, or localhost, or controller>**
 * Username for connection to the RabbitMQ server: **guest**
 * Password for connection to the RabbitMQ server: **\<blank>**
-* Auth server hostname: **\<use default, or localhost, or controller>**
-* Auth server password: **\<enter a password>**
-* Register Glance in the Keystone endpoint catalog? **Yes**
-* Keystone authentication token: **\<enter the keystone token>**
 * Pipeline flavor: **keystone**
 * Authentication server hostname: **\<use default, or localhost, or controller>**
 * Authentication server password: **\<enter a password>**
+* Register Glance in the Keystone endpoint catalog? **Yes**
+* Keystone authentication token: **\<enter the keystone token>**
 
 #### Finalize installation
 
