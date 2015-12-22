@@ -59,13 +59,13 @@ Then, make sure to run apt-get update:
 
 ## Environment
 
-Update /etc/hosts to add “controller” as an alias for localhost.
+Update `/etc/hosts` to add “controller” as an alias for localhost.
 
     127.0.0.1       localhost controller
 
 ## Disable IPV6
 
-Add the following to /etc/sysctl.conf:
+Add the following to `/etc/sysctl.conf`:
 
     net.ipv6.conf.all.disable_ipv6 = 1
     net.ipv6.conf.default.disable_ipv6 = 1
