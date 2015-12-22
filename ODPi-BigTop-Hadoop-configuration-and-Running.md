@@ -56,21 +56,21 @@ Configure Environment Variables:
 Add the following and save:
 
     export HADOOP_HOME=/usr/lib/hadoop
-    export PATH=$PATH:$HADOOP_HOME/bin
+    export HADOOP_OPTS="-Djava.library.path=$HADOOP_PREFIX/lib/native"
     export HADOOP_PREFIX=$HADOOP_HOME
-    export PATH=/usr/lib/hadoop/libexec:/etc/hadoop/conf:$HADOOP_HOME/bin/:$PATH
-    export HADOOP_MAPRED_HOME=$/usr/lib/hadoop-mapreduce
+    export HADOOP_LIBEXEC_DIR=/usr/lib/hadoop/libexec
+    export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+    export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
     export HADOOP_COMMON_HOME=$HADOOP_HOME
+    export HADOOP_MAPRED_HOME=$/usr/lib/hadoop-mapreduce
     export HADOOP_HDFS_HOME=/usr/lib/hadoop-hdfs
     export YARN_HOME=$/usr/lib/hadoop-yarn
-    export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
-    export HADOOP_OPTS="-Djava.library.path=$HADOOP_PREFIX/lib/native"
-    export HADOOP_YARN_HOME=$HADOOP_HOME
-    export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
-    export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
+    export HADOOP_YARN_HOME=$/usr/lib/hadoop-yarn/
     export CLASSPATH=$CLASSPATH:.
     export CLASSPATH=$CLASSPATH:$HADOOP_HOME/hadoop-common-2.6.0.jar
     export CLASSPATH=$CLASSPATH:$HADOOP_HOME/client/hadoop-hdfs-2.6.0.jar
+    export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
+    export PATH=/usr/lib/hadoop/libexec:/etc/hadoop/conf:$HADOOP_HOME/bin/:$PATH
 
 Execute the terminal environment again (`bash`), or simply logout and change to `hduser` again.
 
