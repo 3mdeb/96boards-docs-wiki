@@ -195,7 +195,7 @@ Omit this section of the guide.  These operations will be done during package in
 
 #### Install and configure components
 
-    $ sudo apt-get install websockify/testing
+    $ sudo apt-get install websockify
     $ sudo apt-get install nova-api nova-cert nova-conductor \
       nova-consoleauth nova-novncproxy nova-scheduler \
       python-novaclient nova-compute
