@@ -202,7 +202,7 @@ Upload the image parts into Glance.  You will need to make note of the IDs assig
     $ glance image-create --name "cirros" --visibility public --progress \
       --property hw_machine_type=virt --property hw_cdrom_bus=virtio \
       --property os_command_line='console=ttyAMA0' \
-      --property kernel_id=<kernel_id> --property ramdisk_id=<initrd_id> \
+      --property kernel_id=KERNEL_ID --property ramdisk_id=INITRD_ID \
       --container-format ami --disk-format ami --file cirros-d150923-aarch64-blank.img
 
 ## Add the Compute service (Nova)
