@@ -39,13 +39,13 @@ Verify that the `linaro-overlay` and `jessie-backports` repositories are enabled
 If missing, add the following to /etc/apt/sources.list.d directory:
 
     $ sudo su - 
-    # echo "deb http://repo.linaro.org/ubuntu/linaro-overlay jessie main" > /etc/apt/sources.list.d/linaro-overlay-repo.list`
-    $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E13D88F7E3C1D56C`
+    # echo "deb http://repo.linaro.org/ubuntu/linaro-overlay jessie main" > /etc/apt/sources.list.d/linaro-overlay-repo.list
+    $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E13D88F7E3C1D56C
 
 If missing, add the following to /etc/apt/sources.list.d directory:
 
     $ sudo su - 
-    # echo "deb http://httpredir.debian.org/debian jessie-backports main" > /etc/apt/sources.list.d/jessie-backports.list`
+    # echo "deb http://httpredir.debian.org/debian jessie-backports main" > /etc/apt/sources.list.d/jessie-backports.list
 
 ## Modify repository priorities
 
