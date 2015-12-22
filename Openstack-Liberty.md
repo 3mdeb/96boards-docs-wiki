@@ -240,8 +240,6 @@ Omit this section of the guide.  These operations will be done during package in
 
 Answer the questions asked by debconf:
 
-**TODO: Verify debconf questions**
-
 * neutron-common
   * Set up a database for Neutron: **Yes**
   * Configure database for neutron-common with dbconfig-common? **Yes**
@@ -259,6 +257,7 @@ Answer the questions asked by debconf:
   * Auth server password: **\<enter a password>**
   * Name of the region to be used by the metadata server: **\<default>**
   * Metadata proxy shared secret: **\<enter the shared secret string entered for Nova>**
+* neutron-server
   * Register Neutron in the Keystone endpoint catalog? **Yes**
   * Keystone authentication token: **\<enter the keystone token>**
 
