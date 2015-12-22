@@ -171,7 +171,7 @@ Answer the questions asked by debconf:
 * MySQL application password for glance-common: **\<enter a password>**
 * IP address of your RabbitMQ host: **\<use default, or localhost, or controller>**
 * Username for connection to the RabbitMQ server: **guest**
-* Password for connection to the RabbitMQ server: **\<blank>**
+* Password for connection to the RabbitMQ server: **guest**
 * Pipeline flavor: **keystone**
 * Authentication server hostname: **\<use default, or localhost, or controller>**
 * Authentication server password: **\<enter a password>**
@@ -208,7 +208,7 @@ Answer the questions asked by debconf:
 * MySQL application password for nova-common: **\<enter a password>**
 * IP address of your RabbitMQ host: **\<use default, or localhost, or controller>**
 * Username for connection to the RabbitMQ server: **guest**
-* Password for connection to the RabbitMQ server: **\<blank>**
+* Password for connection to the RabbitMQ server: **guest**
 * Auth server hostname: **\<use default, or localhost, or controller>**
 * Auth server password: **\<enter a password>**
 * Neutron server URL: **http://\<use default, or localhost, or controller>:9696**
@@ -261,7 +261,7 @@ Answer the questions asked by debconf:
   * MySQL application password for neutron-common: **\<enter a password>**
   * IP address of your RabbitMQ host: **\<use default, or localhost, or controller>**
   * Username for connection to the RabbitMQ server: **guest**
-  * Password for connection to the RabbitMQ server: **\<blank>**
+  * Password for connection to the RabbitMQ server: **guest**
   * Authentication server hostname: **\<use default, or localhost, or controller>**
   * Authentication server password: **\<enter a password>**
   * Neutron plugin: **ml2**
