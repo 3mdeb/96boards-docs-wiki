@@ -7,3 +7,4 @@ Welcome to the supporting documentation for [96boards](https://www.96boards.org/
 - [[Dragonboard 410c|Dragonboard-410c]]
 - [[Internet Sharing over USB|Sharing-Internet-connections-over-USB-on-96Boards]]
 
+Please also check for additional links at the sidebar.
