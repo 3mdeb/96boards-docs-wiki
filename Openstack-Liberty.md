@@ -57,7 +57,7 @@ Create `/etc/apt/preferences.d/jessie-backports`:
 
 Then, make sure to run apt-get update:
 
-    $ apt-get update
+    $ sudo apt-get update
 
 ## Environment
 
