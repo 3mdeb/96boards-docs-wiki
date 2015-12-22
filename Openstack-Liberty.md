@@ -53,7 +53,7 @@ Create `/etc/apt/preferences.d/jessie-backports`:
 
     Package: *
     Pin: release a=jessie-backports
-    Pin-Priority: 700
+    Pin-Priority: 500
 
 Create `/etc/apt/preferences.d/testing`:
 
@@ -102,7 +102,7 @@ Answer the questions asked by debconf:
 
 Install the openstack client:
 
-    $ apt-get install python-openstackclient python-pymysql
+    $ sudo apt-get install python-openstackclient python-pymysql
 
 ### NoSQL Database
 
