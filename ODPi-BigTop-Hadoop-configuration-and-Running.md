@@ -137,8 +137,7 @@ Create a sub-directory structure in HDFS:
 
 Start the YARN daemons:
 
-    sudo service hadoop-yarn-resourcemanager start
-    sudo service hadoop-yarn-nodemanager start
+    for i in hadoop-namenode hadoop-datanode hadoop-jobtracker hadoop-tasktracker ; do sudo service $i start ; done
 
 Check if hadoop is running. jps command should list namenode, datanode, yarn resource manager.
 
