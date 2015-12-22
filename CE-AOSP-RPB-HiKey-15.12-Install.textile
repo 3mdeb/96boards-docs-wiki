@@ -94,6 +94,7 @@ Enable fastboot (either via recovery or by changing the boot jumpers), and then 
 bc. sudo fastboot flash boot boot_fat.uefi.img
 sudo fastboot flash cache cache.img
 sudo fastboot flash system system.img
+sudo fastboot flash nvme nvme.img
 
 Then on a 4G compatible device:
 
