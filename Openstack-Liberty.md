@@ -78,6 +78,8 @@ Run sysctl to apply the changes:
 
 # Following the Openstack guide...
 
+OpenStack guide: http://docs.openstack.org/liberty/install-guide-ubuntu/overview.html
+
 ## Environment
 
 ### Openstack Packages
