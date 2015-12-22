@@ -127,7 +127,7 @@ Answer the questions asked by debconf:
 * Register administration tenants? **Yes**
 * Password of the administrative user: **\<enter a password>**
 * Register Keystone endpoint? **Yes**
-* Keystone endpoint IP address: **\<use default, or localhost, or controller>**
+* Keystone endpoint IP address: **\<use default>**
 
 #### Configure the Apache HTTP server
 
