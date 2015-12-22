@@ -36,16 +36,14 @@ Verify that the `linaro-overly` and `jessie-backports` repositories are enabled.
 
 If missing, add the following to /etc/apt/sources.list.d directory:
 
-    $ sudo echo "deb http://repo.linaro.org/ubuntu/linaro-overlay jessie main" > /etc/apt/sources.list.d/linaro-overlay-repo.list`
+    $ sudo su - 
+    # echo "deb http://repo.linaro.org/ubuntu/linaro-overlay jessie main" > /etc/apt/sources.list.d/linaro-overlay-repo.list`
     $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E13D88F7E3C1D56C`
 
 If missing, add the following to /etc/apt/sources.list.d directory:
 
-    $ sudo echo "deb http://repo.linaro.org/ubuntu/linaro-overlay jessie-backports main" > /etc/apt/sources.list.d/jessie-backports.list`
-
-If missing, add the following to /etc/apt/sources.list.d directory:
-
-    $ sudo echo "deb http://repo.linaro.org/ubuntu/linaro-overlay testing main" > /etc/apt/sources.list.d/testing.list`
+    $ sudo su - 
+    # echo "deb http://httpredir.debian.org/debian jessie-backports main" > /etc/apt/sources.list.d/jessie-backports.list`
 
 ## Modify repository priorities
 
@@ -54,12 +52,6 @@ Create `/etc/apt/preferences.d/jessie-backports`:
     Package: *
     Pin: release a=jessie-backports
     Pin-Priority: 500
-
-Create `/etc/apt/preferences.d/testing`:
-
-    Package: *
-    Pin: release a=testing
-    Pin-Priority: 300
 
 Then, make sure to run apt-get update:
 
@@ -120,11 +112,7 @@ Omit this section of the guide.  These operations will be done during meta packa
 
 #### Install and configure components
 
-If you encounter dependency issues with package installation, you will need to manually install some dependency packages from testing first:
-
-    $ sudo apt-get install python-cryptography/testing
-
-Then, install the apache and the keystone meta package:
+Install the apache and the keystone meta package:
 
     $ sudo apt-get install openstack-cloud-identity
 
@@ -156,7 +144,6 @@ Omit this section of the guide.
 ### Create projects, users, and roles
 
 Omit this section of the guide.
-
 
 
 ## Add the Image service (Glance)
@@ -196,7 +183,6 @@ Answer the questions asked by debconf:
 #### Finalize installation
 
 Omit this section of the guide.
-
 
 
 ## Add the Compute service (Nova)
@@ -243,7 +229,6 @@ Answer the questions asked by debconf:
 Omit this section of the guide.
 
 
-
 ## Add the Networking service (Neutron)
 
 Follow the Openstack guide with the exception of the following changes documented here.
@@ -287,7 +272,6 @@ Answer the questions asked by debconf:
 #### Finalize installation
 
 Omit this section of the guide.
-
 
 
 ## Launch an instance
