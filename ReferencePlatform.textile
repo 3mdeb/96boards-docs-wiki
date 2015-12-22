@@ -10,6 +10,12 @@ h4. Latest News
 * Hikey and Dragonboard 401c builds with 4.3 kernel
 * ARM Juno r1, AMD Overdrive and HiSilicon D02 support with 4.4-rc4 kernel
 
+h4. Enterprise and Consumer Edition Specific Documentation
+
+Please check the following links for documentation covering specific goals and development for the consumer and enterprise editions:
+* "Reference Software Enterprise Edition":https://github.com/96boards/documentation/wiki/ReferenceSoftwareEE
+* "Reference Software Consumer Edition":https://github.com/96boards/documentation/wiki/ReferencePlatformCE
+
 h4. Releases
 * "2015.12":https://github.com/96boards/documentation/wiki/RP-Release-2015.12 (Release 1)
 * "2015.10":https://github.com/96boards/documentation/wiki/RP-Release-2015.10 (Alpha)
