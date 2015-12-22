@@ -25,12 +25,11 @@ Update the source list and install the dependencies:
 
     sudo apt-get update
     sudo apt-get install openssh-server rsync openjdk-7-jre
+    sudo apt-get build-dep build-essential
 
 Install Hadoop packages:
-
-    sudo apt-get build-dep build-essential
+    
     sudo apt-get install -ft jessie bigtop-tomcat hadoop* mahout\* oozie\* hbase\* hive\* hue\* pig\* zookeeper\* spark\*
-    sudo apt-get update
 
 ### On CentOS:
 
