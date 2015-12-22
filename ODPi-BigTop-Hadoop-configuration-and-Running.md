@@ -4,7 +4,7 @@ Add hduser (dedicated user for running Hadoop) to hadoop usergroup:
 
     sudo adduser --ingroup hadoop hduser
 
-give any password for hduser. Retype the password again when asked. Just press \<ENTER\> for hduser user information like (FullName, etc). Confirm the answers by pressing 'Y'.
+give any password for hduser. Retype the password again when asked. Just press \<enter\> for hduser user information like (FullName, etc). Confirm the answers by pressing 'Y'.
 
     sudo usermod -a -G hadoop hduser
 
@@ -20,7 +20,7 @@ Generate ssh key for hduser:
 
     ssh-keygen -t rsa -P ""
 
-Press <enter> to leave to default file name.
+Press \<enter\> to leave to default file name.
 
 Enable ssh access to local machine:
 
