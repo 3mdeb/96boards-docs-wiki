@@ -32,6 +32,7 @@ h4. HiKey
 * "Bug 152":https://bugs.96boards.org/show_bug.cgi?id=152 - SD-Card doesn't work
 * "Bug 159":https://bugs.96boards.org/show_bug.cgi?id=159 - No sound cards found
 * "Bug 160":https://bugs.96boards.org/show_bug.cgi?id=160 - Behaviors of power on button not following hardware user guide
+* "Bug 166":https://bugs.96boards.org/show_bug.cgi?id=166 - Support 8GB emmc
 * "Bug 211":https://bugs.96boards.org/show_bug.cgi?id=211 - Fails to enter fastboot mode from grub boot menu
 
 h4. DragonBoard 410c
