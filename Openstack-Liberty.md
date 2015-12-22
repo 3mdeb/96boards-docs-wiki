@@ -219,6 +219,8 @@ Answer the questions asked by debconf:
 
 #### Finalize installation
 
+TODO: Ensure that vnc and spice are disabled in /etc/nova/nova.conf.
+
 Omit this section of the guide.
 
 
