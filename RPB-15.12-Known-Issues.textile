@@ -2,9 +2,18 @@ h2. Reference Platform Build - 15.12 Release - Known Issues
 
 h3. Enterprise
 
+h4. Kernel
+
+* "Bug 1966":https://bugs.linaro.org/show_bug.cgi?id=1966 - KVM errors when booting on overdrive and d02
+
 h4. HiSilicon D02
 
+* "Bug 1965":https://bugs.linaro.org/show_bug.cgi?id=1965 - D02: kernel unable to find valid mac for the network interfaces
+* "Bug 1967":https://bugs.linaro.org/show_bug.cgi?id=1967 - D02: unhandled level 3 permission fault (11)
+
 h4. AMD Overdrive
+
+* UEFI/EDK2 is not yet supported
 
 h4. OpenStack
 
