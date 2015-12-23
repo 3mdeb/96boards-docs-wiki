@@ -19,7 +19,7 @@ h6. Enterprise Edition
 ** ACPI support for D02 and Overdrive (mandatory for the enterprise edition)
 * Distributions:
 ** Debian Jessie network installer (using latest kernel)
-** CentOS 7 network installer (using latest kernel)
+** CentOS 7 network installer (alpha state)
 * Enterprise Components:
 ** Docker 1.9.1
 ** OpenStack Liberty
