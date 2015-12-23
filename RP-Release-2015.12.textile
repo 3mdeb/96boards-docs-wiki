@@ -41,7 +41,13 @@ The complete list of known issues for this release: "https://github.com/96boards
 
 h5. Enterprise
 
-Documentation covering build from source, firmware flashing and Debian/CentOS network installer (including automation with preseed/kickstart)
+* "UEFI/EDK2":https://builds.96boards.org/releases/reference-platform/components/uefi/15.12/ for HiSilicon D02
+* "Kernel 4.4-rc4":https://builds.96boards.org/releases/reference-platform/components/linux/enterprise/15.12/ tested with D02 and Overdrive
+* "Debian (Jessie) Installer":https://builds.96boards.org/releases/reference-platform/components/debian-installer/15.12/ tested with D02 and Overdrive (shipping kernel 4.4-rc4 by default)
+* "OpenStack Liberty":https://github.com/96boards/documentation/wiki/Openstack-Liberty for Debian Jessie
+* "ODPi Hadoop":https://github.com/96boards/documentation/wiki/ODPi-Hadoop-Installation for Debian Jessie
+
+Documentation covering build from source, firmware flashing and Debian/CentOS network installer (including automation with preseed/kickstart) available at "https://github.com/96boards/documentation/wiki/ReferenceSoftwareEE":https://github.com/96boards/documentation/wiki/ReferenceSoftwareEE
 
 h5. HiKey
 
