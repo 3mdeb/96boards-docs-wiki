@@ -6,7 +6,7 @@ A lot of work was put in place for the EE RPB, covering firmware (UEFI/EDK2), Li
 
 For the Consumer Edition the CE AOSP RPB for Hikey is now using a 4.1 based kernel, closer to what is provided directly by AOSP. We decided to not push major updates and rebases for the CE Debian RPB kernel since we want the changes to follow the same "kernel policy":https://github.com/96boards/documentation/wiki/RP-Kernel-Policy as used by the EE kernel. The goal of having one single tree for both CE and EE, with a strict upstream-based policy will continue, and we hope to have more news on that during the upcoming weeks.
 
-The work for the CE OE/Yocto RPB was also started, but unfortunately not yet covering a single machine (due lack of a single kernel). Please check "https://github.com/96boards/meta-rpb":https://github.com/96boards/meta-rpb and "https://github.com/96boards/oe-rpb-manifest":https://github.com/96boards/oe-rpb-manifest to check what was already done for OpenEmbedded.
+The work for the CE OE/Yocto RPB was also started, but unfortunately not yet covering a single machine (due lack of a single kernel). Please check "https://github.com/96boards/meta-rpb":https://github.com/96boards/meta-rpb and "https://github.com/96boards/oe-rpb-manifest":https://github.com/96boards/oe-rpb-manifest to see what was already done for OpenEmbedded.
 
 h5. Highlights for this release:
 
