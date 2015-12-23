@@ -46,7 +46,7 @@ h5. Enterprise
 * "Debian (Jessie) Installer":https://builds.96boards.org/releases/reference-platform/components/debian-installer/15.12/ tested with D02 and Overdrive (shipping kernel 4.4-rc4 by default)
 * "OpenStack Liberty":https://github.com/96boards/documentation/wiki/Openstack-Liberty for Debian Jessie
 * "ODPi Hadoop":https://github.com/96boards/documentation/wiki/ODPi-Hadoop-Installation for Debian Jessie
-* "EE Debian Test Report:https://builds.96boards.org/releases/reference-platform/components/linux/enterprise/15.12/EE-Debian-RPB-15.12-TestReport.pdf
+* "EE Debian Test Report":https://builds.96boards.org/releases/reference-platform/components/linux/enterprise/15.12/EE-Debian-RPB-15.12-TestReport.pdf
 
 Documentation covering build from source, firmware flashing and network installers (including automation with preseed) available at "https://github.com/96boards/documentation/wiki/ReferenceSoftwareEE":https://github.com/96boards/documentation/wiki/ReferenceSoftwareEE
 
