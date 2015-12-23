@@ -260,7 +260,7 @@ Ensure that vnc and spice are disabled in `/etc/nova/nova.conf`.  Look for the f
     virt_type = qemu
     cpu_model = cortex-a57
 
-**IMPORTANT: If you make changes to `nova.conf`, or `nova-compute.con`, restart the nova services:**
+**IMPORTANT: If you make changes to `nova.conf`, or `nova-compute.conf`, restart the nova services:**
 
     $ sudo service nova-compute restart
 
