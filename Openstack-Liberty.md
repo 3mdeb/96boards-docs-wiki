@@ -250,6 +250,7 @@ Ensure that vnc and spice are disabled in `/etc/nova/nova.conf`.  Look for the f
     enabled=false
 
 Enable KVM by ensuring the following is in `nova-compute.conf`:
+
     [DEFAULT]
     compute_driver=libvirt.LibvirtDriver
 
