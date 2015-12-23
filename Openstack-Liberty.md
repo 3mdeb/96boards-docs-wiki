@@ -249,6 +249,13 @@ Ensure that vnc and spice are disabled in `/etc/nova/nova.conf`.  Look for the f
     [spice]
     enabled=false
 
+Enable KVM by ensuring the following is in `nova-compute.conf`:
+    [DEFAULT]
+    compute_driver=libvirt.LibvirtDriver
+
+    [libvirt]
+    virt_type=kvm
+
 **NOTE: Until kernel support for KVM is properly enabled, instances can be run in emulation by ensuring the following is in `nova-compute.conf`**:
 
     [DEFAULT]
