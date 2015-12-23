@@ -47,7 +47,7 @@ h5. Enterprise
 * "OpenStack Liberty":https://github.com/96boards/documentation/wiki/Openstack-Liberty for Debian Jessie
 * "ODPi Hadoop":https://github.com/96boards/documentation/wiki/ODPi-Hadoop-Installation for Debian Jessie
 
-Documentation covering build from source, firmware flashing and Debian/CentOS network installer (including automation with preseed/kickstart) available at "https://github.com/96boards/documentation/wiki/ReferenceSoftwareEE":https://github.com/96boards/documentation/wiki/ReferenceSoftwareEE
+Documentation covering build from source, firmware flashing and network installers (including automation with preseed) available at "https://github.com/96boards/documentation/wiki/ReferenceSoftwareEE":https://github.com/96boards/documentation/wiki/ReferenceSoftwareEE
 
 h5. HiKey
 
