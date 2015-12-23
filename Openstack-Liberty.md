@@ -160,7 +160,7 @@ Omit this section of the guide.  These operations will be done during package in
 
 #### Install and configure components
 
-    $ sudo apt-get install glance python-glanceclient
+    $ sudo apt-get install glance
 
 Answer the questions asked by debconf:
 
@@ -218,8 +218,7 @@ Omit this section of the guide.  These operations will be done during package in
 #### Install and configure components
 
     $ sudo apt-get install nova-api nova-cert nova-conductor \
-      nova-consoleauth nova-scheduler \
-      python-novaclient nova-compute
+      nova-consoleauth nova-scheduler nova-compute
 
 Answer the questions asked by debconf:
 
@@ -280,7 +279,7 @@ Omit this section of the guide.  These operations will be done during package in
 
     $ sudo apt-get install neutron-server neutron-plugin-ml2 \
       neutron-plugin-linuxbridge-agent neutron-dhcp-agent \
-      neutron-metadata-agent python-neutronclient
+      neutron-metadata-agent
 
 Answer the questions asked by debconf:
 
