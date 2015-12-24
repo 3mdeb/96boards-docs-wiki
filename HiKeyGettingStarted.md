@@ -353,11 +353,11 @@ You can do this from your browser or from the command prompt:
 For example, to download the latest UEFI build and boot partition for Debian do:
 
 ```shell
-$ wget https://builds.96boards.org/releases/hikey/linaro/binaries/l-loader.bin
-$ wget https://builds.96boards.org/releases/hikey/linaro/binaries/fip.bin
-$ wget https://builds.96boards.org/releases/hikey/linaro/binaries/ptable-linux-4g.img
-$ wget https://builds.96boards.org/releases/hikey/linaro/binaries/ptable-linux-8g.img
-$ wget https://builds.96boards.org/releases/hikey/linaro/binaries/nvme.img
+$ wget https://builds.96boards.org/releases/hikey/linaro/binaries/latest/l-loader.bin
+$ wget https://builds.96boards.org/releases/hikey/linaro/binaries/latest/fip.bin
+$ wget https://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-linux-4g.img
+$ wget https://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-linux-8g.img
+$ wget https://builds.96boards.org/releases/hikey/linaro/binaries/latest/nvme.img
 $ wget https://builds.96boards.org/releases/hikey/linaro/debian/latest/boot-fat.uefi.img.gz
 ```
 
