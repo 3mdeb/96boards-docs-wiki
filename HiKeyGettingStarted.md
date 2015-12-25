@@ -321,6 +321,7 @@ $ sudo dd if=hikey-jessie_alip_2015MMDD-nnn-8g.img of=/dev/[sdb] bs=4M oflag=syn
 
 If your SD card capacity is more than 2GB capacity you may want to change the rootfs to use the rest of the SD card as follows:
 ```
+$ sudo apt-get install realpath
 $ wget https://github.com/fboudra/resize-helper/raw/master/resize-helper.sh
 $ chmod u+x resize-helper.sh
 $ sudo ./resize-helper.sh
