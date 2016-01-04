@@ -77,8 +77,6 @@ Then flash UEFI:
 
 bc. sudo fastboot flash fastboot fip.bin
 
-Change @ttyUSB0@ to the right interface name that gets exported to your host system.
-
 Make sure to reboot the board after updating the partition table (@ptable-linux@), otherwise flashing the rootfs might fail.
 
 h4. Boot and Rootfs
