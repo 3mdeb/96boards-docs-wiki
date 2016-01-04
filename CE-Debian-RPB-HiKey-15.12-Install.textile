@@ -63,7 +63,7 @@ Now you need to identify if your device contains 4G or 8G of eMMC (LeMaker produ
 
 On recovery mode, flash the bootloader with the following command:
 
-bc. sudo python hisi-idt.py --img1=l-loader.bin -d /dev/ttyUSB0
+bc. sudo python hisi-idt.py --img1=l-loader.bin
 
 Then on a 4G compatible device:
 
