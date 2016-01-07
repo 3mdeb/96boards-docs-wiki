@@ -20,6 +20,10 @@ List of current CI jobs ("ci.linaro.org":https://ci.linaro.org/) which are maint
 ** To be used until we can get the reference tree in place
 ** Job responsible for producing the kernel used by the Debian RPBs
 
+* "Reference Kernel - Enterprise":https://ci.linaro.org/view/96boards/job/96boards-reference-kernel-enterprise/
+** Consumes and build the common kernel tree for Enterprise, maintained by Amit
+** Job responsible for producing the kernel used by the EE RPBs
+
 * "Reference Build - AOSP":https://ci.linaro.org/view/96boards/job/96boards-reference-platform-aosp/
 ** Same tree and job previously done by Vishal
 ** To be migrated to a 4.1 based kernel, once ready
@@ -30,6 +34,7 @@ List of current CI jobs ("ci.linaro.org":https://ci.linaro.org/) which are maint
 ** Matrix job that will be extended to support additional boards
 ** Rootfs is shared with the other builds, effort to make the changes generic enough to be used by others
 
-h3. Snapshots
+* "Reference Build - OpenEmbedded":https://ci.linaro.org/view/96boards/job/96boards-reference-platform-openembedded/
+** Still a matrix job, not yet building a single rootfs
 
 Every artifact produced by the builds described in this page can be found at "https://builds.96boards.org/snapshots/reference-platform/":https://builds.96boards.org/snapshots/reference-platform/.
