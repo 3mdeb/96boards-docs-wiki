@@ -169,8 +169,6 @@ Now follow the steps bellow in order to fetch and flash the new firmware:
 # Power on the device, stop the boot from the serial console, and get into the UEFI shell
 # Push the dial switch *3. CPU0_SPI_SEL* to *on*
 ## *NOTE:* make sure to run the step above before running @biosupdate@ (as it modifies the flash), or else the backup BIOS will also be modified and there will be no way to unbrick the board (unless sending it back to Huawei).
-# Set up the IP address config for the ethernet card:
-@ifconfig -s eth0 dhcp@ or @ifconfig -s eth0 <IP address> <mask> <gateway>@
 # Download and flash the firmware file from the FTP server:
 @biosupdate <server ip> -u <user> -p <password> -f <UEFI image file name> master@ like
 @D02 > biosupdate 10.0.0.10 -u anonymous -p anonymous -f PV660D02.fd master@
