@@ -93,14 +93,15 @@ EFI stub: Exiting boot services and installing virtual address map...
 [    0.000000] Initializing cgroup subsys cpuset
 [    0.000000] Initializing cgroup subsys cpu
 [    0.000000] Initializing cgroup subsys cpuacct
-[    0.000000] Linux version 3.19.0-0.79.aa7a.aarch64 (mockbuild@apmb0.centos.lab) (gcc version 4.8.3 20140911 (Red Hat 4.8.3-9) (GCC) ) #1 SMP Tue Jun 30 23:10:30 CDT 2015
+[    0.000000] Linux version 4.2.0-0.21.el7.aarch64 (mockbuild@apmb0.centos.lab) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-4) (GCC) ) #1 SMP Thu Dec 24 15:43:05 CST 2015
 [    0.000000] CPU: AArch64 Processor [411fd072] revision 2
 [    0.000000] Detected PIPT I-cache on CPU0
+[    0.000000] alternatives: enabling workaround for ARM erratum 832075
 [    0.000000] efi: Getting EFI parameters from FDT:
 [    0.000000] EFI v2.40 by American Megatrends
 [    0.000000] efi:  ACPI 2.0=0x83ff1c6000  SMBIOS 3.0=0x83ff349718 
 ...
-Welcome to CentOS Linux 7 (AltArch) dracut-033-241.el7.3 (Initramfs)!
+Welcome to CentOS Linux 7 (AltArch) dracut-033-359.el7 (Initramfs)!
 ...
 dracut-initqueue[610]: RTNETLINK answers: File exists
 dracut-initqueue[610]: % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
@@ -110,13 +111,13 @@ dracut-initqueue[610]: Dload  Upload   Total   Spent    Left  Speed
 Welcome to CentOS Linux 7 (AltArch)!
 ...
 Starting installer, one moment...
-anaconda 19.31.123-1 for CentOS Linux 7 started.
+anaconda 21.48.22.56-1 for CentOS Linux AltArch 7 started.
  * installation log files are stored in /tmp during the installation
  * shell is available on TTY2
  * if the graphical installation interface fails to start, try again with the
    inst.text bootoption to start text installation
  * when reporting a bug add logs from /tmp as separate text/plain attachments
-03:22:14 X startup failed, falling back to text mode
+21:06:29 X startup failed, falling back to text mode
 ================================================================================
 ================================================================================
 VNC
