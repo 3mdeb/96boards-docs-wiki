@@ -29,6 +29,8 @@ bc. menuentry 'Install CentOS 7 ARM 64-bit' --class red --class gnu-linux --clas
     initrd (tftp)/centos7/initrd.img
 }
 
+Also check the "anaconda official documentation":https://rhinstaller.github.io/anaconda/boot-options.html for additional boot options. One example is using *ip=eth1:dhcp* if you want to use the second network interface as default.
+
 You should now have the following file tree structure:
 
 bc. /srv/tftp/
