@@ -83,8 +83,11 @@ export UEFI_TOOLS_DIR=${PWD}/uefi-tools
 cd ${EDK2_DIR}
 ${UEFI_TOOLS_DIR}/uefi-build.sh -b RELEASE -a ../arm-trusted-firmware hikey
 
-# NOTE: If also building optional OP-TEE, run below command instead of the one above
+# NOTE: If also building OP-TEE, run below command instead of the one above
 # ${UEFI_TOOLS_DIR}/uefi-build.sh -b RELEASE -a ../arm-trusted-firmware -s ../optee_os hikey
+
+# To use UART0 instead of UART3 as the console, uncomment the appropriate line(s) in
+# ${UEFI_TOOLS_DIR}/platforms.config before running the command above.
 
 cd ../l-loader
 ln -s ${EDK2_DIR}/Build/HiKey/RELEASE_GCC49/FV/bl1.bin
@@ -279,6 +282,11 @@ By default, UART3 is used as serial console. There's UART3 port on LS connector 
 CROSS_COMPILE="$CROSS_COMPILE" make -j$NUM_THREADS PLAT="$ATF_PLATFORM" $SPD_OPTION DEBUG=$DEBUG CONSOLE=PL011_UART0_BASE CRASH_CONSOLE_BASE=PL011_UART0_BASE
 
 # Rebuild ARM Trust Firmware
+```
+
+* Use UART0 as console in OP-TEE
+```shell
+# Rerun make with CFG_CONSOLE_UART=0 option
 ```
 
 * Use UART0 as console in UEFI
