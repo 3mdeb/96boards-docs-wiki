@@ -166,12 +166,13 @@ Now follow the steps bellow in order to fetch and flash the new firmware:
 # Power off the board and unplug the power supply.
 # Push the dial switch *3. CPU0_SPI_SEL* to *off* (check "http://open-estuary.com/d02-2/":http://open-estuary.com/d02-2/ for the board picture)
 ## The board has two SPI flash chips, and this switch selects which one to boot from.
-# Power on the device, stop the boot from the serial console, and get into the UEFI shell
+# Power on the device, stop the boot from the serial console, and get into the the @Embedded Boot Loader (EBL)@ shell
 # Push the dial switch *3. CPU0_SPI_SEL* to *on*
 ## *NOTE:* make sure to run the step above before running @biosupdate@ (as it modifies the flash), or else the backup BIOS will also be modified and there will be no way to unbrick the board (unless sending it back to Huawei).
 # Download and flash the firmware file from the FTP server:
 @biosupdate <server ip> -u <user> -p <password> -f <UEFI image file name> master@ like
 @D02 > biosupdate 10.0.0.10 -u anonymous -p anonymous -f PV660D02.fd master@
+# Exit the EBL console and reboot the board
 
 h5. Upgrading firmware
 
@@ -183,6 +184,7 @@ Network upgrade:
 # Download and flash the firmware file from the FTP server:
 @biosupdate <server ip> -u <user> -p <password> -f <UEFI image file name> master@, like
 @D02 > biosupdate 10.0.0.10 -u anonymous -p anonymous -f PV660D02.fd master@
+# Exit the EBL console and reboot the board
 
 USB storage upgrade:
 # Copy the @.fd@ file to a FAT32 partition on USB (UEFI can only recognize FAT32 file system), then run the following command (from *EBL*):
