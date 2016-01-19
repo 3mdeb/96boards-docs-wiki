@@ -146,4 +146,4 @@ Once the installation is completed, you should be able to simply reboot the syst
 
 h3. Automating the installation with kickstart
 
-TODO
+https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/sect-kickstart-howto.html
