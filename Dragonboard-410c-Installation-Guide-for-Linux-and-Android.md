@@ -120,6 +120,9 @@ extract these archives. In this workflow, “Archive Manager,” available
 by default in Ubuntu/Debian Desktop, was used.
 
 **Step 4: Write the SD image onto an SD card**
+Note: You can do this on Linux, or on Windows.
+
+***Linux instructions***
 
 The SD card does not need to be formatted in any special way since this
 procedure will write the entire image, including the partition
@@ -160,6 +163,23 @@ following sequence:
 ```
 6. There will be a new device in the list, this will be your SD Card
    identity (XXX).  It also has a size parameter that should match the size of the SD Card.
+
+***Windows instructions***
+
+1. Download the [Win32DiskImager tool](http://sourceforge.net/projects/win32diskimager/)
+
+2. Open the tool, and click the folder icon to select the appropriate img
+
+![](http://i.imgur.com/JurbrUf.png)
+
+3. Attach your micro SD card (through a USB SD card-reader, if necessary). 
+4. Select "write." There may be a warning about corrupting the device. Click "Yes" to proceed.
+![](http://i.imgur.com/BwQ6Jid.png)
+
+5. It should show the following image upon successful completion:
+
+![](http://i.imgur.com/vQsSTKX.png)
+
 
 ### Flashing the SD Card Image to the DB410c
 
