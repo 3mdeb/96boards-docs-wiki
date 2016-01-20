@@ -38,7 +38,7 @@ menuentry 'Install CentOS 7 ARM 64-bit - RP (experimental)' --class red --class 
     initrd (tftp)/centos7/initrd.img
 }
 
-Also check the "anaconda official documentation":https://rhinstaller.github.io/anaconda/boot-options.html for additional boot options. One example is using *ip=eth1:dhcp* if you want to use the second network interface as default.
+Also check the "RHEL 7":https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/chap-anaconda-boot-options.html and the "anaconda documentation":https://rhinstaller.github.io/anaconda/boot-options.html for additional boot options. One example is using *ip=eth1:dhcp* if you want to use the second network interface as default.
 
 You should now have the following file tree structure:
 
@@ -155,4 +155,10 @@ Once the installation is completed, you should be able to simply reboot the syst
 
 h3. Automating the installation with kickstart
 
-https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/sect-kickstart-howto.html
+It is possible to fully automate the installer by providing a file called kickstart. The kickstart file is a plain text file, containing keywords that serve as directions for the installation. Check the RHEL 7 "kickstart guide":https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/sect-kickstart-howto.html for further information about how to create your own kickstart file.
+
+Kickstart example:
+
+bc. TODO
+
+h4. Setting up grub.cfg
