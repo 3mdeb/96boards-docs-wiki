@@ -159,6 +159,49 @@ It is possible to fully automate the installer by providing a file called kickst
 
 Kickstart example:
 
-bc. TODO
+bc.
+cmdline
+url --url="http://mirror.centos.org/altarch/7/os/aarch64/"
+lang en_US.UTF-8
+keyboard us
+timezone --utc Etc/UTC
+auth --useshadow --passalgo=sha512
+rootpw --lock --iscrypted locked
+firewall --disabled
+firstboot --disabled
+selinux --disabled
+reboot
+network --bootproto=dhcp --device=eth1 --activate --onboot=on
+ignoredisk --only-use=sda
+bootloader --location=mbr
+clearpart --drives=sda --all --initlabel
+part /boot/efi --fstype=efi --grow --maxsize=200 --size=20
+part /boot --fstype=ext4 --size=512
+part / --fstype=ext4 --size=10240 --grow
+part swap --size=4000
+%packages
+@base
+@core
+wget
+net-tools
+chrony
+%end
+%post
+useradd -m -U -G wheel linaro
+echo linaro | passwd linaro --stdin
+%end
 
 h4. Setting up grub.cfg
+
+Now back to your tftp server, change the original grub.cfg file adding the location of your kickstart file:
+
+bc. $ cat /srv/tftp/grub.cfg 
+menuentry 'Install CentOS 7 ARM 64-bit' --class red --class gnu-linux --class gnu --class os {
+    linux (tftp)/centos7/vmlinuz ip=eth0:dhcp inst.repo=http://mirror.centos.org/altarch/7/os/aarch64/ inst.ks=http://people.linaro.org/~ricardo.salveti/centos-ks.cfg
+}
+
+In case your system contains more than one network interface, also make sure to add the one to be used via the @ip@ argument, like @ip=eth0:dhcp@.
+
+h4. Booting the system
+
+Now just do a normal PXE boot, and anaconda should automatically load and use the kickstart file provided by grub.cfg. In case there is still a dialog that stops your installation that means not all the installer options are provided by your kickstart file. Get back to official documentation and try to find out what is the missing step.
