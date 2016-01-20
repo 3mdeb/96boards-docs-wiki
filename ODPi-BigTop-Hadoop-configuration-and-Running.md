@@ -166,7 +166,7 @@ or
 
 Alternatively, check if yarn managers are running:
     
-    sudo /etc/init.d/hadoop-yarn-resourcemanger status
+    sudo /etc/init.d/hadoop-yarn-resourcemanager status
     sudo /etc/init.d/hadoop-yarn-nodemanager status
 
 You would see like below:
