@@ -197,6 +197,7 @@ Now back to your tftp server, change the original grub.cfg file adding the locat
 bc. $ cat /srv/tftp/grub.cfg 
 menuentry 'Install CentOS 7 ARM 64-bit' --class red --class gnu-linux --class gnu --class os {
     linux (tftp)/centos7/vmlinuz ip=eth0:dhcp inst.repo=http://mirror.centos.org/altarch/7/os/aarch64/ inst.ks=http://people.linaro.org/~ricardo.salveti/centos-ks.cfg
+    initrd (tftp)/centos7/initrd.img
 }
 
 In case your system contains more than one network interface, also make sure to add the one to be used via the @ip@ argument, like @ip=eth0:dhcp@.
