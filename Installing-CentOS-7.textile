@@ -159,8 +159,7 @@ It is possible to fully automate the installer by providing a file called kickst
 
 Kickstart example:
 
-bc.
-cmdline
+bc. cmdline
 url --url="http://mirror.centos.org/altarch/7/os/aarch64/"
 lang en_US.UTF-8
 keyboard us
