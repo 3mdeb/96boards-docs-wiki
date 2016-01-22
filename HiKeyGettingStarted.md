@@ -316,7 +316,7 @@ Extract the file. Install an SD card into your Linux PC. Make sure that you know
 **Note:** for this example we assume the device node is `/dev/sdb`. Replace with your assigned SD card device.
 
 ```
-$ sudo dd if=hikey-jessie_alip_2015MMDD-nnn-8g.img of=/dev/[sdb] bs=4M oflag=sync status=noxfer
+$ sudo dd if=hikey-jessie_alip_2015MMDD-nnn.img of=/dev/[sdb] bs=4M oflag=sync status=noxfer
 ```
 
 If your SD card capacity is more than 2GB capacity you may want to change the rootfs to use the rest of the SD card as follows:
