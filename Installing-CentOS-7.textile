@@ -15,14 +15,14 @@ cd /srv/tftp/
 wget http://mirror.centos.org/altarch/7/os/aarch64/EFI/BOOT/BOOTAA64.EFI
 wget http://mirror.centos.org/altarch/7/os/aarch64/EFI/BOOT/grubaa64.efi
 
-Downloading the CentOS *upstream* kernel and initrd:
+Downloading the CentOS *upstream* kernel (4.2, compatible with Overdrive and Mustang) and initrd:
 
 bc. mkdir /srv/tftp/centos7
 cd /srv/tftp/centos7
 wget http://mirror.centos.org/altarch/7/os/aarch64/images/pxeboot/vmlinuz
 wget http://mirror.centos.org/altarch/7/os/aarch64/images/pxeboot/initrd.img
 
-If you want to use the RP development image (which uses the 4.4 RP kernel), please download the following files instead:
+If you want to use the RP development image (which uses the 4.4 RP kernel, including support for D02), please download the following files instead:
 
 bc. wget https://builds.96boards.org/snapshots/reference-platform/components/centos-installer/latest/images/pxeboot/vmlinuz
 wget https://builds.96boards.org/snapshots/reference-platform/components/centos-installer/latest/images/pxeboot/initrd.img
@@ -33,12 +33,12 @@ bc. menuentry 'Install CentOS 7 ARM 64-bit' --class red --class gnu-linux --clas
     linux (tftp)/centos7/vmlinuz ip=dhcp inst.repo=http://mirror.centos.org/altarch/7/os/aarch64/
     initrd (tftp)/centos7/initrd.img
 }
-menuentry 'Install CentOS 7 ARM 64-bit - RP (experimental)' --class red --class gnu-linux --class gnu --class os {
+menuentry 'Install CentOS 7 ARM 64-bit - Reference Platform' --class red --class gnu-linux --class gnu --class os {
     linux (tftp)/centos7/vmlinuz ip=dhcp inst.stage2=https://builds.96boards.org/snapshots/reference-platform/components/centos-installer/latest/ inst.repo=http://mirror.centos.org/altarch/7/os/aarch64/ inst.ks=file:/ks.cfg
     initrd (tftp)/centos7/initrd.img
 }
 
-*Note:* @inst.ks@ is required for the reference platform entry because of the additional repository (that contains the kernel rpm package), which is available inside the @initrd.img@ including just @repo --name="rsalveti" --baseurl=http://repo.linaro.org/rpm/rsalveti/centos-7/repo/@.
+*Note:* @inst.ks@ is required for the reference platform entry because of the additional repository (that contains the kernel rpm package), which is available inside the @initrd.img@, including just @repo --name="rsalveti" --baseurl=http://repo.linaro.org/rpm/rsalveti/centos-7/repo/@.
 
 Also check the "RHEL 7":https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/chap-anaconda-boot-options.html and the "anaconda documentation":https://rhinstaller.github.io/anaconda/boot-options.html for additional boot options. One example is using *ip=eth1:dhcp* if you want to use the second network interface as default.
 
@@ -151,9 +151,9 @@ Menu items without that are not @[x]@ must be set. Enter the menu number associa
 
 h3. Finishing the installation
 
-After selecting the installation destination, the partitioning scheme, root password and users (optional), just enter @b@ to proceed with the installation.
+After selecting the install destination, partitioning scheme, root password and users (optional), just enter @b@ to proceed with the installation.
 
-Once the installation is completed, you should be able to simply reboot the system in order to boot your new CentOS 7 system.
+Once the installation is completed, you should be able to simply reboot the system in order to boot into your new CentOS 7 system.
 
 h3. Automating the installation with kickstart
 
@@ -163,6 +163,9 @@ Kickstart example:
 
 bc. cmdline
 url --url="http://mirror.centos.org/altarch/7/os/aarch64/"
+repo --name="CentOS" --baseurl=http://mirror.centos.org/altarch/7/os/aarch64/
+repo --name="Updates" --baseurl=http://mirror.centos.org/altarch/7/updates/aarch64/
+repo --name="rsalveti" --baseurl=http://repo.linaro.org/rpm/rsalveti/centos-7/repo/
 lang en_US.UTF-8
 keyboard us
 timezone --utc Etc/UTC
@@ -172,7 +175,7 @@ firewall --disabled
 firstboot --disabled
 selinux --disabled
 reboot
-network --bootproto=dhcp --device=eth1 --activate --onboot=on
+network --bootproto=dhcp --device=eth0 --activate --onboot=on
 ignoredisk --only-use=sda
 bootloader --location=mbr
 clearpart --drives=sda --all --initlabel
@@ -196,9 +199,12 @@ h4. Setting up grub.cfg
 
 Now back to your tftp server, change the original grub.cfg file adding the location of your kickstart file:
 
-bc. $ cat /srv/tftp/grub.cfg 
-menuentry 'Install CentOS 7 ARM 64-bit' --class red --class gnu-linux --class gnu --class os {
-    linux (tftp)/centos7/vmlinuz ip=eth0:dhcp inst.repo=http://mirror.centos.org/altarch/7/os/aarch64/ inst.ks=http://people.linaro.org/~ricardo.salveti/centos-ks.cfg
+bc. menuentry 'Install CentOS 7 ARM 64-bit' --class red --class gnu-linux --class gnu --class os {
+    linux (tftp)/centos7/vmlinuz ip=dhcp inst.repo=http://mirror.centos.org/altarch/7/os/aarch64/ inst.ks=http://people.linaro.org/~ricardo.salveti/centos-ks.cfg
+    initrd (tftp)/centos7/initrd.img
+}
+menuentry 'Install CentOS 7 ARM 64-bit - Reference Platform' --class red --class gnu-linux --class gnu --class os {
+    linux (tftp)/centos7/vmlinuz ip=dhcp inst.stage2=https://builds.96boards.org/snapshots/reference-platform/components/centos-installer/latest/ inst.repo=http://mirror.centos.org/altarch/7/os/aarch64/ inst.ks=http://people.linaro.org/~ricardo.salveti/centos-ks.cfg
     initrd (tftp)/centos7/initrd.img
 }
 
