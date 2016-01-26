@@ -184,8 +184,6 @@ part /boot --fstype=ext4 --size=512
 part / --fstype=ext4 --size=10240 --grow
 part swap --size=4000
 %packages
-@base
-@core
 wget
 net-tools
 chrony
