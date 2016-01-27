@@ -16,7 +16,8 @@
   - [[JTAG | JTAG-on-HiKey]]
   - [[Snapshots | LatestSnapshots]]
   - [Hi6220 SoC Spec](https://github.com/96boards/documentation/blob/master/hikey/Hi6220V100_Multi-Mode_Application_Processor_Function_Description.pdf)
-  - [Schematics](https://github.com/96boards/documentation/blob/master/hikey/96Boards-Hikey-Rev-A1.pdf)
+  - [Schematics - CircuitCo version](https://github.com/96boards/documentation/blob/master/hikey/96Boards-Hikey-Rev-A1.pdf)
+  - [Schematics - LeMaker version](https://github.com/96boards/documentation/blob/master/hikey/HiKey_schematics_lemaker_version.pdf)
   - [Quick Start for v4.1](https://github.com/96boards/documentation/wiki/Latest-Snapshot---Getting-Started-Guild-for-kernel-4.1)
 - [[Dragonboard 410c | Dragonboard-410c]]
   - [[Installation Guide for Linux and Android | Dragonboard-410c-Installation-Guide-for-Linux-and-Android]]
