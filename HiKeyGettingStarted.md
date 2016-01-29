@@ -691,7 +691,7 @@ Visit the release page which kernel image would you like to build from source,
 and refer the location of the git repository and the branch or tag used for the build.
 
 For the Landing Team releases:
-  http://builds.96boards.org/releases/hikey/linaro/debian/
+  http://builds.96boards.org/releases/hikey/linaro/debian/ <br>
 For the Reference Platform Build releases:
   http://builds.96boards.org/releases/reference-platform/debian/hikey/
 
