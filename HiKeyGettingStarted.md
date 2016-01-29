@@ -691,9 +691,9 @@ Visit the release page which kernel image would you like to build from source,
 and take notes the location of the git repository and the branch or tag used for the build.
 
 For the Landing Team releases: <br>
-  http://builds.96boards.org/releases/hikey/linaro/debian/ <br>
+&nbsp;  http://builds.96boards.org/releases/hikey/linaro/debian/ <br>
 For the Reference Platform Build releases: <br>
-  http://builds.96boards.org/releases/reference-platform/debian/hikey/
+&nbsp;  http://builds.96boards.org/releases/reference-platform/debian/hikey/
 
 Git clone the source code tree:
 ```
@@ -704,7 +704,7 @@ For the Landing Team releases: <br>
 ```
 $ git checkout -b working-hikey /name/of/tag (such as, 96boards-hikey-15.11 or 96boards-hikey-15.06)
 ```
-or
+or <br>
 For the Reference Platform Build releases: <br>
 ```
 $ git checkout /name/of/branch (such as, reference-hikey-rebase)
