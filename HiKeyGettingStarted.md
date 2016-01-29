@@ -752,7 +752,7 @@ $ sudo tar jcvf fw-modules.tar.bz2 *
 
 To include the drivers compiled above in a jessie image you would:
 
-a) In your browser, visit [http://repo.linaro.org/ubuntu/linaro-staging/pool/main/a/android-tools/](http://repo.linaro.org/ubuntu/linaro-staging/pool/main/a/android-tools/), find the package name of android-tools-fsutils_<version>_amd64.deb, then download with wget and install simg2img and make_ext4fs. Eg:
+a) In your browser, visit [http://repo.linaro.org/ubuntu/linaro-staging/pool/main/a/android-tools/](http://repo.linaro.org/ubuntu/linaro-staging/pool/main/a/android-tools/), find the package name of android-tools-fsutils_`<version>`_amd64.deb, then download with wget and install simg2img and make_ext4fs. Eg:
 
 ```
 $ wget https://repo.linaro.org/ubuntu/linaro-overlay/pool/main/a/android-tools/\
