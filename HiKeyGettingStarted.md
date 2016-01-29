@@ -697,15 +697,17 @@ For the Reference Platform Build releases: <br>
 
 Git clone the source code tree:
 ```
-$ git clone location-of-repository (such as, https://github.com/96boards/linux.git or https://github.com/rsalveti/linux.git)
+$ git clone /location/of/repository (such as, https://github.com/96boards/linux.git or https://github.com/rsalveti/linux.git)
 ```
 Checkout the branch or the tag which matches the build based on the information on the release page.
+For the Landing Team releases: <br>
 ```
-$ git checkout -b working-hikey name-of-tag (such as, 96boards-hikey-15.11)
+$ git checkout -b working-hikey /name/of/tag (such as, 96boards-hikey-15.11 or 96boards-hikey-15.06)
 ```
 or
+For the Reference Platform Build releases: <br>
 ```
-$ git checkout name-of-branch (such as, reference-hikey-rebase)
+$ git checkout /name/of/branch (such as, reference-hikey-rebase)
 ```
 
 To build the kernel:
