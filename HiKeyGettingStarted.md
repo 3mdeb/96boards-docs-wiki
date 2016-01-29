@@ -688,11 +688,11 @@ Note: the toolchain binaries are for a 32 bit host system. On Debian/Ubuntu, you
 The following instructions can then be used to build the kernel:
 
 Visit the release page which kernel image would you like to build from source,
-and refer the location of the git repository and the branch or tag used for the build.
+and take notes the location of the git repository and the branch or tag used for the build.
 
-For the Landing Team releases:
+For the Landing Team releases: <br>
   http://builds.96boards.org/releases/hikey/linaro/debian/ <br>
-For the Reference Platform Build releases:
+For the Reference Platform Build releases: <br>
   http://builds.96boards.org/releases/reference-platform/debian/hikey/
 
 Git clone the source code tree:
