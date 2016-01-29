@@ -687,20 +687,39 @@ Note: the toolchain binaries are for a 32 bit host system. On Debian/Ubuntu, you
 
 The following instructions can then be used to build the kernel:
 
+Visit the release page which kernel image would you like to build from source,
+and refer the location of the git repository and the branch or tag used for the build.
+
+For the Landing Team releases:
+  http://builds.96boards.org/releases/hikey/linaro/debian/
+For the Reference Platform Build releases:
+  http://builds.96boards.org/releases/reference-platform/debian/hikey/
+
 Git clone the source code tree:
 ```
-$ git clone https://github.com/96boards/linux.git
-$ git checkout -b working-hikey 96boards-hikey-15.11
+$ git clone location-of-repository (such as, https://github.com/96boards/linux.git or https://github.com/rsalveti/linux.git)
+```
+Checkout the branch or the tag which matches the build based on the information on the release page.
+```
+$ git checkout -b working-hikey name-of-tag (such as, 96boards-hikey-15.11)
+```
+or
+```
+$ git checkout name-of-branch (such as, reference-hikey-rebase)
 ```
 
 To build the kernel:
 ```
+$ export ARCH=arm64
+$ export CROSS_COMPILE=aarch64-linux-gnu-
 $ export LOCALVERSION="-linaro-hikey"
 
 $ make distclean 
-$ make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- defconfig 
-$ make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j8 Image modules hi6220-hikey.dtb
+$ make defconfig 
+$ make -j8 Image modules hi6220-hikey.dtb 2>&1 | tee build-log.txt
 ```
+
+If you encounter any error during the build, refer the log in 'build-log.txt'.
 
 ### WiFi Driver From Source
 
