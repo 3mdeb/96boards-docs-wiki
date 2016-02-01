@@ -1,4 +1,4 @@
-Welcome to the supporting documentation for [96boards](https://www.96boards.org/)
+Welcome to the supporting documentation for [96Boards](https://www.96boards.org/)
 
 **Table of Contents**
 
