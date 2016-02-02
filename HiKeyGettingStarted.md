@@ -33,6 +33,8 @@ If you already have a HiKey board, you will need to do the following:
 - Follow the instructions in [Board Recovery - Installing a Bootloader](#section-41), to update the bootloader on your board
 - Follow the instructions in [Updating the OS](#section-3), to install either the Debian or the Android Open Source Project (AOSP) build
 
+**Table of Contents**
+
   * [96Boards HiKey](#96boards-hikey)
     * [Getting Started](#getting-started)
       * [Updating to the new Release](#updating-to-the-new-release)
