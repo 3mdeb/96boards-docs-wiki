@@ -14,21 +14,6 @@ This document describes how to get started with the HiKey ARMv8 community develo
 
 **Table of Contents**
 
-1. [New Features](#section-0)
-2. [Pre-Installed Debian Linux](#section-1)
-Information on the Debian 8.0 ("jessie") OS installation software
-3. [Installing Android Open Source Project](#section-2)Information on loading the AOSP version of Android 5.1 as an alternative OS onto the HiKey board
-4. [Updating the OS](#section-3)
-Information on loading an OS update from 96Boards.org
-5. [Board Recovery](#section-4)
-Information on board recovery and/or loading bootloader software onto the HiKey board
-6. [Hardware notes](#section-5)
-7. [Known Issues](#section-6)
-8. [Building Software from Source Code](#section-7)
-Information on building software for the HiKey board from source code
-9. [Appendices](#appendix-1)
-Information on the partition table used on HiKey and the contents of the boot partition.
-
 ### Updating to the new Release
 
 If you already have a HiKey board, you will need to do the following:
