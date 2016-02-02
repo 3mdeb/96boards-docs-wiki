@@ -33,6 +33,42 @@ If you already have a HiKey board, you will need to do the following:
 - Follow the instructions in [Board Recovery - Installing a Bootloader](#section-41), to update the bootloader on your board
 - Follow the instructions in [Updating the OS](#section-3), to install either the Debian or the Android Open Source Project (AOSP) build
 
+  * [96Boards HiKey](#96boards-hikey)
+    * [Getting Started](#getting-started)
+      * [Updating to the new Release](#updating-to-the-new-release)
+    * [1. New Features](#1-new-features)
+    * [2. Pre-Installed Debian Linux](#2-pre-installed-debian-linux)
+      * [Power Supply](#power-supply)
+      * [Monitor](#monitor)
+      * [Powering up the board](#powering-up-the-board)
+      * [Wireless Network](#wireless-network)
+      * [Wired Network](#wired-network)
+      * [Bluetooth](#bluetooth)
+      * [Audio Device](#audio-device)
+      * [Other Useful Information](#other-useful-information)
+    * [3. Installing build of Android Open Source Project](#3-installing-build-of-android-open-source-project)
+    * [4. Updating the OS](#4-updating-the-os)
+      * [Debian Linux OS](#debian-linux-os)
+      * [Android Open Source Project (AOSP)](#android-open-source-project-aosp)
+    * [5. Board Recovery](#5-board-recovery)
+      * [Installing a Bootloader](#installing-a-bootloader)
+    * [6. Hardware Notes](#6-hardware-notes)
+      * [Schematics and HiKey Board Hardware User Guide](#schematics-and-hikey-board-hardware-user-guide)
+      * [CPU Load](#cpu-load)
+      * [HDMI Port](#hdmi-port)
+      * [USB Ports](#usb-ports)
+      * [UART Ports](#uart-ports)
+    * [7. Known Issues](#7-known-issues)
+    * [8. Building Software from Source Code](#8-building-software-from-source-code)
+      * [Bootloader From Source](#bootloader-from-source)
+      * [Kernel From Source](#kernel-from-source)
+      * [WiFi Driver From Source](#wifi-driver-from-source)
+      * [Install onto eMMC](#install-onto-emmc)
+      * [Install onto SD card](#install-onto-sd-card)
+      * [AOSP Build From Source](#aosp-build-from-source)
+      * [Appendix 1: Partition Information](#appendix-1-partition-information)
+
+
 <a name="section-0"></a>
 ## 1. New Features
 
