@@ -7,7 +7,7 @@ Please check this "video":http://connect.linaro.org/resource/sfo15/sfo15-104-the
 h3. Resources:
 
 h4. Latest News
-* Hikey and Dragonboard 401c builds with 4.3 kernel
+* Hikey and Dragonboard 410c builds with 4.3 kernel
 * ARM Juno r1, AMD Overdrive and HiSilicon D02 support with 4.4-rc4 kernel
 * "Kernel policy":https://github.com/96boards/documentation/wiki/RP-Kernel-Policy for both Enterprise and Consumer Editions now published
 * Instructions to setup of BigTop Hadoop and OpenStack Liberty published as part of the "EE documentation":https://github.com/96boards/documentation/wiki/ReferenceSoftwareEE
