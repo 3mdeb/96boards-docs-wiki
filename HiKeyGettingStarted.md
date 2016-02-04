@@ -485,6 +485,8 @@ Now connect power supply jack to your HiKey again.
 
 Check that the HiKey board is detected by your Linux PC
 
+Wait about 10 seconds.
+
 You should see the ID of the HiKey board returned
 ```
 $ sudo fastboot devices
