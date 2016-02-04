@@ -1,38 +1,5 @@
 # 96Boards HiKey
 
-## Getting Started
-
-This document describes how to get started with the HiKey ARMv8 community development boards using the release build shipped with the boards.
-
-**NOTE** that the June 2015 release comes with a fastboot bootloader based on HiSilicon code. It is deprecated and will not be supported in the upcoming releases. This Getting Started Guide therefore refers to the open source [ARM Trusted Firmware and UEFI bootloader](https://github.com/96boards/documentation/wiki/HiKeyUEFI). It is the supported bootloader for the HiKey board.
-
-**NOTE** there are two types of eMMC sized HiKey, 4GB vs. 8GB. Those with "LEMAKER" mark in top side and black in color are 8GB ones. Otherwise, they are 4GB.
-
-**NOTE** there are two types of LPDDR RAM sized HiKey, 1GB vs. 2GB. You can identify them by checking silkmasks on chips: K4E8E304EE-EGCE is 8Gb/1GB, K4E6E304EE-EGCE is 16Gb/2GB.
-
-**The following information is provided in this release notes:**
-
-1. [New Features](#section-0)
-2. [Pre-Installed Debian Linux](#section-1)
-Information on the Debian 8.0 ("jessie") OS installation software
-3. [Installing Android Open Source Project](#section-2)Information on loading the AOSP version of Android 5.1 as an alternative OS onto the HiKey board
-4. [Updating the OS](#section-3)
-Information on loading an OS update from 96Boards.org
-5. [Board Recovery](#section-4)
-Information on board recovery and/or loading bootloader software onto the HiKey board
-6. [Hardware notes](#section-5)
-7. [Known Issues](#section-6)
-8. [Building Software from Source Code](#section-7)
-Information on building software for the HiKey board from source code
-9. [Appendices](#appendix-1)
-Information on the partition table used on HiKey and the contents of the boot partition.
-
-### Updating to the new Release
-
-If you already have a HiKey board, you will need to do the following:
-- Follow the instructions in [Board Recovery - Installing a Bootloader](#section-41), to update the bootloader on your board
-- Follow the instructions in [Updating the OS](#section-3), to install either the Debian or the Android Open Source Project (AOSP) build
-
 ### Table of Contents
 
   * [96Boards HiKey](#96boards-hikey)
@@ -70,6 +37,38 @@ If you already have a HiKey board, you will need to do the following:
       * [AOSP Build From Source](#aosp-build-from-source)
       * [Appendix 1: Partition Information](#appendix-1-partition-information)
 
+## Getting Started
+
+This document describes how to get started with the HiKey ARMv8 community development boards using the release build shipped with the boards.
+
+**NOTE** that the June 2015 release comes with a fastboot bootloader based on HiSilicon code. It is deprecated and will not be supported in the upcoming releases. This Getting Started Guide therefore refers to the open source [ARM Trusted Firmware and UEFI bootloader](https://github.com/96boards/documentation/wiki/HiKeyUEFI). It is the supported bootloader for the HiKey board.
+
+**NOTE** there are two types of eMMC sized HiKey, 4GB vs. 8GB. Those with "LEMAKER" mark in top side and black in color are 8GB ones. Otherwise, they are 4GB.
+
+**NOTE** there are two types of LPDDR RAM sized HiKey, 1GB vs. 2GB. You can identify them by checking silkmasks on chips: K4E8E304EE-EGCE is 8Gb/1GB, K4E6E304EE-EGCE is 16Gb/2GB.
+
+**The following information is provided in this release notes:**
+
+1. [New Features](#section-0)
+2. [Pre-Installed Debian Linux](#section-1)
+Information on the Debian 8.0 ("jessie") OS installation software
+3. [Installing Android Open Source Project](#section-2)Information on loading the AOSP version of Android 5.1 as an alternative OS onto the HiKey board
+4. [Updating the OS](#section-3)
+Information on loading an OS update from 96Boards.org
+5. [Board Recovery](#section-4)
+Information on board recovery and/or loading bootloader software onto the HiKey board
+6. [Hardware notes](#section-5)
+7. [Known Issues](#section-6)
+8. [Building Software from Source Code](#section-7)
+Information on building software for the HiKey board from source code
+9. [Appendices](#appendix-1)
+Information on the partition table used on HiKey and the contents of the boot partition.
+
+### Updating to the new Release
+
+If you already have a HiKey board, you will need to do the following:
+- Follow the instructions in [Board Recovery - Installing a Bootloader](#section-41), to update the bootloader on your board
+- Follow the instructions in [Updating the OS](#section-3), to install either the Debian or the Android Open Source Project (AOSP) build
 
 <a name="section-0"></a>
 ## 1. New Features
