@@ -46,7 +46,7 @@ To create the boot image, you need a ramdisk image. For now it is recommended to
 
 ### How to create the boot image
 
-The tool _mkbootimg_ is a standalone application that will process all files and create the boot image that can then be booted on the target board, or flash into the on-board eMMC.
+The tool _mkbootimg_ is a standalone application that is part of skales.git above, that will process all files and create the boot image that can then be booted on the target board, or flash into the on-board eMMC.
 
 The boot image also contains the kernel bootargs, which can be changed as needed in the next command. If you want to mount the rootfs from the ramdisk, you can generate the boot image like this:
 
