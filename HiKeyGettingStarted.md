@@ -353,7 +353,7 @@ Extract the file. Install an SD card into your Linux PC. Make sure that you know
 **Note:** Adding the sync flag and others as outlined bellow are very important! Do not skip this option!
 
 ```
-$ sudo dd if=hikey-jessie_alip_2015MMDD-nnn.img of=XXX bs=4M oflag=sync status=noxfer
+$ sudo dd if=hikey-jessie_alip_2015MMDD-nnn.img of=/dev/[XXX such as sdb or mmcblk0] bs=4M oflag=sync status=noxfer
 ```
 
 **Note:** Be very careful not to overwrite your hard drive! In most cases, XXX will be mmcblk0 or sdb. This can be found by using the following sequence:
