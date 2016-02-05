@@ -350,17 +350,29 @@ Note: _developer version comes with no graphics UI; _alip version comes with LXD
 
 Extract the file. Install an SD card into your Linux PC. Make sure that you know the SD card device node before carrying out the next step.
 
-**Note:** for this example we assume the device node is `/dev/sdb`. Replace with your assigned SD card device.
+**Note:** Adding the sync flag and others as outlined bellow are very important! Do not skip this option!
 
 ```
-$ sudo dd if=hikey-jessie_alip_2015MMDD-nnn.img of=/dev/[sdb] bs=4M oflag=sync status=noxfer
+$ sudo dd if=hikey-jessie_alip_2015MMDD-nnn.img of=XXX bs=4M oflag=sync status=noxfer
 ```
-**Warning:** Executing the sync flag command as outlined above is very
-important! Do not skip this step!
 
-**Warning:** Be very careful not to overwrite your hard drive! In most
-cases, XXX will be mmcblk0 or sdb. This can be found by using the
-following sequence:
+**Note:** Be very careful not to overwrite your hard drive! In most cases, XXX will be mmcblk0 or sdb. This can be found by using the following sequence:
+
+For this example we assume the device node is `/dev/sdb`. Replace with your assigned SD card device.
+
+1. Make sure the SD Card is not in the host PC
+2. From the host PC terminal command line, run the following command:
+```shell
+   lsblk
+```
+3. Note the listed blocks such as sda, sdb, etc.
+4. Insert the SD Card into the host PC
+5. From the host PC terminal command line, run the following command:
+```shell
+   lsblk
+```
+6. There will be a new device in the list, this will be your SD Card
+   identity (XXX).  It also has a size parameter that should match the size of the SD Card.
 
 If your SD card capacity is more than 2GB capacity you may want to change the rootfs to use the rest of the SD card as follows:
 ```
