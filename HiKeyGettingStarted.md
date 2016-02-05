@@ -355,6 +355,12 @@ Extract the file. Install an SD card into your Linux PC. Make sure that you know
 ```
 $ sudo dd if=hikey-jessie_alip_2015MMDD-nnn.img of=/dev/[sdb] bs=4M oflag=sync status=noxfer
 ```
+**Warning:** Executing the sync flag command as outlined above is very
+important! Do not skip this step!
+
+**Warning:** Be very careful not to overwrite your hard drive! In most
+cases, XXX will be mmcblk0 or sdb. This can be found by using the
+following sequence:
 
 If your SD card capacity is more than 2GB capacity you may want to change the rootfs to use the rest of the SD card as follows:
 ```
