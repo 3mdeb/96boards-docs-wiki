@@ -1,3 +1,7 @@
+
+[<<< Back to 96Boards Documentation Home](https://github.com/96boards/documentation/wiki)
+
+
 # Abstract
 
 It is not always possible (nor recommended) to  connect development boards to global wireless networks in highly dense environments:  leaving security issues aside, as the network density increases the reliability of the network typically decreases.  
@@ -127,4 +131,3 @@ Note: Windows users wanting to connect to the 96Boards platform via direct USB l
 plug the USB cable to the OTG port in the 96Board. <br />
 install the Linux RNDIS driver located in the 96Boards kernel tree (Documentation/usb/linux.inf) on the Windows host <br />
 And then configure the Windows network as they would usually do.
-
