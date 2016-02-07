@@ -1,4 +1,4 @@
-# Dragonboard 410c Supporting Documentation
+# DragonBoard™ 410c Supporting Documentation
 
 [<<< Back to 96Boards Documentation Home](https://github.com/96boards/documentation/wiki)
 
@@ -32,6 +32,6 @@
 
 #### Other
 
-- [[Dragonboard 410c OpenEmbedded and Yocto]]
+- [[DragonBoard™ 410c OpenEmbedded and Yocto]]
 - [[How to force display resolution and bypass EDID]]
     
