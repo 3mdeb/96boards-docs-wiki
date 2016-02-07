@@ -32,6 +32,6 @@
 
 #### Other
 
-- [[DragonBoard™ 410c OpenEmbedded and Yocto]]
+- [DragonBoard™ 410c OpenEmbedded and Yocto](https://github.com/96boards/documentation/wiki/Dragonboard-410c-OpenEmbedded-and-Yocto)
 - [[How to force display resolution and bypass EDID]]
     
