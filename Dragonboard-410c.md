@@ -9,7 +9,6 @@
 #### Installation Guides for Linux and Android
 
 - [[Installation Guide for Linux and Android|Dragonboard-410c-Installation-Guide-for-Linux-and-Android]]
-- [[How to create a kernel boot image for fastboot|Dragonboard-410c-Boot-Image]]
 
 #### Compile and Install from Source
 
