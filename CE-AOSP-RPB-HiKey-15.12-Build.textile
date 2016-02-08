@@ -4,6 +4,7 @@ Additional AOSP repositories are hosted at:
 * https://github.com/96boards/android_hardware_ti_wpan
 * https://github.com/96boards/android_device_linaro_hikey
 * https://github.com/96boards/android_manifest
+* https://github.com/96boards/linux (branch android-hikey-linaro-4.1)
 
 *Build setup:*
 
