@@ -1,10 +1,7 @@
 h4. Building AOSP from source
 
-*NOTE*: This build instructions are not yet reflecting the 15.12 image, to be reviewed still
-
-AOSP sources are hosted in these repositories:
+Additional AOSP repositories are hosted at:
 * https://github.com/96boards/android_hardware_ti_wpan
-* https://github.com/96boards/android_external_wpa_supplicant_8
 * https://github.com/96boards/android_device_linaro_hikey
 * https://github.com/96boards/android_manifest
 
@@ -24,7 +21,7 @@ bc. <USER> ALL= NOPASSWD: /bin/mount
 bc. $ mkdir android/
 $ cd android/
 
-Download and extract the Mali vendor binaries in the above directory: http://builds.96boards.org/snapshots/hikey/linaro/binaries/20150706/vendor.tar.bz2
+Download and extract the Mali vendor binaries in the above directory: "http://builds.96boards.org/snapshots/hikey/linaro/binaries/20150706/vendor.tar.bz2":http://builds.96boards.org/snapshots/hikey/linaro/binaries/20150706/vendor.tar.bz2
 
 *Build the image:*
 
@@ -37,7 +34,3 @@ $ source build/envsetup.sh
 $ lunch hikey-userdebug
 $ make droidcore -j8
 $ cd out/target/product/hikey
-
-h4. TODO
-
-* Update to reflect the latest/current build
