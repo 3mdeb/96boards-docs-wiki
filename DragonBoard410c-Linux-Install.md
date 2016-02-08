@@ -32,7 +32,7 @@ This method requires the following hardware:
 - USB Mouse and/or keyboard
 - HDMI Monitor with full size HDMI cable
 
-Skip to the [Install Debian Using SD Card](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard410c-Linux-Install#install-debian-using-sd-card) section to use this method.   
+Skip to the [Install Debian Using SD Card](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#install-debian-using-sd-card) section to use this method.   
 
 ## Fastboot Method
 Fastboot is supported by the board and can be used for installs.  This is for advanced users who are most likely modifying/customizing source code and will need to download such updates to the board for test/execution. When installing Debian using Fastboot, you will have the option to install either the Developer(console-only) image, or the LXDE(Desktop) image.  
@@ -46,7 +46,7 @@ This method requires the following hardware:
 - USB Mouse and/or keyboard (not required to perform flash)
 - HDMI Monitor with full size HDMI cable (not required to perform flash)
 
-Skip to the [Install Debian Using Fastboot](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard410c-Linux-Install#install-debian-using-fastboot) to use this method.
+Skip to the [Install Debian Using Fastboot](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#install-debian-using-fastboot) to use this method.
 
 ***
 
@@ -54,21 +54,21 @@ Skip to the [Install Debian Using Fastboot](https://github.com/sdrobertw/test-wi
 
 **Choose your Installation Method:**
 
-- [**Install Debian using SD Card**](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard410c-Linux-Install#install-debian-using-sd-card)
-- [**Install Debian Using Fastboot**](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard410c-Linux-Install#install-debian-using-fastboot)
+- [**Install Debian using SD Card**](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#install-debian-using-sd-card)
+- [**Install Debian Using Fastboot**](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#install-debian-using-fastboot)
 
 
 ***
 
 
 # Install Debian using SD Card
-[Back to Step 2](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard410c-Linux-Install#step-2-choose-your-method)
+[Back to Step 2](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#step-2-choose-your-method)
 
 #### Step 3: Choose your Host Machine
 
-- [**Linux Host**](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard410c-Linux-Install#linux-host)
-- [**Mac OSX Host**](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard410c-Linux-Install#mac-osx-host)
-- [**Windows Host**](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard410c-Linux-Install#windows-host)
+- [**Linux Host**](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#linux-host)
+- [**Mac OSX Host**](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#mac-osx-host)
+- [**Windows Host**](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#windows-host)
 
 
 ***
@@ -76,15 +76,15 @@ Skip to the [Install Debian Using Fastboot](https://github.com/sdrobertw/test-wi
 
 ## Linux Host
 
-- [Getting Started](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard410c-Linux-Install#getting-started)
-- [Install Image onto SD Card](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard410c-Linux-Install#install-image-onto-sd-card)
-- [Flashing SD Card Image to the DragonBoard™ 410c](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard410c-Linux-Install#flashing-sd-card-image-to-the-dragonboard-410c)
+- [Getting Started](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#getting-started)
+- [Install Image onto SD Card](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#install-image-onto-sd-card)
+- [Flashing SD Card Image to the DragonBoard™ 410c](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#flashing-sd-card-image-to-the-dragonboard-410c)
 
 
 
 This section is intended for users who would like to use the SD Card Method for Linux installation with their Linux host machine.
 
-Please watch this [optional video tutorial]() if you are having trouble following the document.
+Please watch this [optional video tutorial]() (COMING SOON - 02/13/16) if you are having trouble following the document.
 
 ### Getting Started
 
@@ -122,7 +122,7 @@ important! Do not skip this step!
 cases, XXX will be mmcblk0 or sdb.
 
 > **YY** is Debian release number of downloaded file
-**XXX** is the SD card device name ([Click here for instructions on how to find microSD card device name](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard410c-Linux-Install#instructions-on-how-to-find-microsd-card-devices-name-in-linux-xxx))
+**XXX** is the SD card device name ([Click here for instructions on how to find microSD card device name](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#instructions-on-how-to-find-microsd-card-devices-name-in-linux-xxx))
 
 **Flashing your SD card could take several minutes. Please be patient. When SD card is done flashing, eject device and move to the next section.**
 
@@ -174,13 +174,13 @@ from eMMC on the DragonBoard™ 410c!**
 
 ## Mac OSX Host
 
-- [Getting Started](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard410c-Linux-Install#getting-started-1)
-- [Install Image onto SD Card](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard410c-Linux-Install#install-image-onto-sd-card-1)
-- [Flashing SD Card Image to the DragonBoard™ 410c](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard410c-Linux-Install#flashing-sd-card-image-to-the-dragonboard-410c-1)
+- [Getting Started](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#getting-started-1)
+- [Install Image onto SD Card](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#install-image-onto-sd-card-1)
+- [Flashing SD Card Image to the DragonBoard™ 410c](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#flashing-sd-card-image-to-the-dragonboard-410c-1)
 
 This section is intended for users who would like to use the SD Card Method for Linux installation with their Mac OS X host machine.
 
-Please watch this [optional video tutorial]() if you are having trouble following the document.
+Please watch this [optional video tutorial]() (COMING SOON - 02/13/16) if you are having trouble following the document.
 
 ### Getting Started
 
@@ -219,7 +219,7 @@ important! Do not skip this step!
 cases, XXX will be disk1, disk2, etc...
 
 > **YY** is Debian release number of downloaded file
-**XXX** is the SD card device name ([Click here for instructions on how to find microSD card device name](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard410c-Linux-Install#instructions-on-how-to-find-microsd-card-devices-name-in-mac-os-x-xxx))
+**XXX** is the SD card device name ([Click here for instructions on how to find microSD card device name](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#instructions-on-how-to-find-microsd-card-devices-name-in-mac-os-x-xxx))
 
 **Flashing your SD card could take several minutes. Please be patient. When SD card is done flashing, eject device and move to the next section.**
 
@@ -272,13 +272,13 @@ from eMMC on the DragonBoard™ 410c!**
 
 ## Windows Host
 
-- [Getting Started](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard410c-Linux-Install#getting-started-2)
-- [Install Image using SD Card](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard410c-Linux-Install#install-image-using-sd-card)
-- [Flashing SD Card Image to the DragonBoard™ 410c](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard410c-Linux-Install#flashing-sd-card-image-to-the-dragonboard-410c-2)
+- [Getting Started](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#getting-started-2)
+- [Install Image using SD Card](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#install-image-onto-sd-card-2)
+- [Flashing SD Card Image to the DragonBoard™ 410c](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#flashing-sd-card-image-to-the-dragonboard-410c-2)
 
 This section is intended for users who would like to use the SD Card Method for Linux installation with their Windows host machine.
 
-Please watch this [optional video tutorial]() if you are having trouble following the document.
+Please watch this [optional video tutorial]() (COMING SOON - 02/13/16) if you are having trouble following the document.
 
 ### Getting Started
 
@@ -362,13 +362,13 @@ from eMMC on the DragonBoard™ 410c!**
 
 
 # Install Debian Using Fastboot
-[Back to Step 2](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard410c-Linux-Install#step-2-choose-your-method)
+[Back to Step 2](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#step-2-choose-your-method)
 
 #### Step 3: Choose your Host Machine
 
-- [**Linux Host**](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard410c-Linux-Install#linux-host-1)
-- [**Mac OSX Host**](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard410c-Linux-Install#mac-osx-host-1)
-- [**Windows Host**](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard410c-Linux-Install#windows-host-1)
+- [**Linux Host**](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#linux-host-1)
+- [**Mac OSX Host**](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#mac-osx-host-1)
+- [**Windows Host**](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#windows-host-1)
 
 
 ***
@@ -376,16 +376,16 @@ from eMMC on the DragonBoard™ 410c!**
 
 ##Linux Host
 
-- [Getting Started]()
-- [Flash Bootloader into on-board eMMC]()
-- [Flash Linaro/Debian Release]()
+- [Getting Started](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#getting-started-3)
+- [Flash Bootloader into on-board eMMC](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#flash-bootloader-into-on-board-emmc)
+- [Flash Linaro/Debian Release](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#flash-linarodebian-release)
 
 ### Getting Started
 
 This section will explain the fastboot method for installation of the Linux images onto
 the DragonBoard™ 410c. 
 
-Please watch this [optional video tutorial]() if you are having trouble following the document.
+Please watch this [optional video tutorial]() (COMING SOON - 02/13/16) if you are having trouble following the document.
 
 **This is for advanced users that plan to be flashing many versions of the OS into the DragonBoard™ 410c.**
 
@@ -522,16 +522,16 @@ Enjoy your new operating system!
 
 ## Mac OSX Host
 
-- [Getting Started]()
-- [Flash Bootloader into on-board eMMC]()
-- [Flash Linaro/Debian Release]()
+- [Getting Started](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#getting-started-4)
+- [Flash Bootloader into on-board eMMC](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#flash-bootloader-into-on-board-emmc-1)
+- [Flash Linaro/Debian Release](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#flash-linarodebian-release-1)
 
 ### Getting Started
 
 This section will explain the fastboot method for installation of the Linux images onto
 the DragonBoard™ 410c.  
 
-Please watch this [optional video tutorial]() if you are having trouble following the document.
+Please watch this [optional video tutorial]()(COMING SOON - 02/13/16) if you are having trouble following the document.
 
 **This is for advanced users that plan to be flashing many versions of the OS into the DragonBoard™ 410c.**
 
@@ -673,18 +673,18 @@ Enjoy your new operating system!
 
 ***
 
-## Windows Host
+## Windows Host (COMING SOON - 02/11/16)
 
-- [Getting Started]()
-- [Flash Bootloader into on-board eMMC]()
-- [Flash Linaro/Debian Release]()
+- [Getting Started](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#getting-started-5)
+- [Flash Bootloader into on-board eMMC](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#flash-bootloader-into-on-board-emmc-2)
+- [Flash Linaro/Debian Release](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#flash-linarodebian-release-2)
 
 ### Getting Started
 
 This section will explain the fastboot method for installation of the Linux images onto
 the DragonBoard™ 410c. 
 
-Please watch this [optional video tutorial]() if you are having trouble following the document.
+Please watch this [optional video tutorial]()(COMING SOON - 02/13/16) if you are having trouble following the document.
 
 ### Flash Bootloader into on-board eMMC
 
