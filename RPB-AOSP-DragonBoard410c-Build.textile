@@ -16,7 +16,7 @@ Also install make sure to install the following packages:
 
 bc. sudo apt-get install libfdt-dev python-mako gettext
 
-*Download the code:*
+*Download the firmware blobs:*
 
 bc. mkdir android/
 cd android/
