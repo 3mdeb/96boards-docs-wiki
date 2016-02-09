@@ -760,7 +760,7 @@ Your device name can vary, this is why you should check your list of devices bef
 
 It's time to continue with the flashing process.
 
-[Click here to go back](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard410c-Linux-Install#getting-started)
+[Click here to go back](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#install-image-onto-sd-card)
 
 ## or 
 
@@ -785,7 +785,9 @@ following sequence:
 6. There will be a new device in the list, this will be your SD Card
    identity (XXX).  It also has a size parameter that should match the size of the SD Card.
 
-[Click here to go back](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard410c-Linux-Install#getting-started)
+[Click here to go back](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#install-image-onto-sd-card)
+
+***
 
 
 ## Instructions on how to find microSD card devices name in Mac OS X (XXX)
@@ -861,4 +863,4 @@ It is important to notice and compare the characteristics of the device to what 
 
 It's time to continue with the flashing process.
 
-[Click here to go back](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard410c-Linux-Install#install-image-onto-sd-card-1)
+[Click here to go back](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#install-image-onto-sd-card-1)
