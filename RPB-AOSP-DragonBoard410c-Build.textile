@@ -1,12 +1,12 @@
 h4. Building AOSP from source
 
 Additional AOSP repositories are hosted at:
-* https://github.com/96boards/android_device_linaro_db410c
-* https://github.com/96boards/android_manifest
-* https://github.com/rsalveti/linux (branch qcomlt-4.4)
-* http://github.com/robherring/mesa
-* http://github.com/robherring/drm_gralloc
-* http://github.com/robherring/drm_hwcomposer
+* "https://github.com/96boards/android_device_linaro_db410c":https://github.com/96boards/android_device_linaro_db410c
+* "https://github.com/96boards/android_manifest":https://github.com/96boards/android_manifest
+* "https://github.com/rsalveti/linux (branch qcomlt-4.4)":https://github.com/rsalveti/linux
+* "https://github.com/robherring/mesa":https://github.com/robherring/mesa
+* "https://github.com/robherring/drm_gralloc":https://github.com/robherring/drm_gralloc
+* "https://github.com/robherring/drm_hwcomposer":https://github.com/robherring/drm_hwcomposer
 
 *Build setup:*
 
