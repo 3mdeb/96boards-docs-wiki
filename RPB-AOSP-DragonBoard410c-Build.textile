@@ -13,6 +13,7 @@ Additional AOSP repositories are hosted at:
 Please setup the host machine by following the instructions here: "http://source.android.com/source/initializing.html":http://source.android.com/source/initializing.html
 
 Also install make sure to install the following packages:
+
 bc. sudo apt-get install libfdt-dev python-mako gettext
 
 *Download the code:*
