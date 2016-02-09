@@ -15,7 +15,9 @@ There are two primary ways to install software onto the DragonBoard™ 410c:
 3. Choose your host machine (This is the machine you will be using throughout the process)
 4. Follow your custom set of steps
 
-If you are having trouble with this document please [click here](https://youtu.be/EGLHbs5ZDRQ) for a video walkthrough.
+If you are having trouble with this document please <a href="https://youtu.be/EGLHbs5ZDRQ" target="_blank">click here</a> for a video walkthrough.
+
+
 
 ***
 
