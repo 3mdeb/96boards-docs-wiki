@@ -41,11 +41,11 @@
 
 This document describes how to get started with the HiKey ARMv8 community development boards using the release build shipped with the boards.
 
-**NOTE** that the June 2015 release comes with a fastboot bootloader based on HiSilicon code. It is deprecated and will not be supported in the upcoming releases. This Getting Started Guide therefore refers to the open source [ARM Trusted Firmware and UEFI bootloader](https://github.com/96boards/documentation/wiki/HiKeyUEFI). It is the supported bootloader for the HiKey board.
+**NOTE:** that the June 2015 release comes with a fastboot bootloader based on HiSilicon code. It is deprecated and will not be supported in the upcoming releases. This Getting Started Guide therefore refers to the open source [ARM Trusted Firmware and UEFI bootloader](https://github.com/96boards/documentation/wiki/HiKeyUEFI). It is the supported bootloader for the HiKey board.
 
-**NOTE** there are two types of eMMC sized HiKey, 4GB vs. 8GB. Those with "LEMAKER" mark in top side and black in color are 8GB ones. Otherwise, they are 4GB.
+**NOTE:** there are two types of eMMC sized HiKey, 4GB vs. 8GB. Those with "LEMAKER" mark in top side and black in color are 8GB ones. Otherwise, they are 4GB.
 
-**NOTE** there are two types of LPDDR RAM sized HiKey, 1GB vs. 2GB. You can identify them by checking silkmasks on chips: K4E8E304EE-EGCE is 8Gb/1GB, K4E6E304EE-EGCE is 16Gb/2GB.
+**NOTE:** there are two types of LPDDR RAM sized HiKey, 1GB vs. 2GB. You can identify them by checking silkmasks on chips: K4E8E304EE-EGCE is 8Gb/1GB, K4E6E304EE-EGCE is 16Gb/2GB.
 
 **The following information is provided in this release notes:**
 
@@ -148,11 +148,11 @@ The blue LED between the microUSB and the Type A USB on the front board edge ind
 
 Bluetooth audio devices are supported on HiKey. Follow normal procedures of connecting a bluetooth device to connect to your board.
 
-Note: HDMI audio is not supported in this release.
+**NOTE:** HDMI audio is not supported in this release.
 
 Once Bluetooth sound sink is connected, you can open the LXMusic player from the Sound & Video menu. Create a playlist from your music files. Supported audio formats are .mp3 and .ogg. You should now be able to play from the LXMusic player. 
 
-Note: LXmusic uses xmms2 as the player backend, you may need to install xmms2 and related plugins if they are not installed, otherwise music may cannot be played.
+**NOTE:** LXmusic uses xmms2 as the player backend, you may need to install xmms2 and related plugins if they are not installed, otherwise music may cannot be played.
 ```
 $ sudo apt-get install xmms2 xmms2-plugin-*
 ```
@@ -263,7 +263,7 @@ $ sudo fastboot devices
 
 Then install the update using the downloaded files.
 
-Note: the ptable must be flashed first. Wait for a few seconds after the reboot command to allow the bootloader to restart using the new partition table. (Example goes with 8G)
+**NOTE:** the ptable must be flashed first. Wait for a few seconds after the reboot command to allow the bootloader to restart using the new partition table. (Example goes with 8G)
 ```
 $ sudo fastboot flash ptable ptable-aosp-8g.img
 $ sudo fastboot reboot
@@ -303,7 +303,7 @@ Download the following files onto your Linux PC from:
 - boot-fat.uefi.img.gz
 - hikey-jessie_alip_2015MMDD-nnn-4g.emmc.img.gz (for 4G board) or hikey-jessie_alip_2015MMDD-nnn-8g.emmc.img.gz (for 8G board)
 
-Note: _developer version comes with no graphics UI; _alip version comes with LXDE UI.
+**NOTE:** _developer version comes with no graphics UI; _alip version comes with LXDE UI.
 
 Download the following file from:
 [https://builds.96boards.org/releases/hikey/linaro/binaries/latest](https://builds.96boards.org/releases/hikey/linaro/binaries/latest)
@@ -325,7 +325,7 @@ $ sudo fastboot devices
 
 Then install the update using the downloaded files:
 
-Note: the ptable must be flashed first. Wait for a few seconds after the reboot command to allow the bootloader to restart using the new partition table. (Example goes with 8G board)
+**NOTE:** the ptable must be flashed first. Wait for a few seconds after the reboot command to allow the bootloader to restart using the new partition table. (Example goes with 8G board)
 ```
 $ sudo fastboot flash ptable ptable-linux-8g.img
 $ sudo fastboot reboot
@@ -338,7 +338,7 @@ You may now use the updated OS.
 
 **Using an SD Card**
 
-NOTE: The UEFI bootloader on HiKey also enables booting a kernel and root file system installed on an SD card (microSD). To control boot order, follow [the instruction here](https://github.com/96boards/documentation/wiki/HiKeyUEFI#section-boot-order). 
+**NOTE:** The UEFI bootloader on HiKey also enables booting a kernel and root file system installed on an SD card (microSD). To control boot order, follow [the instruction here](https://github.com/96boards/documentation/wiki/HiKeyUEFI#section-boot-order). 
 
 This section describes how to prepare a bootable SD card.
 
@@ -346,17 +346,17 @@ Download the following file onto your Linux PC from:
 [https://builds.96boards.org/releases/hikey/linaro/debian/latest](https://builds.96boards.org/releases/hikey/linaro/debian/latest)
   - hikey-jessie_alip_2015MMDD-nnn-4g.img.gz or hikey-jessie_alip_2015MMDD-nnn-8g.img.gz
 
-Note: _developer version comes with no graphics UI; _alip version comes with LXDE UI.
+**NOTE:** _developer version comes with no graphics UI; _alip version comes with LXDE UI.
 
 Extract the file. Install an SD card into your Linux PC. Make sure that you know the SD card device node before carrying out the next step.
 
-**Note:** Adding the sync flag and others as outlined bellow are very important! Do not skip this option!
+**NOTE:** Adding the sync flag and others as outlined bellow are very important! Do not skip this option!
 
 ```
 $ sudo dd if=hikey-jessie_alip_2015MMDD-nnn.img of=/dev/[XXX such as sdb or mmcblk0] bs=4M oflag=sync status=noxfer
 ```
 
-**Note:** Be very careful not to overwrite your hard drive! In most cases, XXX will be mmcblk0 or sdb. This can be found by using the following sequence:
+**NOTE:** Be very careful not to overwrite your hard drive! In most cases, XXX will be mmcblk0 or sdb. This can be found by using the following sequence:
 
 For this example we assume the device node is `/dev/sdb`. Replace with your assigned SD card device.
 
@@ -444,9 +444,9 @@ Please refer to the [Hardware User Guide](https://www.96boards.org/wp-content/up
 
 Now connect the HiKey power supply to the board.
 
-**Note:** USB does NOT power the HiKey board. You must use an external power supply.
+**NOTE:** USB does NOT power the HiKey board. You must use an external power supply.
 
-**Note:** The HiKey board will remain in USB load mode for 90 seconds from power up. If you take longer than 90 seconds to start the install then power cycle the board before trying again.
+**NOTE:** The HiKey board will remain in USB load mode for 90 seconds from power up. If you take longer than 90 seconds to start the install then power cycle the board before trying again.
 
 Wait about 5 seconds and then check that the HiKey board has been recognized by your Linux PC:
 ```
@@ -477,7 +477,7 @@ After the python command has been issued you should see the following output. If
 Sending l-loader.bin ...
 Done
 ```
-Note: You may see the word “failed” before Done. This is under investigation but is not fatal. As long as the “Done” is printed at the end you may proceed.
+**NOTE:** You may see the word “failed” before Done. This is under investigation but is not fatal. As long as the “Done” is printed at the end you may proceed.
 
 The bootloader has now been installed into RAM. Wait a few seconds for the fastboot application to actually load. The following fastboot commands then load the partition table, the bootloader and other necessary files into the HiKey eMMC flash memory (4G or 8G). Taking 8G as example.
 ```
@@ -513,7 +513,7 @@ $ sudo fastboot devices
 
 Your bootloader has been successfully installed and you are now ready to install the operating system system files into the eMMC flash memory (see [Updating the OS](#section-3), above). For Debian you will need to load only the system partition, and for AOSP the cache, system and user data partitions. 
 
-**Note:**
+**NOTE:**
 
 This bootloader is based on UEFI and includes:
 - ARM Trusted Firmware
@@ -557,7 +557,7 @@ The Python download script requires Python 2. Make sure you're not defaulted to 
 $ python --version
 ```
 
-**Note:** Python 3 currently has a serial library bug, and will fail during data transfer - so if you are using Python 3 then you will need to install and/or change to Python 2.7:
+**NOTE:** Python 3 currently has a serial library bug, and will fail during data transfer - so if you are using Python 3 then you will need to install and/or change to Python 2.7:
 ```
 $ sudo apt-get install python2.7 python2.7-dev
 $ alias python=python2.7
@@ -634,7 +634,7 @@ Finally, **if you are still having difficulties you can revert to a built-in 720
 [Information on Android To Be Written]
 At the moment resolution is locked at **1280x720p.**(do not use hotkey Alt+PrtScr+g).<br\>
 
-Note: the fixed settings may not work on all monitors/TVs but have been demonstrated to work on most. 
+**NOTE:** the fixed settings may not work on all monitors/TVs but have been demonstrated to work on most. 
 
 <a name="section-53"></a>
 ### USB Ports 
@@ -672,7 +672,7 @@ Alternatively, you can modify grub.cfg in the boot image to switch to other UART
 * /EFI/BOOT/grub.cfg (linux boot line) <br\>
 `linux /boot/Image console=tty0 console=ttyAMA3,115200 root=/dev/disk/by-partlabel/system rootwait rw quiet efi=noruntime`
 
-Note: the LS expansion port I/O pins on the 96Boards 2mm header, including the UART signals, are at **1.8V** levels. 
+**NOTE:** the LS expansion port I/O pins on the 96Boards 2mm header, including the UART signals, are at **1.8V** logic levels.
 
 <a name="section-6"></a>
 ## 7. Known Issues 
@@ -740,7 +740,7 @@ $ tar --strip-components=1 -C ~/arm64-tc -xf gcc-linaro-aarch64-linux-gnu-4.9-20
 $ export PATH=~/arm64-tc/bin:$PATH
 ```
 
-Note: the toolchain binaries are for a 32 bit host system. On Debian/Ubuntu, you should install multiarch-support and enabled i386 architecture. On Fedora, you should install glibc.i686 package.
+**NOTE:** the toolchain binaries are for a 32 bit host system. On Debian/Ubuntu, you should install multiarch-support and enabled i386 architecture. On Fedora, you should install glibc.i686 package.
 
 The following instructions can then be used to build the kernel:
 
@@ -852,7 +852,7 @@ $ sudo make_ext4fs -o -L rootfs -l 2G -s jessie.updated.img mnt/
 $ sudo umount mnt/
 ```
 
-Note: by rebuilding the image file you could also transfer your public ssh keys or private files - like wifi credentials - to the target before booting it.
+**NOTE:** by rebuilding the image file you could also transfer your public ssh keys or private files - like wifi credentials - to the target before booting it.
 
 At this point you would have an image with the required drivers. Now You will need to decide whether you want your kernel to install on internal eMMC, or on an installed microSD card.
 
@@ -904,7 +904,7 @@ $ sudo fastboot flash boot boot-fat.uefi.img
 $ sudo fastboot reboot
 ```
 
-Note: if you make ANY of your own changes to the tagged tree your built kernel will be named 3.18.0-linaro-hikey+ (use `uname -a` to see the kernel name). This means that the installed kernel modules in /lib/modules will not work correctly unless you install a new set of kernel modules in /lib/modules from your kernel build.
+**NOTE:** if you make ANY of your own changes to the tagged tree your built kernel will be named 3.18.0-linaro-hikey+ (use `uname -a` to see the kernel name). This means that the installed kernel modules in /lib/modules will not work correctly unless you install a new set of kernel modules in /lib/modules from your kernel build.
 
 ### Install onto SD card
 
@@ -915,7 +915,7 @@ Note: if you make ANY of your own changes to the tagged tree your built kernel w
 $ sudo cp -a arch/arm64/boot/Image arch/arm64/boot/dts/hi6220-hikey.dtb /dev/sda1/boot/
 ```
 
-Note: File names must not be changed - Refer to [Appendix 1](#appendix-1) to see the 4 files that are expected to be in the boot partition. If any of these are missing from the SD card boot partition, HiKey won't boot successfully. User need to select booting from eMMC by manual instead at this time.
+**NOTE:** File names must not be changed - Refer to [Appendix 1](#appendix-1) to see the 4 files that are expected to be in the boot partition. If any of these are missing from the SD card boot partition, HiKey won't boot successfully. User need to select booting from eMMC by manual instead at this time.
 
 **The boot priority of SD card is higher than boot priority of eMMC by default. But user could change the priority. Details are illustrated in "Boot Sequence" in HiKey UEFI wiki.**
 
@@ -937,7 +937,7 @@ AOSP sources are hosted in these repositories:
 
 Please setup the host machine by following the instructions here: [https://source.android.com/source/initializing.html](https://source.android.com/source/initializing.html)
 
-NOTE: The build tries to mount a loop device as fat partition to create the boot-fat.img filesystem image. Please make sure your user is allowed to run those commands in sudo without password by running "visudo" and appending the following lines (replacing "`<USER>`" with your username):
+**NOTE:** The build tries to mount a loop device as fat partition to create the boot-fat.img filesystem image. Please make sure your user is allowed to run those commands in sudo without password by running "visudo" and appending the following lines (replacing "`<USER>`" with your username):
 ```
 <USER> ALL= NOPASSWD: /bin/mount
 <USER> ALL= NOPASSWD: /bin/umount
