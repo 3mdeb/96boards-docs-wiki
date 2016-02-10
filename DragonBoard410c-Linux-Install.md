@@ -15,7 +15,7 @@ There are two primary ways to install software onto the DragonBoard™ 410c:
 3. Choose your host machine (This is the machine you will be using throughout the process)
 4. Follow your custom set of steps
 
-If you are having trouble with this document please <a href="https://youtu.be/EGLHbs5ZDRQ" target="_blank">click here</a> for a video walkthrough.
+If you are having trouble with this document please <a href="https://youtu.be/JoL1rQhJKuA" target="_blank">click here</a> for a video walkthrough.
 
 
 
@@ -83,10 +83,10 @@ Skip to the [Install Debian Using Fastboot](https://github.com/96boards/document
 - [Flashing SD Card Image to the DragonBoard™ 410c](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#flashing-sd-card-image-to-the-dragonboard-410c)
 
 
+***
 
 This section is intended for users who would like to use the SD Card Method for Linux installation with their Linux host machine.
 
-Please watch this [optional video tutorial]() (COMING SOON - 02/13/16) if you are having trouble following the document.
 
 ### Getting Started
 
@@ -387,60 +387,38 @@ from eMMC on the DragonBoard™ 410c!**
 This section will explain the fastboot method for installation of the Linux images onto
 the DragonBoard™ 410c. 
 
-Please watch this [optional video tutorial]() (COMING SOON - 02/13/16) if you are having trouble following the document.
+**Step 1**: Make sure fastboot is set up on host computer. Android SDK “Tools only” for Linux can be downloaded [here](http://developer.android.com/sdk)
 
-**This is for advanced users that plan to be flashing many versions of the OS into the DragonBoard™ 410c.**
+- The Linux “Tools Only” SDK download does not come with fastboot, you will need to use the Android SDK Manager to install platform-tools.
+- To do this follow the “SDK Readme.txt” instructions included in your SDK “Tools Only” download.
 
-**Prerequisites:**
+If you are still having trouble setting up fastboot, [click here](https://youtu.be/W_zlydVBftA) for a short tutorial video
 
-**Before we can start flashing the appropriate files onto you DragonBoard™ 410c**:
+**Step 2**: Connect host computer to DragonBoard™ 410c
 
-- You will need to acquire the appropriate tools (ADB and Fastboot).
-- You will need to know how to boot the DragonBoard™ 410c up into fastboot mode. 
-- You will need to download all files necessary for install.
+- DragonBoard™ 410c must be powered off (unplugged from power)
+- Make sure microSD card slot on DragonBoard™ 410c is empty
+- S6 switch on DragonBoard™ 410c must be set to ‘0-0-0-0’. All switches should be in “off” position
+- Connect USB to microUSB cable from host computer to DragonBoard™ 410c
 
-**Since the bootloader on this board supports fastboot. The developer should only have to focus on getting fastboot installed on his/her host PC.**
+**Step 3**: Boot DragonBoard™ 410c into fastboot mode
 
-The following steps will walk you through the download and installation of Fastboot onto your host MAC OS X machine:
+**Please read all bullet points before attempting**
 
-**Step 1**: Download latest version of the adb-fastboot-install file <a href="https://code.google.com/archive/p/adb-fastboot-install/downloads" target="_blank">here</a>
-
-Clicking the link above will download the appropriate file into your "Downloads" folder.
-
-
-**Step 2**: Open your terminal by pressing Command+Space and typing in Terminal. Execute the following commands:
-
-```shell
-# cd to the directory the ADB and Fastboot file were extracted to, this will most likely be your Downloads folder
-
-$ cd <extraction directory>
-$ cd Android
-$ ./ADB-Install-Linux.sh
-
-# This command will require root permission, enter your password
-```
-You have now moved both ADB and Fastboot to your `/usr/bin`, this will allow them utilized from anywhere in your terminal.
-
-Simply type `fastboot` or `adb` from your terminal command line to make sure everything is working properly.
-
-**Step 3**: Now that we are set up we will need to connect our host machine to our DragonBoard™ 410c and boot into Fastboot mode.
-
-**Connect your host machine to your DragonBoard™ 410c using a USB to microUSB cable and follow these instructions:
-
-- Micro SD Card slot on DragonBoard™ 410c must be empty
-- S6 switch on the DragonBoard™ 410c must be set to: `0-0-0-0` {All switches in off position}
-- Press and hold the Vol (-) button on the DragonBoard™ 410c {S4}, DragonBoard™ 410c should not be powered on yet
-- While pressing S4 button, power up the DragonBoard™ 410c by plugging it in
-- Release your hold on S4 button within a few seconds of powering on. Board should boot into Fastboot mode.
+- Press and hold the Vol (-) button on the DragonBoard™ 410c, this is the S4 button. DragonBoard™ 410c should still NOT be powered on
+- While holding the Vol (-) button, power on the DragonBoard™ 410c by plugging it in
+- Once DragonBoard™ 410c is plugged into power, release your hold on the Vol (-) button.
+- Board should boot into fastboot mode.
 
 From the connected host machine terminal window, run the following commands:
 
 ```shell
-# Check to make sure fastboot device connected.
-$ fastboot devices
+# Check to make sure fastboot device is connected
+
+fastboot devices
 ```
 
-**At this point you should be connected to your DragonBoard™ 410c with a USB to microUSB cable. Your DragonBoard™ 410c should be booted into Fastboot mode and ready to be flashed with the appropriate images.**
+**At this point you should be connected to your DragonBoard™ 410c with a USB to microUSB cable. Your DragonBoard™ 410c should be booted into fastboot mode and ready to be flashed with the appropriate images.**
 
 
 ***
@@ -448,9 +426,9 @@ $ fastboot devices
 
 ### Flash Bootloader into on-board eMMC
 
-In this section we will continue by downloading and flashing the bootloader onto your DragonBoard™ 410c. This will be achieved by accessing and executing a script located in the bootloader download folder.
+In this section we will continue by downloading and flashing the bootloader onto your DragonBoard™ 410c. This will be achieved by accessing and executing a script located in the downloaded bootloader folder.
 
-**Step 1**: Download
+**Step 1**: Download Bootloader
 
 [Bootloader zip](http://builds.96boards.org/releases/dragonboard410c/linaro/rescue/latest/dragonboard410c_bootloader_emmc_linux-40.zip)
 
@@ -520,7 +498,8 @@ Now reboot the DragonBoard™ 410c using the following sequence and it will boot
 
 **Note:** the **username** and **password** are both **“linaro”** when the login information is requested.
 
-Enjoy your new operating system!
+**Congratulations! You are now booting your newly installed OS directly
+from eMMC on the DragonBoard™ 410c!**
 
 ## Mac OSX Host
 
@@ -533,65 +512,38 @@ Enjoy your new operating system!
 This section will explain the fastboot method for installation of the Linux images onto
 the DragonBoard™ 410c.  
 
-Please watch this [optional video tutorial]()(COMING SOON - 02/13/16) if you are having trouble following the document.
+**Step 1**: Make sure fastboot is set up on host computer. Android SDK “Tools only” for Mac OS X can be downloaded [here](http://developer.android.com/sdk)
 
-**This is for advanced users that plan to be flashing many versions of the OS into the DragonBoard™ 410c.**
+- The Mac OS X “Tools Only” SDK download does not come with fastboot, you will need to use the Android SDK Manager to install platform-tools.
+- To do this follow the “SDK Readme.txt” instructions included in your SDK “Tools Only” download.
 
-**Prerequisites:**
+If you are still having trouble setting up fastboot, [click here]() for a short tutorial video
 
-**Before we can start flashing the appropriate files onto you DragonBoard™ 410c**:
+**Step 2**: Connect host computer to DragonBoard™ 410c
 
-- You will need to acquire the appropriate tools (ADB and Fastboot).
-- You will need to know how to boot the DragonBoard™ 410c up into fastboot mode. 
-- You will need to download all files necessary for install.
+- DragonBoard™ 410c must be powered off (unplugged from power)
+- Make sure microSD card slot on DragonBoard™ 410c is empty
+- S6 switch on DragonBoard™ 410c must be set to ‘0-0-0-0’. All switches should be in “off” position
+- Connect USB to microUSB cable from host computer to DragonBoard™ 410c
 
-**Since the bootloader on this board supports fastboot. The developer should only have to focus on getting fastboot installed on his/her host PC.**
+**Step 3**: Boot DragonBoard™ 410c into fastboot mode
 
-The following steps will walk you through the download and installation of Fastboot onto your host MAC OS X machine:
+**Please read all bullet points before attempting**
 
-**Step 1**: Download latest version of the adb-fastboot-install file <a href="https://code.google.com/archive/p/adb-fastboot-install/downloads" target="_blank">here</a>
-
-Clicking the link above will download the appropriate file into your "Downloads" folder.
-
-
-**Step 2**: Open your terminal by pressing Command+Space and typing in Terminal. Execute the following commands:
-
-```shell
-# cd to the directory the ADB and Fastboot file were extracted to, this will most likely be your Downloads folder
-
-$ cd <extraction directory>
-$ cd Android
-$ ./ADB-Install-Mac.sh
-
-# This command will require root permission, enter your password
-```
-You have now moved both ADB and Fastboot to your `/usr/bin`, this will allow them utilized from anywhere in your terminal.
-
-Simply type `fastboot` or `adb` from your terminal command line to make sure everything is working properly.
-
-**Step 3**: Now that we are set up we will need to connect our host machine to our DragonBoard™ 410c and boot into Fastboot mode.
-
-**Connect your host machine to your DragonBoard™ 410c using a USB to microUSB cable and follow these instructions:
-
-- Micro SD Card slot on DragonBoard™ 410c must be empty
-- S6 switch on the DragonBoard™ 410c must be set to: `0-0-0-0` {All switches in off position}
-- Press and hold the Vol (-) button on the DragonBoard™ 410c {S4}, DragonBoard™ 410c should not be plugged in yet
-- While pressing S4 button, power up the DragonBoard™ 410c.
-- Release your hold on S4 button within a few seconds of powering on. Board should boot into Fastboot mode.
+- Press and hold the Vol (-) button on the DragonBoard™ 410c, this is the S4 button. DragonBoard™ 410c should still NOT be powered on
+- While holding the Vol (-) button, power on the DragonBoard™ 410c by plugging it in
+- Once DragonBoard™ 410c is plugged into power, release your hold on the Vol (-) button.
+- Board should boot into fastboot mode.
 
 From the connected host machine terminal window, run the following commands:
 
 ```shell
-# Check to make sure fastboot device connected.
-$ sudo fastboot devices
+# Check to make sure fastboot device is connected
+
+fastboot devices
 ```
->Note: if you are experiencing trouble bringing your DragonBoard™ 410c into fastboot mode, the original boot loader could be corrupted. In this case you will need to fix this by following one of the two procedures found below:
 
-  - [Create / Install a Rescue Image]()
-  - [Installing Image using an SD Card Image]()
-
-
-**At this point you should be connected to your DragonBoard™ 410c with a USB to microUSB cable. Your DragonBoard™ 410c should be booted into Fastboot mode and ready to be flashed with the appropriate images.**
+**At this point you should be connected to your DragonBoard™ 410c with a USB to microUSB cable. Your DragonBoard™ 410c should be booted into fastboot mode and ready to be flashed with the appropriate images.**
 
 
 ***
@@ -599,9 +551,9 @@ $ sudo fastboot devices
 
 ### Flash Bootloader into on-board eMMC
 
-In this section we will continue by downloading and flashing the bootloader onto your DragonBoard™ 410c. This will be achieved by accessing and executing a script located in the bootloader download folder.
+In this section we will continue by downloading and flashing the bootloader onto your DragonBoard™ 410c. This will be achieved by accessing and executing a script located in the downloaded bootloader folder.
 
-**Step 1**: Download
+**Step 1**: Download Bootloader
 
 [Bootloader zip](http://builds.96boards.org/releases/dragonboard410c/linaro/rescue/latest/dragonboard410c_bootloader_emmc_linux-40.zip)
 
@@ -671,27 +623,135 @@ Now reboot the DragonBoard™ 410c using the following sequence and it will boot
 
 **Note:** the **username** and **password** are both **“linaro”** when the login information is requested.
 
-Enjoy your new operating system!
+**Congratulations! You are now booting your newly installed OS directly
+from eMMC on the DragonBoard™ 410c!**
 
 ***
 
-## Windows Host (COMING SOON - 02/11/16)
+## Windows Host
 
-- [Getting Started](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#getting-started-5)
-- [Flash Bootloader into on-board eMMC](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#flash-bootloader-into-on-board-emmc-2)
-- [Flash Linaro/Debian Release](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#flash-linarodebian-release-2)
+- [Getting Started]()
+- [Flash Bootloader into on-board eMMC]()
+- [Flash Linaro/Debian Release]()
 
 ### Getting Started
 
 This section will explain the fastboot method for installation of the Linux images onto
 the DragonBoard™ 410c. 
 
-Please watch this [optional video tutorial]()(COMING SOON - 02/13/16) if you are having trouble following the document.
+**Step 1**: Make sure fastboot is set up on host computer. Android SDK “Tools only” for Windows can be downloaded [here](http://developer.android.com/sdk)
+
+- The Windows “Tools Only” SDK download does not come with fastboot, you will need to use the Android SDK Manager to install platform-tools.
+- To do this follow the “SDK Readme.txt” instructions included in your SDK “Tools Only” download.
+
+If you are still having trouble setting up fastboot, [click here]() for a short tutorial video
+
+**Step 2**: Connect host computer to DragonBoard™ 410c
+
+- DragonBoard™ 410c must be powered off (unplugged from power)
+- Make sure microSD card slot on DragonBoard™ 410c is empty
+- S6 switch on DragonBoard™ 410c must be set to ‘0-0-0-0’. All switches should be in “off” position
+- Connect USB to microUSB cable from host computer to DragonBoard™ 410c
+
+**Step 3**: Boot DragonBoard™ 410c into fastboot mode
+
+**Please read all bullet points before attempting**
+
+- Press and hold the Vol (-) button on the DragonBoard™ 410c, this is the S4 button. DragonBoard™ 410c should still NOT be powered on
+- While holding the Vol (-) button, power on the DragonBoard™ 410c by plugging it in
+- Once DragonBoard™ 410c is plugged into power, release your hold on the Vol (-) button.
+- Board should boot into fastboot mode.
+
+From the connected host machine terminal window, run the following commands:
+
+```shell
+# Check to make sure fastboot device is connected
+
+fastboot devices
+```
+
+**At this point you should be connected to your DragonBoard™ 410c with a USB to microUSB cable. Your DragonBoard™ 410c should be booted into fastboot mode and ready to be flashed with the appropriate images.**
+
+
+***
+
 
 ### Flash Bootloader into on-board eMMC
 
+In this section we will continue by downloading and flashing the bootloader onto your DragonBoard™ 410c. This will be achieved by accessing and executing a script located in the downloaded bootloader folder.
+
+**Step 1**: Download Bootloader
+
+[Bootloader zip](http://builds.96boards.org/releases/dragonboard410c/linaro/rescue/latest/dragonboard410c_bootloader_emmc_linux-40.zip)
+
+**Step 2**: Flash Bootloader
+
+Open up terminal and execute the following commands:
+
+```shell
+# cd to the directory the bootloader zip file was extracted
+cd <extraction directory>
+
+sudo ./flashall
+```
+The bootloader is now installed on the DragonBoard™ 410c!
+
+***
+
 ### Flash Linaro/Debian Release
 
+In this section we will flash all remaining parts of the operating system. In order to do this we will be using the fastboot commands that are now readily available to us in our Terminal command line.
+
+**Step 1**: Download `boot` and `rootfs`
+
+- You will need the [**latest Debian boot image**](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/boot-linaro-jessie-qcom-snapdragon-arm64*.img.gz)
+- You must choose either the [**Developer**](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/linaro-jessie-developer-qcom-snapdragon-arm64*.img.gz)  **or**  [**ALIP - Desktop**](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/linaro-jessie-alip-qcom-snapdragon-arm64*.img.gz) for your root file system (rootfs).
+
+**The way you experience this operating system will be based on which rootfs you choose for your board.**
+Once downloaded, their names should be similar to what you see here:
+
+**Debian boot image:**
+`boot-linaro-jessie-qcom-snapdragon-arm64-BUILD#.img.gz`
+
+**Developer rootfs:**
+`linaro-jessie-developer-qcom-snapdragon-arm64-BUILD#.img.gz`
+
+**or**
+
+**ALIP-Desktop rootfs:**
+`linaro-jessie-alip-qcom-snapdragon-arm64-BUILD#.img.gz`
+
+
+Where BUILD# is the date/Build stamp for the downloaded file
+
+**Step 2**: Flash 'boot' and 'rootfs' to DragonBoard™ 410c
+
+Flash the boot image and rootfs to the DragonBoard™ 410c by executing the following commands from the host PC:
+
+```shell
+# Check to make sure fastboot device connected.  If not resolve
+$ sudo fastboot devices
+
+# cd to the directory the boot image and RootFS were extracted
+$ cd <extraction directory>
+
+# Make sure you have properly unzipped the boot and rootfs downloads
+sudo fastboot flash boot boot-linaro-jessie-qcom-snapdragon-arm64-**BUILD#**.img
+sudo fastboot flash rootfs linaro-jessie-developer-qcom-snapdragon-arm64-**BUILD#**.img
+```
+**Note**: Replace **BUILD#** in the above commands with the file-specific date/build stamp.
+
+Now reboot the DragonBoard™ 410c using the following sequence and it will boot to the command prompt:
+
+- Unplug the power to the DragonBoard™ 410c
+- Unplug the micro USB fastboot cable
+- Make sure you are plugged in to a HDMI monitor, keyboard and/or mouse depending on your rootfs
+- Plug the power back into the DragonBoard™ 410c
+
+**Note:** the **username** and **password** are both **“linaro”** when the login information is requested.
+
+**Congratulations! You are now booting your newly installed OS directly
+from eMMC on the DragonBoard™ 410c!**
 
 
 
