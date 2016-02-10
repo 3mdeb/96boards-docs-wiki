@@ -389,10 +389,11 @@ the DragonBoard™ 410c.
 
 **Step 1**: Make sure fastboot is set up on host computer. Android SDK “Tools only” for Linux can be downloaded [here](http://developer.android.com/sdk)
 
+
 - The Linux “Tools Only” SDK download does not come with fastboot, you will need to use the Android SDK Manager to install platform-tools.
 - To do this follow the “SDK Readme.txt” instructions included in your SDK “Tools Only” download.
 
-If you are still having trouble setting up fastboot, [click here](https://youtu.be/W_zlydVBftA) for a short tutorial video
+If you are still having trouble setting up fastboot, <a href="https://youtu.be/W_zlydVBftA" target="_blank">click here</a> for a short tutorial video
 
 **Step 2**: Connect host computer to DragonBoard™ 410c
 
@@ -517,7 +518,7 @@ the DragonBoard™ 410c.
 - The Mac OS X “Tools Only” SDK download does not come with fastboot, you will need to use the Android SDK Manager to install platform-tools.
 - To do this follow the “SDK Readme.txt” instructions included in your SDK “Tools Only” download.
 
-If you are still having trouble setting up fastboot, [click here]() for a short tutorial video
+If you are still having trouble setting up fastboot, [click here]()(Coming Soon) for a short tutorial video
 
 **Step 2**: Connect host computer to DragonBoard™ 410c
 
@@ -630,9 +631,9 @@ from eMMC on the DragonBoard™ 410c!**
 
 ## Windows Host
 
-- [Getting Started]()
-- [Flash Bootloader into on-board eMMC]()
-- [Flash Linaro/Debian Release]()
+- [Getting Started](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#getting-started-5)
+- [Flash Bootloader into on-board eMMC](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#flash-bootloader-into-on-board-emmc-2)
+- [Flash Linaro/Debian Release](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#flash-linarodebian-release-2)
 
 ### Getting Started
 
@@ -644,7 +645,7 @@ the DragonBoard™ 410c.
 - The Windows “Tools Only” SDK download does not come with fastboot, you will need to use the Android SDK Manager to install platform-tools.
 - To do this follow the “SDK Readme.txt” instructions included in your SDK “Tools Only” download.
 
-If you are still having trouble setting up fastboot, [click here]() for a short tutorial video
+If you are still having trouble setting up fastboot, [click here]()(Coming soon) for a short tutorial video
 
 **Step 2**: Connect host computer to DragonBoard™ 410c
 
@@ -692,8 +693,12 @@ Open up terminal and execute the following commands:
 # cd to the directory the bootloader zip file was extracted
 cd <extraction directory>
 
-sudo ./flashall
+#rename flashall to flashall.bat and execute
+
+flashall.bat
 ```
+**Note:** fastboot, bootloader files, and flashall.bat script must all be in the same directory.
+
 The bootloader is now installed on the DragonBoard™ 410c!
 
 ***
@@ -728,16 +733,18 @@ Where BUILD# is the date/Build stamp for the downloaded file
 
 Flash the boot image and rootfs to the DragonBoard™ 410c by executing the following commands from the host PC:
 
+**Note**: 'fastboot', 'boot' file, and 'rootfs' file must all be in the same directory.
+
 ```shell
 # Check to make sure fastboot device connected.  If not resolve
-$ sudo fastboot devices
+$ fastboot devices
 
 # cd to the directory the boot image and RootFS were extracted
 $ cd <extraction directory>
 
 # Make sure you have properly unzipped the boot and rootfs downloads
-sudo fastboot flash boot boot-linaro-jessie-qcom-snapdragon-arm64-**BUILD#**.img
-sudo fastboot flash rootfs linaro-jessie-developer-qcom-snapdragon-arm64-**BUILD#**.img
+fastboot flash boot boot-linaro-jessie-qcom-snapdragon-arm64-**BUILD#**.img
+fastboot flash rootfs linaro-jessie-developer-qcom-snapdragon-arm64-**BUILD#**.img
 ```
 **Note**: Replace **BUILD#** in the above commands with the file-specific date/build stamp.
 
@@ -753,7 +760,7 @@ Now reboot the DragonBoard™ 410c using the following sequence and it will boot
 **Congratulations! You are now booting your newly installed OS directly
 from eMMC on the DragonBoard™ 410c!**
 
-
+***
 
 #End of Document
 
