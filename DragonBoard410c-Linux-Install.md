@@ -162,7 +162,7 @@ After installation completes, a “Flashing has completed and OS has
 installed successfully....” message will appear on the HDMI monitor
 connected to the DragonBoard™ 410c.
 
-- Remove the SD Card and click “OK” as instructed, and the DB410c will
+- Remove the SD Card and click “OK” as instructed, and the DragonBoard™ 410c will
   reboot into the newly installed OS
 
 Upon completion of the above, the user will now see a Debian Desktop (Login screen)
@@ -259,7 +259,7 @@ After installation completes, a “Flashing has completed and OS has
 installed successfully....” message will appear on the HDMI monitor
 connected to the DragonBoard™ 410c.
 
-- Remove the SD Card and click “OK” as instructed, and the DB410c will
+- Remove the SD Card and click “OK” as instructed, and the DragonBoard™ 410c will
   reboot into the newly installed OS
 
 Upon completion of the above, the user will now see a Debian Desktop (Login screen)
@@ -280,7 +280,7 @@ from eMMC on the DragonBoard™ 410c!**
 
 This section is intended for users who would like to use the SD Card Method for Linux installation with their Windows host machine.
 
-Please watch this [optional video tutorial]() (COMING SOON - 02/13/16) if you are having trouble following the document.
+Please watch this [optional video tutorial]() (Coming soon) if you are having trouble following the document.
 
 ### Getting Started
 
@@ -294,7 +294,7 @@ Make sure you have backed up all valuable data from SD card. Everything on SD ca
 
 **Step 3**: Unzip the downloaded install file
 
-> Note the directory the install image was extracted to, as this will be required in the next step. There are multiple tools to unzip and extract these archives. **In most cases MAC OS X will unzip file on its on and leave it in your Downloads folder**.
+> Note the directory the install image was extracted to, as this will be required in the next step. There are multiple tools to unzip and extract these archives.
 
 **Step 4**: Download the [Win32DiskImager tool](http://sourceforge.net/projects/win32diskimager/)
 
@@ -303,11 +303,11 @@ Your SD card, install file, and necessary tools(Win32DiskImager tool) should be 
 
 ## Install Image onto SD Card
 
-1. Open the tool, and click the folder icon (top right). Find your way to the appropriate img (This is why you need to remember the location of your extracted image.)
+1. Open the Win32DiskImager tool, and click the folder icon (top right). Find your way to the appropriate img (This is why you need to remember the location of your extracted image.)
 
 <img src="http://i.imgur.com/cqk6LhL.png" data-canonical-src="http://i.imgur.com/cqk6LhL.png" width="300" height="150"/>
 
-2. Insert your microSD card (through a USB SD card-reader, if necessary).
+2. Insert your microSD card into your host computer (through a USB SD card-reader, if necessary).
 
 3. Be sure you have the correct device selected and click "write." **There may be a warning about corrupting the device. Click "Yes" to proceed.**
 
@@ -351,7 +351,7 @@ After installation completes, a “Flashing has completed and OS has
 installed successfully....” message will appear on the HDMI monitor
 connected to the DragonBoard™ 410c.
 
-- Remove the SD Card and click “OK” as instructed, and the DB410c will
+- Remove the SD Card and click “OK” as instructed, and the DragonBoard™ 410c will
   reboot into the newly installed OS
 
 Upon completion of the above, the user will now see a Debian Desktop (Login screen)
@@ -629,7 +629,7 @@ from eMMC on the DragonBoard™ 410c!**
 
 ***
 
-## Windows Host
+## Windows Host (In Progress)
 
 - [Getting Started](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#getting-started-5)
 - [Flash Bootloader into on-board eMMC](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#flash-bootloader-into-on-board-emmc-2)
