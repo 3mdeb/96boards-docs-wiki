@@ -6,7 +6,7 @@
 
 ***
 
-- [[HiKey|HiKey]]
+- [HiKey](https://github.com/96boards/documentation/wiki/HiKey-Home)
   - [[Getting Started Guide|HiKeyGettingStarted]]
     <br/>Document describing how to get started using the HiKey.
   - [[UEFI|HiKeyUEFI]]
