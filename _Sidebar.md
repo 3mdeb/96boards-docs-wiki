@@ -7,7 +7,7 @@
     - [[Bootloader (Hikey) | Reference-Bootloader-Hikey]]
   - [[Kernel Policy | RP-Kernel-Policy]]
   - [[Latest Release: 2015.12 | RP-Release-2015.12]]
-- [[HiKey | HiKey]]
+- [HiKey](https://github.com/96boards/documentation/wiki/HiKey-Home)
   - [Hardware User Guide](https://github.com/96boards/documentation/blob/master/hikey/HiKey_User_Guide_Rev0.2.pdf)
   - [[Getting Started | HiKeyGettingStarted]]
   - [[UEFI | HiKeyUEFI]]
@@ -19,7 +19,7 @@
   - [Schematics - CircuitCo version](https://github.com/96boards/documentation/blob/master/hikey/96Boards-Hikey-Rev-A1.pdf)
   - [Schematics - LeMaker version](https://github.com/96boards/documentation/blob/master/hikey/HiKey_schematics_lemaker_version.pdf)
   - [Quick Start for v4.1](https://github.com/96boards/documentation/wiki/Latest-Snapshot---Getting-Started-Guild-for-kernel-4.1)
-- [[Dragonboard 410c | Dragonboard-410c]]
+- [Dragonboard™ 410c](https://github.com/96boards/documentation/wiki/Dragonboard-410c-Home)
   - [[Installation Guide for Linux and Android | Dragonboard-410c-Installation-Guide-for-Linux-and-Android]]
   - [[Creation of Kernel Boot Image | Dragonboard-410c-Boot-Image]]
   - [Hardware Manual](https://github.com/96boards/documentation/blob/master/dragonboard410c/HardwareManual_DragonBoard.pdf)
