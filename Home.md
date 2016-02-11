@@ -4,6 +4,11 @@ Welcome to the supporting documentation for [96Boards](https://www.96boards.org/
 
 ***
 
+#### Reference Software Platform
+- [Reference Software Platform](https://github.com/96boards/documentation/wiki/ReferencePlatform)
+
+***
+
 #### 96Boards
 
 - [HiKey](https://github.com/96boards/documentation/wiki/HiKey-Home)
@@ -13,7 +18,6 @@ Welcome to the supporting documentation for [96Boards](https://www.96boards.org/
 ***
 
 #### Read More
-- [Reference Software Platform](https://github.com/96boards/documentation/wiki/ReferencePlatform)
 - [Consumer Edition (CE) Specification](https://github.com/96boards/documentation/wiki/ReferencePlatformCE)
 - [Enterprise Edition (EE) Specification](https://github.com/96boards/documentation/wiki/ReferenceSoftwareEE)
 - [[Internet Sharing over USB|Sharing-Internet-connections-over-USB-on-96Boards]]
