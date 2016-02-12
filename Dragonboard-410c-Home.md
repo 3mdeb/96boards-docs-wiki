@@ -9,11 +9,8 @@
 #### Installation and Setup Guides
 
 
-- [[Other Installation and Setup Guides|Dragonboard-410c-Installation-Guide-for-Linux-and-Android]]
+- [[Dragonboard 410c Installation Guide for Linux and Android|Dragonboard-410c-Installation-Guide-for-Linux-and-Android]]
 
-(**In Progress**)
-- [DragonBoard™ 410c Linux Installation Guide](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install)
-- [DragonBoard™ 410c Android Installation Guide]()
 
 #### Compile and Install from Source
 
