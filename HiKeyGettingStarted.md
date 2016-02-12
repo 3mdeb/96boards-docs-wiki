@@ -778,6 +778,15 @@ $ make defconfig
 $ make -j8 Image modules hi6220-hikey.dtb 2>&1 | tee build-log.txt
 ```
 
+For the kernel modules:
+```
+$ export PWD=`pwd`
+$ export INSTALL_MOD_PATH="$PWD/installed-modules"
+
+$ mkdir $INSTALL_MOD_PATH
+$ make -j8 modules_install
+```
+
 If you encounter any error during the build, refer the log in 'build-log.txt'.
 
 ### WiFi Driver From Source
@@ -910,9 +919,10 @@ $ sudo fastboot reboot
 
 1. Use the kernel Image and hi6220-hikey.dtb as explained above.
 2. Prepare your SD card. See [Using an SD Card]() for more information. There will be two partitions on it: `boot` and `rootfs`
-3. Insert your SD card into your Linux PC and copy your newly built kernel and device tree blob onto the SD card boot partition - use your own SD card /dev device in place of /dev/sda1:
+3. Insert your SD card into your Linux PC and copy your newly built kernel and device tree blob onto the SD card boot partition - use your own SD card /dev device in place of /dev/[sda1 sda2]:
 ```
 $ sudo cp -a arch/arm64/boot/Image arch/arm64/boot/dts/hi6220-hikey.dtb /dev/sda1/boot/
+$ sudo cp -ar installed-modules/lib/modules/X.X.X-linaro-hikey/ /dev/sda2/lib/modules/ 
 ```
 
 **NOTE:** File names must not be changed - Refer to [Appendix 1](#appendix-1) to see the 4 files that are expected to be in the boot partition. If any of these are missing from the SD card boot partition, HiKey won't boot successfully. User need to select booting from eMMC by manual instead at this time.
