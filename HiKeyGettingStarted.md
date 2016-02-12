@@ -358,8 +358,6 @@ $ sudo dd if=hikey-jessie_alip_2015MMDD-nnn.img of=/dev/[XXX such as sdb or mmcb
 
 **NOTE:** Be very careful not to overwrite your hard drive! In most cases, XXX will be mmcblk0 or sdb. This can be found by using the following sequence:
 
-For this example we assume the device node is `/dev/sdb`. Replace with your assigned SD card device.
-
 1. Make sure the SD Card is not in the host PC
 2. From the host PC terminal command line, run the following command:
 ```shell
