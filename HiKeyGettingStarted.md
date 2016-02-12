@@ -755,6 +755,7 @@ For the Reference Platform Build releases: <br>
 Git clone the source code tree:
 ```
 $ git clone /location/of/repository (such as, https://github.com/96boards/linux.git or https://github.com/rsalveti/linux.git)
+$ cd linux
 ```
 Checkout the branch or the tag which matches the build based on the information on the release page. <br>
 For the Landing Team releases: <br>
