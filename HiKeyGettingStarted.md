@@ -237,13 +237,12 @@ Download the following files from:
 - boot_fat.uefi.img.tar.xz
 - cache.img.tar.xz
 - system.img.tar.xz
-- userdata-4gb.img.tar.xz (for 4G board) or userdata-8gb.img.tar.xz (for 8G board)
+- userdata-4gb.img.tar.xz (for 4GB board) or userdata-8gb.img.tar.xz (for 8GB board)
 
 Download the following file from:
 [https://builds.96boards.org/releases/hikey/linaro/binaries/latest](https://builds.96boards.org/releases/hikey/linaro/binaries/latest)
-- [ptable-aosp-4g.img](https://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-aosp-4g.img)
-or
-- [ptable-aosp-8g.img](https://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-aosp-8g.img)
+- [ptable-aosp-4g.img](https://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-aosp-4g.img) (for 4GB board) or
+- [ptable-aosp-8g.img](https://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-aosp-8g.img) (for 8GB board)
 
 Uncompress the .tar.xz files using your operating system file manager, or with the following command for each file:
 ```
@@ -301,15 +300,16 @@ Once fastboot is installed on the Linux PC proceed as follows:
 Download the following files onto your Linux PC from: 
 [https://builds.96boards.org/releases/hikey/linaro/debian/latest](https://builds.96boards.org/releases/hikey/linaro/debian/latest)
 - boot-fat.uefi.img.gz
-- hikey-jessie_alip_2015MMDD-nnn-4g.emmc.img.gz (for 4G board) or hikey-jessie_alip_2015MMDD-nnn-8g.emmc.img.gz (for 8G board)
+- hikey-jessie_alip_2015MMDD-nnn-4g.emmc.img.gz (for 4GB board) or 
+- hikey-jessie_alip_2015MMDD-nnn-8g.emmc.img.gz (for 8GB board)
 
 **NOTE:** _developer version comes with no graphics UI; _alip version comes with LXDE UI.
 
 Download the following file from:
 [https://builds.96boards.org/releases/hikey/linaro/binaries/latest](https://builds.96boards.org/releases/hikey/linaro/binaries/latest)
-- [ptable-linux-4g.img](https://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-linux-4g.img)
+- [ptable-linux-4g.img](https://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-linux-4g.img) (for 4GB board)
 or
-- [ptable-linux-8g.img](https://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-linux-8g.img)
+- [ptable-linux-8g.img](https://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-linux-8g.img) (for 8GB board)
 
 Note that the Debian image is a large file and may take several minutes (or longer on a slow internet connection) to load. You will need to accept the end user license for the Mali GPU software before you are able to download the OS image. 
 
@@ -344,7 +344,8 @@ This section describes how to prepare a bootable SD card.
 
 Download the following file onto your Linux PC from: 
 [https://builds.96boards.org/releases/hikey/linaro/debian/latest](https://builds.96boards.org/releases/hikey/linaro/debian/latest)
-  - hikey-jessie_alip_2015MMDD-nnn-4g.img.gz or hikey-jessie_alip_2015MMDD-nnn-8g.img.gz
+  - hikey-jessie_alip_2015MMDD-nnn-4g.img.gz (for 4GB board) or 
+  - hikey-jessie_alip_2015MMDD-nnn-8g.img.gz (for 8GB board)
 
 **NOTE:** _developer version comes with no graphics UI; _alip version comes with LXDE UI.
 
@@ -397,8 +398,8 @@ For most users a board can be “recovered” from a software failure by reloadi
 Download the following files onto a Linux PC:
 * [l-loader.bin](https://builds.96boards.org/releases/hikey/linaro/binaries/latest/l-loader.bin)
 * [fip.bin](https://builds.96boards.org/releases/hikey/linaro/binaries/latest/fip.bin)
-* [ptable-linux-4g.img](https://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-linux-4g.img) or [ptable-linux-8g.img](https://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-linux-8g.img) for Debian.
-* [ptable-aosp-4g.img](https://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-aosp-4g.img) or [ptable-aosp-8g.img](https://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-aosp-8g.img) for AOSP.
+* [ptable-linux-4g.img](https://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-linux-4g.img) (if 4GB board) or [ptable-linux-8g.img](https://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-linux-8g.img) (if 8GB board) for Debian.
+* [ptable-aosp-4g.img](https://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-aosp-4g.img) (if 4GB board) or [ptable-aosp-8g.img](https://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-aosp-8g.img) (if 8GB board) for AOSP.
 * [nvme.img](https://builds.96boards.org/releases/hikey/linaro/binaries/latest/nvme.img)
 
 You will also need the boot partition for the OS Image you want to run
@@ -477,7 +478,7 @@ Done
 ```
 **NOTE:** You may see the word “failed” before Done. This is under investigation but is not fatal. As long as the “Done” is printed at the end you may proceed.
 
-The bootloader has now been installed into RAM. Wait a few seconds for the fastboot application to actually load. The following fastboot commands then load the partition table, the bootloader and other necessary files into the HiKey eMMC flash memory (4G or 8G). Taking 8G as example.
+The bootloader has now been installed into RAM. Wait a few seconds for the fastboot application to actually load. The following fastboot commands then load the partition table, the bootloader and other necessary files into the HiKey eMMC flash memory (4GB or 8GB). Taking 8GB as example.
 ```
 $ sudo fastboot flash ptable ptable-linux-8g.img
 $ sudo fastboot flash fastboot fip.bin
