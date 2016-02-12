@@ -17,6 +17,7 @@
     * [3. Installing build of Android Open Source Project](#3-installing-build-of-android-open-source-project)
     * [4. Updating the OS](#4-updating-the-os)
       * [Debian Linux OS](#debian-linux-os)
+        * [Using an SD Card](#using-an-sd-card)
       * [Android Open Source Project (AOSP)](#android-open-source-project-aosp)
     * [5. Board Recovery](#5-board-recovery)
       * [Installing a Bootloader](#installing-a-bootloader)
