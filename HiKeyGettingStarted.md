@@ -2,8 +2,6 @@
 
 ### Table of Contents
 
-  * [96Boards HiKey](#96boards-hikey)
-      * [Table of Contents](#table-of-contents)
     * [Getting Started](#getting-started)
       * [Updating to the new Release](#updating-to-the-new-release)
     * [1. New Features](#1-new-features)
