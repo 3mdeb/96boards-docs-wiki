@@ -336,7 +336,7 @@ When completed, power down the HiKey, remove Link 5-6 and power up the HiKey. If
 
 You may now use the updated OS.
 
-**Using an SD Card**
+#### Using an SD Card
 
 **NOTE:** The UEFI bootloader on HiKey also enables booting a kernel and root file system installed on an SD card (microSD). To control boot order, follow [the instruction here](https://github.com/96boards/documentation/wiki/HiKeyUEFI#section-boot-order). 
 
