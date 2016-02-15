@@ -1,4 +1,4 @@
-[<<< Back to DragonBoard™ 410c Home](https://github.com/96boards/documentation/wiki/Dragonboard-410c-Home)
+[<<< Back to DragonBoard™ 410c Home](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Home)
 
 ***
 
