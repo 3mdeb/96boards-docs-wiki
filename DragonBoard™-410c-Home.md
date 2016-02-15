@@ -17,17 +17,25 @@ Welcome to the supporting documentation for [DragonBoard™ 410c](https://www.96
 
 #### Installation and Setup Guides
 
+- [Install Android or Debian using SD Card](https://github.com/96boards/documentation/wiki/Dragonboard-410c-Installation-Guide-for-Linux-and-Android#install-android-or-debian-from-an-sd-card)
+- [Install Android or Debian using Fastboot](https://github.com/96boards/documentation/wiki/Dragonboard-410c-Installation-Guide-for-Linux-and-Android#install-android-or-debian-using-fastboot)
+- [Create and Install a Rescue Image](https://github.com/96boards/documentation/wiki/Dragonboard-410c-Installation-Guide-for-Linux-and-Android#create--install-a-rescue-image)
+- [UART Console](https://github.com/96boards/documentation/wiki/Dragonboard-410c-Installation-Guide-for-Linux-and-Android#setting-up-the-uart-console)
+- [DragonBoard™ 410c OpenEmbedded and Yocto](https://github.com/96boards/documentation/wiki/Dragonboard-410c-OpenEmbedded-and-Yocto)
+- [Force display resolution and bypass EDID (Linux Only)](https://github.com/96boards/documentation/wiki/How-to-force-display-resolution-and-bypass-EDID)
+- [Linaro Automated Validation Architecture (LAVA)](https://github.com/96boards/documentation/wiki/D410CLAVA)
 
-- [[Dragonboard 410c Installation Guide for Linux and Android|Dragonboard-410c-Installation-Guide-for-Linux-and-Android]]
+
 
 ***
 
-#### Compile and Install from Source
+#### Read More
 
-- [[How to create a kernel boot image for fastboot|Dragonboard-410c-Boot-Image]]
+- [Build Folder Layout](https://github.com/96boards/documentation/wiki/Dragonboard-410c-Installation-Guide-for-Linux-and-Android#understanding-build-folder-layout)
+- [Linaro Automated Validation Architecture (LAVA)](https://wiki.linaro.org/LAVA)
+- [OnBoard LEDs and Connectors](https://github.com/96boards/documentation/wiki/Dragonboard-410c-Installation-Guide-for-Linux-and-Android#description-of-leds-and-connectors)
 
 ***
-
 
 #### User Guides
 
@@ -43,18 +51,11 @@ Welcome to the supporting documentation for [DragonBoard™ 410c](https://www.96
  / [**Download PDF**](http://linaro.co/96b-hwm-db))
 - Schematics (<a href="https://github.com/96boards/documentation/blob/master/dragonboard410c/Schematics_DragonBoard.pdf" target="_blank">**Github**</a> / [**Download PDF**](http://linaro.co/db410c-schematics))
 - BOM (<a href="https://github.com/96boards/documentation/blob/master/dragonboard410c/DragonBoard410c_BOM.pdf" target="_blank">**Github**</a> / [**Download PDF**](http://linaro.co/dragonboard410c-bom))
-
-***
-
-#### Linaro Automated Validation Architecture (LAVA)
-
-- [[LAVA|https://github.com/96boards/documentation/wiki/D410CLAVA]]
-
-***
-
-#### Other
-
-- [DragonBoard™ 410c OpenEmbedded and Yocto](https://github.com/96boards/documentation/wiki/Dragonboard-410c-OpenEmbedded-and-Yocto)
-- [[How to force display resolution and bypass EDID]]
     
+***
+
+#### Compile and Install from Source
+
+- [[How to create a kernel boot image for fastboot|Dragonboard-410c-Boot-Image]]
+
 ***
