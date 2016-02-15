@@ -13,25 +13,16 @@ Welcome to the supporting documentation for [HiKey](https://www.96boards.org/pro
 
 ***
 
-- [HiKey](https://github.com/96boards/documentation/wiki/HiKey-Home)
-  - [[Getting Started Guide|HiKeyGettingStarted]]
-    <br/>Document describing how to get started using the HiKey.
-  - [[UEFI|HiKeyUEFI]]
-    <br/>Guide to using ARM Trusted Firmware and UEFI on the HiKey.
-  - [[LAVA|HiKeyLAVA]]
-    <br/>Guide to use Linaro Automated Validation Architecture (LAVA) with HiKey.
-  - [[Using JTAG on HiKey|JTAG-on-HiKey]]
-    <br/>Guide to using OpenOCD and JTAG on the HiKey.
-  - [[Latest Snapshots|LatestSnapshots]]
-    <br/>Guide to using latest Snapshot builds on the HiKey.
-
-***
-
 #### Installation and Setup Guides
 
-- [Linaro/Debian Installation Guide]()
-- [Android Open Source Project Installation Guide]()
+- [HiKey Getting Started Guide](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted)
+- [Linaro/Debian Installation Guide](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted#debian-linux-os)
+- [Android Open Source Project Installation Guide](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted#android-open-source-project-aosp)
 - [Board Recovery](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted#5-board-recovery)
+- [UEFI](https://github.com/96boards/documentation/wiki/HiKeyUEFI)
+- [Using JTAG](https://github.com/96boards/documentation/wiki/JTAG-on-HiKey)
+- [Linaro Automated Validation Architecture (LAVA)](https://github.com/96boards/documentation/wiki/HiKeyLAVA)
+
 
 ***
 
@@ -40,14 +31,16 @@ Welcome to the supporting documentation for [HiKey](https://www.96boards.org/pro
 
 - [New Features](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted#1-new-features)
 - [Pre-Installed Debian Linux](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted#2-pre-installed-debian-linux)
+- [Latest Snapshots](https://github.com/96boards/documentation/wiki/LatestSnapshots)
 - [Known Issues](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted#7-known-issues)
 
 ***
 
 #### Build and Install from Source
 
-- []()
-- []()
-- []()
-- []()
-- []()
+- [Bootloader From Source](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted#bootloader-from-source)
+- [Kernel From Source](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted#kernel-from-source)
+- [WiFi Driver From Source](WiFi Driver From Source)
+- [AOSP Build From Source](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted#aosp-build-from-source)
+- [Install onto eMMC](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted#install-onto-emmc)
+- [Install onto SD Card](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted#install-onto-sd-card)
