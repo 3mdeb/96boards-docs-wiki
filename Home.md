@@ -8,7 +8,7 @@ Welcome to the supporting documentation for <a href="http://96boards.org" target
 [<img src="http://i.imgur.com/ou7F2lh.png" data-canonical-src="http://i.imgur.com/ou7F2lh.png" width="50" height="50" />]() 
 <a href="https://www.96boards.org/products/mezzanine/" target="_blank"><img src="http://i.imgur.com/FU8ewZf.png" data-canonical-src="http://i.imgur.com/FU8ewZf.png" width="120" height="50" /></a>
 
-##### Table of Contents
+### Contents
 
 ***
 
@@ -17,11 +17,7 @@ Welcome to the supporting documentation for <a href="http://96boards.org" target
 - [HiKey](https://github.com/96boards/documentation/wiki/HiKey-Home)
 
 ***
-#### "How to" Guides
 
-- [Internet Sharing over USB](https://github.com/96boards/documentation/wiki/Sharing-Internet-connections-over-USB-on-96Boards)
-
-***
 #### Hardware Specifications
 
 - Consumer Edition (CE) Specification (<a href="https://github.com/96boards/documentation/blob/master/96BoardsCESpecificationv1.0-EA1.pdf" target="_blank">**Github**</a>
@@ -29,8 +25,14 @@ Welcome to the supporting documentation for <a href="http://96boards.org" target
 - Enterprise Edition (EE) Specification (<a href="https://github.com/96boards/documentation/blob/master/96BoardsEESpecificationv1.0.pdf" target="_blank">**Github**</a>
  / [**Download PDF**](https://www.96boards.org/ee-specification))
 
+***
+
+#### "How to" Guides
+
+- [Internet Sharing over USB](https://github.com/96boards/documentation/wiki/Sharing-Internet-connections-over-USB-on-96Boards)
 
 ***
+
 #### Read More
 
 - [Reference Software Platform](https://github.com/96boards/documentation/wiki/ReferencePlatform)
