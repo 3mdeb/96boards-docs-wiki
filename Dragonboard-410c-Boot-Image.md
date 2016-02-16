@@ -67,7 +67,7 @@ For the text console add "text" to the end of cmdline:
 
     export cmdline="root=/dev/disk/by-partlabel/userdata rw rootwait console=ttyMSM0,115200n8 text"
 
-# How to use the boot image
+## How to use the boot image
 
 The boot image generated using the instructions from the section above can be booted using fastboot:
 
@@ -76,3 +76,26 @@ The boot image generated using the instructions from the section above can be bo
 Alternatively, it can be flashed into the on-board eMMC:
 
     sudo fastboot flash boot boot-db410c.img
+
+## Updating the boot image on a running system
+
+Instructions to update the boot partition using a kernel package on a running system.
+
+### Get skales
+
+    sudo apt-get install libfdt-dev
+    git clone git://codeaurora.org/quic/kernel/skales /tmp
+    export PATH=$PATH:/tmp/skales
+
+### Install the new kernel package
+
+    wget http://repo.linaro.org/ubuntu/linaro-staging/pool/main/l/linux/linux-image-4.4.0-trunk-arm64_4.4.0.linaro.80-1_arm64.deb
+    sudo dpkg -i linux-image-4.4.0-trunk-arm64_4.4.0.linaro.80-1_arm64.deb
+
+### Update the boot image
+
+    dtbTool -o dt.img -s 2048 /usr/lib/linux-image-4.4.0-trunk-arm64/qcom/
+    mkbootimg --kernel /boot/vmlinuz-4.4.0-trunk-arm64 --ramdisk /boot/initrd.img-4.4.0-trunk-arm64 --output boot.img --dt dt.img --pagesize "2048" --base "0x80000000" --cmdline "root=/dev/disk/by-partlabel/rootfs rw rootwait console=tty0 console=ttyMSM0,115200n8"
+    sudo dd if=boot.img of=/dev/disk/by-partlabel/boot
+
+
