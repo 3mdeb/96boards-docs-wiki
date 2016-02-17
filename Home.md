@@ -15,6 +15,7 @@ Welcome to the supporting documentation for <a href="http://96boards.org" target
 #### 96Boards
 - [Dragonboard™ 410c](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Home)
 - [HiKey](https://github.com/96boards/documentation/wiki/HiKey-Home)
+- [Bubblegum96](https://github.com/96boards/documentation/wiki/Bubblegum96-Home)
 
 ***
 
