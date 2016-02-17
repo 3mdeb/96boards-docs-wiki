@@ -39,18 +39,18 @@ Welcome to the supporting documentation for [DragonBoard™ 410c](https://www.96
 
 #### User Guides
 
-- Linux User Guide (<a href="https://github.com/96boards/documentation/blob/master/dragonboard410c/LinuxUserGuide_DragonBoard.pdf" target="_blank">**Github**</a>
+- Linux User Guide (<a href="https://github.com/96boards/documentation/blob/master/dragonboard410c/LinuxUserGuide_DragonBoard.pdf" target="_blank">**View**</a>
  / [**Download PDF**](http://linaro.co/96b-linuxuserguide))
-- Android User Guide (<a href="https://github.com/96boards/documentation/blob/master/dragonboard410c/AndroidUserGuide_DragonBoard.pdf" target="_blank">**Github**</a> / [**Download PDF**](http://linaro.co/96b-androiduserguide))
+- Android User Guide (<a href="https://github.com/96boards/documentation/blob/master/dragonboard410c/AndroidUserGuide_DragonBoard.pdf" target="_blank">**View**</a> / [**Download PDF**](http://linaro.co/96b-androiduserguide))
 
 ***
 
 #### Hardware
 
-- Hardware Manual (<a href="https://github.com/96boards/documentation/blob/master/dragonboard410c/HardwareManual_DragonBoard.pdf" target="_blank">**Github**</a>
+- Hardware Manual (<a href="https://github.com/96boards/documentation/blob/master/dragonboard410c/HardwareManual_DragonBoard.pdf" target="_blank">**View**</a>
  / [**Download PDF**](http://linaro.co/96b-hwm-db))
-- Schematics (<a href="https://github.com/96boards/documentation/blob/master/dragonboard410c/Schematics_DragonBoard.pdf" target="_blank">**Github**</a> / [**Download PDF**](http://linaro.co/db410c-schematics))
-- BOM (<a href="https://github.com/96boards/documentation/blob/master/dragonboard410c/DragonBoard410c_BOM.pdf" target="_blank">**Github**</a> / [**Download PDF**](http://linaro.co/dragonboard410c-bom))
+- Schematics (<a href="https://github.com/96boards/documentation/blob/master/dragonboard410c/Schematics_DragonBoard.pdf" target="_blank">**View**</a> / [**Download PDF**](http://linaro.co/db410c-schematics))
+- BOM (<a href="https://github.com/96boards/documentation/blob/master/dragonboard410c/DragonBoard410c_BOM.pdf" target="_blank">**View**</a> / [**Download PDF**](http://linaro.co/dragonboard410c-bom))
     
 ***
 
