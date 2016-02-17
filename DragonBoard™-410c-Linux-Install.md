@@ -12,7 +12,7 @@ There are two primary ways to install software onto the DragonBoard™ 410c:
 
 1. Read about both installation methods
 2. Choose your method
-3. Choose your host machine (This is the machine you will be using throughout the process)
+3. Download file(s) and Choose your Host Machine (This is the machine you will be using throughout the process)
 4. Follow your custom set of steps
 
 If you are having trouble with this document please <a href="https://youtu.be/JoL1rQhJKuA" target="_blank">click here</a> for a video walkthrough.
@@ -66,7 +66,12 @@ Skip to the [Install Debian Using Fastboot](https://github.com/96boards/document
 # Install Debian using SD Card
 [Back to Step 2](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#step-2-choose-your-method)
 
-#### Step 3: Choose your Host Machine
+#### Step 3: Download file(s) and Choose your Host Machine
+
+##**Download:**
+
+Debian SD Card Install Image ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/dragonboard410c_sdcard_install_debian*.zip) / [View Build Folder](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/))
+
 
 - [**Linux Host**](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#linux-host)
 - [**Mac OSX Host**](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#mac-osx-host)
@@ -78,97 +83,138 @@ Skip to the [Install Debian Using Fastboot](https://github.com/96boards/document
 
 ## Linux Host
 
-- [Getting Started](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#getting-started)
-- [Install Image onto SD Card](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#install-image-onto-sd-card)
-- [Flashing SD Card Image to the DragonBoard™ 410c](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#flashing-sd-card-image-to-the-dragonboard-410c)
+This section show how to install the Linaro based Debian operating system to your DragonBoard™ 410c using a Linux host computer.
 
+
+- [**Step 1**: Prepare MicroSD card]()
+- [**Step 2**: Find SD Card Device name]()
+- [**Step 3**: Recall Download Location]()
+- [**Step 4**: Unzip _Debian SD Card Install Image_]()
+- [**Step 5**: Go to directory with _Debian SD Card Install Image_ folder using Terminal]()
+- [**Step 6**: Locate SD Card Install Image]()
+- [**Step 7**: Install Image onto SD Card]()
+- [**Step 8**: Prepare DragonBoard™ 410c with SD card]()
+- [**Step 9**: Install Linaro/Debian onto DragonBoard™ 410c]()
 
 ***
 
-This section is intended for users who would like to use the SD Card Method for Linux installation with their Linux host machine.
+####**Step 1**: Prepare MicroSD card
 
+- Ensure data from mircoSD card is backed up
+- Everything on microSD card will be lost by the end of this procedure.
 
-### Getting Started
+####**Step 2**: Find SD Card Device name
 
-This section builds the SD Card image for the DragonBoard™ 410c. The steps in this section are executed entirely from the host PC. It is assumed that the developer is using a Linux development host.
+- Use host computer
+- Open "Terminal" application
+- Remove SD card from host computer and run the following command:
+```shell
+lsblk
+```
+- Note all recognized disk names
+- **Insert SD card** and run the following command (again):
+```shell
+lsblk
+```
+- Note the newly recognized disk. This will be your SD card.
+- **Remember** your SD card device name, it will be needed in **Step 7**.
 
-**Step 1**: Prepare MicroSD card
+####**Step 3**: Recall Download Location
 
-Make sure you have backed up all valuable data from SD card. Everything on SD card, prior to flashing Linux image, will be lost by the end of this procedure.
+- Location of download will be needed in later steps
 
-**Step 2**: [Download Debian SD Card Install Image](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/dragonboard410c_sdcard_install_debian*.zip)
+####**Step 4**: Unzip _Debian SD Card Install Image_
 
-**Step 3**: Unzip the downloaded install file
+- When unzipped, you will have a folder with the following contents:
+   - Linaro/Debian Install Image (.img)
+   - Readme
 
-> Note the directory the install image was extracted to, as this will be required in the next step. There are multiple tools to unzip and extract these archives.
+####**Step 5**: Go to directory with _Debian SD Card Install Image_ folder using Terminal
 
-Your SD card and install file should be ready! In the next section we will flash your install file onto your SD card.
-
-### Install Image onto SD Card
-
-> Note: SD card does not need to be formatted in any special way since this procedure will write the entire image, including the partition table.
-
-**From the command prompt on the host PC, enter the following sequence of commands:**
+- Use host computer
+- Open "Terminal" application
+- `cd` to the directory with your unzipped **Debian SD Card Install Image**
 
 ```shell
-# cd to the directory the install file was extracted to
-$ cd <extraction directory>
+cd <extraction directory>
 
-$ sudo dd if=db410c_sd_install_debian-YY.img of=/dev/XXX bs=4M oflag=sync status=noxfer
+#Example: 
+#<extraction directory> = /home/YourUserName/Downloads
+#For this example we assume the "Debian SD Card Install Image" is in the Downloads folder.
+cd /home/YourUserName/Downloads
 ```
 
-**Warning:** Executing the sync flag command as outlined above is very
-important! Do not skip this step!
+####**Step 6**: Locate SD Card Install Image
 
-**Warning:** Be very careful not to overwrite your hard drive! In most
-cases, XXX will be mmcblk0 or sdb.
+- Make sure you are in the extraction directory
 
-> **YY** is Debian release number of downloaded file
-**XXX** is the SD card device name ([Click here for instructions on how to find microSD card device name](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#instructions-on-how-to-find-microsd-card-devices-name-in-linux-xxx))
+**Unzipped Debian SD Card download will be a folder. This folder should be listed in your directory. Type `ls` from command line for a list of files that can be found in your current directory**:
 
-**Flashing your SD card could take several minutes. Please be patient. When SD card is done flashing, eject device and move to the next section.**
+```shell
+ls
 
-### Flashing SD Card Image to the DragonBoard™ 410c
+#output
+dragonboard410c_sdcard_install_debian-XX
+```
 
-Once the image is written on the SD Card per the previous section,
-perform the following steps to flash the image into the eMMC memory on
-the DragonBoard™ 410c:
+- Unzipped folder should be called dragonboard410c_sdcard_install_debian-XX, where XX represents the Debian release number
+- `cd` into this directory
 
-- Make sure DragonBoard™ 410c is unplugged
+```shell
+cd dragonboard410c_sdcard_install_debian-XX
+```
+
+- Inside this folder you will find the install image
+   - `db410c_sd_install_debian.img`
+- This `.img` file is what will be flashed to your SD Card.
+
+####**Step 7**: Install Image onto SD Card
+
+**Checklist:**
+
+- SD card inserted into host computer
+- Recall SD Card device name from [**Step 2**](https://github.com/sdrobertw/test-wiki-/wiki/Linux-host-SD-CARD#step-2-find-sd-card-device-name)
+- From within the dragonboard410c_sdcard_install_debian-XX folder, using the Terminal execute the following commands:
+
+**Execute:**
+
+```shell
+sudo dd if=db410c_sd_install_debian.img of=/dev/XXX bs=4M oflag=sync status=noxfer
+```
+
+**Note:**
+
+- `if=db410c_sd_install_debian.img`: should match the name of the image that was downloaded.
+- `of=/dev/XXX`: XXX should match the name of the SD Card device name from [**Step 2**](https://github.com/sdrobertw/test-wiki-/wiki/Linux-host-SD-CARD#step-2-find-sd-card-device-name). Be sure to use the device name with out the partition.
+- This command will take some time to execute. Be patient and avoid tampering with the terminal until process has ended.
+- Once SD card is done flashing, remove from host computer and set aside for **Step 8**
+
+####**Step 8**: Prepare DragonBoard™ 410c with SD card
+
+- Make sure DragonBoard™ 410c is unplugged from power
+- Set S6 switch on DragonBoard™ 410c to `0-1-0-0`, "SD Boot switch" should be set to "ON".
+   - Please see "1.1 Board Overview" on page 7 from [DragonBoard™ 410c Hardware Manual](http://linaro.co/96b-hwm-db) if you cannot find S6
+- Connect an HDMI monitor to the DragonBoard™ 410c with an HDMI cable, and power on the monitor
+- Plug a USB keyboard and/or mouse into either of the two USB connectors on the DragonBoard™ 410c
 - Insert the microSD card into the DragonBoard™ 410c
-- Set the S6 switch on the DragonBoard™ 410c to: `0-1-0-0` {SD Boot switch set to “ON”}
-- Plug a USB keyboard and/or mouse into either of the two USB
-  connectors on the DragonBoard™ 410c
-  
->Note: If no mouse is used, the keys in the parenthesis on the
-installer screen can be used to initiate install commands. For
-example “Install(i)” would be the “i” key on the keyboard. Arrow
-keys may also be used during the command initiation sequences.
+- Plug power adaptor into DragonBoard™ 410c, wait for board to boot up.
 
-- Connect an HDMI monitor to the DragonBoard™ 410c with an HDMI cable, and power
-  on the monitor
-- Connect the power cable to the DragonBoard™ 410c
-
-When the board powers up, it will boot into an installer similar to the
-figure below:
+####**Step 9**: Install Linaro/Debian onto DragonBoard™ 410c
 
 <img src="http://i.imgur.com/F18wlgU.png" data-canonical-src="http://i.imgur.com/F18wlgU.png" width="400" height="250"/>
 
-- Select the image to install and then click on “Install” (or type
-  “i”) and the OS will be installed into the eMMC memory on the
-  DragonBoard™ 410c.
+- If **Steps 1 - 8** were followed correctly, the above screen should be visible from your DragonBoard™ 410c
+- Select the image to install and click “Install” (or type “i”). OS will be installed into the eMMC memory
+- This process can take a few minutes to complete
+- Upon completion, “Flashing has completed and OS has installed successfully....” message will appear.
 
-After installation completes, a “Flashing has completed and OS has
-installed successfully....” message will appear on the HDMI monitor
-connected to the DragonBoard™ 410c.
+Before clicking "OK":
 
-- Remove the SD Card and click “OK” as instructed, and the DragonBoard™ 410c will
-  reboot into the newly installed OS
+- Remove the SD Card
+- Set S6 switch on DragonBoard™ 410c to `0-0-0-0`, all switches should be set to "OFF"
+- Now click "OK" button and allow DragonBoard™ 410c to reboot.
 
-Upon completion of the above, the user will now see a Debian Desktop (Login screen)
-
-**Congratulations! You are now booting your newly installed OS directly
-from eMMC on the DragonBoard™ 410c!**
+**Congratulations! You are now booting your newly installed operating system directly from eMMC on the DragonBoard™ 410c!**
 
 
 ***
@@ -176,96 +222,139 @@ from eMMC on the DragonBoard™ 410c!**
 
 ## Mac OSX Host
 
-- [Getting Started](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#getting-started-1)
-- [Install Image onto SD Card](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#install-image-onto-sd-card-1)
-- [Flashing SD Card Image to the DragonBoard™ 410c](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#flashing-sd-card-image-to-the-dragonboard-410c-1)
+This section show how to install the Linaro based Debian operating system to your DragonBoard™ 410c using a Mac OS X host computer.
 
-This section is intended for users who would like to use the SD Card Method for Linux installation with their Mac OS X host machine.
 
-Please watch this [optional video tutorial]() (COMING SOON - 02/13/16) if you are having trouble following the document.
+- [**Step 1**: Prepare MicroSD card]()
+- [**Step 2**: Find SD Card Device name]()
+- [**Step 3**: Recall Download Location]()
+- [**Step 4**: Unzip _Debian SD Card Install Image_]()
+- [**Step 5**: Go to directory with _Debian SD Card Install Image_ folder using Terminal]()
+- [**Step 6**: Locate SD Card Install Image]()
+- [**Step 7**: Install Image onto SD Card]()
+- [**Step 8**: Prepare DragonBoard™ 410c with SD card]()
+- [**Step 9**: Install Linaro/Debian onto DragonBoard™ 410c]()
 
-### Getting Started
+***
 
-This section builds the SD Card image for the DragonBoard™ 410c. The steps in this section are executed entirely from the host PC. It is assumed that the developer is using a MAC OS X development host.
+####**Step 1**: Prepare MicroSD card
 
-**Step 1**: Prepare MicroSD card
+- Ensure data from mircoSD card is backed up
+- Everything on microSD card will be lost by the end of this procedure.
 
-Make sure you have backed up all valuable data from SD card. Everything on SD card prior to installing image will be lost by the end of this procedure.
+####**Step 2**: Find SD Card Device name
 
-**Step 2**: [Download Debian SD Card Install Image](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/dragonboard410c_sdcard_install_debian*.zip)
+- Use host computer
+- Open "Terminal" application **(Press Command+Space bar and type "Terminal")**
+- Remove SD card from host computer and run the following command:
+```shell
+diskutil list
+```
+- Note all recognized disk names
+- **Insert SD card** and run the following command (again):
+```shell
+diskutil list
+```
+- Note the newly recognized disk. This will be your SD card.
+- **Remember** your SD card device name, it will be needed in **Step 7**.
 
-**Step 3**: Unzip the downloaded install file
+####**Step 3**: Recall Download Location
 
-> Note the directory the install image was extracted to, as this will be required in the next step. There are multiple tools to unzip and extract these archives. **In most cases MAC OS X will unzip file on its on and leave it in your Downloads folder**.
+- Location of download will be needed in later steps
 
-Your SD card and install file should be ready! In the next section we will flash your install file onto your SD card.
+####**Step 4**: Unzip _Debian SD Card Install Image_
 
-### Install Image onto SD Card
+- When unzipped, this download will be a folder with the falling contents
+   - Linaro/Debian Install Image (.img)
+   - Readme
 
-> Note: SD card does not need to be formatted in any special way since this procedure will write the entire image, including the partition table.
+####**Step 5**: Go to directory with _Debian SD Card Install Image_ folder using Terminal
 
-**From the terminal on the Mac OS X host machine(press command+space and type in "terminal" to access terminal), enter the following sequence of commands:**
+- Use host computer
+- Open "Terminal" application **(Press Command+Space bar and type "Terminal")**
+- `cd` to the directory with your unzipped **Debian SD Card Install Image**
 
 ```shell
-# cd to the directory the install file was extracted to
-$ cd <extraction directory>
+cd <extraction directory>
 
+#Example: 
+#<extraction directory> = /Users/YourUserName/Downloads
+#For this example we assume the "Debian SD Card Install Image" is in the Downloads folder.
+cd /Users/YourUserName/Downloads
+```
+
+####**Step 6**: Locate SD Card Install Image
+
+- Make sure you are in the extraction directory
+
+**Unzipped Debian SD Card download will be a folder. This folder should be listed in your directory. Type `ls` from command line for a list of files that can be found in your current directory**:
+
+```shell
+ls
+
+#output
+dragonboard410c_sdcard_install_debian-XX
+```
+
+- Unzipped folder should be called dragonboard410c_sdcard_install_debian-XX, where XX represents the Debian release number
+- `cd` into this directory
+
+```shell
+cd dragonboard410c_sdcard_install_debian-XX
+```
+
+- Inside this folder you will find the install image
+   - `db410c_sd_install_debian.img`
+- This `.img` file is what will be flashed to your SD Card.
+
+####**Step 7**: Install Image onto SD Card
+
+**Checklist:**
+
+- SD card inserted into host computer
+- Recall SD Card device name from [**Step 2**]()
+- From within the dragonboard410c_sdcard_install_debian-XX folder, using the Terminal execute the following commands:
+
+**Execute:**
+
+```shell
 $ sudo dd if=db410c_sd_install_debian-YY.img of=/dev/XXX bs=4m
 $ sudo sync
 ```
 
-**NOTE:** Executing the sync flag command as outlined above is very
-important! Do not skip this step!
+**Note:**
 
-**Warning:** Be very careful not to overwrite your hard drive! In most
-cases, XXX will be disk1, disk2, etc...
+- `if=db410c_sd_install_debian.img`: should match the name of the image that was downloaded.
+- `of=/dev/XXX`: XXX should match the name of the SD Card device name from [**Step 2**](https://github.com/sdrobertw/test-wiki-/wiki/Linux-host-SD-CARD#step-2-find-sd-card-device-name). Be sure to use the device name with out the partition.
+- This command will take some time to execute. Be patient and avoid tampering with the terminal until process has ended.
+- Once SD card is done flashing, remove from host computer and set aside for **Step 8**
 
-> **YY** is Debian release number of downloaded file
-**XXX** is the SD card device name ([Click here for instructions on how to find microSD card device name](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#instructions-on-how-to-find-microsd-card-devices-name-in-mac-os-x-xxx))
+####**Step 8**: Prepare DragonBoard™ 410c with SD card
 
-**Flashing your SD card could take several minutes. Please be patient. When SD card is done flashing, eject device and move to the next section.**
-
-### Flashing SD Card Image to the DragonBoard™ 410c
-
-Once the image is written on the SD Card per the previous section,
-perform the following steps to flash the image into the eMMC memory on
-the DragonBoard™ 410c:
-
-- Make sure DragonBoard™ 410c is unplugged
+- Make sure DragonBoard™ 410c is unplugged from power
+- Set S6 switch on DragonBoard™ 410c to `0-1-0-0`, "SD Boot switch" should be set to "ON".
+   - Please see "1.1 Board Overview" on page 7 from [DragonBoard™ 410c Hardware Manual](http://linaro.co/96b-hwm-db) if you cannot find S6
+- Connect an HDMI monitor to the DragonBoard™ 410c with an HDMI cable, and power on the monitor
+- Plug a USB keyboard and/or mouse into either of the two USB connectors on the DragonBoard™ 410c
 - Insert the microSD card into the DragonBoard™ 410c
-- Set the S6 switch on the DragonBoard™ 410c to: `0-1-0-0` {SD Boot switch set to “ON”}
-- Plug a USB keyboard and/or mouse into either of the two USB
-  connectors on the DragonBoard™ 410c
-  
->Note: If no mouse is used, the keys in the parenthesis on the
-installer screen can be used to initiate install commands. For
-example “Install(i)” would be the “i” key on the keyboard. Arrow
-keys may also be used during the command initiation sequences.
+- Plug power adaptor into DragonBoard™ 410c, wait for board to boot up.
 
-- Connect an HDMI monitor to the DragonBoard™ 410c with an HDMI cable, and power
-  on the monitor
-- Connect the power cable to the DragonBoard™ 410c
-
-When the board powers up, it will boot into an installer similar to the
-figure below:
+####**Step 9**: Install Linaro/Debian onto DragonBoard™ 410c
 
 <img src="http://i.imgur.com/F18wlgU.png" data-canonical-src="http://i.imgur.com/F18wlgU.png" width="400" height="250"/>
 
-- Select the image to install and then click on “Install” (or type
-  “i”) and the OS will be installed into the eMMC memory on the
-  DragonBoard™ 410c.
+- If **Steps 1 - 8** were followed correctly, the above screen should be visible from your DragonBoard™ 410c
+- Select the image to install and click “Install” (or type “i”). OS will be installed into the eMMC memory
+- This process can take a few minutes to complete
+- Upon completion, “Flashing has completed and OS has installed successfully....” message will appear.
 
-After installation completes, a “Flashing has completed and OS has
-installed successfully....” message will appear on the HDMI monitor
-connected to the DragonBoard™ 410c.
+Before clicking "OK":
 
-- Remove the SD Card and click “OK” as instructed, and the DragonBoard™ 410c will
-  reboot into the newly installed OS
+- Remove the SD Card
+- Set S6 switch on DragonBoard™ 410c to `0-0-0-0`, all switches should be set to "OFF"
+- Now click "OK" button and allow DragonBoard™ 410c to reboot.
 
-Upon completion of the above, the user will now see a Debian Desktop (Login screen)
-
-**Congratulations! You are now booting your newly installed OS directly
-from eMMC on the DragonBoard™ 410c!**
+**Congratulations! You are now booting your newly installed operating system directly from eMMC on the DragonBoard™ 410c!**
 
 
 ***
@@ -274,90 +363,81 @@ from eMMC on the DragonBoard™ 410c!**
 
 ## Windows Host
 
-- [Getting Started](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#getting-started-2)
-- [Install Image using SD Card](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#install-image-onto-sd-card-2)
-- [Flashing SD Card Image to the DragonBoard™ 410c](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#flashing-sd-card-image-to-the-dragonboard-410c-2)
-
-This section is intended for users who would like to use the SD Card Method for Linux installation with their Windows host machine.
-
-Please watch this [optional video tutorial]() (Coming soon) if you are having trouble following the document.
-
-### Getting Started
-
-This section builds the SD Card image for the DragonBoard™ 410c. The steps in this section are executed entirely from the host PC. It is assumed that the developer is using a Windows development host.
-
-**Step 1**: Prepare MicroSD card
-
-Make sure you have backed up all valuable data from SD card. Everything on SD card prior to installing image will be lost by the end of this procedure.
-
-**Step 2**: [Download Debian SD Card Install Image](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/dragonboard410c_sdcard_install_debian*.zip)
-
-**Step 3**: Unzip the downloaded install file
-
-> Note the directory the install image was extracted to, as this will be required in the next step. There are multiple tools to unzip and extract these archives.
-
-**Step 4**: Download the [Win32DiskImager tool](http://sourceforge.net/projects/win32diskimager/)
-
-Your SD card, install file, and necessary tools(Win32DiskImager tool) should be ready! In the next section we will flash your install file onto your SD card.
+This section show how to install the Linaro based Debian operating system to your DragonBoard™ 410c using a Windows host computer.
 
 
-## Install Image onto SD Card
+- [**Step 1**: Prepare MicroSD card]()
+- [**Step 2**: Recall Download Location]()
+- [**Step 3**: Unzip _Debian SD Card Install Image_]()
+- [**Step 4**: Download the Win32DiskImager tool]()
+- [**Step 5**: Use Win32DiskImager tool to flash Debian onto SD Card]()
+- [**Step 6**: Prepare DragonBoard™ 410c with SD card]()
+- [**Step 7**: Install Linaro/Debian onto DragonBoard™ 410c]()
 
-1. Open the Win32DiskImager tool, and click the folder icon (top right). Find your way to the appropriate img (This is why you need to remember the location of your extracted image.)
+***
+
+####**Step 1**: Prepare MicroSD card
+
+- Ensure data from mircoSD card is backed up
+- Everything on microSD card will be lost by the end of this procedure.
+
+####**Step 2**: Recall Download Location
+
+- Location of download will be needed in later steps
+
+####**Step 3**: Unzip _Debian SD Card Install Image_
+
+- When unzipped, this download will be a folder with the falling contents
+   - Linaro/Debian Install Image (.img)
+   - Readme
+
+####**Step 4**: Download the Win32DiskImager tool
+
+- Win32DiskImager tool ([Direct Download](https://sourceforge.net/projects/win32diskimager/files/latest/download) / <a href="http://sourceforge.net/projects/win32diskimager/" target="_blank">Go to Site</a>)
+
+####**Step 5**: Use Win32DiskImager tool to flash Debian onto SD Card
+
+- Open Win32DiskImager tool
+- Click the folder icon in the top right
+- Find your way to the appropriate `.img` file (This is why you need to remember the location of your extracted image.)
 
 <img src="http://i.imgur.com/cqk6LhL.png" data-canonical-src="http://i.imgur.com/cqk6LhL.png" width="300" height="150"/>
 
-2. Insert your microSD card into your host computer (through a USB SD card-reader, if necessary).
-
-3. Be sure you have the correct device selected and click "write." **There may be a warning about corrupting the device. Click "Yes" to proceed.**
-
-**Upon completion you should see the following pop-up:**
+- Insert your microSD card (through a USB SD card-reader, if necessary)
+- Select the correct device and click "write" There may be a warning about corrupting the device. Click "Yes" to proceed.
+- This process may take a few minutes, be patient and wait for a completion notice.
+- Upon completion you should see the following pop-up:
 
 <img src="http://i.imgur.com/HzYujlw.png" data-canonical-src="http://i.imgur.com/HzYujlw.png" width="150" height="100"/>
 
-**Flashing your SD card could take several minutes. Please be patient. When SD card is done flashing, eject device and move to the next section.**
+- Eject SD Card and proceed to next **Step**
 
-### Flashing SD Card Image to the DragonBoard™ 410c
+####**Step 6**: Prepare DragonBoard™ 410c with SD card
 
-Once the image is written on the SD Card per the previous section,
-perform the following steps to flash the image into the eMMC memory on
-the DragonBoard™ 410c:
-
-- Make sure DragonBoard™ 410c is unplugged
+- Make sure DragonBoard™ 410c is unplugged from power
+- Set S6 switch on DragonBoard™ 410c to `0-1-0-0`, "SD Boot switch" should be set to "ON".
+   - Please see "1.1 Board Overview" on page 7 from [DragonBoard™ 410c Hardware Manual](http://linaro.co/96b-hwm-db) if you cannot find S6
+- Connect an HDMI monitor to the DragonBoard™ 410c with an HDMI cable, and power on the monitor
+- Plug a USB keyboard and/or mouse into either of the two USB connectors on the DragonBoard™ 410c
 - Insert the microSD card into the DragonBoard™ 410c
-- Set the S6 switch on the DragonBoard™ 410c to: `0-1-0-0` {SD Boot switch set to “ON”}
-- Plug a USB keyboard and/or mouse into either of the two USB
-  connectors on the DragonBoard™ 410c
-  
->Note: If no mouse is used, the keys in the parenthesis on the
-installer screen can be used to initiate install commands. For
-example “Install(i)” would be the “i” key on the keyboard. Arrow
-keys may also be used during the command initiation sequences.
+- Plug power adaptor into DragonBoard™ 410c, wait for board to boot up.
 
-- Connect an HDMI monitor to the DragonBoard™ 410c with an HDMI cable, and power
-  on the monitor
-- Connect the power cable to the DragonBoard™ 410c
-
-When the board powers up, it will boot into an installer similar to the
-figure below:
+####**Step 7**: Install Linaro/Debian onto DragonBoard™ 410c
 
 <img src="http://i.imgur.com/F18wlgU.png" data-canonical-src="http://i.imgur.com/F18wlgU.png" width="400" height="250"/>
 
-- Select the image to install and then click on “Install” (or type
-  “i”) and the OS will be installed into the eMMC memory on the
-  DragonBoard™ 410c.
+- If **Steps 1 - 6** were followed correctly, the above screen should be visible from your DragonBoard™ 410c
+- Select the image to install and click “Install” (or type “i”). OS will be installed into the eMMC memory
+- This process can take a few minutes to complete
+- Upon completion, “Flashing has completed and OS has installed successfully....” message will appear.
 
-After installation completes, a “Flashing has completed and OS has
-installed successfully....” message will appear on the HDMI monitor
-connected to the DragonBoard™ 410c.
+Before clicking "OK":
 
-- Remove the SD Card and click “OK” as instructed, and the DragonBoard™ 410c will
-  reboot into the newly installed OS
+- Remove the SD Card
+- Set S6 switch on DragonBoard™ 410c to `0-0-0-0`, all switches should be set to "OFF"
+- Now click "OK" button and allow DragonBoard™ 410c to reboot.
 
-Upon completion of the above, the user will now see a Debian Desktop (Login screen)
-
-**Congratulations! You are now booting your newly installed OS directly
-from eMMC on the DragonBoard™ 410c!**
+**Congratulations! You are now booting your newly installed operating system directly from eMMC on the DragonBoard™ 410c!**
 
 
 ***
