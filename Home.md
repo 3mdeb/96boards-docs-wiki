@@ -21,9 +21,9 @@ Welcome to the supporting documentation for <a href="http://96boards.org" target
 
 #### Hardware Specifications
 
-- Consumer Edition (CE) Specification (<a href="https://github.com/96boards/documentation/blob/master/96BoardsCESpecificationv1.0-EA1.pdf" target="_blank">**Github**</a>
+- Consumer Edition (CE) Specification (<a href="https://github.com/96boards/documentation/blob/master/96BoardsCESpecificationv1.0-EA1.pdf" target="_blank">**View**</a>
  / [**Download PDF**](https://www.96boards.org/ce-specification))
-- Enterprise Edition (EE) Specification (<a href="https://github.com/96boards/documentation/blob/master/96BoardsEESpecificationv1.0.pdf" target="_blank">**Github**</a>
+- Enterprise Edition (EE) Specification (<a href="https://github.com/96boards/documentation/blob/master/96BoardsEESpecificationv1.0.pdf" target="_blank">**View**</a>
  / [**Download PDF**](https://www.96boards.org/ee-specification))
 
 ***
