@@ -4,17 +4,13 @@ Welcome to the supporting documentation for [DragonBoard™ 410c](https://www.96
 
 
 ***
-
-
 [<img src="http://i.imgur.com/VH1IfZC.png" data-canonical-src="http://i.imgur.com/VH1IfZC.png" width="150" height="105" />]()
+[<img src="http://i.imgur.com/sGgyPpT.png" data-canonical-src="http://i.imgur.com/sGgyPpT.png" width="150" height="105" />]()
+[<img src="http://i.imgur.com/E1vGqle.png" data-canonical-src="http://i.imgur.com/E1vGqle.png" width="150" height="105" />]()
 
 [**Read About the DragonBoard™ 410c**](https://github.com/96boards/documentation/wiki/About-DragonBoard™-410c)
 
-
-### Contents
-
 ***
-
 #### Installation and Setup Guides
 
 - [Install Android or Debian using SD Card](https://github.com/96boards/documentation/wiki/Dragonboard-410c-Installation-Guide-for-Linux-and-Android#install-android-or-debian-from-an-sd-card)
