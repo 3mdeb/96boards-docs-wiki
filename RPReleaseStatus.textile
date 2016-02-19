@@ -1,7 +1,7 @@
 h2. Reference Platform Release Status
 
 *Release:* 16.03
-*Code freeze:* February 22th / 2016
+*Code/feature freeze:* February 22th / 2016
 *RC1:* February 22th / 2016
 *Release date:* March 1th / 2016
 
