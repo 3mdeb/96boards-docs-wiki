@@ -21,7 +21,7 @@
 - Debian Rootfs (Command line) ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/linaro-jessie-developer-qcom-snapdragon-arm64-20151204-36.img.gz) / <a href="http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/" target="_blank">Build Folder</a> )
 
 ***
-### Step 3: Choose your host computer to access your instruction set
+#### Step 3: Choose your host computer to access your instruction set
 
 - [Linux](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard™-410c-Linux-Install#linux-host-1)
 - [Mac OS X](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard™-410c-Linux-Install#mac-osx-host)
