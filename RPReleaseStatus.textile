@@ -48,6 +48,7 @@ h4. UEFI
 
 * "Bug 2032 - ACPI NUMA Support crashes on D02":https://bugs.linaro.org/show_bug.cgi?id=2032 - *Hanjun*
 * Lack of PCIe support for D02 on Linux (missing tables) - *Hanjun/Heyi*
+* Lack of a default device-tree for HiKey
 
 h4. Debian
 
