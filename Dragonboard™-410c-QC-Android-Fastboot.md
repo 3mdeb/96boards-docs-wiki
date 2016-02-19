@@ -9,3 +9,25 @@
 [<img src="http://i.imgur.com/tXXN5bZ.png" data-canonical-src="http://i.imgur.com/tXXN5bZ.png" width="125" height="157" />]()
 
 ***
+#### Step 1: Download Android Bootloader
+
+- Android Bootloader ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/linaro/rescue/latest/dragonboard410c_bootloader_emmc_android-40.zip) / <a href="http://builds.96boards.org/releases/dragonboard410c/linaro/rescue/latest/" target="_blank">Build Folder</a> )
+
+#### Step 2: Download the following files from the latest build
+
+- boot.img.tar.xz ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/boot.img.tar.xz))
+- system.img.tar.xz ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/system.img.tar.xz))
+- userdata.img.tar.xz ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/userdata.img.tar.xz))
+- recovery.img.tar.xz ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/recovery.img.tar.xz))
+- persist.img.tar.xz ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/persist.img.tar.xz))
+- cache.img.tar.xz ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/cache.img.tar.xz))
+
+
+***
+### Step 3: Choose your host computer to access your instruction set
+
+- [Linux]()
+- [Mac OS X]()
+- [Windows]()
+
+***
