@@ -9,3 +9,19 @@
 
 
 ***
+### Download SD Card Image
+
+- Android SD Card Image ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/dragonboard410c_sdcard_install_android-95.zip) / <a href="http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/" target="_blank">Build Folder</a>)
+
+***
+### Choose your Host Machine
+
+- [Linux]()
+- [Mac OS X]()
+- [Windows]()
+
+
+
+
+
+***
