@@ -1,0 +1,61 @@
+h2. Reference Platform Release Status
+
+*Release:* 16.03
+*Code freeze:* February 22th / 2016
+*RC1:* February 22th / 2016
+*Release date:* March 1th / 2016
+
+h3. Kernel
+
+Kernel is 4.4 based, unified and supporting the following boards by default:
+* Dragonboard410c
+* HiKey
+* AMD Overdrive
+* D02
+
+Tree data:
+* Git: "https://git.linaro.org/people/amit.kucheria/kernel.git":https://git.linaro.org/people/amit.kucheria/kernel.git
+* Branch: *96b-kernelci*
+* Config: "https://git.linaro.org/people/amit.kucheria/kernel.git/blob/refs/heads/96b-kernelci:/arch/arm64/configs/distro.config":https://git.linaro.org/people/amit.kucheria/kernel.git/blob/refs/heads/96b-kernelci:/arch/arm64/configs/distro.config
+
+Boards still to be supported:
+* APM X-Gene/Moonshot m400
+
+h3. Remaining Work Activities
+
+* QA/Validation - QA Team
+* Test/Validation of GPIO, I2C and SPI support on both HiKey and Dragonboard410c
+* Porting xorg-server into linaro-overlay - *Nicolas*
+* Release Documentation - *Robert*
+* Linaro-EDK2 February Release - *Leif*
+* D02 OpenPlatformPkg update - *Heyi/Leif*
+* D02 EDK2 SAS support - *Zhangfei Gao*
+* Move unified kernel to "https://github.com/96boards/linux":https://github.com/96boards/linux - *Amit*
+* Update CentOS installer to use the unified kernel - *Ricardo*
+
+h3. Out of Scope / Next Release
+
+* Kernel Fragments - *Amit*
+
+h3. Issues / Bugs
+
+h4. Kernel
+
+* Broken display for HiKey - *Amit*
+* "Bug 2051 - RPB: Overdrive fails to find the SATA disks when booting with ACPI":https://bugs.linaro.org/show_bug.cgi?id=2051 - *Graeme*
+
+h4. UEFI
+
+* "Bug 2032 - ACPI NUMA Support crashes on D02":https://bugs.linaro.org/show_bug.cgi?id=2032 - *Hanjun*
+* Lack of PCIe support for D02 on Linux (missing tables) - *Hanjun/Heyi*
+
+h4. Debian
+
+* "Bug 2009 - Wrong network device name set after Debian install":https://bugs.linaro.org/show_bug.cgi?id=2009 - *Ricardo*
+
+h4. AOSP
+
+h4. OE/Yocto
+
+
+
