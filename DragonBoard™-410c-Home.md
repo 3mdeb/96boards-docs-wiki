@@ -11,6 +11,15 @@ Welcome to the supporting documentation for [DragonBoard™ 410c](https://www.96
 [**Read About the DragonBoard™ 410c**](https://github.com/96boards/documentation/wiki/About-DragonBoard™-410c)
 
 ***
+
+#### Build Options
+[<img src="http://i.imgur.com/jl4GG0d.png" data-canonical-src="http://i.imgur.com/jl4GG0d.png" width="125" height="157" />](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Build-Choice-1#your-build-choice)
+[<img src="http://i.imgur.com/7rrS2JR.png" data-canonical-src="http://i.imgur.com/7rrS2JR.png" width="125" height="157" />](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Build-Choice-1#your-build-choice-1)
+[<img src="http://i.imgur.com/dnsIEuC.png" data-canonical-src="http://i.imgur.com/dnsIEuC.png" width="125" height="157" />](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Build-Choice-1#your-build-choice-2)
+
+[**Compare Builds**](https://github.com/sdrobertw/test-wiki-/wiki/Compare-Builds)
+
+***
 #### Installation and Setup Guides
 
 - [Install Android or Debian using SD Card](https://github.com/96boards/documentation/wiki/Dragonboard-410c-Installation-Guide-for-Linux-and-Android#install-android-or-debian-from-an-sd-card)
