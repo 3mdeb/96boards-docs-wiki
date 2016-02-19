@@ -1,7 +1,7 @@
 
 ***
 #### Your Build Choice
-[<<< Back to DragonBoard™ 410c Home](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard™-410c-Home)
+[<<< Back to DragonBoard™ 410c Home](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Home)
 
 [<img src="http://i.imgur.com/jl4GG0d.png" data-canonical-src="http://i.imgur.com/jl4GG0d.png" width="125" height="157" />]()
 [<img src="http://i.imgur.com/yRQKDI6.png" data-canonical-src="http://i.imgur.com/yRQKDI6.png" width="125" height="157" />]()
@@ -17,7 +17,7 @@
 
 ***
 #### Your Build Choice
-[<<< Back to DragonBoard™ 410c Home](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard™-410c-Home)
+[<<< Back to DragonBoard™ 410c Home](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Home)
 
 [<img src="http://i.imgur.com/7rrS2JR.png" data-canonical-src="http://i.imgur.com/7rrS2JR.png" width="125" height="157" />]()
 [<img src="http://i.imgur.com/yRQKDI6.png" data-canonical-src="http://i.imgur.com/yRQKDI6.png" width="125" height="157" />]()
@@ -33,7 +33,7 @@
 
 ***
 #### Your Build Choice
-[<<< Back to DragonBoard™ 410c Home](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard™-410c-Home)
+[<<< Back to DragonBoard™ 410c Home](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Home)
 
 [<img src="http://i.imgur.com/dnsIEuC.png" data-canonical-src="http://i.imgur.com/dnsIEuC.png" width="125" height="157" />]()
 [<img src="http://i.imgur.com/yRQKDI6.png" data-canonical-src="http://i.imgur.com/yRQKDI6.png" width="125" height="157" />]()
