@@ -58,6 +58,10 @@ h4. Debian
 
 h4. AOSP
 
+h5. DB410c
+
+* "Bug 254 - [RPB] wpa_supplicant crashes wcn36xx":https://bugs.96boards.org/show_bug.cgi?id=254
+
 h4. OE/Yocto
 
 h3. Completed Work
