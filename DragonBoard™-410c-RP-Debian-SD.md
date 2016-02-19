@@ -1,4 +1,4 @@
-[<<< Back to DragonBoard™ 410c RP Debian Home](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard™-410c-Reference-Platform-Debian)
+[<<< Back to DragonBoard™ 410c RP Debian Home](https://github.com/sdrobertw/Transition/wiki/DragonBoard™-410c-Linaro-Debian)
 
 ***
 #### Your Build Choice
