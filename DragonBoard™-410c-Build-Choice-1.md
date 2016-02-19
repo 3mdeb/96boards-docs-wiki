@@ -1,4 +1,4 @@
-
+[<img src="http://i.imgur.com/znkTVHx.png" data-canonical-src="http://i.imgur.com/znkTVHx.png" width="125" height="300" />]()
 ***
 #### Your Build Choice
 [<<< Back to DragonBoard™ 410c Home](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Home)
@@ -13,7 +13,7 @@
 
 ***
 
-[<img src="http://i.imgur.com/znkTVHx.png" data-canonical-src="http://i.imgur.com/znkTVHx.png" width="125" height="157" />]()
+[<img src="http://i.imgur.com/znkTVHx.png" data-canonical-src="http://i.imgur.com/znkTVHx.png" width="125" height="300" />]()
 
 ***
 #### Your Build Choice
@@ -25,7 +25,7 @@
 ***
 #### Choose an Available Operating System
 
-[<img src="http://i.imgur.com/OQGR5yY.png" data-canonical-src="http://i.imgur.com/OQGR5yY.png" width="125" height="157" />](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard™-410c-Linaro-Debian)
+[<img src="http://i.imgur.com/OQGR5yY.png" data-canonical-src="http://i.imgur.com/OQGR5yY.png" width="125" height="300" />](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard™-410c-Linaro-Debian)
 
 ***
 
@@ -42,11 +42,11 @@
 ***
 #### Choose and Available Operating System
 
-[<img src="http://i.imgur.com/7wy1996.png" data-canoncal-src="http://i.imgur.com/7wy1996.png" width="125" height="157" />](https://github.com/sdrobertw/test-wiki-/wiki/Dragonboard™-410c-Qualcomm-Android)
+[<img src="http://i.imgur.com/7wy1996.png" data-canoncal-src="http://i.imgur.com/7wy1996.png" width="125" height="300" />](https://github.com/sdrobertw/test-wiki-/wiki/Dragonboard™-410c-Qualcomm-Android)
 
 
 ***
 
-[<img src="http://i.imgur.com/znkTVHx.png" data-canonical-src="http://i.imgur.com/znkTVHx.png" width="125" height="157" />]()
+[<img src="http://i.imgur.com/znkTVHx.png" data-canonical-src="http://i.imgur.com/znkTVHx.png" width="125" height="300" />]()
 
 ***
