@@ -1,4 +1,4 @@
-[<img src="http://i.imgur.com/znkTVHx.png" data-canonical-src="http://i.imgur.com/znkTVHx.png" width="125" height="300" />]()
+[<img src="http://i.imgur.com/znkTVHx.png" data-canonical-src="http://i.imgur.com/znkTVHx.png" width="125" height="20" />]()
 ***
 #### Your Build Choice
 [<<< Back to DragonBoard™ 410c Home](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Home)
