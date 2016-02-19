@@ -13,12 +13,11 @@
 #### Step 1: Download Debian Bootloader
 
 - Debian Bootloader ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/linaro/rescue/latest/dragonboard410c_bootloader_emmc_linux*.zip) / <a href="http://builds.96boards.org/releases/dragonboard410c/linaro/rescue/latest/" target="_blank">Build Folder</a> )
-- Debian Boot ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/boot-linaro-jessie-qcom-snapdragon-arm64-20151204-36.img.gz) / <a href="http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/" target="_blank">Build Folder</a> )
+- Debian Boot ([Direct Download](http://builds.96boards.org/releases/reference-platform/debian/dragonboard410c/15.12/dragonboard410c-boot-linux-20151214-35.img.gz) / <a href="http://builds.96boards.org/releases/reference-platform/debian/dragonboard410c/15.12/" target="_blank">Build Folder</a> )
 
-#### Step 2: Download ONE Root File System
+#### Step 2: Download Root File System
 
-- Debian Rootfs (Desktop) ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/linaro-jessie-alip-qcom-snapdragon-arm64-20151204-36.img.gz) / <a href="http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/" target="_blank">Build Folder</a> )
-- Debian Rootfs (Command line) ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/linaro-jessie-developer-qcom-snapdragon-arm64-20151204-36.img.gz) / <a href="http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/" target="_blank">Build Folder</a> )
+- Debian Rootfs (Desktop) ([Direct Download](http://builds.96boards.org/releases/reference-platform/debian/dragonboard410c/15.12/dragonboard410c-rootfs-debian-jessie-alip-20151214-35.emmc.img.gz) / <a href="http://builds.96boards.org/releases/reference-platform/debian/dragonboard410c/15.12/" target="_blank">Build Folder</a> )
 
 ***
 #### Step 3: Choose your host computer to access your instruction set
