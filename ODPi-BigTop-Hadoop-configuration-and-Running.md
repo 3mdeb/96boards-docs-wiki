@@ -72,10 +72,10 @@ Add the following to the end and save:
     export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
     export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
     export HADOOP_COMMON_HOME=$HADOOP_HOME
-    export HADOOP_MAPRED_HOME=$/usr/lib/hadoop-mapreduce
+    export HADOOP_MAPRED_HOME=/usr/lib/hadoop-mapreduce
     export HADOOP_HDFS_HOME=/usr/lib/hadoop-hdfs
-    export YARN_HOME=$/usr/lib/hadoop-yarn
-    export HADOOP_YARN_HOME=$/usr/lib/hadoop-yarn/
+    export YARN_HOME=/usr/lib/hadoop-yarn
+    export HADOOP_YARN_HOME=/usr/lib/hadoop-yarn/
     export CLASSPATH=$CLASSPATH:.
     export CLASSPATH=$CLASSPATH:$HADOOP_HOME/hadoop-common-2.6.0.jar
     export CLASSPATH=$CLASSPATH:$HADOOP_HOME/client/hadoop-hdfs-2.6.0.jar
