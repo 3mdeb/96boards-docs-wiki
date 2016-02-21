@@ -23,7 +23,7 @@
 ***
 #### Step 3: Choose your host computer to access your instruction set
 
-- [Linux](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard™-410c-Linux-Install#linux-host-1)
-- [Mac OS X](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard™-410c-Linux-Install#mac-osx-host)
+- [Linux](https://github.com/sdrobertw/Transition/wiki/DragonBoard™-410c-Linux-Install#linux-host-1)
+- [Mac OS X](https://github.com/sdrobertw/Transition/wiki/DragonBoard™-410c-Linux-Install#mac-osx-host)
 
 ***
