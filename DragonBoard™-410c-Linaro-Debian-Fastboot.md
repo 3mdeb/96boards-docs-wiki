@@ -25,8 +25,5 @@
 
 - [Linux](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard™-410c-Linux-Install#linux-host-1)
 - [Mac OS X](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard™-410c-Linux-Install#mac-osx-host)
-- [Windows](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard™-410c-Linux-Install#windows-host-1)
-
-
 
 ***
