@@ -10,7 +10,7 @@
 [<img src="http://i.imgur.com/tXXN5bZ.png" data-canonical-src="http://i.imgur.com/tXXN5bZ.png" width="125" height="157" />]()
 
 ***
-#### Step 1: Download Debian Bootloader
+#### Step 1: Download Debian Bootloader and Boot file
 
 - Debian Bootloader ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/linaro/rescue/latest/dragonboard410c_bootloader_emmc_linux*.zip) / <a href="http://builds.96boards.org/releases/dragonboard410c/linaro/rescue/latest/" target="_blank">Build Folder</a> )
 - Debian Boot ([Direct Download](http://builds.96boards.org/releases/reference-platform/debian/dragonboard410c/15.12/dragonboard410c-boot-linux-20151214-35.img.gz) / <a href="http://builds.96boards.org/releases/reference-platform/debian/dragonboard410c/15.12/" target="_blank">Build Folder</a> )
