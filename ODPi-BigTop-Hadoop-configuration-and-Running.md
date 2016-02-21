@@ -14,7 +14,7 @@ Add hduser to sudoers list:
 
 Switch to hduser:
 
-    su hduser
+    sudo su - hduser
 
 Generate ssh key for hduser:
 
