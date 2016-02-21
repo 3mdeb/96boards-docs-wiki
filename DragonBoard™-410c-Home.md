@@ -17,7 +17,7 @@ Welcome to the supporting documentation for [DragonBoard™ 410c](https://www.96
 [<img src="http://i.imgur.com/7rrS2JR.png" data-canonical-src="http://i.imgur.com/7rrS2JR.png" width="125" height="157" />](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard™-410c-Linaro-Home)
 [<img src="http://i.imgur.com/dnsIEuC.png" data-canonical-src="http://i.imgur.com/dnsIEuC.png" width="125" height="157" />](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard™-410c-Qualcomm-Home)
 
-[**Compare Builds**](https://github.com/sdrobertw/test-wiki-/wiki/Compare-Builds)
+[**Compare Builds**]()
 
 ***
 #### Installation and Setup Guides
