@@ -66,8 +66,8 @@ Add Environment Variables to bash file :
 Add the following to the end and save:
 
     export HADOOP_HOME=/usr/lib/hadoop
-    export HADOOP_OPTS="-Djava.library.path=$HADOOP_PREFIX/lib/native"
     export HADOOP_PREFIX=$HADOOP_HOME
+    export HADOOP_OPTS="-Djava.library.path=$HADOOP_PREFIX/lib/native"
     export HADOOP_LIBEXEC_DIR=/usr/lib/hadoop/libexec
     export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
     export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
