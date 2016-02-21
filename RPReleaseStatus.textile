@@ -5,6 +5,17 @@ h2. Reference Platform Release Status
 *RC1:* February 22th / 2016
 *Release date:* March 1th / 2016
 
+h3. Release Candidates
+
+h4. RC1
+
+*Debian Installer:* "mini.iso":https://ci.linaro.org/view/96boards/job/96boards-reference-debian-installer-staging/lastSuccessfulBuild/artifact/mini.iso and "netboot.tar.gz":https://ci.linaro.org/view/96boards/job/96boards-reference-debian-installer-staging/lastSuccessfulBuild/artifact/netboot.tar.gz
+*Kernel:* "linux-image-4.4.0-85":http://repo.linaro.org/ubuntu/linaro-staging/pool/main/l/linux/linux-image-4.4.0-85-arm64_4.4.0.linaro.85-1.linarojessie.1_arm64.deb
+*CE AOSP RPB HiKey*: "65":https://builds.96boards.org/snapshots/reference-platform/aosp/hikey/65/
+*CE AOSP RPB Dragonboard410c:* "43":https://builds.96boards.org/snapshots/reference-platform/aosp/db410c/43/
+*CE Debian RPB HiKey*: "52":https://builds.96boards.org/snapshots/reference-platform/debian/52/hikey/
+*CE Debian RPB Dragonboard410c:* "52":https://builds.96boards.org/snapshots/reference-platform/debian/52/dragonboard410c/
+
 h3. Kernel
 
 Kernel is 4.4 based, unified and supporting the following boards by default:
@@ -43,32 +54,50 @@ h3. Issues / Bugs
 
 h4. Kernel
 
+* "Bug 1999 - RP Kernel doesn't boot on HP Moonshot m400 (APM X-Gene) cartridges (ACPI)":https://bugs.linaro.org/show_bug.cgi?id=1999 - *Ricardo/Amit*
+* "Bug 2060 - [RPB] Missing support for APM XGENE / Moonshot m400":https://bugs.linaro.org/show_bug.cgi?id=2060 - *Amit*
+
+h6. HiKey
+
 * Broken display for HiKey - *Amit*
+
+h6. Overdrive
+
 * "Bug 2051 - RPB: Overdrive fails to find the SATA disks when booting with ACPI":https://bugs.linaro.org/show_bug.cgi?id=2051 - *Graeme*
+
+h6. Dragonboard410c
+
+* "Bug 2061 - [RPB] CONFIG_QCOM_SCM breaks XGENE support":https://bugs.linaro.org/show_bug.cgi?id=2061 - *Amit/Nicolas*
+
+h6. D02
+
+* "Bug 2037 - D02: Unable to handle kernel paging request":https://bugs.linaro.org/show_bug.cgi?id=2037 - *Amit/Hanjun*
+* "Bug 2063 - D02: No console unless you boot with console=ttyS0,115200":https://bugs.linaro.org/show_bug.cgi?id=2063 - *Amit/Hanjun*
 
 h4. UEFI
 
+h6. D02
+
+* "Bug 2062 - EDK2 D02: "sas: realizing _RST replacing syscon" breaks SAS support in Linux":https://bugs.linaro.org/show_bug.cgi?id=2062 - *Heyi*
 * "Bug 2032 - ACPI NUMA Support crashes on D02":https://bugs.linaro.org/show_bug.cgi?id=2032 - *Hanjun*
 * Lack of PCIe support for D02 on Linux (missing tables) - *Hanjun/Heyi*
-* Lack of a default device-tree for HiKey
+
+h6. HiKey
+
+* Lack of a default device-tree for HiKey - *Ricardo/Guodong*
 
 h4. Debian
 
 * "Bug 2009 - Wrong network device name set after Debian install":https://bugs.linaro.org/show_bug.cgi?id=2009 - *Ricardo*
 
-h5. DB410c
+h6. DB410c
 
 * "Bug 207 - [RPB] Bluetooth does not work on Dragon board debian":https://bugs.96boards.org/show_bug.cgi?id=207
 
 h4. AOSP
 
-h5. DB410c
+h6. DB410c
 
 * "Bug 254 - [RPB] wpa_supplicant crashes wcn36xx":https://bugs.96boards.org/show_bug.cgi?id=254
 
 h4. OE/Yocto
-
-h3. Completed Work
-
-
-
