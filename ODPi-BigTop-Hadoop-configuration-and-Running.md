@@ -60,8 +60,7 @@ Back to the system, configure the app environment:
 
 Add Environment Variables to bash file :
 
-    su hduser
-    cd
+    sudo su - hduser
     sudo nano .bashrc
 
 Add the following to the end and save:
