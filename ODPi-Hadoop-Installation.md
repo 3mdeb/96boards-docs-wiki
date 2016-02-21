@@ -24,7 +24,7 @@ Add to repo source list (**not required if you are using the installer from the 
 Update the source list and install the dependencies:
 
     sudo apt-get update
-    sudo apt-get install openssh-server rsync openjdk-7-jre
+    sudo apt-get install openssh-server rsync openjdk-7-jre openjdk-7-jdk
     sudo apt-get build-dep build-essential
 
 Install Hadoop packages:
