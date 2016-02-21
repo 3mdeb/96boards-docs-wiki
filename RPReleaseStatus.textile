@@ -51,7 +51,7 @@ h3. Out of Scope / Next Release
 
 * Kernel Fragments - *Amit*
 
-h3. Issues / Bugs
+h3. Current Issues / Bugs
 
 h4. Kernel
 
@@ -60,7 +60,7 @@ h4. Kernel
 
 h6. HiKey
 
-* Broken display for HiKey - *Amit*
+* No display support - *Amit*
 
 h6. Overdrive
 
