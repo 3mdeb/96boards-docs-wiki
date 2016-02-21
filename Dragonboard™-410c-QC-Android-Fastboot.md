@@ -28,6 +28,5 @@
 
 - [Linux]()
 - [Mac OS X]()
-- [Windows]()
 
 ***
