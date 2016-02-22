@@ -16,9 +16,9 @@
 ***
 ### Choose your Host Machine
 
-- [Linux]()
-- [Mac OS X]()
-- [Windows]()
+- [Linux](https://github.com/sdrobertw/Transition/wiki/DragonBoard-410c-Android-Install#linux-host)
+- [Mac OS X](https://github.com/sdrobertw/Transition/wiki/DragonBoard-410c-Android-Install#mac-os-x-host)
+- [Windows](https://github.com/sdrobertw/Transition/wiki/DragonBoard-410c-Android-Install#windows-host)
 
 
 
