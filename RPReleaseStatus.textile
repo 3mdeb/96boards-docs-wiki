@@ -83,6 +83,7 @@ h6. D02
 * "Bug 2062 - EDK2 D02: "sas: realizing _RST replacing syscon" breaks SAS support in Linux":https://bugs.linaro.org/show_bug.cgi?id=2062 - *Heyi*
 * "Bug 2032 - ACPI NUMA Support crashes on D02":https://bugs.linaro.org/show_bug.cgi?id=2032 - *Hanjun*
 * Lack of PCIe support for D02 on Linux (missing tables) - *Hanjun/Heyi*
+* Lack of SAS support in EDK2/UEFI - *Zhangfei*
 
 h6. HiKey
 
