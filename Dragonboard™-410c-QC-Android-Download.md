@@ -56,9 +56,9 @@ This method requires the following hardware:
 ***
 ### Choose your Host Machine
 
-- [Linux](https://github.com/sdrobertw/Transition/wiki/DragonBoard-410c-Android-Install#linux-host)
-- [Mac OS X](https://github.com/sdrobertw/Transition/wiki/DragonBoard-410c-Android-Install#mac-os-x-host)
-- [Windows](https://github.com/sdrobertw/Transition/wiki/DragonBoard-410c-Android-Install#windows-host)
+- [Linux](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Android-Install#linux-host)
+- [Mac OS X](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Android-Install#mac-os-x-host)
+- [Windows](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Android-Install#windows-host)
 
 ***
 
@@ -93,7 +93,7 @@ This method requires the following hardware:
 ***
 ### Step 3: Choose your host computer to access your instruction set
 
-- [Linux](https://github.com/sdrobertw/Transition/wiki/DragonBoard-410c-Android-Install#linux-host-1)
-- [Mac OS X](https://github.com/sdrobertw/Transition/wiki/DragonBoard-410c-Android-Install#mac-osx-host)
+- [Linux](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Android-Install#linux-host-1)
+- [Mac OS X](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Android-Install#mac-osx-host)
 
 ***
