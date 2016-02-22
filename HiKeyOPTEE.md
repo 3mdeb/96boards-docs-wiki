@@ -111,15 +111,18 @@ export OPTEE_TEST_DIR=${PWD}/optee_test
 cd ${OPTEE_TEST_DIR}
 ```
 
-32-bit build:
+* `CROSS_COMPILE_HOST`: the cross compiler used to compile the Non-Secure Client Application (`host/xtest`)
+* `CROSS_COMPILE_TA`: the cross compiler used to compile the Trusted Applications (`ta`)
+
+32-bit Secure Userland build and 64-bit Non-secure Userland (default):
 ```
 make CROSS_COMPILE_HOST=aarch64-linux-gnu- CROSS_COMPILE_TA=arm-linux-gnueabihf- TA_DEV_KIT_DIR=${OPTEE_OS_DIR}/out/arm-plat-hikey/export-ta_arm32 CFG_DEV_PATH=${PWD}/.. O=${OPTEE_TEST_DIR}/out clean all
 cd ..
 ```
 
-64-bit build:
+64-bit Secure Userland build and 64-bit Non-secure Userland:
 ```
-make CROSS_COMPILE_HOST=aarch64-linux-gnu- CROSS_COMPILE_TA=aarch64-linux-gnu- TA_DEV_KIT_DIR=${OPTEE_OS_DIR}/out/arm-plat-hikey/export-ta_arm64 CFG_DEV_PATH=${PWD}/.. O=${OPTEE_TEST_DIR}/out clean all
+make CROSS_COMPILE_HOST=aarch64-linux-gnu- CROSS_COMPILE_TA=aarch64-linux-gnu- TA_DEV_KIT_DIR=${OPTEE_OS_DIR}/out/arm-plat-hikey/export-ta_arm32 CFG_DEV_PATH=${PWD}/.. O=${OPTEE_TEST_DIR}/out clean all
 cd ..
 ```
 
