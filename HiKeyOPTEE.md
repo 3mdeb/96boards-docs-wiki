@@ -122,7 +122,7 @@ cd ..
 
 64-bit Secure Userland build and 64-bit Non-secure Userland:
 ```
-make CROSS_COMPILE_HOST=aarch64-linux-gnu- CROSS_COMPILE_TA=aarch64-linux-gnu- TA_DEV_KIT_DIR=${OPTEE_OS_DIR}/out/arm-plat-hikey/export-ta_arm32 CFG_DEV_PATH=${PWD}/.. O=${OPTEE_TEST_DIR}/out clean all
+make CROSS_COMPILE_HOST=aarch64-linux-gnu- CROSS_COMPILE_TA=aarch64-linux-gnu- TA_DEV_KIT_DIR=${OPTEE_OS_DIR}/out/arm-plat-hikey/export-ta_arm64 CFG_DEV_PATH=${PWD}/.. O=${OPTEE_TEST_DIR}/out clean all
 cd ..
 ```
 
