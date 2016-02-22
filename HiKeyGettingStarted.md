@@ -817,8 +817,7 @@ Please ignore any warnings/errors reported during the following steps
 
 ```
 $ cd linux.git
-$ make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j8 modules INSTALL_MOD_PATH=./build_utilities.git/fs\
-> modules_install
+$ make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j8 modules INSTALL_MOD_PATH=./build_utilities.git/fs modules_install
 $ cd build_utilities.git
 $ ./build_wl18xx.sh modules
 $ ./build_wl18xx.sh firmware
@@ -842,8 +841,7 @@ To include the drivers compiled above in a jessie image you would:
 a) In your browser, visit [http://repo.linaro.org/ubuntu/linaro-staging/pool/main/a/android-tools/](http://repo.linaro.org/ubuntu/linaro-staging/pool/main/a/android-tools/), find the package name of android-tools-fsutils_`<version>`_amd64.deb, then download with wget and install simg2img and make_ext4fs. Eg:
 
 ```
-$ wget https://repo.linaro.org/ubuntu/linaro-overlay/pool/main/a/android-tools/\
-android-tools-fsutils_<version>_amd64.deb
+$ wget https://repo.linaro.org/ubuntu/linaro-overlay/pool/main/a/android-tools/android-tools-fsutils_<version>_amd64.deb
 $ sudo dpkg -i --force-all android-tools-fsutils_*.deb
 ```
 
