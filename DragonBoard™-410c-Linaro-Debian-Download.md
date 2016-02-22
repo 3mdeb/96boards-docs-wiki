@@ -10,8 +10,8 @@
 ***
 #### Choose your Method of Installation
 
-[<img src="http://i.imgur.com/g8N21m1.png" data-canonical-src="http://i.imgur.com/g8N21m1.png" width="125" height="157" />](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Linaro-Debian-SD)
-[<img src="http://i.imgur.com/tXXN5bZ.png" data-canonical-src="http://i.imgur.com/tXXN5bZ.png" width="125" height="157" />](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Linaro-Debian-Fastboot)
+[<img src="http://i.imgur.com/g8N21m1.png" data-canonical-src="http://i.imgur.com/g8N21m1.png" width="125" height="157" />](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Linaro-Debian-Download#your-build-choice-1)
+[<img src="http://i.imgur.com/tXXN5bZ.png" data-canonical-src="http://i.imgur.com/tXXN5bZ.png" width="125" height="157" />](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Linaro-Debian-Download#your-build-choice-2)
 
 ## SD Card Method
 The SD card method allows you to place a microSD card into the DragonBoard™ 410c to automatically boot and install the Linux Desktop onto the board. This method is generally simpler and should be used by beginners. 
