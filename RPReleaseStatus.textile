@@ -10,6 +10,7 @@ h3. Release Candidates
 h4. RC1
 
 *Debian Installer:* "mini.iso":https://ci.linaro.org/view/96boards/job/96boards-reference-debian-installer-staging/lastSuccessfulBuild/artifact/mini.iso and "netboot.tar.gz":https://ci.linaro.org/view/96boards/job/96boards-reference-debian-installer-staging/lastSuccessfulBuild/artifact/netboot.tar.gz
+*CentOS Installer:* TO BE PUBLISHED
 *Kernel:* "linux-image-4.4.0-85":http://repo.linaro.org/ubuntu/linaro-staging/pool/main/l/linux/linux-image-4.4.0-85-arm64_4.4.0.linaro.85-1.linarojessie.1_arm64.deb
 *UEFI*: "43":https://builds.96boards.org/snapshots/reference-platform/components/uefi/43/
 *CE AOSP RPB HiKey*: "65":https://builds.96boards.org/snapshots/reference-platform/aosp/hikey/65/
