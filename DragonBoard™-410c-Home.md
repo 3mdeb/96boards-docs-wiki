@@ -13,9 +13,9 @@ Welcome to the supporting documentation for [DragonBoard™ 410c](https://www.96
 ***
 
 #### Supported Operating Systems - Build Options
-[<img src="http://i.imgur.com/jl4GG0d.png" data-canonical-src="http://i.imgur.com/jl4GG0d.png" width="125" height="157" />](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RP-Debian-Fastboot)
+[<img src="http://i.imgur.com/jl4GG0d.png" data-canonical-src="http://i.imgur.com/jl4GG0d.png" width="125" height="157" />](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RP-Debian-Download)
 [<img src="http://i.imgur.com/7rrS2JR.png" data-canonical-src="http://i.imgur.com/7rrS2JR.png" width="125" height="157" />](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Linaro-Debian-Download)
-[<img src="http://i.imgur.com/dnsIEuC.png" data-canonical-src="http://i.imgur.com/dnsIEuC.png" width="125" height="157" />](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard™-410c-Qualcomm-Home)
+[<img src="http://i.imgur.com/dnsIEuC.png" data-canonical-src="http://i.imgur.com/dnsIEuC.png" width="125" height="157" />](https://github.com/96boards/documentation/wiki/Dragonboard™-410c-QC-Android-Download)
 
 [**Compare Builds**]()
 
