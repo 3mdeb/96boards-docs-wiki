@@ -26,7 +26,7 @@
 ***
 ### Step 3: Choose your host computer to access your instruction set
 
-- [Linux]()
-- [Mac OS X]()
+- [Linux](https://github.com/sdrobertw/Transition/wiki/DragonBoard-410c-Android-Install#linux-host-1)
+- [Mac OS X](https://github.com/sdrobertw/Transition/wiki/DragonBoard-410c-Android-Install#mac-osx-host)
 
 ***
