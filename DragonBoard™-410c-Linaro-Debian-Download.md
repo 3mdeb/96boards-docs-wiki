@@ -52,12 +52,12 @@ This method requires the following hardware:
 [<img src="http://i.imgur.com/g8N21m1.png" data-canonical-src="http://i.imgur.com/g8N21m1.png" width="125" height="157" />]()
 
 ***
-### Download SD Card Image
+#### Step 1: Download SD Card Image
 
 - Debian SD Card Image ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/dragonboard410c_sdcard_install_debian-36.zip) / <a href="http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/" target="_blank">Build Folder</a>)
 
 ***
-### Choose your Host Machine
+#### Step 2: Choose your host computer to access your instruction set
 
 - [Linux](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard™-410c-Linux-Install#linux-host)
 - [Mac OS X](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard™-410c-Linux-Install#mac-os-x-host)
