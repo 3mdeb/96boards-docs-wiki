@@ -1,4 +1,4 @@
-[<<< Back to Dragonboard™ 410c Qualcomm® Android Home](https://github.com/sdrobertw/test-wiki-/wiki/Dragonboard™-410c-Qualcomm-Android)
+[<<< Back to Dragonboard™ 410c Home](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Home)
 
 ***
 
