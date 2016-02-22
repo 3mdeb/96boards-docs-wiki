@@ -1,4 +1,4 @@
-[<<< Back to DragonBoard™ 410c Home](https://github.com/96boards/documentation/wiki/Dragonboard-410c)
+[<<< Back to DragonBoard™ 410c Linaro Builds](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Home)
 # Dragonboard™ 410c Linux Installation Guide
 
 
@@ -15,9 +15,7 @@ There are two primary ways to install software onto the DragonBoard™ 410c:
 3. Download file(s) and Choose your Host Machine (This is the machine you will be using throughout the process)
 4. Follow your custom set of steps
 
-If you are having trouble with this document please <a href="https://youtu.be/JoL1rQhJKuA" target="_blank">click here</a> for a video walkthrough.
-
-
+If you are having trouble with this document please [click here]() for a video walkthrough.
 
 ***
 
@@ -34,7 +32,7 @@ This method requires the following hardware:
 - USB Mouse and/or keyboard
 - HDMI Monitor with full size HDMI cable
 
-Skip to the [Install Debian Using SD Card](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#install-debian-using-sd-card) section to use this method.   
+Skip to the [Install Debian Using SD Card]() section to use this method.   
 
 ## Fastboot Method
 Fastboot is supported by the board and can be used for installs.  This is for advanced users who are most likely modifying/customizing source code and will need to download such updates to the board for test/execution. When installing Debian using Fastboot, you will have the option to install either the Developer(console-only) image, or the LXDE(Desktop) image.  
@@ -48,7 +46,7 @@ This method requires the following hardware:
 - USB Mouse and/or keyboard (not required to perform flash)
 - HDMI Monitor with full size HDMI cable (not required to perform flash)
 
-Skip to the [Install Debian Using Fastboot](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#install-debian-using-fastboot) to use this method.
+Skip to the [Install Debian Using Fastboot]() to use this method.
 
 ***
 
@@ -56,26 +54,27 @@ Skip to the [Install Debian Using Fastboot](https://github.com/96boards/document
 
 **Choose your Installation Method:**
 
-- [**Install Debian using SD Card**](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#install-debian-using-sd-card)
-- [**Install Debian Using Fastboot**](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#install-debian-using-fastboot)
+- [**Install Debian using SD Card**]()
+- [**Install Debian Using Fastboot**]()
 
 
 ***
 
 
 # Install Debian using SD Card
-[Back to Step 2](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#step-2-choose-your-method)
+[Back to Step 2]()
 
 #### Step 3: Download file(s) and Choose your Host Machine
 
 ##**Download:**
 
-Debian SD Card Install Image ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/dragonboard410c_sdcard_install_debian*.zip) / [View Build Folder](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/))
+Debian SD Card Install Image ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/dragonboard410c_sdcard_install_debian*.zip) / [View Build Folder]())
 
+##**Choose Host Computer:**
 
-- [**Linux Host**](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#linux-host)
-- [**Mac OSX Host**](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#mac-osx-host)
-- [**Windows Host**](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#windows-host)
+- [**Linux Host**]()
+- [**Mac OSX Host**]()
+- [**Windows Host**]()
 
 
 ***
@@ -83,8 +82,8 @@ Debian SD Card Install Image ([Direct Download](http://builds.96boards.org/relea
 
 ## Linux Host
 
-This section show how to install the Linaro based Debian operating system to your DragonBoard™ 410c using a Linux host computer.
-
+This section show how to install the Linaro based Debian operating system to your DragonBoard™ 410c using the SD Card method on a Linux host computer.
+***
 
 - [**Step 1**: Prepare MicroSD card]()
 - [**Step 2**: Find SD Card Device name]()
@@ -121,7 +120,8 @@ lsblk
 
 ####**Step 3**: Recall Download Location
 
-- Location of download will be needed in later steps
+- Locate SD card install file from Downloads page.
+- This file will be needed for the next step.
 
 ####**Step 4**: Unzip _Debian SD Card Install Image_
 
@@ -220,10 +220,10 @@ Before clicking "OK":
 ***
 
 
-## Mac OSX Host
+## Mac OS X Host
 
-This section show how to install the Linaro based Debian operating system to your DragonBoard™ 410c using a Mac OS X host computer.
-
+This section show how to install the Linaro based Debian operating system to your DragonBoard™ 410c using the SD Card method on a Mac OS X host computer.
+***
 
 - [**Step 1**: Prepare MicroSD card]()
 - [**Step 2**: Find SD Card Device name]()
@@ -260,7 +260,8 @@ diskutil list
 
 ####**Step 3**: Recall Download Location
 
-- Location of download will be needed in later steps
+- Locate SD card install file from Downloads page.
+- This file will be needed for the next step.
 
 ####**Step 4**: Unzip _Debian SD Card Install Image_
 
@@ -356,15 +357,12 @@ Before clicking "OK":
 
 **Congratulations! You are now booting your newly installed operating system directly from eMMC on the DragonBoard™ 410c!**
 
-
 ***
-
-
 
 ## Windows Host
 
-This section show how to install the Linaro based Debian operating system to your DragonBoard™ 410c using a Windows host computer.
-
+This section show how to install the Linaro based Debian operating system to your DragonBoard™ 410c using the SD Card method on a Windows host computer.
+***
 
 - [**Step 1**: Prepare MicroSD card]()
 - [**Step 2**: Recall Download Location]()
@@ -381,9 +379,10 @@ This section show how to install the Linaro based Debian operating system to you
 - Ensure data from mircoSD card is backed up
 - Everything on microSD card will be lost by the end of this procedure.
 
-####**Step 2**: Recall Download Location
+####**Step 3**: Recall Download Location
 
-- Location of download will be needed in later steps
+- Locate SD card install file from Downloads page.
+- This file will be needed for the next step.
 
 ####**Step 3**: Unzip _Debian SD Card Install Image_
 
@@ -444,32 +443,38 @@ Before clicking "OK":
 
 
 # Install Debian Using Fastboot
-[Back to Step 2](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#step-2-choose-your-method)
+[Back to Step 2]()
 
 #### Step 3: Choose your Host Machine
 
-- [**Linux Host**](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#linux-host-1)
-- [**Mac OSX Host**](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#mac-osx-host-1)
-- [**Windows Host**](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#windows-host-1)
+##**Choose Host Computer:**
+
+- [**Linux Host**]()
+- [**Mac OSX Host**]()
+- [**Windows Host**]()
 
 
 ***
-
-
 ##Linux Host
 
-- [Getting Started](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#getting-started-3)
-- [Flash Bootloader into on-board eMMC](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#flash-bootloader-into-on-board-emmc)
-- [Flash Linaro/Debian Release](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#flash-linarodebian-release)
+This section show how to install the Linaro based Debian operating system to your DragonBoard™ 410c using the fastboot method on a Linux host computer.
 
-### Getting Started
+***
 
-This section will explain the fastboot method for installation of the Linux images onto
-the DragonBoard™ 410c. 
+- [**Step 1**: Make sure fastboot is set up on host computer]()
+- [**Step 2**: Connect host computer to DragonBoard™ 410c]()
+- [**Step 3**: Boot DragonBoard™ 410c into fastboot mode]()
+- [**Step 4**: Flash Bootloader]()
+- [**Step 5**: Recall location of `boot` and `rootfs` download from the downloads page]()
+- [**Step 6**: Unzip both 'boot' and 'rootfs' files]()
+- [**Step 7**: Flash `boot` image and `rootfs` to the DragonBoard™ 410c]()
+- [**Step 8**: Reboot DragonBoard™ 410c]()
 
-**Step 1**: Make sure fastboot is set up on host computer. Android SDK “Tools only” for Linux can be downloaded [here](http://developer.android.com/sdk)
+***
 
+**Step 1**: Make sure fastboot is set up on host computer. 
 
+- Android SDK “Tools only” for Linux can be downloaded <a href="http://developer.android.com/sdk" target="_blank">here</a>
 - The Linux “Tools Only” SDK download does not come with fastboot, you will need to use the Android SDK Manager to install platform-tools.
 - To do this follow the “SDK Readme.txt” instructions included in your SDK “Tools Only” download.
 
@@ -494,74 +499,69 @@ If you are still having trouble setting up fastboot, <a href="https://youtu.be/W
 From the connected host machine terminal window, run the following commands:
 
 ```shell
-# Check to make sure fastboot device is connected
+# Check to make sure device is connected and in fastboot mode
 
 fastboot devices
 ```
 
 **At this point you should be connected to your DragonBoard™ 410c with a USB to microUSB cable. Your DragonBoard™ 410c should be booted into fastboot mode and ready to be flashed with the appropriate images.**
 
+#### **Step 4**: Flash Bootloader
 
-***
-
-
-### Flash Bootloader into on-board eMMC
-
-In this section we will continue by downloading and flashing the bootloader onto your DragonBoard™ 410c. This will be achieved by accessing and executing a script located in the downloaded bootloader folder.
-
-**Step 1**: Download Bootloader
-
-[Bootloader zip](http://builds.96boards.org/releases/dragonboard410c/linaro/rescue/latest/dragonboard410c_bootloader_emmc_linux-40.zip)
-
-**Step 2**: Flash Bootloader
-
-Open up terminal and execute the following commands:
+- Use host computer
+- Open "Terminal" application
+- Recall location of Bootloader download.
+- The bootloader file should be named `dragonboard410c_bootloader_emmc_linux-XX`
+- XX represents the release number of the Bootloader
+- `cd` to the directory with your unzipped **Bootloader Folder**
 
 ```shell
-# cd to the directory the bootloader zip file was extracted
 cd <extraction directory>
 
-sudo ./flashall
-```
-The bootloader is now installed on the DragonBoard™ 410c!
+#Example: 
+cd /Users/YourUserName/Downloads
+#<extraction directory> = /Users/YourUserName/Downloads
+#For this example we assume the "Bootloader" is in the Downloads folder.
 
-***
+
+cd <unzipped Bootloader folder>
+
+#Example:
+cd dragonboard410c_bootloader_emmc_linux-40
+#<unzipped Bootloader folder> = dragonboard410c_bootloader_emmc_linux-40
+#This example took place during release 40
+
+# This command will execute the flashall script within the bootloader folder
+./flashall
+
+```
+
 
 ### Flash Linaro/Debian Release
 
 In this section we will flash all remaining parts of the operating system. In order to do this we will be using the fastboot commands that are now readily available to us in our Terminal command line.
 
-**Step 1**: Download `boot` and `rootfs`
+#### **Step 5**: Recall location of `boot` and `rootfs` download from the downloads page
 
-- You will need the [**latest Debian boot image**](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/boot-linaro-jessie-qcom-snapdragon-arm64*.img.gz)
-- You must choose either the [**Developer**](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/linaro-jessie-developer-qcom-snapdragon-arm64*.img.gz)  **or**  [**ALIP - Desktop**](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/linaro-jessie-alip-qcom-snapdragon-arm64*.img.gz) for your root file system (rootfs).
+- You should have downloaded the `boot` file
+- You should have downloaded ONE of rootfs` file (Either `Developer` or `Desktop - ALIP` version)
 
-**The way you experience this operating system will be based on which rootfs you choose for your board.**
-Once downloaded, their names should be similar to what you see here:
+#### **Step 6**: Unzip both 'boot' and 'rootfs' files
 
-**Debian boot image:**
-`boot-linaro-jessie-qcom-snapdragon-arm64-BUILD#.img.gz`
+#### **Step 7**: Flash `boot` image and `rootfs` to the DragonBoard™ 410c
 
-**Developer rootfs:**
-`linaro-jessie-developer-qcom-snapdragon-arm64-BUILD#.img.gz`
-
-**or**
-
-**ALIP-Desktop rootfs:**
-`linaro-jessie-alip-qcom-snapdragon-arm64-BUILD#.img.gz`
-
-
-Where BUILD# is the date/Build stamp for the downloaded file
-
-**Step 2**: Flash 'boot' and 'rootfs' to DragonBoard™ 410c
-
-Flash the boot image and rootfs to the DragonBoard™ 410c by executing the following commands from the host PC:
+- Use host computer
+- Use "Terminal" application
+- Recall location of extracted(unzipped) `boot` file
+- Recall location of extracted(unzipped) `rootfs` file (`Developer` or `Desktop - ALIP`)
+- `cd` to the directory with your unzipped `boot` and `rootfs` files
+- From within extraction directory, execute the following commands:
 
 ```shell
-# Check to make sure fastboot device connected.  If not resolve
-$ sudo fastboot devices
+# (Once again) Check to make sure fastboot device connected
+sudo fastboot devices
 
-# cd to the directory the boot image and RootFS were extracted
+# cd to the directory the boot image and  were extracted
 $ cd <extraction directory>
 
 # Make sure you have properly unzipped the boot and rootfs downloads
@@ -570,35 +570,46 @@ sudo fastboot flash rootfs linaro-jessie-developer-qcom-snapdragon-arm64-**BUILD
 ```
 **Note**: Replace **BUILD#** in the above commands with the file-specific date/build stamp.
 
-Now reboot the DragonBoard™ 410c using the following sequence and it will boot to the command prompt:
+#### **Step 8**: Reboot DragonBoard™ 410c
 
-- Unplug the power to the DragonBoard™ 410c
-- Unplug the micro USB fastboot cable
-- Make sure you are plugged in to a HDMI monitor, keyboard and/or mouse depending on your rootfs
-- Plug the power back into the DragonBoard™ 410c
+- Unplug power to DragonBoard™ 410c
+- Unplug micro USB cable from DragonBoard™ 410c
+- Ensure HDMI connection to monitor
+- Ensure keyboard and/or mouse connection (Depending on your rootfs selection)
+- Plug power back into DragonBoard™ 410c
+- Wait for board to boot up
+- Board will boot into either command line or desktop depending on rootfs
 
 **Note:** the **username** and **password** are both **“linaro”** when the login information is requested.
 
 **Congratulations! You are now booting your newly installed OS directly
 from eMMC on the DragonBoard™ 410c!**
 
+
 ## Mac OSX Host
 
-- [Getting Started](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#getting-started-4)
-- [Flash Bootloader into on-board eMMC](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#flash-bootloader-into-on-board-emmc-1)
-- [Flash Linaro/Debian Release](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#flash-linarodebian-release-1)
+This section show how to install the Linaro based Debian operating system to your DragonBoard™ 410c using the fastboot method on a Mac OS X host computer.
 
-### Getting Started
+***
 
-This section will explain the fastboot method for installation of the Linux images onto
-the DragonBoard™ 410c.  
+- [**Step 1**: Make sure fastboot is set up on host computer]()
+- [**Step 2**: Connect host computer to DragonBoard™ 410c]()
+- [**Step 3**: Boot DragonBoard™ 410c into fastboot mode]()
+- [**Step 4**: Flash Bootloader]()
+- [**Step 5**: Recall location of `boot` and `rootfs` download from the downloads page]()
+- [**Step 6**: Unzip both 'boot' and 'rootfs' files]()
+- [**Step 7**: Flash `boot` image and `rootfs` to the DragonBoard™ 410c]()
+- [**Step 8**: Reboot DragonBoard™ 410c]()
 
-**Step 1**: Make sure fastboot is set up on host computer. Android SDK “Tools only” for Mac OS X can be downloaded [here](http://developer.android.com/sdk)
+***
 
-- The Mac OS X “Tools Only” SDK download does not come with fastboot, you will need to use the Android SDK Manager to install platform-tools.
+**Step 1**: Make sure fastboot is set up on host computer. 
+
+- Android SDK “Tools only” for Linux can be downloaded <a href="http://developer.android.com/sdk" target="_blank">here</a>
+- The Linux “Tools Only” SDK download does not come with fastboot, you will need to use the Android SDK Manager to install platform-tools.
 - To do this follow the “SDK Readme.txt” instructions included in your SDK “Tools Only” download.
 
-If you are still having trouble setting up fastboot, [click here]()(Coming Soon) for a short tutorial video
+If you are still having trouble setting up fastboot, <a href="https://youtu.be/W_zlydVBftA" target="_blank">click here</a> for a short tutorial video
 
 **Step 2**: Connect host computer to DragonBoard™ 410c
 
@@ -619,74 +630,69 @@ If you are still having trouble setting up fastboot, [click here]()(Coming Soon)
 From the connected host machine terminal window, run the following commands:
 
 ```shell
-# Check to make sure fastboot device is connected
+# Check to make sure device is connected and in fastboot mode
 
 fastboot devices
 ```
 
 **At this point you should be connected to your DragonBoard™ 410c with a USB to microUSB cable. Your DragonBoard™ 410c should be booted into fastboot mode and ready to be flashed with the appropriate images.**
 
+#### **Step 4**: Flash Bootloader
 
-***
-
-
-### Flash Bootloader into on-board eMMC
-
-In this section we will continue by downloading and flashing the bootloader onto your DragonBoard™ 410c. This will be achieved by accessing and executing a script located in the downloaded bootloader folder.
-
-**Step 1**: Download Bootloader
-
-[Bootloader zip](http://builds.96boards.org/releases/dragonboard410c/linaro/rescue/latest/dragonboard410c_bootloader_emmc_linux-40.zip)
-
-**Step 2**: Flash Bootloader
-
-Open up terminal and execute the following commands:
+- Use host computer
+- Open "Terminal" application
+- Recall location of Bootloader download.
+- The bootloader file should be named `dragonboard410c_bootloader_emmc_linux-XX`
+- XX represents the release number of the Bootloader
+- `cd` to the directory with your unzipped **Bootloader Folder**
 
 ```shell
-# cd to the directory the bootloader zip file was extracted
 cd <extraction directory>
 
-sudo ./flashall
-```
-The bootloader is now installed on the DragonBoard™ 410c!
+#Example: 
+cd /Users/YourUserName/Downloads
+#<extraction directory> = /Users/YourUserName/Downloads
+#For this example we assume the "Bootloader" is in the Downloads folder.
 
-***
+
+cd <unzipped Bootloader folder>
+
+#Example:
+cd dragonboard410c_bootloader_emmc_linux-40
+#<unzipped Bootloader folder> = dragonboard410c_bootloader_emmc_linux-40
+#This example took place during release 40
+
+# This command will execute the flashall script within the bootloader folder
+./flashall
+
+```
+
 
 ### Flash Linaro/Debian Release
 
 In this section we will flash all remaining parts of the operating system. In order to do this we will be using the fastboot commands that are now readily available to us in our Terminal command line.
 
-**Step 1**: Download `boot` and `rootfs`
+#### **Step 5**: Recall location of `boot` and `rootfs` download from the downloads page
 
-- You will need the [**latest Debian boot image**](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/boot-linaro-jessie-qcom-snapdragon-arm64*.img.gz)
-- You must choose either the [**Developer**](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/linaro-jessie-developer-qcom-snapdragon-arm64*.img.gz)  **or**  [**ALIP - Desktop**](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/linaro-jessie-alip-qcom-snapdragon-arm64*.img.gz) for your root file system (rootfs).
+- You should have downloaded the `boot` file
+- You should have downloaded ONE of rootfs` file (Either `Developer` or `Desktop - ALIP` version)
 
-**The way you experience this operating system will be based on which rootfs you choose for your board.**
-Once downloaded, their names should be similar to what you see here:
+#### **Step 6**: Unzip both 'boot' and 'rootfs' files
 
-**Debian boot image:**
-`boot-linaro-jessie-qcom-snapdragon-arm64-BUILD#.img.gz`
+#### **Step 7**: Flash `boot` image and `rootfs` to the DragonBoard™ 410c
 
-**Developer rootfs:**
-`linaro-jessie-developer-qcom-snapdragon-arm64-BUILD#.img.gz`
-
-**or**
-
-**ALIP-Desktop rootfs:**
-`linaro-jessie-alip-qcom-snapdragon-arm64-BUILD#.img.gz`
-
-
-Where BUILD# is the date/Build stamp for the downloaded file
-
-**Step 2**: Flash 'boot' and 'rootfs' to DragonBoard™ 410c
-
-Flash the boot image and rootfs to the DragonBoard™ 410c by executing the following commands from the host PC:
+- Use host computer
+- Use "Terminal" application
+- Recall location of extracted(unzipped) `boot` file
+- Recall location of extracted(unzipped) `rootfs` file (`Developer` or `Desktop - ALIP`)
+- `cd` to the directory with your unzipped `boot` and `rootfs` files
+- From within extraction directory, execute the following commands:
 
 ```shell
-# Check to make sure fastboot device connected.  If not resolve
-$ sudo fastboot devices
+# (Once again) Check to make sure fastboot device connected
+sudo fastboot devices
 
-# cd to the directory the boot image and RootFS were extracted
+# cd to the directory the boot image and  were extracted
 $ cd <extraction directory>
 
 # Make sure you have properly unzipped the boot and rootfs downloads
@@ -695,12 +701,15 @@ sudo fastboot flash rootfs linaro-jessie-developer-qcom-snapdragon-arm64-**BUILD
 ```
 **Note**: Replace **BUILD#** in the above commands with the file-specific date/build stamp.
 
-Now reboot the DragonBoard™ 410c using the following sequence and it will boot to the command prompt:
+#### **Step 8**: Reboot DragonBoard™ 410c
 
-- Unplug the power to the DragonBoard™ 410c
-- Unplug the micro USB fastboot cable
-- Make sure you are plugged in to a HDMI monitor, keyboard and/or mouse depending on your rootfs
-- Plug the power back into the DragonBoard™ 410c
+- Unplug power to DragonBoard™ 410c
+- Unplug micro USB cable from DragonBoard™ 410c
+- Ensure HDMI connection to monitor
+- Ensure keyboard and/or mouse connection (Depending on your rootfs selection)
+- Plug power back into DragonBoard™ 410c
+- Wait for board to boot up
+- Board will boot into either command line or desktop depending on rootfs
 
 **Note:** the **username** and **password** are both **“linaro”** when the login information is requested.
 
@@ -709,307 +718,19 @@ from eMMC on the DragonBoard™ 410c!**
 
 ***
 
-## Windows Host (In Progress)
+## Windows Host
 
-- [Getting Started](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#getting-started-5)
-- [Flash Bootloader into on-board eMMC](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#flash-bootloader-into-on-board-emmc-2)
-- [Flash Linaro/Debian Release](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#flash-linarodebian-release-2)
+- [Getting Started]()
+- [Flash Bootloader into on-board eMMC]()
+- [Flash Linaro/Debian Release]()
 
 ### Getting Started
 
 This section will explain the fastboot method for installation of the Linux images onto
 the DragonBoard™ 410c. 
 
-**Step 1**: Make sure fastboot is set up on host computer. Android SDK “Tools only” for Windows can be downloaded [here](http://developer.android.com/sdk)
-
-- The Windows “Tools Only” SDK download does not come with fastboot, you will need to use the Android SDK Manager to install platform-tools.
-- To do this follow the “SDK Readme.txt” instructions included in your SDK “Tools Only” download.
-
-If you are still having trouble setting up fastboot, [click here]()(Coming soon) for a short tutorial video
-
-**Step 2**: Connect host computer to DragonBoard™ 410c
-
-- DragonBoard™ 410c must be powered off (unplugged from power)
-- Make sure microSD card slot on DragonBoard™ 410c is empty
-- S6 switch on DragonBoard™ 410c must be set to ‘0-0-0-0’. All switches should be in “off” position
-- Connect USB to microUSB cable from host computer to DragonBoard™ 410c
-
-**Step 3**: Boot DragonBoard™ 410c into fastboot mode
-
-**Please read all bullet points before attempting**
-
-- Press and hold the Vol (-) button on the DragonBoard™ 410c, this is the S4 button. DragonBoard™ 410c should still NOT be powered on
-- While holding the Vol (-) button, power on the DragonBoard™ 410c by plugging it in
-- Once DragonBoard™ 410c is plugged into power, release your hold on the Vol (-) button.
-- Board should boot into fastboot mode.
-
-From the connected host machine terminal window, run the following commands:
-
-```shell
-# Check to make sure fastboot device is connected
-
-fastboot devices
-```
-
-**At this point you should be connected to your DragonBoard™ 410c with a USB to microUSB cable. Your DragonBoard™ 410c should be booted into fastboot mode and ready to be flashed with the appropriate images.**
-
-
-***
-
+Please watch this [optional video tutorial]() if you are having trouble following the document.
 
 ### Flash Bootloader into on-board eMMC
 
-In this section we will continue by downloading and flashing the bootloader onto your DragonBoard™ 410c. This will be achieved by accessing and executing a script located in the downloaded bootloader folder.
-
-**Step 1**: Download Bootloader
-
-[Bootloader zip](http://builds.96boards.org/releases/dragonboard410c/linaro/rescue/latest/dragonboard410c_bootloader_emmc_linux-40.zip)
-
-**Step 2**: Flash Bootloader
-
-Open up terminal and execute the following commands:
-
-```shell
-# cd to the directory the bootloader zip file was extracted
-cd <extraction directory>
-
-#rename flashall to flashall.bat and execute
-
-flashall.bat
-```
-**Note:** fastboot, bootloader files, and flashall.bat script must all be in the same directory.
-
-The bootloader is now installed on the DragonBoard™ 410c!
-
-***
-
 ### Flash Linaro/Debian Release
-
-In this section we will flash all remaining parts of the operating system. In order to do this we will be using the fastboot commands that are now readily available to us in our Terminal command line.
-
-**Step 1**: Download `boot` and `rootfs`
-
-- You will need the [**latest Debian boot image**](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/boot-linaro-jessie-qcom-snapdragon-arm64*.img.gz)
-- You must choose either the [**Developer**](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/linaro-jessie-developer-qcom-snapdragon-arm64*.img.gz)  **or**  [**ALIP - Desktop**](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/linaro-jessie-alip-qcom-snapdragon-arm64*.img.gz) for your root file system (rootfs).
-
-**The way you experience this operating system will be based on which rootfs you choose for your board.**
-Once downloaded, their names should be similar to what you see here:
-
-**Debian boot image:**
-`boot-linaro-jessie-qcom-snapdragon-arm64-BUILD#.img.gz`
-
-**Developer rootfs:**
-`linaro-jessie-developer-qcom-snapdragon-arm64-BUILD#.img.gz`
-
-**or**
-
-**ALIP-Desktop rootfs:**
-`linaro-jessie-alip-qcom-snapdragon-arm64-BUILD#.img.gz`
-
-
-Where BUILD# is the date/Build stamp for the downloaded file
-
-**Step 2**: Flash 'boot' and 'rootfs' to DragonBoard™ 410c
-
-Flash the boot image and rootfs to the DragonBoard™ 410c by executing the following commands from the host PC:
-
-**Note**: 'fastboot', 'boot' file, and 'rootfs' file must all be in the same directory.
-
-```shell
-# Check to make sure fastboot device connected.  If not resolve
-$ fastboot devices
-
-# cd to the directory the boot image and RootFS were extracted
-$ cd <extraction directory>
-
-# Make sure you have properly unzipped the boot and rootfs downloads
-fastboot flash boot boot-linaro-jessie-qcom-snapdragon-arm64-**BUILD#**.img
-fastboot flash rootfs linaro-jessie-developer-qcom-snapdragon-arm64-**BUILD#**.img
-```
-**Note**: Replace **BUILD#** in the above commands with the file-specific date/build stamp.
-
-Now reboot the DragonBoard™ 410c using the following sequence and it will boot to the command prompt:
-
-- Unplug the power to the DragonBoard™ 410c
-- Unplug the micro USB fastboot cable
-- Make sure you are plugged in to a HDMI monitor, keyboard and/or mouse depending on your rootfs
-- Plug the power back into the DragonBoard™ 410c
-
-**Note:** the **username** and **password** are both **“linaro”** when the login information is requested.
-
-**Congratulations! You are now booting your newly installed OS directly
-from eMMC on the DragonBoard™ 410c!**
-
-***
-
-#End of Document
-
-***
-
-
-## Instructions on how to find microSD card devices name in Linux (XXX)
-
-**Step 1**: Access command prompt (make sure SD card is **NOT** inserted into host PC)
-
-**Step 2**: Run the following command
-
-Code:
-
-```shell    
-$ df -aTh
-```
-
-Sample print out:
- 
-```shell   
-    linaro-alip@linaro:~>$ df -aTh               
-    rootfs           rootfs                  20G     19G  131M  100% /
-    devtmpfs         devtmpfs               1,9G    8,0K  1,9G    1% /dev
-    /dev/sda13       ext4                    20G     19G  131M  100% /
-    sysfs            sysfs                     0       0     0     - /sys
-    tmpfs            tmpfs                  1,9G       0  1,9G    0% /sys/fs/cgroup
-    securityfs       securityfs                0       0     0     - /sys/kernel/security
-    debugfs          debugfs                   0       0     0     - /sys/kernel/debug
-    /dev/sda14       ext4                   384G     72G  311G   19% /home
-    linaro-alip@linaro:~>$
-```
-
-**Step 3**: Insert SD card and run command again
-
-Code:
-
-```shell    
-$ df -aTh
-```
-
-Sample print out:
-   
-```shell 
-linaro-alip@linaro:~>$ df -aTh               
-rootfs           rootfs                  20G     19G  131M  100% /
-devtmpfs         devtmpfs               1,9G    8,0K  1,9G    1% /dev
-/dev/sda13       ext4                    20G     19G  131M  100% /
-sysfs            sysfs                     0       0     0     - /sys
-tmpfs            tmpfs                  1,9G       0  1,9G    0% /sys/fs/cgroup
-securityfs       securityfs                0       0     0     - /sys/kernel/security
-debugfs          debugfs                   0       0     0     - /sys/kernel/debug
-/dev/sda14       ext4                   384G     72G  311G   19% /home
-/dev/sdb1        ext4                     8G      0M    8G    -  /media/storage
-linaro-alip@linaro:~>$
-```
-
-Notice our sample print out is now detecting a new device at `/dev/sbd1`:
-
-```shell
-/dev/sdb1        ext4                     8G       -    8G    -  /media/storage
-```
-
-It is important to notice and compare the characteristics of the device to what we know about the device. In our sample we have a type ext4, 8G device with 8G free space. Our host PC has assigned it a device name of `sdb1`.
-Your device name can vary, this is why you should check your list of devices before and after inserting the SD card.
-
-It's time to continue with the flashing process.
-
-[Click here to go back](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#install-image-onto-sd-card)
-
-## or 
-
-**Warning:** Executing the sync flag command as outlined above is very
-important! Do not skip this step!
-
-**Warning:** Be very careful not to overwrite your hard drive! In most
-cases, XXX will be mmcblk0 or sdb. This can be found by using the
-following sequence:
-
-1. Make sure the SD Card is not in the host PC
-2. From the host PC terminal command line, run the following command:
-```shell
-   lsblk
-```
-3. Note the listed blocks such as sda, sdb, etc.
-4. Insert the SD Card into the host PC
-5. From the host PC terminal command line, run the following command:
-```shell
-   lsblk
-```
-6. There will be a new device in the list, this will be your SD Card
-   identity (XXX).  It also has a size parameter that should match the size of the SD Card.
-
-[Click here to go back](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#install-image-onto-sd-card)
-
-***
-
-
-## Instructions on how to find microSD card devices name in Mac OS X (XXX)
-
-**Step 1**: Access Terminal (make sure SD card is **NOT** inserted into host PC)
-
-**Step 2**: Run the following command
-
-Code:
-
-```shell
-$ diskutil list
-```
-
-Sample print out:
-
-```shell
-MacUser$ diskutil list
-/dev/disk0 (internal, physical):
-   #:                       TYPE NAME                    SIZE       IDENTIFIER
-   0:      GUID_partition_scheme                        *251.0 GB   disk0
-   1:                        EFI EFI                     209.7 MB   disk0s1
-   2:          Apple_CoreStorage Macintosh HD            220.7 GB   disk0s2
-   3:                 Apple_Boot Recovery HD             650.0 MB   disk0s3
-   4:       Microsoft Basic Data                         29.3 GB    disk0s4
-/dev/disk1 (internal, virtual):
-   #:                       TYPE NAME                    SIZE       IDENTIFIER
-   0:                  Apple_HFS MAC                    +220.4 GB   disk1
-```
-
-**Step 3**: Insert SD card and run command again
-
-Code:
-
-```shell    
-$ diskutil list
-```
-
-Sample print out:
-   
-```shell 
-MacUser$ diskutil list
-/dev/disk0 (internal, physical):
-   #:                       TYPE NAME                    SIZE       IDENTIFIER
-   0:      GUID_partition_scheme                        *251.0 GB   disk0
-   1:                        EFI EFI                     209.7 MB   disk0s1
-   2:          Apple_CoreStorage Macintosh HD            220.7 GB   disk0s2
-   3:                 Apple_Boot Recovery HD             650.0 MB   disk0s3
-   4:       Microsoft Basic Data                         29.3 GB    disk0s4
-/dev/disk1 (internal, virtual):
-   #:                       TYPE NAME                    SIZE       IDENTIFIER
-   0:                  Apple_HFS MAC                    +220.4 GB   disk1
-                                 Logical Volume on disk0s2
-                                 C5C98C5A-96EE-486D-8A68-C52108524FBD
-                                 Unlocked Encrypted
-/dev/disk2 (internal, physical):
-   #:                       TYPE NAME                    SIZE       IDENTIFIER
-   0:     FDisk_partition_scheme                        *31.9 GB    disk2
-   1:               Windows_NTFS Untitled                31.9 GB    disk2s1
-```
-
-Notice our sample print out is now detecting a new device as IDENTIFIER `disk2` with partition `disk2s1`:
-
-```shell
-/dev/disk2 (internal, physical):
-   #:                       TYPE NAME                    SIZE       IDENTIFIER
-   0:     FDisk_partition_scheme                        *31.9 GB    disk2
-   1:               Windows_NTFS Untitled                31.9 GB    disk2s1
-```
-
-It is important to notice and compare the characteristics of the device to what we know about the device. In our sample we have a type Windows_NTFS, 31.9G device. Our host PC has assigned it a device name of `disk2` with a partition of `disk2s1.
-**Your device name can vary, this is why you should check your list of devices before and after inserting the SD card.**
-
-It's time to continue with the flashing process.
-
-[Click here to go back](https://github.com/96boards/documentation/wiki/DragonBoard410c-Linux-Install#install-image-onto-sd-card-1)
