@@ -15,8 +15,8 @@ h4. RC1
 *UEFI*: "43":https://builds.96boards.org/snapshots/reference-platform/components/uefi/43/
 *CE AOSP RPB HiKey*: "65":https://builds.96boards.org/snapshots/reference-platform/aosp/hikey/65/
 *CE AOSP RPB Dragonboard410c:* "43":https://builds.96boards.org/snapshots/reference-platform/aosp/db410c/43/
-*CE Debian RPB HiKey*: "53":https://builds.96boards.org/snapshots/reference-platform/debian/52/hikey/
-*CE Debian RPB Dragonboard410c:* "53":https://builds.96boards.org/snapshots/reference-platform/debian/52/dragonboard410c/
+*CE Debian RPB HiKey*: "53":https://builds.96boards.org/snapshots/reference-platform/debian/53/hikey/
+*CE Debian RPB Dragonboard410c:* "53":https://builds.96boards.org/snapshots/reference-platform/debian/53/dragonboard410c/
 
 h3. Kernel
 
