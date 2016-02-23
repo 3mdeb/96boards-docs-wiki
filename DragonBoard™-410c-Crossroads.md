@@ -9,3 +9,19 @@
 | [<img src="http://i.imgur.com/7wy1996.png" data-canonical-src="http://i.imgur.com/7wy1996.png" width="80" height="100" />]() | Fastboot | SD Card / Fastboot | SD Card / Fastboot |
 
 ***
+### Reference Platform Build
+
+[<img src="http://i.imgur.com/jl4GG0d.png" data-canonical-src="http://i.imgur.com/jl4GG0d.png" width="125" height="157" />]()
+
+
+***
+### Linaro Build
+
+[<img src="http://i.imgur.com/7rrS2JR.png" data-canonical-src="http://i.imgur.com/7rrS2JR.png" width="125" height="157" />]()
+
+***
+### Qualcomm® Build
+
+[<img src="http://i.imgur.com/dnsIEuC.png" data-canonical-src="http://i.imgur.com/dnsIEuC.png" width="125" height="157" />]()
+
+***
