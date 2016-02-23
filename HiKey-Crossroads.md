@@ -29,8 +29,8 @@
 - Pre-built image(s): _**Linaro/Debian**_ and _**Android**_
 - Available installation method(s): _**SD Card**_ and _**Fastboot**_
 - Previous releases ([Debian](http://builds.96boards.org/releases/hikey/linaro/debian/) / [Android](http://builds.96boards.org/releases/hikey/linaro/aosp/))
-- [Build from Source]()
-- [Known Issues]()
+- Build from Source ([Debian]() / [Android]())
+- Known Issues ([Debian]() / [Android]())
 
 ***
 
