@@ -105,7 +105,7 @@ Look for property with <name> fs.defaultFS</name> and modify as below:
       determine the host, port, etc. for a filesystem.</description>
     </property>
 
-Add this to the bottom before </configuration> tag:
+Add this to the bottom before \</configuration> tag:
 
     <property>
       <name>hadoop.tmp.dir</name>
