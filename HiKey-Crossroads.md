@@ -15,9 +15,9 @@
 - Release: **16.03**
 - Pre-built image(s): _**Linaro/Debian**_ and _**Android**_
 - Available installation method(s): _**Fastboot**_ ONLY
-- Previous releases [available here](http://builds.96boards.org/releases/reference-platform/debian/dragonboard410c/)
-- [Build from Source](https://github.com/96boards/documentation/wiki/CE-Debian-RPB-Dragonboard410c-15.12-Build)
-- [Known Issues](https://github.com/96boards/documentation/wiki/RPB-15.12-Known-Issues#debian)
+- Previous releases ([Debian](http://builds.96boards.org/releases/reference-platform/debian/hikey/) / [Android](http://builds.96boards.org/releases/reference-platform/aosp/hikey/))
+- Build from Source - 15.12 ([Debian](https://github.com/96boards/documentation/wiki/CE-Debian-RPB-HiKey-15.12-Build) / [Android](https://github.com/96boards/documentation/wiki/CE-AOSP-RPB-HiKey-15.12-Build))
+- Known Issues - 15.12 ([Debian](https://github.com/96boards/documentation/wiki/RPB-15.12-Known-Issues#debian) / [Android](https://github.com/96boards/documentation/wiki/RPB-15.12-Known-Issues#aosp))
 
 
 ***
@@ -28,7 +28,7 @@
 - Linaro/ Debian Release: **15.11**, Android Release: **15.11**
 - Pre-built image(s): _**Linaro/Debian**_ and _**Android**_
 - Available installation method(s): _**SD Card**_ and _**Fastboot**_
-- Previous releases [available here]()
+- Previous releases ([Debian](http://builds.96boards.org/releases/hikey/linaro/debian/) / [Android](http://builds.96boards.org/releases/hikey/linaro/aosp/))
 - [Build from Source]()
 - [Known Issues]()
 
