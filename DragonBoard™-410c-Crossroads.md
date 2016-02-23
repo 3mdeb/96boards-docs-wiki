@@ -16,9 +16,8 @@
 - Pre-built image(s): _**Linaro/Debian**_ and _**Android**_
 - Available installation method(s): _**Fastboot**_ ONLY
 - Previous releases [available here](http://builds.96boards.org/releases/reference-platform/debian/dragonboard410c/)
-- [Build from Source](https://github.com/96boards/documentation/wiki/CE-Debian-RPB-Dragonboard410c-15.12-Build)
-- [Known Issues](https://github.com/96boards/documentation/wiki/RPB-15.12-Known-Issues#debian)
-
+- Build from Source ([Debian](https://github.com/96boards/documentation/wiki/CE-Debian-RPB-Dragonboard410c-15.12-Build) / [Android]())
+- Known Issues ([Debian](https://github.com/96boards/documentation/wiki/RPB-15.12-Known-Issues#debian) / [Android]())
 
 ***
 
@@ -28,9 +27,9 @@
 - Linaro/Debian Release: **15.11**
 - Pre-built image(s): _**Linaro/Debian**_
 - Available installation method(s): _**SD Card**_ and _**Fastboot**_
-- Previous releases [available here]()
-- [Build from Source]()
-- [Known Issues]()
+- Previous releases ([Debian](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/))
+- Build from Source ([Debian]())
+- Known Issues ([Debian]())
 
 ***
 
@@ -40,9 +39,9 @@
 - Android Release: **15.12**
 - Pre-built image(s): _**Android**_
 - Available installation method(s): _**SD Card**_ and _**Fastboot**_
-- Previous releases [available here](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/)
-- [Build from Source]()
-- [Known Issues]()
+- Previous releases ([Android](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/))
+- Build from Source ([Android]())
+- Known Issues ([Android]())
 
 ***
 
