@@ -21,7 +21,9 @@ Welcome to the supporting documentation for <a href="http://96boards.org" target
 
 ***
 
-#### Mezzanine Products (Coming Soon!)
+#### Mezzanine Products
+
+(Coming soon to wiki! - <a href="https://www.96boards.org/products/mezzanine/" target="_blank">**Website**</a>)
 
 - STM32 Sensor mezzanine board
 - Linker mezzanine card starter kit
