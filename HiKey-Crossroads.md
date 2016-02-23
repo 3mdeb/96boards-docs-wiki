@@ -5,7 +5,7 @@
 
 |  [<img src="http://i.imgur.com/0e7lsoO.png" data-canonical-src="http://i.imgur.com/0e7lsoO.png" width="140" height="105" />]()   |  [<img src="http://i.imgur.com/jl4GG0d.png" data-canonical-src="http://i.imgur.com/jl4GG0d.png" width="80" height="100" />](https://github.com/96boards/documentation/wiki/HiKey-Crossroads#reference-platform-build)   |  [<img src="http://i.imgur.com/7rrS2JR.png" data-canonical-src="http://i.imgur.com/7rrS2JR.png" width="80" height="100" />](https://github.com/96boards/documentation/wiki/HiKey-Crossroads#reference-platform-build)   | 
 | :-: | :-: | :-: | :-: |
-| [<img src="http://i.imgur.com/OQGR5yY.png" data-canonical-src="http://i.imgur.com/OQGR5yY.png" width="80" height="100" />]() | [Fastboot](https://github.com/96boards/documentation/wiki/HiKey-RP-Debian-Download#your-build-choice) | [SD Card]() / [Fastboot]() |
+| [<img src="http://i.imgur.com/OQGR5yY.png" data-canonical-src="http://i.imgur.com/OQGR5yY.png" width="80" height="100" />]() | [Fastboot](https://github.com/96boards/documentation/wiki/HiKey-RP-Debian-Download#your-build-choice) | [SD Card](https://github.com/96boards/documentation/wiki/HiKey-Linaro-Debian-Download#your-build-choice) / [Fastboot](https://github.com/96boards/documentation/wiki/HiKey-Linaro-Debian-Download#your-build-choice-1) |
 | [<img src="http://i.imgur.com/7wy1996.png" data-canonical-src="http://i.imgur.com/7wy1996.png" width="80" height="100" />]() | [Fastboot]() | [SD Card]() / [Fastboot]() |
 
 ***
