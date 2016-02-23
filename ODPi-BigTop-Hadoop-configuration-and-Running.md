@@ -146,10 +146,6 @@ Format Namenode. This step is needed for the first time. Doing it every time wil
 
     sudo /etc/init.d/hadoop-hdfs-namenode init
 
-Create a sub-directory structure in HDFS:
-
-    sudo /usr/lib/hadoop/libexec/init-hdfs.sh
-
 Start the YARN daemons:
 
     for i in hadoop-hdfs-namenode hadoop-hdfs-datanode ; do sudo service $i start ; done
