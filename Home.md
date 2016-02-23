@@ -19,6 +19,15 @@ Welcome to the supporting documentation for <a href="http://96boards.org" target
 
 ***
 
+#### Mezzanine Products (Coming Soon!)
+
+- STM32 Sensor mezzanine board
+- Linker mezzanine card starter kit
+- 96Boards UART Serial Adapter
+- Sensors mezzanine
+
+***
+
 #### Hardware Specifications
 
 - Consumer Edition (CE) Specification (<a href="https://github.com/96boards/documentation/blob/master/96BoardsCESpecificationv1.0-EA1.pdf" target="_blank">**View**</a>
@@ -31,6 +40,7 @@ Welcome to the supporting documentation for <a href="http://96boards.org" target
 #### "How to" Guides
 
 - [Internet Sharing over USB](https://github.com/96boards/documentation/wiki/Sharing-Internet-connections-over-USB-on-96Boards)
+- Serial Console setup
 
 ***
 
