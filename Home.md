@@ -17,7 +17,7 @@ Welcome to the supporting documentation for <a href="http://96boards.org" target
 - [HiKey](https://github.com/96boards/documentation/wiki/HiKey-Home)
 - [Bubblegum96](https://github.com/96boards/documentation/wiki/Bubblegum96-Home)
 
-<a href="https://www.96boards.org/products/accessories/power/" target="_blank">**Power Supply**</a> - For all 96Boards
+<a href="https://www.96boards.org/products/accessories/power/" target="_blank">**Power Adaptors**</a> - For all 96Boards
 
 ***
 
