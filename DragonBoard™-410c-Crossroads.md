@@ -37,10 +37,10 @@
 ### Qualcomm® Build
 
 [<img align="left" src="http://i.imgur.com/dnsIEuC.png" data-canonical-src="http://i.imgur.com/dnsIEuC.png" width="125" height="157" />]()
-- Release: **15.11**
+- Release: **15.12**
 - Pre-built image(s): _**Android**_
 - Available installation method(s): _**SD Card**_ and _**Fastboot**_
-- Previous releases [available here]()
+- Previous releases [available here](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/)
 - [Build from Source]()
 - [Known Issues]()
 
