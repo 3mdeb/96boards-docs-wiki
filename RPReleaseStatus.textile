@@ -36,7 +36,7 @@ Kernel is 4.4 based, unified and supporting the following boards by default:
 * HiKey
 * AMD Overdrive
 * D02
-* APM X-Gene/Moonshot m400 (supported on RC2)
+* APM X-Gene/Moonshot m400 (partially supported on RC2, waiting fix for bug 2061)
 
 Tree data:
 * Git: "https://git.linaro.org/people/amit.kucheria/kernel.git":https://git.linaro.org/people/amit.kucheria/kernel.git
@@ -66,7 +66,7 @@ h3. Current Issues / Bugs
 h4. Kernel
 
 * "Bug 1999 - RP Kernel doesn't boot on HP Moonshot m400 (APM X-Gene) cartridges (ACPI)":https://bugs.linaro.org/show_bug.cgi?id=1999 - *Ricardo/Amit*
-* "Bug 2060 - [RPB] Missing support for APM XGENE / Moonshot m400":https://bugs.linaro.org/show_bug.cgi?id=2060 - *Amit*
+* -"Bug 2060 - [RPB] Missing support for APM XGENE / Moonshot m400":https://bugs.linaro.org/show_bug.cgi?id=2060 - *Amit*-
 
 h6. HiKey
 
@@ -90,7 +90,7 @@ h4. UEFI
 
 h6. D02
 
-* "Bug 2062 - EDK2 D02: "sas: realizing _RST replacing syscon" breaks SAS support in Linux":https://bugs.linaro.org/show_bug.cgi?id=2062 - *Heyi*
+* -"Bug 2062 - EDK2 D02: "sas: realizing _RST replacing syscon" breaks SAS support in Linux":https://bugs.linaro.org/show_bug.cgi?id=2062 - *Heyi*-
 * "Bug 2032 - ACPI NUMA Support crashes on D02":https://bugs.linaro.org/show_bug.cgi?id=2032 - *Hanjun*
 * Lack of PCIe support for D02 on Linux (missing tables) - *Hanjun/Heyi*
 * Lack of SAS support in EDK2/UEFI - *Zhangfei*
@@ -112,5 +112,6 @@ h4. AOSP
 h6. DB410c
 
 * "Bug 254 - [RPB] wpa_supplicant crashes wcn36xx":https://bugs.96boards.org/show_bug.cgi?id=254
+* -"Bug 253 - [RPB] Gallery fails to open due a fatal exception in GLThread":https://bugs.96boards.org/show_bug.cgi?id=253-
 
 h4. OE/Yocto
