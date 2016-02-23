@@ -12,7 +12,7 @@
 ### Reference Platform Build
 
 [<img align="left" src="http://i.imgur.com/jl4GG0d.png" data-canonical-src="http://i.imgur.com/jl4GG0d.png" width="125" height="157" />]()
-- Release: **16.03**
+- RPB Release: **16.03**
 - Pre-built image(s): _**Linaro/Debian**_ and _**Android**_
 - Available installation method(s): _**Fastboot**_ ONLY
 - Previous releases [available here](http://builds.96boards.org/releases/reference-platform/debian/dragonboard410c/)
@@ -25,7 +25,7 @@
 ### Linaro Build
 
 [<img align="left" src="http://i.imgur.com/7rrS2JR.png" data-canonical-src="http://i.imgur.com/7rrS2JR.png" width="125" height="157" />]()
-- Release: **15.11**
+- Linaro/Debian Release: **15.11**
 - Pre-built image(s): _**Linaro/Debian**_
 - Available installation method(s): _**SD Card**_ and _**Fastboot**_
 - Previous releases [available here]()
@@ -37,7 +37,7 @@
 ### Qualcomm® Build
 
 [<img align="left" src="http://i.imgur.com/dnsIEuC.png" data-canonical-src="http://i.imgur.com/dnsIEuC.png" width="125" height="157" />]()
-- Release: **15.12**
+- Android Release: **15.12**
 - Pre-built image(s): _**Android**_
 - Available installation method(s): _**SD Card**_ and _**Fastboot**_
 - Previous releases [available here](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/)
