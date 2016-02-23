@@ -60,7 +60,7 @@ Back to the system, we need to configure the app environment by following steps:
     sudo chown hduser:hadoop /usr/lib/hadoop
     sudo chmod 750 /usr/lib/hadoop
 
-# Setting up Environment Variables.
+# Setting up Environment Variables
 Follow the below steps to setup Environment Variables in bash file :
 
     sudo su - hduser
