@@ -11,7 +11,7 @@
 ***
 #### Choose your Method of Installation
 
-[<img src="http://i.imgur.com/tXXN5bZ.png" data-canonical-src="http://i.imgur.com/tXXN5bZ.png" width="125" height="157" />](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Linaro-Debian-Download#your-build-choice-2)
+[<img src="http://i.imgur.com/tXXN5bZ.png" data-canonical-src="http://i.imgur.com/tXXN5bZ.png" width="125" height="157" />](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RP-Debian-Download#your-build-choice-1)
 
 ## Fastboot Method
 Fastboot is supported by the board and can be used for installs.  This is for advanced users who are most likely modifying/customizing source code and will need to download such updates to the board for test/execution. When installing Debian using Fastboot, you will have the option to install either the Developer(console-only) image, or the LXDE(Desktop) image.  
