@@ -1,6 +1,7 @@
 This post concentrates on Running Hadoop after [installing](https://github.com/96boards/documentation/wiki/ODPi-Hadoop-Installation) ODPi components built using Apache BigTop. These steps are only for configuring it on a single node and running them on a single node.
 
-Add hduser (dedicated user for running Hadoop) to hadoop usergroup:
+# Add Hadoop User
+ We need to create a dedicated user (hduser) for running Hadoop. This user needs to be added to hadoop usergroup:
 
     sudo adduser --ingroup hadoop hduser
 
@@ -16,7 +17,7 @@ Switch to hduser:
 
     sudo su - hduser
 
-Generate ssh key for hduser:
+# Generate ssh key for hduser
 
     ssh-keygen -t rsa -P ""
 
@@ -30,7 +31,7 @@ Test ssh setup, as hduser:
 
     ssh localhost
 
-Disabling IPv6:
+# Disabling IPv6
 
     sudo nano /etc/sysctl.conf
 
@@ -50,7 +51,8 @@ Uncomment line:
 
 Save and restart the system.
 
-Back to the system, configure the app environment:
+# Configuring the app environment
+Back to the system, we need to configure the app environment by following steps:
 
     sudo mkdir -p /app/hadoop/tmp
     sudo chown hduser:hadoop /app/hadoop/tmp
@@ -58,7 +60,8 @@ Back to the system, configure the app environment:
     sudo chown hduser:hadoop /usr/lib/hadoop
     sudo chmod 750 /usr/lib/hadoop
 
-Add Environment Variables to bash file :
+# Setting up Environment Variables.
+Follow the below steps to setup Environment Variables in bash file :
 
     sudo su - hduser
     nano .bashrc
@@ -142,16 +145,18 @@ Modify existing property as below :
       </description>
     </property>
 
-Format Namenode. This step is needed for the first time. Doing it every time will result in loss of content on HDFS.
+# Format Namenode
+This step is needed for the first time. Doing it every time will result in loss of content on HDFS.
 
     sudo /etc/init.d/hadoop-hdfs-namenode init
 
-Start the YARN daemons:
+# Start the YARN daemons
 
     for i in hadoop-hdfs-namenode hadoop-hdfs-datanode ; do sudo service $i start ; done
     sudo /etc/init.d/hadoop-yarn-resourcemanager start
     sudo /etc/init.d/hadoop-yarn-nodemanager start
 
+# Validating Hadoop
 Check if hadoop is running. jps command should list namenode, datanode, yarn resource manager. or use ps aux 
 
     sudo jps
@@ -178,6 +183,5 @@ You would see like below:
     Dec 22 18:24:57 debian hadoop-yarn-nodemanager[10305]: starting nodemanager, ...
     Dec 22 18:24:58 debian su[10348]: pam_unix(su:session): session closed for ...rn
     Dec 22 18:25:03 debian hadoop-yarn-nodemanager[10305]: Started Hadoop nodeman...
-
 
 
