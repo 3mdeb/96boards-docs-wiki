@@ -36,14 +36,12 @@ Kernel is 4.4 based, unified and supporting the following boards by default:
 * HiKey
 * AMD Overdrive
 * D02
+* APM X-Gene/Moonshot m400 (supported on RC2)
 
 Tree data:
 * Git: "https://git.linaro.org/people/amit.kucheria/kernel.git":https://git.linaro.org/people/amit.kucheria/kernel.git
 * Branch: *96b-kernelci*
 * Config: "https://git.linaro.org/people/amit.kucheria/kernel.git/blob/refs/heads/96b-kernelci:/arch/arm64/configs/distro.config":https://git.linaro.org/people/amit.kucheria/kernel.git/blob/refs/heads/96b-kernelci:/arch/arm64/configs/distro.config
-
-Boards still to be supported:
-* APM X-Gene/Moonshot m400
 
 h3. Remaining Work Activities
 
