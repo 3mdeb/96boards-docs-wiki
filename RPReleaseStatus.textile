@@ -75,6 +75,7 @@ h6. D02
 
 * "Bug 2037 - D02: Unable to handle kernel paging request":https://bugs.linaro.org/show_bug.cgi?id=2037 - *Amit/Hanjun*
 * "Bug 2063 - D02: No console unless you boot with console=ttyS0,115200":https://bugs.linaro.org/show_bug.cgi?id=2063 - *Amit/Hanjun*
+* "Bug 2067 - [RPB] irq 5: nobody cared (try booting with the "irqpoll" option when rebooting the system":https://bugs.linaro.org/show_bug.cgi?id=2067 - Amit/Hanjun
 
 h4. UEFI
 
