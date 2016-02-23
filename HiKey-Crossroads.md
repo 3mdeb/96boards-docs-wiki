@@ -29,7 +29,7 @@
 - Pre-built image(s): _**Linaro/Debian**_ and _**Android**_
 - Available installation method(s): _**SD Card**_ and _**Fastboot**_
 - Previous releases ([Debian](http://builds.96boards.org/releases/hikey/linaro/debian/) / [Android](http://builds.96boards.org/releases/hikey/linaro/aosp/))
-- Build from Source ([Debian]() / [Android]())
+- Build from Source ([Debian](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted#bootloader-from-source) / [Android](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted#aosp-build-from-source))
 - Known Issues ([Debian]() / [Android]())
 
 ***
