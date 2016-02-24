@@ -22,7 +22,7 @@ h4. AMD Overdrive
 
 Since the EDK2 based firmware is not yet supported (work in progress), the original AMI BIOS based firmware from AMD is required.
 
-At the time of the 15.12 release the latest firmware version for Overdrive (*B0*) is 0.0.8.5.
+At the time of the 16.03 release the latest firmware version for Overdrive (*B0*) is 1.0.0.1. Latest for *rev A* is still 0.0.7.4.
 
 Only *B0* is supported by the 15.12 release.
 
