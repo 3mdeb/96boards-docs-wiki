@@ -7,6 +7,17 @@ h2. Reference Platform Release Status
 
 h3. Release Candidates
 
+h4. RC3
+
+*Debian Installer:* "mini.iso":https://ci.linaro.org/view/96boards/job/96boards-reference-debian-installer-staging/lastSuccessfulBuild/artifact/mini.iso and "netboot.tar.gz":https://ci.linaro.org/view/96boards/job/96boards-reference-debian-installer-staging/lastSuccessfulBuild/artifact/netboot.tar.gz
+*CentOS Installer:* "30":https://builds.96boards.org/snapshots/reference-platform/components/centos-installer/31/
+*Kernel:* "linux-image-4.4.0-93":http://repo.linaro.org/ubuntu/linaro-staging/pool/main/l/linux/linux-image-4.4.0-93-arm64_4.4.0.linaro.93-1.linarojessie.1_arm64.deb
+*UEFI*: "44":https://builds.96boards.org/snapshots/reference-platform/components/uefi/44/
+*CE AOSP RPB HiKey*: "65":https://builds.96boards.org/snapshots/reference-platform/aosp/hikey/65/
+*CE AOSP RPB Dragonboard410c:* "45":https://builds.96boards.org/snapshots/reference-platform/aosp/db410c/45/
+*CE Debian RPB HiKey*: "56":https://builds.96boards.org/snapshots/reference-platform/debian/55/hikey/
+*CE Debian RPB Dragonboard410c:* "56":https://builds.96boards.org/snapshots/reference-platform/debian/55/dragonboard410c/
+
 h4. RC2
 
 *Debian Installer:* "mini.iso":https://ci.linaro.org/view/96boards/job/96boards-reference-debian-installer-staging/lastSuccessfulBuild/artifact/mini.iso and "netboot.tar.gz":https://ci.linaro.org/view/96boards/job/96boards-reference-debian-installer-staging/lastSuccessfulBuild/artifact/netboot.tar.gz
@@ -36,7 +47,7 @@ Kernel is 4.4 based, unified and supporting the following boards by default:
 * HiKey
 * AMD Overdrive
 * D02
-* APM X-Gene/Moonshot m400 (partially supported on RC2, waiting fix for bug 2061)
+* APM X-Gene/Moonshot m400 (supported on RC3)
 
 Tree data:
 * Git: "https://git.linaro.org/people/amit.kucheria/kernel.git":https://git.linaro.org/people/amit.kucheria/kernel.git
@@ -70,7 +81,7 @@ h4. Kernel
 
 h6. HiKey
 
-* No display support - *Amit*
+* "Bug 262 - [RPB] LG W2253V fails to work with 4.4.0-93-arm64":https://bugs.96boards.org/show_bug.cgi?id=262 - *Amit*
 
 h6. Overdrive
 
@@ -78,7 +89,7 @@ h6. Overdrive
 
 h6. Dragonboard410c
 
-* "Bug 2061 - [RPB] CONFIG_QCOM_SCM breaks XGENE support":https://bugs.linaro.org/show_bug.cgi?id=2061 - *Amit/Nicolas*
+* -"Bug 2061 - [RPB] CONFIG_QCOM_SCM breaks XGENE support":https://bugs.linaro.org/show_bug.cgi?id=2061 - *Amit/Nicolas*-
 
 h6. D02
 
