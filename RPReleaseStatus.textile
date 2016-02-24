@@ -105,6 +105,7 @@ h6. D02
 * "Bug 2032 - ACPI NUMA Support crashes on D02":https://bugs.linaro.org/show_bug.cgi?id=2032 - *Hanjun*
 * Lack of PCIe support for D02 on Linux (missing tables) - *Hanjun/Heyi*
 * Lack of SAS support in EDK2/UEFI - *Zhangfei*
+* "Bug 2075 - [RPB] D02: Latest EDK2 breaks network support in UEFI":https://bugs.linaro.org/show_bug.cgi?id=2075
 
 h6. HiKey
 
