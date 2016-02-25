@@ -1,3 +1,16 @@
+[<<< Back to Reference Platform Home](https://github.com/96boards/documentation/wiki/Reference-Platform-Home)
+
+***
+
+This wiki provides instructions for reporting bugs on the References Software Platform. Please read through following sections for insight on where to go when reporting bugs.
+
+***
+### Consumer and Enterprise Edition bugs
+
+
+
+
+
 ***
 
 ### "How to" report a bug for Reference Software Platform - Consumer Edition
