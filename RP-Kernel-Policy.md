@@ -1,5 +1,7 @@
 [<<< Back to Reference Platform Home](https://github.com/96boards/documentation/wiki/Reference-Platform-Home)
 
+***
+
 ## Why
 The Reference Kernel is the combination of both LEG and the 96Boards RP topic branches. LEG members will submit their kernel topics to LEG for inclusion.  At this point, the 96Boards Reference Platform will be based on the LEG tree.  In cases where the SoC vendor is not part of LEG, the 96Boards Reference Platform will serve as the primary branch.
 
