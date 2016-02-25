@@ -189,12 +189,25 @@ $ sudo fastboot flash system hikey-jessie_alip_2015MMDD-nnn.emmc.img
 ```
 * turn off HiKey board
 * remove the jumper of pin3-pin4 on J15
+
+Name | Link | State
+---- | ---- | -----
+Auto Power up | Link 1-2 | closed
+Boot Select | Link 3-4 | open
+GPIO3-1 | Link 5-6 | open
+
 * turn on HiKey board
 
 Note: UEFI may report "Fail to start BootNext" if you have an SD card installed, see [Boot Sequence](#boot-sequence) for more information. 
 
 ## Run Fastboot from UEFI
 * make sure that jumper of pin5-pin6 on J15 are connected
+
+Name | Link | State
+---- | ---- | -----
+Auto Power up | Link 1-2 | closed
+Boot Select | Link 3-4 | open
+GPIO3-1 | Link 5-6 | closed
 
 * Or Interrupt the boot by pressing any select
 ```shell
@@ -230,6 +243,13 @@ $ sudo fastboot flash userdata userdata.img
 * Run Fastboot automatically:
 ```shell
 Connect jumper on pin5-6 of J15. Then UEFI will run Fastboot app directly.
+
+Name | Link | State
+---- | ---- | -----
+Auto Power up | Link 1-2 | closed
+Boot Select | Link 3-4 | open
+GPIO3-1 | Link 5-6 | closed
+
 If user input "enter" key directly, bootmenu will be displayed.
 
 ```
@@ -275,6 +295,14 @@ By default, SD card is the boot device. The boot flow is in below.
 ```
 
 ## Set Serial Number in recovery mode
+
+* make sure pin1-pin2 and pin3-pin4 on J15 are linked (recovery mode)
+
+Name | Link | State
+---- | ---- | -----
+Auto Power up | Link 1-2 | closed
+Boot Select | Link 3-4 | closed
+GPIO3-1 | Link 5-6 | open
 
 * Generate new serial number
 ```shell
