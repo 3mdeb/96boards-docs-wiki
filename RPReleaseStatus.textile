@@ -76,7 +76,7 @@ h3. Current Issues / Bugs
 
 h4. Kernel
 
-* "Bug 1999 - RP Kernel doesn't boot on HP Moonshot m400 (APM X-Gene) cartridges (ACPI)":https://bugs.linaro.org/show_bug.cgi?id=1999 - *Ricardo/Amit*
+* -"Bug 1999 - RP Kernel doesn't boot on HP Moonshot m400 (APM X-Gene) cartridges (ACPI)":https://bugs.linaro.org/show_bug.cgi?id=1999 - *Ricardo/Amit*-
 * -"Bug 2060 - [RPB] Missing support for APM XGENE / Moonshot m400":https://bugs.linaro.org/show_bug.cgi?id=2060 - *Amit*-
 
 h6. HiKey
@@ -113,7 +113,7 @@ h6. HiKey
 
 h4. Debian
 
-* "Bug 2009 - Wrong network device name set after Debian install":https://bugs.linaro.org/show_bug.cgi?id=2009 - *Ricardo*
+* -"Bug 2009 - Wrong network device name set after Debian install":https://bugs.linaro.org/show_bug.cgi?id=2009 - *Ricardo*-
 
 h6. DB410c
 
