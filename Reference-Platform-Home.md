@@ -11,12 +11,14 @@
 - [Consumer Edition](https://github.com/96boards/documentation/wiki/Reference-Platform-CE-Home)
 - [Enterprise Edition](https://github.com/96boards/documentation/wiki/Reference-Platform-EE-Home)
 
+
+How to report a bug ([Consumer Edition](https://github.com/96boards/documentation/wiki/Reference-Platform-CE-bugs) / [Enterprise Edition](https://github.com/96boards/documentation/wiki/Reference-Platform-EE-bugs))
 ***
 
 #### Resources
 
 - [Read more]()
-- [Kernel Policy]()
+- [Kernel Policy](https://github.com/96boards/documentation/wiki/RP-Kernel-Policy)
 - [FAQ]()
 
 ***
