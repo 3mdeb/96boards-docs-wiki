@@ -162,11 +162,13 @@ The flashing process requires to be in **recovery mode** if user wants to update
 * turn off HiKey board
 * connect debug UART on HiKey to PC (used to monitor debug status)
 * make sure pin1-pin2 and pin3-pin4 on J15 are linked (recovery mode)
+
 Name | Link | State
 ---- | ---- | -----
 Auto Power up | Link 1-2 | closed
 Boot Select | Link 3-4 | closed
 GPIO3-1 | Link 5-6 | open
+
 * connect HiKey Micro-USB to PC with USB cable
 * turn on HiKey board
 * on serial console, you should see some debug message (NULL packet)
