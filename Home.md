@@ -6,7 +6,7 @@ Welcome to the supporting documentation for <a href="http://96boards.org" target
 [<img src="http://i.imgur.com/ou7F2lh.png" data-canonical-src="http://i.imgur.com/ou7F2lh.png" width="50" height="50" />]() 
 <a href="https://www.96boards.org/products/ee/" target="_blank"><img src="http://i.imgur.com/DLgo1qU.png" data-canonical-src="http://i.imgur.com/DLgo1qU.png" width="120" height="50" /></a>
 [<img src="http://i.imgur.com/ou7F2lh.png" data-canonical-src="http://i.imgur.com/ou7F2lh.png" width="50" height="50" />]() 
-<a href="https://www.96boards.org/products/mezzanine/" target="_blank"><img src="http://i.imgur.com/FU8ewZf.png" data-canonical-src="http://i.imgur.com/FU8ewZf.png" width="120" height="50" /></a>
+<a href="https://www.96boards.org/products/mezzanine/" target="_blank"><img src="http://i.imgur.com/gKfT0IK.png" data-canonical-src="http://i.imgur.com/gKfT0IK.png" width="120" height="50" /></a>
 
 ### Contents
 
