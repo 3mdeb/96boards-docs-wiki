@@ -1,6 +1,6 @@
 # HiKey - UEFI
 
-Table of Contents
+##Table of Contents
 
     * [Install from prebuilt binaries](#install-from-prebuilt-binaries)
     * [Source code](#source-code)
