@@ -38,7 +38,7 @@ menuentry 'Install CentOS 7 ARM 64-bit - Reference Platform' --class red --class
     initrd (tftp)/centos7/initrd.img
 }
 
-*Note:* @inst.ks@ is required for the reference platform entry because of the additional repository (that contains the kernel rpm package), which is available inside the @initrd.img@, including just @repo --name="rsalveti" --baseurl=http://repo.linaro.org/rpm/rsalveti/centos-7/repo/@.
+*Note:* @inst.ks@ is required for the reference platform entry because of the additional repository (linaro-staging, containing the reference platform kernel rpm package), which is available inside the @initrd.img@. The @inst.ks@ contains only one line, which is used by the installer to fetch and install the right kernel package. The content: @repo --name="linaro-staging" --baseurl=http://repo.linaro.org/rpm/linaro-staging/centos-7/repo/@.
 
 Also check the "RHEL 7":https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/chap-anaconda-boot-options.html and the "anaconda documentation":https://rhinstaller.github.io/anaconda/boot-options.html for additional boot options. One example is using *ip=eth1:dhcp* if you want to use the second network interface as default.
 
@@ -165,7 +165,7 @@ bc. cmdline
 url --url="http://mirror.centos.org/altarch/7/os/aarch64/"
 repo --name="CentOS" --baseurl=http://mirror.centos.org/altarch/7/os/aarch64/
 repo --name="Updates" --baseurl=http://mirror.centos.org/altarch/7/updates/aarch64/
-repo --name="rsalveti" --baseurl=http://repo.linaro.org/rpm/rsalveti/centos-7/repo/
+repo --name="linaro-staging" --baseurl=http://repo.linaro.org/rpm/linaro-staging/centos-7/repo/
 lang en_US.UTF-8
 keyboard us
 timezone --utc Etc/UTC
