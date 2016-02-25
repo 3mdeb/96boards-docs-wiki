@@ -34,7 +34,7 @@ Welcome to the supporting documentation for <a href="http://96boards.org" target
 
 #### Reference Software Platform
 
-- [Landing Page](https://github.com/96boards/documentation/wiki/Reference-Platform-Home)
+- [Reference Platform Home](https://github.com/96boards/documentation/wiki/Reference-Platform-Home)
 - [Read More](https://github.com/sdrobertw/test-wiki-/wiki/Reference-Software-Platform-Lead-Project)
 - [Kernel Policy](https://github.com/96boards/documentation/wiki/RP-Kernel-Policy)
 
