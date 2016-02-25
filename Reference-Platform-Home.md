@@ -8,7 +8,8 @@
 
 #### QuickStart
 
-How to report a bug ([Consumer Edition](https://github.com/96boards/documentation/wiki/Reference-Platform-CE-bugs) / [Enterprise Edition](https://github.com/96boards/documentation/wiki/Reference-Platform-EE-bugs))
+[Report a bug](https://github.com/96boards/documentation/wiki/Reference-Platform-bugs)
+
 ***
 
 #### Resources
