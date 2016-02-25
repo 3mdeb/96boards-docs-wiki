@@ -1,6 +1,7 @@
 # HiKey - UEFI
 
 ##Table of Contents
+=================
 
   * [--depth 1 means to fetch code without commit history](#--depth-1-means-to-fetch-code-without-commit-history)
   * [Optionally, if also building OP-TEE](#optionally-if-also-building-op-tee)
@@ -20,7 +21,6 @@
   * [Rebuild UEFI](#rebuild-uefi)
   * [Update kernel command line in grub.cfg](#update-kernel-command-line-in-grubcfg)
   * [Don't need to build kernel again.](#dont-need-to-build-kernel-again)
-
 
 **NOTE**: Throughout this document, when you see Jumper pin1-6 on **J15**, it refers to original HiKey boards built by CircuitCo<sup>R</sup>. If the board you have is built by **LEMAKER<sup>R</sup>**, then read these as "Jumper pin1-6 on **J601**"
 
