@@ -2,6 +2,7 @@
 
 ##Table of Contents
 
+  * [HiKey - UEFI](#hikey---uefi)
     * [Install from prebuilt binaries](#install-from-prebuilt-binaries)
     * [Source code](#source-code)
     * [Build instructions](#build-instructions)
