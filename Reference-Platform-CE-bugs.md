@@ -17,7 +17,7 @@
 #### Step 2: Reporting a bug for CE Reference Platform
 
 - Click "File a Bug"
-- Find "Reference Platform Link" and click
+- Find and click "Reference Platform" link
 
 #### Step 3: Required and Optional Fields
 
@@ -39,7 +39,7 @@ Summary examples:
 - Provide as much "straight forward" information as possible
 - Firmware version
 - Kernel version
-- Hardware revision
+- Hardware
 - Steps to reproduce your bug
 
 
