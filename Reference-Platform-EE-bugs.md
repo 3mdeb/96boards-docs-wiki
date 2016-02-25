@@ -4,7 +4,7 @@
 
 #### Step 1: Account Creation
 
-- Go to bugs.linaro.org for Enterprise Edition bugs
+- Go to <a href="bugs.linaro.org" target="_blank">bugs.linaro.org</a> for Enterprise Edition bugs
 - Create a personal account (Click "New Account")
 - Enter email address and click "Send"
 - Check email for account confirmation
