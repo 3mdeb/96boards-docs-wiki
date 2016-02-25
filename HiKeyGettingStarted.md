@@ -254,7 +254,17 @@ After setting up fastboot on your Linux PC do the following:
 
 Install Link 5-6 on the HiKey board. This tells the bootloader to start up in fastboot mode.
 
+Name | Link | State
+---- | ---- | -----
+Auto Power up | Link 1-2 | closed
+Boot Select | Link 3-4 | open
+GPIO3-1 | Link 5-6 | close
+
 Power on the HiKey board and verify communications from the Linux PC:
+
+Wait about 10 seconds.
+
+You should see the ID of the HiKey board returned
 ```
 $ sudo fastboot devices
 0123456789abcdef fastboot
@@ -273,6 +283,12 @@ $ sudo fastboot flash userdata userdata-8gb.img
 ```
 
 When flashing is completed power down the HiKey, remove Link 5-6 and power up the HiKey. You may now use the AOSP operating system.  Note the first time boot up will take a couple of minutes. 
+
+Name | Link | State
+---- | ---- | -----
+Auto Power up | Link 1-2 | closed
+Boot Select | Link 3-4 | open
+GPIO3-1 | Link 5-6 | open
 
 Please read the Hardware notes and the Known Issues in this document before using the OS.
 
@@ -317,13 +333,31 @@ Unzip the .gz files (using gunzip or equivalent)
 
 Install Link 5-6 on the HiKey board. This tells the bootloader to start up in fastboot mode. 
 
+Name | Link | State
+---- | ---- | -----
+Auto Power up | Link 1-2 | closed
+Boot Select | Link 3-4 | open
+GPIO3-1 | Link 5-6 | closed
+
 Power on the HiKey board and verify communications from the Linux PC:
+
+Wait about 10 seconds.
+
+You should see the ID of the HiKey board returned
 ```
 $ sudo fastboot devices
 0123456789abcdef fastboot
 ```
 
 Then install the update using the downloaded files:
+
+Make sure pin1-pin2 and pin3-pin4 on J15 are linked (recovery mode)
+
+Name | Link | State
+---- | ---- | -----
+Auto Power up | Link 1-2 | closed
+Boot Select | Link 3-4 | closed
+GPIO3-1 | Link 5-6 | open
 
 **NOTE:** the ptable must be flashed first. Wait for a few seconds after the reboot command to allow the bootloader to restart using the new partition table. (Example goes with 8G board)
 ```
@@ -332,7 +366,13 @@ $ sudo fastboot reboot
 $ sudo fastboot flash boot boot-fat.uefi.img
 $ sudo fastboot flash system hikey-jessie_alip_2015MMDD-nnn-8g.emmc.img
 ```
-When completed, power down the HiKey, remove Link 5-6 and power up the HiKey. If you wish to use a keyboard and mouse in the Type A USB ports, remember to remove the microUSB cable. 
+When completed, power down the HiKey, remove Link 3-4 and power up the HiKey. If you wish to use a keyboard and mouse in the Type A USB ports, remember to remove the microUSB cable. 
+
+Name | Link | State
+---- | ---- | -----
+Auto Power up | Link 1-2 | closed
+Boot Select | Link 3-4 | open
+GPIO3-1 | Link 5-6 | open
 
 You may now use the updated OS.
 
