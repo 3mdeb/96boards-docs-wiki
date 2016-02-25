@@ -258,7 +258,7 @@ Name | Link | State
 ---- | ---- | -----
 Auto Power up | Link 1-2 | closed
 Boot Select | Link 3-4 | open
-GPIO3-1 | Link 5-6 | close
+GPIO3-1 | Link 5-6 | closed
 
 Power on the HiKey board and verify communications from the Linux PC:
 
