@@ -1,5 +1,27 @@
 # HiKey - UEFI
 
+##Table of Contents
+=================
+
+  * [--depth 1 means to fetch code without commit history](#--depth-1-means-to-fetch-code-without-commit-history)
+  * [Optionally, if also building OP-TEE](#optionally-if-also-building-op-tee)
+  * [NOTE: If also building OP-TEE, run below command instead of the one above](#note-if-also-building-op-tee-run-below-command-instead-of-the-one-above)
+  * [${UEFI_TOOLS_DIR}/uefi-build.sh -b RELEASE -a ../arm-trusted-firmware -s ../optee_os hikey](#uefi_tools_diruefi-buildsh--b-release--a-arm-trusted-firmware--s-optee_os-hikey)
+  * [To use UART0 instead of UART3 as the console, uncomment the appropriate line(s) in](#to-use-uart0-instead-of-uart3-as-the-console-uncomment-the-appropriate-lines-in)
+  * [${UEFI_TOOLS_DIR}/platforms.config before running the command above.](#uefi_tools_dirplatformsconfig-before-running-the-command-above)
+  * [XXX sgdisk usage requires sudo](#xxx-sgdisk-usage-requires-sudo)
+  * [command to copy custom kernel &amp; dtb file into boot-fat](#command-to-copy-custom-kernel--dtb-file-into-boot-fat)
+  * [l-loader.bin should be flashed in recovery mode only](#l-loaderbin-should-be-flashed-in-recovery-mode-only)
+  * [In recovery mode, we need to input this command to run initial program with fastboot protocol.](#in-recovery-mode-we-need-to-input-this-command-to-run-initial-program-with-fastboot-protocol)
+  * [Change serial number by custom fastboot command.](#change-serial-number-by-custom-fastboot-command)
+  * [Update $CROSS_COMPILE in uefi-tools/atf-build.sh](#update-cross_compile-in-uefi-toolsatf-buildsh)
+  * [Rebuild ARM Trust Firmware](#rebuild-arm-trust-firmware)
+  * [Rerun make with CFG_CONSOLE_UART=0 option](#rerun-make-with-cfg_console_uart0-option)
+  * [Update SERIAL_BASE in HisiPkg/HiKeyPkg/HiKey.dsc file.](#update-serial_base-in-hisipkghikeypkghikeydsc-file)
+  * [Rebuild UEFI](#rebuild-uefi)
+  * [Update kernel command line in grub.cfg](#update-kernel-command-line-in-grubcfg)
+  * [Don't need to build kernel again.](#dont-need-to-build-kernel-again)
+
 **NOTE**: Throughout this document, when you see Jumper pin1-6 on **J15**, it refers to original HiKey boards built by CircuitCo<sup>R</sup>. If the board you have is built by **LEMAKER<sup>R</sup>**, then read these as "Jumper pin1-6 on **J601**"
 
 The following binaries are required:
