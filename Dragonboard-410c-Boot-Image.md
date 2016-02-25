@@ -84,7 +84,7 @@ Instructions to update the boot partition using a kernel package on a running sy
 ### Get skales
 
     sudo apt-get install libfdt-dev
-    git clone git://codeaurora.org/quic/kernel/skales /tmp
+    git clone git://codeaurora.org/quic/kernel/skales /tmp/skales
     export PATH=$PATH:/tmp/skales
 
 ### Install the new kernel package
