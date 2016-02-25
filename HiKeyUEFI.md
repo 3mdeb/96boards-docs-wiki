@@ -1,5 +1,24 @@
 # HiKey - UEFI
 
+Table of Contents
+
+    * [Install from prebuilt binaries](#install-from-prebuilt-binaries)
+    * [Source code](#source-code)
+    * [Build instructions](#build-instructions)
+      * [Install custom toolchain(s)](#install-custom-toolchains)
+      * [Get the source code](#get-the-source-code)
+      * [Build UEFI for HiKey](#build-uefi-for-hikey)
+      * [Create or modify menu entry in GRUB](#create-or-modify-menu-entry-in-grub)
+      * [EFI boot partition (boot-fat.uefi.img)](#efi-boot-partition-boot-fatuefiimg)
+    * [Flash binaries to eMMC <a name="user-content-flash-emmc"></a> ](#flash-binaries-to-emmc-)
+    * [Run Fastboot from UEFI](#run-fastboot-from-uefi)
+      * [Boot Sequence](#boot-sequence)
+    * [Set Serial Number in recovery mode](#set-serial-number-in-recovery-mode)
+    * [Control user led](#control-user-led)
+    * [How to Use UART0 as console](#how-to-use-uart0-as-console)
+    * [Known Issues](#known-issues)
+
+
 **NOTE**: Throughout this document, when you see Jumper pin1-6 on **J15**, it refers to original HiKey boards built by CircuitCo<sup>R</sup>. If the board you have is built by **LEMAKER<sup>R</sup>**, then read these as "Jumper pin1-6 on **J601**"
 
 The following binaries are required:
