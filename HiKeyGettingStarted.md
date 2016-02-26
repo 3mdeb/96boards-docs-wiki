@@ -311,7 +311,7 @@ Developer snapshot updates are also provided at:
 
 Note that these snapshots represent engineering work in progress towards the next release. They may not be functional or stable and are provided as-is without support. 
 
-IMPORTANT NOTE:
+**IMPORTANT NOTE:**
 The installation process will overwrite all contents of the eMMC memory. This will remove all installed software and all user files. Before updating the OS, make sure that you have saved any user files or data that you want to keep onto an SD Card or USB memory stick.
 Note that for this release you MUST first update the bootloader using the procedure described in [Board Recovery - Installing a Bootloader](#section-41). If you have not already done this then you will need to do so before proceeding.
 
