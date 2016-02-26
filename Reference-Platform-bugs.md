@@ -61,7 +61,8 @@ This wiki provides instructions for reporting bugs on the References Software Pl
 #### Step 2: Reporting a bug for CE Reference Platform
 
 - Click "File a Bug"
-- Find and click "Reference Platform" link
+- Click "All" to show all products
+- Pick the product for which you would like to report a bug
 
 #### Step 3: Required and Optional Fields
 
@@ -71,13 +72,15 @@ This wiki provides instructions for reporting bugs on the References Software Pl
 #### Step 4: Summary section
 
 - Breif title for your bug
-- Should address the issue with one sentence or less
+- Should address the issue with approximately 10 words
 
 Summary examples:
 
 1. [RPB] LG W2253V fails to work with 4.4.0-93-arm64
 2. [RPB] Mouse cursor invisible after boot (until you open an application)
+
 ***
+
 #### Step 5: Additional Comments section
 
 - Provide as much "straight forward" information as possible
