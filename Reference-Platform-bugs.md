@@ -4,11 +4,36 @@
 
 This wiki provides instructions for reporting bugs on the References Software Platform. Please read through following sections for insight on where to go when reporting bugs.
 
-***
-### Consumer and Enterprise Edition bugs
 
+#### Should I report my bug?
 
+- Write out precise steps to reproduce the bug
+- For effective bug-fix workflow, each issue should have ONE bug report
+- If you can **consistently** reproduce, you should be reporting this bug
+- If you can **occasionally** reproduce, without specific steps, more information about bug will be useful and should be included in report
+- If you **cannot** reproduce, provide unique information about your bug and how it occurred
 
+#### Is this bug Consumer Edition or Enterprise Edition?
+
+**Consumer Edition bugs:**
+
+- HiKey
+- DragonBoard™ 410c
+- Bubblegum96
+
+**Enterprise Edition bugs:**
+
+- D02
+- OverDrive
+- Debian Installer
+- CentOS Installer
+
+#### Where do I report my bug?
+
+- For Consumer Edition bugs, report to bugs.96boards.org
+   - [Click here]() for CE bug reporting instructions
+- For Enterprise Edition bugs, report to bugs.linaro.org
+   - [Click here]() for EE bug reporting instructions
 
 
 ***
@@ -26,10 +51,9 @@ This wiki provides instructions for reporting bugs on the References Software Pl
 
 - Go to <a href="bugs.96boards.org" target="_blank">bugs.96boards.org</a> for Enterprise Edition bugs
 - Create a personal account (Click "New Account")
-- Enter email address and click "Send"
-- Check email for account confirmation
-- Open email and click confirmation link
-- Enter personal information, click "Create"
+- Enter email address
+- Confirm email
+- Enter personal information, and "Create" your account
 - Log in to your new account
 
 ***
@@ -81,13 +105,10 @@ Summary examples:
 
 - Go to <a href="bugs.linaro.org" target="_blank">bugs.linaro.org</a> for Enterprise Edition bugs
 - Create a personal account (Click "New Account")
-- Enter email address and click "Send"
-- Check email for account confirmation
-- Open email and click confirmation link
-- Enter personal information, click "Create"
+- Enter email address
+- Confirm email
+- Enter personal information, and "Create" your account
 - Log in to your new account
-
-***
 
 #### Step 2: Reporting a bug for CE Reference Platform
 
