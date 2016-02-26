@@ -82,8 +82,7 @@ h3. Remaining Work Activities
 h3. Out of Scope / Next Release
 
 * Kernel Fragments - *Amit*
-* Lack of a default device-tree for HiKey - *Ricardo/Guodong*: bugs https://bugs.96boards.org/show_bug.cgi?id=27 and https://bugs.96boards.org/show_bug.cgi?id=267 to cover the right implementation, postponed to 16.06.
-
+* Lack of a default device-tree for HiKey - *Ricardo/Guodong*: bugs "27":https://bugs.96boards.org/show_bug.cgi?id=27 and "267":https://bugs.96boards.org/show_bug.cgi?id=267 to cover the right implementation, postponed to *16.06*.
 
 h3. Current Issues / Bugs
 
