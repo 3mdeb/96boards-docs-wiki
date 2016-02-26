@@ -225,7 +225,7 @@ To change a user LED you can do the following as a root user:
 <a name="section-2"></a>
 ## 3. Installing build of Android Open Source Project 
 
-IMPORTANT NOTE:
+**IMPORTANT NOTE:**
 Note that for this release you MUST first update the bootloader using the procedure described in [Board Recovery - Installing a Bootloader](#section-41). If you have not already done this then you will need to do so before proceeding.
 
 Users may install a version of the build of Android Open Source Project (AOSP) onto the HiKey board. This will remove the factory installed Debian Linux OS. This section provides instructions on installing the AOSP build which consists of:
