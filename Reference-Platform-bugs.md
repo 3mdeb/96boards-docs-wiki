@@ -2,7 +2,7 @@
 
 ***
 
-This wiki provides instructions for reporting bugs on the References Software Platform. Please read through following sections for insight on where to go when reporting bugs.
+This wiki provides instructions for reporting bugs on the References Software Platform. Please read through the following sections for insight on where to go when reporting bugs.
 
 
 #### Should I report my bug?
