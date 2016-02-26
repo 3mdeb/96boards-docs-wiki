@@ -31,9 +31,9 @@ This wiki provides instructions for reporting bugs on the References Software Pl
 #### Where do I report my bug?
 
 - For Consumer Edition bugs, report to bugs.96boards.org
-   - [Click here](https://github.com/96boards/documentation/wiki/Reference-Platform-bugs#how-to-report-a-bug-for-reference-software-platform---consumer-edition-1) for CE bug reporting instructions
+   - [Click here](https://github.com/96boards/documentation/wiki/Reference-Platform-bugs#how-to-report-a-bug-for-reference-software-platform---consumer-edition) for CE bug reporting instructions
 - For Enterprise Edition bugs, report to bugs.linaro.org
-   - [Click here]() for EE bug reporting instructions
+   - [Click here](https://github.com/96boards/documentation/wiki/Reference-Platform-bugs#how-to-report-a-bug-for-reference-software-platform---enterprise-edition) for EE bug reporting instructions
 
 
 ***
