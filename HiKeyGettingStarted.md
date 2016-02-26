@@ -272,6 +272,14 @@ $ sudo fastboot devices
 
 Then install the update using the downloaded files.
 
+For flashing the bootloader, the top two links should be installed (closed) and the 3rd link should be removed (open):
+
+Name | Link | State
+---- | ---- | -----
+Auto Power up | Link 1-2 | closed
+Boot Select | Link 3-4 | closed
+GPIO3-1 | Link 5-6 | open
+
 **NOTE:** the ptable must be flashed first. Wait for a few seconds after the reboot command to allow the bootloader to restart using the new partition table. (Example goes with 8G)
 ```
 $ sudo fastboot flash ptable ptable-aosp-8g.img
@@ -519,12 +527,16 @@ Done
 **NOTE:** You may see the word “failed” before Done. This is under investigation but is not fatal. As long as the “Done” is printed at the end you may proceed.
 
 The bootloader has now been installed into RAM. Wait a few seconds for the fastboot application to actually load. The following fastboot commands then load the partition table, the bootloader and other necessary files into the HiKey eMMC flash memory (4GB or 8GB). Taking 8GB as example.
+
+**NOTE:** the ptable must be flashed first. Wait for a few seconds after the reboot command to allow the bootloader to restart using the new partition table. (Example goes with 8G)
+
+
 ```
 $ sudo fastboot flash ptable ptable-linux-8g.img
+$ sudo fastboot reboot
 $ sudo fastboot flash fastboot fip.bin
 $ sudo fastboot flash nvme nvme.img
 $ sudo fastboot flash boot boot-fat.uefi.img
-$ sudo fastboot reboot
 ```
 
 Once this has been completed the bootloader has been installed into eMMC.
