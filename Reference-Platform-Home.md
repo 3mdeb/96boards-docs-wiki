@@ -8,7 +8,7 @@
 
 #### QuickStart
 
-- [Reference Software - Consumer Edition]()
+- [Reference Software - Consumer Edition](https://github.com/96boards/documentation/wiki/Reference-Platform-CE-Home)
 - [Reference Software - Enterprise Edition]()
 - [Report a bug](https://github.com/96boards/documentation/wiki/Reference-Platform-bugs)
 
