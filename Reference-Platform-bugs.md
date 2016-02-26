@@ -140,11 +140,9 @@ Summary examples:
 
 #### Step 5: Additional Comments section
 
-- Provide as much "straight forward" information as possible
-- Firmware version
-- Kernel version
-- Build version
-- Hardware
+- Indicate whether bug can/cannot be reproduced
+- Include firmware version, kernel version, build version
+- State of hardware
 - Steps to reproduce your bug
 
 ***
