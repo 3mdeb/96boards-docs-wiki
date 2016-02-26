@@ -90,7 +90,11 @@ Summary examples:
 - Kernel version
 - Build version
 - Hardware
-- Steps to reproduce your bug
+
+Write precise steps to reproduce your bug:
+
+- Being able to reproduce steps is the most important part of your bug report
+- A developer is highly likely to fix your bug if it can be reproduced
 
 ***
 
