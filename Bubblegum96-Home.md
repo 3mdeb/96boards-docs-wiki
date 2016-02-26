@@ -12,9 +12,9 @@ Welcome to the supporting documentation for [Bubblegum96]()
 
 ***
 
-[<img src="http://i.imgur.com/R1c49tA.png" data-canonical-src="http://i.imgur.com/R1c49tA.png" width="150" height="105" />]()
-[<img src="http://i.imgur.com/k7aPNF8.png" data-canonical-src="http://i.imgur.com/k7aPNF8.png" width="150" height="105" />]()
-[<img src="http://i.imgur.com/HVsrI3N.png" data-canonical-src="http://i.imgur.com/HVsrI3N.png" width="150" height="105" />]()
+[<img src="http://i.imgur.com/ykySoFc.png" data-canonical-src="http://i.imgur.com/ykySoFc.png" width="150" height="105" />]()
+[<img src="http://i.imgur.com/R6Fn3IS.png" data-canonical-src="http://i.imgur.com/R6Fn3IS.png" width="150" height="105" />]()
+[<img src="http://i.imgur.com/fRZZpdq.png" data-canonical-src="http://i.imgur.com/fRZZpdq.png" width="150" height="105" />]()
 
 
 ### Contents
