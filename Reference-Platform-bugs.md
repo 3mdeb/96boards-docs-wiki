@@ -51,9 +51,6 @@ For effective bug-fix workflow, each issue should have ONE bug report
 
 ***
 
-<a href="http://96boards.org/" target="_blank">example</a>
-<a href="http://bugs.96boards.org" target="_blank">bugs.96boards.org</a>
-
 #### Step 1: Account Creation
 
 - Go to <a href="http://bugs.96boards.org" target="_blank">bugs.96boards.org</a> for Enterprise Edition bugs
@@ -115,7 +112,7 @@ Summary examples:
 
 #### Step 1: Account Creation
 
-- Go to <a href="bugs.linaro.org" target="_blank">bugs.linaro.org</a> for Enterprise Edition bugs
+- Go to <a href="http://bugs.linaro.org" target="_blank">bugs.linaro.org</a> for Enterprise Edition bugs
 - Create a personal account (Click "New Account")
 - Enter email address
 - Confirm email
