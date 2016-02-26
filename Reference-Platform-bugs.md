@@ -24,13 +24,21 @@ For effective bug-fix workflow, each issue should have ONE bug report
 - Bubblegum96
 - Pre-built Images
 
+**Instructions for reporting CE bugs [here](https://github.com/96boards/documentation/wiki/Reference-Platform-bugs#how-to-report-a-bug-for-reference-software-platform---consumer-edition)**
+
 **Enterprise Edition bugs:**
 
-- D02
-- OverDrive
-- Debian Installer
-- CentOS Installer
+- HiSilicon D02
+- AMD Overdrive
+- Network Installers:
+   - Debian Installer
+   - CentOS Installer
+- Enterprise Software components:
+   - OpenStack
+   - Hadoop (ODPi BigTop)
 - Developer Cloud
+
+**Instructions for reporting EE bugs [here](https://github.com/96boards/documentation/wiki/Reference-Platform-bugs#how-to-report-a-bug-for-reference-software-platform---enterprise-edition)**
 
 #### Where do I report my bug?
 
