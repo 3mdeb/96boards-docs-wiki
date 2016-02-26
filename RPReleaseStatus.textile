@@ -75,13 +75,15 @@ h3. Remaining Work Activities
 * D02 OpenPlatformPkg update - *Heyi/Leif*
 * D02 EDK2 SAS support - *Zhangfei Gao*
 * Move unified kernel to "https://github.com/96boards/linux":https://github.com/96boards/linux - *Amit*
-* Update CentOS installer to use the unified kernel - *Ricardo*
+-* Update CentOS installer to use the unified kernel - *Ricardo*-
 * ROD Openstack support for CentOS - *Fathi*
 * Update default grub config used by HiKey (generic) - *Ricardo*
 
 h3. Out of Scope / Next Release
 
 * Kernel Fragments - *Amit*
+* Lack of a default device-tree for HiKey - *Ricardo/Guodong*: bugs https://bugs.96boards.org/show_bug.cgi?id=27 and https://bugs.96boards.org/show_bug.cgi?id=267 to cover the right implementation, postponed to 16.06.
+
 
 h3. Current Issues / Bugs
 
@@ -105,7 +107,7 @@ h6. Dragonboard410c
 h6. D02
 
 * "Bug 2037 - D02: Unable to handle kernel paging request":https://bugs.linaro.org/show_bug.cgi?id=2037 - *Amit/Hanjun*
-* "Bug 2063 - D02: No console unless you boot with console=ttyS0,115200":https://bugs.linaro.org/show_bug.cgi?id=2063 - *Amit/Hanjun*
+* -"Bug 2063 - D02: No console unless you boot with console=ttyS0,115200":https://bugs.linaro.org/show_bug.cgi?id=2063 - *Amit/Hanjun*-
 * "Bug 2067 - [RPB] irq 5: nobody cared (try booting with the "irqpoll" option when rebooting the system":https://bugs.linaro.org/show_bug.cgi?id=2067 - Amit/Hanjun
 
 h4. UEFI
@@ -119,8 +121,6 @@ h6. D02
 * "Bug 2075 - [RPB] D02: Latest EDK2 breaks network support in UEFI":https://bugs.linaro.org/show_bug.cgi?id=2075
 
 h6. HiKey
-
-* Lack of a default device-tree for HiKey - *Ricardo/Guodong*
 
 h4. Debian
 
