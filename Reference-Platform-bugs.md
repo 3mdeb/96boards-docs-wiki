@@ -91,7 +91,7 @@ Summary examples:
 [<img src="http://i.imgur.com/znkTVHx.png" data-canonical-src="http://i.imgur.com/znkTVHx.png" width="125" height="300" />]()
 
 ***
-### "How to" report a bug for Reference Software Platform - Consumer Edition
+### "How to" report a bug for Reference Software Platform - Enterprise Edition
 
 
 <a href="" target="_blank"><img src="http://i.imgur.com/DLgo1qU.png" data-canonical-src="http://i.imgur.com/DLgo1qU.png" width="180" height="75" /></a>
