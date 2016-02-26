@@ -40,14 +40,6 @@ For effective bug-fix workflow, each issue should have ONE bug report
 
 **Instructions for reporting EE bugs [here](https://github.com/96boards/documentation/wiki/Reference-Platform-bugs#how-to-report-a-bug-for-reference-software-platform---enterprise-edition)**
 
-#### Where do I report my bug?
-
-- For Consumer Edition bugs, report to bugs.96boards.org
-   - [Click here](https://github.com/96boards/documentation/wiki/Reference-Platform-bugs#how-to-report-a-bug-for-reference-software-platform---consumer-edition) for CE bug reporting instructions
-- For Enterprise Edition bugs, report to bugs.linaro.org
-   - [Click here](https://github.com/96boards/documentation/wiki/Reference-Platform-bugs#how-to-report-a-bug-for-reference-software-platform---enterprise-edition) for EE bug reporting instructions
-
-
 ***
 
 ### "How to" report a bug for Reference Software Platform - Consumer Edition
