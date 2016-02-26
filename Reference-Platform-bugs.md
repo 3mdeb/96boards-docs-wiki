@@ -20,6 +20,7 @@ This wiki provides instructions for reporting bugs on the References Software Pl
 - HiKey
 - DragonBoard™ 410c
 - Bubblegum96
+- Pre-built Images
 
 **Enterprise Edition bugs:**
 
@@ -27,6 +28,7 @@ This wiki provides instructions for reporting bugs on the References Software Pl
 - OverDrive
 - Debian Installer
 - CentOS Installer
+- Developer Cloud
 
 #### Where do I report my bug?
 
@@ -86,6 +88,7 @@ Summary examples:
 - Provide as much "straight forward" information as possible
 - Firmware version
 - Kernel version
+- Build version
 - Hardware
 - Steps to reproduce your bug
 
@@ -138,6 +141,7 @@ Summary examples:
 - Provide as much "straight forward" information as possible
 - Firmware version
 - Kernel version
+- Build version
 - Hardware
 - Steps to reproduce your bug
 
