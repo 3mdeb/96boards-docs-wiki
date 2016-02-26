@@ -75,7 +75,7 @@ h3. Remaining Work Activities
 * D02 OpenPlatformPkg update - *Heyi/Leif*
 * D02 EDK2 SAS support - *Zhangfei Gao*
 * Move unified kernel to "https://github.com/96boards/linux":https://github.com/96boards/linux - *Amit*
--* Update CentOS installer to use the unified kernel - *Ricardo*-
+* -Update CentOS installer to use the unified kernel - *Ricardo*-
 * ROD Openstack support for CentOS - *Fathi*
 * Update default grub config used by HiKey (generic) - *Ricardo*
 
