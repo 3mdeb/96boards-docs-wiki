@@ -9,8 +9,8 @@
 #### QuickStart
 
 - Consumer Edition:
-   - [HiKey](https://github.com/96boards/documentation/wiki/HiKey-Home)
-   - [DragonBoard™ 410c](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Home)
+   - [HiKey](https://github.com/96boards/documentation/wiki/HiKey-Crossroads)
+   - [DragonBoard™ 410c](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Crossroads)
    - [Bubblegum96](https://github.com/96boards/documentation/wiki/Bubblegum96-Home)
 - Enterprise Edition:
    - [HiSilicon D02](https://github.com/96boards/documentation/wiki/ReferenceSoftwareEE#hisilicon-d02)
