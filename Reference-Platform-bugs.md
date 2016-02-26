@@ -60,8 +60,6 @@ For effective bug-fix workflow, each issue should have ONE bug report
 - Enter personal information, and "Create" your account
 - Log in to your new account
 
-***
-
 #### Step 2: Reporting a bug for CE Reference Platform
 
 - Click "File a Bug"
@@ -84,8 +82,6 @@ Summary examples:
 1. [RPB] LG W2253V fails to work with 4.4.0-93-arm64
 2. [RPB] Mouse cursor invisible after boot (until you open an application)
 
-***
-
 #### Step 5: Additional Comments section
 
 - Indicate whether bug can/cannot be reproduced
@@ -98,6 +94,7 @@ Summary examples:
 [<img src="http://i.imgur.com/znkTVHx.png" data-canonical-src="http://i.imgur.com/znkTVHx.png" width="125" height="300" />]()
 
 ***
+
 ### "How to" report a bug for Reference Software Platform - Enterprise Edition
 
 
