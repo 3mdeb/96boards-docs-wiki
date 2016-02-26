@@ -1,14 +1,16 @@
 [<<< Back to Reference Platform Home](https://github.com/96boards/documentation/wiki/Reference-Platform-Home)
 
 ***
+## How to report a bug
+
 
 This wiki provides instructions for reporting bugs on the References Software Platform. Please read through the following sections for insight on where to go when reporting bugs.
 
+For effective bug-fix workflow, each issue should have ONE bug report
 
 #### Should I report my bug?
 
 - Write out precise steps to reproduce the bug
-- For effective bug-fix workflow, each issue should have ONE bug report
 - If you can **consistently** reproduce, you should be reporting this bug
 - If you can **occasionally** reproduce, without specific steps, more information about bug will be useful and should be included in report
 - If you **cannot** reproduce, provide unique information about your bug and how it occurred
@@ -73,6 +75,7 @@ This wiki provides instructions for reporting bugs on the References Software Pl
 
 #### Step 4: Summary section
 
+- This is the first piece of information a developer will see
 - Breif title for your bug
 - Should address the issue with approximately 10 words
 
@@ -90,11 +93,7 @@ Summary examples:
 - Kernel version
 - Build version
 - Hardware
-
-Write precise steps to reproduce your bug:
-
-- Being able to reproduce steps is the most important part of your bug report
-- A developer is highly likely to fix your bug if it can be reproduced
+- Steps to reproduce your bug
 
 ***
 
@@ -132,8 +131,9 @@ Write precise steps to reproduce your bug:
 
 #### Step 4: Summary section
 
+- This is the first piece of information a developer will see
 - Breif title for your bug
-- Should address the issue with one sentence or less
+- Should address the issue with approximately 10 words (60 characters)
 
 Summary examples:
 
@@ -148,6 +148,5 @@ Summary examples:
 - Build version
 - Hardware
 - Steps to reproduce your bug
-
 
 ***
