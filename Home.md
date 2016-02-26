@@ -21,6 +21,14 @@ Welcome to the supporting documentation for <a href="http://96boards.org" target
 
 ***
 
+#### Reference Software Platform
+
+- [Reference Platform Home](https://github.com/96boards/documentation/wiki/Reference-Platform-Home)
+- [Read More](https://github.com/96boards/documentation/wiki/ReferencePlatform)
+- [Kernel Policy](https://github.com/96boards/documentation/wiki/RP-Kernel-Policy)
+
+***
+
 #### Mezzanine Products
 
 (Coming soon to wiki! - <a href="https://www.96boards.org/products/mezzanine/" target="_blank">**Website**</a>)
@@ -29,14 +37,6 @@ Welcome to the supporting documentation for <a href="http://96boards.org" target
 - Linker mezzanine card starter kit
 - 96Boards UART Serial Adapter
 - Sensors mezzanine
-
-***
-
-#### Reference Software Platform
-
-- [Reference Platform Home](https://github.com/96boards/documentation/wiki/Reference-Platform-Home)
-- [Read More](https://github.com/96boards/documentation/wiki/ReferencePlatform)
-- [Kernel Policy](https://github.com/96boards/documentation/wiki/RP-Kernel-Policy)
 
 ***
 
@@ -53,12 +53,6 @@ Welcome to the supporting documentation for <a href="http://96boards.org" target
 
 - [Internet Sharing over USB](https://github.com/96boards/documentation/wiki/Sharing-Internet-connections-over-USB-on-96Boards)
 - Serial Console setup
-
-***
-
-#### Read More
-
-- [Reference Software Platform](https://github.com/96boards/documentation/wiki/ReferencePlatform)
 
 ***
 
