@@ -21,7 +21,7 @@ For more information about the Reference Software Platform project please watch 
 
 - [Read more](https://github.com/96boards/documentation/wiki/ReferencePlatform)
 - [Kernel Policy](https://github.com/96boards/documentation/wiki/RP-Kernel-Policy)
-- [Feedback and Support]()
-- [FAQ]()
+- [Feedback and Support](https://github.com/96boards/documentation/wiki/Reference-Platform-Feedback-and-Support)
+- [FAQ](https://github.com/96boards/documentation/wiki/Reference-Platform-FAQ)
 
 ***
