@@ -19,7 +19,7 @@
 ***
 
 - [Linaro Bug Tracking](http://bugs.linaro.org/)
-   -For non-official 96Boards development boards bugs related with the Reference Software Platform release, e.g. AMD Overdrive and HiSilicon D02
+   - For non-official 96Boards development boards bugs related with the Reference Software Platform release, e.g. AMD Overdrive and HiSilicon D02
    - Report all **Enterprise Edition** Reference Platform bugs here, [Click here](https://github.com/96boards/documentation/wiki/Reference-Platform-bugs) for help with reporting your first bug
 
 ***
