@@ -3,14 +3,15 @@
 ## Reference Platform Build - 16.03
 
 <p align="center">
-  <b>Reference Platform Build 16.03:</b><br>
-  <a href="#">Link 1</a> |
-  <a href="#">Link 2</a> |
-  <a href="#">Link 3</a>
+  <b></b><br>
+  <a href="#">HiKey</a> |
+  <a href="#">Dragonboard™ 410c</a> |
+  <a href="#">Bubblegum96</a>
   <br><br>
 <a href="https://imgflip.com/gif/zx0p2"><img src="https://i.imgflip.com/zx0p2.gif" title="made at imgflip.com"/></a>
 </p>
 ***
+
 
 #### HiKey
 
@@ -20,6 +21,7 @@
 |    [Build from source]()      |    [Build from source]()    |
 |       [Known issues]()        |      [Known issues]()       |
 |        [Test Report]()        |       [Test Report]()       |
+
 
 ***
 
@@ -34,7 +36,7 @@
 
 ***
 
-#### Bubblegum96
+#### Bubblegum96 (Coming Soon...)
 
 |   **CE Debian RPB - 16.03**   |    **CE AOSP RPB - 16.03**  |
 |:-----------------------------:|:---------------------------:|
