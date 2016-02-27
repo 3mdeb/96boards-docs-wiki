@@ -13,15 +13,14 @@ For more information about the Reference Software Platform project please watch 
 
 - Reference Software - Consumer Edition ( [Read More]() / [Build and Install](https://github.com/96boards/documentation/wiki/Reference-Platform-CE-Home) )
 - Reference Software - Enterprise Edition ( [Read More]() / [Build and Install](https://github.com/96boards/documentation/wiki/Reference-Platform-EE-Home) )
-- [Report a bug](https://github.com/96boards/documentation/wiki/Reference-Platform-bugs)
 
 ***
 
 #### Resources
 
-- [Read more](https://github.com/96boards/documentation/wiki/ReferencePlatform)
-- [Kernel Policy](https://github.com/96boards/documentation/wiki/RP-Kernel-Policy)
+- [Report a bug](https://github.com/96boards/documentation/wiki/Reference-Platform-bugs)
 - [Feedback and Support](https://github.com/96boards/documentation/wiki/Reference-Platform-Feedback-and-Support)
+- [Kernel Policy](https://github.com/96boards/documentation/wiki/RP-Kernel-Policy)
 - [FAQ](https://github.com/96boards/documentation/wiki/Reference-Platform-FAQ)
 
 ***
