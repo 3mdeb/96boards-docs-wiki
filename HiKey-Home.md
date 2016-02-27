@@ -15,7 +15,7 @@ Welcome to the supporting documentation for [HiKey](https://www.96boards.org/pro
 [<img src="http://i.imgur.com/jl4GG0d.png" data-canonical-src="http://i.imgur.com/jl4GG0d.png" width="125" height="157" />](https://github.com/96boards/documentation/wiki/HiKey-Crossroads)
 [<img src="http://i.imgur.com/7rrS2JR.png" data-canonical-src="http://i.imgur.com/7rrS2JR.png" width="125" height="157" />](https://github.com/96boards/documentation/wiki/HiKey-Crossroads)
 
-[**Compare Builds**]()
+[**Compare Builds**](https://github.com/96boards/documentation/wiki/Compare-96Boards-Builds)
 
 ***
 
