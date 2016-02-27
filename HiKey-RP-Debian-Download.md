@@ -41,8 +41,8 @@ Build Folders (<a href="http://builds.96boards.org/releases/hikey/linaro/binarie
 
 > Note: Some files have 4G and 8G options, download file which best matches your HiKey board.
 
-- Debian Rootfs (Desktop) (<a href="http://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_alip_20151130-387-4g.emmc.img.gz" target="_blank">**4G Download**</a> / <a href="http://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_alip_20151130-387-8g.emmc.img.gz" target="_blank">**8G Download**</a>)
-- Debian Rootfs (Command line) (<a href="http://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_developer_20151130-387-4g.emmc.img.gz" target="_blank">**4G Download**</a> / <a href="http://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_developer_20151130-387-8g.emmc.img.gz" target="_blank">**8G Download**</a>)
+- **Debian Rootfs (Desktop)** (<a href="http://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_alip_20151130-387-4g.emmc.img.gz" target="_blank">**4G Download**</a> / <a href="http://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_alip_20151130-387-8g.emmc.img.gz" target="_blank">**8G Download**</a>)
+- **Debian Rootfs (Command line)** (<a href="http://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_developer_20151130-387-4g.emmc.img.gz" target="_blank">**4G Download**</a> / <a href="http://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_developer_20151130-387-8g.emmc.img.gz" target="_blank">**8G Download**</a>)
 
 ***
 
@@ -89,14 +89,14 @@ This method requires the following hardware:
 Build Folders (<a href="http://builds.96boards.org/releases/hikey/linaro/binaries/latest/" target="_blank">**Binaries**</a> / <a href="http://builds.96boards.org/releases/hikey/linaro/aosp/latest/" target="_blank">**Image**</a>)
 
 - **l-loader.bin** ([**Download**](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/l-loader.bin))
-- fip.bin ([**Download**](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/fip.bin))
-- nvme.img ([**Download**](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/nvme.img))
-- ptable-aosp.img ([**4G Download**](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-aosp-4g.img) / [**8G Download**](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-aosp-8g.img))
-- hisi-idt.py ([**Download**](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/hisi-idt.py))
-- boot_fat.uefi.img ([**Download**](http://builds.96boards.org/releases/hikey/linaro/aosp/latest/boot_fat.uefi.img.tar.xz))
-- cache.img.tar.xz ([**Download**](http://builds.96boards.org/releases/hikey/linaro/aosp/latest/cache.img.tar.xz))
-- userdata.img.xz ([**4G Download**](http://builds.96boards.org/releases/hikey/linaro/aosp/latest/userdata-4gb.img.tar.xz) / [**8G Download**](http://builds.96boards.org/releases/hikey/linaro/aosp/latest/userdata-8gb.img.tar.xz))
-- system.img.tar.xz (<a href="http://builds.96boards.org/releases/hikey/linaro/aosp/latest/system.img.tar.xz" target="_blank">**Download**</a>)
+- **fip.bin** ([**Download**](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/fip.bin))
+- **nvme.img** ([**Download**](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/nvme.img))
+- **ptable-aosp.img** ([**4G Download**](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-aosp-4g.img) / [**8G Download**](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-aosp-8g.img))
+- **hisi-idt.py** ([**Download**](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/hisi-idt.py))
+- **boot_fat.uefi.img** ([**Download**](http://builds.96boards.org/releases/hikey/linaro/aosp/latest/boot_fat.uefi.img.tar.xz))
+- **cache.img.tar.xz** ([**Download**](http://builds.96boards.org/releases/hikey/linaro/aosp/latest/cache.img.tar.xz))
+- **userdata.img.xz** ([**4G Download**](http://builds.96boards.org/releases/hikey/linaro/aosp/latest/userdata-4gb.img.tar.xz) / [**8G Download**](http://builds.96boards.org/releases/hikey/linaro/aosp/latest/userdata-8gb.img.tar.xz))
+- **system.img.tar.xz** (<a href="http://builds.96boards.org/releases/hikey/linaro/aosp/latest/system.img.tar.xz" target="_blank">**Download**</a>)
 
 ***
 
