@@ -2,25 +2,25 @@
 
 ***
 
-- [96boards.org Community forum](https://www.96boards.org/forums/)
+- [**96boards.org Community forum**](https://www.96boards.org/forums/)
    - For general questions or support requests
 
 ***
 
-- [96Boards.org development mailing-list](https://lists.96boards.org/mailman/listinfo/dev)
+- [**96Boards.org development mailing-list**](https://lists.96boards.org/mailman/listinfo/dev)
    - For development questions and topics
 
 ***
 
-- [96Boards.org Bug tracking](https://bugs.96boards.org/enter_bug.cgi?classification=__all)
+- [**96Boards.org Bug tracking**](https://bugs.96boards.org/enter_bug.cgi?classification=__all)
    - For bugs related with 96Boards platforms.
-   - Report all **Consumer Edition** Reference Platform bugs here, [Click here](https://github.com/96boards/documentation/wiki/Reference-Platform-bugs) for help with reporting your first bug
+   - Report all **Consumer Edition** Reference Platform bugs here, [**click here**](https://github.com/96boards/documentation/wiki/Reference-Platform-bugs) for help with reporting your first bug
 
 ***
 
-- [Linaro Bug Tracking](http://bugs.linaro.org/)
+- [**Linaro Bug Tracking**](http://bugs.linaro.org/)
    - For non-official 96Boards development boards bugs related with the Reference Software Platform release, e.g. AMD Overdrive and HiSilicon D02
-   - Report all **Enterprise Edition** Reference Platform bugs here, [Click here](https://github.com/96boards/documentation/wiki/Reference-Platform-bugs) for help with reporting your first bug
+   - Report all **Enterprise Edition** Reference Platform bugs here, [**click here**](https://github.com/96boards/documentation/wiki/Reference-Platform-bugs) for help with reporting your first bug
 
 ***
 
