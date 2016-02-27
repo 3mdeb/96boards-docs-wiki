@@ -17,7 +17,7 @@ Welcome to the supporting documentation for [DragonBoard™ 410c](https://www.96
 [<img src="http://i.imgur.com/7rrS2JR.png" data-canonical-src="http://i.imgur.com/7rrS2JR.png" width="125" height="157" />](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Crossroads)
 [<img src="http://i.imgur.com/dnsIEuC.png" data-canonical-src="http://i.imgur.com/dnsIEuC.png" width="125" height="157" />](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Crossroads)
 
-[**Compare Builds**]()
+[**Compare Builds**](https://github.com/96boards/documentation/wiki/Compare-96Boards-Builds)
 
 ***
 #### Installation and Setup Guides
