@@ -53,8 +53,6 @@ Build Folders (<a href="http://builds.96boards.org/releases/hikey/linaro/binarie
 
 ***
 
-***
-
 [<img src="http://i.imgur.com/znkTVHx.png" data-canonical-src="http://i.imgur.com/znkTVHx.png" width="125" height="300" />]()
 
 ***
