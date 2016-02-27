@@ -12,7 +12,8 @@ Welcome to the supporting documentation for <a href="http://96boards.org" target
 
 ***
 
-#### 96Boards
+#### _96Boards_
+
 - [Dragonboard™ 410c](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Home)
 - [HiKey](https://github.com/96boards/documentation/wiki/HiKey-Home)
 - [Bubblegum96](https://github.com/96boards/documentation/wiki/Bubblegum96-Home)
@@ -21,15 +22,15 @@ Welcome to the supporting documentation for <a href="http://96boards.org" target
 
 ***
 
-#### Reference Software Platform
+#### _Reference Software Platform_
 
 - [Reference Platform Home](https://github.com/96boards/documentation/wiki/Reference-Platform-Home)
-- [Read More](https://github.com/96boards/documentation/wiki/ReferencePlatform)
+- [Feedback and Support](https://github.com/96boards/documentation/wiki/Reference-Platform-Feedback-and-Support)
 - [Kernel Policy](https://github.com/96boards/documentation/wiki/RP-Kernel-Policy)
 
 ***
 
-#### Mezzanine Products
+#### _Mezzanine Products_
 
 (Coming soon to wiki! - <a href="https://www.96boards.org/products/mezzanine/" target="_blank">**Website**</a>)
 
@@ -40,7 +41,7 @@ Welcome to the supporting documentation for <a href="http://96boards.org" target
 
 ***
 
-#### Hardware Specifications
+#### _Hardware Specifications_
 
 - Consumer Edition (CE) Specification (<a href="https://github.com/96boards/documentation/blob/master/96BoardsCESpecificationv1.0-EA1.pdf" target="_blank">**View**</a>
  / [**Download PDF**](https://www.96boards.org/ce-specification))
@@ -49,7 +50,7 @@ Welcome to the supporting documentation for <a href="http://96boards.org" target
 
 ***
 
-#### "How to" Guides
+#### _"How to" Guides_
 
 - [Internet Sharing over USB](https://github.com/96boards/documentation/wiki/Sharing-Internet-connections-over-USB-on-96Boards)
 - Serial Console setup
