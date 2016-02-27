@@ -51,7 +51,8 @@ This method requires the following hardware:
 [<<< Back to HiKey Crossroads](https://github.com/96boards/documentation/wiki/HiKey-Crossroads)
 
 ***
-## Step 1: Read about the Fastboot Method
+#### Step 1: Read about the Fastboot Method
+
 Fastboot is supported by the board and can be used for installs.  This is for advanced users who are most likely modifying/customizing source code and will need to download such updates to the board for test/execution. 
 
 This method requires the following hardware:
@@ -62,21 +63,26 @@ This method requires the following hardware:
 - HDMI Monitor with full size HDMI cable (not required to perform flash)
 
 ***
-#### Step 2: Download Android Bootloader
 
-- Android Bootloader ([Direct Download]() / <a href="" target="_blank">Build Folder</a> )
+#### Step 2: Download the following files
 
-#### Step 3: Download the following files from the latest build
+> Note: Some files have 4G and 8G options, download file which best matches your HiKey board.
 
-- boot.img.tar.xz ([Direct Download]())
-- system.img.tar.xz ([Direct Download]())
-- userdata.img.tar.xz ([Direct Download]())
-- recovery.img.tar.xz ([Direct Download]())
-- persist.img.tar.xz ([Direct Download]())
-- cache.img.tar.xz ([Direct Download]())
+Build Folders (<a href="http://builds.96boards.org/releases/hikey/linaro/binaries/latest/" target="_blank">**Binaries**</a> / <a href="http://builds.96boards.org/releases/hikey/linaro/aosp/latest/" target="_blank">**Image**</a>)
+
+- l-loader.bin ([**Download**](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/l-loader.bin))
+- fip.bin ([**Download**](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/fip.bin))
+- nvme.img ([**Download**](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/nvme.img))
+- ptable-aosp.img ([**4G Download**](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-aosp-4g.img) / [**8G Download**](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-aosp-8g.img))
+- hisi-idt.py ([**Download**](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/hisi-idt.py))
+- boot_fat.uefi.img ([**Download**](http://builds.96boards.org/releases/hikey/linaro/aosp/latest/boot_fat.uefi.img.tar.xz))
+- cache.img.tar.xz ([**Download**](http://builds.96boards.org/releases/hikey/linaro/aosp/latest/cache.img.tar.xz))
+- userdata.img.xz ([**4G Download**](http://builds.96boards.org/releases/hikey/linaro/aosp/latest/userdata-4gb.img.tar.xz) / [**8G Download**](http://builds.96boards.org/releases/hikey/linaro/aosp/latest/userdata-8gb.img.tar.xz))
+- system.img.tar.xz (<a href="http://builds.96boards.org/releases/hikey/linaro/aosp/latest/system.img.tar.xz" target="_blank">**Download**</a>)
 
 ***
-### Step 4: Choose your host computer to access your instruction set
+
+#### Step 3: Choose your host computer to access your instruction set
 
 - [Linux]()
 - [Mac OS X]()
