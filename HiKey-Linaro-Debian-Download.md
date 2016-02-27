@@ -28,7 +28,7 @@ This method requires the following hardware:
 
 > Note: Choose 4G or 8G option, download file which best matches your HiKey board.
 
-- Debian SD Card Image ([4G Download](https://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_alip_20151130-387-4g.emmc.img.gz) / [8G Download](https://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_alip_20151130-387-8g.emmc.img.gz))
+- **Debian SD Card Image** ([**4G Download**](https://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_alip_20151130-387-4g.emmc.img.gz) / [**8G Download**](https://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_alip_20151130-387-8g.emmc.img.gz))
 
 ***
 #### Step 3: Choose your host computer to access your instruction set
