@@ -2,15 +2,14 @@
 ***
 ## Reference Platform Build - 16.03
 
-<p align="Left">
+<p align="center">
   <b>Reference Platform Build 16.03:</b><br>
   <a href="#">Link 1</a> |
   <a href="#">Link 2</a> |
   <a href="#">Link 3</a>
   <br><br>
-  <img src="http://s.4cdn.org/image/title/105.gif">
+<a href="https://imgflip.com/gif/zx0p2"><img src="https://i.imgflip.com/zx0p2.gif" title="made at imgflip.com"/></a>
 </p>
-
 ***
 
 #### HiKey
