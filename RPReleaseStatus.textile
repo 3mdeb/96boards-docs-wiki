@@ -68,6 +68,14 @@ Tree data:
 h3. Remaining Work Activities
 
 * QA/Validation - QA Team
+** -CE AOSP HiKey - *Chase Qi*-
+** CE AOSP DB410c (nice to have)
+** CE Debian HiKey
+** CE Debian DB410c
+** Enterprise Debian Overdrive
+** Enterprise Debian D02
+** Enterprise CentOS Overdrive
+** Enterprise CentOS D02
 * Test/Validation of GPIO, I2C and SPI support on both HiKey and Dragonboard410c - *Grant*
 * -Porting xorg-server into linaro-overlay - *Nicolas/Ricardo*-
 * Release Documentation - *Robert*
