@@ -1,8 +1,11 @@
 [<<< Back to HiKey Crossroads](https://github.com/96boards/documentation/wiki/HiKey-Crossroads)
 # HiKey Linux Installation Guide
 
-
 This Users Guide provides a general overview for getting started with Linux installations on the [HiKey](https://www.96boards.org/products/ce/hikey/). 
+
+
+If you have found this page without having downloaded the appropriate files, please return to the [HiKey Crossroads](https://github.com/96boards/documentation/wiki/HiKey-Crossroads) to choose your download path!
+
 
 ***
 
