@@ -69,7 +69,7 @@ h3. Remaining Work Activities
 
 * QA/Validation - QA Team
 * Test/Validation of GPIO, I2C and SPI support on both HiKey and Dragonboard410c - *Grant*
-* Porting xorg-server into linaro-overlay - *Nicolas/Ricardo*
+* -Porting xorg-server into linaro-overlay - *Nicolas/Ricardo*-
 * Release Documentation - *Robert*
 * -Linaro-EDK2 February Release - *Leif*-
 * D02 OpenPlatformPkg update - *Heyi/Leif*
