@@ -68,16 +68,16 @@ Tree data:
 h3. Remaining Work Activities
 
 * QA/Validation - QA Team
-* Test/Validation of GPIO, I2C and SPI support on both HiKey and Dragonboard410c
-* Porting xorg-server into linaro-overlay - *Nicolas*
+* Test/Validation of GPIO, I2C and SPI support on both HiKey and Dragonboard410c - *Grant*
+* Porting xorg-server into linaro-overlay - *Nicolas/Ricardo*
 * Release Documentation - *Robert*
-* Linaro-EDK2 February Release - *Leif*
+* -Linaro-EDK2 February Release - *Leif*-
 * D02 OpenPlatformPkg update - *Heyi/Leif*
 * D02 EDK2 SAS support - *Zhangfei Gao*
 * Move unified kernel to "https://github.com/96boards/linux":https://github.com/96boards/linux - *Amit*
 * -Update CentOS installer to use the unified kernel - *Ricardo*-
 * ROD Openstack support for CentOS - *Fathi*
-* Update default grub config used by HiKey (generic) - *Ricardo*
+* -Update default grub config used by HiKey (generic) - *Ricardo*-
 
 h3. Out of Scope / Next Release
 
