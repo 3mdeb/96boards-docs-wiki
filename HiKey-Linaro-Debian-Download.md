@@ -33,9 +33,9 @@ This method requires the following hardware:
 ***
 #### Step 3: Choose your host computer to access your instruction set
 
-- [Linux]()
-- [Mac OS X]()
-- [Windows]()
+- [Linux](https://github.com/96boards/documentation/wiki/HiKey-Linux-Install#linux-host)
+- [Mac OS X](https://github.com/96boards/documentation/wiki/HiKey-Linux-Install#mac-os-x-host)
+- [Windows](https://github.com/96boards/documentation/wiki/HiKey-Linux-Install#windows-host)
 
 ***
 
