@@ -35,8 +35,8 @@ Install Hadoop packages:
 
     wget http://repo.linaro.org/rpm/linaro-overlay/centos-7/linaro-overlay.repo -O /etc/yum.repos.d/linaro-overlay.repo
     sudo yum update
-    yum install [a-q]*
-    yum install [s-z]*
+    yum install -y jessie bigtop-tomcat bigtop-utils hadoop* spark hue zookeeper hive hbase oozie pig mahout
+
 
 ### Verifying Installation 
 
