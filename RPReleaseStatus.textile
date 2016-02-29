@@ -7,6 +7,11 @@ h2. Reference Platform Release Status
 
 h3. Release Candidates
 
+h4. RC5 (other pieces to be published later today)
+
+*Debian Installer (111):* "mini.iso":https://builds.96boards.org/snapshots/reference-platform/components/debian-installer/111/mini.iso and "netboot.tar.gz":https://builds.96boards.org/snapshots/reference-platform/components/debian-installer/111/netboot.tar.gz
+*CentOS Installer:* "34":https://builds.96boards.org/snapshots/reference-platform/components/centos-installer/34/
+
 h4. RC4
 
 *Debian Installer:* "mini.iso":https://ci.linaro.org/view/96boards/job/96boards-reference-debian-installer-staging/lastSuccessfulBuild/artifact/mini.iso and "netboot.tar.gz":https://ci.linaro.org/view/96boards/job/96boards-reference-debian-installer-staging/lastSuccessfulBuild/artifact/netboot.tar.gz
