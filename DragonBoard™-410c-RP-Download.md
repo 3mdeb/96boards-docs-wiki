@@ -27,11 +27,11 @@ This method requires the following hardware:
 #### Step 2: Download Debian Bootloader and Boot file
 
 - Debian Bootloader ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/linaro/rescue/latest/dragonboard410c_bootloader_emmc_linux*.zip) / <a href="http://builds.96boards.org/releases/dragonboard410c/linaro/rescue/latest/" target="_blank">Build Folder</a> )
-- Debian Boot ([Direct Download](http://builds.96boards.org/releases/reference-platform/debian/dragonboard410c/15.12/dragonboard410c-boot-linux-20151214-35.img.gz) / <a href="http://builds.96boards.org/releases/reference-platform/debian/dragonboard410c/15.12/" target="_blank">Build Folder</a> )
+- Debian Boot ([Direct Download](http://builds.96boards.org/snapshots/reference-platform/debian/59/dragonboard410c/dragonboard410c-boot-linux-20160226-59.img.gz) / <a href="http://builds.96boards.org/snapshots/reference-platform/debian/59/dragonboard410c/" target="_blank">Build Folder</a> )
 
 #### Step 3: Download Root File System
 
-- Debian Rootfs (Desktop) ([Direct Download](http://builds.96boards.org/releases/reference-platform/debian/dragonboard410c/15.12/dragonboard410c-rootfs-debian-jessie-alip-20151214-35.emmc.img.gz) / <a href="http://builds.96boards.org/releases/reference-platform/debian/dragonboard410c/15.12/" target="_blank">Build Folder</a> )
+- Debian Rootfs (Desktop) ([Direct Download](http://builds.96boards.org/snapshots/reference-platform/debian/59/dragonboard410c/dragonboard410c-rootfs-debian-jessie-alip-20160226-59.emmc.img.gz) / <a href="http://builds.96boards.org/snapshots/reference-platform/debian/59/dragonboard410c/" target="_blank">Build Folder</a> )
 
 ***
 #### Step 4: Choose your host computer to access your instruction set
