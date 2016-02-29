@@ -190,8 +190,7 @@ cd /home/YourUserName/Downloads
 
 - SD card inserted into host computer
 - Recall SD Card device name from [**Step 2**]()
-- Unmount SD Card (User Disk Utility. **Press Command+Space Bar**, type Disk utility and hit enter)
-- From within disk utility, locate SD card drive and click unmount
+- Make sure SD Card is unmounted
 - From within the extraction folder, using the Terminal execute the following commands:
 
 **Execute:**
