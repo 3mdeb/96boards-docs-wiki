@@ -11,7 +11,7 @@
 
 |   **CE Debian RPB - 16.03**   |    **CE AOSP RPB - 16.03**  |
 |:-----------------------------:|:---------------------------:|
-|    [Install instructions]()   |   [Install instructions]()  |
+|    <a href="https://github.com/96boards/documentation/wiki/HiKey-RP-Download#your-build-choice" target="_blank">Install instructions</a>   |   <a href="https://github.com/96boards/documentation/wiki/HiKey-RP-Download#your-build-choice-1" target="_blank">Install instructions</a>  |
 |    [Build from source]()      |    [Build from source]()    |
 |       [Known issues]()        |      [Known issues]()       |
 |        [Test Report]()        |       [Test Report]()       |
@@ -23,7 +23,7 @@
 
 |   **CE Debian RPB - 16.03**   |    **CE AOSP RPB - 16.03**  |
 |:-----------------------------:|:---------------------------:|
-|    [Install instructions]()   |   [Install instructions]()  |
+|    <a href="https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RP-Download#your-build-choice" target="_blank">Install instructions</a>   |   <a href="https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RP-Download#your-build-choice-1" target="_blank">Install instructions</a>  |
 |    [Build from source]()      |    [Build from source]()    |
 |       [Known issues]()        |      [Known issues]()       |
 |        [Test Report]()        |       [Test Report]()       |
