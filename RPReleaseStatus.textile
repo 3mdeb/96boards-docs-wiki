@@ -133,6 +133,7 @@ h6. HiKey
 h4. Debian
 
 * -"Bug 2009 - Wrong network device name set after Debian install":https://bugs.linaro.org/show_bug.cgi?id=2009 - *Ricardo*-
+* " ttyAMA2 (tty96B0) missing on HiKey with 16.03-rc4":https://bugs.96boards.org/show_bug.cgi?id=273 - *Amit*
 
 h6. DB410c
 
