@@ -22,7 +22,7 @@
 - Pre-built image(s): _**Linaro/Debian**_ and _**Android**_
 - Available installation method(s): _**Fastboot**_ ONLY
 - Previous releases ([Debian](http://builds.96boards.org/releases/reference-platform/debian/hikey/) / [Android](http://builds.96boards.org/releases/reference-platform/aosp/hikey/))
-- Build from Source - 15.12 ([Debian](https://github.com/96boards/documentation/wiki/CE-Debian-RPB-HiKey-15.12-Build) / [Android](https://github.com/96boards/documentation/wiki/CE-AOSP-RPB-HiKey-15.12-Build))
+- Build from Source ([Debian](https://github.com/96boards/documentation/wiki/HiKey-RPB-Debian-Build-Source-16.03) / [Android](https://github.com/96boards/documentation/wiki/HiKey-RPB-AOSP-Build-Source-16.03))
 - Known Issues - 15.12 ([Debian](https://github.com/96boards/documentation/wiki/RPB-15.12-Known-Issues#debian) / [Android](https://github.com/96boards/documentation/wiki/RPB-15.12-Known-Issues#aosp))
 
 
