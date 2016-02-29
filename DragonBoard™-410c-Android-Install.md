@@ -1,78 +1,12 @@
-[<<< Back to DragonBoard™ 410c Qualcomm® Builds](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard™-410c-Qualcomm-Home)
-# Dragonboard™ 410c Android Installation Guide
-
+[<<< Back to DragonBoard™ 410c Crossroads](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Crossroads)
+# DragonBoard™ 410c Android Installation Guide
 
 This Users Guide provides a general overview for getting started with Android installations on the [DragonBoard™ 410c](https://www.96boards.org/products/ce/dragonboard410c/). 
 
-There are two primary ways to install software onto the DragonBoard™ 410c:
-- SD Card
-- Fastboot
 
-**Making your way through this document is easy!**
-
-1. Read about both installation methods
-2. Choose your method
-3. Choose your host machine (This is the machine you will be using throughout the process)
-4. Follow your custom set of steps
-
-If you are having trouble with this document please <a href="https://youtu.be/JoL1rQhJKuA" target="_blank">click here</a> for a video walkthrough.
-
-
+If you have found this page without having downloaded the appropriate files, please return to the [DragonBoard™ 410c Crossroads](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Crossroads) to choose your download path!
 
 ***
-
-
-#### Step 1: Read about both installation methods
-
-## SD Card Method
-The SD card method allows you to place a microSD card into the DragonBoard™ 410c to automatically boot and install Android onto the board. This method is generally simpler and should be used by beginners. 
-
-This method requires the following hardware:
-- DragonBoard™ 410c with power supply
-- Host machine (Linux, Mac OS X, or Windows)
-- MicroSD card with 4GB or more of storage
-- USB Mouse and/or keyboard
-- HDMI Monitor with full size HDMI cable
-
-Skip to the [Install Android Using SD Card]() section to use this method.   
-
-## Fastboot Method
-Fastboot is supported by the board and can be used for installs.  This is for advanced users who are most likely modifying/customizing source code and will need to download such updates to the board for test/execution. 
-
-This method requires the following hardware:
-- DragonBoard™ 410c with power supply
-- Host machine (Linux, Mac OS X, or Windows)
-- USB to microUSB cable
-- USB Mouse and/or keyboard (not required to perform flash)
-- HDMI Monitor with full size HDMI cable (not required to perform flash)
-
-Skip to the [Install Android Using Fastboot]() to use this method.
-
-***
-
-#### Step 2: Choose your Method
-
-**Choose your Installation Method:**
-
-- [**Install Android using SD Card**]()
-- [**Install Android Using Fastboot**]()
-
-
-***
-
-
-# Install Android using SD Card
-[Back to Step 2]()
-
-#### Step 3: Choose your Host Machine
-
-- [**Linux Host**]()
-- [**Mac OSX Host**]()
-- [**Windows Host**]()
-
-
-***
-
 
 ## Linux Host
 
@@ -432,23 +366,8 @@ Before clicking "OK":
 
 **Congratulations! You are now booting your newly installed operating system directly from eMMC on the DragonBoard™ 410c!**
 
-
 ***
 
-
-# Install Android Using Fastboot
-[Back to Step 2](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard410c-Linux-Install#step-2-choose-your-method)
-
-#### Step 3: Choose your Host Machine
-
-##**Choose Host Computer:**
-
-- [**Linux Host**](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard410c-Linux-Install#linux-host-1)
-- [**Mac OSX Host**](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard410c-Linux-Install#mac-osx-host-1)
-- [**Windows Host**](https://github.com/sdrobertw/test-wiki-/wiki/DragonBoard410c-Linux-Install#windows-host-1)
-
-
-***
 ##Linux Host
 
 This section show how to install the Android operating system to your DragonBoard™ 410c using the fastboot method on a Mac OS X host computer.
@@ -531,12 +450,21 @@ cd dragonboard410c_bootloader_emmc_android
 #### **Step 5**: Recall location of all downloaded files from downloads page.
 This will include the files listed below:
 
-- boot.img.tar.xz ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/boot.img.tar.xz))
-- system.img.tar.xz ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/system.img.tar.xz))
-- userdata.img.tar.xz ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/userdata.img.tar.xz))
-- recovery.img.tar.xz ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/recovery.img.tar.xz))
-- persist.img.tar.xz ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/persist.img.tar.xz))
-- cache.img.tar.xz ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/cache.img.tar.xz))
+###### Reference Platform files
+
+- boot.img.tar.xz 
+- system.img.tar.xz 
+- userdata.img.tar.xz 
+- cache.img.tar.xz 
+
+###### Member and Vendor Build files
+
+- boot.img.tar.xz 
+- system.img.tar.xz 
+- userdata.img.tar.xz 
+- recovery.img.tar.xz 
+- persist.img.tar.xz 
+- cache.img.tar.xz 
 
 #### **Step 6**: Unzip all files
 
@@ -547,6 +475,24 @@ This will include the files listed below:
 - Recall location of all extracted(unzipped) files
 - `cd` to the directory with your unzipped files
 - From within extraction directory, execute the following commands:
+
+###### Reference Platform
+
+```shell
+# (Once again) Check to make sure fastboot device connected
+sudo fastboot devices
+
+# cd to the directory the boot image and  were extracted
+$ cd <extraction directory>
+
+# Make sure you have properly unzipped the downloads
+sudo fastboot flash boot boot.img
+sudo fastboot flash system system.img
+sudo fastboot flash userdata userdata.img
+sudo fastboot flash cache cache.img
+```
+
+###### Member and Vendor
 
 ```shell
 # (Once again) Check to make sure fastboot device connected
@@ -660,12 +606,21 @@ cd dragonboard410c_bootloader_emmc_android
 #### **Step 5**: Recall location of all downloaded files from downloads page.
 This will include the files listed below:
 
-- boot.img.tar.xz ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/boot.img.tar.xz))
-- system.img.tar.xz ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/system.img.tar.xz))
-- userdata.img.tar.xz ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/userdata.img.tar.xz))
-- recovery.img.tar.xz ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/recovery.img.tar.xz))
-- persist.img.tar.xz ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/persist.img.tar.xz))
-- cache.img.tar.xz ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/cache.img.tar.xz))
+###### Reference Platform files
+
+- boot.img.tar.xz 
+- system.img.tar.xz 
+- userdata.img.tar.xz 
+- cache.img.tar.xz 
+
+###### Member and Vendor Build files
+
+- boot.img.tar.xz 
+- system.img.tar.xz 
+- userdata.img.tar.xz 
+- recovery.img.tar.xz 
+- persist.img.tar.xz 
+- cache.img.tar.xz
 
 #### **Step 6**: Unzip all files
 
@@ -676,6 +631,24 @@ This will include the files listed below:
 - Recall location of all extracted(unzipped) files
 - `cd` to the directory with your unzipped files
 - From within extraction directory, execute the following commands:
+
+###### Reference Platform
+
+```shell
+# (Once again) Check to make sure fastboot device connected
+sudo fastboot devices
+
+# cd to the directory the boot image and  were extracted
+$ cd <extraction directory>
+
+# Make sure you have properly unzipped the downloads
+sudo fastboot flash boot boot.img
+sudo fastboot flash system system.img
+sudo fastboot flash userdata userdata.img
+sudo fastboot flash cache cache.img
+```
+
+###### Member and Vendor
 
 ```shell
 # (Once again) Check to make sure fastboot device connected
