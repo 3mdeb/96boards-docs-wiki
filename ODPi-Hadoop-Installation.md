@@ -33,10 +33,10 @@ Install Hadoop packages:
 
 ### On CentOS:
 
-    wget http://repo.linaro.org/rpm/linaro-overlay/centos-7/linaro-overlay.repo -O /etc/yum.repos.d/linaro-overlay.repo
+    sudo wget http://repo.linaro.org/rpm/linaro-overlay/centos-7/linaro-overlay.repo -O /etc/yum.repos.d/linaro-overlay.repo
     sudo yum update
-    yum -y install openssh-server openssh-clients java-1.7.0-openjdk*
-    yum install -y jessie bigtop-tomcat bigtop-utils hadoop* spark hue zookeeper hive hbase oozie pig mahout
+    sudo yum -y install openssh-server openssh-clients java-1.7.0-openjdk*
+    sudo yum install -y jessie bigtop-tomcat bigtop-utils hadoop* spark hue zookeeper hive hbase oozie pig mahout
 
 
 ### Verifying Installation 
