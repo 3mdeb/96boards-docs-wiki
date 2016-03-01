@@ -96,6 +96,7 @@ h3. Out of Scope / Next Release
 
 * Kernel Fragments - *Amit*
 * Lack of a default device-tree for HiKey - *Ricardo/Guodong*: bugs "27":https://bugs.96boards.org/show_bug.cgi?id=27 and "267":https://bugs.96boards.org/show_bug.cgi?id=267 to cover the right implementation, postponed to *16.06*.
+* "Bug 2032 - ACPI NUMA Support crashes on D02":https://bugs.linaro.org/show_bug.cgi?id=2032 - *Hanjun*
 
 h3. Current Issues / Bugs
 
@@ -128,7 +129,6 @@ h4. UEFI
 h6. D02
 
 * -"Bug 2062 - EDK2 D02: "sas: realizing _RST replacing syscon" breaks SAS support in Linux":https://bugs.linaro.org/show_bug.cgi?id=2062 - *Heyi*-
-* "Bug 2032 - ACPI NUMA Support crashes on D02":https://bugs.linaro.org/show_bug.cgi?id=2032 - *Hanjun*
 * Lack of PCIe support for D02 on Linux (missing tables) - *Hanjun/Heyi*
 * Lack of SAS support in EDK2/UEFI - *Zhangfei*
 * "Bug 2075 - [RPB] D02: Latest EDK2 breaks network support in UEFI":https://bugs.linaro.org/show_bug.cgi?id=2075
