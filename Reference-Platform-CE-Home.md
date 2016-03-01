@@ -33,6 +33,8 @@
 |       Known issues        |      Known issues       |
 |        Test Report        |       Test Report       |
 
+>**Note:** CE AOSP RPB - 16.03 is a Developer Preview operating system
+
 ***
 
 #### Bubblegum96 (Coming Soon...)
