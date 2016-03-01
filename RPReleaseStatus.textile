@@ -74,7 +74,7 @@ Kernel is 4.4 based, unified and supporting the following boards by default:
 * HiKey
 * AMD Overdrive (A0 should also be supported, pending kernel update)
 * D02
-* APM X-Gene/Moonshot m400 (supported on RC3)
+* APM X-Gene/Moonshot m400 (supported with the final RC)
 
 Tree data:
 * Git: "https://git.linaro.org/people/amit.kucheria/kernel.git":https://git.linaro.org/people/amit.kucheria/kernel.git
@@ -98,7 +98,7 @@ h3. Remaining Work Activities
 * -Linaro-EDK2 February Release - *Leif*-
 * D02 OpenPlatformPkg update - *Heyi/Leif*
 * D02 EDK2 SAS support - *Zhangfei Gao*
-* Move unified kernel to "https://github.com/96boards/linux":https://github.com/96boards/linux - *Amit*
+* -Move unified kernel to "https://github.com/96boards/linux":https://github.com/96boards/linux - *Amit*-
 * -Update CentOS installer to use the unified kernel - *Ricardo*-
 * -Update default grub config used by HiKey (generic) - *Ricardo*-
 * ROD Openstack support for CentOS - *Fathi*
