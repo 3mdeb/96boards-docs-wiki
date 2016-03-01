@@ -7,10 +7,16 @@ h2. Reference Platform Release Status
 
 h3. Release Candidates
 
-h4. RC5 (other pieces to be published later today)
+h4. RC5
 
 *Debian Installer (111):* "mini.iso":https://builds.96boards.org/snapshots/reference-platform/components/debian-installer/111/mini.iso and "netboot.tar.gz":https://builds.96boards.org/snapshots/reference-platform/components/debian-installer/111/netboot.tar.gz
 *CentOS Installer:* "34":https://builds.96boards.org/snapshots/reference-platform/components/centos-installer/34/
+*Kernel:* "linux-image-4.4.0-97":http://repo.linaro.org/ubuntu/linaro-staging/pool/main/l/linux/linux-image-4.4.0-97-arm64_4.4.0.linaro.97-1.linarojessie.1_arm64.deb
+*UEFI*: "46":https://builds.96boards.org/snapshots/reference-platform/components/uefi/46/
+*CE AOSP RPB HiKey*: "65":https://builds.96boards.org/snapshots/reference-platform/aosp/hikey/65/
+*CE AOSP RPB Dragonboard410c:* "45":https://builds.96boards.org/snapshots/reference-platform/aosp/db410c/45/
+*CE Debian RPB HiKey*: "66":https://builds.96boards.org/snapshots/reference-platform/debian/66/hikey/
+*CE Debian RPB Dragonboard410c:* "66":https://builds.96boards.org/snapshots/reference-platform/debian/66/dragonboard410c/
 
 h4. RC4
 
