@@ -33,6 +33,8 @@ This method requires the following hardware:
 
 - Debian Rootfs (Desktop) ([Direct Download](http://builds.96boards.org/snapshots/reference-platform/debian/59/dragonboard410c/dragonboard410c-rootfs-debian-jessie-alip-20160226-59.emmc.img.gz) / <a href="http://builds.96boards.org/snapshots/reference-platform/debian/59/dragonboard410c/" target="_blank">Build Folder</a> )
 
+>Note the location of all downloads, they will be needed once you access your instruction set
+
 ***
 #### Step 4: Choose your host computer to access your instruction set
 
@@ -51,6 +53,8 @@ This method requires the following hardware:
 [<img src="http://i.imgur.com/7wy1996.png" data-canonical-src="http://i.imgur.com/7wy1996.png" width="125" height="157" />]()
 [<img src="http://i.imgur.com/yRQKDI6.png" data-canonical-src="http://i.imgur.com/yRQKDI6.png" width="125" height="157" />]()
 [<img src="http://i.imgur.com/tXXN5bZ.png" data-canonical-src="http://i.imgur.com/tXXN5bZ.png" width="125" height="157" />]()
+
+>**Note:** CE AOSP RPB - 16.03 is a Developer Preview operating system
 
 [<<< Back to DragonBoard™ 410c Crossroads](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Crossroads)
 
@@ -74,11 +78,15 @@ This method requires the following hardware:
 - Android Bootloader ([Direct Download](https://builds.96boards.org/releases/dragonboard410c/linaro/rescue/latest/dragonboard410c_bootloader_emmc_android-46.zip) / <a href="https://builds.96boards.org/releases/dragonboard410c/linaro/rescue/latest/" target="_blank">Build Folder</a> )
 - Android Boot ([Direct Download](https://builds.96boards.org/releases/reference-platform/aosp/dragonboard410c/16.03/boot-db410c.img.xz) / <a href="https://builds.96boards.org/releases/reference-platform/aosp/dragonboard410c/16.03/" target="_blank">Build Folder</a> )
 
+>Note the location of all downloads, they will be needed once you access your instruction set
+
 #### Step 3: Download all remaining files
 
 - system.img ([Direct Download](https://builds.96boards.org/releases/reference-platform/aosp/dragonboard410c/16.03/system.img.xz) / <a href="https://builds.96boards.org/releases/reference-platform/aosp/dragonboard410c/16.03/" target="_blank">Build Folder</a> )
 - userdata.img ([Direct Download](https://builds.96boards.org/releases/reference-platform/aosp/dragonboard410c/16.03/userdata.img.xz) / <a href="https://builds.96boards.org/releases/reference-platform/aosp/dragonboard410c/16.03/" target="_blank">Build Folder</a> )
 - cache.img ([Direct Download](https://builds.96boards.org/releases/reference-platform/aosp/dragonboard410c/16.03/cache.img.xz) / <a href="https://builds.96boards.org/releases/reference-platform/aosp/dragonboard410c/16.03/" target="_blank">Build Folder</a> )
+
+>Note the location of all downloads, they will be needed once you access your instruction set
 
 ***
 #### Step 4: Choose your host computer to access your instruction set
