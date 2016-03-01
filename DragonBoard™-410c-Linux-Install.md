@@ -372,16 +372,6 @@ Before clicking "OK":
 
 
 # Install Debian Using Fastboot
-[Back to Step 2]()
-
-#### Step 3: Choose your Host Machine
-
-##**Choose Host Computer:**
-
-- [**Linux Host**]()
-- [**Mac OSX Host**]()
-- [**Windows Host**]()
-
 
 ***
 ##Linux Host
@@ -648,10 +638,6 @@ from eMMC on the DragonBoard™ 410c!**
 ***
 
 ## Windows Host
-
-- [Getting Started]()
-- [Flash Bootloader into on-board eMMC]()
-- [Flash Linaro/Debian Release]()
 
 ### Getting Started
 
