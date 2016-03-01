@@ -79,24 +79,24 @@ Tree data:
 h3. Remaining Work Activities
 
 * QA/Validation - QA Team
-** -CE AOSP HiKey - *Chase Qi*-
-** CE AOSP DB410c (nice to have)
-** CE Debian HiKey
 ** CE Debian DB410c
 ** Enterprise Debian Overdrive
 ** Enterprise Debian D02
 ** Enterprise CentOS Overdrive
 ** Enterprise CentOS D02
+** -CE AOSP HiKey - *Chase Qi*-
+** -CE AOSP DB410c (nice to have) - *Chase Qi*- 
+** -CE Debian HiKey - *Naresh*-
 * Test/Validation of GPIO, I2C and SPI support on both HiKey and Dragonboard410c - *Grant*
-* -Porting xorg-server into linaro-overlay - *Nicolas/Ricardo*-
 * Release Documentation - *Robert*
+* -Porting xorg-server into linaro-overlay - *Nicolas/Ricardo*-
 * -Linaro-EDK2 February Release - *Leif*-
 * D02 OpenPlatformPkg update - *Heyi/Leif*
 * D02 EDK2 SAS support - *Zhangfei Gao*
 * Move unified kernel to "https://github.com/96boards/linux":https://github.com/96boards/linux - *Amit*
 * -Update CentOS installer to use the unified kernel - *Ricardo*-
-* ROD Openstack support for CentOS - *Fathi*
 * -Update default grub config used by HiKey (generic) - *Ricardo*-
+* ROD Openstack support for CentOS - *Fathi*
 
 h3. Out of Scope / Next Release
 
@@ -119,7 +119,7 @@ h6. HiKey
 
 h6. Overdrive
 
-* "Bug 2051 - RPB: Overdrive fails to find the SATA disks when booting with ACPI":https://bugs.linaro.org/show_bug.cgi?id=2051 - *Graeme*
+* -"Bug 2051 - RPB: Overdrive fails to find the SATA disks when booting with ACPI":https://bugs.linaro.org/show_bug.cgi?id=2051 - *Graeme*-
 
 h6. Dragonboard410c
 
@@ -136,16 +136,16 @@ h4. UEFI
 h6. D02
 
 * -"Bug 2062 - EDK2 D02: "sas: realizing _RST replacing syscon" breaks SAS support in Linux":https://bugs.linaro.org/show_bug.cgi?id=2062 - *Heyi*-
-* Lack of PCIe support for D02 on Linux (missing tables) - *Hanjun/Heyi*
+* -Lack of PCIe support for D02 on Linux (missing tables) - *Hanjun/Heyi*-
 * Lack of SAS support in EDK2/UEFI - *Zhangfei*
-* "Bug 2075 - [RPB] D02: Latest EDK2 breaks network support in UEFI":https://bugs.linaro.org/show_bug.cgi?id=2075
+* -"Bug 2075 - [RPB] D02: Latest EDK2 breaks network support in UEFI":https://bugs.linaro.org/show_bug.cgi?id=2075-
 
 h6. HiKey
 
 h4. Debian
 
 * -"Bug 2009 - Wrong network device name set after Debian install":https://bugs.linaro.org/show_bug.cgi?id=2009 - *Ricardo*-
-* " ttyAMA2 (tty96B0) missing on HiKey with 16.03-rc4":https://bugs.96boards.org/show_bug.cgi?id=273 - *Amit*
+* -"ttyAMA2 (tty96B0) missing on HiKey with 16.03-rc4":https://bugs.96boards.org/show_bug.cgi?id=273 - *Amit*-
 
 h6. DB410c
 
