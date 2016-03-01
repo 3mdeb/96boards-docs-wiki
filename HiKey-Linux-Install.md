@@ -308,3 +308,60 @@ Before clicking "OK":
 - Now click "OK" button and allow HiKey to reboot.
 
 **Congratulations! You are now booting your newly installed operating system directly from eMMC on the HiKey!**
+
+***
+
+# Install Debian Using Fastboot
+
+***
+##Linux Host
+
+This section show how to install the Linaro based Debian operating system to your DragonBoard™ 410c using the fastboot method on a Linux host computer.
+
+***
+
+- [**Step 1**: Make sure fastboot is set up on host computer]()
+- [**Step 2**: Connect host computer to DragonBoard™ 410c]()
+- [**Step 3**: Boot DragonBoard™ 410c into fastboot mode]()
+- [**Step 4**: Flash Bootloader]()
+- [**Step 5**: Recall location of `boot` and `rootfs` download from the downloads page]()
+- [**Step 6**: Unzip both 'boot' and 'rootfs' files]()
+- [**Step 7**: Flash `boot` image and `rootfs` to the DragonBoard™ 410c]()
+- [**Step 8**: Reboot DragonBoard™ 410c]()
+
+***
+
+**Step 1**: Make sure fastboot is set up on host computer. 
+
+- Android SDK “Tools only” for Linux can be downloaded <a href="http://developer.android.com/sdk" target="_blank">here</a>
+- The Linux “Tools Only” SDK download does not come with fastboot, you will need to use the Android SDK Manager to install platform-tools.
+- To do this follow the “SDK Readme.txt” instructions included in your SDK “Tools Only” download.
+
+If you are still having trouble setting up fastboot, <a href="https://youtu.be/W_zlydVBftA" target="_blank">click here</a> for a short tutorial video
+
+**Step 2**: Connect host computer to DragonBoard™ 410c
+
+**Step 3**: Boot DragonBoard™ 410c into fastboot mode
+
+**Step 4**: Flash Bootloader
+
+**Step 5**: Recall location of `boot` and `rootfs` download from the downloads page
+
+**Step 6**: Unzip both 'boot' and 'rootfs' files
+
+**Step 7**: Flash `boot` image and `rootfs` to the DragonBoard™ 410c
+
+**Step 8**: Reboot DragonBoard™ 410c
+
+- Unplug power to DragonBoard™ 410c
+- Unplug micro USB cable from DragonBoard™ 410c
+- Ensure HDMI connection to monitor
+- Ensure keyboard and/or mouse connection (Depending on your rootfs selection)
+- Plug power back into DragonBoard™ 410c
+- Wait for board to boot up
+- Board will boot into either command line or desktop depending on rootfs
+
+**Note:** the **username** and **password** are both **“linaro”** when the login information is requested.
+
+**Congratulations! You are now booting your newly installed OS directly
+from eMMC on the DragonBoard™ 410c!**
