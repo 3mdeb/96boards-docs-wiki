@@ -67,7 +67,7 @@ h3. Kernel
 Kernel is 4.4 based, unified and supporting the following boards by default:
 * Dragonboard410c
 * HiKey
-* AMD Overdrive
+* AMD Overdrive (A0 should also be supported, pending kernel update)
 * D02
 * APM X-Gene/Moonshot m400 (supported on RC3)
 
