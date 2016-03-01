@@ -107,7 +107,10 @@ h3. Out of Scope / Next Release
 
 * Kernel Fragments - *Amit*
 * Lack of a default device-tree for HiKey - *Ricardo/Guodong*: bugs "27":https://bugs.96boards.org/show_bug.cgi?id=27 and "267":https://bugs.96boards.org/show_bug.cgi?id=267 to cover the right implementation, postponed to *16.06*.
-* "Bug 2032 - ACPI NUMA Support crashes on D02":https://bugs.linaro.org/show_bug.cgi?id=2032 - *Hanjun*
+* "Bug 254 - [RPB] wpa_supplicant crashes wcn36xx":https://bugs.96boards.org/show_bug.cgi?id=254
+* "Bug 207 - [RPB] Bluetooth does not work on Dragon board debian":https://bugs.96boards.org/show_bug.cgi?id=207
+* "Bug 262 - [RPB] LG W2253V fails to work with 4.4.0-93-arm64":https://bugs.96boards.org/show_bug.cgi?id=262 - *Amit*
+* "Bug 2067 - [RPB] irq 5: nobody cared (try booting with the "irqpoll" option when rebooting the system":https://bugs.linaro.org/show_bug.cgi?id=2067 - Amit/Hanjun
 
 h3. Current Issues / Bugs
 
@@ -118,8 +121,7 @@ h4. Kernel
 
 h6. HiKey
 
-* "Bug 262 - [RPB] LG W2253V fails to work with 4.4.0-93-arm64":https://bugs.96boards.org/show_bug.cgi?id=262 - *Amit*
-* "Bug 274 - [RPB] xserver armsoc driver fails to allocate buffer":https://bugs.96boards.org/show_bug.cgi?id=274 - *Amit/Guodong/Xinliang*
+* -"Bug 274 - [RPB] xserver armsoc driver fails to allocate buffer":https://bugs.96boards.org/show_bug.cgi?id=274 - *Amit/Guodong/Xinliang*-
 * "Bug 281 - [RPB] regression - constant hangs with linux-image-4.4.0-99-arm64":https://bugs.96boards.org/show_bug.cgi?id=281 - *Amit/Guodong*
 
 h6. Overdrive
@@ -132,9 +134,9 @@ h6. Dragonboard410c
 
 h6. D02
 
-* "Bug 2037 - D02: Unable to handle kernel paging request":https://bugs.linaro.org/show_bug.cgi?id=2037 - *Amit/Hanjun*
+* -"Bug 2037 - D02: Unable to handle kernel paging request":https://bugs.linaro.org/show_bug.cgi?id=2037 - *Amit/Hanjun*-
 * -"Bug 2063 - D02: No console unless you boot with console=ttyS0,115200":https://bugs.linaro.org/show_bug.cgi?id=2063 - *Amit/Hanjun*-
-* "Bug 2067 - [RPB] irq 5: nobody cared (try booting with the "irqpoll" option when rebooting the system":https://bugs.linaro.org/show_bug.cgi?id=2067 - Amit/Hanjun
+* -"Bug 2032 - ACPI NUMA Support crashes on D02":https://bugs.linaro.org/show_bug.cgi?id=2032 - *Hanjun*-
 
 h4. UEFI
 
@@ -154,13 +156,10 @@ h4. Debian
 
 h6. DB410c
 
-* "Bug 207 - [RPB] Bluetooth does not work on Dragon board debian":https://bugs.96boards.org/show_bug.cgi?id=207
-
 h4. AOSP
 
 h6. DB410c
 
-* "Bug 254 - [RPB] wpa_supplicant crashes wcn36xx":https://bugs.96boards.org/show_bug.cgi?id=254
 * -"Bug 253 - [RPB] Gallery fails to open due a fatal exception in GLThread":https://bugs.96boards.org/show_bug.cgi?id=253-
 
 h4. OE/Yocto
