@@ -6,3 +6,5 @@ h4. HiKey
  - Missing pushing the drm hisi support for xf86-video-armsoc
  - "Upstream tree":https://cgit.freedesktop.org/xorg/driver/xf86-video-armsoc/
  - "Xinliang's tree - used by our builds":https://github.com/xin3liang/xf86-video-armsoc/commits/hikey
+ - Proposed patch https://lists.x.org/archives/xf86-video-armsoc/2016-February/000047.html
+ - Depends on the drm driver, available at http://www.spinics.net/lists/dri-devel/msg101132.html
