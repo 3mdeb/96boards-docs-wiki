@@ -19,8 +19,11 @@ For more information about the Reference Software Platform project please watch 
 
 #### QuickStart
 
-- Reference Software - Consumer Edition ( [Read More]() / [Build and Install](https://github.com/96boards/documentation/wiki/Reference-Platform-CE-Home) )
-- Reference Software - Enterprise Edition ( [Read More]() / [Build and Install](https://github.com/96boards/documentation/wiki/Reference-Platform-EE-Home) )
+Choose Consumer Edition or Enterprise Edition to start setting up your instruction set. Download, build, and install your preferred Reference Platform operating system and/or components. Pre-built images and "build from source" options are available.
+
+- Reference Software - Consumer Edition ( [Build and Install](https://github.com/96boards/documentation/wiki/Reference-Platform-CE-Home) )
+- Reference Software - Enterprise Edition ( [Build and Install](https://github.com/96boards/documentation/wiki/Reference-Platform-EE-Home) )
+
 
 ***
 
