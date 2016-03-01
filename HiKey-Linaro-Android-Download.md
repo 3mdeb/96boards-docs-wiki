@@ -84,7 +84,7 @@ Build Folders (<a href="http://builds.96boards.org/releases/hikey/linaro/binarie
 
 #### Step 3: Choose your host computer to access your instruction set
 
-- [Linux]()
-- [Mac OS X]()
+- [Linux](https://github.com/96boards/documentation/wiki/HiKey-Android-Install#linux-host)
+
 
 ***
