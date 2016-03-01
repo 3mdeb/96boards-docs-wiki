@@ -3,10 +3,10 @@
 ## Reference Platform Build - 16.03
 
 
-- **Install Instructions:** For the "out-of-box" user. Instructions for installing pre-build Reference Platform images onto your 96Boards.
-- **Build from Source:** For the Advanced user. Instructions for building and installing the various Reference Platform components used by Consumer and Enterprise Edition 96Boards.
+- **Install Instructions:** For "out-of-box" users. Instructions for installing pre-build Reference Platform images onto your 96Boards.
+- **Build from Source:** For Advanced users. Instructions for building and installing the various Reference Platform components used by Consumer and Enterprise Edition 96Boards.
 - **Known Issues:** List of current bugs and issues for each Reference Platform Build. Links to bug reports for tracking resolution progress.
-- **Test Report:** Provides manual test results and bug status for kernel, toolchain, and firmware with a straight forward pass/fail legend.
+- **Test Report:** Provides test results and bug status for kernel, toolchain, and firmware with a straight forward pass/fail legend.
 
 ***
 
