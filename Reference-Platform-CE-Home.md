@@ -31,7 +31,7 @@
 |    <a href="https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RP-Download#your-build-choice" target="_blank">Install instructions</a>   |   <a href="https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RP-Download#your-build-choice-1" target="_blank">Install instructions</a>  |
 |    <a href="https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RPB-Debian-Build-Source-16.03" target="_blank">Build from source</a>      |    [Build from source]()    |
 |       Known issues        |      Known issues       |
-|        Test Report        |       Test Report       |
+|        Test Report        |       [Test Report](https://builds.96boards.org/releases/reference-platform/aosp/dragonboard410c/16.03/CE-AOSP-RPB-16.03-DB410c-TestReport.pdf)       |
 
 >**Note:** CE AOSP RPB - 16.03 is a Developer Preview operating system
 
