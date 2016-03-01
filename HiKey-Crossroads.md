@@ -6,6 +6,7 @@
 - Choose your **Build type** by selecting a column (RPB or Linaro)
 - Choose your **Operating System** by selecting a row (Debian or Android)
 - Click **Installation Method** from intersection box (SD Card or Fastboot)
+- For HiKey Board Recovery, [Click Here](https://github.com/96boards/documentation/wiki/HiKey-Board-Recovery)
 
 ###### Installation matrix:
 
