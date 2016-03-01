@@ -115,7 +115,7 @@ h6. HiKey
 
 * "Bug 262 - [RPB] LG W2253V fails to work with 4.4.0-93-arm64":https://bugs.96boards.org/show_bug.cgi?id=262 - *Amit*
 * "Bug 274 - [RPB] xserver armsoc driver fails to allocate buffer":https://bugs.96boards.org/show_bug.cgi?id=274 - *Amit/Guodong/Xinliang*
-* "[RPB] regression - constant hangs with linux-image-4.4.0-99-arm64":https://bugs.96boards.org/show_bug.cgi?id=281 - *Amit/Guodong*
+* "Bug 281 - [RPB] regression - constant hangs with linux-image-4.4.0-99-arm64":https://bugs.96boards.org/show_bug.cgi?id=281 - *Amit/Guodong*
 
 h6. Overdrive
 
