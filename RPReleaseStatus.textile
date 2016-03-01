@@ -7,6 +7,11 @@ h2. Reference Platform Release Status
 
 h3. Release Candidates
 
+h4. Final
+
+*CE AOSP RPB HiKey - 65*: "16.03":https://builds.96boards.org/releases/reference-platform/aosp/hikey/16.03/
+*CE AOSP RPB Dragonboard410c - 45:* "16.03":https://builds.96boards.org/releases/reference-platform/aosp/dragonboard410c/16.03/
+
 h4. RC5
 
 *Debian Installer (111):* "mini.iso":https://builds.96boards.org/snapshots/reference-platform/components/debian-installer/111/mini.iso and "netboot.tar.gz":https://builds.96boards.org/snapshots/reference-platform/components/debian-installer/111/netboot.tar.gz
