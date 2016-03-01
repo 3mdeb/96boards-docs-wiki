@@ -1,84 +1,13 @@
-[<<< Back to DragonBoard™ 410c Linaro Builds](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Home)
-# Dragonboard™ 410c Linux Installation Guide
+[<<< Back to DragonBoard™ 410c Crossroads](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Crossroads)
+
+# DragonBoard™ 410c Debian Installation Guide
+
+This Users Guide provides a general overview for getting started with Debian installations on the [DragonBoard™ 410c](https://www.96boards.org/products/ce/dragonboard410c/). 
 
 
-This Users Guide provides a general overview for getting started with Linux installations on the [DragonBoard™ 410c](https://www.96boards.org/products/ce/dragonboard410c/). 
-
-There are two primary ways to install software onto the DragonBoard™ 410c:
-- SD Card
-- Fastboot
-
-**Making your way through this document is easy!**
-
-1. Read about both installation methods
-2. Choose your method
-3. Download file(s) and Choose your Host Machine (This is the machine you will be using throughout the process)
-4. Follow your custom set of steps
-
-If you are having trouble with this document please [click here]() for a video walkthrough.
+If you have found this page without having downloaded the appropriate files, please return to the [DragonBoard™ 410c Crossroads](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Crossroads) to choose your download path!
 
 ***
-
-
-#### Step 1: Read about both installation methods
-
-## SD Card Method
-The SD card method allows you to place a microSD card into the DragonBoard™ 410c to automatically boot and install the Linux Desktop onto the board. This method is generally simpler and should be used by beginners. 
-
-This method requires the following hardware:
-- DragonBoard™ 410c with power supply
-- Host machine (Linux, Mac OS X, or Windows)
-- MicroSD card with 4GB or more of storage
-- USB Mouse and/or keyboard
-- HDMI Monitor with full size HDMI cable
-
-Skip to the [Install Debian Using SD Card]() section to use this method.   
-
-## Fastboot Method
-Fastboot is supported by the board and can be used for installs.  This is for advanced users who are most likely modifying/customizing source code and will need to download such updates to the board for test/execution. When installing Debian using Fastboot, you will have the option to install either the Developer(console-only) image, or the LXDE(Desktop) image.  
-
-> **Note:** When installing Debian using the SD Card method, LXDE(Desktop) install is currently the only option,  Fastboot is the only way to attain a Console-only Debian install.
-
-This method requires the following hardware:
-- DragonBoard™ 410c with power supply
-- Host machine (Linux, Mac OS X, or Windows)
-- USB to microUSB cable
-- USB Mouse and/or keyboard (not required to perform flash)
-- HDMI Monitor with full size HDMI cable (not required to perform flash)
-
-Skip to the [Install Debian Using Fastboot]() to use this method.
-
-***
-
-#### Step 2: Choose your Method
-
-**Choose your Installation Method:**
-
-- [**Install Debian using SD Card**]()
-- [**Install Debian Using Fastboot**]()
-
-
-***
-
-
-# Install Debian using SD Card
-[Back to Step 2]()
-
-#### Step 3: Download file(s) and Choose your Host Machine
-
-##**Download:**
-
-Debian SD Card Install Image ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/dragonboard410c_sdcard_install_debian*.zip) / [View Build Folder]())
-
-##**Choose Host Computer:**
-
-- [**Linux Host**]()
-- [**Mac OSX Host**]()
-- [**Windows Host**]()
-
-
-***
-
 
 ## Linux Host
 
