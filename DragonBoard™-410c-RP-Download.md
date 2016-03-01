@@ -71,14 +71,14 @@ This method requires the following hardware:
 
 #### Step 2: Download Android Bootloader and Boot file
 
-- Android Bootloader ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/linaro/rescue/latest/dragonboard410c_bootloader_emmc_android-46.zip) / <a href="http://builds.96boards.org/releases/dragonboard410c/linaro/rescue/latest/" target="_blank">Build Folder</a> )
-- Android Boot ([Direct Download](http://builds.96boards.org/snapshots/reference-platform/linaro/aosp/db410c/latest/boot-db410c.img.xz) / <a href="http://builds.96boards.org/releases/reference-platform/debian/dragonboard410c/15.12/" target="_blank">Build Folder</a> )
+- Android Bootloader ([Direct Download](https://builds.96boards.org/releases/dragonboard410c/linaro/rescue/latest/dragonboard410c_bootloader_emmc_android-46.zip) / <a href="https://builds.96boards.org/releases/dragonboard410c/linaro/rescue/latest/" target="_blank">Build Folder</a> )
+- Android Boot ([Direct Download](https://builds.96boards.org/releases/reference-platform/aosp/dragonboard410c/16.03/boot-db410c.img.xz) / <a href="https://builds.96boards.org/releases/reference-platform/aosp/dragonboard410c/16.03/" target="_blank">Build Folder</a> )
 
 #### Step 3: Download all remaining files
 
-- system.img ([Direct Download](http://builds.96boards.org/releases/reference-platform/debian/dragonboard410c/15.12/dragonboard410c-rootfs-debian-jessie-alip-20151214-35.emmc.img.gz) / <a href="http://builds.96boards.org/snapshots/reference-platform/linaro/aosp/db410c/latest/" target="_blank">Build Folder</a> )
-- userdata.img ([Direct Download](http://builds.96boards.org/releases/reference-platform/debian/dragonboard410c/15.12/dragonboard410c-rootfs-debian-jessie-alip-20151214-35.emmc.img.gz) / <a href="http://builds.96boards.org/snapshots/reference-platform/linaro/aosp/db410c/latest/" target="_blank">Build Folder</a> )
-- cache.img ([Direct Download](http://builds.96boards.org/snapshots/reference-platform/linaro/aosp/db410c/latest/cache.img.xz) / <a href="http://builds.96boards.org/snapshots/reference-platform/linaro/aosp/db410c/latest/" target="_blank">Build Folder</a> )
+- system.img ([Direct Download](https://builds.96boards.org/releases/reference-platform/aosp/dragonboard410c/16.03/system.img.xz) / <a href="https://builds.96boards.org/releases/reference-platform/aosp/dragonboard410c/16.03/" target="_blank">Build Folder</a> )
+- userdata.img ([Direct Download](https://builds.96boards.org/releases/reference-platform/aosp/dragonboard410c/16.03/userdata.img.xz) / <a href="https://builds.96boards.org/releases/reference-platform/aosp/dragonboard410c/16.03/" target="_blank">Build Folder</a> )
+- cache.img ([Direct Download](https://builds.96boards.org/releases/reference-platform/aosp/dragonboard410c/16.03/cache.img.xz) / <a href="https://builds.96boards.org/releases/reference-platform/aosp/dragonboard410c/16.03/" target="_blank">Build Folder</a> )
 
 ***
 #### Step 4: Choose your host computer to access your instruction set
