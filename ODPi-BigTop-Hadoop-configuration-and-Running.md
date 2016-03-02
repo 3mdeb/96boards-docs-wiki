@@ -9,11 +9,12 @@ give a password for hduser
 
     sudo passwd hduser
 
-Add hduser to sudoers list:
+Add hduser to sudoers list  
+On Debian:
 
     sudo adduser hduser sudo
 
-In Centos:
+On Centos:
 
     sudo usermod -G wheel hduser
 
