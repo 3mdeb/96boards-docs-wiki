@@ -12,7 +12,7 @@
 [Step 10: Find DragonBoard™ 410c IP Address]()
 [Step 11: Transfer the modules to the target DragonBoard™ 410c]()
 [Step 12: Generate the initramfs]()
-Step 13: Create the device tree image and boot image]()
+[Step 13: Create the device tree image and boot image]()
 
 ***
 
@@ -134,6 +134,7 @@ $ make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -jX
 ```shell
 $ mk tmp/modules
 $ make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- modules_install INSTALL_MOD_PATH=/tmp/modules INSTALL_MOD_STRIP=1
+```
 
 #### Step 8: Find kernel release string
 
