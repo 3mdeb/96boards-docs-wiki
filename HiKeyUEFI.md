@@ -86,6 +86,7 @@ export PATH="${PWD}/arm-tc/bin:${PWD}/arm64-tc/bin:$PATH"
 # --depth 1 means to fetch code without commit history
 git clone -b hikey --depth 1 https://github.com/96boards/edk2.git linaro-edk2
 git clone -b hikey --depth 1 https://github.com/96boards/arm-trusted-firmware.git
+git clone -b hikey --depth 1 https://github.com/96boards/LinaroPkg.git
 git clone --depth 1 https://github.com/96boards/l-loader.git
 git clone git://git.linaro.org/uefi/uefi-tools.git
 
@@ -101,10 +102,10 @@ export EDK2_DIR=${PWD}/linaro-edk2
 export UEFI_TOOLS_DIR=${PWD}/uefi-tools
 
 cd ${EDK2_DIR}
-${UEFI_TOOLS_DIR}/uefi-build.sh -b RELEASE -a ../arm-trusted-firmware hikey
+${UEFI_TOOLS_DIR}/uefi-build.sh -c ../LinaroPkg/platforms.config -b RELEASE -a ../arm-trusted-firmware hikey
 
 # NOTE: If also building OP-TEE, run below command instead of the one above
-# ${UEFI_TOOLS_DIR}/uefi-build.sh -b RELEASE -a ../arm-trusted-firmware -s ../optee_os hikey
+# ${UEFI_TOOLS_DIR}/uefi-build.sh -c ../LinaroPkg/platforms.config -b RELEASE -a ../arm-trusted-firmware -s ../optee_os hikey
 
 # To use UART0 instead of UART3 as the console, uncomment the appropriate line(s) in
 # ${UEFI_TOOLS_DIR}/platforms.config before running the command above.
