@@ -12,7 +12,7 @@ For more information about the Reference Software Platform project please watch 
   <b>Announcements</b><br>
   <a href="#">[RPB 16.03 Highlights](https://github.com/96boards/documentation/wiki/RPB-16.03-Highlights)</a> |
   <a href="#">[Known Issues](https://github.com/96boards/documentation/wiki/RPB-16.03-Known-Issues)</a> |
-  <a href="#">Next Release</a>
+  <a href="#">https://github.com/96boards/documentation/wiki/RPB-Next-Release</a>
   <br>
 
 ***
