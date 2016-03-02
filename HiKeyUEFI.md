@@ -108,7 +108,7 @@ ${UEFI_TOOLS_DIR}/uefi-build.sh -c ../LinaroPkg/platforms.config -b RELEASE -a .
 # ${UEFI_TOOLS_DIR}/uefi-build.sh -c ../LinaroPkg/platforms.config -b RELEASE -a ../arm-trusted-firmware -s ../optee_os hikey
 
 # To use UART0 instead of UART3 as the console, uncomment the appropriate line(s) in
-# ${UEFI_TOOLS_DIR}/platforms.config before running the command above.
+# ../LinaroPkg/platforms.config before running the command above.
 
 cd ../l-loader
 ln -s ${EDK2_DIR}/Build/HiKey/RELEASE_GCC49/FV/bl1.bin
