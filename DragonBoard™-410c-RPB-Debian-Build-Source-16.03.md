@@ -16,6 +16,7 @@
    - [Step 12: Generate the initramfs](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RPB-Debian-  Build-Source-16.03#step-12-generate-the-initramfs)
    - [Step 13: Create the device tree image and boot image](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RPB-Debian-Build-Source-16.03#step-13-create-the-device-tree-image-and-boot-image)
 - [Customize Bootloader](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RPB-Debian-Build-Source-16.03#how-to-get-and-customize-the-bootloader)
+- [Build Rootfs from source](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RPB-Debian-Build-Source-16.03#todo)
 
 ***
 
