@@ -30,9 +30,9 @@ Welcome to the supporting documentation for [HiKey](https://www.96boards.org/pro
 
 #### Read More
 
-- [Pre-Installed Debian Linux](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted#2-pre-installed-debian-linux)
-- [Latest Snapshots](https://github.com/96boards/documentation/wiki/LatestSnapshots)
-- [Known Issues](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted#7-known-issues)
+- [Hardware Notes](https://github.com/96boards/documentation/wiki/HiKey-Read-More#hardware-notes)
+- [Known Issues](https://github.com/96boards/documentation/wiki/HiKey-Read-More#known-issues)
+- [Report a Bug](https://github.com/96boards/documentation/wiki/HiKey-Read-More#report-a-bug)
 
 ***
 
