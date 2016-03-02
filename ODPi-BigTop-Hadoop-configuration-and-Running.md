@@ -203,7 +203,7 @@ You would see like below:
     for i in hadoop-hdfs-namenode hadoop-hdfs-datanode ; do sudo service $i stop; done
     
 
-## Potential Errors / Issues and Resolutions ## 
+## Potential Errors / Issues and Resolutions ##
 * If Teragen, TeraSort and TeraValidate error out with 'permission denied' exception. The following steps can be done:
 
     sudo groupadd supergroup
