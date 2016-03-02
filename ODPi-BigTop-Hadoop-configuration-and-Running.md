@@ -192,3 +192,14 @@ You would see like below:
     hadoop jar /usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar terasort terainput teraoutput
 
     hadoop jar /usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar teravalidate -D mapred.reduce.tasks=8 teraoutput teravalidate
+
+
+## Stop the Hadoop services ##
+
+    sudo /etc/init.d/hadoop-yarn-nodemanager start
+    
+    sudo /etc/init.d/hadoop-yarn-resourcemanager start
+
+    for i in hadoop-hdfs-namenode hadoop-hdfs-datanode ; do sudo service $i start ; done
+    
+    
