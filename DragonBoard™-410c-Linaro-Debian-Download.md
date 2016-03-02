@@ -28,6 +28,8 @@ This method requires the following hardware:
 
 - Debian SD Card Image ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/dragonboard410c_sdcard_install_debian-36.zip) / <a href="http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/" target="_blank">Build Folder</a>)
 
+>Note the location of all downloads, they will be needed once you access your instruction set
+
 ***
 #### Step 3: Choose your host computer to access your instruction set
 
@@ -78,6 +80,8 @@ This method requires the following hardware:
 
 - Debian Rootfs (Desktop) ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/linaro-jessie-alip-qcom-snapdragon-arm64-20151204-36.img.gz) / <a href="http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/" target="_blank">Build Folder</a> )
 - Debian Rootfs (Command line) ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/linaro-jessie-developer-qcom-snapdragon-arm64-20151204-36.img.gz) / <a href="http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/" target="_blank">Build Folder</a> )
+
+>Note the location of all downloads, they will be needed once you access your instruction set
 
 ***
 #### Step 3: Choose your host computer to access your instruction set
