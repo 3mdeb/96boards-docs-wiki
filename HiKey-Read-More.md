@@ -1,3 +1,5 @@
+## Hardware Notes
+
 [<<< Back to HiKey Home](https://github.com/96boards/documentation/wiki/HiKey-Home)
 
 ### Schematics and HiKey Board Hardware User Guide
@@ -90,3 +92,53 @@ Alternatively, you can modify grub.cfg in the boot image to switch to other UART
 `linux /boot/Image console=tty0 console=ttyAMA3,115200 root=/dev/disk/by-partlabel/system rootwait rw quiet efi=noruntime`
 
 **NOTE:** the LS expansion port I/O pins on the 96Boards 2mm header, including the UART signals, are at **1.8V** logic levels.
+
+***
+
+## Known Issues 
+
+[<<< Back to HiKey Home](https://github.com/96boards/documentation/wiki/HiKey-Home)
+
+The following are known issues on the current release.
+
+1. **Not Yet Supported**
+    - HDMI and Expansion bus audio. (At present only Bluetooth audio is supported)
+    - Some video formats are not decoded in Android, and will not be played with the current release
+    - HDMI hotplug detection (HPD) is not supported. (Note: You can still plug in HDMI cable after the board booted, which make HDMI work through two candidate modes: 1280x720p and 800x600p. However these are not HPD, they is built-in default.)
+    - Behaviors of power on button not following hardware user guide. [bug #160](https://bugs.96boards.org/show_bug.cgi?id=160)
+    - HDMI display sometimes goes off when in AOSP. See [bug #136](https://bugs.96boards.org/show_bug.cgi?id=136)
+2. **USB gives occasional non-fatal kernel trace messages**
+`usb usb1: clear tt 1 (9032) error -22`
+This is under current investigation.
+3. **Apple Bluetooth Keyboards/Mice/Trackpads do not work**
+This is under current investigation. 
+4. **Attempting BT file transfer on the Debian build freezes the board.**
+This is under current investigation.
+5. **Switching user may cause a blank screen** 
+Clicking on the Switch User button can cause the screen to go blank.
+This is being investigated.
+6. **Iceweasel browser exits after file download complete.**
+When downloading a file using Iceweasel, the download works but the browser exits.
+7. **Debian ALIP image: Viewing JPG images with 'Image Viewer' show incorrect colors.**
+This is being investigated.
+8. **Fastboot flashing on Windows is not supported. Only Linux PC is supported.**
+9. **AOSP build can only work at 720p mode. When using 1080p mode, the color scheme is not stable.**
+10. **Shutdown not working - executing 'reboot -p' from serial console will shutdown the board very quickly, but cannot turn off HDMI monitor, and the signal is still there.** 
+11. **UEFI may hang occasionally when the uSD card is present.**
+12. **Hot plugging an SD card may not work on some UHS class 1 SD cards on AOSP build.**
+13. **Display sleep may not always work on AOSP build.**
+
+***
+
+## Report a Bug
+
+[<<< Back to HiKey Home](https://github.com/96boards/documentation/wiki/HiKey-Home)
+
+To report new issues with the HiKey please use the [96Boards Bug Tracker](https://bugs.96boards.org).
+
+To view the open bugs, click [here](https://bugs.96boards.org/buglist.cgi?bug_status=__open__&list_id=144&order=Importance&product=HiKey&query_format=specific).  Alternatively go to the [site](https://bugs.96boards.org/), click on the Search menu item, select HiKey in the product dropdown list and click the search button.
+
+To add a new bug, click [here](https://bugs.96boards.org/enter_bug.cgi?product=HiKey) and fill in the form.  Alternatively go to the [site](https://bugs.96boards.org/), click on the New menu item, then click on Consumer Edition Boards, then click on HiKey, and finally fill in the form.
+
+***
+
