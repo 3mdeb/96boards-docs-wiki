@@ -1,4 +1,4 @@
-[Back to HiKey Home](https://github.com/96boards/documentation/wiki/HiKey-Home)
+[<<< Back to HiKey Home](https://github.com/96boards/documentation/wiki/HiKey-Home)
 
 ### Schematics and HiKey Board Hardware User Guide
 - [Schematics](https://www.96boards.org/hikey-schematics)
