@@ -15,7 +15,7 @@ cd /srv/tftp/
 wget http://mirror.centos.org/altarch/7/os/aarch64/EFI/BOOT/BOOTAA64.EFI
 wget http://mirror.centos.org/altarch/7/os/aarch64/EFI/BOOT/grubaa64.efi
 
-#### Downloading the CentOS *upstream* kernel (4.2, compatible with Overdrive and Mustang) and initrd:
+h4. Downloading the CentOS *upstream* kernel (4.2, compatible with Overdrive and Mustang) and initrd:
 
 bc. mkdir /srv/tftp/centos7
 cd /srv/tftp/centos7
