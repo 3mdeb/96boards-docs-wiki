@@ -210,8 +210,10 @@ You would see like below:
 ## Potential Errors / Issues and Resolutions ##
 * If Teragen, TeraSort and TeraValidate error out with 'permission denied' exception. The following steps can be done:
 
-    sudo groupadd supergroup
-    sudo usermod -g supergroup hduser
+        sudo groupadd supergroup
+
+        sudo usermod -g supergroup hduser
+
 
 *  If for some weird reason, if you notice the config files (core-site.xml, hdfs-site.xml, etc) are empty.
 
