@@ -2,14 +2,6 @@
 
 ***
 
-### QuickStart
-
-- **Juno R0/R1**
-- [**HiSilicon D02**](https://github.com/96boards/documentation/wiki/ReferenceSoftwareEE#hisilicon-d02)
-- [**AMD Overdrive**](https://github.com/96boards/documentation/wiki/ReferenceSoftwareEE#amd-overdrive)
-
-***
-
 ### Boot Firmware (UEFI/EDK2) ( NEEDS REVISION )
 
 EDK2 is a modern, feature-rich, cross-platform firmware development environment for the UEFI and PI specifications.
@@ -26,6 +18,13 @@ This guide provides enough information on how to build UEFI/EDK2 from scratch, b
 - Juno R0/R1 ([Build](https://github.com/96boards/documentation/wiki/UEFI-EDK2-Guide-for-EE#building-uefiedk2-for-juno-r0r1) / [Flash](https://github.com/96boards/documentation/wiki/UEFI-EDK2-Guide-for-EE#juno-r0r1))
 - HiSilicon D02 ([Build](https://github.com/96boards/documentation/wiki/UEFI-EDK2-Guide-for-EE#building-uefiedk2-for-d02) / [Flash](https://github.com/96boards/documentation/wiki/UEFI-EDK2-Guide-for-EE#d02))
 - Overdrive ([Build](https://github.com/96boards/documentation/wiki/UEFI-EDK2-Guide-for-EE#building-uefiedk2-for-overdrive) / [Flash](https://github.com/96boards/documentation/wiki/UEFI-EDK2-Guide-for-EE#amd-overdrive))
+
+#### QuickStart
+
+- Juno R0/R1
+- [HiSilicon D02](https://github.com/96boards/documentation/wiki/ReferenceSoftwareEE#hisilicon-d02)
+- [AMD Overdrive](https://github.com/96boards/documentation/wiki/ReferenceSoftwareEE#amd-overdrive)
+
 
 ***
 
