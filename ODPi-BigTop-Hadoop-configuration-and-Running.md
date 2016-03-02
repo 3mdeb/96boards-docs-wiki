@@ -219,7 +219,9 @@ You would see like below:
 
 *  Error while formatting namenode 
 With the following command:
+
     sudo /etc/init.d/hadoop-hdfs-namenode init
+
 If you see the following error:
     WARN net.DNS: Unable to determine local hostname -falling back to "localhost"
     java.net.UnknownHostException: centos: centos
