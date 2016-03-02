@@ -78,7 +78,7 @@ export UEFI_TOOLS_DIR=${PWD}/uefi-tools
 export OPTEE_OS_DIR=${PWD}/optee_os
 
 cd ${EDK2_DIR}
-${UEFI_TOOLS_DIR}/uefi-build.sh -c ../LinaroPkg/platforms.config ../-b RELEASE -a ../arm-trusted-firmware -s ../optee_os hikey
+${UEFI_TOOLS_DIR}/uefi-build.sh -c ../LinaroPkg/platforms.config -b RELEASE -a ../arm-trusted-firmware -s ../optee_os hikey
 cd ..
 ```
 
