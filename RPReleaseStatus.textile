@@ -82,18 +82,18 @@ Kernel is 4.4 based, unified and supporting the following boards by default:
 * APM X-Gene/Moonshot m400 (supported with the final RC)
 
 Tree data:
-* Git: "https://git.linaro.org/people/amit.kucheria/kernel.git":https://git.linaro.org/people/amit.kucheria/kernel.git
-* Branch: *96b-kernelci*
-* Config: "https://git.linaro.org/people/amit.kucheria/kernel.git/blob/refs/heads/96b-kernelci:/arch/arm64/configs/distro.config":https://git.linaro.org/people/amit.kucheria/kernel.git/blob/refs/heads/96b-kernelci:/arch/arm64/configs/distro.config
+* Git: "https://github.com/96boards/linux/":https://github.com/96boards/linux/
+* Branch: *96b/releases/2016.03*
+* Config: "https://github.com/96boards/linux/blob/96b/releases/2016.03/arch/arm64/configs/distro.config":https://github.com/96boards/linux/blob/96b/releases/2016.03/arch/arm64/configs/distro.config
 
 h3. Remaining Work Activities
 
 * QA/Validation - QA Team
-** CE Debian DB410c
 ** Enterprise Debian Overdrive
 ** Enterprise Debian D02
 ** Enterprise CentOS Overdrive
 ** Enterprise CentOS D02
+** -CE Debian DB410c - *Naresh*-
 ** -CE AOSP HiKey - *Chase Qi*-
 ** -CE AOSP DB410c (nice to have) - *Chase Qi*- 
 ** -CE Debian HiKey - *Naresh*-
