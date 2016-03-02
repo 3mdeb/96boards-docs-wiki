@@ -14,8 +14,8 @@ h4. Final
 *Kernel (104):* "linux-image-4.4.0-104":https://builds.96boards.org/releases/reference-platform/components/linux/16.03/
 *CE AOSP RPB HiKey (65)*: "16.03":https://builds.96boards.org/releases/reference-platform/aosp/hikey/16.03/
 *CE AOSP RPB Dragonboard410c (45):* "16.03":https://builds.96boards.org/releases/reference-platform/aosp/dragonboard410c/16.03/
-*CE Debian RPB HiKey (70)*: "16.03":https://builds.96boards.org/releases/reference-platform/debian/hikey/16.03/
-*CE Debian RPB Dragonboard410c (70):* "16.03":https://builds.96boards.org/releases/reference-platform/debian/dragonboard410c/16.03/
+*CE Debian RPB HiKey (68)*: "16.03":https://builds.96boards.org/releases/reference-platform/debian/hikey/16.03/
+*CE Debian RPB Dragonboard410c (68):* "16.03":https://builds.96boards.org/releases/reference-platform/debian/dragonboard410c/16.03/
 
 h4. RC5
 
