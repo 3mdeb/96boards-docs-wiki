@@ -5,6 +5,10 @@ This post concentrates on Running Hadoop after [installing](https://github.com/9
 
     sudo adduser --ingroup hadoop hduser
 
+In CentOS:
+    
+    sudo adduser -G hadoop hduser
+
 give any password for hduser. Retype the password again when asked. Just press \<enter\> for hduser user information like (FullName, etc). Confirm the answers by pressing 'Y'.
 
     sudo usermod -a -G hadoop hduser
@@ -12,6 +16,9 @@ give any password for hduser. Retype the password again when asked. Just press \
 Add hduser to sudoers list:
 
     sudo adduser hduser sudo
+
+In Centos:
+    sudo usermod -G wheel hduser
 
 Switch to hduser:
 
