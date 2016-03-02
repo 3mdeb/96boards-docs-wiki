@@ -3,21 +3,18 @@ This post concentrates on Running Hadoop after [installing](https://github.com/9
 # Add Hadoop User
  We need to create a dedicated user (hduser) for running Hadoop. This user needs to be added to hadoop usergroup:
 
-    sudo adduser --ingroup hadoop hduser
+    sudo useradd -G hadoop hduser
 
-In CentOS:
-    
-    sudo adduser -G hadoop hduser
+give a password for hduser
 
-give any password for hduser. Retype the password again when asked. Just press \<enter\> for hduser user information like (FullName, etc). Confirm the answers by pressing 'Y'.
-
-    sudo usermod -a -G hadoop hduser
+    sudo passwd hduser
 
 Add hduser to sudoers list:
 
     sudo adduser hduser sudo
 
 In Centos:
+
     sudo usermod -G wheel hduser
 
 Switch to hduser:
