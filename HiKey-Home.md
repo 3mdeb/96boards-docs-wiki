@@ -21,21 +21,15 @@ Welcome to the supporting documentation for [HiKey](https://www.96boards.org/pro
 
 #### Installation and Setup Guides
 
-- [HiKey Getting Started Guide](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted)
-- [Linaro/Debian Installation Guide](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted#debian-linux-os)
-- [Android Open Source Project Installation Guide](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted#android-open-source-project-aosp)
-- [Board Recovery](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted#5-board-recovery)
+- [Board Recovery](https://github.com/96boards/documentation/wiki/HiKey-Board-Recovery)
 - [UEFI](https://github.com/96boards/documentation/wiki/HiKeyUEFI)
 - [Using JTAG](https://github.com/96boards/documentation/wiki/JTAG-on-HiKey)
 - [Linaro Automated Validation Architecture (LAVA)](https://github.com/96boards/documentation/wiki/HiKeyLAVA)
-
 
 ***
 
 #### Read More
 
-
-- [New Features](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted#1-new-features)
 - [Pre-Installed Debian Linux](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted#2-pre-installed-debian-linux)
 - [Latest Snapshots](https://github.com/96boards/documentation/wiki/LatestSnapshots)
 - [Known Issues](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted#7-known-issues)
