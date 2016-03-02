@@ -10,8 +10,8 @@
 - [Step 8: Find kernel release string](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RPB-Debian-Build-Source-16.03#step-8-find-kernel-release-string)
 - [Step 9: Generate modules.dep and map files](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RPB-Debian-Build-Source-16.03#step-9-generate-modulesdep-and-map-files)
 - [Step 10: Find DragonBoard™ 410c IP Address](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RPB-Debian-Build-Source-16.03#step-10-find-dragonboard-410c-ip-address)
-- [Step 11: Transfer the modules to the target DragonBoard™ 410c]()
-- [Step 12: Generate the initramfs]()
+- [Step 11: Transfer the modules to the target DragonBoard™ 410c](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RPB-Debian-Build-Source-16.03#step-11-transfer-the-modules-to-the-target-dragonboard-410c)
+- [Step 12: Generate the initramfs](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RPB-Debian-Build-Source-16.03#step-13-create-the-device-tree-image-and-boot-image)
 - [Step 13: Create the device tree image and boot image]()
 
 ***
@@ -180,6 +180,7 @@ $ ssh linaro@192.168.1.15
 #DragonBoard™ 410c shell
 db410c $ tar -jxvf modules.tar.bz2
 db410c $ sudo cp -r modules/lib/modules/4.4.0+ /lib/modules/
+```
 
 #### Step 12: Generate the initramfs
 
