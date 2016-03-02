@@ -1,18 +1,18 @@
 [<<< Back to Reference Platform Home]()
 
-[Step 1: Setting up your environment on your host computer ](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RPB-Debian-Build-Source-16.03#step-1-setting-up-your-environment-on-your-host-computer)
-[Step 2: Download the Linaro cross compiler toolchain and Skales Tool](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RPB-Debian-Build-Source-16.03#step-2-download-the-cross-compiler-toolchain-and-skales)
-[Step 3: Export path to cross compiler tool and confirm version](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RPB-Debian-Build-Source-16.03#step-3-export-path-to-cross-compiler-tool-and-confirm-version)
-[Step 4: Clone the Reference Platform kernel]()
-[Step 5: Set the right kernel .config file]()
-[Step 6: Build kernel image]()
-[Step 7: Copy Modules]()
-[Step 8: Find kernel release string]()
-[Step 9: Generate modules.dep and map files]()
-[Step 10: Find DragonBoard™ 410c IP Address]()
-[Step 11: Transfer the modules to the target DragonBoard™ 410c]()
-[Step 12: Generate the initramfs]()
-[Step 13: Create the device tree image and boot image]()
+- [Step 1: Setting up your environment on your host computer ](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RPB-Debian-Build-Source-16.03#step-1-setting-up-your-environment-on-your-host-computer)
+- [Step 2: Download the Linaro cross compiler toolchain and Skales Tool](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RPB-Debian-Build-Source-16.03#step-2-download-the-cross-compiler-toolchain-and-skales)
+- [Step 3: Export path to cross compiler tool and confirm version](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RPB-Debian-Build-Source-16.03#step-3-export-path-to-cross-compiler-tool-and-confirm-version)
+- [Step 4: Clone the Reference Platform kernel](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RPB-Debian-Build-Source-16.03#step-4-clone-the-reference-platform-kernel)
+- [Step 5: Set the right kernel .config file](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RPB-Debian-Build-Source-16.03#step-5-set-the-right-kernel-config-file)
+- [Step 6: Build kernel image](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RPB-Debian-Build-Source-16.03#step-6-build-kernel-image)
+- [Step 7: Copy Modules](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RPB-Debian-Build-Source-16.03#step-7-copy-modules)
+- [Step 8: Find kernel release string](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RPB-Debian-Build-Source-16.03#step-8-find-kernel-release-string)
+- [Step 9: Generate modules.dep and map files](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RPB-Debian-Build-Source-16.03#step-9-generate-modulesdep-and-map-files)
+- [Step 10: Find DragonBoard™ 410c IP Address](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RPB-Debian-Build-Source-16.03#step-10-find-dragonboard-410c-ip-address)
+- [Step 11: Transfer the modules to the target DragonBoard™ 410c]()
+- [Step 12: Generate the initramfs]()
+- [Step 13: Create the device tree image and boot image]()
 
 ***
 
@@ -169,7 +169,7 @@ $ /sbin/ifconfig
 - Here you will see an `inet addr`
 - This is your board's IP address and should look something like this: `192.168.0.10`
 
-Step 11: Transfer the modules to the target DragonBoard™ 410c
+#### Step 11: Transfer the modules to the target DragonBoard™ 410c
 
 - Using your board's IP Address for linaro@<yourIPaddress>
 
