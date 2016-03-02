@@ -1,10 +1,22 @@
 [<<< Back to Reference Platform Home]()
 
+[Step 1: Setting up your environment on your host computer ](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RPB-Debian-Build-Source-16.03#step-1-setting-up-your-environment-on-your-host-computer)
+[Step 2: Download the Linaro cross compiler toolchain and Skales Tool](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RPB-Debian-Build-Source-16.03#step-2-download-the-cross-compiler-toolchain-and-skales)
+[Step 3: Export path to cross compiler tool and confirm version](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RPB-Debian-Build-Source-16.03#step-3-export-path-to-cross-compiler-tool-and-confirm-version)
+[Step 4: Clone the Reference Platform kernel]()
+[Step 5: Set the right kernel .config file]()
+[Step 6: Build kernel image]()
+[Step 7: Copy Modules]()
+[Step 8: Find kernel release string]()
+[Step 9: Generate modules.dep and map files]()
+[Step 10: Find DragonBoard™ 410c IP Address]()
+[Step 11: Transfer the modules to the target DragonBoard™ 410c]()
+[Step 12: Generate the initramfs]()
+Step 13: Create the device tree image and boot image]()
+
 ***
 
 #### Building the Linux kernel from source
-
-Step 1: 
 
 The Linux kernel used in this release is available via tags in the git [repository](https://github.com/96boards/linux)
 
@@ -16,7 +28,7 @@ defconfig: arch/arm64/defconfig kernel/configs/distro.config
 
 The kernel image (`Image`) is located in the `boot` image and partition and the kernel modules are installed in the root file system. It is possible for a user to rebuild the kernel and run a custom kernel image instead of the released kernel. You can build the kernel using any recent GCC release using the git tree, tag and defconfig mentioned above. This release only supports booting with device tree, as such both the device tree blobs need to be built as well.
 
-The DragonBoard 410c is an ARMv8 platform, and the kernel is compiled for the Aarch64 target. Even though it is possible to build natively, on the target board, It is recommended to build the Linux kernel on a PC development host. In which case you need to install a cross compiler for the ARM architecture. It is recommended to download the "Linaro GCC cross compiler [Aarch64 little-endian](http://releases.linaro.org/14.11/components/toolchain/binaries/aarch64-linux-gnu/gcc-linaro-4.9-2014.11-x86_64_aarch64-linux-gnu.tar.xz).
+The DragonBoard 410c is an ARMv8 platform, and the kernel is compiled for the Aarch64 target. Even though it is possible to build natively, on the target board, It is recommended to build the Linux kernel on a PC development host. In which case you need to install a cross compiler for the ARM architecture. It is recommended to download the "Linaro GCC cross compiler [Aarch64 little-endian](http://releases.linaro.org/components/toolchain/binaries/latest-5.1/aarch64-linux-gnu/gcc-linaro-5.1-2015.08-x86_64_aarch64-linux-gnu.tar.xz).
 
 To build the Linux kernel, you can use the following instructions:
 
@@ -34,7 +46,7 @@ $ mkdir DB410c-16.03
 $ cd DB410c-16.03
 ```
 
-#### Step 2: Download the cross compiler toolchain and skales
+#### Step 2: Download the Linaro cross compiler toolchain and Skales Tool
 
 - From within the directory you just made
 - Download and unzip by executing the following commands
