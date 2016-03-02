@@ -28,21 +28,19 @@ This method requires the following hardware:
 
 > Note: Some files have 4G and 8G options, download file which best matches your HiKey board.
 
-Build Folders (<a href="http://builds.96boards.org/releases/hikey/linaro/binaries/latest/" target="_blank">**Binaries**</a> / <a href="http://builds.96boards.org/releases/hikey/linaro/debian/latest/" target="_blank">**Image**</a>)
+Build Folders (<a href="https://builds.96boards.org/releases/reference-platform/debian/hikey/16.03/bootloader/" target="_blank">**Binaries**</a> / <a href="https://builds.96boards.org/releases/reference-platform/debian/hikey/16.03/" target="_blank">**Image**</a>)
 
-- **l-loader.bin** ([**Download**](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/l-loader.bin))
-- **fip.bin** ([**Download**](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/fip.bin))
-- **nvme.img** ([**Download**](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/nvme.img))
-- **ptable-linux.img** ([**4G Download**](http://builds.96boards.org/releases/hikey/linaro/debian/latest/ptable-linux-4g.img) / [**8G Download**](http://builds.96boards.org/releases/hikey/linaro/debian/latest/ptable-linux-8g.img))
-- **hisi-idt.py** ([**Download**](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/hisi-idt.py))
-- **boot_fat.uefi.img** ([**Download**](http://builds.96boards.org/releases/hikey/linaro/debian/latest/boot-fat.uefi.img.gz))
+- **l-loader.bin** ([**Download**](https://builds.96boards.org/releases/reference-platform/debian/hikey/16.03/bootloader/l-loader.bin))
+- **fip.bin** ([**Download**](https://builds.96boards.org/releases/reference-platform/debian/hikey/16.03/bootloader/fip.bin))
+- **nvme.img** ([**Download**](https://builds.96boards.org/releases/reference-platform/debian/hikey/16.03/bootloader/nvme.img))
+- **ptable-linux.img** ([**4G Download**](https://builds.96boards.org/releases/reference-platform/debian/hikey/16.03/bootloader/ptable-linux-4g.img) / [**8G Download**](https://builds.96boards.org/releases/reference-platform/debian/hikey/16.03/bootloader/ptable-linux-8g.img))
+- **hisi-idt.py** ([**Download**](https://builds.96boards.org/releases/reference-platform/debian/hikey/16.03/bootloader/hisi-idt.py))
 
-#### Step 3: Download ONE Root File System
+#### Step 3: Download Boot image and Root File System
 
-> Note: Some files have 4G and 8G options, download file which best matches your HiKey board.
+- **hikey-boot-linux-20160301-68.uefi.img.gz** ([**Download**](https://builds.96boards.org/releases/reference-platform/debian/hikey/16.03/hikey-boot-linux-20160301-68.uefi.img.gz))
+- **Debian Rootfs** (<a href="https://builds.96boards.org/releases/reference-platform/debian/hikey/16.03/hikey-rootfs-debian-jessie-alip-20160301-68.emmc.img.gz" target="_blank">**Download**</a>)
 
-- **Debian Rootfs (Desktop)** (<a href="http://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_alip_20151130-387-4g.emmc.img.gz" target="_blank">**4G Download**</a> / <a href="http://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_alip_20151130-387-8g.emmc.img.gz" target="_blank">**8G Download**</a>)
-- **Debian Rootfs (Command line)** (<a href="http://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_developer_20151130-387-4g.emmc.img.gz" target="_blank">**4G Download**</a> / <a href="http://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_developer_20151130-387-8g.emmc.img.gz" target="_blank">**8G Download**</a>)
 
 ***
 
