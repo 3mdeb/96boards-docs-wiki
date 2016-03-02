@@ -14,8 +14,6 @@
   - [[LAVA|D410CLAVA]]
   - [Schematics](http://linaro.co/db410c-schematics)
 - [HiKey](https://github.com/96boards/documentation/wiki/HiKey-Home)
- - [Hardware User Guide](https://github.com/96boards/documentation/blob/master/hikey/HiKey_User_Guide_Rev0.2.pdf)
-  - [[Getting Started | HiKeyGettingStarted]]
   - [[UEFI | HiKeyUEFI]]
   - [[OP-TEE | HiKeyOPTEE]]
   - [[LAVA | HiKeyLAVA]]
