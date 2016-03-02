@@ -54,10 +54,12 @@ Uncomment line:
 
     # export HADOOP_OPTS=-Djava.net.preferIPV4stack=true
 
-Save and restart the system.
+Run sysctl to apply the changes:
+
+    sudo sysctl -p
 
 # Configuring the app environment
-Back to the system, we need to configure the app environment by following steps:
+Configure the app environment by following steps:
 
     sudo mkdir -p /app/hadoop/tmp
     sudo chown hduser:hadoop /app/hadoop/tmp
