@@ -2,9 +2,16 @@
 
 [<<< Back to HiKey Home](https://github.com/96boards/documentation/wiki/HiKey-Home)
 
-### Schematics and HiKey Board Hardware User Guide
-- [Schematics](https://www.96boards.org/hikey-schematics)
-- [Hardware User Guide](https://www.96boards.org/hikey-userguide)
+***
+
+<p align="left">
+  <b>Quick Links</b><br>
+<a href="#">[CPU Load](https://github.com/96boards/documentation/wiki/HiKey-Read-More#cpu-load)</a> |
+<a href="#">[HDMI Port](https://github.com/96boards/documentation/wiki/HiKey-Read-More#hdmi-port)</a> |
+<a href="#">[USB Ports ](https://github.com/96boards/documentation/wiki/HiKey-Read-More#usb-ports)</a> | 
+<a href="#">[UART Ports](https://github.com/96boards/documentation/wiki/HiKey-Read-More#uart-ports)</a>
+  <br>
+
 
 <a name="section-51"></a>
 ### CPU Load
@@ -141,4 +148,3 @@ To view the open bugs, click [here](https://bugs.96boards.org/buglist.cgi?bug_st
 To add a new bug, click [here](https://bugs.96boards.org/enter_bug.cgi?product=HiKey) and fill in the form.  Alternatively go to the [site](https://bugs.96boards.org/), click on the New menu item, then click on Consumer Edition Boards, then click on HiKey, and finally fill in the form.
 
 ***
-
