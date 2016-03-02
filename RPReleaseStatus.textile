@@ -12,8 +12,8 @@ h4. Final
 *Debian Installer (118):* "mini.iso":https://builds.96boards.org/releases/reference-platform/components/debian-installer/16.03/mini.iso and "netboot.tar.gz":https://builds.96boards.org/releases/reference-platform/components/debian-installer/16.03/netboot.tar.gz
 *CentOS Installer (36):* "16.03":https://builds.96boards.org/releases/reference-platform/components/centos-installer/16.03/
 *Kernel (104):* "linux-image-4.4.0-104":https://builds.96boards.org/releases/reference-platform/components/linux/16.03/
-*CE AOSP RPB HiKey - 65*: "16.03":https://builds.96boards.org/releases/reference-platform/aosp/hikey/16.03/
-*CE AOSP RPB Dragonboard410c - 45:* "16.03":https://builds.96boards.org/releases/reference-platform/aosp/dragonboard410c/16.03/
+*CE AOSP RPB HiKey (65)*: "16.03":https://builds.96boards.org/releases/reference-platform/aosp/hikey/16.03/
+*CE AOSP RPB Dragonboard410c (45):* "16.03":https://builds.96boards.org/releases/reference-platform/aosp/dragonboard410c/16.03/
 *CE Debian RPB HiKey (70)*: "16.03":https://builds.96boards.org/releases/reference-platform/debian/hikey/16.03/
 *CE Debian RPB Dragonboard410c (70):* "16.03":https://builds.96boards.org/releases/reference-platform/debian/dragonboard410c/16.03/
 
