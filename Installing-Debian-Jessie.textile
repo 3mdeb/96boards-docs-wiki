@@ -14,7 +14,7 @@ The released debian-installer from Debian Jessie contains a kernel based on 3.16
 
 Our custom installer changes nothing more than the kernel, and you can also find the instructions to build it from source at the end of this document.
 
-*Downloading debian-installer:*
+h4. Downloading debian-installer:*
 
 bc. sudo su -
 cd /srv/tftp/
