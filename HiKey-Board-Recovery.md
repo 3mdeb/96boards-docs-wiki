@@ -13,10 +13,10 @@ Build Folders ( <a href="http://builds.96boards.org/releases/hikey/linaro/binari
 
 |  Debian                      |        AOSP                     |
 |:----------------------------:|:-------------------------------:|
-| [l-loader.bin]()             |   [l-loader.bin]()              |
-|  [fip.bin]()                 |   [fip.bin]()                   |
-| [nvme.img]()                 |  [nvme.img]()                   |
-| [ptable-linux-4g.img]() or [ptable-linux-8g.img]()     |    [ptable-aosp-4g.img]() or [ptable-aosp-8g.img]()      |
+| [l-loader.bin](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/l-loader.bin)             |   [l-loader.bin](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/l-loader.bin)              |
+|  [fip.bin](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/fip.bin)                 |   [fip.bin](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/fip.bin)                   |
+| [nvme.img](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/nvme.img)                 |  [nvme.img](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/nvme.img)                   |
+| [ptable-linux-4g.img](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-linux-4g.img) or [ptable-linux-8g.img](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-linux-8g.img)     |    [ptable-aosp-4g.img](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-aosp-4g.img) or [ptable-aosp-8g.img](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/ptable-aosp-8g.img)      |
 
 You will also need the boot partition for the OS Image you want to run
 * [boot-fat.uefi.img for Debian] (https://builds.96boards.org/releases/hikey/linaro/debian/latest/boot-fat.uefi.img.gz)
@@ -69,7 +69,7 @@ $ ls /dev/ttyUSB*
 or
 $ dmesg
 ```
-[hisi-idt.py](https://raw.githubusercontent.com/96boards/burn-boot/master/hisi-idt.py) is the download tool for the HiKey. This is used to install the bootloader as follows:
+[hisi-idt.py](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/hisi-idt.py) is the download tool for the HiKey. This is used to install the bootloader as follows:
 
 Execute the following commands as a script or individually:
 
