@@ -12,7 +12,7 @@ Welcome to the supporting documentation for [DragonBoard™ 410c](https://www.96
 
 ***
 
-#### Supported Operating Systems - Build Options
+#### Downloads - Supported Operating Systems
 [<img src="http://i.imgur.com/jl4GG0d.png" data-canonical-src="http://i.imgur.com/jl4GG0d.png" width="125" height="157" />](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Crossroads)
 [<img src="http://i.imgur.com/7rrS2JR.png" data-canonical-src="http://i.imgur.com/7rrS2JR.png" width="125" height="157" />](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Crossroads)
 [<img src="http://i.imgur.com/dnsIEuC.png" data-canonical-src="http://i.imgur.com/dnsIEuC.png" width="125" height="157" />](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Crossroads)
@@ -22,15 +22,11 @@ Welcome to the supporting documentation for [DragonBoard™ 410c](https://www.96
 ***
 #### Installation and Setup Guides
 
-- [Install Android or Debian using SD Card](https://github.com/96boards/documentation/wiki/Dragonboard-410c-Installation-Guide-for-Linux-and-Android#install-android-or-debian-from-an-sd-card)
-- [Install Android or Debian using Fastboot](https://github.com/96boards/documentation/wiki/Dragonboard-410c-Installation-Guide-for-Linux-and-Android#install-android-or-debian-using-fastboot)
 - [Create and Install a Rescue Image](https://github.com/96boards/documentation/wiki/Dragonboard-410c-Installation-Guide-for-Linux-and-Android#create--install-a-rescue-image)
 - [UART Console](https://github.com/96boards/documentation/wiki/Dragonboard-410c-Installation-Guide-for-Linux-and-Android#setting-up-the-uart-console)
 - [DragonBoard™ 410c OpenEmbedded and Yocto](https://github.com/96boards/documentation/wiki/Dragonboard-410c-OpenEmbedded-and-Yocto)
 - [Force display resolution and bypass EDID (Linux Only)](https://github.com/96boards/documentation/wiki/How-to-force-display-resolution-and-bypass-EDID)
 - [Linaro Automated Validation Architecture (LAVA)](https://github.com/96boards/documentation/wiki/D410CLAVA)
-
-
 
 ***
 
