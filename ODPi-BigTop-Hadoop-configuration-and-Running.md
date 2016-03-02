@@ -196,10 +196,10 @@ You would see like below:
 
 ## Stop the Hadoop services ##
 
-    sudo /etc/init.d/hadoop-yarn-nodemanager start
+    sudo /etc/init.d/hadoop-yarn-nodemanager stop
     
-    sudo /etc/init.d/hadoop-yarn-resourcemanager start
+    sudo /etc/init.d/hadoop-yarn-resourcemanager stop
 
-    for i in hadoop-hdfs-namenode hadoop-hdfs-datanode ; do sudo service $i start ; done
+    for i in hadoop-hdfs-namenode hadoop-hdfs-datanode ; do sudo service $i stop; done
     
     
