@@ -1,14 +1,20 @@
-- [[Reference Platform | ReferencePlatform]]
-  - [[Enterprise Edition | ReferenceSoftwareEE]]
-    - [[BigTop Hadoop: Installation | ODPi-Hadoop-Installation]]
-    - [[BigTop Hadoop: Running | ODPi-BigTop-Hadoop-configuration-and-Running]]
-    - [[Openstack Liberty | Openstack-Liberty]]
-  - [[Consumer Edition | ReferencePlatformCE]]
-    - [[Bootloader (Hikey) | Reference-Bootloader-Hikey]]
-  - [[Kernel Policy | RP-Kernel-Policy]]
-  - [[Latest Release: 2015.12 | RP-Release-2015.12]]
+- [Reference Platform](https://github.com/96boards/documentation/wiki/Reference-Platform-Home)
+   - [Reference Software - Consumer Edition](https://github.com/96boards/documentation/wiki/Reference-Platform-CE-Home)
+   - [Reference Software - Enterprise Edition](https://github.com/96boards/documentation/wiki/Reference-Platform-EE-Home)
+   - [Report a bug](https://github.com/96boards/documentation/wiki/Reference-Platform-bugs)
+   - [Feedback and Support](https://github.com/96boards/documentation/wiki/Reference-Platform-Feedback-and-Support)
+   - [Kernel Policy](https://github.com/96boards/documentation/wiki/RP-Kernel-Policy)
+- [DragonBoard™ 410c](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Home)
+  - [[Installation Guide for Linux and Android | Dragonboard-410c-Installation-Guide-for-Linux-and-Android]]
+  - [[Creation of Kernel Boot Image | Dragonboard-410c-Boot-Image]]
+  - [Hardware Manual](https://github.com/96boards/documentation/blob/master/dragonboard410c/HardwareManual_DragonBoard.pdf)
+  - [Android User Guide](https://github.com/96boards/documentation/blob/master/dragonboard410c/AndroidUserGuide_DragonBoard.pdf)
+  - [Linux User Guide](https://github.com/96boards/documentation/blob/master/dragonboard410c/LinuxUserGuide_DragonBoard.pdf)
+  - [[OpenEmbedded/Yocto|Dragonboard-410c-OpenEmbedded-and-Yocto]]
+  - [[LAVA|D410CLAVA]]
+  - [Schematics](http://linaro.co/db410c-schematics)
 - [HiKey](https://github.com/96boards/documentation/wiki/HiKey-Home)
-  - [Hardware User Guide](https://github.com/96boards/documentation/blob/master/hikey/HiKey_User_Guide_Rev0.2.pdf)
+ - [Hardware User Guide](https://github.com/96boards/documentation/blob/master/hikey/HiKey_User_Guide_Rev0.2.pdf)
   - [[Getting Started | HiKeyGettingStarted]]
   - [[UEFI | HiKeyUEFI]]
   - [[OP-TEE | HiKeyOPTEE]]
@@ -19,12 +25,4 @@
   - [Schematics - CircuitCo version](https://github.com/96boards/documentation/blob/master/hikey/96Boards-Hikey-Rev-A1.pdf)
   - [Schematics - LeMaker version](https://github.com/96boards/documentation/blob/master/hikey/HiKey_schematics_lemaker_version.pdf)
   - [Quick Start for v4.1](https://github.com/96boards/documentation/wiki/Latest-Snapshot---Getting-Started-Guild-for-kernel-4.1)
-- [Dragonboard™ 410c](https://github.com/96boards/documentation/wiki/Dragonboard-410c-Home)
-  - [[Installation Guide for Linux and Android | Dragonboard-410c-Installation-Guide-for-Linux-and-Android]]
-  - [[Creation of Kernel Boot Image | Dragonboard-410c-Boot-Image]]
-  - [Hardware Manual](https://github.com/96boards/documentation/blob/master/dragonboard410c/HardwareManual_DragonBoard.pdf)
-  - [Android User Guide](https://github.com/96boards/documentation/blob/master/dragonboard410c/AndroidUserGuide_DragonBoard.pdf)
-  - [Linux User Guide](https://github.com/96boards/documentation/blob/master/dragonboard410c/LinuxUserGuide_DragonBoard.pdf)
-  - [[OpenEmbedded/Yocto|Dragonboard-410c-OpenEmbedded-and-Yocto]]
-  - [[LAVA|D410CLAVA]]
-  - [Schematics](http://linaro.co/db410c-schematics)
+- [Bubblegum96](https://github.com/96boards/documentation/wiki/Bubblegum96-Home)
