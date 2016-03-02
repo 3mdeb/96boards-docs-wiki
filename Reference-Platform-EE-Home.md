@@ -14,14 +14,16 @@ EDK2 is currently used by 96boards HuskyBoard, AMD Overdrive, ARM Juno r0/r1 and
 
 This guide provides enough information on how to build UEFI/EDK2 from scratch, but meant to be a quick guide. For further information please also check the official Linaro UEFI documentation, available at [https://wiki.linaro.org/ARM/UEFI](https://wiki.linaro.org/ARM/UEFI) and  [https://wiki.linaro.org/LEG/Engineering/Kernel/UEFI/build](https://wiki.linaro.org/LEG/Engineering/Kernel/UEFI/build)
 
-- Build ([Pre-Requisites](https://github.com/96boards/documentation/wiki/UEFI-EDK2-Guide-for-EE#pre-requisites) / [Getting Source](https://github.com/96boards/documentation/wiki/UEFI-EDK2-Guide-for-EE#getting-the-source-code))
+[Pre-Requisites](https://github.com/96boards/documentation/wiki/UEFI-EDK2-Guide-for-EE#pre-requisites)
+<br>
+[Getting Source](https://github.com/96boards/documentation/wiki/UEFI-EDK2-Guide-for-EE#getting-the-source-code)
+
 - Juno R0/R1 ([Build](https://github.com/96boards/documentation/wiki/UEFI-EDK2-Guide-for-EE#building-uefiedk2-for-juno-r0r1) / [Flash](https://github.com/96boards/documentation/wiki/UEFI-EDK2-Guide-for-EE#juno-r0r1))
 - HiSilicon D02 ([Build](https://github.com/96boards/documentation/wiki/UEFI-EDK2-Guide-for-EE#building-uefiedk2-for-d02) / [Flash](https://github.com/96boards/documentation/wiki/UEFI-EDK2-Guide-for-EE#d02))
 - Overdrive ([Build](https://github.com/96boards/documentation/wiki/UEFI-EDK2-Guide-for-EE#building-uefiedk2-for-overdrive) / [Flash](https://github.com/96boards/documentation/wiki/UEFI-EDK2-Guide-for-EE#amd-overdrive))
 
 #### QuickStart
 
-- Juno R0/R1
 - [HiSilicon D02](https://github.com/96boards/documentation/wiki/ReferenceSoftwareEE#hisilicon-d02)
 - [AMD Overdrive](https://github.com/96boards/documentation/wiki/ReferenceSoftwareEE#amd-overdrive)
 
