@@ -1,4 +1,4 @@
-[<<< Back to Reference Platform Home]()
+[<<< Back to Reference Platform Home](https://github.com/96boards/documentation/wiki/Reference-Platform-Home)
 
 
 - [Building Linux Kernel from Source](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RPB-Debian-Build-Source-16.03#building-the-linux-kernel-from-source)
