@@ -244,7 +244,7 @@ Something is wrong in the network setup. Please check /etc/hosts file.
 
 *  If for some weird reason, if you notice the config files (core-site.xml, hdfs-site.xml, etc) are empty.
 
-    You may have delete all the packages and re-run the steps of installation from scratch.
+    You may have to delete all the packages and re-run the steps of installation from scratch.
 
 *  Error while formatting namenode 
 With the following command:
