@@ -26,6 +26,8 @@ This method requires the following hardware:
 
 - Android SD Card Image ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/dragonboard410c_sdcard_install_android-95.zip) / <a href="http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/" target="_blank">Build Folder</a>)
 
+>Note the location of all downloads, they will be needed once you access your instruction set
+
 ***
 #### Step 3: Choose your host computer to access your instruction set
 
@@ -75,6 +77,7 @@ This method requires the following hardware:
 - persist.img.tar.xz ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/persist.img.tar.xz))
 - cache.img.tar.xz ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/cache.img.tar.xz))
 
+>Note the location of all downloads, they will be needed once you access your instruction set
 
 ***
 ### Step 4: Choose your host computer to access your instruction set
