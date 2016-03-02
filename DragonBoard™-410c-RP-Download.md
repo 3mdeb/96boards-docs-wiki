@@ -26,12 +26,12 @@ This method requires the following hardware:
 
 #### Step 2: Download Debian Bootloader and Boot file
 
-- Debian Bootloader ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/linaro/rescue/latest/dragonboard410c_bootloader_emmc_linux*.zip) / <a href="http://builds.96boards.org/releases/dragonboard410c/linaro/rescue/latest/" target="_blank">Build Folder</a> )
-- Debian Boot ([Direct Download](http://builds.96boards.org/snapshots/reference-platform/debian/59/dragonboard410c/dragonboard410c-boot-linux-20160226-59.img.gz) / <a href="http://builds.96boards.org/snapshots/reference-platform/debian/59/dragonboard410c/" target="_blank">Build Folder</a> )
+- Debian Bootloader ([Direct Download](https://builds.96boards.org/releases/dragonboard410c/linaro/rescue/latest/dragonboard410c_bootloader_emmc_linux-46.zip) / <a href="https://builds.96boards.org/releases/dragonboard410c/linaro/rescue/latest/" target="_blank">Build Folder</a> )
+- Debian Boot ([Direct Download](https://builds.96boards.org/releases/reference-platform/debian/dragonboard410c/16.03/dragonboard410c-boot-linux-20160302-68.img.gz) / <a href="https://builds.96boards.org/releases/reference-platform/debian/dragonboard410c/16.03/" target="_blank">Build Folder</a> )
 
 #### Step 3: Download Root File System
 
-- Debian Rootfs (Desktop) ([Direct Download](http://builds.96boards.org/snapshots/reference-platform/debian/59/dragonboard410c/dragonboard410c-rootfs-debian-jessie-alip-20160226-59.emmc.img.gz) / <a href="http://builds.96boards.org/snapshots/reference-platform/debian/59/dragonboard410c/" target="_blank">Build Folder</a> )
+- Debian Rootfs (Desktop) ([Direct Download](https://builds.96boards.org/releases/reference-platform/debian/dragonboard410c/16.03/dragonboard410c-rootfs-debian-jessie-alip-20160302-68.emmc.img.gz) / <a href="https://builds.96boards.org/releases/reference-platform/debian/dragonboard410c/16.03/" target="_blank">Build Folder</a> )
 
 >Note the location of all downloads, they will be needed once you access your instruction set
 
