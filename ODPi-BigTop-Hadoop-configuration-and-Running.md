@@ -185,3 +185,10 @@ You would see like below:
     Dec 22 18:25:03 debian hadoop-yarn-nodemanager[10305]: Started Hadoop nodeman...
 
 
+
+## Run teragen, terasort and teravalidate ##
+    hadoop jar /usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar teragen 1000000 terainput
+
+    hadoop jar /usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar terasort terainput teraoutput
+
+    hadoop jar /usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar teravalidate -D mapred.reduce.tasks=8 teraoutput teravalidate
