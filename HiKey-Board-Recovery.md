@@ -130,7 +130,7 @@ $ sudo fastboot devices
 0123456789abcdef fastboot
 ```
 
-Your bootloader has been successfully installed and you are now ready to install the operating system system files into the eMMC flash memory (see [Updating the OS](#section-3), above). For Debian you will need to load only the system partition, and for AOSP the cache, system and user data partitions. 
+Your bootloader has been successfully installed and you are now ready to install the operating system files into the eMMC flash memory, for this go to the ([HiKey Crossroads](https://github.com/96boards/documentation/wiki/HiKey-Crossroads#choose-your-build-operating-system-and-install-method)).
 
 **NOTE:**
 
@@ -140,6 +140,3 @@ This bootloader is based on UEFI and includes:
 - GRUB
 - fastboot support
 - OP-TEE support
-
-For further information on the bootloader, including how to build it from source, see the 96Boards documentation here:
-- [HiKey Bootloader Wiki](https://github.com/96boards/documentation/wiki/HiKeyUEFI)
