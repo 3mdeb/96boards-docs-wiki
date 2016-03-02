@@ -29,7 +29,7 @@ Update the source list and install the dependencies:
 
 Install Hadoop packages:
     
-    sudo apt-get install -ft jessie bigtop-tomcat bigtop-utils hadoop* spark hue zookeeper hive hbase oozie pig mahout
+    sudo apt-get install -ft jessie bigtop-tomcat bigtop-utils hadoop* spark* hue* zookeeper* hive* hbase* oozie* pig* mahout*
 
 ### On CentOS:
 
