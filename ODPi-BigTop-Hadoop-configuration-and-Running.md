@@ -94,10 +94,10 @@ Add the following to the end and save:
 
 Execute the terminal environment again (`bash`), or simply logout and change to `hduser` again.
 
-Edit core-site.xml:
+# Modifying config files
+## core-site.xml
 
-    cd /etc/hadoop/conf
-    sudo nano core-site.xml
+    sudo nano /etc/hadoop/conf/core-site.xml
 
 And add/modify the following settings:
 Look for property with <name> fs.defaultFS</name> and modify as below:
@@ -121,9 +121,9 @@ Add this to the bottom before \</configuration> tag:
     </property>
 
 
-Edit mapred-site.xml:
+## mapred-site.xml
 
-    sudo nano mapred-site.xml
+    sudo nano /etc/hadoop/conf/mapred-site.xml
 
 Modify existing properties as follows: 
 Look for property tag with <name> as mapred.job.tracker and modify as below:
@@ -137,9 +137,9 @@ Look for property tag with <name> as mapred.job.tracker and modify as below:
       </description>
     </property>
 
-Edit hdfs-site.xml:
+## hdfs-site.xml:
 
-    sudo nano hdfs-site.xml
+    sudo nano /etc/hadoop/conf/hdfs-site.xml
 
 Modify existing property as below :
 
