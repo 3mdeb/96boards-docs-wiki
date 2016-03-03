@@ -237,28 +237,3 @@ If you see the following error:
 Something is wrong in the network setup. Please check /etc/hosts file.
 
    
-
-## Potential Errors / Issues and Resolutions ##
-* If Teragen, TeraSort and TeraValidate error out with 'permission denied' exception. The following steps can be done:
-
-    sudo groupadd supergroup
-    sudo usermod -g supergroup hduser
-
-*  If for some weird reason, if you notice the config files (core-site.xml, hdfs-site.xml, etc) are empty.
-
-    You may have to delete all the packages and re-run the steps of installation from scratch.
-
-*  Error while formatting namenode 
-With the following command:
-
-    sudo /etc/init.d/hadoop-hdfs-namenode init
-
-If you see the following error:
-    WARN net.DNS: Unable to determine local hostname -falling back to "localhost"
-    java.net.UnknownHostException: centos: centos
-	at java.net.InetAddress.getLocalHost(InetAddress.java:1496)
-	at org.apache.hadoop.net.DNS.resolveLocalHostname(DNS.java:264)
-	at org.apache.hadoop.net.DNS.<clinit>(DNS.java:57)
-
-Something is wrong in the network setup. Please check /etc/hosts file.
-
