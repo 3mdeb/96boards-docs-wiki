@@ -23,7 +23,7 @@ Choose Consumer Edition or Enterprise Edition to start setting up your instructi
 
 - Reference Software - Consumer Edition ( [Build and Install](https://github.com/96boards/documentation/wiki/Reference-Platform-CE-Home) )
 - Reference Software - Enterprise Edition
-   - [D02]()
+   - [D02](https://github.com/96boards/documentation/wiki/Reference-Platform-D02-Home)
    - [Overdrive]()
 
 
