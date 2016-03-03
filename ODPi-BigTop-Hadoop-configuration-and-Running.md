@@ -225,7 +225,7 @@ You would see like below:
 *  Error while formatting namenode 
 With the following command:
 
-    sudo /etc/init.d/hadoop-hdfs-namenode init
+        sudo /etc/init.d/hadoop-hdfs-namenode init
 
 If you see the following error:
     WARN net.DNS: Unable to determine local hostname -falling back to "localhost"
@@ -234,6 +234,20 @@ If you see the following error:
 	at org.apache.hadoop.net.DNS.resolveLocalHostname(DNS.java:264)
 	at org.apache.hadoop.net.DNS.<clinit>(DNS.java:57)
 
-Something is wrong in the network setup. Please check /etc/hosts file.
+Something is wrong in the network setup. Please check /etc/hosts file. 
 
-   
+        sudo nano /etc/hosts
+
+The hosts file should like below:
+
+        127.0.0.1    <hostname>  localhost  localhost.localdomain #hostname should have the output of $ hostname
+        ::1          localhost 
+
+Also try the following steps:
+
+        sudo rm -Rf /app/hadoop/tmp
+
+        hadoop namenode -format
+
+
+
