@@ -870,12 +870,15 @@ $ cd android/
 
 
 ```
-$ repo init -u https://android.googlesource.com/platform/manifest -b android-5.1.1_r24\
+$ repo init -u https://android.googlesource.com/platform/manifest -b android-6.0.1_r16\
 > -g "default,-device,hikey"
 $ cd .repo/
-$ git clone https://github.com/96boards/android_manifest -b android-5.0 local_manifests
+$ git clone https://github.com/96boards/android_manifest -b android-6.0 local_manifests
 $ cd -
 $ repo sync -j8
+$ wget https://dl.google.com/dl/android/aosp/linaro-hikey-20160226-67c37b1a.tgz
+$ tar -xvf linaro-hikey-20160226-67c37b1a.tgz
+$ yes "I ACCEPT" | ./extract-linaro-hikey.sh
 $ source build/envsetup.sh
 $ lunch hikey-userdebug
 $ make droidcore -j8
