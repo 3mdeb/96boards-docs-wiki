@@ -27,7 +27,7 @@ Choose Consumer Edition or Enterprise Edition to start setting up your instructi
    - [X-Gene Mustang](https://github.com/96boards/documentation/wiki/Reference-Platform-EE-X-Gene-Mustang-Home)
    - [HP ProLiant m400](https://github.com/96boards/documentation/wiki/Reference-Platform-EE-HP-m400-Home)
 
-Test Reports: ([Debian Installer](https://builds.96boards.org/releases/reference-platform/components/debian-installer/16.03/EE-Debian-RPB-16.03-TestReport.pdf) / [CentOS Installer](https://builds.96boards.org/releases/reference-platform/components/centos-installer/16.03/EE-CentOS-RPB-16.03-TestReport.pdf))
+Enterprise Test Reports: ([Debian](https://builds.96boards.org/releases/reference-platform/components/debian-installer/16.03/EE-Debian-RPB-16.03-TestReport.pdf) / [CentOS](https://builds.96boards.org/releases/reference-platform/components/centos-installer/16.03/EE-CentOS-RPB-16.03-TestReport.pdf))
 
 ***
 
