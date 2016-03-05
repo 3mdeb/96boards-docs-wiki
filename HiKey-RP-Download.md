@@ -24,7 +24,7 @@ This method requires the following hardware:
 
 ***
 
-#### Step 2: Download Debian Bootloader and Boot file
+#### Step 2: Download Bootloader and Debian partition table
 
 > Note: Some files have 4G and 8G options, download file which best matches your HiKey board.
 
