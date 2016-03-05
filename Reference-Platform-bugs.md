@@ -132,8 +132,8 @@ Summary examples:
 
 Summary examples:
 
-1. [RPB] LG W2253V fails to work with 4.4.0-93-arm64
-2. [RPB] Mouse cursor invisible after boot (until you open an application)
+1. [RPB] D02- shutdown works as reboot
+2. [RPB] QEMU can't launch an instance with more than 30GB RAM
 
 #### Step 5: Additional Comments section
 
