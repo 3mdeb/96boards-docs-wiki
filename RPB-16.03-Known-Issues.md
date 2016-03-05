@@ -1,6 +1,6 @@
 [<<< Back to Reference Platform Home](https://github.com/96boards/documentation/wiki/Reference-Platform-Home)
 
-## Reference Platform Build - 15.12 Release - Known Issues
+## Reference Platform Build - 16.03 Release - Known Issues
 
 ### Enterprise
 
