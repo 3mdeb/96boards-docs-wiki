@@ -95,7 +95,7 @@ Fixed Issues
 | Bug Legend   |        |
 |:-----:|:-------|
 | CONFIRMED      | If a bug can be reproduced, a member from the 96Boards, Linaro or QA team will change its status from **UNCONFIRMED** to **CONFIRMED** |
-| IN_PROGRESS    |  This bug is currently being worked on by either the 96Boards, Linar, or QA team    |
+| IN_PROGRESS    |  This bug is currently being worked on by either the 96Boards, Linaro, or QA team    |
 |   RESOLVED  | Development is finished with a bug. Please [click here](https://wiki.documentfoundation.org/QA/Bugzilla/Fields/Status/RESOLVED) for information on sub-states  |
 | VERIFIED | A team has VERIFIED a working solution for a bug |
 
