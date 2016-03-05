@@ -8,7 +8,7 @@
 
 The [UEFI/EDK2 guide for EE](https://github.com/96boards/documentation/wiki/UEFI-EDK2-Guide-for-EE) provides information about building and flashing the boot firmware for the supported boards.
 
-h### Reference Platform Kernel
+### Reference Platform Kernel
 
 The Reference Platform kernel used by the enterprise release (and soon to be shared with CE) can be found on [git.linaro.org](https://git.linaro.org/people/amit.kucheria/kernel.git/shortlog/refs/heads/96b/releases/2015.12)
 
