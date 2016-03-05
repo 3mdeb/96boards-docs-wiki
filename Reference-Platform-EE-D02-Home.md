@@ -24,7 +24,7 @@ The Reference Platform kernel will act as an integration point (very similar to 
 
 #### D02 - QuickStart
 
-UEFI/EDK2 is supported by D02 (with build from source instructions available as part of the [UEFI EDK2 Guide](https://github.com/96boards/documentation/wiki/UEFI-EDK2-Guide-for-EE#building), and since ACPI support is new, please make sure you are using the latest firmware available at [https://builds.96boards.org/snapshots/reference-platform/components/uefi/latest/release/d02/](https://builds.96boards.org/snapshots/reference-platform/components/uefi/latest/release/d02/) before proceeding with kernel testing or installing your favorite distribution (and please make sure to report your firmware version when reporting issues and bugs).
+UEFI/EDK2 is supported by D02 (with build from source instructions available as part of the [UEFI EDK2 Guide](https://github.com/96boards/documentation/wiki/UEFI-EDK2-Guide-for-EE#building), and since ACPI support is new, please make sure you are using the latest firmware available at [https://builds.96boards.org/releases/reference-platform/components/uefi/16.03/release/d02/](https://builds.96boards.org/releases/reference-platform/components/uefi/16.03/release/d02/) before proceeding with kernel testing or installing your favorite distribution (and please make sure to report your firmware version when reporting issues and bugs).
 
 ##### Flashing the firmware
 
@@ -60,4 +60,3 @@ Follow the [instructions](https://github.com/96boards/documentation/wiki/ODPi-Ha
 ##### Setup and Running Hadoop
 
 Follow the [instructions](https://github.com/96boards/documentation/wiki/ODPi-BigTop-Hadoop-configuration-and-Running) to configure and install Hadoop
-
