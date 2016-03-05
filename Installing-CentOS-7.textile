@@ -2,8 +2,6 @@ h2. Installing CentOS 7
 
 This guide is not to be a replacement of the official CentOS Installer documentation, but instead be a quick walkthrough for the network installer. You can find the original documentation at "https://wiki.centos.org/SpecialInterestGroup/AltArch/AArch64":https://wiki.centos.org/SpecialInterestGroup/AltArch/AArch64
 
-This guide is also heavily based on the instructions for "Fedora 23":https://github.com/96boards/documentation/wiki/Installing-Fedora-23.
-
 h3. Setting up the TFTP server
 
 Back to your dnsmasq server (check "this link":https://github.com/96boards/documentation/wiki/DHCP-TFTP-server-for-UEFI-distro-network-installers for instructions on how to setup your own TFTP/DCHP server), download the required CentOS 7 installer files at your tftp-root directory. In this example, this directory is configured to @/srv/tftp@.
@@ -15,30 +13,21 @@ cd /srv/tftp/
 wget http://mirror.centos.org/altarch/7/os/aarch64/EFI/BOOT/BOOTAA64.EFI
 wget http://mirror.centos.org/altarch/7/os/aarch64/EFI/BOOT/grubaa64.efi
 
-h4. Downloading the CentOS *upstream* kernel (4.2, compatible with Overdrive and Mustang) and initrd:
+h4. Downloading the CentOS installer that includes the Reference Kernel (4.4.0, supporting additional hardware platforms), based on the Reference Platform 16.03 release:
 
 bc. mkdir /srv/tftp/centos7
 cd /srv/tftp/centos7
-wget http://mirror.centos.org/altarch/7/os/aarch64/images/pxeboot/vmlinuz
-wget http://mirror.centos.org/altarch/7/os/aarch64/images/pxeboot/initrd.img
-
-If you want to use the RP development image (which uses the 4.4 RP kernel, including support for D02), please download the following files instead:
-
-bc. wget https://builds.96boards.org/snapshots/reference-platform/components/centos-installer/latest/images/pxeboot/vmlinuz
-wget https://builds.96boards.org/snapshots/reference-platform/components/centos-installer/latest/images/pxeboot/initrd.img
+wget https://builds.96boards.org/releases/reference-platform/components/centos-installer/16.03/images/pxeboot/vmlinuz
+wget https://builds.96boards.org/releases/reference-platform/components/centos-installer/16.03/images/pxeboot/initrd.img
 
 Creating the Grub 2 config file (@grub.cfg@):
 
-bc. menuentry 'Install CentOS 7 ARM 64-bit' --class red --class gnu-linux --class gnu --class os {
-    linux (tftp)/centos7/vmlinuz ip=dhcp inst.repo=http://mirror.centos.org/altarch/7/os/aarch64/
-    initrd (tftp)/centos7/initrd.img
-}
-menuentry 'Install CentOS 7 ARM 64-bit - Reference Platform' --class red --class gnu-linux --class gnu --class os {
-    linux (tftp)/centos7/vmlinuz ip=dhcp inst.stage2=https://builds.96boards.org/snapshots/reference-platform/components/centos-installer/latest/ inst.repo=http://mirror.centos.org/altarch/7/os/aarch64/ inst.ks=file:/ks.cfg
+bc. menuentry 'Install CentOS 7 ARM 64-bit - Reference Platform - 16.03' --class red --class gnu-linux --class gnu --class os {
+    linux (tftp)/centos7/vmlinuz ip=dhcp inst.stage2=https://builds.96boards.org/releases/reference-platform/components/centos-installer/16.03/ inst.repo=http://mirror.centos.org/altarch/7/os/aarch64/ inst.ks=file:/ks.cfg
     initrd (tftp)/centos7/initrd.img
 }
 
-*Note:* @inst.ks@ is required for the reference platform entry because of the additional repository (linaro-staging, containing the reference platform kernel rpm package), which is available inside the @initrd.img@. The @inst.ks@ contains only one line, which is used by the installer to fetch and install the right kernel package. The content: @repo --name="linaro-staging" --baseurl=http://repo.linaro.org/rpm/linaro-staging/centos-7/repo/@.
+*Note:* @inst.ks@ is required because of the additional linaro-overlay repository (which contains the reference platform kernel rpm package), which is available inside the @initrd.img@. The @inst.ks@ contains only one line, which is used by the installer to fetch and install the right kernel package. The content: @repo --name="linaro-overlay" --baseurl=http://repo.linaro.org/rpm/linaro-overlay/centos-7/repo/@.
 
 Also check the "RHEL 7":https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/chap-anaconda-boot-options.html and the "anaconda documentation":https://rhinstaller.github.io/anaconda/boot-options.html for additional boot options. One example is using *ip=eth1:dhcp* if you want to use the second network interface as default.
 
