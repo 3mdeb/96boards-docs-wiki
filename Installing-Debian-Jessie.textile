@@ -1,4 +1,4 @@
-h2. Installing Debian "Jessie" 8.2
+h2. Installing Debian "Jessie" 8.3
 
 This guide is not to be a replacement of the official Debian Installer documentation, but instead be a quick walkthrough for the network installer. You can find the original documentation at "https://www.debian.org/releases/jessie/arm64/index.html.en":https://www.debian.org/releases/jessie/arm64/index.html.en
 
@@ -18,7 +18,7 @@ h4. Downloading debian-installer:*
 
 bc. sudo su -
 cd /srv/tftp/
-wget https://builds.96boards.org/snapshots/reference-platform/components/debian-installer/latest/netboot.tar.gz
+wget https://builds.96boards.org/releases/reference-platform/components/debian-installer/16.03/netboot.tar.gz
 tar -zxvf netboot.tar.gz
 
 You should now have the following file tree structure:
