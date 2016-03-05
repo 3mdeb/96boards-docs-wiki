@@ -13,7 +13,7 @@ cd /srv/tftp/
 wget http://mirror.centos.org/altarch/7/os/aarch64/EFI/BOOT/BOOTAA64.EFI
 wget http://mirror.centos.org/altarch/7/os/aarch64/EFI/BOOT/grubaa64.efi
 
-h4. Downloading the CentOS installer that includes the Reference Kernel (4.4.0, supporting additional hardware platforms), based on the Reference Platform 16.03 release:
+h4. Downloading the CentOS installer from the Reference Platform 16.03 release (4.4.0 RP Kernel):
 
 bc. mkdir /srv/tftp/centos7
 cd /srv/tftp/centos7
