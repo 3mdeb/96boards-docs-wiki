@@ -2,6 +2,8 @@
 
 ***
 
+**ATTENTION:** This HiKey wiki page is currently undergoing changes. Please see the new [HiKey Landing Page](https://github.com/96boards/documentation/wiki/HiKey-Home) for more in depth information, downloads and instruction sets for the HiKey.
+
 ### Getting started with HiKey ARMv8 community development board
 
 **NOTE:** that the June 2015 release comes with a fastboot bootloader based on HiSilicon code. It is deprecated and will not be supported in the upcoming releases. This Getting Started Guide therefore refers to the open source [ARM Trusted Firmware and UEFI bootloader](https://github.com/96boards/documentation/wiki/HiKeyUEFI). It is the supported bootloader for the HiKey board.
