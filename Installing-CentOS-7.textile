@@ -1,4 +1,4 @@
-h2. Installing CentOS 7
+h2. Installing CentOS 7.2 15.11 - Reference Platform Enterprise
 
 This guide is not to be a replacement of the official CentOS Installer documentation, but instead be a quick walkthrough for the network installer. You can find the original documentation at "https://wiki.centos.org/SpecialInterestGroup/AltArch/AArch64":https://wiki.centos.org/SpecialInterestGroup/AltArch/AArch64
 
