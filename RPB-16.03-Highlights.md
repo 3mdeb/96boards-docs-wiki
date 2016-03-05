@@ -73,10 +73,10 @@
 #### Network Installers:
 
 - Debian:
-   - Upgrade to Debian 8.2 "Jessie"
+   - Upgrade to Debian 8.3 "Jessie"
    - Using the unified 4.4.0 kernel
 - CentOS (Now officially supported):
-   - Based on CentOS 7 15/11
+   - Based on CentOS 7.2 15.11
    - Using the consolidated 4.4 kernel
 
 #### Enterprise Components:
