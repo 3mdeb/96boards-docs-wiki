@@ -85,7 +85,7 @@ Fixed Issues
 <a href="https://bugs.96boards.org/buglist.cgi?bug_status=RESOLVED&bug_status=VERIFIED&classification=Consumer%20Edition%20Boards&component=AOSP&list_id=1621&product=Dragonboard%20410c&query_format=advanced&version=RPB%2016.03" target="_blank">( Bugzilla )</a>
 
 
-| AOSP | Known Issues (<a href="https://bugs.96boards.org/buglist.cgi?bug_status=CONFIRMED&bug_status=IN_PROGRESS&classification=Consumer%20Edition%20Boards&component=AOSP&list_id=1619&product=Dragonboard%20410c&query_format=advanced&resolution=---&version=RPB%2015.12&version=RPB%2016.03" target="_blank">( Bugzilla )</a>) |
+| AOSP | Known Issues <a href="https://bugs.96boards.org/buglist.cgi?bug_status=CONFIRMED&bug_status=IN_PROGRESS&classification=Consumer%20Edition%20Boards&component=AOSP&list_id=1619&product=Dragonboard%20410c&query_format=advanced&resolution=---&version=RPB%2015.12&version=RPB%2016.03" target="_blank">( Bugzilla )</a> |
 |:----------:|:-----------|
 | [bug 254](https://bugs.96boards.org/show_bug.cgi?id=254) |  [RPB] wpa_supplicant crashes wcn36xx |
 | [bug 276](https://bugs.96boards.org/show_bug.cgi?id=276) | [RPB-AOSP] USB-OTG doesn't work |
