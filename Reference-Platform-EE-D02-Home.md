@@ -6,15 +6,15 @@
 
 ### Boot Firmware
 
-The [UEFI/EDK2 guide for EE](https://github.com/96boards/documentation/wiki/UEFI-EDK2-Guide-for-EE) provides information about building and flashing the boot firmware for the supported boards.
+The [UEFI/EDK2 guide for EE](https://github.com/96boards/documentation/wiki/UEFI-EDK2-Guide-for-EE) provides information about building and flashing the boot firmware for D02.
 
 ### Reference Platform Kernel
 
-The Reference Platform kernel used by the enterprise release (and soon to be shared with CE) can be found on [git.linaro.org](https://git.linaro.org/people/amit.kucheria/kernel.git/shortlog/refs/heads/96b/releases/2015.12)
+The Reference Platform kernel used by the enterprise release can be found on [github.com/96boards/linux](https://github.com/96boards/linux/tree/96b/releases/2016.03)
 
-Since we want the same kernel config to be used for all our builds and distributions, it is also available as part of the same kernel tree, and can be found at [arch/arm64/configs/distro.config](https://git.linaro.org/people/amit.kucheria/kernel.git/blob/refs/heads/96b/releases/2015.12:/arch/arm64/configs/distro.config)
+Since we use the same kernel config with all our builds and distributions, it is also available as part of the same kernel tree, and can be found at [arch/arm64/configs/distro.config](https://github.com/96boards/linux/blob/96b/releases/2016.03/arch/arm64/configs/distro.config).
 
-At the time of the 15.12 release, the kernel is based on *4.4-rc4*.
+At the time of the 16.03 release, the kernel is based on *4.4.0*.
 
 For future releases we will also have kernel config fragments for key functionality that will make it easier for other projects and distributions to consume.
 
