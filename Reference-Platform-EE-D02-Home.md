@@ -38,7 +38,7 @@ Install instructions for the tested/supported distributions:
 * [Debian 8.x 'Jessie'](https://github.com/96boards/documentation/wiki/Installing-Debian-Jessie)
 * [CentOS 7](https://github.com/96boards/documentation/wiki/Installing-CentOS-7)
 
-Test Reports: ([Debian Installer](https://builds.96boards.org/releases/reference-platform/components/debian-installer/16.03/EE-Debian-RPB-16.03-TestReport.pdf) / [CentOS Installer](https://builds.96boards.org/releases/reference-platform/components/centos-installer/16.03/EE-CentOS-RPB-16.03-TestReport.pdf))
+Enterprise Test Reports: ([Debian](https://builds.96boards.org/releases/reference-platform/components/debian-installer/16.03/EE-Debian-RPB-16.03-TestReport.pdf) / [CentOS](https://builds.96boards.org/releases/reference-platform/components/centos-installer/16.03/EE-CentOS-RPB-16.03-TestReport.pdf))
 
 #### Other distributions
 
