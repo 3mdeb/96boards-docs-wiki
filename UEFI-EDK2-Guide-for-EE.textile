@@ -24,7 +24,7 @@ On RHEL/CentOS/Fedora:
 
 bc. sudo yum install uuid-devel libuuid-devel iasl
 
-Also make sure you have the right @acpica-unix@ version at your host system. The current one required by the 15.12 release is 20150930, and you can find the packages (debian) at the @linaro-overlay@:
+Also make sure you have the right @acpica-unix@ version at your host system. The current one required by the 16.03 release is 20150930, and you can find the packages (debian) at the @linaro-overlay@:
 
 bc. wget http://repo.linaro.org/ubuntu/linaro-overlay/pool/main/a/acpica-unix/acpica-tools_20150930-1.linarojessie.1_amd64.deb
 wget http://repo.linaro.org/ubuntu/linaro-overlay/pool/main/a/acpica-unix/acpidump_20150930-1.linarojessie.1_all.deb
@@ -47,14 +47,14 @@ UEFI/EDK2:
 bc. git clone https://github.com/tianocore/edk2.git
 git clone https://git.linaro.org/uefi/OpenPlatformPkg.git
 cd edk2
-git checkout -b stable-baseline 4960d8e00427d52c8db5da492ac7aff38cbc9d30 # revision provided by https://git.linaro.org/uefi/linaro-edk2.git
+git checkout -b stable-baseline d0d34cdf1d2752f0d7c3ca41af7e7ed29c221d11 # revision provided by https://git.linaro.org/uefi/linaro-edk2.git
 ln -s ../OpenPlatformPkg
 
 ARM Trusted Firmware (in case it is supported by your target hardware, only used by Juno at this point):
 
 bc. git clone https://github.com/ARM-software/arm-trusted-firmware.git
 cd arm-trusted-firmware
-git checkout -b stable-baseline 53d069c28c2738c3a4f59211fbc61323ec28208c # suggested revision to avoid surprises
+git checkout -b stable-baseline v1.2 # suggested latest stable release
 
 UEFI Tools (helpers and scripts to make the build process easy):
 
