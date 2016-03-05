@@ -52,15 +52,15 @@ Now boot your platform of choice, selecting PXE boot when presented by UEFI (mak
 You should see the following (using AMD Seattle's Overdrive as example):
 
 bc. NOTICE:  BL3-1: 
-NOTICE:  BL3-1: Built : 18:22:46, Nov 23 2015
+NOTICE:  BL3-1: Built : 15:14:55, Feb  9 2016
 INFO:    BL3-1: Initializing runtime services
 INFO:    BL3-1: Preparing for EL3 exit to normal world
-INFO:    BL3-1: Next image address = 0x8000000000
+INFO:    BL3-1: Next image address = 0x8000e80000
 INFO:    BL3-1: Next image spsr = 0x3c9
-Boot firmware (version  built at 18:27:24 on Nov 23 2015)
-Version 2.17.1249. Copyright (C) 2015 American Megatrends, Inc.                 
-BIOS Date: 11/23/2015 18:23:09 Ver: ROD0085E00                                  
-Press <DEL> or <ESC> to enter setup.  
+Boot firmware (version  built at 15:18:14 on Feb  9 2016)
+Version 2.17.1249. Copyright (C) 2016 American Megatrends, Inc.                 
+BIOS Date: 02/09/2016 15:15:23 Ver: ROD1001A00                                  
+Press <DEL> or <ESC> to enter setup.
 .
 >>Checking Media Presence......
 >>Media Present......
@@ -77,7 +77,7 @@ Press <DEL> or <ESC> to enter setup.
 
 At this stage you should be able to see the Grub 2 menu, like:
 
-bc. Install CentOS 7 ARM 64-bit
+bc. Install CentOS 7 ARM 64-bit - Reference Platform - 16.03
 .
 Use the  and  keys to change the selection.                       
 Press 'e' to edit the selected item, or 'c' for a command prompt.
@@ -86,20 +86,20 @@ Now just hit enter and wait for the kernel and initrd to load, which automatical
 
 You should see the following:
 
-bc. EFI stub: Booting Linux Kernel...
+bc. 
+
+EFI stub: Booting Linux Kernel...
 EFI stub: Using DTB from configuration table
 EFI stub: Exiting boot services and installing virtual address map...
 [    0.000000] Booting Linux on physical CPU 0x0
 [    0.000000] Initializing cgroup subsys cpuset
 [    0.000000] Initializing cgroup subsys cpu
 [    0.000000] Initializing cgroup subsys cpuacct
-[    0.000000] Linux version 4.2.0-0.21.el7.aarch64 (mockbuild@apmb0.centos.lab) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-4) (GCC) ) #1 SMP Thu Dec 24 15:43:05 CST 2015
-[    0.000000] CPU: AArch64 Processor [411fd072] revision 2
-[    0.000000] Detected PIPT I-cache on CPU0
-[    0.000000] alternatives: enabling workaround for ARM erratum 832075
+[    0.000000] Linux version 4.4.0-reference.104.aarch64 (buildslave@r2-a19) (gcc version 4.8.3 20140911 (Red Hat 4.8.3-9) (GCC) ) #1 SMP Tue Mar 1 20:52:15 UTC 2016
+[    0.000000] Boot CPU: AArch64 Processor [411fd072]
 [    0.000000] efi: Getting EFI parameters from FDT:
 [    0.000000] EFI v2.40 by American Megatrends
-[    0.000000] efi:  ACPI 2.0=0x83ff1c6000  SMBIOS 3.0=0x83ff349718 
+[    0.000000] efi:  ACPI 2.0=0x83ff1c3000  SMBIOS 3.0=0x83ff347798 
 ...
 Welcome to CentOS Linux 7 (AltArch) dracut-033-359.el7 (Initramfs)!
 ...
@@ -154,7 +154,7 @@ bc. cmdline
 url --url="http://mirror.centos.org/altarch/7/os/aarch64/"
 repo --name="CentOS" --baseurl=http://mirror.centos.org/altarch/7/os/aarch64/
 repo --name="Updates" --baseurl=http://mirror.centos.org/altarch/7/updates/aarch64/
-repo --name="linaro-staging" --baseurl=http://repo.linaro.org/rpm/linaro-staging/centos-7/repo/
+repo --name="linaro-overlay" --baseurl=http://repo.linaro.org/rpm/linaro-overlay/centos-7/repo/
 lang en_US.UTF-8
 keyboard us
 timezone --utc Etc/UTC
@@ -186,12 +186,8 @@ h4. Setting up grub.cfg
 
 Now back to your tftp server, change the original grub.cfg file adding the location of your kickstart file:
 
-bc. menuentry 'Install CentOS 7 ARM 64-bit' --class red --class gnu-linux --class gnu --class os {
-    linux (tftp)/centos7/vmlinuz ip=dhcp inst.repo=http://mirror.centos.org/altarch/7/os/aarch64/ inst.ks=http://people.linaro.org/~ricardo.salveti/centos-ks.cfg
-    initrd (tftp)/centos7/initrd.img
-}
-menuentry 'Install CentOS 7 ARM 64-bit - Reference Platform' --class red --class gnu-linux --class gnu --class os {
-    linux (tftp)/centos7/vmlinuz ip=dhcp inst.stage2=https://builds.96boards.org/snapshots/reference-platform/components/centos-installer/latest/ inst.repo=http://mirror.centos.org/altarch/7/os/aarch64/ inst.ks=http://people.linaro.org/~ricardo.salveti/centos-ks.cfg
+bc. menuentry 'Install CentOS 7 ARM 64-bit - Reference Platform - 16.03' --class red --class gnu-linux --class gnu --class os {
+    linux (tftp)/centos7/vmlinuz ip=dhcp inst.stage2=https://builds.96boards.org/releases/reference-platform/components/centos-installer/16.03/ inst.ks=http://people.linaro.org/~ricardo.salveti/centos-ks.cfg
     initrd (tftp)/centos7/initrd.img
 }
 
