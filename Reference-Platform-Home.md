@@ -24,6 +24,8 @@ Choose Consumer Edition or Enterprise Edition to start setting up your instructi
 - Reference Software - Enterprise Edition
    - [D02](https://github.com/96boards/documentation/wiki/Reference-Platform-EE-D02-Home)
    - [Overdrive](https://github.com/96boards/documentation/wiki/Reference-Platform-EE-Overdrive-Home)
+   - [X-Gene Mustang](https://github.com/96boards/documentation/wiki/Reference-Platform-EE-X-Gene-Mustang-Home)
+   - [HP ProLiant m400](https://github.com/96boards/documentation/wiki/Reference-Platform-EE-HP-m400-Home)
 
 
 ***
