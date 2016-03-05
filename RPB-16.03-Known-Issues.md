@@ -2,13 +2,6 @@
 
 ## Reference Platform Build - 15.12 Release - Known Issues
 
-| Bug Legend   |        |
-|:-----:|:-------|
-| CONFIRMED      |      |
-| IN_PROGRESS      |      |
-|   RESOLVED  |      |
-| VERIFIED | |
-
 ### Enterprise
 
 Fixed Issues
@@ -93,3 +86,19 @@ Fixed Issues
 | [bug 279](https://bugs.96boards.org/show_bug.cgi?id=279) | [RPB-AOSP] "x App has stopped" happens frequently |
 | [bug 280](https://bugs.96boards.org/show_bug.cgi?id=280) | [RPB-AOSP] App crashes when SD card mounted manually |
 | [bug 277](https://bugs.96boards.org/show_bug.cgi?id=277) | [RPB-AOSP] SD card auto mount from UI doesn't work |
+
+
+***
+
+
+
+| Bug Legend   |        |
+|:-----:|:-------|
+| CONFIRMED      | If a bug can be reproduced, a member from the 96Boards, Linaro or QA team will change its status from **UNCONFIRMED** to **CONFIRMED** |
+| IN_PROGRESS    |  This bug is currently being worked on by either the 96Boards, Linar, or QA team    |
+|   RESOLVED  | Development is finished with a bug. Please [click here](https://wiki.documentfoundation.org/QA/Bugzilla/Fields/Status/RESOLVED) for information on sub-states  |
+| VERIFIED | A team has VERIFIED a working solution for a bug |
+
+***
+
+[Back to top](https://github.com/96boards/documentation/wiki/RPB-16.03-Known-Issues)
