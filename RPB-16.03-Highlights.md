@@ -32,15 +32,19 @@
 #### CE Debian RPB for HiKey (CircuitCo & LeMaker):
 - Default Grub 2 boot configuration updated, now supporting kernel package upgrades
 - xserver-xorg-video-armsoc now included by default (still using software rendering, Mali integration expected as part of the next release) 
+
 #### CE AOSP RPB (common):
 - AOSP Android Marshmallow 6.0 (android-6.0.1_r16) 
+
 #### CE AOSP RPB for DragonBoard™ 410:
 - Initial build, available as Developer Preview (not suitable for end users).
 - Mesa and Freedreno support
 - Kernel 4.4.0  
+
 #### CE AOSP RPB for HiKey (CircuitCo & LeMaker):
 - AOSP Android Marshmallow 6.0 (android-6.0.1_r16)
 - 4.1 based kernel 
+
 #### CE OE/Yocto RPB:
 - Included the unified 4.4.0 kernel
 - meta-backports created, to contain backported recipes used by the reference platform
