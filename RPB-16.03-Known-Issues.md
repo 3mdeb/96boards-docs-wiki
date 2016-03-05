@@ -71,7 +71,7 @@ Fixed Issues
 | [bug 284](https://bugs.96boards.org/show_bug.cgi?id=284) | [RPB] Dragon board Display sleep not working |
 | [bug 289](https://bugs.96boards.org/show_bug.cgi?id=289) | [RPB] USB devices don't work after reboot |
 | [bug 207](https://bugs.96boards.org/show_bug.cgi?id=207) | [RPB] Bluetooth does not work on Dragon board debian |
-| [bug [153](https://bugs.96boards.org/show_bug.cgi?id=153) | [RPB] Missing information about hwpack usage|
+| [bug 153](https://bugs.96boards.org/show_bug.cgi?id=153) | [RPB] Missing information about hwpack usage|
 
 
 Fixed Issues
