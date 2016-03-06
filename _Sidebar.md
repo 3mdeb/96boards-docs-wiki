@@ -5,8 +5,7 @@
    - [Feedback and Support](https://github.com/96boards/documentation/wiki/Reference-Platform-Feedback-and-Support)
    - [Kernel Policy](https://github.com/96boards/documentation/wiki/RP-Kernel-Policy)
 - [DragonBoard™ 410c](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Home)
-  - [[Installation Guide for Linux and Android | Dragonboard-410c-Installation-Guide-for-Linux-and-Android]]
-  - [[Creation of Kernel Boot Image | Dragonboard-410c-Boot-Image]]
+  - [Downloads](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Crossroads#choose-your-build-operating-system-and-install-method)
   - [Hardware Manual](https://github.com/96boards/documentation/blob/master/dragonboard410c/HardwareManual_DragonBoard.pdf)
   - [Android User Guide](https://github.com/96boards/documentation/blob/master/dragonboard410c/AndroidUserGuide_DragonBoard.pdf)
   - [Linux User Guide](https://github.com/96boards/documentation/blob/master/dragonboard410c/LinuxUserGuide_DragonBoard.pdf)
@@ -14,6 +13,8 @@
   - [[LAVA|D410CLAVA]]
   - [Schematics](http://linaro.co/db410c-schematics)
 - [HiKey](https://github.com/96boards/documentation/wiki/HiKey-Home)
+  - [Downloads](https://github.com/96boards/documentation/wiki/HiKey-Crossroads#choose-your-build-operating-system-and-install-method)
+  - [Hardware Manual](https://github.com/96boards/documentation/blob/master/hikey/HiKey_User_Guide_Rev0.2.pdf?raw=true)
   - [[UEFI | HiKeyUEFI]]
   - [[OP-TEE | HiKeyOPTEE]]
   - [[LAVA | HiKeyLAVA]]
