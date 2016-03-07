@@ -4,6 +4,8 @@
 
 ## D02
 
+****
+
 ### Boot Firmware
 
 The [UEFI/EDK2 guide for EE](https://github.com/96boards/documentation/wiki/UEFI-EDK2-Guide-for-EE) provides information about building and flashing the boot firmware for D02.
@@ -25,6 +27,8 @@ The Reference Platform kernel will act as an integration point (very similar to 
 #### D02 - QuickStart
 
 UEFI/EDK2 is supported by D02 (with build from source instructions available as part of the [UEFI EDK2 Guide](https://github.com/96boards/documentation/wiki/UEFI-EDK2-Guide-for-EE#building), and since ACPI support is new, please make sure you are using the latest firmware available at [https://builds.96boards.org/releases/reference-platform/components/uefi/16.03/release/d02/](https://builds.96boards.org/releases/reference-platform/components/uefi/16.03/release/d02/) before proceeding with kernel testing or installing your favorite distribution (and please make sure to report your firmware version when reporting issues and bugs).
+
+**NOTE:** 16.03 kernel **requires** the 16.03 UEFI/EDK2 firmware release!
 
 ##### Flashing the firmware
 
