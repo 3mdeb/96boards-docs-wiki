@@ -40,7 +40,7 @@ To build the Linux kernel, you can use the following instructions:
 #### Step 1: Setting up your environment on your host computer
 
 - Open your Terminal and cd into your desired directory
-- Make a new folder using `mkdir` and call is something relevant
+- Make a new folder using `mkdir`, name it something relevant
 
 ```shell
 #Example of desired directory
