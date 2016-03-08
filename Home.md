@@ -16,7 +16,7 @@ Welcome to the supporting documentation for <a href="http://96boards.org" target
 
 - [Dragonboard™ 410c](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Home)
 - [HiKey](https://github.com/96boards/documentation/wiki/HiKey-Home)
-- [Bubblegum96](https://github.com/96boards/documentation/wiki/Bubblegum96-Home)
+- [Bubblegum-96](https://github.com/96boards/documentation/wiki/Bubblegum96-Home)
 
 <a href="https://www.96boards.org/products/accessories/power/" target="_blank">**Power Adapters**</a> - For all 96Boards
 
