@@ -39,30 +39,70 @@ To initialize your build environment, you need to run:
     repo sync
     source setup-environment [<build folder>]
 
-* after the command `repo sync` returns all the OpenEmbedded recipes have been downloaded locally.
+* after the command `repo sync` returns, all the OpenEmbedded recipes have been downloaded locally.
 * you will be prompted to choose the target machine, pick `dragonboard-410c`
 * <build folder> is optional, if missing it will default to `build-$MACHINE`
 
 The script `setup-environment` will create sane default configuration files in <build folder>/conf, you can inspect them and modify them if needed.
 
-# Bootloaders and eMMC partitions
-
-The BSP layer assumes that the Linux Bootloaders and eMMC partition layout are used on the DragonBoard 410c (not the Android ones). You can download the latest Linux bootloader package from [here](http://builds.96boards.org/releases/dragonboard410c/linaro/rescue/latest/). If you use this partition layout, the eMMC has the following partition:
-
-* `/dev/mmcblk0p7` , aka `aboot` is used for the bootloader (LK/fastboot)
-* `/dev/mmcblk0p8` , aka `boot` is used for the boot image (kernel, device tree, initrd)
-* `/dev/mmcblk0p10` , aka `rootfs` is used for the root file system
- 
-# Build a minimal, console only image
+# Build a minimal, console-only image
 
 To build a console image, you can run:
 
     bitbake core-image-minimal
 
-At the end of the build, the root file system image will be available as `tmp-eglibc/deploy/images/dragonboard-410c/core-image-minimal-dragonboard-410c.ext4.gz`. This file , once uncompressed, can be directly flashed into the `rootfs` partition.
+At the end of the build, your build artifacts will be found in `tmp-eglibc/deploy/images/dragonboard-410c`. The two artifacts you will use to update your DragonBoard are:
+* `core-image-minimal-dragonboard-410c.ext4.gz` and
+* `boot-dragonboard-410c.img`
 
-Similarly, the boot image will be available at `tmp-eglibc/deploy/images/dragonboard-410c/boot-dragonboard-410c.img`, and it can be booted (or flashed) with fastboot.
+# Bootloaders and eMMC partitions
 
+Build artifacts from your OE build will be flashed into the DragonBoard's on-board eMMC (in contrast to some other boards which run their images from an SDcard). The OpenEmbedded BSP layer assumes that the _Linux_ Bootloaders and eMMC partition layout are used on the DragonBoard 410c (not the _Android_ ones; by default DragonBoards come pre-configured with the Android eMMC partition layout). You can download the latest Linux bootloader package from [here](http://builds.96boards.org/releases/dragonboard410c/linaro/rescue/latest/) to your development host, it will be named something like `dragonboard410c_bootloader_emmc_linux-<version>.zip`.
+
+Whether your DragonBoard is using the Android eMMC partition layout or the Linux partition eMMC layout, you will use the Android `fastboot` utility on your development host for managing the board's eMMC partitions. If you are using a relatively recent Linux distribution on your development host, it probably already has a package that includes the `fastboot` utility (it might be named something like `android-tools` or `android-tools-fastboot`) so go ahead and install it on your development host. In order for your development host's fastboot utility to interact with the DragonBoard, the DragonBoard must be booted into a special `fastboot mode`. The procedure to do so is as follows:
+* remove power from your DragonBoard
+* plug a USB cable from your development host to your DragonBoard's J4 connector
+* while holding down S4 on the DragonBoard (the one marked "(-)"), insert the power adapter
+* after a few seconds you can release S4
+
+To verify your cables and that the above procedure worked, on your development host run:
+
+    # sudo fastboot devices
+
+and you should get a non-empty response, e.g.
+
+    # sudo fastboot devices
+    83581d40        fastboot
+
+If this is your first time using a particular DragonBoard, you will need to switch its eMMC partition layout to the Linux layout, but this procedure only needs to be done once for a given board. After switching your layout, you only have to update your board with your latest build artifacts.
+
+The procedure for updating your eMMC partitions is as follows. Put your DragonBoard into `fastboot mode` (see procedure above) then perform these steps on your development host:
+* download the latest Linux bootloader package (e.g. `dragonboard410c_bootloader_emmc_linux-<version>.zip`)
+* unzip its contents
+* run the `flashall` script (as root) that you will find after unzipping the Linux bootloader package
+
+At this point your eMMC has the following partition layout:
+
+* `/dev/mmcblk0p7` , aka `aboot` is used for the bootloader (LK/fastboot)
+* `/dev/mmcblk0p8` , aka `boot` is used for the boot image (kernel, device tree, initrd)
+* `/dev/mmcblk0p10` , aka `rootfs` is used for the root file system
+
+# Flashing build artifacts
+
+In the following description, replace `image` with the name of the image you built. For example: if you built `core-image-minimal` then `image` will be `core-image-minimal`.
+
+At the end of any successful build you will end up with the following artifacts (amongst others)
+* `image-dragonboard-410c.ext4.gz` and
+* `boot-dragonboard-410c.img`
+
+These will be found in your `tmp-eglibc/deploy/images/dragonboard-410c` directory.
+
+To install these to your DragonBoard's eMMC from your development host:
+
+    # gzip -d < image-dragonboard-410c.ext4.gz > image-dragonboard-410c.ext4
+    # fastboot flash rootfs image-dragonboard-410c.ext4
+    # fastboot flash boot boot-dragonboard-410c.img
+ 
 # Proprietary firmware blob
 
 When running the `setup-environment` script, you were asked to read/accept the Qualcomm EULA. The EULA is required to access the proprietary firmware, such as the GPU firmware , WLAN, ... 
@@ -73,7 +113,7 @@ If you did not accept the EULA, the firmware are not downloaded, and not install
 
 # Build a sample Wayland/Weston image
 
-OpenEmbedded comes with a basic Wayland/Weston image, but it has a few issues, and it is for now recommended to use the sample image included in the Qualcomm BSP layer:
+OpenEmbedded comes with a basic Wayland/Weston image, but it has a few issues, and it is for now recommended to use the sample image included in the Qualcomm layer:
 
     bitbake weston-image
 
