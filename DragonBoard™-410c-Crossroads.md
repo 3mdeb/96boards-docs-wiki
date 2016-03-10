@@ -12,7 +12,7 @@
 |  [<img src="http://i.imgur.com/VH1IfZC.png" data-canonical-src="http://i.imgur.com/VH1IfZC.png" width="150" height="105" />](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Home) |  [<img src="http://i.imgur.com/jl4GG0d.png" data-canonical-src="http://i.imgur.com/jl4GG0d.png" width="80" height="100" />](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Crossroads#reference-platform-build)   |  [<img src="http://i.imgur.com/7rrS2JR.png" data-canonical-src="http://i.imgur.com/7rrS2JR.png" width="80" height="100" />](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Crossroads#reference-platform-build)   |  [<img src="http://i.imgur.com/dnsIEuC.png" data-canonical-src="http://i.imgur.com/dnsIEuC.png" width="80" height="100" />](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Crossroads#reference-platform-build)   |
 | :-: | :-: | :-: | :-: |
 | [<img src="http://i.imgur.com/OQGR5yY.png" data-canonical-src="http://i.imgur.com/OQGR5yY.png" width="80" height="100" />]() | [Fastboot](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RP-Download) | [SD Card](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Linaro-Debian-Download#your-build-choice) / [Fastboot](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Linaro-Debian-Download#your-build-choice-1) | N/A |
-| [<img src="http://i.imgur.com/7wy1996.png" data-canonical-src="http://i.imgur.com/7wy1996.png" width="80" height="100" />]() | N/A | N/A | [SD Card](https://github.com/96boards/documentation/wiki/Dragonboard™-410c-QC-Android-Download#your-build-choice) / [Fastboot](https://github.com/96boards/documentation/wiki/Dragonboard™-410c-QC-Android-Download#your-build-choice-1) |
+| [<img src="http://i.imgur.com/7wy1996.png" data-canonical-src="http://i.imgur.com/7wy1996.png" width="80" height="100" />]() | [Fastboot](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RP-Download#your-build-choice-1) | N/A | [SD Card](https://github.com/96boards/documentation/wiki/Dragonboard™-410c-QC-Android-Download#your-build-choice) / [Fastboot](https://github.com/96boards/documentation/wiki/Dragonboard™-410c-QC-Android-Download#your-build-choice-1) |
 
 ***
 ### Reference Platform Build
@@ -21,7 +21,7 @@
 - RPB Release: **16.03**
 - Pre-built image(s): _**Linaro/Debian**_ and _**Android**_
 - Available installation method(s): _**Fastboot**_ ONLY
-- Previous releases [available here](http://builds.96boards.org/releases/reference-platform/debian/dragonboard410c/)
+- Previous releases ([Debian](http://builds.96boards.org/releases/reference-platform/debian/dragonboard410c/))
 - Build from Source ([Debian](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RPB-Debian-Build-Source-16.03) / [Android]())
 - Known Issues ([Debian](https://github.com/96boards/documentation/wiki/RPB-15.12-Known-Issues#debian) / [Android]())
 
