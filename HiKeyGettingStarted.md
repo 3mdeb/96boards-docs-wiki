@@ -844,11 +844,116 @@ We pull most of the packages from Debian official repository. The remaining chan
 
 ### AOSP Build From Source
 
-AOSP sources are hosted in these repositories:
-- [https://github.com/96boards/android_hardware_ti_wpan](https://github.com/96boards/android_hardware_ti_wpan)
-- [https://github.com/96boards/android_external_wpa_supplicant_8](https://github.com/96boards/android_external_wpa_supplicant_8)
-- [https://github.com/96boards/android_device_linaro_hikey](https://github.com/96boards/android_device_linaro_hikey)
-- [https://github.com/96boards/android_manifest](https://github.com/96boards/android_manifest)
+Use the following commands to download, build, and run Android on a HiKey board.
+
+#### Compiling userspace
+
+##### Step 1: Download the Android source tree
+
+```shell
+$ repo init -u https://android.googlesource.com/platform/manifest -b master
+
+$ repo sync -j24
+```
+##### Step 2: Download and extract HDMI binaries into the Android source tree
+
+$ wget https://dl.google.com/dl/android/aosp/linaro-hikey-20160226-67c37b1a.tgz
+
+$ tar xzf linaro-hikey-20160226-67c37b1a.tgz
+
+$ ./extract-linaro-hikey.sh
+
+##### Step 3: Install mcopy utility
+
+```shell
+$ apt-get install tools
+```
+
+##### Step 4: Build
+
+```shell
+$ . ./build/envsetup.sh
+
+$ lunch hikey-userdebug
+
+$ make -j32
+```
+
+> ***Note:*** Note: For 4GB eMMC, instead of `$ make -j32` use: `$ make -j32 TARGET_USERDATAIMAGE_4GB=true`.
+
+***
+
+#### Installing initial fastboot and ptable
+
+##### Step 1: Select special bootloader mode by linking J15 1-2 and 3-4 pins (for details, refer to the <a href="https://www.96boards.org/wp-content/uploads/2015/02/HiKey_User_Guide_Rev0.2.pdf" target="_blank">HiKey User Guide</a>).
+
+##### Step 2: Connect USB to PC to get ttyUSB device (ex: /dev/ttyUSB1).
+
+##### Step 3: Power the board
+
+```shell
+$ cd device/linaro/hikey/installer
+
+$ ./flash-all.sh /dev/ttyUSB1 [4g]
+```
+
+##### Step 4: Remove jumper 3-4 and power the board
+
+***
+
+#### Flashing images
+
+##### Step 1: Enter fastboot mode by linking J15 1-2 and 5-6 pins
+
+##### Step 2: Run the following commands
+
+```shell
+$ fastboot flash boot out/target/product/hikey/boot_fat.uefi.img
+
+$ fastboot flash -w system out/target/product/hikey/system.img
+```
+
+##### Step 3: Remove jumper 5-6 and power the board.
+
+***
+
+#### Building the kernel
+
+##### Step 1: Run the following commands
+
+```shell
+$ git clone https://android.googlesource.com/kernel/hikey-linaro
+
+$ cd hikey-linaro
+
+$ git checkout -b android-hikey-linaro-4.1 origin/android-hikey-linaro-4.1
+
+$ make ARCH=arm64 hikey_defconfig
+
+$ make ARCH=arm64 CROSS_COMPILE=aarch64-linux-android- -j24
+```
+
+##### Step 2: Copy output to the hikey kernel directory (/kernel/hikey-linaro)
+
+- Copy hi6220-hikey.dtb (`arch/arm64/boot/dts/hisilicon/hi6220-hikey.dtb`) to the hikey-kernel directory.
+- Copy the Image directory (`arch/arm64/boot/Image`) to the hikey-kernel directory.
+
+***
+
+#### Setting monitor resolution
+
+Edit `device/linaro/hikey/bootloader/EFI/BOOT/grub.cfg` and configure the video setting. Example setting for a 24" monitor: `video=HDMI-A-1:1280x800@60`.
+
+***
+
+#### Configuring kernel serial output (uart3)
+
+Set the J2 low speed expansion connector to 1 - Gnd, 11 - Rx, 13 - Tx . For details, refer to the (<a href="https://www.96boards.org/wp-content/uploads/2015/02/HiKey_User_Guide_Rev0.2.pdf" target="_blank">HiKey User Guide</a>).
+
+<br><br><br><br><br><br>
+***
+
+**Warning: most information below this message is out of date**
 
 **Build setup**
 
