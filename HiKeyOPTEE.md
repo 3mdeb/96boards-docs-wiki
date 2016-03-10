@@ -85,7 +85,7 @@ cd ..
 The following file is now built:
 * arm-trusted-firmware/build/hikey/release/fip.bin
 
-**Note:** In case the build fails with ```mk/config.mk:95 *** Could not partse TEE_IMPL_VERSION (8a933cc), expected format: <major>.<minor>[anything else}. Stop.```, please export TEE_IMPL_VERSION with a valid version string (e.g. ```export TEE_IMPL_VERSION=1.1.0```).
+**Note:** In case the build fails with ```mk/config.mk:95 *** Could not partse TEE_IMPL_VERSION (8a933cc), expected format: <major>.<minor>[anything else}. Stop.```, please export TEE_IMPL_VERSION with a valid version string (e.g. ```export TEE_IMPL_VERSION=1.1.0```), and then retry the build.
 
 ### Build the OP-TEE client <a name="optee-client"></a>
 ```
