@@ -950,10 +950,10 @@ Edit `device/linaro/hikey/bootloader/EFI/BOOT/grub.cfg` and configure the video 
 
 Set the J2 low speed expansion connector to 1 - Gnd, 11 - Rx, 13 - Tx . For details, refer to the (<a href="https://www.96boards.org/wp-content/uploads/2015/02/HiKey_User_Guide_Rev0.2.pdf" target="_blank">HiKey User Guide</a>).
 
-<br><br><br><br><br><br>
+**End of AOSP Build from Source**
 ***
 
-**Warning: most information below this message is out of date**
+
 
 **Build setup**
 
