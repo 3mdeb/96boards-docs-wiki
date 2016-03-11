@@ -49,10 +49,10 @@ The script `setup-environment` will create sane default configuration files in <
 
 To build a console image, you can run:
 
-    bitbake core-image-minimal
+    $ bitbake rpb-console-image
 
 At the end of the build, your build artifacts will be found in `tmp-eglibc/deploy/images/dragonboard-410c`. The two artifacts you will use to update your DragonBoard are:
-* `core-image-minimal-dragonboard-410c.ext4.gz` and
+* `rpb-console-image-dragonboard-410c.ext4.gz` and
 * `boot-dragonboard-410c.img`
 
 # Bootloaders and eMMC partitions
@@ -89,7 +89,7 @@ At this point your eMMC has the following partition layout:
 
 # Flashing build artifacts
 
-In the following description, replace `image` with the name of the image you built. For example: if you built `core-image-minimal` then `image` will be `core-image-minimal`.
+In the following description, replace `image` with the name of the image you built. For example: if you built `rpb-console-image` then `image` will be `rpb-console-image`.
 
 At the end of any successful build you will end up with the following artifacts (amongst others)
 * `image-dragonboard-410c.ext4.gz` and
@@ -109,37 +109,15 @@ When running the `setup-environment` script, you were asked to read/accept the Q
 
 If you accepted the EULA, when building an image for DragonBoard 410c all proprietary firmware are installed automatically in `/lib/firmware`, and a copy of the EULA is added as '/etc/license.txt`. 
 
-If you did not accept the EULA, the firmware are not downloaded, and not installed into the image. You can manually manage the firmware and download them separately from [Qualcomm Developer Network](https://developer.qualcomm.com/download/linux-ubuntu-board-support-package-v1.1.zip). 
-
-# Build a sample Wayland/Weston image
-
-OpenEmbedded comes with a basic Wayland/Weston image, but it has a few issues, and it is for now recommended to use the sample image included in the Qualcomm layer:
-
-    bitbake weston-image
-
-This image includes a few additional features, such as `systemd`, `connman` which makes it simpler to use. Once built, the image will be available at `tmp-eglibc/deploy/images/dragonboard-410c/weston-image-dragonboard-410c.ext4.gz`. And it can be flashed into `rootfs` partition.
-
-If you boot this image on the board, you should get a command prompt on the HDMI monitor. A user called `linaro` exists (and has no password). once logged in a VT, you run start weston with:
-
-    weston-launch
-
-And that should get you to the Weston desktop shell.
+If you did not accept the EULA, the firmware are not downloaded, and not installed into the image. You can manually manage the firmware and download them separately from [Qualcomm Developer Network](https://developer.qualcomm.com/download/linux-ubuntu-board-support-package-v1.1.zip).
 
 # Build a simple X11 image
 
-To build an X11 image with GPU hardware accelerated support, you need to modify the `local.conf` configuration file. It is by default set to work for wayland. In `conf/local.conf`, locate the following lines:
+To build an X11 image with GPU hardware accelerated support run:
 
-    # default to using Wayland, if you need to make an X11 image, comment or delete the next 2 lines
-    DISTRO_FEATURES_append = " wayland"
-    DISTRO_FEATURES_remove = " x11"
+    $ bitbake rpb-desktop-image
 
-and comment them out.
-
-Then to build the image, you can run:
-
-    bitbake core-image-x11
-
-At the end of the build, the root file system image will be available as `tmp-eglibc/deploy/images/dragonboard-410c/core-image-x11-dragonboard-410c.ext4.gz`.
+At the end of the build, the root file system image will be available as `tmp-eglibc/deploy/images/dragonboard-410c/rpb-desktop-image-dragonboard-410c.ext4.gz`.
 
 Then you can finally start the X server, and run any graphical application:
 
@@ -151,7 +129,7 @@ The default X11 image does not include a window manager, you can easily add `met
 
     CORE_IMAGE_EXTRA_INSTALL += "metacity"
 
-and rebuild the `core-image-x11` image, it will now include `metacity`, which can be started like this:
+and rebuild the `rpb-desktop-image` image, it will now include `metacity`, which can be started like this:
 
     X&
     export DISPLAY=:0
@@ -159,6 +137,20 @@ and rebuild the `core-image-x11` image, it will now include `metacity`, which ca
     glxgears
 
 Similarly, you can replace `metacity` above with `openbox`.
+
+# Build a sample Wayland/Weston image
+
+OpenEmbedded comes with a basic Wayland/Weston image, but it has a few issues, and it is for now recommended to use the sample image included in the Linaro RPB (Reference Platform Build) layer:
+
+    $ DISTRO=rpb-wayland bitbake rpb-weston-image
+
+This image includes a few additional features, such as `systemd`, `connman` which makes it simpler to use. Once built, the image will be available at `tmp-eglibc/deploy/images/dragonboard-410c/rpb-weston-image-dragonboard-410c.ext4.gz`. And it can be flashed into `rootfs` partition.
+
+If you boot this image on the board, you should get a command prompt on the HDMI monitor. A user called `linaro` exists (and has no password). Once logged in a VT, you run start weston with:
+
+    weston-launch
+
+And that should get you to the Weston desktop shell.
 
 # Support
 
