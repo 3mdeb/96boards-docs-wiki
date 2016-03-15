@@ -67,7 +67,7 @@ The following files are now built:
 ### Build UEFI for HiKey <a name="uefi-hikey"></a>
 ```
 git clone -b hikey --depth 1 https://github.com/96boards/edk2.git linaro-edk2
-git clone -b hikey --depth 1 https://github.com/96boards/arm-trusted-firmware.git
+git clone -b hikey_gendrv --depth 1 https://github.com/linaro-swg/arm-trusted-firmware.git
 git clone -b hikey --depth 1 https://github.com/96boards/LinaroPkg.git
 git clone git://git.linaro.org/uefi/uefi-tools.git
 git clone --depth 1 https://github.com/OP-TEE/optee_os.git
