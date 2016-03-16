@@ -3,7 +3,7 @@
 How to integrate OP-TEE into your HiKey Linux image
 
 **NOTE<BR>
-As of 24-Nov-2015, OP-TEE has been integrated into 96boards HiKey releases and snapshots images so if you're using a build that is of above date or newer, there is no longer a need to use these instructions with the exception of building the test suite, i.e. you only need to perform steps 6, 7a, 7b, 7c, 7e, 8a, 8c and 9!**
+As of 24-Nov-2015, OP-TEE has been integrated into 96boards HiKey releases and snapshots images so if you're using a build that is of above date or newer, there is no longer a need to use these instructions with the exception of building the test suite, i.e. you only need to perform steps 6, 7a, 7b, 7c, 7e, 8 and 9!**
 
 ## Build instructions
 
@@ -197,8 +197,7 @@ sudo umount mnt/
 ```
 
 ## 8. Flash binaries to eMMC <a name="flash"></a>
-a) In addition to the fip.bin and jessie.updated.img built and created above, you also need:
-
+In addition to the fip.bin and jessie.updated.img built and created above, you also need:
 ```
 wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/l-loader.bin
 wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux.img
@@ -221,22 +220,21 @@ The flashing process requires to be in **recovery mode** if user wants to update
 $ sudo python hisi-idt.py --img1=l-loader.bin
 ```
 
-b) flash the boot images (**order must be respected**)
-```
+**do not reboot yet**
+* run fastboot commands to flash the images (**order must be respected**)
+```shell
 $ sudo fastboot flash ptable ptable-linux.img
 $ sudo fastboot flash fastboot fip.bin
 $ sudo fastboot flash nvme nvme.img
 $ sudo fastboot flash boot boot-fat.uefi.img
-```
-
-c) flash the updated system image
-```
 $ sudo fastboot flash system jessie.updated.img
 ```
 
 * turn off HiKey board
 * remove the jumper of pin3-pin4 on J15
 * turn on HiKey board
+
+**NOTE:** UEFI may report "Fail to start BootNext" if you have an SD card installed. Remove SD card and reboot to try again.
 
 ## 9. Running and Testing <a name="runtest"></a>
 
