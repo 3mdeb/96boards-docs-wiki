@@ -3,7 +3,7 @@
 How to integrate OP-TEE into your HiKey Linux image
 
 **NOTE<BR>
-As of 24-Nov-2015, OP-TEE has been integrated into 96boards HiKey releases and snapshots images so if you're using builds that are of above date or newer, there is no longer a need to use these instructions with the exception of building fip.bin and the test suite, i.e. you only need to perform steps 4, 6, 7a, 7b, 7c, 7e, 8 and 9!**
+As of 24-Nov-2015, OP-TEE has been integrated into 96boards HiKey releases and snapshots images so if you're using builds that are of above date or newer, there is no longer a need to use these instructions with the exception of building fip.bin and the test suite, i.e. you only need to perform steps 1, 4, 6, 7a, 7b, 7c, 7e, 8 and 9!**
 
 ## Build instructions
 
