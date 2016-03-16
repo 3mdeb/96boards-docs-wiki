@@ -144,13 +144,13 @@ The following files are now built:
 
 **NOTE:** Make sure you complete building the OP-TEE driver, client and test suite first!
 
-First download the latest Debian based build published [here](https://builds.96boards.org/snapshots/hikey/linaro/debian/latest). You can pick an eMMC rootfs:
-* [hikey-jessie_[developer|alip]_YYYYMMDD-XXX.emmc.img.gz](https://builds.96boards.org/snapshots/hikey/linaro/debian/354/hikey-jessie_developer_20150929-354.emmc.img.gz)
+First download the latest Debian based build published [here](https://builds.96boards.org/snapshots/hikey/linaro/debian/latest). You can pick either the developer or alip eMMC rootfs:
+* hikey-jessie_[developer|alip]_YYYYMMDD-XXX.emmc.img.gz
 
-For example, to download the latest Debian build 354:
+For example:
 
 ```
-wget https://builds.96boards.org/snapshots/hikey/linaro/debian/355/hikey-jessie_developer_20150929-354.emmc.img.gz
+wget https://builds.96boards.org/snapshots/hikey/linaro/debian/410/hikey-jessie_developer_20160225-410.emmc.img.gz
 gunzip *.img.gz
 ```
 
