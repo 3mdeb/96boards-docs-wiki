@@ -20,43 +20,7 @@
 
 |     |
 | :-: |
-| <a href="http://ms-iot.github.io/content/en-US/win10/DB410c.htm" target="_blank"><img src="http://i.imgur.com/1Sg2I7N.png" data-canonical-src="http://i.imgur.com/1Sg2I7N.png" width="100" height="100" /></a> <br> <a href="http://ms-iot.github.io/content/en-US/win10/DB410c.htm" target="_blank">Windows IoT Core</a> - For all 96Boards|   
-
-***
-
-### Reference Platform Build
-
-[<img align="left" src="http://i.imgur.com/jl4GG0d.png" data-canonical-src="http://i.imgur.com/jl4GG0d.png" width="125" height="157" />]()
-- RPB Release: **16.03**
-- Pre-built image(s): _**Linaro/Debian**_ and _**Android**_
-- Available installation method(s): _**Fastboot**_ ONLY
-- Previous releases ([Debian](http://builds.96boards.org/releases/reference-platform/debian/dragonboard410c/))
-- Build from Source ([Debian](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RPB-Debian-Build-Source-16.03) / [Android]())
-- Known Issues ([Debian](https://github.com/96boards/documentation/wiki/RPB-15.12-Known-Issues#debian) / [Android]())
-
-***
-
-### Linaro Build
-
-[<img align="left" src="http://i.imgur.com/7rrS2JR.png" data-canonical-src="http://i.imgur.com/7rrS2JR.png" width="125" height="157" />]()
-- Linaro/Debian Release: **15.11**
-- Pre-built image(s): _**Linaro/Debian**_
-- Available installation method(s): _**SD Card**_ and _**Fastboot**_
-- Previous releases ([Debian](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/))
-- Build from Source ([Debian]())
-- Known Issues ([Debian]())
-
-***
-
-### Qualcomm® Build
-
-[<img align="left" src="http://i.imgur.com/dnsIEuC.png" data-canonical-src="http://i.imgur.com/dnsIEuC.png" width="125" height="157" />]()
-- Android Release: **15.12**
-- Pre-built image(s): _**Android**_
-- Available installation method(s): _**SD Card**_ and _**Fastboot**_
-- Previous releases ([Android](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/))
-- Build from Source ([Android])
-- Known Issues ([Android])
+| <a href="http://ms-iot.github.io/content/en-US/win10/DB410c.htm" target="_blank"><img src="http://i.imgur.com/1Sg2I7N.png" data-canonical-src="http://i.imgur.com/1Sg2I7N.png" width="100" height="100" /></a> <br> <a href="http://ms-iot.github.io/content/en-US/win10/DB410c.htm" target="_blank">Windows IoT Core</a> |   
 
 ***
 
