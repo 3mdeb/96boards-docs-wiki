@@ -2,6 +2,9 @@
 
 How to integrate OP-TEE into your HiKey Linux image
 
+**NOTE<BR>
+As of 24-Nov-2015, OP-TEE has been integrated into 96boards HiKey releases and snapshots images so if you're using a build that is of above date or newer, there is no longer a need to use these instructions with the exception of building the test suite, i.e. you only need to perform steps 6, 7a, 7b, 7c, 7e, 8a, 8c and 9!**
+
 ## Build instructions
 
 Prerequisites:
@@ -20,7 +23,7 @@ Prerequisites:
 8. [Flash binaries to eMMC] (#flash)
 9. [Running and Testing] (#runtest)
 
-### Install custom toolchain(s) <a name="toolchain"></a>
+### 1. Install custom toolchain(s) <a name="toolchain"></a>
 
 ```
 mkdir arm-tc arm64-tc
@@ -29,7 +32,7 @@ tar --strip-components=1 -C ${PWD}/arm64-tc -xf gcc-linaro-aarch64-linux-gnu-4.9
 export PATH="${PWD}/arm-tc/bin:${PWD}/arm64-tc/bin:$PATH"
 ```
 
-### Build the kernel <a name="build-kernel"></a>
+### 2. Build the kernel <a name="build-kernel"></a>
 
 ```
 git clone -b hikey --depth 1 https://github.com/96boards-hikey/linux.git
@@ -44,7 +47,7 @@ make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j8 Image modules hi6220-hikey.
 cd ..
 ```
 
-### Build the OP-TEE Linux kernel driver <a name="optee-driver"></a>
+### 3. Build the OP-TEE Linux kernel driver <a name="optee-driver"></a>
 
 **NOTE:** Make sure you complete the [previous](#build-kernel) section, i.e. build the kernel, first!
 
@@ -63,7 +66,7 @@ The following files are now built:
 * optee_linuxdriver/core/optee.ko
 * optee_linuxdriver/armtz/optee_armtz.ko
 
-### Build UEFI for HiKey <a name="uefi-hikey"></a>
+### 4. Build UEFI for HiKey <a name="uefi-hikey"></a>
 ```
 git clone -b hikey --depth 1 https://github.com/96boards/edk2.git linaro-edk2
 git clone -b hikey_gendrv --depth 1 https://github.com/linaro-swg/arm-trusted-firmware.git
@@ -86,7 +89,7 @@ The following file is now built:
 
 **Note:** In case the build fails with ```mk/config.mk:95 *** Could not partse TEE_IMPL_VERSION (8a933cc), expected format: <major>.<minor>[anything else}. Stop.```, please export TEE_IMPL_VERSION with a valid version string (e.g. ```export TEE_IMPL_VERSION=1.1.0```), and then retry the build.
 
-### Build the OP-TEE client <a name="optee-client"></a>
+### 5. Build the OP-TEE client <a name="optee-client"></a>
 ```
 git clone https://github.com/OP-TEE/optee_client.git
 
@@ -101,7 +104,7 @@ The following files are now built:
 * optee_client/out/export/bin/tee-supplicant
 * optee_client/out/export/lib/libteec.so.1.0
 
-### Build the OP-TEE test suite <a name="optee-test"></a>
+### 6. Build the OP-TEE test suite <a name="optee-test"></a>
 
 **NOTE:** Make sure you complete the [Build UEFI for HiKey](#uefi-hikey) section first!
 
@@ -139,15 +142,14 @@ The following files are now built:
 * optee_test/out/ta/sims/e6a33ed4-562b-463a-bb7eff5e15a493c8.ta
 * optee_test/out/ta/storage_benchmark/f157cda0-550c-11e5-a6fa0002a5d5c51b.ta
 
-## Copy built files to the file system <a name="rootfs"></a>
+## 7. Copy built files to the file system <a name="rootfs"></a>
 
 **NOTE:** Make sure you complete building the OP-TEE driver, client and test suite first!
 
-First download the latest Debian based build published [here](https://builds.96boards.org/snapshots/hikey/linaro/debian/latest). You can pick either the developer or alip eMMC rootfs:
+a) First download the latest Debian based build published [here](https://builds.96boards.org/snapshots/hikey/linaro/debian/latest). You can pick either the developer or alip eMMC rootfs:
 * hikey-jessie_[developer|alip]_YYYYMMDD-XXX.emmc.img.gz
 
 For example:
-
 ```
 wget https://builds.96boards.org/snapshots/hikey/linaro/debian/410/hikey-jessie_developer_20160225-410.emmc.img.gz
 gunzip *.img.gz
@@ -155,34 +157,37 @@ gunzip *.img.gz
 
 To include the files compiled above in the downloaded jessie image you would:
 
-a) install simg2img and make_ext4fs both from Linaro's modified package 'android-tools-fsutils' 
-
+b) install simg2img and make_ext4fs both from Linaro's modified package 'android-tools-fsutils' 
 ```
 wget http://repo.linaro.org/ubuntu/linaro-overlay/pool/main/a/android-tools/\
 > android-tools-fsutils_4.2.2+git20130218-3ubuntu41+linaro1_amd64.deb
 sudo dpkg -i --force-all android-tools-fsutils_*.deb
 ```
 
-b) then do the following 
-
+c) then do the following 
 ```
 simg2img hikey-jessie_developer_20150929-354.emmc.img raw.img
 mkdir mnt
 sudo mount raw.img mnt
 cd mnt
+```
 
-sudo cp ${OPTEE_LINUXDRIVER_DIR}/core/optee.ko lib/modules/3.18.0-linaro-hikey/
-sudo cp ${OPTEE_LINUXDRIVER_DIR}/armtz/optee_armtz.ko lib/modules/3.18.0-linaro-hikey/
-sudo chown ubuntu:ubuntu lib/modules/3.18.0-linaro-hikey/optee*
+d) next do the following
+```
+sudo cp ${OPTEE_LINUXDRIVER_DIR}/core/optee.ko lib/modules/3.18.0-linaro-hikey/extra/core/
+sudo cp ${OPTEE_LINUXDRIVER_DIR}/armtz/optee_armtz.ko lib/modules/3.18.0-linaro-hikey/extra/armtz/
 
-sudo cp ${OPTEE_CLIENT_DIR}/out/export/bin/tee-supplicant bin/
-sudo cp ${OPTEE_CLIENT_DIR}/out/export/lib/libteec.so.1.0 lib/aarch64-linux-gnu/
-sudo ln -sf libteec.so.1.0 lib/aarch64-linux-gnu/libteec.so.1
-sudo ln -sf libteec.so.1 lib/aarch64-linux-gnu/libteec.so
+sudo cp ${OPTEE_CLIENT_DIR}/out/export/bin/tee-supplicant usr/bin/
+sudo cp ${OPTEE_CLIENT_DIR}/out/export/lib/libteec.so.1.0 usr/lib/aarch64-linux-gnu/
+sudo ln -sf libteec.so.1.0 usr/lib/aarch64-linux-gnu/libteec.so.1
+sudo ln -sf libteec.so.1 usr/lib/aarch64-linux-gnu/libteec.so
+```
 
-sudo cp ${OPTEE_TEST_DIR}/out/xtest/xtest bin/
-sudo mkdir lib/optee_armtz
-cp $(find ${OPTEE_TEST_DIR} -name *.ta) lib/optee_armtz/
+e) finally do the following 
+```
+sudo cp ${OPTEE_TEST_DIR}/out/xtest/xtest usr/bin/
+sudo mkdir usr/lib/optee_armtz
+sudo cp $(find ${OPTEE_TEST_DIR} -name *.ta) usr/lib/optee_armtz/
 
 sudo mkdir -p /data/tee
 
@@ -191,10 +196,10 @@ sudo make_ext4fs -o -L rootfs -l 1500M -s jessie.updated.img mnt/
 sudo umount mnt/
 ```
 
-## Flash binaries to eMMC <a name="flash"></a>
-In addition to the fip.bin and jessie.updated.img built and created above, you also need:
+## 8. Flash binaries to eMMC <a name="flash"></a>
+a) In addition to the fip.bin and jessie.updated.img built and created above, you also need:
 
-```shell
+```
 wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/l-loader.bin
 wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux.img
 wget https://builds.96boards.org/releases/hikey/linaro/binaries/latest/nvme.img
@@ -211,24 +216,29 @@ The flashing process requires to be in **recovery mode** if user wants to update
 * turn on HiKey board
 * on serial console, you should see some debug message (NULL packet)
 * run [HiKey recovery tool](https://raw.githubusercontent.com/96boards/burn-boot/master/hisi-idt.py) to flash l-loader.bin (Note: if the serial port recorded in hisi-idt.py isn't available, adjust the command line below by manually setting the serial port with "-d /dev/ttyUSBx" where x is usually the last serial port reported by "dmesg" command)
+
 ```
 $ sudo python hisi-idt.py --img1=l-loader.bin
 ```
 
-**do not reboot yet**
-* run fastboot commands to flash the images (**order must be respected**)
+b) flash the boot images (**order must be respected**)
 ```
 $ sudo fastboot flash ptable ptable-linux.img
 $ sudo fastboot flash fastboot fip.bin
 $ sudo fastboot flash nvme nvme.img
 $ sudo fastboot flash boot boot-fat.uefi.img
+```
+
+c) flash the updated system image
+```
 $ sudo fastboot flash system jessie.updated.img
 ```
+
 * turn off HiKey board
 * remove the jumper of pin3-pin4 on J15
 * turn on HiKey board
 
-## Running and Testing <a name="runtest"></a>
+## 9. Running and Testing <a name="runtest"></a>
 
 On the HiKey board serial console:
 
