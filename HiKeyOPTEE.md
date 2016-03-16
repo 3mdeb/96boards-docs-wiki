@@ -3,7 +3,7 @@
 How to integrate OP-TEE into your HiKey Linux image
 
 **NOTE<BR>
-As of 24-Nov-2015, OP-TEE has been integrated into 96boards HiKey releases and snapshots images so if you're using builds that are of above date or newer, there is no longer a need to use these instructions with the exception of building the test suite, i.e. you only need to perform steps 6, 7a, 7b, 7c, 7e, 8 and 9!**
+As of 24-Nov-2015, OP-TEE has been integrated into 96boards HiKey releases and snapshots images so if you're using builds that are of above date or newer, there is no longer a need to use these instructions with the exception of building fip.bin and the test suite, i.e. you only need to perform steps 4, 6, 7a, 7b, 7c, 7e, 8 and 9!**
 
 ## Build instructions
 
@@ -205,11 +205,6 @@ wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/nvme.img
 wget https://builds.96boards.org/snapshots/hikey/linaro/debian/latest/boot-fat.uefi.img.gz
 gunzip *.img.gz
 ```
-
-If you're using builds from 24-Nov-2015 and newer, instead of using the fip.bin built above, you can use a pre-built image.
-```
-wget https://builds.96boards.org/releases/hikey/linaro/uefi/latest/fip.bin
-``` 
 
 The flashing process requires to be in **recovery mode** if user wants to update l-loader.bin.
 * turn off HiKey board
