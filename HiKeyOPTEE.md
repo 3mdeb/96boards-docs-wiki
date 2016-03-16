@@ -200,8 +200,8 @@ sudo umount mnt/
 In addition to the fip.bin and jessie.updated.img built above, you also need:
 ```
 wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/l-loader.bin
-wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux.img
-wget https://builds.96boards.org/releases/hikey/linaro/binaries/latest/nvme.img
+wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/ptable-linux-4g.img
+wget https://builds.96boards.org/snapshots/hikey/linaro/uefi/latest/nvme.img
 wget https://builds.96boards.org/snapshots/hikey/linaro/debian/latest/boot-fat.uefi.img.gz
 gunzip *.img.gz
 ```
@@ -227,7 +227,7 @@ $ sudo python hisi-idt.py --img1=l-loader.bin
 **do not reboot yet**
 * run fastboot commands to flash the images (**order must be respected**)
 ```shell
-$ sudo fastboot flash ptable ptable-linux.img
+$ sudo fastboot flash ptable ptable-linux-4g.img
 $ sudo fastboot flash fastboot fip.bin
 $ sudo fastboot flash nvme nvme.img
 $ sudo fastboot flash boot boot-fat.uefi.img
