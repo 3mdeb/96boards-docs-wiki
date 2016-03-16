@@ -32,7 +32,7 @@ export PATH="${PWD}/arm-tc/bin:${PWD}/arm64-tc/bin:$PATH"
 ### Build the kernel <a name="build-kernel"></a>
 
 ```
-git clone -b hikey https://github.com/96boards-hikey/linux.git
+git clone -b hikey --depth 1 https://github.com/96boards-hikey/linux.git
 
 export LINUX_DIR=${PWD}/linux
 export LOCALVERSION="-linaro-hikey"
