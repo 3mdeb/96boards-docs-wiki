@@ -71,7 +71,7 @@ git clone -b hikey --depth 1 https://github.com/96boards/edk2.git linaro-edk2
 git clone -b hikey_gendrv --depth 1 https://github.com/linaro-swg/arm-trusted-firmware.git
 git clone -b hikey --depth 1 https://github.com/96boards/LinaroPkg.git
 git clone git://git.linaro.org/uefi/uefi-tools.git
-git clone --depth 1 https://github.com/OP-TEE/optee_os.git
+git clone https://github.com/OP-TEE/optee_os.git
 
 export AARCH64_TOOLCHAIN=GCC49
 export EDK2_DIR=${PWD}/linaro-edk2
@@ -86,7 +86,8 @@ cd ..
 The following file is now built:
 * arm-trusted-firmware/build/hikey/release/fip.bin
 
-**Note:** In case the build fails with ```mk/config.mk:95 *** Could not parse TEE_IMPL_VERSION (8a933cc), expected format: <major>.<minor>[anything else]. Stop.```, please export TEE_IMPL_VERSION with a valid version string (e.g. ```export TEE_IMPL_VERSION=1.1.0```), and then retry the build.
+**Note:** Do NOT clone optee_os with a depth of 1, or else the build will fail with below error:<BR>
+```mk/config.mk:95 *** Could not parse TEE_IMPL_VERSION (8a933cc), expected format: <major>.<minor>[anything else]. Stop.```
 
 ### 5. Build the OP-TEE client <a name="optee-client"></a>
 ```
