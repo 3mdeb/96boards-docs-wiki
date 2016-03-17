@@ -185,7 +185,7 @@ sudo ln -sf libteec.so.1.0 usr/lib/aarch64-linux-gnu/libteec.so.1
 e) finally do the following 
 ```
 sudo cp ${OPTEE_TEST_DIR}/out/xtest/xtest usr/bin/
-sudo mkdir usr/lib/optee_armtz
+sudo mkdir lib/optee_armtz
 sudo cp $(find ${OPTEE_TEST_DIR} -name *.ta) lib/optee_armtz/
 
 sudo mkdir -p data/tee
