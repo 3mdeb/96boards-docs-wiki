@@ -23,3 +23,5 @@ To create gpt_both0.bin, you can run:
     sudo sgdisk -bgpt.bin sd.img
     # convert gpt backup into proper 'fastboot' format
     ./mkgpt.sh -i gpt.bin -o gpt_both0.bin
+
+If you want to customize the partition table, you need to edit the file dragonboard410c/linux.txt. You can add partition as needed, change partition sizes, but you should not change the partition UID, or you might brick your board.
