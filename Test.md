@@ -5,6 +5,14 @@
 |[<img src="http://i.imgur.com/ykySoFc.png" data-canonical-src="http://i.imgur.com/ykySoFc.png" width="70" height="50" />]() <br> Bubblegum-96|1 |Architecture: <br> Cores: <br> Frequency:|3|Size: <br>Data Rate: <br> Type:|
 
 
+
+<p style=font-size="5">your text</p>
+
+<p style="font-size: 5em;">your text</p>
+
+<span style="color: red;">red words</span>
+
+<span style="font-family: 'Lucida Console';">foo</span>
 ***
 
 [<img align="left" src="http://i.imgur.com/4a5GXRd.png" data-canonical-src="http://i.imgur.com/4a5GXRd.png" width="170" height="125" />]()
