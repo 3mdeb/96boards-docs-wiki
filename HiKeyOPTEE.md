@@ -1,5 +1,3 @@
-# **NOTE: CURRENTLY UPDATING. PLEASE DO NOT USE UNTIL THIS MESSAGE IS GONE!**
-
 # HiKey - OP-TEE
 
 How to integrate OP-TEE into your HiKey Linux image
@@ -224,7 +222,7 @@ $ sudo python hisi-idt.py --img1=l-loader.bin
 
 **do not reboot yet**
 * run fastboot commands to flash the images (**order must be respected**)
-```shell
+```
 $ sudo fastboot flash ptable ptable-linux-4g.img
 $ sudo fastboot flash fastboot fip.bin
 $ sudo fastboot flash nvme nvme.img
