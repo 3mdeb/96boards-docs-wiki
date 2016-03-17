@@ -180,10 +180,7 @@ sudo cp ${OPTEE_LINUXDRIVER_DIR}/armtz/optee_armtz.ko lib/modules/3.18.0-linaro-
 sudo cp ${OPTEE_CLIENT_DIR}/out/export/bin/tee-supplicant usr/bin/
 sudo cp ${OPTEE_CLIENT_DIR}/out/export/lib/libteec.so.1.0 usr/lib/aarch64-linux-gnu/
 sudo ln -sf libteec.so.1.0 usr/lib/aarch64-linux-gnu/libteec.so.1
-#sudo ln -sf libteec.so.1 usr/lib/aarch64-linux-gnu/libteec.so
 ```
-
-MD5SUMS?
 
 **NOTE:** As of 24-Nov-2015, OP-TEE has been integrated into 96boards HiKey releases and snapshots images, so if you follow the instructions above, you're basically overwriting the driver, supplicant and client library in the rootfs with the ones you built above.
 
@@ -191,7 +188,7 @@ e) finally do the following
 ```
 sudo cp ${OPTEE_TEST_DIR}/out/xtest/xtest usr/bin/
 sudo mkdir usr/lib/optee_armtz
-sudo cp $(find ${OPTEE_TEST_DIR} -name *.ta) usr/lib/optee_armtz/
+sudo cp $(find ${OPTEE_TEST_DIR} -name *.ta) lib/optee_armtz/
 
 sudo mkdir -p data/tee
 
@@ -199,6 +196,8 @@ cd ..
 sudo make_ext4fs -o -L rootfs -l 1500M -s jessie.updated.img mnt/
 sudo umount mnt/
 ```
+
+**NOTE:** Do not copy the *.ta files to different path or else xtest will stall or fail.
 
 ## 8. Flash binaries to eMMC <a name="flash"></a>
 In addition to the fip.bin and jessie.updated.img built above, you also need:
