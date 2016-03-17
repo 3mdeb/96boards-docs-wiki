@@ -42,7 +42,7 @@ export LOCALVERSION="-linaro-hikey"
 cd ${LINUX_DIR}
 make distclean 
 make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- defconfig 
-make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j8 Image modules hi6220-hikey.dtb
+make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j`nproc` Image modules hi6220-hikey.dtb
 cd ..
 ```
 
