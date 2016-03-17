@@ -106,7 +106,7 @@ The following files are now built:
 
 ### 6. Build the OP-TEE test suite <a name="optee-test"></a>
 
-**NOTE:** Make sure you complete the [Build UEFI for HiKey](#uefi-hikey) section first!
+**NOTE:** Make sure you complete the [Build UEFI for HiKey](#uefi-hikey) and [Build the OP-TEE client](#optee-client) sections first!
 
 ```
 git clone https://github.com/OP-TEE/optee_test.git
