@@ -182,7 +182,7 @@ sudo cp ${OPTEE_CLIENT_DIR}/out/export/lib/libteec.so.1.0 usr/lib/aarch64-linux-
 sudo ln -sf libteec.so.1.0 usr/lib/aarch64-linux-gnu/libteec.so.1
 ```
 
-**NOTE:** As of 24-Nov-2015, OP-TEE has been integrated into 96boards HiKey releases and snapshots images, so if you follow the instructions above, you're basically overwriting the driver, supplicant and client library in the rootfs with the ones you built above.
+**NOTE:** As of 24-Nov-2015, OP-TEE has been integrated into 96boards HiKey releases and snapshots images, so if you follow the instructions above, you're basically overwriting the driver, supplicant and client library already existing in the rootfs with the ones you just built above.
 
 e) finally do the following 
 ```
