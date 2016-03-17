@@ -197,7 +197,7 @@ sudo make_ext4fs -o -L rootfs -l 1500M -s jessie.updated.img mnt/
 sudo umount mnt/
 ```
 
-**NOTE:** Do not copy the *.ta files to different path or else xtest will stall or fail.
+**NOTE:** Do not copy the *.ta files to a different path or else xtest will stall or fail.
 
 ## 8. Flash binaries to eMMC <a name="flash"></a>
 In addition to the fip.bin and jessie.updated.img built above, you also need:
