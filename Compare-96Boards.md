@@ -15,7 +15,7 @@
 	
 	<tbody>
 		<tr>
-			<td><img src="http://i.imgur.com/mKjYKTH.png" data-canonical-src="http://i.imgur.com/mKjYKTH.png" width="135" height="50" /></td>
+			<td><img src="http://i.imgur.com/mKjYKTH.png" data-canonical-src="http://i.imgur.com/mKjYKTH.png" width="135" height="40" /></td>
 			<td><a href="https://en.wikipedia.org/wiki/System_on_a_chip"><b>SoC</a></td>
 			<td><a href="https://en.wikipedia.org/wiki/ARM_architecture"><b>Architecture&shy;</a></td>
 			<td><a href="https://en.wikipedia.org/wiki/Multi-core_processor"><b>Cores</a></td>
