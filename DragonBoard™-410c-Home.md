@@ -8,16 +8,17 @@ Welcome to the supporting documentation for [DragonBoard™ 410c](https://www.96
 [<img src="http://i.imgur.com/iAbmSuV.png" data-canonical-src="http://i.imgur.com/iAbmSuV.png" width="150" height="105" />]()
 [<img src="http://i.imgur.com/nyVSsa2.png" data-canonical-src="http://i.imgur.com/nyVSsa2.png" width="150" height="105" />]()
 
-[**Read About the DragonBoard™ 410c**](https://github.com/96boards/documentation/wiki/About-DragonBoard™-410c)
-
+<p align="left">
+  <b>Extras</b><br>
+  <a href="#">[About the DragonBoard™ 410c](https://github.com/96boards/documentation/wiki/About-DragonBoard™-410c)</a> |
+  <a href="#"><a href="https://github.com/96boards/documentation/wiki/Compare-96Boards-Builds" target="_blank">Compare Builds</a></a> |
+  <a href="#">[Reference Platform Home](https://github.com/96boards/documentation/wiki/Reference-Platform-Home)</a>
+  <br>
 ***
 
 #### Downloads - Supported Operating Systems
-[<img src="http://i.imgur.com/jl4GG0d.png" data-canonical-src="http://i.imgur.com/jl4GG0d.png" width="125" height="157" />](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Crossroads)
-[<img src="http://i.imgur.com/7rrS2JR.png" data-canonical-src="http://i.imgur.com/7rrS2JR.png" width="125" height="157" />](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Crossroads)
-[<img src="http://i.imgur.com/dnsIEuC.png" data-canonical-src="http://i.imgur.com/dnsIEuC.png" width="125" height="157" />](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Crossroads)
 
-[**Compare Builds**](https://github.com/96boards/documentation/wiki/Compare-96Boards-Builds)
+[<img src="http://i.imgur.com/aEfYHYH.jpg" data-canonical-src="http://i.imgur.com/aEfYHYH.jpg" width="300" height="200" />](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Crossroads)
 
 ***
 #### Installation and Setup Guides
