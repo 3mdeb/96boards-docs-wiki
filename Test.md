@@ -14,12 +14,12 @@
 			<td><img src="http://i.imgur.com/mKjYKTH.png" data-canonical-src="http://i.imgur.com/mKjYKTH.png" width="135" height="50" /></td>
 			<td><a href="https://en.wikipedia.org/wiki/System_on_a_chip"><b>SoC</a></td>
 			<td><a href="https://en.wikipedia.org/wiki/ARM_architecture"><b>Architecture&shy;</a></td>
-			<td><a href=""><b>Cores</a></td>
+			<td><a href="https://en.wikipedia.org/wiki/Multi-core_processor"><b>Cores</a></td>
 			<td><a href=""><b>Frequency&shy;</a></td>
-			<td><a href=""><b>GPU</a></td>
-			<td><a href=""><b>Size&shy;</a></td>
-			<td><a href=""><b>Data rate</a></td>
-			<td><a href=""><b>Type</a></td>
+			<td><a href="https://en.wikipedia.org/wiki/Graphics_processing_unit"><b>GPU</a></td>
+			<td><a href="https://en.wikipedia.org/wiki/Random-access_memory"><b>Size&shy;</a></td>
+			<td><a href="https://en.wikipedia.org/wiki/Random-access_memory"><b>Data rate</a></td>
+			<td><a href="https://en.wikipedia.org/wiki/Random-access_memory"><b>Type</a></td>
 		</tr>
 		<tr>
 			
@@ -48,14 +48,14 @@
 		</tr>
 		<tr>
 			<td> <img src="http://i.imgur.com/ykySoFc.png" data-canonical-src="http://i.imgur.com/ykySoFc.png" width="70" height="50" /> <br> Bubblegum-96</td>
-			<td>1</td>
-			<td>1</td>
-			<td>1</td>
-			<td>1</td>
-			<td>1</td>
-			<td>&nbsp;</td>
-			<td>1</td>
-			<td>1</td>
+			<td>Actions<br>s900</td>
+			<td>ARM Cortex-A53</td>
+			<td>4</td>
+			<td>1.8 GHz</td>
+			<td>PowerVR G6230</td>
+			<td>2 GB</td>
+			<td>?</td>
+			<td>LPDDR3</td>
 		</tr>
 		<tr>
 			
