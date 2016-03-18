@@ -2,24 +2,24 @@
 	<thead>
 		<tr>
 			<td></td>
-			<td>SoC</td>
-			<td colspan="3">CPU</td>
-			<td>GPU</td>
-			<td colspan="4">RAM</td>
+			<td><b>SoC</td>
+			<td colspan="3"><b>CPU</td>
+			<td><b>GPU</td>
+			<td colspan="4"><b>RAM</td>
 		</tr>
 	</thead>
 	
 	<tbody>
 		<tr>
 			<td><img src="http://i.imgur.com/mKjYKTH.png" data-canonical-src="http://i.imgur.com/mKjYKTH.png" width="135" height="50" /></td>
-			<td><a href=""></a></td>
-			<td><a href="">Arch&shy;</a></td>
-			<td><a href="">Cores</a></td>
-			<td><a href="">Freq&shy;</a></td>
-			<td><a href="">GPU</a></td>
-			<td><a href="">Size&shy;</a></td>
-			<td><a href="">Data rate</a></td>
-			<td><a href="">Type</a></td>
+			<td><a href="https://en.wikipedia.org/wiki/System_on_a_chip"><b>SoC</a></td>
+			<td><a href="https://en.wikipedia.org/wiki/ARM_architecture"><b>Architecture&shy;</a></td>
+			<td><a href=""><b>Cores</a></td>
+			<td><a href=""><b>Frequency&shy;</a></td>
+			<td><a href=""><b>GPU</a></td>
+			<td><a href=""><b>Size&shy;</a></td>
+			<td><a href=""><b>Data rate</a></td>
+			<td><a href=""><b>Type</a></td>
 		</tr>
 		<tr>
 			
