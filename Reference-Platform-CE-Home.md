@@ -26,7 +26,7 @@
 
 #### Dragonboard™ 410c
 
-|   **CE Debian RPB - 16.03**   |    **CE AOSP RPB - 16.03** - Developer Preview |
+|   **CE Debian RPB - 16.03**   |    **CE AOSP RPB - 16.03**<br>(Developer Preview) |
 |:-----------------------------:|:---------------------------:|
 |    <a href="https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RP-Download#your-build-choice" target="_blank">Install instructions</a>   |   <a href="https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RP-Download#your-build-choice-1" target="_blank">Install instructions</a>  |
 |    <a href="https://github.com/96boards/documentation/wiki/DragonBoard™-410c-RPB-Debian-Build-Source-16.03" target="_blank">Build from source</a>      |    [Build from source]()    |
