@@ -2,15 +2,15 @@
 
 ***
 
-### Quick Comparison
+### Quick Comparison - CPU, GPU, and Memory
 
 <table border="3">
 	<thead>
 		<tr>
 			<td></td>
-			<td><b>SoC</td>
+			<td><b></td>
 			<td colspan="3"><b>CPU</td>
-			<td><b>GPU</td>
+			<td><b></td>
 			<td colspan="4"><b>RAM</td>
 		</tr>
 	</thead>
