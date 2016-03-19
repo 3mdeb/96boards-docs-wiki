@@ -74,7 +74,7 @@
 
 ## HiKey
 
-The HiKey board was the first board to be certified 96Boards Consumer Edition compatible. Two versions of this board are available: the original from CircuitCo and a new version in 1GB and 2GB variants from LeMaker. The board is based around the HiSilicon Kirin 620 eight-core ARM Cortex-A53 64-bit SoC running at 1.2GHz and delivering over 10,000 Dhrystone VAX MIPS total performance. The SoC also delivers high performance 3D graphics support with its ARM Mali 450-MP4 GPU.
+The HiKey board was the first board to be certified 96Boards Consumer Edition compatible. Two versions of this board are available: the original from CircuitCo and a new version in 1GB and 2GB variants from LeMaker. The board is based around the HiSilicon Kirin 620 eight-core ARM® Cortex-A53 64-bit SoC running at 1.2GHz and delivering over 10,000 Dhrystone VAX MIPS total performance. The SoC also delivers high performance 3D graphics support with its ARM Mali 450-MP4 GPU.
 
 800MHz LPDDR3 DRAM (1GB in the CircuitCo version and a choice of 1GB or 2GB from LeMaker), 8GB eMMC Flash Storage and the standard 96Boards microSD v3.0 socket provide high performance. Flexible storage options and connectivity are available through 802.11b/g/n WiFi, Bluetooth® 4.0 LE, three high speed USB 2.0 ports (1 OTG), an HDMI 1.3 1080p video output with audio, and Maker, DSI display and CSI camera interfaces. The board is the standard 96Boards credit-card form factor powered by an 8-18V DC 2A power supply.
 
@@ -92,7 +92,7 @@ The DragonBoard™ 410c has the rich feature set and mid-tier accessibility to e
 
 ## Bubblegum-96
 
-The Bubblegum-96 board was first shown in mid 2015 at trade shows in Asia. Since then,  Actions has been working with Linaro to finalize the software support and ensure the best possible performance. Sporting an optimized Actions s900 Quad-core ARM 64-bit Cortex-A53 processor running at 1.8GHz and 600MHz PowerVR G6230 high-quality graphics with 2GB of DRAM and USB 3.0 support, this board is expected to deliver top of the line performance and superior gaming.
-In addition to standard 96Boards features, the board will offer integrated HDMI with Ultra 4K output, Full HD video capture (1080P@60fps H.264) and ARM TrustZone® security support.
+The Bubblegum-96 board was first shown in mid 2015 at trade shows in Asia. Since then,  Actions has been working with Linaro to finalize the software support and ensure the best possible performance. Sporting an optimized Actions s900 Quad-core ARM® 64-bit Cortex-A53 processor running at 1.8GHz and 600MHz PowerVR G6230 high-quality graphics with 2GB of DRAM and USB 3.0 support, this board is expected to deliver top of the line performance and superior gaming.
+In addition to standard 96Boards features, the board will offer integrated HDMI with Ultra 4K output, Full HD video capture (1080P@60fps H.264) and ARM® TrustZone® security support.
 
 ***
