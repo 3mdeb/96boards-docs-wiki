@@ -1,10 +1,10 @@
-Welcome to the supporting documentation for [Bubblegum96]()
+Welcome to the supporting documentation for [Bubblegum-96]()
 
 [<<< Back to 96Boards Documentation Home](https://github.com/96boards/documentation/wiki)
 
 ***
 
-[**Read About Bubblegum96**](https://github.com/96boards/documentation/wiki/About-Bubblegum96)
+[**Read About Bubblegum-96**](https://github.com/96boards/documentation/wiki/About-Bubblegum96)
 [<img src="http://i.imgur.com/HylpkcV.png" data-canonical-src="http://i.imgur.com/HylpkcV.png" width="20" height="20" />]()
 [**Compare 96Boards**](https://github.com/sdrobertw/test-wiki-/wiki/Compare-96Boards)
 [<img src="http://i.imgur.com/HylpkcV.png" data-canonical-src="http://i.imgur.com/HylpkcV.png" width="20" height="20" />]()
