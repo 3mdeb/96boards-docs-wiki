@@ -2,6 +2,8 @@
 
 ***
 
+### Quick Comparison
+
 <table border="3">
 	<thead>
 		<tr>
