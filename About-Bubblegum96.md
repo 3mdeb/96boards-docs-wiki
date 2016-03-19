@@ -1,4 +1,4 @@
-[<<< Back to Bubblegum96 Home](https://github.com/96boards/documentation/wiki/Bubblegum96-Home)
+[<<< Back to Bubblegum-96 Home](https://github.com/96boards/documentation/wiki/Bubblegum96-Home)
 
 ***
 
