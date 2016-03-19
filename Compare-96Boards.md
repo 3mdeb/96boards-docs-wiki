@@ -2,7 +2,7 @@
 
 ***
 
-<table border="1">
+<table border="3">
 	<thead>
 		<tr>
 			<td></td>
