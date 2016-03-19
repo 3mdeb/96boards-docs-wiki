@@ -7,15 +7,18 @@ Welcome to the supporting documentation for [HiKey](https://www.96boards.org/pro
 [<img src="http://i.imgur.com/0e7lsoO.png" data-canonical-src="http://i.imgur.com/0e7lsoO.png" width="140" height="105" />]()
 [<img src="http://i.imgur.com/dGuIBpa.png" data-canonical-src="http://i.imgur.com/dGuIBpa.png" width="140" height="105" />]()
 
-[**Read About HiKey**](https://github.com/96boards/documentation/wiki/About-HiKey)
+<p align="left">
+  <b>Extras</b><br>
+  <a href="#">[About the HiKey](https://github.com/96boards/documentation/wiki/About-HiKey)</a> |
+  <a href="#"><a href="https://github.com/96boards/documentation/wiki/Compare-96Boards-Builds" target="_blank">Compare Builds</a></a> |
+  <a href="#">[Reference Platform Home](https://github.com/96boards/documentation/wiki/Reference-Platform-Home)</a>
+  <br>
 
 ***
 
 #### Downloads - Supported Operating Systems
-[<img src="http://i.imgur.com/jl4GG0d.png" data-canonical-src="http://i.imgur.com/jl4GG0d.png" width="125" height="157" />](https://github.com/96boards/documentation/wiki/HiKey-Crossroads)
-[<img src="http://i.imgur.com/7rrS2JR.png" data-canonical-src="http://i.imgur.com/7rrS2JR.png" width="125" height="157" />](https://github.com/96boards/documentation/wiki/HiKey-Crossroads)
 
-[**Compare Builds**](https://github.com/96boards/documentation/wiki/Compare-96Boards-Builds)
+[<img src="http://i.imgur.com/1oBolPj.jpg" data-canonical-src="http://i.imgur.com/1oBolPj.jpg" width="125" height="157" />](https://github.com/96boards/documentation/wiki/HiKey-Crossroads)
 
 ***
 
