@@ -1,3 +1,5 @@
+- [96Boards](https://github.com/96boards/documentation/wiki)
+   - [Compare 96Boards](https://github.com/96boards/documentation/wiki/Compare-96Boards)
 - [Reference Platform](https://github.com/96boards/documentation/wiki/Reference-Platform-Home)
    - [Reference Software - Consumer Edition](https://github.com/96boards/documentation/wiki/Reference-Platform-Home#quickstart)
    - [Reference Software - Enterprise Edition](https://github.com/96boards/documentation/wiki/Reference-Platform-Home#quickstart)
