@@ -42,7 +42,7 @@ The _dtbTool_ is a standalone application that will process the DTBs generated d
 
 To create the boot image, you need a ramdisk image. For now it is recommended to download one of the ramdisk image from Linaro builds.
 
-    wget http://builds.96boards.org/snapshots/dragonboard410c/linaro/ubuntu/latest/initrd.img-*
+    wget http://builds.96boards.org/snapshots/dragonboard410c/linaro/debian/latest/initrd.img-*
 
 ### How to create the boot image
 
