@@ -44,14 +44,6 @@ To build a console image, you can run:
 
 At the end of the build, your build artifacts will be found in `tmp-eglibc/deploy/images/$MACHINE`.
 
-# Proprietary firmware blob
-
-Some BSPs might require the user to read and accept a EULA (such as Qualcomm based development boards). When you select a MACHINE that has such a requirement, the EULA will be presented when running the `setup-environment` script. The EULA is typically required to access the proprietary firmware, such as the GPU firmware , WLAN, ... 
-
-If you accepted the EULA, when building an image all proprietary firmware (or content) are installed automatically in the image, either in `/lib/firmware` or wherever it is appropriate, and a copy of the EULA is also installed in the image.
-
-If you did not accept the EULA, the firmware are not downloaded, and not installed into the image. Of course some features will not work properly.
-
 # Build a simple X11 image
 
 To build an X11 image:
@@ -82,6 +74,13 @@ If you boot this image on the board, you should get a command prompt on the HDMI
     weston-launch
 
 And that should get you to the Weston desktop shell.
+# Proprietary content
+
+Some BSPs might require the user to read and accept a EULA (such as Qualcomm based development boards). When you select a MACHINE that has such a requirement, the EULA will be presented when running the `setup-environment` script. The EULA is typically required to access the proprietary firmware, such as the GPU firmware , WLAN, ... 
+
+If you accepted the EULA, when building an image all proprietary firmware (or content) are installed automatically in the image, either in `/lib/firmware` or wherever it is appropriate, and a copy of the EULA is also installed in the image.
+
+If you did not accept the EULA, the firmware are not downloaded, and not installed into the image. Of course some features will not work properly.
 
 # Support
 
