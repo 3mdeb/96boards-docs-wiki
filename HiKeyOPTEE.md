@@ -84,9 +84,6 @@ cd ..
 The following file is now built:
 * arm-trusted-firmware/build/hikey/release/fip.bin
 
-**Note:** Do NOT clone optee_os with a depth of 1, or else the build will fail with below error:<BR>
-```mk/config.mk:95 *** Could not parse TEE_IMPL_VERSION (8a933cc), expected format: <major>.<minor>[anything else]. Stop.```
-
 ### 5. Build the OP-TEE client <a name="optee-client"></a>
 ```
 git clone https://github.com/OP-TEE/optee_client.git
