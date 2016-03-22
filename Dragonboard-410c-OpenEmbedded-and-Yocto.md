@@ -9,21 +9,15 @@ This wiki is not an introduction on OpenEmbedded or Yocto Project. If you are no
 
 In this wiki, we assume that the reader is familiar with basic concepts of OpenEmbedded.
 
-The support for DragonBoard 410c is available in the [meta-qcom BSP layer](https://github.com/ndechesne/meta-qcom).
+The support for DragonBoard 410c is available in the [meta-qcom BSP layer](http://git.yoctoproject.org/cgit/cgit.cgi/meta-qcom).
 
 This layer has been tested with OpenEmbedded Core layer, and is expected to work with any other standard layers and of course any OpenEmbedded based distributions.
 
 The Linux kernel used for the DragonBoard 410c is the Linaro Landing team kernel, e.g. the same kernel used for the Linaro Linux release builds. The graphic stack is based on mesa, using the freedreno driver.
 
-# Status of DragonBoard 410c in the meta-qualcomm layer
-
-* The kernel provided by the BSP layer is the same as the kernel in the [latest Ubuntu-based release]( http://builds.96boards.org/releases/dragonboard410c/linaro/ubuntu/latest/)
-* For X11 we use xf86-video-freedreno driver, with XA enabled
-* Wayland/Weston is also tested, and working.
-
 # Setup the build environment
 
-The Qualcomm BSP layer can be used with any OE based distribution, such as Poky. However for simplicity the following instructions do not use any distribution, and instead use the 'distro-less' OE Core. As such, the Qualcomm layer only depends on OE core (and of course bitbake). 
+The Qualcomm BSP layer can be used with any OE based distribution, such as Poky. The following instructions are provided to get started with 96boards Open Embedded Reference Software Platforms. 
 
 To manage the various git trees and the OpenEmbedded environment, a repo manifest is provided. If you do not have `repo` installed on your host machine, you first need to install it, using the following instructions (or similar):
 
@@ -35,15 +29,16 @@ To manage the various git trees and the OpenEmbedded environment, a repo manifes
 To initialize your build environment, you need to run:
 
     mkdir oe-qcom && cd oe-qcom
-    repo init -u https://github.com/ndechesne/qcom-oe-manifest.git -b jethro
+    repo init -u https://github.com/96boards/oe-rpb-manifest.git -b jethro
     repo sync
     source setup-environment [<build folder>]
 
 * after the command `repo sync` returns, all the OpenEmbedded recipes have been downloaded locally.
 * you will be prompted to choose the target machine, pick `dragonboard-410c`
-* <build folder> is optional, if missing it will default to `build-$MACHINE`
+* you will be prompted to choose the distro, for now, it is recommended to use 'rpb'
+* <build folder> is optional, if missing it will default to `build-$DISTRO`
 
-The script `setup-environment` will create sane default configuration files in <build folder>/conf, you can inspect them and modify them if needed.
+The script `setup-environment` will create sane default configuration files in <build folder>/conf, you can inspect them and modify them if needed. Note that conf/local.conf and conf/bblayers.conf are symlink , and under source control. So it is generally better not to modify them, and use conf/site.conf and conf/auto.conf instead.
 
 # Build a minimal, console-only image
 
@@ -125,7 +120,14 @@ Then you can finally start the X server, and run any graphical application:
     export DISPLAY=:0
     glxgears
 
-The default X11 image does not include a window manager, you can easily add `metacity` or `openbox` in the image. To install `metacity` in the image, add the following to `conf/local.conf` file:
+The default X11 image includes `openbox` window manager, to use it:
+
+    X&
+    export DISPLAY=:0
+    openbox &
+    glxgears
+
+Of course, you can easily add another window manager, such as `metacity` in the image. To install `metacity` in the image, add the following to `conf/auto.conf` file:
 
     CORE_IMAGE_EXTRA_INSTALL += "metacity"
 
@@ -136,13 +138,11 @@ and rebuild the `rpb-desktop-image` image, it will now include `metacity`, which
     metacity&
     glxgears
 
-Similarly, you can replace `metacity` above with `openbox`.
-
 # Build a sample Wayland/Weston image
 
-OpenEmbedded comes with a basic Wayland/Weston image, but it has a few issues, and it is for now recommended to use the sample image included in the Linaro RPB (Reference Platform Build) layer:
+For Wayland/weston, it is recommended to change the DISTRO and use `rpb-wayland` instead of `rpb`. The main reason is that in the `rpb-wayland` distro, the support for X11 is completely removed. So , in a new terminal prompt, setup a new environment and make sure to use `rpb-wayland` for DISTRO, then, you can run a sample image with:
 
-    $ DISTRO=rpb-wayland bitbake rpb-weston-image
+    $ bitbake rpb-weston-image
 
 This image includes a few additional features, such as `systemd`, `connman` which makes it simpler to use. Once built, the image will be available at `tmp-eglibc/deploy/images/dragonboard-410c/rpb-weston-image-dragonboard-410c.ext4.gz`. And it can be flashed into `rootfs` partition.
 
