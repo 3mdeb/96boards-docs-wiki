@@ -4,40 +4,28 @@ Welcome to the supporting documentation for [Bubblegum-96]()
 
 ***
 
-[**Read About Bubblegum-96**](https://github.com/96boards/documentation/wiki/About-Bubblegum96)
-[<img src="http://i.imgur.com/HylpkcV.png" data-canonical-src="http://i.imgur.com/HylpkcV.png" width="20" height="20" />]()
-[**Compare 96Boards**](https://github.com/sdrobertw/test-wiki-/wiki/Compare-96Boards)
-[<img src="http://i.imgur.com/HylpkcV.png" data-canonical-src="http://i.imgur.com/HylpkcV.png" width="20" height="20" />]()
-[**Compare Builds**]()
-
-***
-
 [<img src="http://i.imgur.com/ykySoFc.png" data-canonical-src="http://i.imgur.com/ykySoFc.png" width="150" height="105" />]()
 [<img src="http://i.imgur.com/R6Fn3IS.png" data-canonical-src="http://i.imgur.com/R6Fn3IS.png" width="150" height="105" />]()
 [<img src="http://i.imgur.com/fRZZpdq.png" data-canonical-src="http://i.imgur.com/fRZZpdq.png" width="150" height="105" />]()
 
-
-### Contents
-
-
+<p align="left">
+  <b>Extras</b><br>
+  <a href="#">[About the DragonBoard™ 410c](https://github.com/96boards/documentation/wiki/About-Bubblegum96)</a> |
+  <a href="#"><a href="https://github.com/96boards/documentation/wiki/Compare-96Boards-Builds" target="_blank">Compare Builds</a></a> |
+  <a href="#">[Reference Platform Home](https://github.com/96boards/documentation/wiki/Reference-Platform-Home)</a>
+  <br>
 ***
 
-#### Builds
-- [Reference Platform Builds]()
-- [Linaro Builds]()
-- [Vendor Builds]()
+#### Downloads - Supported Operating Systems
 
-***
-#### User Guides
-
-- [Linux User Guide]()
-- [Android User Guide]()
+[<img src="http://i.imgur.com/7rrS2JR.png" data-canonical-src="http://i.imgur.com/7rrS2JR.png" width="125" height="157" />](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Crossroads)
 
 ***
 
 #### Hardware
 
-- [Hardware Manual]()
-- [Schematics]()
+- Hardware Manual ([Download PDF](https://github.com/96boards/documentation/blob/master/bubblegum-96/bubblegum-96_HardwareManual_V1.0.doc?raw=true))
+- Schematics ([Download PDF](https://github.com/96boards/documentation/raw/master/bubblegum-96/bubblegum-96_Schematic_V1.0.pdf) / [View](https://github.com/96boards/documentation/blob/master/bubblegum-96/bubblegum-96_Schematic_V1.0.pdf)) 
+- SoC ([Download PDF](https://github.com/96boards/documentation/blob/master/bubblegum-96/bubblegum-96_SoC_V1.0.doc?raw=true))
 
 ***
