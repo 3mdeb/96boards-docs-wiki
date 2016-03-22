@@ -8,7 +8,7 @@
 - Click **Installation Method** from intersection box (SD Card or Fastboot)
 - For HiKey Board Recovery, [Click Here](https://github.com/96boards/documentation/wiki/HiKey-Board-Recovery)
 
-###### Installation matrix:
+###### Official 96Boards Operating Systems
 
 |  [<img src="http://i.imgur.com/0e7lsoO.png" data-canonical-src="http://i.imgur.com/0e7lsoO.png" width="140" height="105" />]()   |  [<img src="http://i.imgur.com/jl4GG0d.png" data-canonical-src="http://i.imgur.com/jl4GG0d.png" width="80" height="100" />](https://github.com/96boards/documentation/wiki/HiKey-Crossroads#reference-platform-build)   |  [<img src="http://i.imgur.com/7rrS2JR.png" data-canonical-src="http://i.imgur.com/7rrS2JR.png" width="80" height="100" />](https://github.com/96boards/documentation/wiki/HiKey-Crossroads#reference-platform-build)   | 
 | :-: | :-: | :-: | :-: |
