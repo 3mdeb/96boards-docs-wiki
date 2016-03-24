@@ -12,7 +12,7 @@ Welcome to the supporting documentation for <a href="http://96boards.org" target
 
 ***
 
-#### _96Boards_
+#### _96Boards_ - Getting Started
 
 - [Dragonboard™ 410c](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Home)
 - [HiKey](https://github.com/96boards/documentation/wiki/HiKey-Home)
@@ -24,15 +24,6 @@ Welcome to the supporting documentation for <a href="http://96boards.org" target
   <a href="#"><a href="https://www.96boards.org/products/accessories/power/" target="_blank">**Power Adapters**</a></a>
   <br>
 
-
-***
-
-#### _Reference Software Platform_
-
-- [Reference Platform Home](https://github.com/96boards/documentation/wiki/Reference-Platform-Home)
-- [Feedback and Support](https://github.com/96boards/documentation/wiki/Reference-Platform-Feedback-and-Support)
-- [Kernel Policy](https://github.com/96boards/documentation/wiki/RP-Kernel-Policy)
-
 ***
 
 #### _Mezzanine Products_
@@ -43,6 +34,14 @@ Welcome to the supporting documentation for <a href="http://96boards.org" target
 - [Linker mezzanine card starter kit](https://github.com/96boards/documentation/wiki/Linker-mezzanine-card-starter-kit)
 - [96Boards UART Serial Adapter](https://github.com/96boards/documentation/wiki/96Boards-UART-Serial-Adapter)
 - [Sensors mezzanine](https://github.com/96boards/documentation/wiki/Sensors-mezzanine)
+
+***
+
+#### _Reference Software Platform_
+
+- [Reference Platform Home](https://github.com/96boards/documentation/wiki/Reference-Platform-Home)
+- [Feedback and Support](https://github.com/96boards/documentation/wiki/Reference-Platform-Feedback-and-Support)
+- [Kernel Policy](https://github.com/96boards/documentation/wiki/RP-Kernel-Policy)
 
 ***
 
