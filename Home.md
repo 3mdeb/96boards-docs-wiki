@@ -39,10 +39,10 @@ Welcome to the supporting documentation for <a href="http://96boards.org" target
 
 (Coming soon to wiki! - <a href="https://www.96boards.org/products/mezzanine/" target="_blank">**Website**</a>)
 
-- STM32 Sensor mezzanine board
-- Linker mezzanine card starter kit
-- 96Boards UART Serial Adapter
-- Sensors mezzanine
+- [STM32 Sensor mezzanine board](https://github.com/96boards/documentation/wiki/STM32-Sensor-mezzanine-board)
+- [Linker mezzanine card starter kit](https://github.com/96boards/documentation/wiki/Linker-mezzanine-card-starter-kit)
+- [96Boards UART Serial Adapter](https://github.com/96boards/documentation/wiki/96Boards-UART-Serial-Adapter)
+- [Sensors mezzanine](https://github.com/96boards/documentation/wiki/Sensors-mezzanine)
 
 ***
 
