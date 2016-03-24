@@ -63,3 +63,9 @@ Welcome to the supporting documentation for <a href="http://96boards.org" target
 ***
 
 Please refer to the side bar for additional links.
+
+<p align="left">
+  <b></b>
+  <a href="#">[Linaro Wiki](https://github.com/linaro/documentation/wiki/)</a> |
+  <a href="#">[96Boards Wiki](https://github.com/96boards/documentation/wiki/)</a>
+  <br>
