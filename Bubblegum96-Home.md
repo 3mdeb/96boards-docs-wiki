@@ -25,7 +25,7 @@ Welcome to the supporting documentation for [Bubblegum-96]()
 #### Hardware
 
 - Hardware Manual ([Download PDF](https://github.com/96boards/documentation/raw/master/bubblegum-96/HardwareManual_Bubblegum96.pdf) / [View](https://github.com/96boards/documentation/blob/master/bubblegum-96/HardwareManual_Bubblegum96.pdf))
-- Schematics ([Download PDF](https://github.com/96boards/documentation/blob/master/bubblegum-96/Schematics_Bubblegum96.pdf) / [View](https://github.com/96boards/documentation/blob/master/bubblegum-96/Schematics_Bubblegum96.pdf)) 
+- Schematics ([Download PDF](https://github.com/96boards/documentation/raw/master/bubblegum-96/Schematics_Bubblegum96.pdf) / [View](https://github.com/96boards/documentation/blob/master/bubblegum-96/Schematics_Bubblegum96.pdf)) 
 - SoC ([Download PDF](https://github.com/96boards/documentation/raw/master/bubblegum-96/SoC_bubblegum96.pdf) / [View](https://github.com/96boards/documentation/blob/master/bubblegum-96/SoC_bubblegum96.pdf))
 
 ***
