@@ -37,12 +37,12 @@ This section show how to install the Linaro based Debian operating system to you
 - Open "Terminal" application
 - Remove SD card from host computer and run the following command:
 ```shell
-lsblk
+$ lsblk
 ```
 - Note all recognized disk names
 - **Insert SD card** and run the following command (again):
 ```shell
-lsblk
+$ lsblk
 ```
 - Note the newly recognized disk. This will be your SD card.
 - **Remember** your SD card device name, it will be needed in **Step 7**.
@@ -65,12 +65,12 @@ lsblk
 - `cd` to the directory with your unzipped **Debian SD Card Install Image**
 
 ```shell
-cd <extraction directory>
+$ cd <extraction directory>
 
 #Example: 
 #<extraction directory> = /home/YourUserName/Downloads
 #For this example we assume the "Debian SD Card Install Image" is in the Downloads folder.
-cd /home/YourUserName/Downloads
+$ cd /home/YourUserName/Downloads
 ```
 
 ####**Step 6**: Locate SD Card Install Image
@@ -80,7 +80,7 @@ cd /home/YourUserName/Downloads
 **Unzipped Debian SD Card download will be a folder. This folder should be listed in your directory. Type `ls` from command line for a list of files that can be found in your current directory**:
 
 ```shell
-ls
+$ ls
 
 #output
 dragonboard410c_sdcard_install_debian-XX
@@ -90,7 +90,7 @@ dragonboard410c_sdcard_install_debian-XX
 - `cd` into this directory
 
 ```shell
-cd dragonboard410c_sdcard_install_debian-XX
+$ cd dragonboard410c_sdcard_install_debian-XX
 ```
 
 - Inside this folder you will find the install image
@@ -108,7 +108,7 @@ cd dragonboard410c_sdcard_install_debian-XX
 **Execute:**
 
 ```shell
-sudo dd if=db410c_sd_install_debian.img of=/dev/XXX bs=4M oflag=sync status=noxfer
+$ sudo dd if=db410c_sd_install_debian.img of=/dev/XXX bs=4M oflag=sync status=noxfer
 ```
 
 **Note:**
@@ -420,7 +420,7 @@ From the connected host machine terminal window, run the following commands:
 ```shell
 # Check to make sure device is connected and in fastboot mode
 
-fastboot devices
+$ fastboot devices
 ```
 
 Typically it will show as bellow
@@ -440,7 +440,7 @@ de82318	fastboot
 - `cd` to the directory with your unzipped **Bootloader Folder**
 
 ```shell
-cd <extraction directory>
+$ cd <extraction directory>
 
 #Example: 
 cd /Users/YourUserName/Downloads
@@ -448,7 +448,7 @@ cd /Users/YourUserName/Downloads
 #For this example we assume the "Bootloader" is in the Downloads folder.
 
 
-cd <unzipped Bootloader folder>
+$ cd <unzipped Bootloader folder>
 
 #Example:
 cd dragonboard410c_bootloader_emmc_linux-40
@@ -456,7 +456,7 @@ cd dragonboard410c_bootloader_emmc_linux-40
 #This example took place during release 40
 
 # This command will execute the flashall script within the bootloader folder
-./flashall
+$ ./flashall
 
 ```
 
@@ -483,14 +483,14 @@ In this section we will flash all remaining parts of the operating system. In or
 
 ```shell
 # (Once again) Check to make sure fastboot device connected
-sudo fastboot devices
+$ sudo fastboot devices
 
 # cd to the directory the boot image and  were extracted
 $ cd <extraction directory>
 
 # Make sure you have properly unzipped the boot and rootfs downloads
-sudo fastboot flash boot boot-linaro-jessie-qcom-snapdragon-arm64-**BUILD#**.img
-sudo fastboot flash rootfs linaro-jessie-developer-qcom-snapdragon-arm64-**BUILD#**.img
+$ sudo fastboot flash boot boot-linaro-jessie-qcom-snapdragon-arm64-**BUILD#**.img
+$ sudo fastboot flash rootfs linaro-jessie-developer-qcom-snapdragon-arm64-**BUILD#**.img
 ```
 **Note**: Replace **BUILD#** in the above commands with the file-specific date/build stamp.
 
