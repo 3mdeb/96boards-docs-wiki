@@ -41,6 +41,7 @@ Welcome to the supporting documentation for <a href="http://96boards.org" target
 
 - [Reference Platform Home](https://github.com/96boards/documentation/wiki/Reference-Platform-Home)
 - [Feedback and Support](https://github.com/96boards/documentation/wiki/Reference-Platform-Feedback-and-Support)
+- [Kernel Roadmap](https://github.com/96boards/documentation/wiki/RP-Kernel-Roadmap)
 - [Kernel Policy](https://github.com/96boards/documentation/wiki/RP-Kernel-Policy)
 
 ***
