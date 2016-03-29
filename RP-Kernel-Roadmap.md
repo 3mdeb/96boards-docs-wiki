@@ -9,7 +9,7 @@
 |16.12   |4.8?  | Y | ? | ? | ? |
 
      - Not supported
-     ? Unknown
+     ? Undecided
      S Skipped (e.g. LEG follows a 6-month cycle)
      Y Supported (features and platforms)
 
