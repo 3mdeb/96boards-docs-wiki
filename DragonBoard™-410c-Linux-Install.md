@@ -423,6 +423,11 @@ From the connected host machine terminal window, run the following commands:
 fastboot devices
 ```
 
+Typically it will show as bellow
+```shell
+de82318	fastboot
+```
+
 **At this point you should be connected to your DragonBoard™ 410c with a USB to microUSB cable. Your DragonBoard™ 410c should be booted into fastboot mode and ready to be flashed with the appropriate images.**
 
 #### **Step 4**: Flash Bootloader
