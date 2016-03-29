@@ -484,6 +484,8 @@ In this section we will flash all remaining parts of the operating system. In or
 ```shell
 # (Once again) Check to make sure fastboot device connected
 $ sudo fastboot devices
+# It will show similar to bellow if the device is connected successfully
+de82318	fastboot
 
 # cd to the directory the boot image and  were extracted
 $ cd <extraction directory>
