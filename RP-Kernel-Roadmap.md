@@ -7,8 +7,8 @@ See the [table](#kernel-version-table) below for a roadmap of proposed kernel ve
 
 ## Why is RPK needed?
  1. To allow engineers to focus on new features instead of spending time on HW enablement
- 1. To find integration problems early
- 1. To make it easy to measure the delta between an upstream kernel and what is needed to get a platform working
+ 1. To speed up finding integration problems while working upstream
+ 1. To make it easy to measure the delta between an upstream kernel and what is needed to make a platform useful
 
 ## Kernel Version Table
 | RPB Release | Kernel Version | LEG | LHG | LNG | LMG |
