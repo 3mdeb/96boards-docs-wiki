@@ -37,15 +37,6 @@ Welcome to the supporting documentation for <a href="http://96boards.org" target
 
 ***
 
-#### _Reference Software Platform_
-
-- [Reference Platform Home](https://github.com/96boards/documentation/wiki/Reference-Platform-Home)
-- [Feedback and Support](https://github.com/96boards/documentation/wiki/Reference-Platform-Feedback-and-Support)
-- [Kernel Roadmap](https://github.com/96boards/documentation/wiki/RP-Kernel-Roadmap)
-- [Kernel Policy](https://github.com/96boards/documentation/wiki/RP-Kernel-Policy)
-
-***
-
 #### _Hardware Specifications_
 
 - Consumer Edition (CE) Specification (<a href="https://github.com/96boards/documentation/blob/master/96BoardsCESpecificationv1.0-EA1.pdf" target="_blank">**View**</a>
@@ -55,10 +46,10 @@ Welcome to the supporting documentation for <a href="http://96boards.org" target
 
 ***
 
-#### _"How to" Guides_
+#### _Reference Software Platform_
 
-- [Internet Sharing over USB](https://github.com/96boards/documentation/wiki/Sharing-Internet-connections-over-USB-on-96Boards)
-- Serial Console setup
+- Reference Platform Documentation has moved! [Go here](https://github.com/linaro/documentation/wiki/Reference-Platform-Home)
+
 
 ***
 
