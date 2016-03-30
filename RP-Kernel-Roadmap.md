@@ -3,6 +3,8 @@ The Reference Platform Kernel(RPK) brings together WIP code that is still under 
 
 The kernel tree is managed similar to linux-next, in that topic branches adding support for various platforms and new kernel features are merged on top of a (close-to-mainline) vanilla kernel. See the [table](#kernel-version-table) below for a roadmap of proposed kernel versions for future releases.
 
+Please review the [[patch-acceptance policy|RP-Kernel-Policy]] for RPK.
+
 ## Why is RPK needed?
  1. To allow engineers to focus on new features instead of spending time on HW enablement
  1. To find integration problems early
@@ -21,7 +23,14 @@ The kernel tree is managed similar to linux-next, in that topic branches adding 
      S Skipped (e.g. LEG follows a 6-month cycle)
      Y Supported (features and platforms)
 
+## Hardware Platforms supported in each version
+| RPB Release | Kernel Version | Hikey | DB410c | D02 | Seattle |
+|---|---|---|---|---|---|
+|16.03   |4.4   | Y | Y | Y | Y |
+|16.06   |4.4   | Y | Y | Y | Y |
+
 ## Development Branches
+FIXME
 
 ## FAQ
  1. How is this different from linux-linaro?  
@@ -31,3 +40,4 @@ The kernel tree is managed similar to linux-next, in that topic branches adding 
 
 ## Additional Material
  * [Talk](https://www.youtube.com/watch?v=fW6_eL3U7OQ) about RPK at BKK16 (March 2016)
+ * [[Patch-acceptance Policy|RP-Kernel-Policy]] for RPK
