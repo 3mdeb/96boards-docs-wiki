@@ -350,6 +350,7 @@ GPIO3-1 | Link 5-6 | closed
 
 - Power on HiKey board by plugging in power adapter
 - Esure HiKey is detected by host computere
+- Wait for about 10 seconds
 - Open Terminal application and execute the following:
 
 ```shell
