@@ -1,9 +1,9 @@
 ## Introduction
 The Reference Platform Kernel(RPK) brings together WIP code that is still under review upstream to provide a single kernel image for 96boards and other Linaro member hardware of interest.
 
-The kernel tree is managed similar to linux-next, in that topic branches adding support for various platforms and new kernel features are merged on top of a (close-to-mainline) vanilla kernel. See the [table](#kernel-version-table) below for a roadmap of proposed kernel versions for future releases.
+The kernel tree is managed similar to linux-next, in that topic branches adding support for various platforms and new kernel features are merged on top of a (close-to-mainline) vanilla kernel. These topic branches are provided by the relevant segment group, Landing Team or vendor engineers who want to add support for a hardware platform or a new feature into RPK. Please review the [[patch-acceptance policy|RP-Kernel-Policy]] for RPK. It is implicit that the person responsible for the feature/platform suppport will rebase it to the new kernel version if that feature is not to be dropped in subsequent kernel releases.
 
-Please review the [[patch-acceptance policy|RP-Kernel-Policy]] for RPK.
+See the [table](#kernel-version-table) below for a roadmap of proposed kernel versions for future releases.
 
 ## Why is RPK needed?
  1. To allow engineers to focus on new features instead of spending time on HW enablement
@@ -41,3 +41,6 @@ FIXME
 ## Additional Material
  * [Talk](https://www.youtube.com/watch?v=fW6_eL3U7OQ) about RPK at BKK16 (March 2016)
  * [[Patch-acceptance Policy|RP-Kernel-Policy]] for RPK
+
+## Communications
+ * [[Dev|https://lists.96boards.org/mailman/listinfo]] mailing list
