@@ -1,4 +1,4 @@
-[<<< Back to Reference Platform Home](https://github.com/linaro/documentation/wiki/Reference-Platform-Home)
+[<<< Back to Reference Platform Home](https://github.com/96boards/documentation/wiki/Reference-Platform-Home)
 ***
 ## Reference Platform Build - 16.03
 
