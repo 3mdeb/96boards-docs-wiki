@@ -12,21 +12,24 @@ For more information about the Reference Software Platform project please watch 
   <b>Announcements</b><br>
   <a href="#">[RPB 16.03 Highlights](https://github.com/96boards/documentation/wiki/RPB-16.03-Highlights)</a> |
   <a href="#">[Known Issues](https://github.com/96boards/documentation/wiki/RPB-16.03-Known-Issues)</a> |
-  <a href="#">[Kernel Roadmap](https://github.com/96boards/documentation/wiki/RP-Kernel-Roadmap)</a> 
+  <a href="#">[Kernel Roadmap](https://github.com/96boards/documentation/wiki/RP-Kernel-Roadmap)</a>
   <br>
 
 ***
 
-#### QuickStart
+## QuickStart
 
 Choose Consumer Edition or Enterprise Edition to start setting up your instruction set. Download, build, and install your preferred Reference Platform operating system and/or components. Pre-built images and "build from source" options are available.
 
-- Reference Software - Consumer Edition ( [Build and Install](https://github.com/96boards/documentation/wiki/Reference-Platform-CE-Home) )
-- Reference Software - Enterprise Edition
-   - [D02](https://github.com/96boards/documentation/wiki/Reference-Platform-EE-D02-Home)
-   - [Overdrive](https://github.com/96boards/documentation/wiki/Reference-Platform-EE-Overdrive-Home)
-   - [X-Gene Mustang](https://github.com/96boards/documentation/wiki/Reference-Platform-EE-X-Gene-Mustang-Home)
-   - [HP ProLiant m400](https://github.com/96boards/documentation/wiki/Reference-Platform-EE-HP-m400-Home)
+#### Reference Software - Consumer Edition
+- [HiKey](https://github.com/96boards/documentation/wiki/Reference-Platform-HiKey-Home)
+- [DragonBoard™ 410c](https://github.com/96boards/documentation/wiki/Reference-Platform-DragonBoard™-410c-Home)
+
+#### Reference Software - Enterprise Edition
+- [D02](https://github.com/96boards/documentation/wiki/Reference-Platform-EE-D02-Home)
+- [Overdrive](https://github.com/96boards/documentation/wiki/Reference-Platform-EE-Overdrive-Home)
+- [X-Gene Mustang](https://github.com/96boards/documentation/wiki/Reference-Platform-EE-X-Gene-Mustang-Home)
+- [HP ProLiant m400](https://github.com/96boards/documentation/wiki/Reference-Platform-EE-HP-m400-Home)
 
 Enterprise Test Reports: ([Debian](https://builds.96boards.org/releases/reference-platform/components/debian-installer/16.03/EE-Debian-RPB-16.03-TestReport.pdf) / [CentOS](https://builds.96boards.org/releases/reference-platform/components/centos-installer/16.03/EE-CentOS-RPB-16.03-TestReport.pdf))
 
@@ -40,3 +43,9 @@ Enterprise Test Reports: ([Debian](https://builds.96boards.org/releases/referenc
 - [FAQ](https://github.com/96boards/documentation/wiki/Reference-Platform-FAQ)
 
 ***
+
+<p align="left">
+  <b></b>
+  <a href="#">[Linaro Wiki](https://github.com/linaro/documentation/wiki/)</a> |
+  <a href="#">[96Boards Wiki](https://github.com/96boards/documentation/wiki/)</a>
+  <br>
