@@ -413,6 +413,7 @@ If you are still having trouble setting up fastboot, <a href="https://youtu.be/W
 - Press and hold the Vol (-) button on the DragonBoard™ 410c, this is the S4 button. DragonBoard™ 410c should still NOT be powered on
 - While holding the Vol (-) button, power on the DragonBoard™ 410c by plugging it in
 - Once DragonBoard™ 410c is plugged into power, release your hold on the Vol (-) button.
+- Wait for about 20 seconds.
 - Board should boot into fastboot mode.
 
 From the connected host machine terminal window, run the following commands:
