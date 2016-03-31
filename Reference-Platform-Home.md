@@ -1,3 +1,7 @@
+##**ATTENTION: This page has moved [HERE](https://github.com/linaro/documentation/wiki/Reference-Platform-Home/_edit)**
+
+***
+
 [<<< Back to 96Boards Documentation Home](https://github.com/96boards/documentation/wiki)
 
 ***
