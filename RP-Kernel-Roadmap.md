@@ -24,10 +24,10 @@ See the [table](#kernel-version-table) below for a roadmap of proposed kernel ve
      Y Supported (features and platforms)
 
 ## Hardware Platforms supported in each version
-| RPB Release | Kernel Version | Hikey | DB410c | D02 | Seattle |
-|---|---|---|---|---|---|
-|16.03   |4.4   | Y | Y | Y | Y |
-|16.06   |4.4   | Y | Y | Y | Y |
+| RPB Release | Kernel Version | Hikey | DB410c | D02 | Overdrive | APM X-Gene | HP Proliant m400 |
+|---|---|---|---|---|---|---|---|
+|16.03   |4.4   | Y | Y | Y | Y | Y | Y |
+|16.06   |4.4   | Y | Y | Y | Y | Y | Y |
 
 ## Development Branches
 FIXME
