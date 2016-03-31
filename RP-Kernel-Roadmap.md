@@ -1,4 +1,4 @@
-##**ATTENTION: This page has moved to https://github.com/Linaro/documentation/wiki/RP-Kernel-Roadmap**
+##**ATTENTION: This page has moved [HERE](https://github.com/Linaro/documentation/wiki/RP-Kernel-Roadmap)**
 
 ## Introduction
 The Reference Platform Kernel(RPK) brings together WIP code that is still under review upstream to provide a single kernel image for 96boards and other Linaro member hardware of interest.
