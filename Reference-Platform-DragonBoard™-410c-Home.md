@@ -1,3 +1,8 @@
+##**ATTENTION: This page has moved [HERE](https://github.com/linaro/documentation/wiki/Reference-Platform-DragonBoard™-410c-Home)**
+
+
+***
+
 [<<< Back to Reference Platform Home](https://github.com/96boards/documentation/wiki/Reference-Platform-Home)
 ***
 ## Reference Platform Build - 16.03
