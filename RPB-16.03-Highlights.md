@@ -1,3 +1,8 @@
+##**ATTENTION: This page has moved [HERE](https://github.com/linaro/documentation/wiki/RPB-16.03-Highlights)**
+
+
+***
+
 [<<< Back to Reference Platform Home](https://github.com/96boards/documentation/wiki/Reference-Platform-Home#)
 
 ***
