@@ -364,9 +364,9 @@ $ sudo fastboot devices
 >**NOTE:** the ptable must be flashed first. Wait for a few seconds after the reboot command to allow the bootloader to restart using the new partition table.
 
 ```shell
-$ sudo fastboot flash ptable ptable-linux-8g.img
+$ sudo fastboot flash ptable <ptable_FILE_NAME>.img
 $ sudo fastboot reboot
-$ sudo fastboot flash boot boot-fat.uefi.img
+$ sudo fastboot flash boot <boot_FILE_NAME>.uefi.img
 $ sudo fastboot flash system hikey-jessie_alip_2015MMDD-nnn-Xg.emmc.img
 ```
 
