@@ -24,17 +24,17 @@ This method requires the following hardware:
 
 ***
 
-#### Step 2: Download Bootloader and Debian partition table
+#### Step 2: Download Debian partition table
 
 > Note: Some files have 4G and 8G options, download file which best matches your HiKey board.
 
-Build Folders (<a href="https://builds.96boards.org/releases/reference-platform/debian/hikey/16.03/bootloader/" target="_blank">**Binaries**</a> / <a href="https://builds.96boards.org/releases/reference-platform/debian/hikey/16.03/" target="_blank">**Image**</a>)
+- All HiKey **CircuitCo boards** will use the **4G files**
+- All HiKey **LeMaker 1G boards** will use the **4G files**
+- All HiKey **LeMaker 2G boards** will use the **8G files**
 
-- **l-loader.bin** ([**Download**](https://builds.96boards.org/releases/reference-platform/debian/hikey/16.03/bootloader/l-loader.bin))
-- **fip.bin** ([**Download**](https://builds.96boards.org/releases/reference-platform/debian/hikey/16.03/bootloader/fip.bin))
-- **nvme.img** ([**Download**](https://builds.96boards.org/releases/reference-platform/debian/hikey/16.03/bootloader/nvme.img))
-- **ptable-linux.img** ([**4G Download**](https://builds.96boards.org/releases/reference-platform/debian/hikey/16.03/bootloader/ptable-linux-4g.img) / [**8G Download**](https://builds.96boards.org/releases/reference-platform/debian/hikey/16.03/bootloader/ptable-linux-8g.img))
-- **hisi-idt.py** ([**Download**](https://builds.96boards.org/releases/reference-platform/debian/hikey/16.03/bootloader/hisi-idt.py))
+**ptable-linux.img** ([**4G Download**](https://builds.96boards.org/releases/reference-platform/debian/hikey/16.03/bootloader/ptable-linux-4g.img) / [**8G Download**](https://builds.96boards.org/releases/reference-platform/debian/hikey/16.03/bootloader/ptable-linux-8g.img))
+
+***
 
 #### Step 3: Download Boot image and Root File System
 
@@ -44,7 +44,7 @@ Build Folders (<a href="https://builds.96boards.org/releases/reference-platform/
 
 ***
 
-#### Step 3: Choose your host computer to access your instruction set
+#### Step 4: Choose your host computer to access your instruction set
 
 - [Linux](https://github.com/96boards/documentation/wiki/HiKey-Linux-Install#linux-host-1)
 
