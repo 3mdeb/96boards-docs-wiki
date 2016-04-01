@@ -13,12 +13,14 @@ To boot from the SD card, you will need to recompile a patched version of the bo
 ## Recompile the patched bootloader
 
     # get compiler 
-    export LK_GCC_GIT="git://codeaurora.org/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8.git"
-    export LK_SDBOOT_GIT="https://git.linaro.org/landing-teams/working/qualcomm/lk.git"
-    git clone --depth 1 -b LA.BR.1.1.3.c4-01000-8x16.0 ${LK_GCC_GIT} lk_gcc
+    git clone --depth 1 \
+         git://codeaurora.org/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8.git \
+         -b LA.BR.1.1.3.c4-01000-8x16.0 lk_gcc
 
     # get LK source code
-    git clone --depth 1 -b release/LA.BR.1.1.2-02210-8x16.0+sdboot ${LK_SDBOOT_GIT} lk_sdboot
+    git clone --depth 1 \
+         https://git.linaro.org/landing-teams/working/qualcomm/lk.git \
+         -b release/LA.BR.1.1.2-02210-8x16.0+sdboot lk_sdboot
 
     # build bootloader
     cd lk_sdboot
