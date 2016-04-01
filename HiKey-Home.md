@@ -46,9 +46,4 @@ Welcome to the supporting documentation for [HiKey](https://www.96boards.org/pro
 ***
 #### Build and Install from Source
 
-- [Bootloader From Source](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted#bootloader-from-source)
-- [Kernel From Source](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted#kernel-from-source)
-- [WiFi Driver From Source](WiFi Driver From Source)
 - [AOSP Build From Source](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted#aosp-build-from-source)
-- [Install onto eMMC](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted#install-onto-emmc)
-- [Install onto SD Card](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted#install-onto-sd-card)
