@@ -66,7 +66,11 @@ This method requires the following hardware:
 
 #### Step 2: Download the following files
 
-> Note: Some files have 4G and 8G options, download file which best matches your HiKey board.
+>Note: Some files have 4G and 8G options, download file which best matches your HiKey board.
+
+- All HiKey **CircuitCo boards** will use the **4G files**
+- All HiKey **LeMaker 1G boards** will use the **4G files**
+- All HiKey **LeMaker 2G boards** will use the **8G files**
 
 Build Folders (<a href="http://builds.96boards.org/releases/hikey/linaro/binaries/latest/" target="_blank">**Binaries**</a> / <a href="http://builds.96boards.org/releases/hikey/linaro/aosp/latest/" target="_blank">**Image**</a>)
 
