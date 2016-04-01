@@ -39,15 +39,6 @@ Enterprise Test Reports: ([Debian](https://builds.96boards.org/releases/referenc
 
 ***
 
-#### Resources
-
-- [Report a bug](https://github.com/96boards/documentation/wiki/Reference-Platform-bugs)
-- [Feedback and Support](https://github.com/96boards/documentation/wiki/Reference-Platform-Feedback-and-Support)
-- [Kernel Policy](https://github.com/96boards/documentation/wiki/RP-Kernel-Policy)
-- [FAQ](https://github.com/96boards/documentation/wiki/Reference-Platform-FAQ)
-
-***
-
 <p align="left">
   <b></b>
   <a href="#">[Linaro Wiki](https://github.com/linaro/documentation/wiki/)</a> |
