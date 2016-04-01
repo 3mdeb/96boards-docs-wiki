@@ -26,9 +26,13 @@ This method requires the following hardware:
 ***
 #### Step 2: Download SD Card Image
 
-> Note: Choose 4G or 8G option, download file which best matches your HiKey board.
+>Note: Some files have 4G and 8G options, download file which best matches your HiKey board.
 
-- **Debian SD Card Image** ([**4G Download**](https://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_alip_20151130-387-4g.emmc.img.gz) / [**8G Download**](https://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_alip_20151130-387-8g.emmc.img.gz))
+- All HiKey **CircuitCo boards** will use the **4G files**
+- All HiKey **LeMaker 1G boards** will use the **4G files**
+- All HiKey **LeMaker 2G boards** will use the **8G files**
+
+**Debian SD Card Image** ([**4G Download**](https://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_alip_20151130-387-4g.emmc.img.gz) / [**8G Download**](https://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_alip_20151130-387-8g.emmc.img.gz))
 
 ***
 #### Step 3: Choose your host computer to access your instruction set
@@ -71,7 +75,11 @@ This method requires the following hardware:
 
 #### Step 2: Download Debian Bootloader and Boot file
 
-> Note: Some files have 4G and 8G options, download file which best matches your HiKey board.
+>Note: Some files have 4G and 8G options, download file which best matches your HiKey board.
+
+- All HiKey **CircuitCo boards** will use the **4G files**
+- All HiKey **LeMaker 1G boards** will use the **4G files**
+- All HiKey **LeMaker 2G boards** will use the **8G files**
 
 Build Folders (<a href="http://builds.96boards.org/releases/hikey/linaro/binaries/latest/" target="_blank">**Binaries**</a> / <a href="http://builds.96boards.org/releases/hikey/linaro/debian/latest/" target="_blank">**Image**</a>)
 
@@ -82,16 +90,23 @@ Build Folders (<a href="http://builds.96boards.org/releases/hikey/linaro/binarie
 - **hisi-idt.py** ([**Download**](http://builds.96boards.org/releases/hikey/linaro/binaries/latest/hisi-idt.py))
 - **boot_fat.uefi.img** ([**Download**](http://builds.96boards.org/releases/hikey/linaro/debian/latest/boot-fat.uefi.img.gz))
 
+***
+
 #### Step 3: Download ONE Root File System
 
-> Note: Some files have 4G and 8G options, download file which best matches your HiKey board.
+>Note: Some files have 4G and 8G options, download file which best matches your HiKey board.
 
-- **Debian Rootfs (Desktop)** (<a href="http://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_alip_20151130-387-4g.emmc.img.gz" target="_blank">**4G Download**</a> / <a href="http://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_alip_20151130-387-8g.emmc.img.gz" target="_blank">**8G Download**</a>)
-- **Debian Rootfs (Command line)** (<a href="http://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_developer_20151130-387-4g.emmc.img.gz" target="_blank">**4G Download**</a> / <a href="http://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_developer_20151130-387-8g.emmc.img.gz" target="_blank">**8G Download**</a>)
+- All HiKey **CircuitCo boards** will use the **4G files**
+- All HiKey **LeMaker 1G boards** will use the **4G files**
+- All HiKey **LeMaker 2G boards** will use the **8G files**
+
+**Debian Rootfs (Desktop)** (<a href="http://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_alip_20151130-387-4g.emmc.img.gz" target="_blank">**4G Download**</a> / <a href="http://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_alip_20151130-387-8g.emmc.img.gz" target="_blank">**8G Download**</a>)
+
+**Debian Rootfs (Command line)** (<a href="http://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_developer_20151130-387-4g.emmc.img.gz" target="_blank">**4G Download**</a> / <a href="http://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_developer_20151130-387-8g.emmc.img.gz" target="_blank">**8G Download**</a>)
 
 ***
 
-#### Step 3: Choose your host computer to access your instruction set
+#### Step 4: Choose your host computer to access your instruction set
 
 - [Linux](https://github.com/96boards/documentation/wiki/HiKey-Linux-Install#linux-host-1)
 
