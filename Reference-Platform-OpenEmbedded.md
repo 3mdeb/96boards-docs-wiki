@@ -1,3 +1,5 @@
+##**ATTENTION: This page has moved [HERE](https://github.com/linaro/documentation/wiki/Reference-Platform-OpenEmbedded)**
+
 This wiki page provides instructions to get started with OpenEmbedded and the Yocto Project using the 96boards OpenEmbedded Reference Software Platform.
  
 # Introduction
