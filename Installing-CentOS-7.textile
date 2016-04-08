@@ -1,1 +1,1 @@
-h1. **ATTENTION: This page has moved "HERE":https://github.com/linaro/documentation/wiki/Reference-Platform-Feedback-and-Support**
+h1. **ATTENTION: This page has moved "HERE":https://github.com/linaro/documentation/wiki/Reference-Platform-EE-Installing-CentOS-7**
