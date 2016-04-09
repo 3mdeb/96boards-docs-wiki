@@ -1,4 +1,4 @@
-This page provides information to create a custom GPT for DragonBoard 410c. Note that flashing your own GPT will result in loss of data on the eMMC, make sure that you know what you are doing.
+This page provides information to create a custom GUID Partition Table(GPT) for DragonBoard 410c. Note that flashing your own GPT will result in loss of data on the eMMC, make sure that you know what you are doing.
 
 The following tool can be used to:
 * create a SD card image
