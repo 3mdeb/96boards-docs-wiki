@@ -32,6 +32,7 @@ Additional hardware required by Cello.
  * SATA-eSATA adapter cable (e.g.[StarTech SATA2ESATA6](https://www.startech.com/Cables/Drive/eSATA/6foot-Shielded-eSATA-to-SATA-Cable~SATA2ESATA6))
  * SATA-SATA cable (e.g. [Delux Infinity DLX-S18](http://www.microcenter.com/product/388739/18_SATA_III_Cable))
  * SATA drives as required.
+ * [Battery BR-1225](http://www.digikey.com/product-detail/en/panasonic-bsg/BR-1225/P183-ND/31915) for RTC
 1. Flash:
  * [Dediprog SF100](http://www.dediprog.com/pd/spi-flash-solution/SF100) or equivalent.
 
