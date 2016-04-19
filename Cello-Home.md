@@ -10,6 +10,8 @@ Welcome to the supporting documentation for [Cello](http://www.lenovator.com/pro
 
 #### Hardware
 
+- Schematics ([Linaro/Internal Only](https://drive.google.com/open?id=0B5b0QvBnBcsyM3E4eGMxX1pwaTA))
+
 ***
 
 #### Shopping List
