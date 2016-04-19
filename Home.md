@@ -14,9 +14,13 @@ Welcome to the supporting documentation for <a href="http://96boards.org" target
 
 #### _96Boards_ - Getting Started
 
+######Consumer Edition
 - [Dragonboard™ 410c](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Home)
 - [HiKey](https://github.com/96boards/documentation/wiki/HiKey-Home)
 - [Bubblegum-96](https://github.com/96boards/documentation/wiki/Bubblegum96-Home)
+
+######Enterprise Edition
+- [Cello](https://github.com/96boards/documentation/wiki/Cello-Home)
 
 <p align="left">
   <b>Extras</b><br>
