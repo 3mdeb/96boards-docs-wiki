@@ -6,6 +6,8 @@ Welcome to the supporting documentation for [Cello](http://www.lenovator.com/pro
 
 #### Downloads - Supported Operating Systems
 
+- [Reference Platform - Debian/CentOS](https://github.com/Linaro/documentation/wiki/Reference-Platform-EE-Cello-Home)
+
 ***
 
 #### Hardware
