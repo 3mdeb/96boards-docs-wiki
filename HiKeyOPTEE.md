@@ -1,3 +1,5 @@
+# WARNING: This page it OUTDATED and will NOT work so please do NOT follow the instructions here! Once updated, this notice will be removed so please check back in a little bit. Thank you for your patience!
+
 # HiKey - OP-TEE
 
 How to integrate OP-TEE into your HiKey Linux image
