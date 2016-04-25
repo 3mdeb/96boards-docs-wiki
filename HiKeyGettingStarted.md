@@ -270,7 +270,7 @@ GPIO3-1 | Link 5-6 | open
 
 **NOTE:** the ptable must be flashed first. Wait for a few seconds after the reboot command to allow the bootloader to restart using the new partition table. (Example goes with 8G)
 ```
-$ sudo fastboot flash ptable ptable-aosp-8g.img
+$ sudo fastboot flash ptable ptable-aosp-8g.img (if 4GB board)
 $ sudo fastboot reboot
 $ sudo fastboot flash boot boot_fat.uefi.img
 $ sudo fastboot flash cache cache.img
@@ -520,7 +520,7 @@ The bootloader has now been installed into RAM. Wait a few seconds for the fastb
 
 
 ```
-$ sudo fastboot flash ptable ptable-linux-8g.img
+$ sudo fastboot flash ptable ptable-linux-8g.img (if 8GB board) (ptable-linux-4g.img for 4GB board)
 $ sudo fastboot reboot
 $ sudo fastboot flash fastboot fip.bin
 $ sudo fastboot flash nvme nvme.img
