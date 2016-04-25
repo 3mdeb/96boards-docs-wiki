@@ -270,7 +270,7 @@ GPIO3-1 | Link 5-6 | open
 
 **NOTE:** the ptable must be flashed first. Wait for a few seconds after the reboot command to allow the bootloader to restart using the new partition table. (Example goes with 8G)
 ```
-$ sudo fastboot flash ptable ptable-aosp-8g.img (if 4GB board)
+$ sudo fastboot flash ptable ptable-aosp-8g.img (for 8GB board) (ptable-aosp-8g.img for 8GB board)
 $ sudo fastboot reboot
 $ sudo fastboot flash boot boot_fat.uefi.img
 $ sudo fastboot flash cache cache.img
