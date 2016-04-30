@@ -32,7 +32,7 @@ This method requires the following hardware:
 - All HiKey **LeMaker 1G boards** will use the **4G files**
 - All HiKey **LeMaker 2G boards** will use the **8G files**
 
-**Debian SD Card Image** ([**4G Download**](https://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_alip_20151130-387-4g.emmc.img.gz) / [**8G Download**](https://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_alip_20151130-387-8g.emmc.img.gz))
+**Debian SD Card Image** ([**4G Download**](https://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_alip_*-4g.emmc.img.gz) / [**8G Download**](https://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_alip_*-8g.emmc.img.gz))
 
 ***
 #### Step 3: Choose your host computer to access your instruction set
@@ -100,9 +100,9 @@ Build Folders (<a href="http://builds.96boards.org/releases/hikey/linaro/binarie
 - All HiKey **LeMaker 1G boards** will use the **4G files**
 - All HiKey **LeMaker 2G boards** will use the **8G files**
 
-**Debian Rootfs (Desktop)** (<a href="http://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_alip_20151130-387-4g.emmc.img.gz" target="_blank">**4G Download**</a> / <a href="http://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_alip_20151130-387-8g.emmc.img.gz" target="_blank">**8G Download**</a>)
+**Debian Rootfs (Desktop)** (<a href="http://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_alip_*-4g.emmc.img.gz" target="_blank">**4G Download**</a> / <a href="http://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_alip_*-8g.emmc.img.gz" target="_blank">**8G Download**</a>)
 
-**Debian Rootfs (Command line)** (<a href="http://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_developer_20151130-387-4g.emmc.img.gz" target="_blank">**4G Download**</a> / <a href="http://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_developer_20151130-387-8g.emmc.img.gz" target="_blank">**8G Download**</a>)
+**Debian Rootfs (Command line)** (<a href="http://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_developer_*-4g.emmc.img.gz" target="_blank">**4G Download**</a> / <a href="http://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_developer_*-8g.emmc.img.gz" target="_blank">**8G Download**</a>)
 
 ***
 
