@@ -26,7 +26,7 @@ This method requires the following hardware:
 ***
 #### Step 2: Download SD Card Image
 
-- Debian SD Card Image ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/dragonboard410c_sdcard_install_debian-66.zip) / <a href="http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/" target="_blank">Build Folder</a>)
+- Debian SD Card Image ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/dragonboard410c_sdcard_install_debian-*.zip) / <a href="http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/" target="_blank">Build Folder</a>)
 
 >Note the location of all downloads, they will be needed once you access your instruction set
 
