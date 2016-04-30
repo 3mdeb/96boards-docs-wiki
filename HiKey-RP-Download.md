@@ -38,8 +38,8 @@ This method requires the following hardware:
 
 #### Step 3: Download Boot image and Root File System
 
-- **Debian Boot** ([**Download**](https://builds.96boards.org/releases/reference-platform/debian/hikey/16.03/hikey-boot-linux-20160301-68.uefi.img.gz))
-- **Debian Rootfs** (<a href="https://builds.96boards.org/releases/reference-platform/debian/hikey/16.03/hikey-rootfs-debian-jessie-alip-20160301-68.emmc.img.gz" target="_blank">**Download**</a>)
+- **Debian Boot** ([**Download**](https://builds.96boards.org/releases/reference-platform/debian/hikey/16.03/hikey-boot-linux-*.uefi.img.gz))
+- **Debian Rootfs** (<a href="https://builds.96boards.org/releases/reference-platform/debian/hikey/16.03/hikey-rootfs-debian-jessie-alip-*.emmc.img.gz" target="_blank">**Download**</a>)
 
 
 ***
