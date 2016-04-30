@@ -24,7 +24,7 @@ This method requires the following hardware:
 ***
 #### Step 2: Download SD Card Image
 
-- Android SD Card Image ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/dragonboard410c_sdcard_install_android-95.zip) / <a href="http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/" target="_blank">Build Folder</a>)
+- Android SD Card Image ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/dragonboard410c_sdcard_install_android-*.zip) / <a href="http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/" target="_blank">Build Folder</a>)
 
 >Note the location of all downloads, they will be needed once you access your instruction set
 
@@ -66,7 +66,7 @@ This method requires the following hardware:
 ***
 #### Step 2: Download Android Bootloader
 
-- Android Bootloader ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/linaro/rescue/latest/dragonboard410c_bootloader_emmc_android-40.zip) / <a href="http://builds.96boards.org/releases/dragonboard410c/linaro/rescue/latest/" target="_blank">Build Folder</a> )
+- Android Bootloader ([Direct Download](http://builds.96boards.org/releases/dragonboard410c/linaro/rescue/latest/dragonboard410c_bootloader_emmc_android-*.zip) / <a href="http://builds.96boards.org/releases/dragonboard410c/linaro/rescue/latest/" target="_blank">Build Folder</a> )
 
 #### Step 3: Download the following files from the latest build
 
