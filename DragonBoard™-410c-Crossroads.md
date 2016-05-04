@@ -18,7 +18,7 @@
 
 ###### Third party Operating Systems
 
-|  <a href="http://ms-iot.github.io/content/en-US/win10/DB410c.htm" target="_blank">Windows IoT Core</a>  |
+|  <a href="http://linaro.co/db410cwindows" target="_blank">Windows IoT Core</a>  |
 | :-: |
 | <a href="http://ms-iot.github.io/content/en-US/win10/DB410c.htm" target="_blank"><img src="http://i.imgur.com/1Sg2I7N.png" data-canonical-src="http://i.imgur.com/1Sg2I7N.png" width="100" height="100" /></a>|   
 
