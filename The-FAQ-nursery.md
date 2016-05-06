@@ -32,7 +32,31 @@ TDB
 
 ## Dragonboard 410c
 
-TBD
+**Q: Where are the documentations?**
+
+We are finally happy to announce that front page of all the contents of the information of 96Boards are up on our website.
+
+It includes out of box usage to detail technical information and how to install OS with your selection.
+
+[96Boards Documentation portal](http://www.96boards.org/documentation/)
+
+**Q: How to boot after buying the DragonBoard 410c?**
+
+Probably this is the first topic you would like to know. Please refer the instruction to boot your board with HDMI display.
+
+[Getting started with HDMI display](http://www.96boards.org/forums/topic/short-into-to-start-your-dragonboard-410c-with-hdmi-display/)
+
+**Q: How to use serial console on 96Boards?**
+
+The access to the board with serial console is essential for most for the developers. We have made the tutorial describing one of the easiest ways to get started with the serial console.
+
+[Getting started with serial console on Dragonboard 410c](http://www.96boards.org/forums/topic/short-into-to-start-your-dragonboard-410c-with-serial-console/)
+
+Q: Where to look information about Windows IoT on DragonBoard 410C?
+
+The DragonBoard 410c offers the selection of Windows IoT. Please refer the link to obtain the information of Windows IoT on DragonBoard 410C.
+
+[How to Setup Windows 10 IoT Core on Dragonboard](http://www.96boards.org/forums/topic/windows-10/)
 
 ## Bubblegum-96
 
