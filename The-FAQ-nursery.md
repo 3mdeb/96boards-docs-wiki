@@ -2,7 +2,7 @@
 
 _The meta-questions describe the role of this document. The questions in this section should not be copied into the FAQ._
 
-**Q: What is the FAQ nursery? **
+**Q: What is the FAQ nursery?**
 
 One meaning of nursery is to describes a business that grows young plant until they are strong enough to be sold in a garden centre. In the same way that a nursery nurtures immature plants until they are ready to face the world, the FAQ nursery allows FAQs to be collaboratively edited (in markdown format) whilst they are not ready to be shared on the forum.
 
