@@ -1,6 +1,10 @@
 # OpenOCD JTAG and HiKey
 
-I've been working on getting a open source JTAG debugging solution working on HiKey. This page documents the current status, and how to get this setup and working.
+Hikey provides an unpopulated JTAG connector on its underside. It is relatively easy to hand solder on a proper connector and to use inexpensive JTAG interfaces to communicate with the board.
+
+Currently the open-source JTAG debugging solutions are fairly immature for 64-bit ARM platforms. In general the Hikey should be considered a tool to help develop OpenOCD on rather than considering OpenOCD a tool to help you develop on a Hikey!
+
+This page documents the current status, and provide instructions on to to get setup and working.
 
 ## Soldering on the connector
 The first step is to solder on the JTAG connector. The unpopulated header is at J10 on the underside of the circuit board. The connector that you need to buy is a "FTSH-105-01-L-DV". It can be purchased from Farnell here (note the image is for a larger connector).
@@ -71,7 +75,7 @@ If all goes well you should see trace like the following: -
     Info : JTAG tap: hi6220.dap tap/device found: 0x5ba00477 (mfg: 0x23b, part: 0xba00, ver: 0x5)
     Info : hi6220.cpu: hardware has 6 breakpoints, 4 watchpoints
 
-If you see trace like this
+If you see trace like this:
 
     Open On-Chip Debugger 0.9.0-dev-00241-gd356c86-dirty (2015-07-10-08:20)
     Licensed under GNU GPL v2
@@ -91,7 +95,7 @@ If you see trace like this
     Warn : Bypassing JTAG setup events due to errors
     Warn : Invalid ACK 0x7 in JTAG-DP transaction
 
-Check the following: -
+... then check the following:
 * Soldering of the JTAG connector
 * The cables are plugged in securely
 * The board is correctly powered.
@@ -159,6 +163,8 @@ This command was issued whilst sat at the u-boot prompt.
 
 ### Setting a breakpoint
 
+_Currently it is not possible to resume the target once Linux has booted (although it can be halted and examined). At present preakpoints are only effective for bootloader development._
+
     > bp 0x35000000 4 hw
     breakpoint set at 0x        35000000
     > resume
@@ -192,7 +198,9 @@ now remove the breakpoint so we can try single stepping
 
     rbp 0x35000000
     
-### Single stepping u-boot
+### Single stepping
+
+_Currently it is not possible to resume the target once Linux has booted (although it can be halted and examined). At present single stepping is only effective for bootloader development._
 
     > step
     target state: halted
@@ -332,17 +340,10 @@ statically linked address 0x35000000. On my system it gets relocated to
     #0  do_version (cmdtp=0x3ef8c0c0, flag=0, argc=1, argv=0x3e746850) at ../common/cmd_version.c:19
     #1  0x000000003ef604a8 in cmd_call (argv=0x3e746850, argc=1, 
 
-
-
-    
-
-
-
-    
-
 ## What isn't working
 
 Probably lots of things - add issues here when you find them :)
+
 Better still debug and fix it!
 
 Sometimes I hit the following GDB assertion when doing a backtrace in U-Boot
