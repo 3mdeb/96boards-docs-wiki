@@ -74,6 +74,14 @@ The DragonBoard 410c offers the selection of Windows IoT. Please refer the link 
 
 We're busy working on it. In the mean time take a look at https://github.com/96boards-bubblegum/linaro-adfu-tool to see how to FLASH different operating systems onto your Bubblegum-96.
 
+**Q: Why can I buy the USB type A to USB type A needed to debrick the board?**
+
+It can be difficult to find these cables using a search engines because the cable you need tends to be hidden behind all the USB type A to type B (or micro-B) cables. Often its better just to browse the web site of a specialist cable provider.
+
+To help you save a bit of time we've collected together links to suppliers who appear to sell suitable products. We haven't tested them all ourselves but we hope its useful. The list is a bit shorter than we'd like right now so feel free to post links to alternative suppliers on the forum and we'll try to add them here.
+
+* [Lindy USB type A plug to micro-B socket (UK)](http://www.lindy.co.uk/cables-adapters-c1/usb-c449/usb-2-0-c450/usb-2-0-type-a-male-to-micro-b-female-adapter-p8431/)
+
 # Enterprise edition boards
 
 ## Cello
