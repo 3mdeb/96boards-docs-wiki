@@ -52,7 +52,7 @@ The access to the board with serial console is essential for most for the develo
 
 [Getting started with serial console on Dragonboard 410c](http://www.96boards.org/forums/topic/short-into-to-start-your-dragonboard-410c-with-serial-console/)
 
-Q: Where to look information about Windows IoT on DragonBoard 410C?
+**Q: Where to look information about Windows IoT on DragonBoard 410C?**
 
 The DragonBoard 410c offers the selection of Windows IoT. Please refer the link to obtain the information of Windows IoT on DragonBoard 410C.
 
