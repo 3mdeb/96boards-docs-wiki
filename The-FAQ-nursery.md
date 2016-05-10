@@ -28,7 +28,7 @@ Firstly, consider checking to see if anyone else has asked a similar question. I
 
 Otherwise the best thing to do is to start a new topic and give it a good title. The title appears in the side bar on the forum and gets lots of visibility. A good title will tend to attract better answers.
 
-**Q: Why most I constantly prove that I am not a robot?**
+**Q: Why must I constantly prove that I am not a robot?**
 
 *All* forums have to fight spam and are usually forced to make a choice between the costs of fighting spam reactively (constant clean up) and the cost of fighting spam pro-actively (CAPTCHAs, approvals requires for first few posts).
 
