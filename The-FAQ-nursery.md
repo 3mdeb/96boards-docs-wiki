@@ -16,13 +16,23 @@ FAQs are presented as questions and answers and it is important that the questio
 
 A FAQ is *not* documentation and need not adopt the formal approach commonly found in technical documentation. Instead answers in a FAQ should adopt the more informal tone we expect to find on the forum. 
 
-# General
+# How to use the forum 
+
+**Q: I'm new here. What should I read first?**
+
+
 
 **Q: What is the best way to ask questions on the forum?**
 
 Firstly, consider checking to see if anyone else has asked a similar question. I'd recommend using a full search engine since that is more powerful than the search box built into the forum, for example if you use google just add <code>site:96boards.org</code> to limit you search to the forums (and the 96Boards documentation).
 
 Otherwise the best thing to do is to start a new topic and give it a good title. The title appears in the side bar on the forum and gets lots of visibility. A good title will tend to attract better answers.
+
+**Q: Why most I constantly prove that I am not a robot?**
+
+*All* forums have to fight spam and are usually forced to make a choice between the costs of fighting spam reactively (constant clean up) and the cost of fighting spam pro-actively (CAPTCHAs, approvals requires for first few posts).
+
+The CAPTCHA system used here at 96Boards is relatively lightweight, especially compared tests that require you to decode obfuscated text. It asks you to show you are not a robot by clicking on a tick box. Occasionally it will also ask you to solve a picture puzzle. Either way, we believe that this type of CAPTCHA has a good chance of success on the first try and we really hope it doesn't slow you down too much.
 
 # Consumer edition boards
 
