@@ -40,7 +40,8 @@ The CAPTCHA system used here at 96Boards is relatively lightweight, especially c
 
 This question is critical. Using the wrong method to powering the 96Boards will damage your board.
 Please refer the link to buy appropriate AC adapter with the right DC plug.
-[How to select the right AC adapter and why micro USB does not work](https://www.96boards.org/products/accessories/power/)
+
+[How to select the correct AC adapter and why micro USB does not work](https://www.96boards.org/products/accessories/power/)
 
 **Q: Can I use mouse/keyboard and adb at the same time?**
 
