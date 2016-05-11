@@ -53,8 +53,8 @@ TDB
 We are finally happy to announce that front page of all the contents of the information of 96Boards are up on our website.
 
 It includes out of box usage to detail technical information and how to install OS with your selection.
-
-[96Boards Documentation portal](http://www.96boards.org/documentation/)
+[The 96Boards CE Documentation wiki page](https://github.com/96boards/documentation/wiki)
+[96Boards Documentation portal (under construction)](http://www.96boards.org/documentation/)
 
 **Q: How to boot after buying the DragonBoard 410c?**
 
