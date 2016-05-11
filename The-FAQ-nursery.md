@@ -38,7 +38,12 @@ The CAPTCHA system used here at 96Boards is relatively lightweight, especially c
 
 **Q: Can I use mouse/keyboard and adb at the same time?**
 
-TBD
+Very good question, it would be great if it could you the mouse/keyboard and adb at the same time.
+The current 96Boards has two USB Type A connectors (the two big regular USB connectors) and one micro USB connector.
+To use adb from your host PC, you need to connect the Host PC with micro USB connector.
+Unfortunately current specification of 96Boards you need to unplug anything it is connected on the the USB Type A connector, such as, mouse or keyboard and etc, to use micro USB connector for adb.
+Using any mouse/keyboard and other USB devices on reguler usage of Android is perfectly fine,
+just pleas remove any USB devices on both Type-A connector before inserting micro USB cable for starting to use adb.
 
 # Consumer edition boards
 
