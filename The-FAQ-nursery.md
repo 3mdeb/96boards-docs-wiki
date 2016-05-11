@@ -36,6 +36,12 @@ The CAPTCHA system used here at 96Boards is relatively lightweight, especially c
 
 # General questions
 
+**Q: Can I use the micro USB cable to power the 96Boards or use my AC adapter at home?**
+
+This question is critical. Using the wrong method to powering the 96Boards will damage your board.
+Please refer the link to buy appropriate AC adapter with the right DC plug.
+[How to select the right AC adapter and why micro USB does not work](https://www.96boards.org/products/accessories/power/)
+
 **Q: Can I use mouse/keyboard and adb at the same time?**
 
 Very good question, it would be great if it could you the mouse/keyboard and adb at the same time.
