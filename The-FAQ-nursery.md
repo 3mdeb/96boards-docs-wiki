@@ -34,6 +34,10 @@ Otherwise the best thing to do is to start a new topic and give it a good title.
 
 The CAPTCHA system used here at 96Boards is relatively lightweight, especially compared tests that require you to decode obfuscated text. It asks you to show you are not a robot by clicking on a tick box. Occasionally it will also ask you to solve a picture puzzle. Either way, we believe that this type of CAPTCHA has a good chance of success on the first try and we really hope it doesn't slow you down too much.
 
+**Q: Why the CAPTCHA system refuse me to select pictures?**
+
+TBD
+
 # General questions
 
 **Q: Can I use the micro USB cable to power the 96Boards or use my AC adapter at home?**
