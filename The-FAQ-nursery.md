@@ -36,7 +36,9 @@ The CAPTCHA system used here at 96Boards is relatively lightweight, especially c
 
 **Q: Why the CAPTCHA system refuse me to select pictures?**
 
-TBD
+???
+
+danielt: I've never seen this but is sounds more like a bug than a FAQ!
 
 # General questions
 
