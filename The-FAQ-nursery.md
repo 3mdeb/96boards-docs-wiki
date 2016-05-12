@@ -56,6 +56,8 @@ just pleas remove any USB devices on both Type-A connector before inserting micr
 
 ## Hikey
 
+**Q: Which UART to be able to see serial console screen, /dev/ttyAMA0 or AMA3?**
+
 TDB
 
 ## Dragonboard 410c
