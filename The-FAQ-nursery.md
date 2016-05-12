@@ -56,6 +56,8 @@ Unfortunately current specification of 96Boards you need to unplug anything it i
 Using any mouse/keyboard and other USB devices on reguler usage of Android is perfectly fine,
 just pleas remove any USB devices on both Type-A connector before inserting micro USB cable for starting to use adb.
 
+TODO: We need to explain the reasons for this (CE boards with only a single USB controller cannot support OTG at the same time as normal host controller). This matters because Bubblegum-96 does have two USB controllers so on that board it can all be used at once.
+
 # Consumer edition boards
 
 ## Hikey
