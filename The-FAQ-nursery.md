@@ -75,7 +75,7 @@ TODO: We need to explain the reasons for this (CE boards with only a single USB 
 
 TDB
 
-## Dragonboard 410c FAQ
+# Dragonboard 410c FAQ
 
 **Q: Where are the documentations?**
 
@@ -104,7 +104,7 @@ The DragonBoard 410c offers the selection of Windows IoT. Please refer the link 
 
 [How to Setup Windows 10 IoT Core on Dragonboard](http://www.96boards.org/forums/topic/windows-10/)
 
-## Bubblegum-96
+# Bubblegum-96 FAQ
 
 **Q: Where is the documentation for the Bubblegum-96?**
 
