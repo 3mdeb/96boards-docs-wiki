@@ -1,6 +1,6 @@
 # Meta-topics
 
-_The meta-questions describe the role of this document. The questions in this section should not be copied into the FAQ._
+_The meta-questions describe the role of this document. The questions in this section should *not* be copied to the forum FAQs._
 
 **Q: What is the FAQ nursery?**
 
@@ -16,7 +16,9 @@ FAQs are presented as questions and answers and it is important that the questio
 
 A FAQ is *not* documentation and need not adopt the formal approach commonly found in technical documentation. Instead answers in a FAQ should adopt the more informal tone we expect to find on the forum. 
 
-# How to use the forum 
+# General
+
+## How to use the forum 
 
 **Q: I'm new here. What should I read first?**
 
@@ -40,14 +42,21 @@ The CAPTCHA system used here at 96Boards is relatively lightweight, especially c
 
 danielt: I've never seen this but is sounds more like a bug than a FAQ!
 
-# General questions
+## Common technical questions
 
-**Q: Can I use the micro USB cable to power the 96Boards or use my AC adapter at home?**
+**Q: Can I use the micro USB cable to power my board?**
 
-This question is critical. Using the wrong method to powering the 96Boards will damage your board.
+Consumer Edition and Enterprise Edition 96Boards do not draw system power from their micro-USB sockets. To read why we decided not to permit this please take a look at:
+[96Boards Power Accessories](https://www.96boards.org/products/accessories/power/)
+
+**Q: What type of AC adapter do I need?**
+
+This question is important as using the wrong method to powering the 96Boards risks damage to your board.
 Please refer the link to buy appropriate AC adapter with the right DC plug.
 
-[How to select the correct AC adapter and why micro USB does not work](https://www.96boards.org/products/accessories/power/)
+[How to select the correct AC adapter](https://www.96boards.org/products/accessories/power/)
+
+## Using Android on 96Boards
 
 **Q: Can I use mouse/keyboard and adb at the same time?**
 
@@ -56,19 +65,17 @@ The current 96Boards has two USB Type A connectors (the two big regular USB conn
 To use adb from your host PC, you need to connect the Host PC with micro USB connector.
 Unfortunately current specification of 96Boards you need to unplug anything it is connected on the the USB Type A connector, such as, mouse or keyboard and etc, to use micro USB connector for adb.
 Using any mouse/keyboard and other USB devices on reguler usage of Android is perfectly fine,
-just pleas remove any USB devices on both Type-A connector before inserting micro USB cable for starting to use adb.
+just please remove any USB devices on both Type-A connector before inserting micro USB cable for starting to use adb.
 
 TODO: We need to explain the reasons for this (CE boards with only a single USB controller cannot support OTG at the same time as normal host controller). This matters because Bubblegum-96 does have two USB controllers so on that board it can all be used at once.
 
-# Consumer edition boards
-
-## Hikey
+# Hikey FAQ
 
 **Q: Which UART to be able to see serial console screen, /dev/ttyAMA0 or AMA3?**
 
 TDB
 
-## Dragonboard 410c
+## Dragonboard 410c FAQ
 
 **Q: Where are the documentations?**
 
@@ -101,19 +108,17 @@ The DragonBoard 410c offers the selection of Windows IoT. Please refer the link 
 
 **Q: Where is the documentation for the Bubblegum-96?**
 
-We're busy working on it. In the mean time take a look at https://github.com/96boards-bubblegum/linaro-adfu-tool to see how to FLASH different operating systems onto your Bubblegum-96.
+We're busy working on it. In the mean take a look at https://github.com/96boards-bubblegum/linaro-adfu-tool to see how to FLASH different operating systems onto your Bubblegum-96. You can also come and join us at http://www.96boards.org/forums/forum/products/bubblegum96/ and ask for what you need.
 
 **Q: Why can I buy the USB type A to USB type A needed to debrick the board?**
 
 It can be difficult to find these cables using a search engines because the cable you need tends to be hidden behind all the USB type A to type B (or micro-B) cables. Often its better just to browse the web site of a specialist cable provider.
 
-To help you save a bit of time we've collected together links to suppliers who appear to sell suitable products. We haven't tested them all ourselves but we hope its useful. The list is a bit shorter than we'd like right now so feel free to post links to alternative suppliers on the forum and we'll try to add them here.
+To help you save a bit of time we've collected together links to suppliers who appear to sell suitable products. We haven't tested them all ourselves but hope its useful. The list is a bit shorter than we'd like right now so feel free to post links to alternative suppliers on [the forums](http://www.96boards.org/forums/forum/products/bubblegum96/) and we'll try to add them here.
 
 * [Lindy USB type A plug to micro-B socket (UK)](http://www.lindy.co.uk/cables-adapters-c1/usb-c449/usb-2-0-c450/usb-2-0-type-a-male-to-micro-b-female-adapter-p8431/)
 
-# Enterprise edition boards
-
-## Cello
+# Lemaker Cello
 
 **Q: Why is this section empty?**
 
