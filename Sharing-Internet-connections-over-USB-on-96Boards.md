@@ -10,7 +10,7 @@ The following note will explain how to create a local network between a Linux ho
 
 The proposed configurations will use the USB host or the USB OTG controllers and Linux’s usbnet driver framework. Besides setting up a local network between the host and the target, it will also show how to share the host’s internet access with the development boards.
 
-# Method 1: USB ethernet adapter. 
+# Method 1: USB ethernet adapter
 
 _Use Case: when the host accesses the Internet via WIFI._
 _Requires an ethernet cable and a USB-to-ethernet adapter._
@@ -39,7 +39,7 @@ And you can note:
 * the third argument is its local IP address
 * if you have more than one board connected, you will see several lines in this file
 
-# Method 2: USB OTG networking.
+# Method 2: USB OTG networking
 
 _Use Case: the host can access the Internet either via WIFI or ETH_
 _Requires a USB to microUSB cable_
