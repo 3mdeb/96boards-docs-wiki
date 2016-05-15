@@ -74,8 +74,8 @@ Simply create a file at _/etc/network/interfaces.d/wireless_, containing:
 root@linaro-alip:~# cat /etc/network/interfaces.d/wireless
 auto wlan0
 iface wlan0 inet dhcp
-  wpa-ssid domonet
-  wpa-psk rsalvetinet
+  wpa-ssid foonet
+  wpa-psk myownpassword
 ```
 
 And reboot.
