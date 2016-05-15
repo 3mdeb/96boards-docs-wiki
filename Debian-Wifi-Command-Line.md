@@ -3,8 +3,6 @@
 In case you don't have a HDMI monitor around and got UART access to the board (e.g. [UART adapter board](http://www.96boards.org/products/mezzanine/uarts/) or [Sensors Mezzanine
 ](http://www.96boards.org/products/mezzanine/sensors-mezzanine/)), there are quite a few easy ways for you to configure a wireless connection, so you can then remotely access your board without any extra cables (besides the power adapter).
 
-There are basically two easy ways to configure your network via command line, one is via Network Manager and the other is simply using _/etc/network/interfaces_ with the right arguments.
-
 This tutorial assumes you are running either Debian (e.g. CE RPB) or Ubuntu, and it is not specific to a board.
 
 ### Using Network Manager
@@ -63,19 +61,3 @@ Then just enable the connection:
 ```shell
 root@linaro-alip:~# nmcli con up WiFi
 ```
-
-### Using /etc/network/interfaces
-
-Using _/etc/network/interfaces_ is quite easy, but the consequence is that Network Manager will not manage your wireless device anymore, simply because it is already managed by the OS itself (and will not show up in your graphics session).
-
-Simply create a file at _/etc/network/interfaces.d/wireless_, containing:
-
-```shell
-root@linaro-alip:~# cat /etc/network/interfaces.d/wireless
-auto wlan0
-iface wlan0 inet dhcp
-  wpa-ssid foonet
-  wpa-psk myownpassword
-```
-
-And reboot.
