@@ -58,11 +58,10 @@ root@linaro-alip:~# nmcli con modify WiFi wifi-sec.key-mgmt wpa-psk
 root@linaro-alip:~# nmcli con modify WiFi wifi-sec.psk myownpassword
 ```
 
-Then just change the wifi state, or reboot:
+Then just enable the connection:
 
 ```shell
-root@linaro-alip:~# nmcli radio wifi off
-root@linaro-alip:~# nmcli radio wifi on
+root@linaro-alip:~# nmcli con up WiFi
 ```
 
 ### Using /etc/network/interfaces
