@@ -61,11 +61,11 @@ Please refer the link to buy appropriate AC adapter with the right DC plug.
 
 This is a good question since most of the regular PC has a power button to turn on/off power supply which is controlled by the motherboard.
 
-The way to turn on the current 96Boards is just plug in your AC adapter to the DC jack and it will automatically start booting the bootlarder and OS.
+The way to turn on all of the current 96Boards is just plug in your AC adapter to the DC jack and it will automatically start booting the bootloader and OS.
 
 There is no power LED on the 96Boards, so there will be no indication if the 96Boards has been powered or not at the glance.
 
-It starts to boot the bootlader but please wait for some time until screen shows up on the HDMI display.
+It starts to boot the bootloader but please wait for some time until screen shows up on the HDMI display.
 
 If you have connected the serial console, watching the boot messages are also good indication of booting.
 
@@ -79,18 +79,16 @@ Very good question, it would be great if it could you the mouse/keyboard and adb
 The current 96Boards has two USB Type A connectors (the two big regular USB connectors) and one micro USB connector.
 To use adb from your host PC, you need to connect the Host PC with micro USB connector.
 
-Not all SoC used on the 96Boards have more than one USB OTG ports. The DragonBoard 410C and HiKey are sharing one USB port with switch between USB Type-A ports and micro USB ports. With this design it is not possible to use both USB Type-A connector and micro USB connector at the same time.
+Not all SoC used on the 96Boards have more than one USB OTG ports. The Dragonboard 410C and HiKey are sharing one USB port with switch between USB Type-A ports and micro USB ports. With this design it is not possible to use both USB Type-A connector and micro USB connector at the same time.
 
 You need to unplug anything it is connected on the the USB Type A connector, such as, mouse or keyboard and etc, to use micro USB connector for adb.
 
 Using any mouse/keyboard and other USB devices on regular usage of Android is perfectly fine,
 just please remove any USB devices on both Type-A connector before inserting micro USB cable for starting to use adb.
 
-TODO: We need to explain the reasons for this (CE boards with only a single USB controller cannot support OTG at the same time as normal host controller). This matters because Bubblegum-96 does have two USB controllers so on that board it can all be used at once.
-
 # Hikey FAQ
 
-**Q: What is the difference between the J15 and J601 boot mode pins?
+**Q: What is the difference between the J15 and J601 boot mode pins?**
 
 There are two versions of the Hikey, one is produced by LeMaker and the other by CircuitCo.
 
