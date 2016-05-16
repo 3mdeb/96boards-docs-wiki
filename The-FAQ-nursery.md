@@ -56,14 +56,14 @@ Also we have received reports that the CAPTCHA system may occasionally become ou
 
 Consumer Edition and Enterprise Edition 96Boards do not draw system power from their micro-USB sockets. To read why we decided not to permit this please take a look at:
 
-[96Boards Power Accessories](https://www.96boards.org/products/accessories/power/)
+* [96Boards Power Accessories](https://www.96boards.org/products/accessories/power/)
 
 **Q: What type of AC adapter do I need?**
 
 This question is important as using the wrong method to powering the 96Boards risks damage to your board.
 Please refer the link to buy appropriate AC adapter with the right DC plug.
 
-[How to select the correct AC adapter](https://www.96boards.org/products/accessories/power/)
+* [How to select the correct AC adapter](https://www.96boards.org/products/accessories/power/)
 
 **Q: How to turn on the 96Boards, where is the power button?**
 
@@ -165,6 +165,12 @@ The access to the board with serial console is essential for most for the develo
 Please refer the link to obtain the information of Windows IoT on DragonBoard 410C.
 
 * [How to Setup Windows 10 IoT Core on Dragonboard](http://www.96boards.org/forums/topic/windows-10/)
+
+**Q: How do I use GPS with the debian-derived software images?**
+
+We've been looking at GPS in the debian-based images, and it's now working "in the lab". It's not yet integrated into the builds (not even the snapshot builds) but we have posted instructions on the forum. Our goal is to have everything merged into our build by the end of June. The final solution may be slightly different, but the steps posted to the forum are known to work...
+
+* http://www.96boards.org/forums/topic/gps-software/#post-14390
 
 **Q: Is this it? There are no other frequently-asked-questions?**
 
