@@ -93,26 +93,22 @@ TODO: We need to explain the reasons for this (CE boards with only a single USB 
 
 # Hikey FAQ
 
-**Q: What is the difference between J15 and J601 on the documentations?
+**Q: What is the difference between the J15 and J601 boot mode pins?
 
-There are two Hikey, one built by LeMaker and other by CircuitCo.
+There are two versions of the Hikey, one is produced by LeMaker and the other by CircuitCo.
 
-The J601 is printed on LeMaker's HiKey on the edge of the boards close to LS connector.
-The j15 is printed on CircuitCo's HiKey for the same pins of LeMaker's HiKey at almost same location.
+The boot mode pins are marked J601 on the LeMaker HiKey and located on the edge of the boards close to LS connector.
+On the CircuitCo Hikey these pins are marked J15 and are located at almost the same location. You might need magnifier to see them since they are printed on the board very small.
 
-The J15 and J601 are identical just printed on the surface of the board differently between LeMaker and CircuitCo.
+The J15 and J601 are identical in function, it is only the silk screen that differs between the two boards.
 
-You might need magnifier to see them since they are printed on the board very small.
-
-This jumper pins are for changing the behavior of the HiKey when you need to flush bootlader.
-If you see the chart bellow on the documentation, they refer to the same J15 and J601 based on which board you have from, LeMaker or CircuitCo.
+This jumper pins are used to select the boot-time behaviour of the HiKey and are usually used to FLASH the bootloader. The pinout it the same regardless of the board manufacturer:
 
 Name | Link | State
 ---- | ---- | -----
 Auto Power up | Link 1-2 | closed
 Boot Select | Link 3-4 | closed
 GPIO3-1 | Link 5-6 | open
-
 
 **Q: Which UART to be able to see serial console screen, /dev/ttyAMA0 or AMA3?**
 
