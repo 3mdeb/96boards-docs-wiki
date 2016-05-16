@@ -20,7 +20,7 @@ A FAQ is *not* documentation and need not adopt the formal approach commonly fou
 
 ## How to use the forum 
 
-**Q: I'm new here. What should I read first?**
+**Q: I'm new here. What should I read first? _(DRAFT)_ **
 
 TBD ;-)
 
