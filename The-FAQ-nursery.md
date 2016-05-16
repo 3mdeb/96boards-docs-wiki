@@ -36,14 +36,11 @@ Otherwise the best thing to do is to start a new topic and give it a good title.
 
 The CAPTCHA system used here at 96Boards is relatively lightweight, especially compared tests that require you to decode obfuscated text. It asks you to show you are not a robot by clicking on a tick box. Occasionally it will also ask you to solve a picture puzzle. Either way, we believe that this type of CAPTCHA has a good chance of success on the first try and we really hope it doesn't slow you down too much.
 
-**Q: Why the CAPTCHA system refuse me to select pictures?**
+**Q: Why does CAPTCHA system refuse to let me to select pictures?**
 
-One possibility is that the CAPTCHA system is using Google's system and some regions or some companies block Google services with the firewall. We are considering to use other system but at the moment, please access the forum where you can have access to Google. 
+The CAPTCHA system is provide for us by Google. Sometimes regions or companies block Google services at the firewall. We are considering to use other system but at the moment, to access the forum you need to have access to Google products.
 
-Also we having reports that the CAPTCHA system becomes out of sync with the system of our forum after logging in on the forum long time. This normally could be go around by closing your web browser and wait for a while and accessing the forum again.
-
-danielt: I've never seen this but is sounds more like a bug than a FAQ!
-akira: I think the second symptom is a bug, I also experience it a few times and I already have reported to Shovan.
+Also we have received reports that the CAPTCHA system may occasionally become out-of-sync with the forum itself if the user has been logged into the forum long time. We're aware of the problem but is hard to reproduce and so it's taking a while to get it fixed. As a workaround try logging out, closing your web browser and reconnecting to the forum again.
 
 ## Common technical questions
 
