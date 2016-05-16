@@ -112,7 +112,21 @@ GPIO3-1 | Link 5-6 | open
 
 **Q: Which UART to be able to see serial console screen, /dev/ttyAMA0 or AMA3?**
 
-TBD
+This is the same topic of regarding between UART0 and UART3.
+
+There are pins on the HiKey printed as J801 on LeMaker and J16 on CircuitCo. Both are the same UART port for the HiKey.
+
+The J16-J801 is connected on UART0 on the SoC of the HiKey and we were assigning the UART0 for sending and receiving data of serial console. The UART0 is recognized by the HiKey as the /dev/ttyAMA0.
+
+The initial images of bootloader and kernel were built to use UART0 for the serial console.
+
+However, to be able of users of 96Boards to use the serial console feature across the different 96Boards, we have decided to use UART3 on LS connector for the serial console instead of the UART0 port. The UART3 is recognized by the HiKey as the /dev/ttyAMA3.
+
+The images from 15.11 release, the UART3 (/dev/ttyAMA3) works as the serial console.
+
+Please refer the link bellow to use the serial console on HiKey.
+
+[Using serial console](http://www.96boards.org/forums/topic/short-intro-to-start-your-hikey-with-serial-console/)
 
 # Dragonboard 410c FAQ
 
