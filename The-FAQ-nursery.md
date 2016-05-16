@@ -104,11 +104,13 @@ The J15 and J601 are identical in function, it is only the silk screen that diff
 
 This jumper pins are used to select the boot-time behaviour of the HiKey and are usually used to FLASH the bootloader. The pinout it the same regardless of the board manufacturer:
 
-Name | Link | State
----- | ---- | -----
+<pre>
+Name          | Link     | State
+------------- | -------- | ------
 Auto Power up | Link 1-2 | closed
-Boot Select | Link 3-4 | closed
-GPIO3-1 | Link 5-6 | open
+Boot Select   | Link 3-4 | closed
+GPIO3-1       | Link 5-6 | open
+</pre>
 
 **Q: Which UART to be able to see serial console screen, /dev/ttyAMA0 or AMA3?**
 
