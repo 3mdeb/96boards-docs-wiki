@@ -26,7 +26,7 @@ TBD ;-)
 
 **Q: What is the best way to ask questions on the forum?**
 
-Firstly, consider checking to see if anyone else has asked a similar question. I'd recommend using a full search engine since that is more powerful than the search box built into the forum, for example if you use google just add <code>site:96boards.org</code> to limit you search to the forums (and the 96Boards documentation).
+Firstly, consider checking to see if anyone else has asked a similar question. I'd recommend using a full search engine since that is more powerful than the search box built into the forum, for example if you use google just add <code>site:96boards.org "your searching word"</code> to limit you search to the forums (and the 96Boards documentation).
 
 Otherwise the best thing to do is to start a new topic and give it a good title. The title appears in the side bar on the forum and gets lots of visibility. A good title will tend to attract better answers.
 
