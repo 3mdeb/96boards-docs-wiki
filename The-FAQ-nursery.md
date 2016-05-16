@@ -90,12 +90,14 @@ TODO: We need to explain the reasons for this (CE boards with only a single USB 
 
 **Q: What is the difference between J15 and J601 on the documentations?
 
-There are two Hikey, one built by LeMaker and CircuitCo.
+There are two Hikey, one built by LeMaker and other by CircuitCo.
 
 The J601 is printed on LeMaker's HiKey on the edge of the boards close to LS connector.
-The j15 is printed on CircuitCo's HiKey on the same location.
+The j15 is printed on CircuitCo's HiKey for the same pins of LeMaker's HiKey at almost same location.
 
 The J15 and J601 are identical just printed on the surface of the board differently between LeMaker and CircuitCo.
+
+You might need magnifier to see them since they are printed on the board very small.
 
 This jumper pins are for changing the behavior of the HiKey when you need to flush bootlader.
 If you see the chart bellow on the documentation, they refer to the same J15 and J601 based on which board you have from, LeMaker or CircuitCo.
@@ -106,9 +108,10 @@ Auto Power up | Link 1-2 | closed
 Boot Select | Link 3-4 | closed
 GPIO3-1 | Link 5-6 | open
 
+
 **Q: Which UART to be able to see serial console screen, /dev/ttyAMA0 or AMA3?**
 
-TDB
+TBD
 
 # Dragonboard 410c FAQ
 
