@@ -131,7 +131,11 @@ The images from 15.11 release, the UART3 (/dev/ttyAMA3) works as the serial cons
 
 Please refer the link bellow to use the serial console on HiKey.
 
-[Using serial console](http://www.96boards.org/forums/topic/short-intro-to-start-your-hikey-with-serial-console/)
+* [Using serial console](http://www.96boards.org/forums/topic/short-intro-to-start-your-hikey-with-serial-console/)
+
+**Q: Is this it? There are no other frequently-asked-questions?**
+
+This is all we've come up with for the HiKey. However if you browse over to [the General forum](http://www.96boards.org/forums/forum/general/) you'll find a FAQ covering questions of a general nature. That includes questions about the 96Boards project, as well as technical questions whose answers apply to more than one board.
 
 # Dragonboard 410c FAQ
 
@@ -162,6 +166,10 @@ Please refer the link to obtain the information of Windows IoT on DragonBoard 41
 
 * [How to Setup Windows 10 IoT Core on Dragonboard](http://www.96boards.org/forums/topic/windows-10/)
 
+**Q: Is this it? There are no other frequently-asked-questions?**
+
+This is all we've come up with for the DragonBoard 410c. However if you browse over to [the General forum](http://www.96boards.org/forums/forum/general/) you'll find a FAQ covering questions of a general nature. That includes questions about the 96Boards project, as well as technical questions whose answers apply to more than one board.
+
 # Bubblegum-96 FAQ
 
 **Q: Where is the documentation for the Bubblegum-96?**
@@ -175,6 +183,10 @@ It can be difficult to find these cables using a search engines because the cabl
 To help you save a bit of time we've collected together links to suppliers who appear to sell suitable products. We haven't tested them all ourselves but hope its useful. The list is a bit shorter than we'd like right now so feel free to post links to alternative suppliers on [the forums](http://www.96boards.org/forums/forum/products/bubblegum96/) and we'll try to add them here.
 
 * [Lindy USB type A plug to micro-B socket (UK)](http://www.lindy.co.uk/cables-adapters-c1/usb-c449/usb-2-0-c450/usb-2-0-type-a-male-to-micro-b-female-adapter-p8431/)
+
+**Q: Is this it? There are no other frequently-asked-questions?**
+
+This is all we've come up with for the Bubblegum-96. However if you browse over to [the General forum](http://www.96boards.org/forums/forum/general/) you'll find a FAQ covering questions of a general nature. That includes questions about the 96Boards project, as well as technical questions whose answers apply to more than one board.
 
 # Lemaker Cello
 
