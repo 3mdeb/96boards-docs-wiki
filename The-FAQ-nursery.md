@@ -131,7 +131,7 @@ Please refer the link bellow to use the serial console on HiKey.
 
 There's a wealth of documentation for the Dragonboard 410c. So much that it is quite possible that need a bit of help finding which document is the best one for you to read! If you can't find what you're looking for, feel free to ask on the forum. Usually someone will come along with a "hello" and a link!. However... if you're in a hurry let us offer you some ideas:
 
-* [DragonBoard 410c Documentation (at 96boards.org)](http://www.96boards.org/products/ce/dragonboard410c/docs/). This is a great starting point for hunting down board manuals, schematics and all the other documentation we require 96Boards vendors to put together (and, in the case of DragonBoard a whole lot more besides).
+* [DragonBoard 410c Documentation (at 96boards.org)](http://www.96boards.org/products/ce/dragonboard410c/docs/). This is a great starting point for hunting down board manuals, schematics and all the other documentation we require 96Boards vendors to put together (and, in the case of DragonBoard, a whole lot more besides).
 * [DragonBoard 410c Tools and Resources by Qualcomm](https://developer.qualcomm.com/hardware/dragonboard-410c/tools). This is Qualcomm's own page about the board. It contains several documents not found in this site and, if Windows 10 IoT is your thing then this is where you go to get it.
 * [96Boards CE documentation wiki page](https://github.com/96boards/documentation/wiki). This is a great task-focused (e.g. I want to install Android) approach to documentation for 96Boards. Eventually we'll see this merged into the main 96Boards documentation (below).
 * [96Boards documentation portal (under construction)](http://www.96boards.org/documentation/). We want to get better at documentation for the all of the 96Boards! As part of that we've been working on one URL to point developers and users at. This is it and it will be awesome... but only when we've finished it.
@@ -140,19 +140,19 @@ There's a wealth of documentation for the Dragonboard 410c. So much that it is q
 
 Probably this is the first topic you would like to know. Please refer the instruction to boot your board with HDMI display.
 
-[Getting started with HDMI display](http://www.96boards.org/forums/topic/short-into-to-start-your-dragonboard-410c-with-hdmi-display/)
+* [Getting started with HDMI display](http://www.96boards.org/forums/topic/short-into-to-start-your-dragonboard-410c-with-hdmi-display/)
 
 **Q: How to use serial console on 96Boards?**
 
 The access to the board with serial console is essential for most for the developers. We have made the tutorial describing one of the easiest ways to get started with the serial console.
 
-[Getting started with serial console on Dragonboard 410c](http://www.96boards.org/forums/topic/short-into-to-start-your-dragonboard-410c-with-serial-console/)
+* [Getting started with serial console on Dragonboard 410c](http://www.96boards.org/forums/topic/short-into-to-start-your-dragonboard-410c-with-serial-console/)
 
-**Q: Where to look information about Windows IoT on DragonBoard 410C?**
+**Q: What is the best source of information about Windows 10 IoT for DragonBoard 410c?**
 
-The DragonBoard 410c offers the selection of Windows IoT. Please refer the link to obtain the information of Windows IoT on DragonBoard 410C.
+Please refer the link to obtain the information of Windows IoT on DragonBoard 410C.
 
-[How to Setup Windows 10 IoT Core on Dragonboard](http://www.96boards.org/forums/topic/windows-10/)
+* [How to Setup Windows 10 IoT Core on Dragonboard](http://www.96boards.org/forums/topic/windows-10/)
 
 # Bubblegum-96 FAQ
 
