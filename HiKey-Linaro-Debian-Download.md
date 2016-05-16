@@ -26,12 +26,6 @@ This method requires the following hardware:
 ***
 #### Step 2: Download SD Card Image
 
->Note: Some files have 4G and 8G options, download file which best matches your HiKey board.
-
-- All HiKey **CircuitCo boards** will use the **4G files**
-- All HiKey **LeMaker 1G boards** will use the **4G files**
-- All HiKey **LeMaker 2G boards** will use the **8G files**
-
 **Debian SD Card Image** ([**ALIP**](http://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_alip_*.img.gz) / [**Developer**](http://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_developer_*.img.gz))
 
 ***
