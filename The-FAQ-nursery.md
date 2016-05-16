@@ -59,7 +59,7 @@ Please refer the link to buy appropriate AC adapter with the right DC plug.
 
 **Q: How to turn on the 96Boards, where is the power button?**
 
-This is a good question since most of the regular PC has a power button to turn on/off power supply which controlled by the motherboard.
+This is a good question since most of the regular PC has a power button to turn on/off power supply which is controlled by the motherboard.
 
 The way to turn on the current 96Boards is just plug in your AC adapter to the DC jack and it will automatically start booting the bootlarder and OS.
 
