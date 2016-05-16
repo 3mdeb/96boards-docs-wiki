@@ -43,6 +43,7 @@ One possibility is that the CAPTCHA system is using Google's system and some reg
 Also we having reports that the CAPTCHA system becomes out of sync with the system of our forum after logging in on the forum long time. This normally could be go around by closing your web browser and wait for a while and accessing the forum again.
 
 danielt: I've never seen this but is sounds more like a bug than a FAQ!
+akira: I think the second symptom is a bug, I also experience it a few times and I already have reported to Shovan.
 
 ## Common technical questions
 
