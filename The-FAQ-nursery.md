@@ -38,7 +38,9 @@ The CAPTCHA system used here at 96Boards is relatively lightweight, especially c
 
 **Q: Why the CAPTCHA system refuse me to select pictures?**
 
-???
+One possibility is that the CAPTCHA system is using Google's system and some regions or some companies block Google services with the firewall. We are considering to use other system but at the moment, please access the forum where you can have access to Google. 
+
+Also we having reports that the CAPTCHA system becomes out of sync with the system of our forum after logging in on the forum long time. This normally could be go around by closing your web browser and wait for a while and accessing the forum again.
 
 danielt: I've never seen this but is sounds more like a bug than a FAQ!
 
