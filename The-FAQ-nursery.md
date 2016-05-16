@@ -47,6 +47,7 @@ danielt: I've never seen this but is sounds more like a bug than a FAQ!
 **Q: Can I use the micro USB cable to power my board?**
 
 Consumer Edition and Enterprise Edition 96Boards do not draw system power from their micro-USB sockets. To read why we decided not to permit this please take a look at:
+
 [96Boards Power Accessories](https://www.96boards.org/products/accessories/power/)
 
 **Q: What type of AC adapter do I need?**
@@ -55,6 +56,20 @@ This question is important as using the wrong method to powering the 96Boards ri
 Please refer the link to buy appropriate AC adapter with the right DC plug.
 
 [How to select the correct AC adapter](https://www.96boards.org/products/accessories/power/)
+
+**Q: How to turn on the 96Boards, where is the power button?**
+
+This is a good question since most of the regular PC has a power button to turn on/off power supply which controlled by the motherboard.
+
+The way to turn on the current 96Boards is just plug in your AC adapter to the DC jack and it will automatically start booting the bootlarder and OS.
+
+There is no power LED on the 96Boards, so there will be no indication if the 96Boards has been powered or not at the glance.
+
+It starts to boot the bootlader but please wait for some time until screen shows up on the HDMI display.
+
+If you have connected the serial console, watching the boot messages are also good indication of booting.
+
+There are 4 LED between the two USB Type A connector and some of them will start flushing after OS has booted.
 
 ## Using Android on 96Boards
 
