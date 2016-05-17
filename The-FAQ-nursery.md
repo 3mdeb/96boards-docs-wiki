@@ -50,7 +50,7 @@ The CAPTCHA system is provide for us by Google. Sometimes regions or companies b
 
 Also we have received reports that the CAPTCHA system may occasionally become out-of-sync with the forum itself if the user has been logged into the forum long time. We're aware of the problem but is hard to reproduce and so it's taking a while to get it fixed. As a workaround try logging out, closing your web browser and reconnecting to the forum again.
 
-## Common technical questions
+# Common technical questions
 
 **Q: Can I use the micro USB cable to power my board?**
 
@@ -79,7 +79,7 @@ If you have connected the serial console, watching the boot messages are also go
 
 There are 4 LED between the two USB Type A connector and some of them will start flushing after OS has booted.
 
-## Using Android on 96Boards
+# Using Android on 96Boards
 
 **Q: Can I use mouse/keyboard and adb at the same time?**
 
