@@ -27,12 +27,16 @@ In order to successfully set up your build environment, you will need to install
 
 http://www.openembedded.org/wiki/Getting_started
 
-**Step 3**: Install 96Boards specific dependencies
+**Step 3**: Install 96Boards specific dependencies (Case specific)
 
-```shell
-$ sudo apt-get install dialog
-$ sudo apt-get install whiptail
-```
+Setting up the build environment will first search for `whiptail`, if it is not present then it will search for `dialog`. You only need one of the following packages to ensure your setup-environement runs correctly:
+
+
+`$ sudo apt-get install whiptail`
+
+or
+
+`$ sudo apt-get install dialog`
 
 **Please Note**: If you are running Ubuntu 16.04 you will need to add the following line to your `/etc/apt/sources.list`
 
