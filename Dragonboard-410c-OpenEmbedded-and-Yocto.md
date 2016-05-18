@@ -15,6 +15,39 @@ This layer has been tested with OpenEmbedded Core layer, and is expected to work
 
 The Linux kernel used for the DragonBoard 410c is the Linaro Landing team kernel, e.g. the same kernel used for the Linaro Linux release builds. The graphic stack is based on mesa, using the freedreno driver.
 
+# Package Dependencies
+
+In order to successfully set up your build environment, you will need to install the following package dependencies.
+
+Step 1: You will need git installed on your Linux host machine
+
+`$ sudo apt-get install git`
+
+Step 2: Visit the OpenEmbedded (Getting Started) wiki to see which distribution specific dependencies you will need
+
+http://www.openembedded.org/wiki/Getting_started
+
+Step 3: Install 96Boards specific dependencies
+
+```shell
+$ sudo apt-get install dialog
+$ sudo apt-get install whiptail
+```
+
+**Please Note**: If you are running Ubuntu 16.04 you will need to add the following line to your `/etc/apt/sources.list`
+
+`deb http://archive.ubuntu.com/ubuntu/ xenial universe`
+
+```shell
+$ cd /etc/apt/
+#vim text editor is used in this example
+#sudo is used to allow editing, sources.list is set to read only
+$ sudo vim sources.list
+```
+
+All required dependencies should now be installed on your host environment, you are ready to begin your build environment setup.
+
+
 # Setup the build environment
 
 The Qualcomm BSP layer can be used with any OE based distribution, such as Poky. The following instructions are provided to get started with 96boards Open Embedded Reference Software Platforms. 
