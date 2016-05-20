@@ -28,9 +28,9 @@ This method requires the following hardware:
 
 **Debian SD Card Image** 
 
-[**alip - image that includes a minimal desktop environment GUI using LXDE**](http://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_alip_*-???.img.gz)
+[**Alip - image that includes a minimal desktop environment GUI using LXDE**](http://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_alip_20151130-387.img.gz)
 
-[**Developer - image that includes typical development packages but no GUI**](http://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_developer_*-???.img.gz)
+[**Developer - image that includes typical development packages but no GUI**](http://builds.96boards.org/releases/hikey/linaro/debian/latest/hikey-jessie_developer_20151130-387.img.gz)
 
 ***
 #### Step 3: Choose your host computer to access your instruction set
