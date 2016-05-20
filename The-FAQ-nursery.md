@@ -36,6 +36,8 @@ TBD ;-)
 
 Firstly, consider checking to see if anyone else has asked a similar question. I'd recommend using a full search engine since that is more powerful than the search box built into the forum, for example if you use google just add <code>site:96boards.org your search words</code> to limit you search to the forums (and the 96Boards documentation).
 
+This is the way to search from the mailing list. <code>site:lists.96boards.org your search words</code>
+
 Otherwise the best thing to do is to start a new topic and give it a good title. The title appears in the side bar on the forum and gets lots of visibility. A good title will tend to attract better answers.
 
 **Q: Is there a mailing list for 96Boards? Is the discussion in the mailing list saved somewhere?**
