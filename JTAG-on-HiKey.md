@@ -7,9 +7,11 @@ Currently the open-source JTAG debugging solutions are fairly immature for 64-bi
 This page documents the current status, and provide instructions on to to get setup and working.
 
 ## Soldering on the connector
-The first step is to solder on the JTAG connector. The unpopulated header is at J10 on the underside of the circuit board. The connector that you need to buy is a "FTSH-105-01-L-DV". It can be purchased from Farnell here (note the image is for a larger connector).
 
-http://uk.farnell.com/samtec/ftsh-105-01-l-dv/header-1-27mm-smd-10way/dp/1667759﻿
+The first step is to solder on the JTAG connector. The unpopulated header is at
+J10 on the underside of the circuit board. The connector that you need to buy
+is a `FTSH-105-01-L-DV`. It can be purchased from Farnell [here](http://uk.farnell.com/samtec/ftsh-105-01-l-dv/header-1-27mm-smd-10way/dp/1667759)
+(note the image is for a larger connector).
 
 Once the connector is soldered on it should look something like this
 
@@ -25,7 +27,7 @@ OpenOCD supports many different JTAG interface. The list of devices known to wor
 
 Most JTAG interfaces provide a standard ARM 20 pin socket (2x10 2.54mm) meaning an adapter board is required to convert from this to the SWD (2x5 1.27mm). This are available from a variety of sources including:
 
- * [ARM-JTAG-20-10 from Olimax](https://www.olimex.com/Products/ARM/JTAG/ARM-JTAG-20-10/). This board includes the 10-pin SWD cable and has a female 20 pin IDC connector allowing it to connect directly to most JTAG interfaces without any additional cabling.
+ * [ARM-JTAG-20-10 from Olimex](https://www.olimex.com/Products/ARM/JTAG/ARM-JTAG-20-10/). This board includes the 10-pin SWD cable and has a female 20 pin IDC connector allowing it to connect directly to most JTAG interfaces without any additional cabling.
  * [JTAG to SWD Cable Adapter Board](http://www.adafruit.com/products/2094) and [150mm 2x5 SWD cable](https://www.adafruit.com/product/1675) from Adafruit Industries. This board has a male IDC connector meaning an additional 20 pin IDC cable is required to connect to most JTAG interfaces.
 
 Once this is all connected it should look something like thisFT2232H
@@ -300,10 +302,10 @@ and then validate with u-boot
 
 ### Reading from memory
 
-target state: halted
-target halted in ARM64 state due to debug-request, current mode: EL2H
-cpsr: 0x800003c9 pc: 0x3ef7e908
-MMU: disabled, D-Cache: disabled, I-Cache: disabled
+    target state: halted
+    target halted in ARM64 state due to debug-request, current mode: EL2H
+    cpsr: 0x800003c9 pc: 0x3ef7e908
+    MMU: disabled, D-Cache: disabled, I-Cache: disabled
 
     > mdw 0x35000000 10
     0x35000000: 1400000a d503201f 35000000 00000000 00042938 00000000 00042938 00000000 
@@ -322,8 +324,8 @@ and then validate with u-boot
 ### Debugging U-Boot with GDB
 
 If U-Boot is sat at the prompt, then it has been relocated from its
-statically linked address 0x35000000. On my system it gets relocated to
-0x3ef47000.
+statically linked address `0x35000000`. On my system it gets relocated to
+`0x3ef47000`.
 
     (gdb) aarch64-linux-gnu-gdb
     (gdb) add-symbol-file build-hikey/u-boot 0x3ef47000
