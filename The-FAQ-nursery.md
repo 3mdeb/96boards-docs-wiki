@@ -38,6 +38,14 @@ Firstly, consider checking to see if anyone else has asked a similar question. I
 
 Otherwise the best thing to do is to start a new topic and give it a good title. The title appears in the side bar on the forum and gets lots of visibility. A good title will tend to attract better answers.
 
+**Q: Is there a mailing list for 96Boards? Is the discussion in the mailing list saved somewhere?**
+
+Yes, we have setup a mailing list for advanced software developers working on open source software on 96Boards.
+
+* [Subscribing mailing list](https://lists.96boards.org/mailman/listinfo/dev)
+
+* [Archive of the mailing list](https://lists.96boards.org/pipermail/dev/)
+
 **Q: Why must I constantly prove that I am not a robot?**
 
 *All* forums have to fight spam and are usually forced to make a choice between the costs of fighting spam reactively (constant clean up) and the cost of fighting spam pro-actively (CAPTCHAs, approvals requires for first few posts).
