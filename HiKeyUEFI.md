@@ -60,7 +60,7 @@ Now skip to the [Flash binaries to eMMC](#flash-emmc) section.
 
 The source code is available from:
 * [l-loader](https://github.com/96boards/l-loader)
-* [ARM Trusted Firmware](https://github.com/96boards/arm-trusted-firmware)
+* [ARM Trusted Firmware](https://github.com/96boards-hikey/arm-trusted-firmware)
 * [EDK II (UEFI)](https://github.com/96boards/edk2)
 * (Optional) [OP-TEE] (https://github.com/OP-TEE/optee_os)
 
@@ -85,7 +85,7 @@ export PATH="${PWD}/arm-tc/bin:${PWD}/arm64-tc/bin:$PATH"
 ```shell
 # --depth 1 means to fetch code without commit history
 git clone -b hikey --depth 1 https://github.com/96boards/edk2.git linaro-edk2
-git clone -b hikey --depth 1 https://github.com/96boards/arm-trusted-firmware.git
+git clone -b hikey --depth 1 https://github.com/96boards-hikey/arm-trusted-firmware.git
 git clone -b hikey --depth 1 https://github.com/96boards/LinaroPkg.git
 git clone --depth 1 https://github.com/96boards/l-loader.git
 git clone git://git.linaro.org/uefi/uefi-tools.git
