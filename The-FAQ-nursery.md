@@ -78,7 +78,7 @@ Please refer the link to buy appropriate AC adapter with the right DC plug.
 
 * [How to select the correct AC adapter](https://www.96boards.org/products/accessories/power/)
 
-**Q: How to turn on the 96Boards, where is the power button?**
+**Q: How do I turn on the 96Boards? Where is the power button?**
 
 This is a good question since most of the regular PC has a power button to turn on/off power supply which is controlled by the motherboard.
 
@@ -97,15 +97,10 @@ There are 4 LED between the two USB Type A connector and some of them will start
 Excellent question. I hope this will be a guide for selection.
 
 + If you would like only to have serial console feature the USB-UART adapter is for you.
-
-[USB-UART adapter](http://www.96boards.org/products/mezzanine/uarts/)
-
+  - [USB-UART adapter](http://www.96boards.org/products/mezzanine/uarts/)
 + If you would like to connect sensors and devices through GPIO and I2C, Grove Sensor Mezzanine should suite you. This also has the USB serial console built-in and you do not have to buy USB-UART adapter separately.
-
-[Grove Sensor Mezzanine](http://www.96boards.org/products/mezzanine/sensors-mezzanine/)
-
-[Example programs for controlling sensors](https://github.com/96boards/Starter_Kit_for_96Boards)
-
+  - [Grove Sensor Mezzanine](http://www.96boards.org/products/mezzanine/sensors-mezzanine/)
+  - [Example programs for controlling sensors](https://github.com/96boards/Starter_Kit_for_96Boards)
 
 # Using Android on 96Boards
 
