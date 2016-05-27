@@ -30,7 +30,7 @@ A FAQ is *not* documentation and need not adopt the formal approach commonly fou
 
 **Q: I'm new here. What should I read first?**
 
-The blog post "96Boards Out of box experience guide – part 1/2" are the best place to start on 96Boards.
+The blog series "96Boards Out of box experience guide" are a great way to get a gentle introduction to 96Boards:
 
 * [96Boards Out of box experience guide – part 1](http://www.96boards.org/blog/96boards-box-experience-guide-1/)
 
