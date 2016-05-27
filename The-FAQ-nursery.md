@@ -34,7 +34,9 @@ The blog post "96Boards Out of box experience guide – part 1/2" are the best p
 
 * [96Boards Out of box experience guide – part 1](http://www.96boards.org/blog/96boards-box-experience-guide-1/)
 
-* [96Boards Out of box experience guide – part 1](http://www.96boards.org/blog/96boards-box-experience-guide-2/)
+* [96Boards Out of box experience guide – part 2](http://www.96boards.org/blog/96boards-box-experience-guide-2/)
+
+* [96Boards Out of box experience guide – part 3](http://www.96boards.org/blog/96boards-box-experience-guide-3/)
 
 **Q: What is the best way to ask questions on the forum?**
 
