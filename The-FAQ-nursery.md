@@ -92,7 +92,7 @@ If you have connected the serial console, watching the boot messages are also go
 
 There are 4 LED between the two USB Type A connector and some of them will start flushing after OS has booted.
 
-**Q: Which Mezzanine boards I should buy?**
+**Q: Which Mezzanine boards I should buy? (DRAFT)**
 
 Excellent question. I hope this will be a guide for selection.
 
