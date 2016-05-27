@@ -95,6 +95,21 @@ If you have connected the serial console, watching the boot messages are also go
 
 There are 4 LED between the two USB Type A connector and some of them will start flushing after OS has booted.
 
+**Q: Which Mezzanine boards I should buy?**
+
+Excellent question. I hope this will be a guide for selection.
+
++ If you would like only to have serial console feature the USB-UART adapter is for you.
+
+[USB-UART adapter](http://www.96boards.org/products/mezzanine/uarts/)
+
++ If you would like to connect sensors and devices through GPIO and I2C, Grove Sensor Mezzanine should suite you. This also has the USB serial console built-in and you do not have to buy USB-UART adapter separately.
+
+[Grove Sensor Mezzanine](http://www.96boards.org/products/mezzanine/sensors-mezzanine/)
+
+[Example programs for controlling sensors](https://github.com/96boards/Starter_Kit_for_96Boards)
+
+
 # Using Android on 96Boards
 
 **Q: Can I use mouse/keyboard and adb at the same time?**
