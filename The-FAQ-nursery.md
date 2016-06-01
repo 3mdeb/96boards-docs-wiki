@@ -128,7 +128,7 @@ On the CircuitCo Hikey these pins are marked J15 and are located at almost the s
 
 The J15 and J601 are identical in function, it is only the silk screen that differs between the two boards.
 
-This jumper pins are used to select the boot-time behaviour of the HiKey and are usually used to FLASH the bootloader. The pinout it the same regardless of the board manufacturer:
+This jumper pins are used to select the boot-time behaviour of the HiKey and are usually used to FLASH the bootloader. The pinout is the same regardless of the board manufacturer:
 
 <pre>
 Name          | Link     | State
