@@ -195,6 +195,13 @@ We've been looking at GPS in the debian-based images, and it's now working "in t
 
 * http://www.96boards.org/forums/topic/gps-software/#post-14390
 
+**Q: Why USB is slow on my DragonBoard 410C?**
+
+The old releases had an issue with USB throughput. The issue was fixed from 15.11 release.
+Please update your image to the latest image from following link.
+
+* [Choose your Build, Operating system, and Install Method](http://www.96boards.org/documentation/ConsumerEdition/DragonBoard-410c/Installation/README.md/)
+
 **Q: Is this it? There are no other frequently-asked-questions?**
 
 This is all we've come up with for the DragonBoard 410c. However if you browse over to [the General forum](http://www.96boards.org/forums/forum/general/) you'll find a FAQ covering questions of a general nature. That includes questions about the 96Boards project, as well as technical questions whose answers apply to more than one board.
