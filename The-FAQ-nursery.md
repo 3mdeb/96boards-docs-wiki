@@ -117,6 +117,13 @@ You need to unplug anything it is connected on the the USB Type A connector, suc
 Using any mouse/keyboard and other USB devices on regular usage of Android is perfectly fine,
 just please remove any USB devices on both Type-A connector before inserting micro USB cable for starting to use adb.
 
+**Q: Why does Android showing on the display disappears and stops?**
+
+When booting the Android and the screen goes to blank, it scars you.
+
+This is standard behaviour of the Android just going into the sleep, as usual Android phones and tablets.
+To awake the Android, inserting the keyboard and typing any key should go out from the sleep mode.
+
 # Hikey FAQ
 
 **Q: What is the difference between the J15 and J601 boot mode pins?**
