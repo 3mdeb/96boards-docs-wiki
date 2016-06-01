@@ -119,7 +119,7 @@ just please remove any USB devices on both Type-A connector before inserting mic
 
 **Q: Why does Android showing on the display disappears and stops?**
 
-When booting the Android and the screen goes to blank, it scars you.
+When booting the Android and the screen goes to blank after about a minute, it scars you as if the board have died.
 
 This is standard behaviour of the Android just going into the sleep, as usual Android phones and tablets.
 To awake the Android, inserting the keyboard and typing any key should go out from the sleep mode.
