@@ -202,6 +202,17 @@ Please update your image to the latest image from following link.
 
 * [Choose your Build, Operating system, and Install Method](http://www.96boards.org/documentation/ConsumerEdition/DragonBoard-410c/Installation/README.md/)
 
+**Q: Why the WiFi connection drops out periodically?**
+
+Yes, we are aware of the WIFI being disconnected periodically and in the middle of fixing the symptom.
+
+This is the link in bug tracking system.
+* [Bug 272 - periodic 10-15sec wifi connectivity loss](https://bugs.96boards.org/show_bug.cgi?id=272)
+
+You may try the temporary workaround described at the bellow link until it is fixed.
+
+* [WIFI workaround](http://www.96boards.org/forums/topic/ssh-and-ping-workarounds/)
+
 **Q: Is this it? There are no other frequently-asked-questions?**
 
 This is all we've come up with for the DragonBoard 410c. However if you browse over to [the General forum](http://www.96boards.org/forums/forum/general/) you'll find a FAQ covering questions of a general nature. That includes questions about the 96Boards project, as well as technical questions whose answers apply to more than one board.
