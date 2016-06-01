@@ -124,6 +124,17 @@ When booting the Android and the screen goes to blank after about a minute, it s
 This is standard behaviour of the Android just going into the sleep, as usual Android phones and tablets.
 To awake the Android, inserting the keyboard and typing any key should go out from the sleep mode.
 
+**Q: How to collect debug log on Android when having the issue?**
+
+Happy for the question. The detail procedure to reproduce the issue and the debug log are essential for reporting the problem.
+
+Just do:
+```
+adb shell dmesg > dmesg.log
+adb logcat -d > logcat.log
+```
+Attach both dmesg.log and logcat.log.
+
 # Hikey FAQ
 
 **Q: What is the difference between the J15 and J601 boot mode pins?**
