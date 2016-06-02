@@ -48,7 +48,7 @@ Otherwise the best thing to do is to start a new topic and give it a good title.
 
 Yes, we have setup a mailing list for advanced software developers working on open source software on 96Boards.
 
-* [Listt info and subscription management](https://lists.96boards.org/mailman/listinfo/dev)
+* [List info and subscription management](https://lists.96boards.org/mailman/listinfo/dev)
 * [Archive of the mailing list](https://lists.96boards.org/pipermail/dev/)
 
 **Q: Why must I constantly prove that I am not a robot?**
