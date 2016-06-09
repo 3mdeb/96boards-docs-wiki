@@ -487,7 +487,7 @@ If a boot image has been flashed into the boot partition as described herein, th
 
 1. Follow the instructions to install the boot image in either the Debian or the Android sub-section of the [Install Android or Debian Using Fastboot](#install-android-or-debian-using-fastboot) section of this document.
 
-2. Using the Vol- button (S4 on the DNB410c) to force the DB410c into fastboot mode
+2. Using the Vol- button (S4 on the DB410c) to force the DB410c into fastboot mode
   - Power down the DB410c
   - Connect a micro USB-USB cable from the micro USB port on the DB410c
    to a USB port on the host PC
