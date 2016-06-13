@@ -10,15 +10,13 @@ Welcome to the supporting documentation for [DragonBoard™ 410c](https://www.96
 
 <p align="left">
   <b>Extras</b><br>
-  <a href="#">[About the DragonBoard™ 410c](https://github.com/96boards/documentation/wiki/About-DragonBoard™-410c)</a> |
-  <a href="#"><a href="https://github.com/96boards/documentation/wiki/Compare-96Boards-Builds" target="_blank">Compare Builds</a></a> |
-  <a href="#">[Reference Platform Home](https://github.com/96boards/documentation/wiki/Reference-Platform-Home)</a>
+  <a href="#">[About the DragonBoard™ 410c](https://github.com/96boards/documentation/wiki/About-DragonBoard™-410c)</a>
   <br>
 ***
 
 #### Downloads - Supported Operating Systems
 
-[<img src="http://i.imgur.com/aEfYHYH.jpg" data-canonical-src="http://i.imgur.com/aEfYHYH.jpg" width="300" height="200" />](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Crossroads)
+[<img src="http://i.imgur.com/aEfYHYH.jpg" data-canonical-src="http://i.imgur.com/aEfYHYH.jpg" width="300" height="200" />](https://github.com/96boards/documentation/blob/master/ConsumerEdition/DragonBoard-410c/Downloads/README.md)
 
 ***
 #### Installation and Setup Guides
