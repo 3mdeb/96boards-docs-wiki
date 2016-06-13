@@ -9,16 +9,14 @@ Welcome to the supporting documentation for [HiKey](https://www.96boards.org/pro
 
 <p align="left">
   <b>Extras</b><br>
-  <a href="#">[About the HiKey](https://github.com/96boards/documentation/wiki/About-HiKey)</a> |
-  <a href="#"><a href="https://github.com/96boards/documentation/wiki/Compare-96Boards-Builds" target="_blank">Compare Builds</a></a> |
-  <a href="#">[Reference Platform Home](https://github.com/96boards/documentation/wiki/Reference-Platform-Home)</a>
+  <a href="#">[About the HiKey](https://github.com/96boards/documentation/wiki/About-HiKey)</a>
   <br>
 
 ***
 
 #### Downloads - Supported Operating Systems
 
-[<img src="http://i.imgur.com/1oBolPj.jpg" data-canonical-src="http://i.imgur.com/1oBolPj.jpg" width="175" height="135" />](https://github.com/96boards/documentation/wiki/HiKey-Crossroads)
+[<img src="http://i.imgur.com/1oBolPj.jpg" data-canonical-src="http://i.imgur.com/1oBolPj.jpg" width="175" height="135" />](https://github.com/96boards/documentation/blob/master/ConsumerEdition/HiKey/Downloads/README.md)
 
 ***
 
