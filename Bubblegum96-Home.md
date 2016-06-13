@@ -15,7 +15,7 @@ Welcome to the supporting documentation for [Bubblegum-96]()
 
 #### Downloads - Supported Operating Systems
 
-[<img src="http://i.imgur.com/7rrS2JR.png" data-canonical-src="http://i.imgur.com/7rrS2JR.png" width="125" height="157" />](https://github.com/96boards/documentation/blob/master/ConsumerEdition/Bubblegum-96/README.md)
+[<img src="http://i.imgur.com/7rrS2JR.png" data-canonical-src="http://i.imgur.com/7rrS2JR.png" width="125" height="157" />](https://github.com/96boards/documentation/blob/master/ConsumerEdition/Bubblegum-96/Downloads/README.md)
 
 ***
 
