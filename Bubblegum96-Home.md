@@ -10,15 +10,12 @@ Welcome to the supporting documentation for [Bubblegum-96]()
 
 <p align="left">
   <b>Extras</b><br>
-  <a href="#">[About the Bubblegum-96](https://github.com/96boards/documentation/wiki/About-Bubblegum96)</a> |
-  <a href="#"><a href="https://github.com/96boards/documentation/wiki/Compare-96Boards-Builds" target="_blank">Compare Builds</a></a> |
-  <a href="#">[Reference Platform Home](https://github.com/96boards/documentation/wiki/Reference-Platform-Home)</a>
-  <br>
+  <a href="#">[About the Bubblegum-96](https://github.com/96boards/documentation/wiki/About-Bubblegum96)</a>
 ***
 
 #### Downloads - Supported Operating Systems
 
-[<img src="http://i.imgur.com/7rrS2JR.png" data-canonical-src="http://i.imgur.com/7rrS2JR.png" width="125" height="157" />]()
+[<img src="http://i.imgur.com/7rrS2JR.png" data-canonical-src="http://i.imgur.com/7rrS2JR.png" width="125" height="157" />](https://github.com/96boards/documentation/blob/master/ConsumerEdition/Bubblegum-96/README.md)
 
 ***
 
