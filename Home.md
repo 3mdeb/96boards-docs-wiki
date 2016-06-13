@@ -41,7 +41,7 @@ Welcome to the supporting documentation for <a href="http://96boards.org" target
 
 #### _Reference Software Platform_
 
-- Reference Platform Documentation has moved! [Go here](https://github.com/linaro/documentation/wiki/Reference-Platform-Home)
+- Reference Platform Documentation has moved! [Go here](https://github.com/Linaro/documentation/blob/master/Reference-Platform/README.md)
 
 
 ***
