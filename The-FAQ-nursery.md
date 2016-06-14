@@ -50,7 +50,7 @@ The forum does not allow attachments but it does allow you to embed links and im
 
 For text files use something like [termbin](http://termbin.com/), [pastebin](http://pastebin.com/) or a [github gist](https://gist.github.com/).
 
-For photos and images you can use any image host that allows external linking. I personally like [flickr](https://www.flickr.com/) because there's nothing the [terms of service](https://policies.yahoo.com/us/en/yahoo/terms/utos/) regarding user generated content that I find unacceptable (though you must make your own mind up about that). Its also useful to be able to easily copy n’ paste links to the forum from the flickr share button.
+For photos and images you can use any image host that allows external linking. I personally like [flickr](https://www.flickr.com/) because there's nothing the [terms of service](https://policies.yahoo.com/us/en/yahoo/terms/utos/) regarding user generated content that I find objectionable (though you must make your own mind up about that). Its also useful to be able to easily copy n’ paste links to the forum from the flickr share button.
 
 **Q: Is there a mailing list for 96Boards? Is the discussion in the mailing list saved somewhere?**
 
