@@ -44,6 +44,14 @@ This is the way to search from the mailing list. <code>site:lists.96boards.org y
 
 Otherwise the best thing to do is to start a new topic and give it a good title. The title appears in the side bar on the forum and gets lots of visibility. A good title will tend to attract better answers.
 
+**Q: Can I add attachments to my forum posts?**
+
+The forum does not allow attachments but it does allow you to embed links and images to externally hosted content.
+
+For text files use something like [termbin](http://termbin.com/), [pastebin](http://pastebin.com/) or a [github gist](https://gist.github.com/).
+
+For photos and images you can use any image host that allows external linking. I personally like [flickr](https://www.flickr.com/) because there's nothing the [terms of service](https://policies.yahoo.com/us/en/yahoo/terms/utos/) regarding user generated content that I find unacceptable (though you must make your own mind up about that). Its also useful to be able to easily copy n’ paste links to the forum from the flickr share button.
+
 **Q: Is there a mailing list for 96Boards? Is the discussion in the mailing list saved somewhere?**
 
 Yes, we have setup a mailing list for advanced software developers working on open source software on 96Boards.
