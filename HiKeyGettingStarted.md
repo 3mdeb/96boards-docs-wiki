@@ -894,7 +894,9 @@ $ make -j32
 ```shell
 $ cd device/linaro/hikey/installer
 
-$ ./flash-all.sh /dev/ttyUSB1 [4g]
+$ sudo ./flash-all.sh /dev/ttyUSB1 <- for 8GB emmc HiKey
+
+$ sudo ./flash-all.sh /dev/ttyUSB1 4g <- for 4GB emmc HiKey
 ```
 
 ##### Step 4: Remove jumper 3-4 and power the board
