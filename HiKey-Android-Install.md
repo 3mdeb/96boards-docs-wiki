@@ -20,9 +20,8 @@ This section show how to install the AOSP operating system to your HiKey using t
 
 - [**Step 1**: Make sure fastboot is set up on host computer]()
 - [**Step 2**: Boot HiKey into Fastboot mode using J15 header]()
-- [**Step 3**: Set HiKey into Recovery Mode using J15 header]()
-- [**Step 4**: Install Operating System update using downloaded files]()
-- [**Step 5**: Reboot HiKey into new OS]()
+- [**Step 3**: Install Operating System update using downloaded files]()
+- [**Step 4**: Reboot HiKey into new OS]()
 
 ***
 
@@ -57,19 +56,7 @@ $ sudo fastboot devices
 
 >Note: If your HiKey is not being detected by fastboot, you might want to try [Board Recovery](https://github.com/96boards/documentation/wiki/HiKey-Board-Recovery) and return to this step once your board is ready
 
-**Step 3**: Set HiKey into Recovery Mode using J15 header
-
-- Remove link between pins 5 and 6
-- Link pins 1 and 2
-- Link pins 3 and 4
-
-Name | Link | State
----- | ---- | -----
-Auto Power up | Link 1-2 | closed
-Boot Select | Link 3-4 | closed
-GPIO3-1 | Link 5-6 | open
-
-**Step 4**: Install Operating System update using downloaded files
+**Step 3**: Install Operating System update using downloaded files
 
 >**NOTE:** the ptable must be flashed first. Wait for a few seconds after the reboot command to allow the bootloader to restart using the new partition table.
 
@@ -82,7 +69,7 @@ $ sudo fastboot flash system system.img
 $ sudo fastboot flash userdata userdata-8gb.img
 ```
 
-**Step 5**: Reboot HiKey into new OS
+**Step 4**: Reboot HiKey into new OS
 
 - Wait untill all files have been flashed onto HiKey board
 - Power down HiKey by unplugging the power adapter
@@ -98,8 +85,6 @@ GPIO3-1 | Link 5-6 | open
 - Plug mouse/keyboard USB into type A USB ports
 - Power up HiKey by plugging in power adapter
 
-
-**Note:** the **username** and **password** are both **“linaro”** when the login information is requested.
 
 **Congratulations! You are now booting your newly installed OS directly
 from eMMC on the HiKey!**
