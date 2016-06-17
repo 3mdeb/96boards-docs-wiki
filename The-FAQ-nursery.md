@@ -102,7 +102,8 @@ There are 4 LED between the two USB Type A connector and some of them will start
 
 **Q: How to program devices connecting to GPIO/I2C on 96Boards?**
 
-One of the great value of 96Boards is connecting sensors and devices and programming LED, relay, motors and etc,
+One of the great value of 96Boards is connecting sensors and devices and programming LED, relay, motors and etc to create robotics, cameras, set-top-boxes, wearables, medical devices, vending machines, building automation, industrial control, digital signage, and casino gaming consoles.
+
 Reading the blog series is a great introduction to program GPIO/I2C devices on 96Boards:
 
 * [Programming GPIO from bash](http://www.96boards.org/blog/96boards-box-experience-guide-4/)
