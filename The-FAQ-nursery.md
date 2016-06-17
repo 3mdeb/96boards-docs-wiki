@@ -100,6 +100,16 @@ If you have connected the serial console, watching the boot messages are also go
 
 There are 4 LED between the two USB Type A connector and some of them will start flushing after OS has booted.
 
+**Q: How to program devices connecting to GPIO/I2C on 96Boards?**
+
+One of the great value of 96Boards is connecting sensors and devices and programming LED, relay, motors and etc,
+Reading the blog series is a great introduction to program GPIO/I2C devices on 96Boards:
+
+* [Programming GPIO from bash](http://www.96boards.org/blog/96boards-box-experience-guide-4/)
+* [Programming GPIO using libsoc](http://www.96boards.org/blog/96boards-box-experience-guide-5/)
+* [Programing I2C devices with libmraa and libupm](http://www.96boards.org/blog/programing-i2c-devices-libmraa-libupm/)
+
+
 **Q: Which Mezzanine boards I should buy? (DRAFT)**
 
 Excellent question. I hope this will be a guide for selection.
