@@ -584,7 +584,7 @@ $ sudo gedit /etc/udev/rules.d/51-android.rules
 # fastboot protocol on HiKey
 SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="d00d", MODE="0660", GROUP="dialout"
 # adb protocol on HiKey
-SUBSYSTEM=="usb", ATTR{idVendor}=="12d1", ATTR{idProduct}=="1057", MODE="0660", GROUP="dialout"
+SUBSYSTEM=="usb", ATTR{idVendor}=="12d1", ATTR{idProduct}=="1057", MODE="0660", GROUP="dialout", ENV{ID_MM_DEVICE_IGNORE}="1"
 # rndis for HiKey
 SUBSYSTEM=="usb", ATTR{idVendor}=="12d1", ATTR{idProduct}=="1050", MODE="0660", GROUP="dialout" 
 ```
