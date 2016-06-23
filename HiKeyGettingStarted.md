@@ -582,11 +582,9 @@ $ sudo gedit /etc/udev/rules.d/51-android.rules
 
 ```
 # fastboot protocol on HiKey
-SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="d00d", MODE="0660", GROUP="dialout"
-# adb protocol on HiKey
-SUBSYSTEM=="usb", ATTR{idVendor}=="12d1", ATTR{idProduct}=="1057", MODE="0660", GROUP="dialout", ENV{ID_MM_DEVICE_IGNORE}="1"
-# rndis for HiKey
-SUBSYSTEM=="usb", ATTR{idVendor}=="12d1", ATTR{idProduct}=="1050", MODE="0660", GROUP="dialout" 
+SUBSYSTEM=="usb", ATTRS{idVendor}=="18d1", ATTRS{idProduct}=="d00d", MODE="0666"
+# adb/rndis protocol on HiKey
+SUBSYSTEM=="usb", ATTRS{idVendor}=="12d1", MODE="0666", ENV{ID_MM_DEVICE_IGNORE}="1"
 ```
 
 **Problems with Python Downloader**<br\>
