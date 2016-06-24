@@ -305,8 +305,9 @@ To https://android.googlesource.com/device/linaro/hikey
  * [new branch]      mychanges -> refs/for/master 
 ```
 
-Visit the link showing above
-https://android-review.googlesource.com/[numbers]
+Visit the link showing above:
+
+"https://android-review.googlesource.com/[numbers]"
 
 And add following reviewers:
 * john.stultz
