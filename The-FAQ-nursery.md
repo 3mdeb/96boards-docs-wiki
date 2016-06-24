@@ -201,6 +201,29 @@ Please refer the link bellow to use the serial console on HiKey.
 
 This is all we've come up with for the HiKey. However if you browse over to [the General forum](http://www.96boards.org/forums/forum/general/) you'll find a FAQ covering questions of a general nature. That includes questions about the 96Boards project, as well as technical questions whose answers apply to more than one board.
 
+# AOSP on Hikey 
+
+**Q: Where is the link of AOSP on HiKey?**
+
+96Boards Hikey is officially supported in AOSP.
+
+* [Officially link](https://source.android.com/source/devices.html)
+
+**Q: Where is the git tree of the kernel source for AOSP?
+
+The source of AOSP for Hikey is hosted at this link.
+
+* [Hikey at googlesource](https://android.googlesource.com/kernel/hikey-linaro)
+
+**Q: I would like to be a contributor for the AOSP on HiKey, what is the procedure?**
+
+We would like to have people contribute to the AOSP on Hikey as much as possible.
+Please refer the procedure.
+
+
+# Dragonboard 410c FAQ
+
+
 # Dragonboard 410c FAQ
 
 **Q: Where should I look for documentation?**
