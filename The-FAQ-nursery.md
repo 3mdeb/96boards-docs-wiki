@@ -54,7 +54,7 @@ For photos and images you can use any image host that allows external linking. I
 
 Adding the link directly on the forum as bellow is fine.
 
-"https://flic.kr/p/EZQq6K"
+`https://flic.kr/p/EZQq6K`
 
 **Q: Is there a mailing list for 96Boards? Is the discussion in the mailing list saved somewhere?**
 
