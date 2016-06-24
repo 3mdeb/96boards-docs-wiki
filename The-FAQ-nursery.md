@@ -221,6 +221,8 @@ The kernel source of AOSP on Hikey is hosted on the googlesource.com.
 We would like to have people contribute to the AOSP on Hikey as much as possible.
 Please refer the procedure.
 
+* [Becoming contributor of AOSP on Hikey](http://www.96boards.org/forums/topic/how-to-becoming-contributor-of-aosp-on-hikey/)
+
 # Becoming contributor of AOSP on Hikey
 
 ##Prerequisites
