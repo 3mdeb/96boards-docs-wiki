@@ -226,31 +226,31 @@ Please refer the procedure.
 ##Prerequisites
 
 * Familiarize yourself with Gerrit; here are some links:
-⋅⋅* https://wiki.linaro.org/Platform/Android/Gerrit
-⋅⋅* https://wiki.openstack.org/wiki/Gerrit_Workflow 
+  * https://wiki.linaro.org/Platform/Android/Gerrit
+  * https://wiki.openstack.org/wiki/Gerrit_Workflow 
 
 * Make sure you have an account on https://android-review.googlesource.com/ and are properly added to the contributors agreement.
 
 * Get a http password:
-⋅⋅* Log in to android-review.googlesource.com
-⋅⋅* Click on your name on the upper right, then settings.
-⋅⋅* Click on HTTP password, then obtain password.
-⋅⋅* Copy the string to a script "login-googlesource.sh".
-⋅⋅* Make the the script executable "chmod u+x login-googlesource.sh".
+  * Log in to android-review.googlesource.com
+  * Click on your name on the upper right, then settings.
+  * Click on HTTP password, then obtain password.
+  * Copy the string to a script "login-googlesource.sh".
+  * Make the the script executable "chmod u+x login-googlesource.sh".
 
 * Accept the Contributor Agreement, if necessary 
 
 ## Getting the latest AOSP kernel tree
 
 * Run the following commands:
----
+```
 $ export AOSP=hikey
 $ export BRANCH=master 
 $ export LOCAL=mychanges 
 $ git clone https://android.googlesource.com/device/linaro/hikey 
 $ cd $AOSP 
 $ git checkout origin/$BRANCH -b $LOCAL
----
+```
 
 ## Commit your changes
 
@@ -261,36 +261,35 @@ Patch, git add and git commit everything you want. Your patches should at least 
 Gerrit wants each logical change to have a Change-Id. This allows future versions of the same change (maybe modified due to review feedback) to have the same reference hash.
 
 Get the sha1 list, you will need them on the next step:
----
+```
 $ git log --pretty=o origin/$(BRANCH)..HEAD > ../sha1.list  
----
+```
 
 Rebase your changes to rework commit messages and add manual Change-Id tags for each patch:
----
+```
 $ git rebase -i origin/$BRANCH  
----
+```
 
 Change all the "pick"s to "reword or just "r"
 
 Then
 
 * Above the "Signed-off-by:" lines, add:
+  * Change-Id: I<original sha1sum for change from shalist> 
 
-⋅⋅* Change-Id: I<original sha1sum for change from shalist> 
-
-* Note the I prefix on the sha1sum. 
+* Note the I is the prefix on the sha1sum. 
 
 ## Push the changes
 
 Review all changes, making sure each has a unique Change-Id.
 
 And finally, run
----
+```
 $ ./login-googlesource.sh
 $ git push origin $LOCAL:refs/for/$BRANCH 
----
+```
 Then it will show the out put like this.
----
+```
 Counting objects: 22, done.
 Delta compression using up to 4 threads.
 Compressing objects: 100% (4/4), done.
@@ -304,7 +303,7 @@ remote:   https://android-review.googlesource.com/[numbers] Title-of-your-patch
 remote:
 To https://android.googlesource.com/device/linaro/hikey
  * [new branch]      mychanges -> refs/for/master 
----
+```
 
 Visit the link showing above
 https://android-review.googlesource.com/[numbers]
@@ -313,7 +312,9 @@ And add following reviewers:
 * john.stultz
 * guodong.xu
 * vishal.bhoj
-⋅⋅* (all three persons have the same @linaro.org address)
+  * (all three persons have the same @linaro.org address)
+
+Have fun!
 
 # Dragonboard 410c FAQ
 
