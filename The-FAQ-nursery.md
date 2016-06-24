@@ -271,7 +271,7 @@ Rebase your changes to rework commit messages and add manual Change-Id tags for 
 $ git rebase -i origin/$BRANCH  
 ```
 
-Change all the "pick"s to "reword or just "r"
+Change all the "pick"s to "reword" or just "r"
 
 Then
 
