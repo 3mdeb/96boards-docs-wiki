@@ -319,6 +319,8 @@ And add following reviewers:
 
 Have fun!
 
+(This documentation was referred from https://wiki.linaro.org/Process/PushingBitsToAndroid)
+
 # Dragonboard 410c FAQ
 
 **Q: Where should I look for documentation?**
