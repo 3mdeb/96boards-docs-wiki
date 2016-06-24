@@ -309,7 +309,7 @@ To https://android.googlesource.com/device/linaro/hikey
 
 Visit the link showing above:
 
-"https://android-review.googlesource.com/[numbers]"
+`https://android-review.googlesource.com/[numbers]`
 
 And add following reviewers:
 * john.stultz
