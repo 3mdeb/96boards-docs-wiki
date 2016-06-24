@@ -52,6 +52,9 @@ For text files use something like [termbin](http://termbin.com/), [pastebin](htt
 
 For photos and images you can use any image host that allows external linking. I personally like [flickr](https://www.flickr.com/) because there's nothing the [terms of service](https://policies.yahoo.com/us/en/yahoo/terms/utos/) regarding user generated content that I find objectionable (though you must make your own mind up about that). Its also useful to be able to easily copy n’ paste links to the forum from the flickr share button.
 
+Adding the link directly on the forum as bellow is fine.
+"https://flic.kr/p/EZQq6K"
+
 **Q: Is there a mailing list for 96Boards? Is the discussion in the mailing list saved somewhere?**
 
 Yes, we have setup a mailing list for advanced software developers working on open source software on 96Boards.
