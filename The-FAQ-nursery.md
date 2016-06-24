@@ -206,12 +206,13 @@ This is all we've come up with for the HiKey. However if you browse over to [the
 **Q: Where is the link of AOSP on HiKey?**
 
 96Boards Hikey is officially supported in AOSP.
+Please visit the android.com.
 
 * [Officially link](https://source.android.com/source/devices.html)
 
-**Q: Where is the git tree of the kernel source for AOSP?
+**Q: Where is the git tree of the kernel source for AOSP?**
 
-The source of AOSP for Hikey is hosted at this link.
+The kernel source of AOSP on Hikey is hosted on the googlesource.com.
 
 * [Hikey at googlesource](https://android.googlesource.com/kernel/hikey-linaro)
 
@@ -220,9 +221,99 @@ The source of AOSP for Hikey is hosted at this link.
 We would like to have people contribute to the AOSP on Hikey as much as possible.
 Please refer the procedure.
 
+# Procedure to becoming contributor of AOSP on Hikey
 
-# Dragonboard 410c FAQ
+##Prerequisites
 
+* Familiarize yourself with Gerrit; here are some links:
+** https://wiki.linaro.org/Platform/Android/Gerrit
+** https://wiki.openstack.org/wiki/Gerrit_Workflow 
+
+* Make sure you have an account on https://android-review.googlesource.com/ and are properly added to the contributors agreement.
+
+* Get a http password:
+** Log in to android-review.googlesource.com
+** Click on your name on the upper right, then settings.
+** Click on HTTP password, then obtain password.
+** Copy the string to a script "login-googlesource.sh".
+** Make the the script executable "chmod u+x login-googlesource.sh".
+
+* Accept the Contributor Agreement, if necessary 
+
+## Getting the latest AOSP kernel tree
+
+* Run the following commands:
+---
+$ export AOSP=hikey
+$ export BRANCH=master 
+$ export LOCAL=mychanges 
+$ git clone https://android.googlesource.com/device/linaro/hikey 
+$ cd $AOSP 
+$ git checkout origin/$BRANCH -b $LOCAL
+---
+
+## Commit your changes
+
+Patch, git add and git commit everything you want. Your patches should at least pass scripts/checkpatch.pl, as usual
+
+## Adding Change-Id
+
+Gerrit wants each logical change to have a Change-Id. This allows future versions of the same change (maybe modified due to review feedback) to have the same reference hash.
+
+Get the sha1 list, you will need them on the next step:
+---
+$ git log --pretty=o origin/$(BRANCH)..HEAD > ../sha1.list  
+---
+
+Rebase your changes to rework commit messages and add manual Change-Id tags for each patch:
+---
+$ git rebase -i origin/$BRANCH  
+---
+
+Change all the "pick"s to "reword or just "r"
+
+Then
+
+* Above the "Signed-off-by:" lines, add:
+
+** Change-Id: I<original sha1sum for change from shalist> 
+
+* Note the I prefix on the sha1sum. 
+
+## Push the changes
+
+Review all changes, making sure each has a unique Change-Id.
+
+And finally, run
+---
+$ ./login-googlesource.sh
+$ git push origin $LOCAL:refs/for/$BRANCH 
+---
+Then it will show the out put like this.
+---
+Counting objects: 22, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 527 bytes | 0 bytes/s, done.
+Total 4 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3)
+remote: Processing changes: new: 1, done
+remote:
+remote: New Changes:
+remote:   https://android-review.googlesource.com/[numbers] Title-of-your-patch
+remote:
+To https://android.googlesource.com/device/linaro/hikey
+ * [new branch]      mychanges -> refs/for/master 
+---
+
+Visit the link showing above
+https://android-review.googlesource.com/[numbers]
+
+And add following reviewers:
+* john.stultz
+* guodong.xu
+* vishal.bhoj
+** (all three persons have the same @linaro.org address)
 
 # Dragonboard 410c FAQ
 
