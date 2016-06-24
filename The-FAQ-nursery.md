@@ -221,22 +221,22 @@ The kernel source of AOSP on Hikey is hosted on the googlesource.com.
 We would like to have people contribute to the AOSP on Hikey as much as possible.
 Please refer the procedure.
 
-# Procedure to becoming contributor of AOSP on Hikey
+# Becoming contributor of AOSP on Hikey
 
 ##Prerequisites
 
 * Familiarize yourself with Gerrit; here are some links:
-** https://wiki.linaro.org/Platform/Android/Gerrit
-** https://wiki.openstack.org/wiki/Gerrit_Workflow 
+..* https://wiki.linaro.org/Platform/Android/Gerrit
+..* https://wiki.openstack.org/wiki/Gerrit_Workflow 
 
 * Make sure you have an account on https://android-review.googlesource.com/ and are properly added to the contributors agreement.
 
 * Get a http password:
-** Log in to android-review.googlesource.com
-** Click on your name on the upper right, then settings.
-** Click on HTTP password, then obtain password.
-** Copy the string to a script "login-googlesource.sh".
-** Make the the script executable "chmod u+x login-googlesource.sh".
+..* Log in to android-review.googlesource.com
+..* Click on your name on the upper right, then settings.
+..* Click on HTTP password, then obtain password.
+..* Copy the string to a script "login-googlesource.sh".
+..* Make the the script executable "chmod u+x login-googlesource.sh".
 
 * Accept the Contributor Agreement, if necessary 
 
@@ -276,7 +276,7 @@ Then
 
 * Above the "Signed-off-by:" lines, add:
 
-** Change-Id: I<original sha1sum for change from shalist> 
+..* Change-Id: I<original sha1sum for change from shalist> 
 
 * Note the I prefix on the sha1sum. 
 
@@ -313,7 +313,7 @@ And add following reviewers:
 * john.stultz
 * guodong.xu
 * vishal.bhoj
-** (all three persons have the same @linaro.org address)
+..* (all three persons have the same @linaro.org address)
 
 # Dragonboard 410c FAQ
 
