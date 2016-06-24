@@ -213,7 +213,7 @@ This is all we've come up with for the HiKey. However if you browse over to [the
 
 The kernel source for AOSP on Hikey is hosted on the googlesource.com.
 
-* [Hikey at googlesource](https://android.googlesource.com/kernel/hikey-linaro)
+* [Hikey at googlesource](https://android.googlesource.com/device/linaro/hikey)
 
 **Q: I would like to be a contributor for the AOSP on HiKey, what is the procedure?**
 
