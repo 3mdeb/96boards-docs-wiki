@@ -28,20 +28,3 @@ Welcome to the supporting documentation for [HiKey](https://www.96boards.org/pro
 - [Linaro Automated Validation Architecture (LAVA)](https://github.com/96boards/documentation/wiki/HiKeyLAVA)
 
 ***
-
-#### Read More
-
-- [Hardware Notes](https://github.com/96boards/documentation/wiki/HiKey-Read-More#hardware-notes)
-- [Known Issues](https://github.com/96boards/documentation/wiki/HiKey-Read-More#known-issues)
-- [Report a Bug](https://github.com/96boards/documentation/wiki/HiKey-Read-More#report-a-bug)
-
-***
-#### Hardware
-
-- [Schematics - CircuitCo version](https://github.com/96boards/documentation/blob/master/hikey/96Boards-Hikey-Rev-A1.pdf)
-- [Schematics - LeMaker version](https://github.com/96boards/documentation/blob/master/hikey/HiKey_schematics_lemaker_version.pdf)
-
-***
-#### Build and Install from Source
-
-- [AOSP Build From Source](https://github.com/96boards/documentation/wiki/HiKeyGettingStarted#aosp-build-from-source)
