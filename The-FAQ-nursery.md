@@ -225,7 +225,7 @@ Please refer the procedure.
 
 # Becoming contributor of AOSP on Hikey
 
-##Prerequisites
+## Prerequisites
 
 * Familiarize yourself with Gerrit; here are some links:
   * https://wiki.linaro.org/Platform/Android/Gerrit
