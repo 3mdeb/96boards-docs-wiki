@@ -203,16 +203,15 @@ This is all we've come up with for the HiKey. However if you browse over to [the
 
 # AOSP on Hikey 
 
-**Q: Where is the link of AOSP on HiKey?**
+**Q: What is the link for Android Open Source Project (AOSP) support on HiKey?**
 
-96Boards Hikey is officially supported in AOSP.
-Please visit the android.com.
+96Boards Hikey is officially supported in the upstream AOSP sources. Please visit android.com for details.
 
-* [Officially link](https://source.android.com/source/devices.html)
+* [Selecting Devices for AOSP](https://source.android.com/source/devices.html)
 
-**Q: Where is the git tree of the kernel source for AOSP?**
+**Q: Where is the git tree of the AOSP kernel source for Hikey?**
 
-The kernel source of AOSP on Hikey is hosted on the googlesource.com.
+The kernel source for AOSP on Hikey is hosted on the googlesource.com.
 
 * [Hikey at googlesource](https://android.googlesource.com/kernel/hikey-linaro)
 
