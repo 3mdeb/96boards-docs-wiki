@@ -241,7 +241,7 @@ Please refer the procedure.
 
 * Accept the Contributor Agreement, if necessary 
 
-## Getting the latest AOSP kernel tree
+## Get the latest AOSP kernel tree
 
 * Run the following commands:
 ```
@@ -257,7 +257,7 @@ $ git checkout origin/$BRANCH -b $LOCAL
 
 Patch, git add and git commit everything you want. Your patches should at least pass scripts/checkpatch.pl, as usual
 
-## Adding Change-Id
+## Add a Change-Id
 
 Gerrit wants each logical change to have a Change-Id. This allows future versions of the same change (maybe modified due to review feedback) to have the same reference hash.
 
