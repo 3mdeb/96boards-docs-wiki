@@ -197,12 +197,6 @@ Please refer the link bellow to use the serial console on HiKey.
 
 * [Using serial console](http://www.96boards.org/forums/topic/short-intro-to-start-your-hikey-with-serial-console/)
 
-**Q: Is this it? There are no other frequently-asked-questions?**
-
-This is all we've come up with for the HiKey. However if you browse over to [the General forum](http://www.96boards.org/forums/forum/general/) you'll find a FAQ covering questions of a general nature. That includes questions about the 96Boards project, as well as technical questions whose answers apply to more than one board.
-
-# AOSP on Hikey 
-
 **Q: What is the link for Android Open Source Project (AOSP) support on HiKey?**
 
 96Boards Hikey is officially supported in the upstream AOSP sources. Please visit android.com for details.
@@ -221,6 +215,10 @@ We would like to have people contribute to the AOSP on Hikey as much as possible
 Please refer the procedure.
 
 * [Becoming contributor of AOSP on Hikey](http://www.96boards.org/forums/topic/how-to-becoming-contributor-of-aosp-on-hikey/)
+
+**Q: Is this it? There are no other frequently-asked-questions?**
+
+This is all we've come up with for the HiKey. However if you browse over to [the General forum](http://www.96boards.org/forums/forum/general/) you'll find a FAQ covering questions of a general nature. That includes questions about the 96Boards project, as well as technical questions whose answers apply to more than one board.
 
 # Becoming contributor of AOSP on Hikey
 
