@@ -19,15 +19,6 @@ Welcome to the supporting documentation for <a href="http://96boards.org" target
 - [HiKey](https://github.com/96boards/documentation/wiki/HiKey-Home)
 - [Bubblegum-96](https://github.com/96boards/documentation/wiki/Bubblegum96-Home)
 
-######Enterprise Edition
-- [Cello](https://github.com/96boards/documentation/wiki/Cello-Home)
-
-<p align="left">
-  <b>Extras</b><br>
-  <a href="#">[**Compare 96Boards**](https://github.com/96boards/documentation/wiki/Compare-96Boards)</a> |
-  <a href="#"><a href="https://www.96boards.org/products/accessories/power/" target="_blank">**Power Adapters**</a></a>
-  <br>
-
 ***
 
 #### _Hardware Specifications_
