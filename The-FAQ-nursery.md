@@ -371,6 +371,13 @@ You may try the temporary workaround described at the bellow link until it is fi
 
 * [WIFI workaround](http://www.96boards.org/forums/topic/ssh-and-ping-workarounds/)
 
+**Q: Why the DragonBoard 410C does not recognized by adb on windows?**
+
+The usb driver for adb on windows requires modification from Android web site.
+We have made the revised usb driver. Please try this driver.
+
+* [adb usb driver windows DB410C]()
+
 **Q: Is this it? There are no other frequently-asked-questions?**
 
 This is all we've come up with for the DragonBoard 410c. However if you browse over to [the General forum](http://www.96boards.org/forums/forum/general/) you'll find a FAQ covering questions of a general nature. That includes questions about the 96Boards project, as well as technical questions whose answers apply to more than one board.
