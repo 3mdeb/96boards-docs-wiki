@@ -376,7 +376,7 @@ You may try the temporary workaround described at the bellow link until it is fi
 The usb driver for adb on windows requires modification from Android web site.
 We have made the revised usb driver. Please try this driver.
 
-* [adb usb driver windows DB410C]()
+* [adb usb driver windows DB410C](https://fileserver.linaro.org/owncloud/index.php/s/FR4vgUL2d101HKn)
 
 **Q: Is this it? There are no other frequently-asked-questions?**
 
