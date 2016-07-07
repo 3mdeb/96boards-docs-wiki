@@ -399,26 +399,28 @@ You need to unplug anything it is connected on the the USB Type A connector, suc
 ## Download adb usb driver for Windows
 
 We have uploaded revised adb usb driver which will recognize DragonBoard 410C.
-<a href="https://fileserver.linaro.org/owncloud/index.php/s/FR4vgUL2d101HKn"> adb usb driver windows DB410C</a>
+
+* <a href="https://fileserver.linaro.org/owncloud/index.php/s/FR4vgUL2d101HKn"> adb usb driver windows DB410C</a>
 
 ## Installing adb usb driver on Windows
 
 After confirming the DragonBoard 410C is connected with Windows PC with microUSB cable, turn on the DragonBoard by connecting AC adaptoer to it.
 
 The Device Manager on Windows should show this screen.
-[[https://www.flickr.com/photos/139239777@N03/28039568542/in/album-72157670089199291/]]
 
-[[https://www.flickr.com/photos/139239777@N03/27528300213/in/album-72157670089199291/]]
+[[https://www.flickr.com/photos/139239777@N03/28039568542/in/album-72157670089199291/|alt=octocat]]
 
-[[https://www.flickr.com/photos/139239777@N03/28143779825/in/album-72157670089199291/]]
+[[https://www.flickr.com/photos/139239777@N03/27528300213/in/album-72157670089199291/|alt=octocat]]
 
-[[https://www.flickr.com/photos/139239777@N03/27528300123/in/album-72157670089199291/]]
+[[https://www.flickr.com/photos/139239777@N03/28143779825/in/album-72157670089199291/|alt=octocat]]
 
-[[https://www.flickr.com/photos/139239777@N03/28039568362/in/album-72157670089199291/]]
+[[https://www.flickr.com/photos/139239777@N03/27528300123/in/album-72157670089199291/|alt=octocat]]
 
-[[https://www.flickr.com/photos/139239777@N03/28039568452/in/album-72157670089199291/]]
+[[https://www.flickr.com/photos/139239777@N03/28039568362/in/album-72157670089199291/|alt=octocat]]
 
-[[https://www.flickr.com/photos/139239777@N03/28143780045/in/album-72157670089199291/]]
+[[https://www.flickr.com/photos/139239777@N03/28039568452/in/album-72157670089199291/|alt=octocat]]
+
+[[https://www.flickr.com/photos/139239777@N03/28143780045/in/album-72157670089199291/|alt=octocat]]
 
 
 # Bubblegum-96 FAQ
