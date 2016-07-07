@@ -382,6 +382,45 @@ We have made the revised usb driver. Please try this driver.
 
 This is all we've come up with for the DragonBoard 410c. However if you browse over to [the General forum](http://www.96boards.org/forums/forum/general/) you'll find a FAQ covering questions of a general nature. That includes questions about the 96Boards project, as well as technical questions whose answers apply to more than one board.
 
+# Step by step instruction to install adb usb driver on Windows
+
+## Start from opening Device Manager on Windows
+
+Refer the link and open the Device Manager.
+* [How to open Windows Device Manager](http://www.computerhope.com/issues/ch000833.htm)
+
+## Connect Dragonboard 410C to Windows PC
+
+There are two USB Type A connectors (the two big regular USB connectors) and one micro USB connector.
+To use adb from your Windows PC, you need to connect the Host PC with micro USB connector.
+
+You need to unplug anything it is connected on the the USB Type A connector, such as, mouse or keyboard and etc, to use micro USB connector for adb.
+
+## Download adb usb driver for Windows
+
+We have uploaded revised adb usb driver which will recognize DragonBoard 410C.
+<a href="https://fileserver.linaro.org/owncloud/index.php/s/FR4vgUL2d101HKn"> adb usb driver windows DB410C</a>
+
+## Installing adb usb driver on Windows
+
+After confirming the DragonBoard 410C is connected with Windows PC with microUSB cable, turn on the DragonBoard by connecting AC adaptoer to it.
+
+The Device Manager on Windows should show this screen.
+[[https://www.flickr.com/photos/139239777@N03/28039568542/in/album-72157670089199291/]]
+
+[[https://www.flickr.com/photos/139239777@N03/27528300213/in/album-72157670089199291/]]
+
+[[https://www.flickr.com/photos/139239777@N03/28143779825/in/album-72157670089199291/]]
+
+[[https://www.flickr.com/photos/139239777@N03/27528300123/in/album-72157670089199291/]]
+
+[[https://www.flickr.com/photos/139239777@N03/28039568362/in/album-72157670089199291/]]
+
+[[https://www.flickr.com/photos/139239777@N03/28039568452/in/album-72157670089199291/]]
+
+[[https://www.flickr.com/photos/139239777@N03/28143780045/in/album-72157670089199291/]]
+
+
 # Bubblegum-96 FAQ
 
 **Q: Where is the documentation for the Bubblegum-96?**
