@@ -378,6 +378,12 @@ We have made the revised usb driver. Please try this driver.
 
 * [adb usb driver windows DB410C](https://fileserver.linaro.org/owncloud/index.php/s/FR4vgUL2d101HKn)
 
+**Q: How to install adb usb driver on Windoes for DragonBoard 410C?**
+
+This is the instruction to install modified usb driver for adb on windows.
+
+* [Step by step instruction to install adb usb driver on windows](http://www.96boards.org/forums/topic/step-by-step-instruction-to-install-adb-usb-driver-on-windows/)
+
 **Q: Is this it? There are no other frequently-asked-questions?**
 
 This is all we've come up with for the DragonBoard 410c. However if you browse over to [the General forum](http://www.96boards.org/forums/forum/general/) you'll find a FAQ covering questions of a general nature. That includes questions about the 96Boards project, as well as technical questions whose answers apply to more than one board.
