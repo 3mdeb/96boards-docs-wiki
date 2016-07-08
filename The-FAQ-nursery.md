@@ -207,7 +207,7 @@ Please refer the link bellow to use the serial console on HiKey.
 
 The kernel source for AOSP on Hikey is hosted on the googlesource.com.
 
-* [Hikey at googlesource](https://android.googlesource.com/device/linaro/hikey)
+* [https://android.googlesource.com/kernel/hikey-linaro/](https://android.googlesource.com/kernel/hikey-linaro/)
 
 **Q: I would like to be a contributor for the AOSP on HiKey, what is the procedure?**
 
