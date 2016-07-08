@@ -169,7 +169,19 @@ On the CircuitCo Hikey these pins are marked J15 and are located at almost the s
 
 The J15 and J601 are identical in function, it is only the silk screen that differs between the two boards.
 
-This jumper pins are used to select the boot-time behaviour of the HiKey and are usually used to FLASH the bootloader. The pinout is the same regardless of the board manufacturer:
+This jumper pins are used to select the boot-time behaviour of the HiKey and are usually used to FLASH the bootloader. The pinout is the same regardless of the board manufacturer.
+
+For booting Debian or AOSP automatically:
+
+<pre>
+Name          | Link     | State
+------------- | -------- | ------
+Auto Power up | Link 1-2 | closed
+Boot Select   | Link 3-4 | open
+GPIO3-1       | Link 5-6 | open
+</pre>
+
+For flushing OS into emmc with recovery mode:
 
 <pre>
 Name          | Link     | State
@@ -178,6 +190,7 @@ Auto Power up | Link 1-2 | closed
 Boot Select   | Link 3-4 | closed
 GPIO3-1       | Link 5-6 | open
 </pre>
+
 
 **Q: Which UART to be able to see serial console screen, /dev/ttyAMA0 or AMA3?**
 
