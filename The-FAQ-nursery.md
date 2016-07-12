@@ -448,7 +448,17 @@ The Device Manager on Windows should show this screen.
 
 We're busy working on it. In the mean take a look at https://github.com/96boards-bubblegum/linaro-adfu-tool to see how to FLASH different operating systems onto your Bubblegum-96. You can also come and join us at http://www.96boards.org/forums/forum/products/bubblegum96/ and ask for what you need.
 
-**Q: Why can I buy the USB type A to USB type A needed to debrick the board?**
+**Q: How do I de-brick my board?**
+
+There are two levels of recovery possible. The choice depends on whether or not the bootloader is functioning correctly. In both cases the recovery process is similar. The full debrick involves loading u-boot into RAM and running commands to re-FLASH the board. The lightweight debrick is simpler because u-boot can load itself into RAM.
+
+Both recovery methods require you to have a 1.8v UART adapter (the [96Boards-UART](https://www.seeedstudio.com/item_detail.html?p_id=2525) and, conveniently is configured by default to connect to LS-UART1, however any other 1.8v adapter should be fine) and a USB type-A to type-A cable.
+
+The full debrick process is described in the [Bubblegum-96 documentation](http://www.96boards.org/documentation/ConsumerEdition/Bubblegum-96/Installation/LinuxFastboot.md/).
+
+For the quick recovery process, follow the debrick proceed from the `[Device (96board)]` section of step #6 (instead of running the host commands it is enough just to apply power to the board and mash the Enter key  button until the `owl> ` prompt appears. You should now be able to follow step #7 onwards as normal.
+
+**Q: Where can I buy the USB type A to USB type A needed to debrick the board?**
 
 It can be difficult to find these cables using a search engines because the cable you need tends to be hidden behind all the USB type A to type B (or micro-B) cables. Often its better just to browse the web site of a specialist cable provider.
 
