@@ -17,7 +17,7 @@
 1. [New Features](#section-0)
 2. [Pre-Installed Debian Linux](#section-1)
 Information on the Debian 8.0 ("jessie") OS installation software
-3. [Installing Android Open Source Project](#section-2)Information on loading the AOSP version of Android 5.1 as an alternative OS onto the HiKey board
+3. [Installing Android Open Source Project](https://github.com/96boards/documentation/wiki/HiKey-Android-Install)Information on loading the AOSP version of Android 5.1 as an alternative OS onto the HiKey board
 4. [Updating the OS](#section-3)
 Information on loading an OS update from 96Boards.org
 5. [Board Recovery](#section-4)
