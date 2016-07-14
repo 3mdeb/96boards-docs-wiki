@@ -154,7 +154,7 @@ Happy for the question. The detail procedure to reproduce the issue and the debu
 Just do:
 ```
 adb shell dmesg > dmesg.log
-adb logcat -d > logcat.log
+adb logcat -d 2>&1 > logcat.log
 ```
 Attach both dmesg.log and logcat.log.
 
