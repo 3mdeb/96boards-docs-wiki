@@ -40,4 +40,30 @@ You might need to replace `userdata` with `system`, of course.
 
 # Installing an Open Embedded based image
 
-TBD
+Initial support for DragonBoard 820c has been added into the OpenEmbedded QCOM BSP later, including the appropriate kernel recipe. To build an image for Dragonboard 820c , simply follow the same instructions as usual, from this [wiki page](../Dragonboard-410c-OpenEmbedded-and-Yocto). When you select the MACHINE to build for, pick `dragonboard-820c`.
+
+The board is being added to the Linaro Reference Platform OpenEmbedded builds, and prebuilt images for this board should appear in the coming days here : http://builds.96boards.org/snapshots/reference-platform/openembedded/.
+
+# Kernel source code
+
+The Linux kernel used for DragonBoard 820c can be found in the [Linaro Qualcomm Landing Team git repository](https://git.linaro.org/landing-teams/working/qualcomm/kernel.git). For now the support for this board is preliminary and can only be found in the `integration-linux-qcomlt` branch, which is regularly rebased on recent mainline.
+
+    git: http://git.linaro.org/landing-teams/working/qualcomm/kernel.git
+    branch: integration-linux-qcomlt
+    defconfig: arch/arm64/defconfig kernel/configs/distro.config
+
+To build the Linux kernel, you can use the following instructions:
+
+    git clone -n http://git.linaro.org/landing-teams/working/qualcomm/kernel.git
+    cd kernel
+    git checkout -b kernel-16.06 debian-qcom-dragonboard410c-16.06
+    export ARCH=arm64
+    export CROSS_COMPILE=<path to your GCC cross compiler>/aarch64-linux-gnu-
+    make defconfig distro.config
+    make -j4 Image dtbs KERNELRELEASE=`make kernelversion`-linaro-lt-qcom
+
+Additionally, you might want or need to compile the kernel modules:
+
+    make -j4 modules KERNELRELEASE=`make kernelversion`-linaro-lt-qcom
+
+To boot the kernel image, you will need a fastboot compatible boot image, and you can refer to this [wiki](../Dragonboard-410c-Boot-Image) for instructions to create such an image.
