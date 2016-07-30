@@ -8,10 +8,7 @@ Welcome to the supporting documentation for [DragonBoard™ 410c](https://www.96
 [<img src="http://i.imgur.com/iAbmSuV.png" data-canonical-src="http://i.imgur.com/iAbmSuV.png" width="150" height="105" />]()
 [<img src="http://i.imgur.com/nyVSsa2.png" data-canonical-src="http://i.imgur.com/nyVSsa2.png" width="150" height="105" />]()
 
-<p align="left">
-  <b>Extras</b><br>
-  <a href="#">[About the DragonBoard™ 410c](https://github.com/96boards/documentation/wiki/About-DragonBoard™-410c)</a>
-  <br>
+
 ***
 
 #### Downloads - Supported Operating Systems
