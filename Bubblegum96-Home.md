@@ -8,9 +8,6 @@ Welcome to the supporting documentation for [Bubblegum-96]()
 [<img src="http://i.imgur.com/R6Fn3IS.png" data-canonical-src="http://i.imgur.com/R6Fn3IS.png" width="150" height="105" />]()
 [<img src="http://i.imgur.com/fRZZpdq.png" data-canonical-src="http://i.imgur.com/fRZZpdq.png" width="150" height="105" />]()
 
-<p align="left">
-  <b>Extras</b><br>
-  <a href="#">[About the Bubblegum-96](https://github.com/96boards/documentation/wiki/About-Bubblegum96)</a>
 ***
 
 #### Downloads - Supported Operating Systems
