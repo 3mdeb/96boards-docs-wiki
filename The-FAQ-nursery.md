@@ -274,7 +274,7 @@ Gerrit wants each logical change to have a Change-Id. This allows future version
 
 Get the sha1 list, you will need them on the next step:
 ```
-$ git log --pretty=o origin/$(BRANCH)..HEAD > ../sha1.list  
+$ git log --pretty=o origin/${BRANCH}..HEAD > ../sha1.list  
 ```
 
 Rebase your changes to rework commit messages and add manual Change-Id tags for each patch:
