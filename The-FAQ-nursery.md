@@ -287,7 +287,9 @@ Change all the "pick"s to "reword" or just "r"
 Then
 
 * Above the "Signed-off-by:" lines, add:
-  * Change-Id: I<original sha1sum for change from shalist> 
+```
+Change-Id: I<original sha1sum for change from shalist> 
+```
 
 * Note the I is the prefix on the sha1sum. 
 
