@@ -12,8 +12,6 @@ This section has moved [here](https://github.com/96boards/documentation/blob/mas
 
 This section has moved [here](http://builds.96boards.org/releases/hikey/linaro/debian/latest/#tabs-1)
 
-For getting started guide about [ATF/UEFI, please see WiKi](https://github.com/96boards/documentation/wiki/HiKeyUEFI).
-
 ### Power Supply
 
 This section has moved [here](https://github.com/96boards/documentation/blob/master/ConsumerEdition/HiKey/Quickstart/PowerAdapter.md)
@@ -36,15 +34,15 @@ This section has moved [here](https://github.com/96boards/documentation/blob/mas
 
 ### Other Useful Information
 
-**Clock**
+## Clock
 
 This section has moved [here](https://github.com/96boards/documentation/blob/master/ConsumerEdition/HiKey/Configuration/Clock.md)
 
-**USB** 
+## USB
 
 This section has moved [here](https://github.com/96boards/documentation/blob/master/ConsumerEdition/HiKey/Configuration/USB.md)
 
-**6. System and User LEDS**
+## System and User LEDS
 
 This section has moved [here](https://github.com/96boards/documentation/blob/master/ConsumerEdition/HiKey/Configuration/SystemLEDs.md)
 
