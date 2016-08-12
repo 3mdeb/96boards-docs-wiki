@@ -242,7 +242,7 @@ $ sudo fastboot flash userdata userdata.img
 
 ```
 * Run Fastboot automatically:
-```shell
+
 Connect jumper on pin5-6 of J15. Then UEFI will run Fastboot app directly.
 
 Name | Link | State
@@ -253,7 +253,6 @@ GPIO3-1 | Link 5-6 | closed
 
 If user input "enter" key directly, bootmenu will be displayed.
 
-```
 * Control Auto Boot
 ```shell
 By default, auto boot feature is enabled.
