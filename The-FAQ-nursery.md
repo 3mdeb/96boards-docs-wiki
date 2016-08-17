@@ -229,6 +229,12 @@ Please refer the procedure.
 
 * [Becoming contributor of AOSP on Hikey](http://www.96boards.org/forums/topic/how-to-becoming-contributor-of-aosp-on-hikey/)
 
+**Q: Where is the vanilla kernel source (not AOSP) hosted for HiKey?** (DRAFT)
+
+The sources used for Debian builds are host on the github.
+
+* [https://github.com/96boards-hikey/linux](https://github.com/96boards-hikey/linux)
+
 **Q: Is this it? There are no other frequently-asked-questions?**
 
 This is all we've come up with for the HiKey. However if you browse over to [the General forum](http://www.96boards.org/forums/forum/general/) you'll find a FAQ covering questions of a general nature. That includes questions about the 96Boards project, as well as technical questions whose answers apply to more than one board.
