@@ -572,7 +572,7 @@ following:
 - Optional: connect the Serial FTDI cable from target to the host,
   and open a serial terminal on the host PC.  Instructions for this
   can be found in the section titled ["Setting Up the UART console"](#setting-up-the-uart-console)
-- make sure that the micro USB port does NOT have a cable plugged in
+- make sure that the micro USB port cable is plugged into PC
 - set the S6 switch to: 0-1-0-0 {“SD Boot” set to “ON” with all other
   switches set to off}
 - insert the SD card built in the previous section into the DB410c
