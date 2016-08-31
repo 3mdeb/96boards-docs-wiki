@@ -29,8 +29,7 @@ This method requires the following hardware:
 > Note: Some files have 4G and 8G options, download file which best matches your HiKey board.
 
 - All HiKey **CircuitCo boards** will use the **4G files**
-- All HiKey **LeMaker 1G boards** will use the **4G files**
-- All HiKey **LeMaker 2G boards** will use the **8G files**
+- All HiKey **LeMaker 1G boards** and **LeMaker 2G boards** will use the **8G files**
 
 **ptable-linux.img** ([**4G Download**](https://builds.96boards.org/releases/reference-platform/debian/hikey/16.03/bootloader/ptable-linux-4g.img) / [**8G Download**](https://builds.96boards.org/releases/reference-platform/debian/hikey/16.03/bootloader/ptable-linux-8g.img))
 
@@ -85,8 +84,7 @@ This method requires the following hardware:
 >Note: Some files have 4G and 8G options, download file which best matches your HiKey board.
 
 - All HiKey **CircuitCo boards** will use the **4G files**
-- All HiKey **LeMaker 1G boards** will use the **4G files**
-- All HiKey **LeMaker 2G boards** will use the **8G files**
+- All HiKey **LeMaker 1G boards** and **LeMaker 2G boards** will use the **8G files**
 
 Build Folders (<a href="http://builds.96boards.org/releases/reference-platform/aosp/hikey/16.03/bootloader/" target="_blank">**Binaries**</a> / <a href="http://builds.96boards.org/releases/reference-platform/aosp/hikey/16.03/" target="_blank">**Image**</a>)
 
