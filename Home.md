@@ -12,21 +12,10 @@ Welcome to the supporting documentation for <a href="http://96boards.org" target
 
 ***
 
-#### _96Boards_ - Getting Started
+#### _96Boards_
 
-######Consumer Edition
-- [Dragonboard™ 410c](https://github.com/96boards/documentation/wiki/DragonBoard™-410c-Home)
-- [HiKey](https://github.com/96boards/documentation/wiki/HiKey-Home)
-- [Bubblegum-96](https://github.com/96boards/documentation/wiki/Bubblegum96-Home)
-
-***
-
-#### _Hardware Specifications_
-
-- Consumer Edition (CE) Specification (<a href="https://github.com/96boards/documentation/blob/master/96BoardsCESpecificationv1.0-EA1.pdf" target="_blank">**View**</a>
- / [**Download PDF**](https://www.96boards.org/ce-specification))
-- Enterprise Edition (EE) Specification (<a href="https://github.com/96boards/documentation/blob/master/96BoardsEESpecificationv1.0.pdf" target="_blank">**View**</a>
- / [**Download PDF**](https://www.96boards.org/ee-specification))
+- [Consumer Edition](https://github.com/96boards/documentation/blob/master/ConsumerEdition/README.md)
+- [Enterprise Edition](https://github.com/96boards/documentation/blob/master/EnterpriseEdition/README.md)
 
 ***
 
@@ -34,13 +23,4 @@ Welcome to the supporting documentation for <a href="http://96boards.org" target
 
 - Reference Platform Documentation has moved! [Go here](https://github.com/Linaro/documentation/blob/master/Reference-Platform/README.md)
 
-
 ***
-
-Please refer to the side bar for additional links.
-
-<p align="left">
-  <b></b>
-  <a href="#">[Linaro Wiki](https://github.com/linaro/documentation/wiki/)</a> |
-  <a href="#">[96Boards Wiki](https://github.com/96boards/documentation/wiki/)</a>
-  <br>
