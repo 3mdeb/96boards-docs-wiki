@@ -37,9 +37,9 @@ To boot on the APQ8016, the boot media is required to have a very specific GPT. 
 
 To create the bootable SD card:
 
-    git clone https://git.linaro.org/people/nicolas.dechesne/db-boot-tools.git
+    git clone https://git.linaro.org/landing-teams/working/qualcomm/db-boot-tools.git
     cd db-boot-tools
-    sudo ./mksdcard.sh -o /dev/XXX -p dragonboard410c/linux.txt \
+    sudo ./mksdcard -o /dev/XXX -p dragonboard410c/linux.txt \
      -i ../lk_sdboot/build-msm8916/ \
      -i <path to QCOM firmware files>/bootloaders-ubuntu/
 
@@ -80,13 +80,13 @@ When such command is executed, the GPT will be reflashed on the target, and it i
 
 To create gpt_both0.bin, you can run:
 
-    git clone https://git.linaro.org/people/nicolas.dechesne/db-boot-tools.git
+    git clone https://git.linaro.org/landing-teams/working/qualcomm/db-boot-tools.git
     # to create an empty image (sd.img) with the partition table from linux.txt
-    sudo ./mksdcard.sh -g -o sd.img -p dragonboard410c/linux.txt
+    sudo ./mksdcard -g -o sd.img -p dragonboard410c/linux.txt
     # create a gpt backup
     sudo sgdisk -bgpt.bin sd.img
     # convert gpt backup into proper 'fastboot' format
-    ./mkgpt.sh -i gpt.bin -o gpt_both0.bin
+    ./mkgpt -i gpt.bin -o gpt_both0.bin
 
 If you want to customize the partition table, you need to edit the file dragonboard410c/linux.txt. You can add partition as needed, change partition sizes, but you should not change the partition UID for the existing partitions that contain the bootloader and firmware, or you might brick your board.
 
