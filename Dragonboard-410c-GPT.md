@@ -8,28 +8,20 @@ The following tool can be used to:
 
 It is possible to boot the entire OS from the SD card, without modifying the eMMC content, assuming you are using a Linux based system. The instructions in this section will not work with Android (or Windows).
 
-To boot from the SD card, you will need to recompile a patched version of the bootloader (LK). Then you will need to create an SD card with a suitable GPT and proper bootloaders.
+To boot from the SD card, you will need a patched version of the bootloader (LK). Then you will need to create an SD card with a suitable GPT and proper bootloaders.
 
-## Recompile the patched bootloader
+## Download the _SD boot_ bootloader package
 
-    # get compiler 
-    git clone --depth 1 \
-         git://codeaurora.org/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8.git \
-         -b LA.BR.1.1.3.c4-01000-8x16.0 lk_gcc
+    wget http://builds.96boards.org/snapshots/dragonboard410c/linaro/rescue/latest/dragonboard410c_bootloader_sd_linux-*.zip -O dragonboard410c_bootloader_sd_linux.zip
+
+## Patched bootloader source code
+
+If you want to see the LK changes needed for SD boot:
 
     # get LK source code
     git clone --depth 1 \
          https://git.linaro.org/landing-teams/working/qualcomm/lk.git \
          -b release/LA.BR.1.1.2-02210-8x16.0+sdboot lk_sdboot
-
-    # build bootloader
-    cd lk_sdboot
-    make msm8916 EMMC_BOOT=1 TOOLCHAIN_PREFIX="`pwd`/../lk_gcc/bin/arm-eabi-"
-    cd -
-
-## Download the proprietary bootloader
-
-The proprietary bootloaders are available from Qualcomm at this location: https://developer.qualcomm.com/hardware/dragonboard-410c/tools. Find the most recent "Linux Board Support package" and download it. For example: https://developer.qualcomm.com/download/db410c/linux-board-support-package-v1.2.zip, and extract the ZIP file on your PC.
 
 ## Create the SD card
 
@@ -37,11 +29,11 @@ To boot on the APQ8016, the boot media is required to have a very specific GPT. 
 
 To create the bootable SD card:
 
+    unzip -d qcom_bootloaders dragonboard410c_bootloader_sd_linux.zip
     git clone https://git.linaro.org/landing-teams/working/qualcomm/db-boot-tools.git
     cd db-boot-tools
-    sudo ./mksdcard -o /dev/XXX -p dragonboard410c/linux.txt \
-     -i ../lk_sdboot/build-msm8916/ \
-     -i <path to QCOM firmware files>/bootloaders-ubuntu/
+    sudo ./mksdcard -o /dev/XXX -p dragonboard410c/linux/partitions.txt \
+     -i ../qcom_bootloaders 
 
 Notes:
 * /dev/XXX represents your SD card, plugged to your PC. The SD card will be completely erased during this process.  
@@ -82,7 +74,7 @@ To create gpt_both0.bin, you can run:
 
     git clone https://git.linaro.org/landing-teams/working/qualcomm/db-boot-tools.git
     # to create an empty image (sd.img) with the partition table from linux.txt
-    sudo ./mksdcard -g -o sd.img -p dragonboard410c/linux.txt
+    sudo ./mksdcard -g -o sd.img -p dragonboard410c/linux/partitions.txt
     # create a gpt backup
     sudo sgdisk -bgpt.bin sd.img
     # convert gpt backup into proper 'fastboot' format
@@ -92,8 +84,8 @@ If you want to customize the partition table, you need to edit the file dragonbo
 
 If you want to add a few regular partitions, for example to install two Debian releases, you can do something like this:
 
-    --- a/dragonboard410c/linux.txt
-    +++ b/dragonboard410c/linux.txt
+    --- a/dragonboard410c/linux/partitions.txt
+    +++ b/dragonboard410c/linux/partitions.txt
     @@ -6,4 +6,6 @@ hyp,512,E1A6A689-0C8D-4CC6-B4E8-55A4320FBD8A,hyp.mbn
      sec,16,303E6AC3-AF15-4C54-9E9B-D9A8FBECF401,sec.dat
      aboot,1024,400FFDCD-22E0-47E7-9A23-F16ED9382388,emmc_appsboot.mbn
