@@ -429,6 +429,14 @@ We have made a center page linking to the pdf files with the distinction of the 
 
 * ["How to" documents on Qualcomm Developer Network](http://www.96boards.org/documentation/ConsumerEdition/DragonBoard-410c/AdditionalDocs/README.md/)
 
+**Q: Where can I find the case?**
+
+There are nice cases made by Arrows.
+
+* [DragonBoard 410c Case Clear](http://www.chip1stop.com/web/USA/en/dispDetail.do?partId=ARRD-0000043&cid=dragonboard410c)
+
+* [DragonBoard 410c Case Blue](http://www.chip1stop.com/web/USA/en/dispDetail.do?partId=ARRD-0000040&cid=dragonboard410c)
+
 **Q: Is this it? There are no other frequently-asked-questions?**
 
 This is all we've come up with for the DragonBoard 410c. However if you browse over to [the General forum](http://www.96boards.org/forums/forum/general/) you'll find a FAQ covering questions of a general nature. That includes questions about the 96Boards project, as well as technical questions whose answers apply to more than one board.
