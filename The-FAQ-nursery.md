@@ -401,6 +401,12 @@ You may try the temporary workaround described at the bellow link until it is fi
 
 ----------
 
+**Q: What is changed in the new release and how to customize the Linux kernel by building from source?
+
+There are great descriptions of what have improved on the new releases and known problem with detail instruction to build the Linux kernel from source.
+
+* [Documentation by Linaro Qualcomm Landing Team](https://www.96boards.org/documentation/ConsumerEdition/HiKey/README.md/)
+
 **Q: Why the DragonBoard 410C does not recognized by adb on windows?**
 
 The usb driver for adb on windows requires modification from Android web site.
