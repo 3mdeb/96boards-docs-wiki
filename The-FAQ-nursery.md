@@ -403,7 +403,7 @@ You may try the temporary workaround described at the bellow link until it is fi
 
 ----------
 
-**Q: What is changed in the new release and how to customize the Linux kernel by building from source?
+**Q: What is changed in the new release and how to customize the Linux kernel by building from source?**
 
 There are great descriptions of what have improved on the new releases and known problem with detail instruction to build the Linux kernel from source.
 
@@ -421,6 +421,13 @@ We have made the revised usb driver. Please try this driver.
 This is the instruction to install modified usb driver for adb on windows.
 
 * [Step by step instruction to install adb usb driver on windows](http://www.96boards.org/forums/topic/step-by-step-instruction-to-install-adb-usb-driver-on-windows/)
+
+**Q: How can I find the right application notes published in pdf?**
+
+There are many great application notes uploaded on developer.qualcomm.com.
+We have made a center page linking to the pdf files with the distinction of the contents.
+
+* ["How to" documents on Qualcomm Developer Network](http://www.96boards.org/documentation/ConsumerEdition/DragonBoard-410c/AdditionalDocs/README.md/)
 
 **Q: Is this it? There are no other frequently-asked-questions?**
 
