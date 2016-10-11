@@ -388,8 +388,10 @@ Please update your image to the latest image from following link.
 The work around for this issue is included from 16.06 and later releases
 and should not have the WIFI connection drops.
 
-Bellow is for the record only:
+Bellow is for the record only.
+
 ---------- 
+
 Yes, we are aware of the WIFI being disconnected periodically and in the middle of fixing the symptom.
 
 This is the link in bug tracking system.
@@ -405,7 +407,7 @@ You may try the temporary workaround described at the bellow link until it is fi
 
 There are great descriptions of what have improved on the new releases and known problem with detail instruction to build the Linux kernel from source.
 
-* [Documentation by Linaro Qualcomm Landing Team](https://www.96boards.org/documentation/ConsumerEdition/HiKey/README.md/)
+* [Documentation by Linaro Qualcomm Landing Team](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/)
 
 **Q: Why the DragonBoard 410C does not recognized by adb on windows?**
 
