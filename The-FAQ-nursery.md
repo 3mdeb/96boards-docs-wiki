@@ -160,6 +160,12 @@ Attach both dmesg.log and logcat.log.
 
 # Hikey FAQ
 
+**Q: Where should I look for documentation?**
+
+https://www.96boards.org/documentation/ConsumerEdition/HiKey/README.md/
+
+* [HiKey Documentation](https://www.96boards.org/documentation/ConsumerEdition/HiKey/README.md/). This is a great starting point for hunting down installing OS images, board manuals, schematics and all the other documentation we require 96Boards vendors to put together.
+
 **Q: What is the difference between the J15 and J601 boot mode pins?**
 
 There are two versions of the Hikey, one is produced by LeMaker and the other by CircuitCo.
