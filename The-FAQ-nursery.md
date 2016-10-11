@@ -383,6 +383,10 @@ Please update your image to the latest image from following link.
 
 **Q: Why the WiFi connection drops out periodically?**
 
+The work around for this issue is included from 16.06 and later releases
+and should not have the WIFI connection drops.
+
+---------- bellow is for record only ----------------
 Yes, we are aware of the WIFI being disconnected periodically and in the middle of fixing the symptom.
 
 This is the link in bug tracking system.
@@ -391,6 +395,7 @@ This is the link in bug tracking system.
 You may try the temporary workaround described at the bellow link until it is fixed.
 
 * [WIFI workaround](http://www.96boards.org/forums/topic/ssh-and-ping-workarounds/)
+----------
 
 **Q: Why the DragonBoard 410C does not recognized by adb on windows?**
 
