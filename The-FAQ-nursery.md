@@ -345,10 +345,8 @@ Have fun!
 
 There's a wealth of documentation for the Dragonboard 410c. So much that it is quite possible that need a bit of help finding which document is the best one for you to read! If you can't find what you're looking for, feel free to ask on the forum. Usually someone will come along with a "hello" and a link!. However... if you're in a hurry let us offer you some ideas:
 
-* [DragonBoard 410c Documentation (at 96boards.org)](http://www.96boards.org/products/ce/dragonboard410c/docs/). This is a great starting point for hunting down board manuals, schematics and all the other documentation we require 96Boards vendors to put together (and, in the case of DragonBoard, a whole lot more besides).
+* [DragonBoard 410c Documentation (at 96boards.org)](https://www.96boards.org/documentation/ConsumerEdition/DragonBoard-410c/README.md/). This is a great starting point for hunting down board manuals, schematics and all the other documentation we require 96Boards vendors to put together (and, in the case of DragonBoard, a whole lot more besides).
 * [DragonBoard 410c Tools and Resources by Qualcomm](https://developer.qualcomm.com/hardware/dragonboard-410c/tools). This is Qualcomm's own page about the board. It contains several documents not found in this site and, if Windows 10 IoT is your thing then this is where you go to get it.
-* [96Boards CE documentation wiki page](https://github.com/96boards/documentation/wiki). This is a great task-focused (e.g. I want to install Android) approach to documentation for 96Boards. Eventually we'll see this merged into the main 96Boards documentation (below).
-* [96Boards documentation portal (under construction)](http://www.96boards.org/documentation/). We want to get better at documentation for the all of the 96Boards! As part of that we've been working on one URL to point developers and users at. This is it and it will be awesome... but only when we've finished it.
 
 **Q: How to boot after buying the DragonBoard 410c?**
 
